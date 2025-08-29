@@ -63,7 +63,7 @@ export default function CatalogueSection() {
         >
           <CarouselContent className="-ml-4">
             {pastFilms.map((film, index) => (
-              <CarouselItem key={index} className="pl-4 md:basis-1/3 lg:basis-1/4">
+              <CarouselItem key={index} className="pl-4 basis-1/2 sm:basis-1/3 lg:basis-1/4">
                 <div className="p-1">
                   <MovieCard {...film} />
                 </div>
