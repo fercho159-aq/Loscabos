@@ -62,7 +62,7 @@ export default function Header() {
       <div className="container mx-auto px-4 h-20 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2">
            <Image 
-            src={scrolled ? "/Images/logos/FESTIVAL DE CINE LOS CABOS-negro.png" : "/Images/logos/FESTIVAL DE CINE LOS CABOS-blanco.png"} 
+            src={scrolled ? "/Images/logos/FESTIVAL DE CINE LOS CABOS-negro.png" : "/Images/logos/FESTIVAL DE CINE LOS CABOS- blanco.png"} 
             alt="CaboCine Logo" 
             width={150} 
             height={40} 
