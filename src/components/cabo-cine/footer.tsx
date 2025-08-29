@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Film className="h-8 w-8 text-accent" />
-              <span className="font-headline text-2xl font-bold text-primary">CaboCine</span>
+              <span className="font-headline text-2xl font-bold text-foreground">CaboCine</span>
             </Link>
             <p className="text-sm text-muted-foreground">
               Festival Internacional de Cine de Los Cabos

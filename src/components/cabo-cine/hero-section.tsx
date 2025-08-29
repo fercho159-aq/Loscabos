@@ -18,13 +18,13 @@ export default function HeroSection() {
       </div>
       
       <div className="relative z-10 p-4 animate-in fade-in duration-1000">
-        <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold text-primary">
+        <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold text-background">
           Festival de Cine
         </h1>
         <h2 className="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold text-accent mb-4">
           de Los Cabos
         </h2>
-        <p className="text-lg md:text-xl max-w-2xl mx-auto text-primary/90 mb-8">
+        <p className="text-lg md:text-xl max-w-2xl mx-auto text-background/90 mb-8">
           Donde el desierto se encuentra con el mar, y el cine encuentra su destino.
         </p>
 

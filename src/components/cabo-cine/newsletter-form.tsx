@@ -52,14 +52,14 @@ export default function NewsletterForm() {
               <FormControl>
                 <div className="relative">
                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                   <Input placeholder="Tu email" {...field} className="pl-9 bg-input border-border focus:bg-background" />
+                   <Input placeholder="Tu email" {...field} className="pl-9 bg-input border-border focus:bg-card" />
                 </div>
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit" variant="secondary" className="bg-accent hover:bg-accent/90">Suscribirse</Button>
+        <Button type="submit" variant="secondary">Suscribirse</Button>
       </form>
     </Form>
   );
