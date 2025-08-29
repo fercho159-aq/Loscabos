@@ -29,7 +29,7 @@ export function MovieCard({ title, genre, synopsis, imgSrc, imgHint }: MovieCard
             <p className="text-sm text-background/80 mb-4 line-clamp-6">{synopsis}</p>
             <Button variant="secondary" size="sm" className="w-full group/button">
               <Bookmark className="mr-2 h-4 w-4 text-secondary-foreground transition-colors group-hover/button:text-accent" />
-              Guardar en "Mi Festival"
+              Guardar
             </Button>
           </div>
         </div>
