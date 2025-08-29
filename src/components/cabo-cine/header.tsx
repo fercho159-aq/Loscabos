@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Ticket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -25,12 +26,16 @@ const navLinks = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isTransparent = pathname === '/' && !scrolled;
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Call on mount to set initial state
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -43,7 +48,7 @@ export default function Header() {
           onClick={() => setOpen(false)} 
           className={cn(
             "text-sm font-medium transition-colors block py-2 lg:py-0",
-            scrolled ? "text-foreground hover:text-accent" : "text-background hover:text-background/80"
+            isTransparent ? "text-background hover:text-background/80" : "text-foreground hover:text-accent"
           )}
         >
           {link.label}
@@ -56,19 +61,19 @@ export default function Header() {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        scrolled ? 'bg-card/95 backdrop-blur-sm shadow-md' : 'bg-transparent'
+        isTransparent ? 'bg-transparent' : 'bg-card/95 backdrop-blur-sm shadow-md'
       )}
     >
       <div className="container mx-auto px-4 h-20 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2">
            <Image 
-            src={scrolled ? "/Images/logos/FESTIVAL DE CINE LOS CABOS-negro.png" : "/Images/logos/FESTIVAL DE CINE LOS CABOS- blanco.png"} 
+            src={isTransparent ? "/Images/logos/FESTIVAL DE CINE LOS CABOS- blanco.png" : "/Images/logos/FESTIVAL DE CINE LOS CABOS-negro.png"} 
             alt="CaboCine Logo" 
             width={150} 
             height={40} 
             data-ai-hint="logo"
             className="transition-all duration-300"
-            key={scrolled ? 'logo-scrolled' : 'logo-top'}
+            key={isTransparent ? 'logo-top' : 'logo-scrolled'}
             />
         </Link>
         <nav className="hidden lg:flex items-center gap-6">
@@ -83,7 +88,7 @@ export default function Header() {
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
-                  <Menu className={cn("h-6 w-6", scrolled ? "text-foreground" : "text-background")} />
+                  <Menu className={cn("h-6 w-6", isTransparent ? "text-background" : "text-foreground")} />
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="bg-card w-[250px] sm:w-[300px]">
