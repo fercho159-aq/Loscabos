@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-               <Image src="/logo.png" alt="CaboCine Logo" width={150} height={40} data-ai-hint="logo"/>
+               <Image src="/Images/logos/FESTIVAL DE CINE LOS CABOS-negro.png" alt="CaboCine Logo" width={150} height={40} data-ai-hint="logo"/>
             </Link>
             <p className="text-sm text-muted-foreground">
               Festival Internacional de Cine de Los Cabos

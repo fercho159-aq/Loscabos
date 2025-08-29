@@ -37,7 +37,15 @@ export default function Header() {
   const NavContent = () => (
     <>
       {navLinks.map((link) => (
-        <Link key={link.href} href={link.href} onClick={() => setOpen(false)} className="text-sm font-medium text-foreground hover:text-accent transition-colors block py-2 lg:py-0">
+        <Link 
+          key={link.href} 
+          href={link.href} 
+          onClick={() => setOpen(false)} 
+          className={cn(
+            "text-sm font-medium transition-colors block py-2 lg:py-0",
+            scrolled ? "text-foreground hover:text-accent" : "text-background hover:text-background/80"
+          )}
+        >
           {link.label}
         </Link>
       ))}
@@ -48,12 +56,20 @@ export default function Header() {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        scrolled ? 'bg-card/80 backdrop-blur-sm shadow-md' : 'bg-transparent'
+        scrolled ? 'bg-card/95 backdrop-blur-sm shadow-md' : 'bg-transparent'
       )}
     >
       <div className="container mx-auto px-4 h-20 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2">
-           <Image src="/logo.png" alt="CaboCine Logo" width={150} height={40} data-ai-hint="logo"/>
+           <Image 
+            src={scrolled ? "/Images/logos/FESTIVAL DE CINE LOS CABOS-negro.png" : "/Images/logos/FESTIVAL DE CINE LOS CABOS-blanco.png"} 
+            alt="CaboCine Logo" 
+            width={150} 
+            height={40} 
+            data-ai-hint="logo"
+            className="transition-all duration-300"
+            key={scrolled ? 'logo-scrolled' : 'logo-top'}
+            />
         </Link>
         <nav className="hidden lg:flex items-center gap-6">
           <NavContent />
@@ -67,16 +83,25 @@ export default function Header() {
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6 text-foreground" />
+                  <Menu className={cn("h-6 w-6", scrolled ? "text-foreground" : "text-background")} />
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="bg-card w-[250px] sm:w-[300px]">
                   <div className="p-6">
                   <Link href="/" onClick={() => setOpen(false)} className="flex items-center gap-2 mb-8">
-                     <Image src="/logo.png" alt="CaboCine Logo" width={150} height={40} data-ai-hint="logo"/>
+                     <Image src="/Images/logos/FESTIVAL DE CINE LOS CABOS-negro.png" alt="CaboCine Logo" width={150} height={40} data-ai-hint="logo"/>
                   </Link>
                   <nav className="flex flex-col gap-6">
-                    <NavContent />
+                     {navLinks.map((link) => (
+                        <Link 
+                          key={link.href} 
+                          href={link.href} 
+                          onClick={() => setOpen(false)} 
+                          className="text-sm font-medium text-foreground hover:text-accent transition-colors block py-2 lg:py-0"
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
                   </nav>
                 </div>
               </SheetContent>
