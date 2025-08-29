@@ -1,7 +1,8 @@
 
 import Link from "next/link";
-import { Facebook, Instagram, Twitter, Youtube, Film } from "lucide-react";
+import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import NewsletterForm from "./newsletter-form";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -10,8 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <Film className="h-8 w-8 text-accent" />
-              <span className="font-headline text-2xl font-bold text-foreground">CaboCine</span>
+               <Image src="/logo.png" alt="CaboCine Logo" width={150} height={40} data-ai-hint="logo"/>
             </Link>
             <p className="text-sm text-muted-foreground">
               Festival Internacional de Cine de Los Cabos

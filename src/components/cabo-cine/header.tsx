@@ -3,7 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Film, Ticket } from 'lucide-react';
+import { Ticket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import {
@@ -12,6 +12,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from 'lucide-react';
+import Image from 'next/image';
 
 
 const navLinks = [
@@ -52,8 +53,7 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 h-20 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2">
-          <Film className="h-7 w-7 text-accent" />
-          <span className="font-headline text-2xl font-bold text-foreground">CaboCine</span>
+           <Image src="/logo.png" alt="CaboCine Logo" width={150} height={40} data-ai-hint="logo"/>
         </Link>
         <nav className="hidden lg:flex items-center gap-6">
           <NavContent />
@@ -73,8 +73,7 @@ export default function Header() {
               <SheetContent side="right" className="bg-card w-[250px] sm:w-[300px]">
                   <div className="p-6">
                   <Link href="/" onClick={() => setOpen(false)} className="flex items-center gap-2 mb-8">
-                    <Film className="h-7 w-7 text-accent" />
-                    <span className="font-headline text-2xl font-bold text-foreground">CaboCine</span>
+                     <Image src="/logo.png" alt="CaboCine Logo" width={150} height={40} data-ai-hint="logo"/>
                   </Link>
                   <nav className="flex flex-col gap-6">
                     <NavContent />

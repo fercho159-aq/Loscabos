@@ -5,14 +5,14 @@
 @layer base {
   @font-face {
     font-family: 'IBRAND';
-    src: url('/fonts/IBRAND-Regular.otf') format('opentype');
+    src: url('/fonts/Ibrand.ttf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'ACRE';
-    src: url('/fonts/ACRE-Regular.otf') format('opentype');
+    src: url('/fonts/Acre-Regular.ttf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }
