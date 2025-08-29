@@ -21,6 +21,7 @@ const navLinks = [
   { href: '/industria', label: 'Industria' },
   { href: '/impacto', label: 'Impacto' },
   { href: '/patrocinadores', label: 'Patrocinadores' },
+  { href: '/travel', label: 'Travel' },
 ];
 
 export default function Header() {

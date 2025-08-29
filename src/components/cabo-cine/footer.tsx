@@ -25,6 +25,7 @@ export default function Footer() {
                 <li><Link href="/#programacion" className="text-sm text-muted-foreground hover:text-accent transition-colors">Programación</Link></li>
                 <li><Link href="#" className="text-sm text-muted-foreground hover:text-accent transition-colors">Boletos</Link></li>
                 <li><Link href="/impacto" className="text-sm text-muted-foreground hover:text-accent transition-colors">Impacto</Link></li>
+                 <li><Link href="/travel" className="text-sm text-muted-foreground hover:text-accent transition-colors">Travel</Link></li>
               </ul>
             </div>
             <div>
