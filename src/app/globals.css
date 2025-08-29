@@ -3,6 +3,20 @@
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: 'IBRAND';
+    src: url('/fonts/IBRAND-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'ACRE';
+    src: url('/fonts/ACRE-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
   :root {
     --background: 43 78% 95%; /* #F7EEDD */
     --foreground: 199 43% 16%; /* #18323A */
