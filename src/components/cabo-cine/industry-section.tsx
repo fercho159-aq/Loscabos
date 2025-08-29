@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Handshake, Users, Film } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const features = [
   {
@@ -46,9 +47,11 @@ export default function IndustrySection() {
                 </div>
               ))}
             </div>
-            <Button size="lg" className="mt-10 group">
-              Acceder al Portal de Industria
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            <Button size="lg" className="mt-10 group" asChild>
+              <Link href="/industria">
+                Acceder al Portal de Industria
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
             </Button>
           </div>
           <div className="order-1 md:order-2">

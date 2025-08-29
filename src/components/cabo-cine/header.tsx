@@ -14,10 +14,10 @@ import { Menu } from 'lucide-react';
 
 
 const navLinks = [
-  { href: '#programacion', label: 'Programación' },
-  { href: '#industria', label: 'Industria' },
-  { href: '#comunidad', label: 'Comunidad' },
-  { href: '#patrocinadores', label: 'Patrocinadores' },
+  { href: '/#programacion', label: 'Programación' },
+  { href: '/industria', label: 'Industria' },
+  { href: '/#comunidad', label: 'Comunidad' },
+  { href: '/#patrocinadores', label: 'Patrocinadores' },
 ];
 
 export default function Header() {
