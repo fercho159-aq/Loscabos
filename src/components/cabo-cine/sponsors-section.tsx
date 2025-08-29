@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { Button } from "../ui/button";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const sponsors = [
   { name: "Sponsor 1", logo: "https://picsum.photos/200/100?grayscale&random=1", hint: "company logo" },
@@ -18,10 +21,10 @@ export default function SponsorsSection() {
     <section id="patrocinadores" className="py-16 sm:py-24 bg-card">
        <div className="container mx-auto px-4 text-center">
         <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">
-          Nuestros Patrocinadores
+          Nuestros Aliados
         </h2>
         <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-          Agradecemos a las marcas que hacen posible este encuentro cinematográfico.
+          Agradecemos a las marcas y organizaciones que hacen posible este encuentro cinematográfico.
         </p>
       </div>
       
@@ -54,6 +57,15 @@ export default function SponsorsSection() {
             </li>
           ))}
         </ul>
+      </div>
+
+       <div className="container mx-auto px-4 text-center mt-12">
+        <Button size="lg" asChild className="group">
+          <Link href="/patrocinadores">
+            Conviértete en Patrocinador
+            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </Button>
       </div>
     </section>
   );

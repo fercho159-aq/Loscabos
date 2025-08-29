@@ -18,7 +18,7 @@ const navLinks = [
   { href: '/#programacion', label: 'Programación' },
   { href: '/industria', label: 'Industria' },
   { href: '/impacto', label: 'Impacto' },
-  { href: '/#patrocinadores', label: 'Patrocinadores' },
+  { href: '/patrocinadores', label: 'Patrocinadores' },
 ];
 
 export default function Header() {
