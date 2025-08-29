@@ -10,6 +10,7 @@ import { cn } from '@/lib/utils';
 import {
   Sheet,
   SheetContent,
+  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from 'lucide-react';
@@ -29,16 +30,21 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  const isTransparent = pathname === '/' && !scrolled;
+  const isHomePage = pathname === '/';
+  const isTransparent = isHomePage && !scrolled;
 
   useEffect(() => {
+    if (!isHomePage) {
+      setScrolled(true);
+      return;
+    }
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Call on mount to set initial state
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isHomePage]);
 
   const NavContent = () => (
     <>
@@ -93,6 +99,7 @@ export default function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="bg-card w-[250px] sm:w-[300px]">
+                  <SheetTitle className="sr-only">Menú de Navegación</SheetTitle>
                   <div className="p-6">
                   <Link href="/" onClick={() => setOpen(false)} className="flex items-center gap-2 mb-8">
                      <Image src="/Images/logos/FESTIVAL DE CINE LOS CABOS-negro.png" alt="CaboCine Logo" width={150} height={40} data-ai-hint="logo"/>
