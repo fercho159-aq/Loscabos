@@ -17,9 +17,20 @@ export default function HeroSection() {
         />
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
-      
-      <div className="relative z-10 p-4 animate-in fade-in duration-1000">
-        <p className="text-lg md:text-xl max-w-2xl mx-auto text-background/90 mb-8 mt-16 sm:mt-0">
+     
+      <div className="relative z-10 p-4 animate-in fade-in duration-1000 flex flex-col items-center">
+        
+        <div className="mb-8">
+            <Image 
+                src="/Images/logos/FESTIVAL DE CINE LOS CABOS- blanco.png" 
+                alt="CaboCine Logo" 
+                width={400} 
+                height={107}
+                data-ai-hint="logo white"
+                />
+        </div>
+
+        <p className="text-lg md:text-xl max-w-2xl mx-auto text-background/90 mb-8">
           Donde el desierto se encuentra con el mar, y el cine encuentra su destino.
         </p>
 
