@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -16,7 +17,7 @@ import { Menu } from 'lucide-react';
 const navLinks = [
   { href: '/#programacion', label: 'Programación' },
   { href: '/industria', label: 'Industria' },
-  { href: '/#comunidad', label: 'Comunidad' },
+  { href: '/impacto', label: 'Impacto' },
   { href: '/#patrocinadores', label: 'Patrocinadores' },
 ];
 

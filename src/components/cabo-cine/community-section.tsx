@@ -1,6 +1,8 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Film, HandHeart, Users } from "lucide-react";
+import Link from "next/link";
 
 const communityLinks = [
   {
@@ -38,8 +40,10 @@ export default function CommunitySection() {
                 <link.icon className="w-12 h-12 mb-4 text-accent" />
                 <h3 className="text-2xl font-bold font-headline text-card-foreground mb-2">{link.title}</h3>
                 <p className="text-muted-foreground mb-6 flex-grow">{link.description}</p>
-                <Button variant="ghost" className="group-hover:text-accent">
-                  Saber más <ArrowRight className="ml-2 h-4 w-4" />
+                 <Button variant="ghost" className="group-hover:text-accent" asChild>
+                  <Link href="/impacto">
+                    Saber más <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
