@@ -17,26 +17,24 @@ export default function InvitadosPage() {
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
       <main className="flex-grow pt-20">
-        <section className="bg-card py-20 sm:py-28 text-center">
+        <section className="py-16 sm:py-24">
           <div className="container mx-auto px-4">
-            <h1 className="font-headline text-5xl md:text-7xl font-bold text-foreground">
-              Invitados <span className="text-accent">Especiales</span>
-            </h1>
-            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-              Conoce a los cineastas, actores y visionarios que nos acompañan en esta edición para compartir su talento y experiencia.
-            </p>
-          </div>
-        </section>
+            <div className="text-center mb-12">
+              <h1 className="font-headline text-5xl md:text-7xl font-bold text-foreground">
+                Invitados <span className="text-accent">Especiales</span>
+              </h1>
+              <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+                Conoce a los cineastas, actores y visionarios que nos acompañan en esta edición para compartir su talento y experiencia.
+              </p>
+            </div>
 
-        <section className="py-16 sm:py-24 bg-background">
-          <div className="container mx-auto px-4">
             <Carousel
               opts={{
                 align: "start",
                 loop: true,
                 slidesToScroll: 1,
               }}
-              className="w-full"
+              className="w-full max-w-[1400px] mx-auto"
             >
               <CarouselContent className="-ml-4">
                 {guestData.map((guest) => (
