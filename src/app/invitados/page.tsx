@@ -41,7 +41,7 @@ export default function InvitadosPage() {
               <CarouselContent className="-ml-4">
                 {guestData.map((guest) => (
                   <CarouselItem key={guest.slug} className="pl-4 basis-full sm:basis-1/2 md:basis-1/3">
-                     <Link href={`/invitados/${guest.slug}`} className="group relative block aspect-square w-full overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                     <Link href={`/invitados/${guest.slug}`} className="group relative block aspect-[4/5] w-full overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
                       <Image
                         src={guest.imgSrc}
                         alt={`Retrato de ${guest.name}`}
