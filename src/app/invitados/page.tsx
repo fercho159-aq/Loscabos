@@ -32,24 +32,28 @@ export default function InvitadosPage() {
               opts={{
                 align: "start",
                 loop: true,
-                slidesToScroll: 1,
               }}
               className="w-full max-w-[1400px] mx-auto"
             >
               <CarouselContent className="-ml-4">
                 {guestData.map((guest) => (
-                  <CarouselItem key={guest.slug} className="pl-4 basis-full sm:basis-1/2 md:basis-1/3">
-                     <Link href={`/invitados/${guest.slug}`} className="group relative block aspect-[4/5] w-full overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                      <Image
-                        src={guest.imgSrc}
-                        alt={`Retrato de ${guest.name}`}
-                        data-ai-hint={guest.imgHint}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-                        <h3 className="font-headline text-xl sm:text-2xl text-background text-center">{guest.name}</h3>
-                      </div>
+                  <CarouselItem key={guest.slug} className="pl-4 basis-1/2 md:basis-1/3">
+                     <Link href={`/invitados/${guest.slug}`} className="group block">
+                        <div className="relative block aspect-[4/5] w-full overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                            <Image
+                                src={guest.imgSrc}
+                                alt={`Retrato de ${guest.name}`}
+                                data-ai-hint={guest.imgHint}
+                                fill
+                                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 md:flex">
+                                <h3 className="font-headline text-xl sm:text-2xl text-background text-center">{guest.name}</h3>
+                            </div>
+                        </div>
+                        <div className="mt-2 text-center md:hidden">
+                            <h3 className="font-headline text-lg font-semibold text-foreground">{guest.name}</h3>
+                        </div>
                     </Link>
                   </CarouselItem>
                 ))}
