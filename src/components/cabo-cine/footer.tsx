@@ -23,6 +23,7 @@ export default function Footer() {
               <h3 className="font-semibold text-foreground mb-4">Festival</h3>
               <ul className="space-y-2">
                 <li><Link href="/#programacion" className="text-sm text-muted-foreground hover:text-accent transition-colors">Programación</Link></li>
+                 <li><Link href="/invitados" className="text-sm text-muted-foreground hover:text-accent transition-colors">Invitados</Link></li>
                 <li><Link href="#" className="text-sm text-muted-foreground hover:text-accent transition-colors">Boletos</Link></li>
                 <li><Link href="/impacto" className="text-sm text-muted-foreground hover:text-accent transition-colors">Impacto</Link></li>
                  <li><Link href="/travel" className="text-sm text-muted-foreground hover:text-accent transition-colors">Travel</Link></li>

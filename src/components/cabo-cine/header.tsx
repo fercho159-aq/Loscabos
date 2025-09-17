@@ -19,6 +19,7 @@ import Image from 'next/image';
 
 const navLinks = [
   { href: '/#programacion', label: 'Programación' },
+  { href: '/invitados', label: 'Invitados' },
   { href: '/industria', label: 'Industria' },
   { href: '/impacto', label: 'Impacto' },
   { href: '/patrocinadores', label: 'Patrocinadores' },
@@ -110,7 +111,7 @@ export default function Header() {
                           key={link.href} 
                           href={link.href} 
                           onClick={() => setOpen(false)} 
-                          className="text-sm font-medium text-foreground hover:text-accent transition-colors block py-2 lg:py-0"
+                          className="text-lg font-medium text-foreground hover:text-accent transition-colors block py-2 lg:py-0"
                         >
                           {link.label}
                         </Link>
