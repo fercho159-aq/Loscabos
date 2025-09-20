@@ -2,11 +2,11 @@
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Clock, MapPin, Film, PartyPopper, Tv } from 'lucide-react';
+import { Clock, MapPin, Film, PartyPopper, Tv, Music, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 
-const events = [
+const wednesdayEvents = [
   { 
     title: "OPENING OFICIAL DEL PROGRAMA GRATUITO", 
     description: "Para medios e influencers invitados",
@@ -54,6 +54,62 @@ const events = [
   },
 ];
 
+const thursdayEvents = [
+    {
+      title: "PROYECCIÓN 1",
+      description: "Detalles de la proyección próximamente.",
+      venue: "CRANIA STAGE 2",
+      time: "17:00",
+      category: "Proyección",
+      icon: Film,
+      color: "primary"
+    },
+    {
+      title: "PLATICA INTRO Y PROYECCIÓN 1",
+      description: "Charla introductoria seguida de una proyección especial.",
+      venue: "CRANIA STAGE PRINCIPAL 1",
+      time: "18:00",
+      category: "Presentación",
+      icon: Tv,
+      color: "secondary"
+    },
+    {
+      title: "PROYECCIÓN 2",
+      description: "Detalles de la proyección próximamente.",
+      venue: "CRANIA STAGE 2",
+      time: "20:00",
+      category: "Proyección",
+      icon: Film,
+      color: "primary"
+    },
+    {
+      title: "ED MAVERICK",
+      description: "Presentación especial de Ed Maverick.",
+      venue: "CRANIA STAGE PRINCIPAL 1",
+      time: "21:00",
+      category: "Música",
+      icon: Music,
+      color: "accent"
+    },
+    {
+      title: "TOCA ED MAVERICK",
+      description: "Concierto en vivo de Ed Maverick para cerrar la noche.",
+      venue: "CRANIA STAGE PRINCIPAL 1",
+      time: "23:00",
+      category: "Concierto",
+      icon: Music,
+      color: "destructive"
+    },
+    {
+      title: "DJ POR CONFIRMAR",
+      description: "La fiesta continúa con un set especial.",
+      venue: "VELEROS",
+      time: "23:00",
+      category: "Fiesta",
+      icon: PartyPopper,
+      color: "destructive"
+    },
+];
 
 export default function ProgramacionPage() {
   return (
@@ -66,51 +122,102 @@ export default function ProgramacionPage() {
               <h1 className="font-headline text-5xl md:text-7xl font-bold text-foreground">
                 Programación <span className="text-accent">2025</span>
               </h1>
-              <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                Miércoles 10 de Diciembre
-              </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {events.map((event) => (
-                <Card key={event.title} className={cn("flex flex-col hover:shadow-lg transition-shadow border-l-4", 
-                  {
-                    'border-secondary': event.color === 'secondary',
-                    'border-primary': event.color === 'primary',
-                    'border-accent': event.color === 'accent',
-                    'border-destructive': event.color === 'destructive',
-                  }
-                )}>
-                  <CardHeader>
-                    <div className="flex justify-between items-start">
-                        <div>
-                            <Badge variant={event.color} className="mb-2">{event.category}</Badge>
-                            <CardTitle className="text-2xl font-headline">{event.title}</CardTitle>
-                        </div>
-                        <event.icon className={cn("h-8 w-8 flex-shrink-0", {
-                           'text-secondary': event.color === 'secondary',
-                           'text-primary': event.color === 'primary',
-                           'text-accent': event.color === 'accent',
-                           'text-destructive': event.color === 'destructive',
-                        })} />
-                    </div>
-                  </CardHeader>
-                  <CardContent className="flex flex-col flex-grow">
-                    <p className="text-muted-foreground mb-6 flex-grow">{event.description}</p>
-                    <div className="space-y-2 text-sm">
-                        <div className="flex items-center gap-2 font-semibold text-foreground">
-                            <Clock className="h-4 w-4 text-muted-foreground" />
-                            <span>{event.time}</span>
-                        </div>
-                        <div className="flex items-center gap-2 font-semibold text-foreground">
-                            <MapPin className="h-4 w-4 text-muted-foreground" />
-                            <span>{event.venue}</span>
-                        </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+            {/* Wednesday Events */}
+            <div className="mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold font-headline text-center text-foreground mb-10">
+                Miércoles 10 de Diciembre
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {wednesdayEvents.map((event) => (
+                  <Card key={event.title} className={cn("flex flex-col hover:shadow-lg transition-shadow border-l-4", 
+                    {
+                      'border-secondary': event.color === 'secondary',
+                      'border-primary': event.color === 'primary',
+                      'border-accent': event.color === 'accent',
+                      'border-destructive': event.color === 'destructive',
+                    }
+                  )}>
+                    <CardHeader>
+                      <div className="flex justify-between items-start">
+                          <div>
+                              <Badge variant={event.color === 'destructive' ? 'destructive' : event.color as any} className="mb-2">{event.category}</Badge>
+                              <CardTitle>{event.title}</CardTitle>
+                          </div>
+                          <event.icon className={cn("h-8 w-8 flex-shrink-0", {
+                             'text-secondary': event.color === 'secondary',
+                             'text-primary': event.color === 'primary',
+                             'text-accent': event.color === 'accent',
+                             'text-destructive': event.color === 'destructive',
+                          })} />
+                      </div>
+                    </CardHeader>
+                    <CardContent className="flex flex-col flex-grow">
+                      <p className="text-muted-foreground mb-6 flex-grow">{event.description}</p>
+                      <div className="space-y-2 text-sm">
+                          <div className="flex items-center gap-2 font-semibold text-foreground">
+                              <Clock className="h-4 w-4 text-muted-foreground" />
+                              <span>{event.time}</span>
+                          </div>
+                          <div className="flex items-center gap-2 font-semibold text-foreground">
+                              <MapPin className="h-4 w-4 text-muted-foreground" />
+                              <span>{event.venue}</span>
+                          </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
+
+            {/* Thursday Events */}
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold font-headline text-center text-foreground mb-10">
+                Jueves 11 de Diciembre
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {thursdayEvents.map((event) => (
+                  <Card key={event.title} className={cn("flex flex-col hover:shadow-lg transition-shadow border-l-4", 
+                    {
+                      'border-secondary': event.color === 'secondary',
+                      'border-primary': event.color === 'primary',
+                      'border-accent': event.color === 'accent',
+                      'border-destructive': event.color === 'destructive',
+                    }
+                  )}>
+                    <CardHeader>
+                      <div className="flex justify-between items-start">
+                          <div>
+                              <Badge variant={event.color === 'destructive' ? 'destructive' : event.color as any} className="mb-2">{event.category}</Badge>
+                              <CardTitle>{event.title}</CardTitle>
+                          </div>
+                          <event.icon className={cn("h-8 w-8 flex-shrink-0", {
+                             'text-secondary': event.color === 'secondary',
+                             'text-primary': event.color === 'primary',
+                             'text-accent': event.color === 'accent',
+                             'text-destructive': event.color === 'destructive',
+                          })} />
+                      </div>
+                    </CardHeader>
+                    <CardContent className="flex flex-col flex-grow">
+                      <p className="text-muted-foreground mb-6 flex-grow">{event.description}</p>
+                      <div className="space-y-2 text-sm">
+                          <div className="flex items-center gap-2 font-semibold text-foreground">
+                              <Clock className="h-4 w-4 text-muted-foreground" />
+                              <span>{event.time}</span>
+                          </div>
+                          <div className="flex items-center gap-2 font-semibold text-foreground">
+                              <MapPin className="h-4 w-4 text-muted-foreground" />
+                              <span>{event.venue}</span>
+                          </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
           </div>
         </section>
       </main>
