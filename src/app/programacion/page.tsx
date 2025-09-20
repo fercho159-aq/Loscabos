@@ -1,10 +1,14 @@
 
+"use client";
+
+import { useState } from 'react';
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Clock, MapPin, Film, PartyPopper, Tv, Music, User, Award } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 
 const wednesdayEvents = [
   { 
@@ -390,7 +394,18 @@ const sundayEvents = [
     }
 ];
 
+const categories = ["Fiesta", "Experiencia", "Proyección", "Gala", "Masterclass", "Concierto", "Música", "Presentación"];
+
 export default function ProgramacionPage() {
+  const [activeFilter, setActiveFilter] = useState<string | null>(null);
+
+  const filterEvents = (events: any[]) => {
+    if (!activeFilter) {
+      return events;
+    }
+    return events.filter(event => event.category === activeFilter);
+  };
+  
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
@@ -402,6 +417,24 @@ export default function ProgramacionPage() {
                 Programación <span className="text-accent">2025</span>
               </h1>
             </div>
+
+            <div className="flex justify-center flex-wrap gap-2 mb-12">
+              <Button
+                variant={!activeFilter ? 'default' : 'outline'}
+                onClick={() => setActiveFilter(null)}
+              >
+                Mostrar Todos
+              </Button>
+              {categories.map((category) => (
+                <Button
+                  key={category}
+                  variant={activeFilter === category ? 'default' : 'outline'}
+                  onClick={() => setActiveFilter(category)}
+                >
+                  {category}
+                </Button>
+              ))}
+            </div>
             
             {/* Wednesday Events */}
             <div className="mb-16">
@@ -409,7 +442,7 @@ export default function ProgramacionPage() {
                 Miércoles 10 de Diciembre
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {wednesdayEvents.map((event, index) => (
+                {filterEvents(wednesdayEvents).map((event, index) => (
                   <Card key={`${event.title}-${index}`} className={cn("flex flex-col hover:shadow-lg transition-shadow border-l-4", 
                     {
                       'border-secondary': event.color === 'secondary',
@@ -456,7 +489,7 @@ export default function ProgramacionPage() {
                 Jueves 11 de Diciembre
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {thursdayEvents.map((event, index) => (
+                {filterEvents(thursdayEvents).map((event, index) => (
                   <Card key={`${event.title}-${index}`} className={cn("flex flex-col hover:shadow-lg transition-shadow border-l-4", 
                     {
                       'border-secondary': event.color === 'secondary',
@@ -503,7 +536,7 @@ export default function ProgramacionPage() {
                 Viernes 12 de Diciembre
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {fridayEvents.map((event, index) => (
+                {filterEvents(fridayEvents).map((event, index) => (
                   <Card key={`${event.title}-${index}`} className={cn("flex flex-col hover:shadow-lg transition-shadow border-l-4", 
                     {
                       'border-secondary': event.color === 'secondary',
@@ -550,7 +583,7 @@ export default function ProgramacionPage() {
                 Sábado 13 de Diciembre
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {saturdayEvents.map((event, index) => (
+                {filterEvents(saturdayEvents).map((event, index) => (
                   <Card key={`${event.title}-${index}`} className={cn("flex flex-col hover:shadow-lg transition-shadow border-l-4", 
                     {
                       'border-secondary': event.color === 'secondary',
@@ -597,7 +630,7 @@ export default function ProgramacionPage() {
                 Domingo 14 de Diciembre
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {sundayEvents.map((event, index) => (
+                {filterEvents(sundayEvents).map((event, index) => (
                   <Card key={`${event.title}-${index}`} className={cn("flex flex-col hover:shadow-lg transition-shadow border-l-4", 
                     {
                       'border-secondary': event.color === 'secondary',
@@ -645,3 +678,5 @@ export default function ProgramacionPage() {
     </div>
   );
 }
+
+    
