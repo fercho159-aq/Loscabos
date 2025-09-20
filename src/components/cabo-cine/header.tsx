@@ -18,7 +18,7 @@ import Image from 'next/image';
 
 
 const navLinks = [
-  { href: '/programacion', label: 'Programación 2025' },
+  { href: '/#programacion', label: 'Programación 2025' },
   { href: '/homenaje', label: 'Homenaje' },
   { href: '/invitados', label: 'Invitados' },
   { href: '/industria', label: 'Fondo Fílmico' },
