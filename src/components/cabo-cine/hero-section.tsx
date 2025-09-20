@@ -39,10 +39,6 @@ export default function HeroSection() {
             Vive el Festival
             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Button>
-          <Button size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground font-bold text-lg py-7 px-8 group transition-all duration-300 transform hover:scale-105 shadow-lg shadow-black/30">
-            Haz Cine en Los Cabos
-            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-          </Button>
         </div>
       </div>
     </section>
