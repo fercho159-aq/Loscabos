@@ -1,67 +1,59 @@
 
-import React from 'react';
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Clock, MapPin, Film, PartyPopper, Tv } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 
-const schedule = {
-  day: "Miércoles 10",
-  venues: ["CRANIA STAGE PRINCIPAL 1", "CRANIA STAGE 2", "CRANIA CORTOS", "VELEROS", "CINEMEX SJ", "CINEMEX Pp", "SUELO SUR", "SAGE"],
-  events: [
-    { 
-      title: "OPENING OFICIAL DEL PROGRAMA GRATUITO DEL FESTIVAL", 
-      description: "PARA MEDIOS E INFLUENCERS INVITADOS",
-      venue: "CINEMEX SJ", 
-      start: "10:00",
-      end: "11:00",
-      color: "bg-secondary/20",
-      textColor: "text-secondary-foreground"
-    },
-    { 
-      title: "PROGRAMACIÓN FICC", 
-      venue: "CINEMEX SJ", 
-      start: "13:00",
-      end: "23:00",
-      color: "bg-primary/20",
-      textColor: "text-primary-foreground"
-    },
-    { 
-      title: "PROGRAMACIÓN FICC", 
-      venue: "CINEMEX Pp", 
-      start: "13:00",
-      end: "23:00",
-      color: "bg-primary/20",
-      textColor: "text-primary-foreground"
-    },
-    { 
-      title: "Sinfonía Oceánica", 
-      venue: "CRANIA STAGE PRINCIPAL 1", 
-      start: "18:00",
-      end: "19:00",
-      color: "bg-accent/20",
-      textColor: "text-accent-foreground"
-    },
-    { 
-      title: "PROYECCIÓN INAUGURAL", 
-      venue: "CRANIA STAGE PRINCIPAL 1", 
-      start: "20:00",
-      end: "22:00",
-      color: "bg-accent/80",
-      textColor: "text-accent-foreground"
-    },
-    { 
-      title: "FIESTA INAUGURAL", 
-      venue: "CRANIA STAGE PRINCIPAL 1", 
-      start: "22:00",
-      end: "24:00",
-      color: "bg-destructive/80",
-      textColor: "text-destructive-foreground"
-    },
-  ]
-};
+const events = [
+  { 
+    title: "OPENING OFICIAL DEL PROGRAMA GRATUITO", 
+    description: "Para medios e influencers invitados",
+    venue: "CINEMEX SJ", 
+    time: "10:00 - 11:00",
+    category: "Presentación",
+    icon: Tv,
+    color: "secondary"
+  },
+  { 
+    title: "PROGRAMACIÓN FICC", 
+    description: "Proyecciones continuas del festival.",
+    venue: "CINEMEX SJ & CINEMEX Pp", 
+    time: "13:00 - 23:00",
+    category: "Proyección",
+    icon: Film,
+    color: "primary"
+  },
+  { 
+    title: "Sinfonía Oceánica", 
+    description: "Una experiencia audiovisual inmersiva.",
+    venue: "CRANIA STAGE PRINCIPAL 1", 
+    time: "18:00 - 19:00",
+    category: "Experiencia",
+    icon: Film,
+    color: "accent"
+  },
+  { 
+    title: "PROYECCIÓN INAUGURAL", 
+    description: "La película que da inicio a nuestra celebración del cine.",
+    venue: "CRANIA STAGE PRINCIPAL 1", 
+    time: "20:00 - 22:00",
+    category: "Gala",
+    icon: Film,
+    color: "accent"
+  },
+  { 
+    title: "FIESTA INAUGURAL", 
+    description: "Celebremos juntos el comienzo del festival.",
+    venue: "CRANIA STAGE PRINCIPAL 1", 
+    time: "22:00 - 00:00",
+    category: "Fiesta",
+    icon: PartyPopper,
+    color: "destructive"
+  },
+];
 
-const hours = Array.from({ length: 16 }, (_, i) => `${i + 9}:00`); // 9:00 to 24:00
 
 export default function ProgramacionPage() {
   return (
@@ -75,46 +67,49 @@ export default function ProgramacionPage() {
                 Programación <span className="text-accent">2025</span>
               </h1>
               <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                {schedule.day}
+                Miércoles 10 de Diciembre
               </p>
             </div>
             
-            <div className="overflow-x-auto bg-card p-4 rounded-lg shadow-lg">
-              <div className="grid grid-cols-[auto_repeat(8,1fr)] min-w-[1200px]">
-                {/* Header */}
-                <div className="sticky top-0 left-0 z-20 bg-card"></div>
-                {schedule.venues.map(venue => (
-                  <div key={venue} className="sticky top-0 z-10 bg-card p-2 text-center font-bold text-foreground border-b-2">
-                    {venue}
-                  </div>
-                ))}
-
-                {/* Rows */}
-                {hours.map((hour) => (
-                  <React.Fragment key={hour}>
-                    <div className="font-semibold text-muted-foreground text-sm sticky left-0 bg-card z-10 p-2 border-t flex items-center justify-center">{hour}</div>
-                    {schedule.venues.map((venue) => {
-                      const event = schedule.events.find(e => e.venue === venue && e.start === hour);
-                      if (!event) {
-                        return <div key={`${venue}-${hour}`} className="border-l border-t h-20"></div>;
-                      }
-
-                      const startHour = parseInt(event.start.split(':')[0]);
-                      const endHour = parseInt(event.end.split(':')[0]);
-                      const duration = endHour - startHour;
-
-                      return (
-                        <div key={`${venue}-${hour}`} className={cn("border-l border-t p-2", event.color)} style={{ gridRow: `span ${duration}` }}>
-                          <div className={cn("h-full w-full rounded-md p-2 flex flex-col justify-center", event.color)}>
-                            <p className={cn("font-bold text-sm", event.textColor)}>{event.title}</p>
-                            {event.description && <p className={cn("text-xs opacity-80", event.textColor)}>{event.description}</p>}
-                          </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {events.map((event) => (
+                <Card key={event.title} className={cn("flex flex-col hover:shadow-lg transition-shadow border-l-4", 
+                  {
+                    'border-secondary': event.color === 'secondary',
+                    'border-primary': event.color === 'primary',
+                    'border-accent': event.color === 'accent',
+                    'border-destructive': event.color === 'destructive',
+                  }
+                )}>
+                  <CardHeader>
+                    <div className="flex justify-between items-start">
+                        <div>
+                            <Badge variant={event.color} className="mb-2">{event.category}</Badge>
+                            <CardTitle className="text-2xl font-headline">{event.title}</CardTitle>
                         </div>
-                      );
-                    })}
-                  </React.Fragment>
-                ))}
-              </div>
+                        <event.icon className={cn("h-8 w-8 flex-shrink-0", {
+                           'text-secondary': event.color === 'secondary',
+                           'text-primary': event.color === 'primary',
+                           'text-accent': event.color === 'accent',
+                           'text-destructive': event.color === 'destructive',
+                        })} />
+                    </div>
+                  </CardHeader>
+                  <CardContent className="flex flex-col flex-grow">
+                    <p className="text-muted-foreground mb-6 flex-grow">{event.description}</p>
+                    <div className="space-y-2 text-sm">
+                        <div className="flex items-center gap-2 font-semibold text-foreground">
+                            <Clock className="h-4 w-4 text-muted-foreground" />
+                            <span>{event.time}</span>
+                        </div>
+                        <div className="flex items-center gap-2 font-semibold text-foreground">
+                            <MapPin className="h-4 w-4 text-muted-foreground" />
+                            <span>{event.venue}</span>
+                        </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
