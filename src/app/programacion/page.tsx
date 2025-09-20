@@ -2,7 +2,7 @@
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Clock, MapPin, Film, PartyPopper, Tv, Music, User } from 'lucide-react';
+import { Clock, MapPin, Film, PartyPopper, Tv, Music, User, Award } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 
@@ -297,6 +297,99 @@ const saturdayEvents = [
     }
 ];
 
+const sundayEvents = [
+    {
+      title: "La Baja Inspira 1",
+      description: "Proyección de la serie de cortometrajes locales.",
+      venue: "CINEMEX SJ & CINEMEX Pp",
+      time: "12:00",
+      category: "Proyección",
+      icon: Film,
+      color: "primary"
+    },
+    {
+      title: "La Baja Inspira 2",
+      description: "Proyección de la serie de cortometrajes locales.",
+      venue: "CINEMEX SJ & CINEMEX Pp",
+      time: "15:00",
+      category: "Proyección",
+      icon: Film,
+      color: "primary"
+    },
+    {
+      title: "La Baja Inspira 3",
+      description: "Proyección de la serie de cortometrajes locales.",
+      venue: "CINEMEX SJ & CINEMEX Pp",
+      time: "17:00",
+      category: "Proyección",
+      icon: Film,
+      color: "primary"
+    },
+    {
+      title: "PROYECCIÓN 1",
+      description: "Detalles de la proyección próximamente.",
+      venue: "CRANIA STAGE 2",
+      time: "18:00",
+      category: "Proyección",
+      icon: Film,
+      color: "primary"
+    },
+    {
+      title: "Premiación",
+      description: "Reconocimiento a lo mejor del festival.",
+      venue: "CRANIA STAGE PRINCIPAL 1",
+      time: "19:00",
+      category: "Gala",
+      icon: Award,
+      color: "accent"
+    },
+    {
+      title: "PROYECCIÓN 2",
+      description: "Detalles de la proyección próximamente.",
+      venue: "CRANIA STAGE 2",
+      time: "21:00",
+      category: "Proyección",
+      icon: Film,
+      color: "primary"
+    },
+    {
+      title: "La Baja Inspira 4",
+      description: "Proyección de la serie de cortometrajes locales.",
+      venue: "CINEMEX Pp",
+      time: "21:00",
+      category: "Proyección",
+      icon: Film,
+      color: "primary"
+    },
+    {
+      title: "PROYECCIÓN 2",
+      description: "Detalles de la proyección próximamente.",
+      venue: "CRANIA STAGE PRINCIPAL 1",
+      time: "22:00",
+      category: "Proyección",
+      icon: Film,
+      color: "primary"
+    },
+    {
+      title: "La Baja Inspira 5",
+      description: "Cierre de proyecciones de cortometrajes locales.",
+      venue: "CINEMEX Pp",
+      time: "23:00",
+      category: "Proyección",
+      icon: Film,
+      color: "primary"
+    },
+    {
+      title: "Fiesta de clausura",
+      description: "La celebración final para cerrar el festival con broche de oro.",
+      venue: "CRANIA STAGE PRINCIPAL 1",
+      time: "00:00",
+      category: "Fiesta",
+      icon: PartyPopper,
+      color: "destructive"
+    }
+];
+
 export default function ProgramacionPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -452,12 +545,59 @@ export default function ProgramacionPage() {
             </div>
             
             {/* Saturday Events */}
-            <div>
+            <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold font-headline text-center text-foreground mb-10">
                 Sábado 13 de Diciembre
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {saturdayEvents.map((event, index) => (
+                  <Card key={`${event.title}-${index}`} className={cn("flex flex-col hover:shadow-lg transition-shadow border-l-4", 
+                    {
+                      'border-secondary': event.color === 'secondary',
+                      'border-primary': event.color === 'primary',
+                      'border-accent': event.color === 'accent',
+                      'border-destructive': event.color === 'destructive',
+                    }
+                  )}>
+                    <CardHeader>
+                      <div className="flex justify-between items-start">
+                          <div>
+                              <Badge variant={event.color === 'destructive' ? 'destructive' : event.color as any} className="mb-2">{event.category}</Badge>
+                              <CardTitle>{event.title}</CardTitle>
+                          </div>
+                          <event.icon className={cn("h-8 w-8 flex-shrink-0", {
+                             'text-secondary': event.color === 'secondary',
+                             'text-primary': event.color === 'primary',
+                             'text-accent': event.color === 'accent',
+                             'text-destructive': event.color === 'destructive',
+                          })} />
+                      </div>
+                    </CardHeader>
+                    <CardContent className="flex flex-col flex-grow">
+                      <p className="text-muted-foreground mb-6 flex-grow">{event.description}</p>
+                      <div className="space-y-2 text-sm">
+                          <div className="flex items-center gap-2 font-semibold text-foreground">
+                              <Clock className="h-4 w-4 text-muted-foreground" />
+                              <span>{event.time}</span>
+                          </div>
+                          <div className="flex items-center gap-2 font-semibold text-foreground">
+                              <MapPin className="h-4 w-4 text-muted-foreground" />
+                              <span>{event.venue}</span>
+                          </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            {/* Sunday Events */}
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold font-headline text-center text-foreground mb-10">
+                Domingo 14 de Diciembre
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {sundayEvents.map((event, index) => (
                   <Card key={`${event.title}-${index}`} className={cn("flex flex-col hover:shadow-lg transition-shadow border-l-4", 
                     {
                       'border-secondary': event.color === 'secondary',
