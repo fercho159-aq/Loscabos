@@ -1,3 +1,4 @@
+
 import { Badge } from "@/components/ui/badge";
 import {
   Carousel,
@@ -41,7 +42,7 @@ export default function ProgramSection() {
     <section id="programacion" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-6">
-          <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Programación Interactiva</h2>
+          <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Programación 2025</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             Descubre las joyas cinematográficas de esta edición. Guarda tus favoritas y crea tu propia agenda.
           </p>

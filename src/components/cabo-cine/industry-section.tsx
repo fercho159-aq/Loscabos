@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Handshake, Users, Film } from "lucide-react";
@@ -29,7 +30,7 @@ export default function IndustrySection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
             <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">
-              Haz Cine <span className="text-accent">en Los Cabos</span>
+              Fondo Fílmico <span className="text-accent">Gabriel Figueroa</span>
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Un portal exclusivo para profesionales acreditados. Conecta, colabora y haz negocios en el corazón de la industria cinematográfica.

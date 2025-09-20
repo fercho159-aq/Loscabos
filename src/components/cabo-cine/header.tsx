@@ -18,10 +18,10 @@ import Image from 'next/image';
 
 
 const navLinks = [
-  { href: '/#programacion', label: 'Programación' },
+  { href: '/#programacion', label: 'Programación 2025' },
+  { href: '/homenaje', label: 'Homenaje' },
   { href: '/invitados', label: 'Invitados' },
-  { href: '/industria', label: 'Industria' },
-  { href: '/impacto', label: 'Impacto' },
+  { href: '/industria', label: 'Fondo Fílmico' },
   { href: '/patrocinadores', label: 'Patrocinadores' },
   { href: '/travel', label: 'Travel' },
 ];
