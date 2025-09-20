@@ -6,7 +6,6 @@ import IndustrySection from '@/components/cabo-cine/industry-section';
 import CommunitySection from '@/components/cabo-cine/community-section';
 import SponsorsSection from '@/components/cabo-cine/sponsors-section';
 import Footer from '@/components/cabo-cine/footer';
-import ProgramSection from '@/components/cabo-cine/program-section';
 
 export default function Home() {
   return (
@@ -15,7 +14,6 @@ export default function Home() {
       <main className="flex-grow">
         <HeroSection />
         <AboutSection />
-        <ProgramSection />
         <IndustrySection />
         <CommunitySection />
         <SponsorsSection />
