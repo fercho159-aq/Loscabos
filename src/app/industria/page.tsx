@@ -58,55 +58,6 @@ export default function IndustriaPage() {
           </div>
         </section>
 
-        {/* Intro Section */}
-        <section className="py-16 sm:py-24 bg-card">
-            <div className="container mx-auto px-4">
-                <div className="grid md:grid-cols-5 gap-12 items-center">
-                    <div className='md:col-span-3'>
-                        <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Una Nueva Etapa: #BeyondTheScreen</h2>
-                        <div className="mt-6 text-lg text-muted-foreground space-y-4">
-                            <p>El Fondo Fílmico Gabriel Figueroa, creado en 2012, entra en una nueva etapa en 2025 dentro de la plataforma #BeyondTheScreen. En alianza con la Escuela Superior de Cine (ESCINE), el Fondo amplía su alcance formativo y profesional, reafirmando que el cine es el eje rector del festival, pero ahora conectado con las transformaciones digitales, los nuevos lenguajes audiovisuales y la creatividad interdisciplinaria.</p>
-                            <p className='font-semibold text-foreground'>El GFFF 2025 es más que un fondo: es un puente creativo entre cine, la industria y las nuevas narrativas.</p>
-                        </div>
-                    </div>
-                     <div className='md:col-span-2'>
-                        <Card className="bg-background shadow-lg">
-                            <CardHeader>
-                                <CardTitle className='flex items-center gap-3'><Target className='h-6 w-6 text-accent'/> Lo que representa</CardTitle>
-                            </CardHeader>
-                             <CardContent className="space-y-3 text-sm">
-                                <p>Puente de vinculación con la industria global.</p>
-                                <p>Impulso a la creación en etapa de postproducción.</p>
-                                <p>Semillero de talento emergente y narrativas diversas.</p>
-                                <p>Plataforma de colaboración con financiamiento y networking.</p>
-                            </CardContent>
-                        </Card>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        {/* Results Section */}
-        <section className="py-16 sm:py-24 bg-background">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Resultados a la Fecha</h2>
-                     <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Más de una década impulsando el cine mexicano.
-                    </p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                    {results.map((result) => (
-                        <Card key={result.stat} className="bg-card/80 backdrop-blur-sm border-border/50 text-center p-6">
-                            <result.icon className="w-12 h-12 mb-4 text-accent mx-auto" />
-                            <p className="text-5xl font-bold text-foreground font-headline">{result.stat}</p>
-                            <p className="text-muted-foreground mt-2">{result.description}</p>
-                        </Card>
-                    ))}
-                </div>
-            </div>
-        </section>
-
         {/* 2025 Edition Section */}
         <section className="py-16 sm:py-24 bg-card">
             <div className="container mx-auto px-4">
@@ -148,6 +99,55 @@ export default function IndustriaPage() {
                         ))}
                         </div>
                      </div>
+                </div>
+            </div>
+        </section>
+
+        {/* Intro Section */}
+        <section className="py-16 sm:py-24 bg-background">
+            <div className="container mx-auto px-4">
+                <div className="grid md:grid-cols-5 gap-12 items-center">
+                    <div className='md:col-span-3'>
+                        <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Una Nueva Etapa: #BeyondTheScreen</h2>
+                        <div className="mt-6 text-lg text-muted-foreground space-y-4">
+                            <p>El Fondo Fílmico Gabriel Figueroa, creado en 2012, entra en una nueva etapa en 2025 dentro de la plataforma #BeyondTheScreen. En alianza con la Escuela Superior de Cine (ESCINE), el Fondo amplía su alcance formativo y profesional, reafirmando que el cine es el eje rector del festival, pero ahora conectado con las transformaciones digitales, los nuevos lenguajes audiovisuales y la creatividad interdisciplinaria.</p>
+                            <p className='font-semibold text-foreground'>El GFFF 2025 es más que un fondo: es un puente creativo entre cine, la industria y las nuevas narrativas.</p>
+                        </div>
+                    </div>
+                     <div className='md:col-span-2'>
+                        <Card className="bg-card shadow-lg">
+                            <CardHeader>
+                                <CardTitle className='flex items-center gap-3'><Target className='h-6 w-6 text-accent'/> Lo que representa</CardTitle>
+                            </CardHeader>
+                             <CardContent className="space-y-3 text-sm">
+                                <p>Puente de vinculación con la industria global.</p>
+                                <p>Impulso a la creación en etapa de postproducción.</p>
+                                <p>Semillero de talento emergente y narrativas diversas.</p>
+                                <p>Plataforma de colaboración con financiamiento y networking.</p>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* Results Section */}
+        <section className="py-16 sm:py-24 bg-card">
+            <div className="container mx-auto px-4">
+                <div className="text-center mb-12">
+                    <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Resultados a la Fecha</h2>
+                     <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+                        Más de una década impulsando el cine mexicano.
+                    </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    {results.map((result) => (
+                        <Card key={result.stat} className="bg-background/80 backdrop-blur-sm border-border/50 text-center p-6">
+                            <result.icon className="w-12 h-12 mb-4 text-accent mx-auto" />
+                            <p className="text-5xl font-bold text-foreground font-headline">{result.stat}</p>
+                            <p className="text-muted-foreground mt-2">{result.description}</p>
+                        </Card>
+                    ))}
                 </div>
             </div>
         </section>
