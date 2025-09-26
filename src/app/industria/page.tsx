@@ -177,8 +177,7 @@ export default function IndustriaPage() {
                         <p><span className='font-bold text-foreground'>Premio CINECOLOR:</span> $400,000.00 MXN en servicios de corrección de color y entregables.</p>
                         <p><span className='font-bold text-foreground'>Premio Shalala:</span> $10,000 USD en servicios de postproducción y/o diseño de audio Dolby Atmos.</p>
                         <p><span className='font-bold text-foreground'>Premio PIANO:</span> $50,000 MXN para impulso al estreno comercial y carta de intención de distribución.</p>
-                        <p><span className
-='font-bold text-foreground'>Premio Art Kingdom:</span> $14,000 USD para diseño de trailer y cartel.</p>
+                        <p><span className='font-bold text-foreground'>Premio Art Kingdom:</span> $14,000 USD para diseño de trailer y cartel.</p>
                         <p><span className='font-bold text-foreground'>Premio EGEDA MÉXICO:</span> $5,000 USD en efectivo y participación en Iberseries Platino 2026 en Madrid.</p>
                     </AccordionContent>
                   </AccordionItem>
