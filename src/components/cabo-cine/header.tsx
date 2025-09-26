@@ -21,6 +21,7 @@ const navLinks = [
   { href: '/programacion', label: 'Programación 2025' },
   { href: '/homenaje', label: 'Homenaje' },
   { href: '/invitados', label: 'Invitados' },
+  { href: '/la-baja-inspira', label: 'La Baja Inspira'},
   { href: '/industria', label: 'Fondo Fílmico' },
   { href: '/patrocinadores', label: 'Patrocinadores' },
   { href: '/travel', label: 'Travel' },

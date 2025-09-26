@@ -33,6 +33,7 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold text-foreground mb-4">Industria</h3>
               <ul className="space-y-2">
+                <li><Link href="/la-baja-inspira" className="text-sm text-muted-foreground hover:text-accent transition-colors">La Baja Inspira</Link></li>
                 <li><Link href="/industria" className="text-sm text-muted-foreground hover:text-accent transition-colors">Fondo Fílmico</Link></li>
                 <li><Link href="/industria" className="text-sm text-muted-foreground hover:text-accent transition-colors">Acreditaciones</Link></li>
               </ul>

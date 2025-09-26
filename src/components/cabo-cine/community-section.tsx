@@ -7,16 +7,19 @@ import Link from "next/link";
 const communityLinks = [
   {
     title: "La Baja Inspira",
+    href: "/la-baja-inspira",
     icon: Film,
     description: "Proyectos que nacen de la belleza y cultura de nuestra tierra.",
   },
   {
     title: "Fondo Fílmico Gabriel Figueroa",
+    href: "/industria",
     icon: Users,
     description: "Apoyando a la nueva generación de cineastas mexicanos.",
   },
   {
     title: "Voluntariado",
+    href: "/impacto",
     icon: HandHeart,
     description: "Sé parte del corazón del festival y vive una experiencia única.",
   },
@@ -41,7 +44,7 @@ export default function CommunitySection() {
                 <h3 className="text-2xl font-bold font-headline text-card-foreground mb-2">{link.title}</h3>
                 <p className="text-muted-foreground mb-6 flex-grow">{link.description}</p>
                  <Button variant="ghost" className="group-hover:text-accent" asChild>
-                  <Link href="/impacto">
+                  <Link href={link.href}>
                     Saber más <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
