@@ -19,12 +19,11 @@ import Image from 'next/image';
 
 const navLinks = [
   { href: '/programacion', label: 'Programación 2025' },
-  { href: '/homenaje', label: 'Homenaje' },
-  { href: '/invitados', label: 'Invitados' },
-  { href: '/la-baja-inspira', label: 'La Baja Inspira'},
+  { href: '/#', label: 'Campus FICC' },
   { href: '/industria', label: 'Fondo Fílmico' },
-  { href: '/patrocinadores', label: 'Patrocinadores' },
-  { href: '/travel', label: 'Travel' },
+  { href: '/la-baja-inspira', label: 'La Baja Inspira'},
+  { href: '/#', label: 'Animación' },
+  { href: '/#about', label: 'Sobre el FICC' },
 ];
 
 export default function Header() {
