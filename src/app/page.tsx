@@ -6,7 +6,7 @@ import BeyondTheScreenSection from '@/components/cabo-cine/beyond-the-screen-sec
 import ProgramSection from '@/components/cabo-cine/program-section';
 import AnimationSection from '@/components/cabo-cine/animation-section';
 import IndustrySection from '@/components/cabo-cine/industry-section';
-import CommunitySection from '@/components/cabo-cine/community-section';
+import LaBajaInspiraHomeSection from '@/components/cabo-cine/la-baja-inspira-home-section';
 import SponsorsSection from '@/components/cabo-cine/sponsors-section';
 import Footer from '@/components/cabo-cine/footer';
 
@@ -21,7 +21,7 @@ export default function Home() {
         <ProgramSection />
         <AnimationSection />
         <IndustrySection />
-        <CommunitySection />
+        <LaBajaInspiraHomeSection />
         <SponsorsSection />
       </main>
       <Footer />
