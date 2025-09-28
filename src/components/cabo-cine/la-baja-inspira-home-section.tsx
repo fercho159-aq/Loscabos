@@ -37,7 +37,7 @@ export default function LaBajaInspiraHomeSection() {
                 </CardContent>
             </Card>
 
-            <Button size="lg" className="mt-6" asChild>
+            <Button size="lg" asChild>
                 <Link href="/la-baja-inspira">
                     Inscribe tu Proyecto
                 </Link>
@@ -46,7 +46,7 @@ export default function LaBajaInspiraHomeSection() {
 
           {/* Right Column */}
           <div className="md:col-span-1">
-            <h3 className="font-headline text-3xl sm:text-4xl font-bold text-foreground">Metodología</h3>
+            <h3 className="font-headline text-3xl font-bold text-foreground">Metodología</h3>
             <p className="mt-2 text-lg text-muted-foreground">
               Un proceso claro y transparente para descubrir las mejores historias de la región.
             </p>
@@ -68,4 +68,3 @@ export default function LaBajaInspiraHomeSection() {
     </section>
   );
 }
-
