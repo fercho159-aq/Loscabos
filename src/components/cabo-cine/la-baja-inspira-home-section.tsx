@@ -26,11 +26,6 @@ export default function LaBajaInspiraHomeSection() {
               <p className="mt-4 text-lg text-muted-foreground">
                 La sección competitiva dedicada a celebrar y visibilizar las historias que nacen del territorio de la península de Baja California.
               </p>
-              <Button size="lg" className="mt-6" asChild>
-                <Link href="/la-baja-inspira">
-                    Inscribe tu Proyecto
-                </Link>
-              </Button>
             </div>
             
             <Card className="bg-background shadow-lg">
@@ -41,6 +36,12 @@ export default function LaBajaInspiraHomeSection() {
                     <p className="text-base text-muted-foreground">Vincular e integrar a la comunidad cinematográfica de la península con el resto de México y el mundo, reconociendo la identidad regional y fortaleciendo el tejido cultural local.</p>
                 </CardContent>
             </Card>
+
+            <Button size="lg" className="mt-6" asChild>
+                <Link href="/la-baja-inspira">
+                    Inscribe tu Proyecto
+                </Link>
+            </Button>
           </div>
 
           {/* Right Column */}
@@ -67,3 +68,4 @@ export default function LaBajaInspiraHomeSection() {
     </section>
   );
 }
+
