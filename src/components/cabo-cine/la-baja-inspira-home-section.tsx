@@ -17,7 +17,7 @@ export default function LaBajaInspiraHomeSection() {
     <section id="la-baja-inspira-home" className="py-16 sm:py-24 bg-card">
       <div className="container mx-auto px-4">
         {/* Main Title & CTA */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">La Baja Inspira</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             La sección competitiva dedicada a celebrar y visibilizar las historias que nacen del territorio de la península de Baja California.
@@ -29,25 +29,16 @@ export default function LaBajaInspiraHomeSection() {
           </Button>
         </div>
 
-        {/* Intro and Objective */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-                <h3 className="font-headline text-3xl sm:text-4xl font-bold text-foreground">Un Puente Entre lo Local y lo Global</h3>
-                <div className="mt-6 text-base text-muted-foreground space-y-4">
-                    <p>En el corazón del Festival, La Baja Inspira es un puente para que el talento de la región dialogue con México y el mundo, fortaleciendo la identidad cultural y consolidando a Baja California como un epicentro audiovisual con voz propia.</p>
-                    <p>En colaboración con la Escuela Superior de Cine (ESCINE), esta sección se convierte en una plataforma sólida para los proyectos inscritos, garantizando un proceso de selección legítimo y creíble.</p>
-                </div>
-            </div>
-            <div>
-                <Card className="bg-background shadow-lg">
-                    <CardHeader>
-                        <CardTitle className='flex items-center gap-3'><Goal className='h-6 w-6 text-accent'/> Objetivo</CardTitle>
-                    </CardHeader>
-                        <CardContent>
-                        <p className="text-base text-muted-foreground">Vincular e integrar a la comunidad cinematográfica de la península con el resto de México y el mundo, reconociendo la identidad regional y fortaleciendo el tejido cultural local.</p>
-                    </CardContent>
-                </Card>
-            </div>
+        {/* Objective */}
+        <div className="max-w-2xl mx-auto mb-16">
+            <Card className="bg-background shadow-lg">
+                <CardHeader>
+                    <CardTitle className='flex items-center gap-3'><Goal className='h-6 w-6 text-accent'/> Objetivo</CardTitle>
+                </CardHeader>
+                    <CardContent>
+                    <p className="text-base text-muted-foreground">Vincular e integrar a la comunidad cinematográfica de la península con el resto de México y el mundo, reconociendo la identidad regional y fortaleciendo el tejido cultural local.</p>
+                </CardContent>
+            </Card>
         </div>
 
         {/* Methodology Section */}
