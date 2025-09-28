@@ -1,26 +1,23 @@
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Handshake, Users, Film } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { ArrowRight, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const features = [
-  {
-    icon: Handshake,
-    title: "Matchmaking Inteligente",
-    description: "Sugerencias de reuniones entre productores, directores y distribuidores basadas en tus intereses.",
-  },
-  {
-    icon: Users,
-    title: "Networking Digital",
-    description: "Conecta con profesionales de la industria a través de perfiles detallados y agenda integrada.",
-  },
-  {
-    icon: Film,
-    title: "Fondo Fílmico Gabriel Figueroa",
-    description: "Accede a pitchings, descubre nuevos proyectos y oportunidades de inversión.",
-  },
+const gfffRepresents = [
+    {
+      description: "Impulso a la creación cinematográfica mexicana en su etapa de postproducción.",
+    },
+    {
+      description: "Puente de vinculación con productores, distribuidores, inversionistas y agentes internacionales.",
+    },
+    {
+      description: "Semillero de talento emergente, consolidando nuevas voces y narrativas diversas.",
+    },
+     {
+      description: "Plataforma de colaboración con financiamiento, servicios y networking estratégico.",
+    },
 ];
 
 export default function IndustrySection() {
@@ -35,14 +32,14 @@ export default function IndustrySection() {
             <p className="mt-4 text-lg text-muted-foreground">
               En alianza con ESCINE, el GFFF se proyecta como un motor estratégico que impulsa nuevas voces y conecta al talento mexicano con oportunidades globales, consolidando a Los Cabos como un hub de creatividad y negocio.
             </p>
-            <div className="mt-8 space-y-6">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <div className="flex-shrink-0 bg-accent/10 text-accent p-3 rounded-full">
-                    <feature.icon className="h-6 w-6" />
+            <div className="mt-8 space-y-4">
+               <h3 className="text-xl font-semibold text-foreground">¿Qué representa el GFFF?</h3>
+              {gfffRepresents.map((feature, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <div className="flex-shrink-0 text-accent pt-1">
+                    <CheckCircle className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-foreground">{feature.title}</h3>
                     <p className="text-muted-foreground">{feature.description}</p>
                   </div>
                 </div>

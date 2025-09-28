@@ -143,7 +143,7 @@ export default function IndustriaPage() {
                      <div className='md:col-span-2'>
                         <Card className="bg-card shadow-lg">
                             <CardHeader>
-                                <CardTitle className='flex items-center gap-3'><Target className='h-6 w-6 text-accent'/> Qué representa el GFFF</CardTitle>
+                                <CardTitle className='flex items-center gap-3'><Target className='h-6 w-6 text-accent'/> ¿Qué representa el GFFF?</CardTitle>
                             </CardHeader>
                              <CardContent className="space-y-3">
                                 {gfffRepresents.map((item, index) => (
