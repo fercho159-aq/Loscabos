@@ -8,6 +8,7 @@ import AnimationSection from '@/components/cabo-cine/animation-section';
 import IndustrySection from '@/components/cabo-cine/industry-section';
 import LaBajaInspiraHomeSection from '@/components/cabo-cine/la-baja-inspira-home-section';
 import SponsorsSection from '@/components/cabo-cine/sponsors-section';
+import VolunteeringSection from '@/components/cabo-cine/volunteering-section';
 import Footer from '@/components/cabo-cine/footer';
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
         <IndustrySection />
         <LaBajaInspiraHomeSection />
         <SponsorsSection />
+        <VolunteeringSection />
       </main>
       <Footer />
     </div>
