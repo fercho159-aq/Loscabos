@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Goal } from "lucide-react";
 import Link from "next/link";
 
@@ -52,7 +52,7 @@ export default function LaBajaInspiraHomeSection() {
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
                 {methodology.map((item, index) => (
                     <div key={item.step} className="text-center flex flex-col items-center">
-                        <div className="bg-primary/10 text-accent p-4 rounded-full mb-4">
+                        <div className="bg-primary/10 text-accent p-4 rounded-full mb-4 w-12 h-12 flex items-center justify-center">
                             <span className="text-2xl font-bold font-headline">{index + 1}</span>
                         </div>
                         <h4 className="text-xl font-bold font-headline text-foreground mb-2">{item.step}</h4>
