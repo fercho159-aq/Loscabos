@@ -17,10 +17,10 @@ export default function LaBajaInspiraHomeSection() {
   return (
     <section id="la-baja-inspira-home" className="py-16 sm:py-24 bg-card">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-3 gap-12 items-start">
           
           {/* Left Column */}
-          <div className="space-y-8">
+          <div className="space-y-8 md:col-span-1">
             <div>
               <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">La Baja Inspira</h2>
               <p className="mt-4 text-lg text-muted-foreground">
@@ -44,7 +44,7 @@ export default function LaBajaInspiraHomeSection() {
           </div>
 
           {/* Right Column */}
-          <div>
+          <div className="md:col-span-2">
             <h3 className="font-headline text-3xl sm:text-4xl font-bold text-foreground">Metodología</h3>
             <p className="mt-2 text-lg text-muted-foreground">
               Un proceso claro y transparente para descubrir las mejores historias de la región.
