@@ -20,7 +20,7 @@ export default function LaBajaInspiraHomeSection() {
         <div className="grid md:grid-cols-3 gap-12 items-start">
           
           {/* Left Column */}
-          <div className="space-y-8 md:col-span-1">
+          <div className="space-y-8 md:col-span-2">
             <div>
               <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">La Baja Inspira</h2>
               <p className="mt-4 text-lg text-muted-foreground">
@@ -44,7 +44,7 @@ export default function LaBajaInspiraHomeSection() {
           </div>
 
           {/* Right Column */}
-          <div className="md:col-span-2">
+          <div className="md:col-span-1">
             <h3 className="font-headline text-3xl sm:text-4xl font-bold text-foreground">Metodología</h3>
             <p className="mt-2 text-lg text-muted-foreground">
               Un proceso claro y transparente para descubrir las mejores historias de la región.
