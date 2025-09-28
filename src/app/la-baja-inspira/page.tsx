@@ -57,15 +57,15 @@ export default function LaBajaInspiraPage() {
         {/* Intro Section */}
         <section className="py-16 sm:py-24 bg-card">
             <div className="container mx-auto px-4">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
+                <div className="grid md:grid-cols-5 gap-12 items-center">
+                    <div className="md:col-span-3">
                         <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Un Puente Entre lo Local y lo Global</h2>
                         <div className="mt-6 text-lg text-muted-foreground space-y-4">
                             <p>En el corazón del Festival, La Baja Inspira es un puente para que el talento de la región dialogue con México y el mundo, fortaleciendo la identidad cultural y consolidando a Baja California como un epicentro audiovisual con voz propia.</p>
                             <p>En colaboración con la Escuela Superior de Cine (ESCINE), esta sección se convierte en una plataforma sólida para los proyectos inscritos, garantizando un proceso de selección legítimo y creíble.</p>
                         </div>
                     </div>
-                     <div>
+                     <div className="md:col-span-2">
                         <Card className="bg-background shadow-lg">
                             <CardHeader>
                                 <CardTitle className='flex items-center gap-3'><Goal className='h-6 w-6 text-accent'/> Objetivo</CardTitle>
@@ -91,7 +91,7 @@ export default function LaBajaInspiraPage() {
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
                     {methodology.map((item, index) => (
                         <div key={item.step} className="text-center flex flex-col items-center">
-                            <div className="bg-primary/10 text-accent p-4 rounded-full mb-4">
+                            <div className="bg-primary/10 text-accent p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
                                 <span className="text-2xl font-bold font-headline">{index + 1}</span>
                             </div>
                             <h3 className="text-xl font-bold font-headline text-foreground mb-2">{item.step}</h3>
