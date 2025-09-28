@@ -132,7 +132,7 @@ export default function IndustriaPage() {
             <div className="container mx-auto px-4">
                 <div className="grid md:grid-cols-5 gap-12 items-center">
                     <div className='md:col-span-3'>
-                        <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Una Nueva Etapa: #BeyondTheScreen</h2>
+                        <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Fondo Fílmico Gabriel Figueroa – FICC 2025</h2>
                         <div className="mt-6 text-lg text-muted-foreground space-y-4">
                             <p>En el marco del Festival Internacional de Cine de Los Cabos 2025, el Fondo Fílmico Gabriel Figueroa (GFFF) entra en una etapa renovada como parte de la visión #BeyondTheScreen. Creado en 2012, este programa ha impulsado la consolidación de nuevas voces del cine mexicano, y hoy se proyecta como un motor estratégico dentro del ecosistema de las industrias creativas.</p>
                             <p>Las industrias creativas son hoy uno de los principales motores de transformación económica, cultural y social a nivel internacional. En Baja California Sur, el GFFF se convierte en un vehículo clave para articular talento, formación y producción audiovisual, al tiempo que fortalece la proyección de México en el mundo.</p>
