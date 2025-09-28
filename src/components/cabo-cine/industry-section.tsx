@@ -10,13 +10,13 @@ const gfffRepresents = [
       description: "Impulso a la creación cinematográfica mexicana en su etapa de postproducción.",
     },
     {
-      description: "Puente de vinculación con productores, distribuidores, inversionistas y agentes internacionales.",
+      description: "Puente de vinculación con productores, distribuidores, inversionistas, festivales y agentes internacionales.",
     },
     {
       description: "Semillero de talento emergente, consolidando nuevas voces y narrativas diversas.",
     },
      {
-      description: "Plataforma de colaboración con financiamiento, servicios y networking estratégico.",
+      description: "Plataforma de colaboración que ofrece financiamiento, servicios, premios en especie y networking estratégico.",
     },
 ];
 
@@ -47,7 +47,7 @@ export default function IndustrySection() {
             </div>
             <Button size="lg" className="mt-10 group" asChild>
               <Link href="/industria">
-                Acceder al Portal de Industria
+                Acceder a Fondo Fílmico
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
