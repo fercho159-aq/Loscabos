@@ -3,6 +3,7 @@ import Header from '@/components/cabo-cine/header';
 import HeroSection from '@/components/cabo-cine/hero-section';
 import AboutSection from '@/components/cabo-cine/about-section';
 import BeyondTheScreenSection from '@/components/cabo-cine/beyond-the-screen-section';
+import ProgramSection from '@/components/cabo-cine/program-section';
 import IndustrySection from '@/components/cabo-cine/industry-section';
 import CommunitySection from '@/components/cabo-cine/community-section';
 import SponsorsSection from '@/components/cabo-cine/sponsors-section';
@@ -16,6 +17,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <BeyondTheScreenSection />
+        <ProgramSection />
         <IndustrySection />
         <CommunitySection />
         <SponsorsSection />

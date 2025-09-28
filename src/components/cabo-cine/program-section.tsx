@@ -8,8 +8,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { MovieCard } from "./movie-card";
-
-const filters = ["Día", "Venue", "Género", "País"];
+import { Button } from "../ui/button";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const categories = [
   {
@@ -23,7 +24,7 @@ const categories = [
     ]
   },
   {
-    name: "Retrospectivas",
+    name: "La Baja Inspira",
     films: [
         { title: "Leyendas del Mar", genre: "Aventura", synopsis: "Un clásico restaurado sobre piratas en el Mar de Cortés.", imgSrc: "https://picsum.photos/400/604", imgHint: "movie poster ship" },
         { title: "Sol de Medianoche", genre: "Film Noir", synopsis: "Un detective investiga un crimen en un resort de lujo.", imgSrc: "https://picsum.photos/400/605", imgHint: "movie poster mystery" },
@@ -41,18 +42,11 @@ export default function ProgramSection() {
   return (
     <section id="programacion" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-6">
+        <div className="text-center mb-12">
           <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Programación 2025</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Descubre las joyas cinematográficas de esta edición. Guarda tus favoritas y crea tu propia agenda.
+            Descubre las joyas cinematográficas de esta edición, desde las competencias oficiales hasta las galas y funciones especiales.
           </p>
-        </div>
-        <div className="flex justify-center flex-wrap gap-2 mb-12">
-          {filters.map((filter) => (
-            <Badge key={filter} variant="outline" className="text-base px-4 py-2 rounded-full cursor-pointer border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors">
-              {filter}
-            </Badge>
-          ))}
         </div>
 
         <div className="space-y-16">
@@ -72,6 +66,13 @@ export default function ProgramSection() {
               </Carousel>
             </div>
           ))}
+        </div>
+        <div className="text-center mt-16">
+            <Button size="lg" asChild>
+                <Link href="/programacion">
+                    Ver programación completa <ArrowRight className="ml-2 h-5 w-5"/>
+                </Link>
+            </Button>
         </div>
       </div>
     </section>
