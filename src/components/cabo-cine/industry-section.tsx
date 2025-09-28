@@ -33,7 +33,7 @@ export default function IndustrySection() {
               Fondo Fílmico <span className="text-accent">Gabriel Figueroa</span>
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Un portal exclusivo para profesionales acreditados. Conecta, colabora y haz negocios en el corazón de la industria cinematográfica.
+              El GFFF es un espacio de convergencia entre cultura, tecnología y creatividad que conecta la potencia del cine con los nuevos lenguajes digitales y con la necesidad de narrativas diversas y sostenibles.
             </p>
             <div className="mt-8 space-y-6">
               {features.map((feature, index) => (
