@@ -22,7 +22,7 @@ export default function LaBajaInspiraHomeSection() {
           {/* Left Column */}
           <div className="space-y-8 md:col-span-2">
             <div>
-              <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">La Baja Inspira</h2>
+              <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">La Baja <span className="text-accent">Inspira</span></h2>
               <p className="mt-4 text-lg text-muted-foreground">
                 La sección competitiva dedicada a celebrar y visibilizar las historias que nacen del territorio de la península de Baja California.
               </p>
