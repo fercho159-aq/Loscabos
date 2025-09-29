@@ -7,12 +7,7 @@ import { Button } from "../ui/button";
 const ficcLinks = [
     { href: "/#about", label: "Acerca de la 13ª edición" },
     { href: "/programacion", label: "Programación 2025" },
-    { href: "/programacion", label: "Programación gratis en CINEMEX" },
     { href: "/#", label: "Campus FICC" },
-    { href: "/homenaje", label: "Homenaje a Eugenio Caballero" },
-    { href: "/animacion", label: "Selección de Animación" },
-    { href: "/invitados", label: "Invitados especiales" },
-    { href: "/travel", label: "Planea tu visita" },
     { href: "/#", label: "Comprar boletos" },
 ];
 
@@ -30,13 +25,11 @@ const initiativesLinks = [
 
 const pressLinks = [
     { href: "/#", label: "Comunicados de prensa" },
-    { href: "/#", label: "Acreditaciones" },
     { href: "/#", label: "Contacto" },
 ];
 
 const plcLinks = [
     { href: "/#", label: "Acerca de PLC" },
-    { href: "/travel", label: "Hoteles" },
 ];
 
 
