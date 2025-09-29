@@ -1,5 +1,6 @@
 
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
 
 export default function AnimationSection() {
   return (
@@ -15,12 +16,16 @@ export default function AnimationSection() {
         <div className="absolute inset-0 bg-black/70"></div>
       </div>
       <div className="relative z-10 container mx-auto px-4">
-        <h2 className="font-headline text-4xl sm:text-5xl font-bold text-accent">
-          Foco en Animación
+        <p className="font-semibold text-accent mb-2">Nueva sección</p>
+        <h2 className="font-headline text-4xl sm:text-5xl font-bold">
+          Animación
         </h2>
         <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-background/90 leading-relaxed">
-          Explora mundos imaginarios y celebra el arte de la animación con nuestra selección especial de largometrajes y cortometrajes animados de todo el mundo. Una ventana a nuevas técnicas y narrativas que desafían la realidad.
+          Por primera vez, el Festival Internacional de Cine de Los Cabos integra la animación a su programación oficial, con una selección de cortos y mediometrajes de escuelas nacionales e internacionales, masterclasses con profesionales de la industria y el anuncio de la convocatoria de animación 2026 junto a un taller formativo para creadores de Baja California.
         </p>
+        <Button variant="secondary" size="lg" className="mt-8" disabled>
+            Descúbrelo próximamente
+        </Button>
       </div>
     </section>
   );
