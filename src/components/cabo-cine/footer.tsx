@@ -1,63 +1,126 @@
 
 import Link from "next/link";
-import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
-import NewsletterForm from "./newsletter-form";
+import { Facebook, Instagram, Youtube, Linkedin, HandHeart } from "lucide-react";
 import Image from "next/image";
+import { Button } from "../ui/button";
+
+const ficcLinks = [
+    { href: "/#about", label: "Acerca de la 13ª edición" },
+    { href: "/programacion", label: "Programación 2025" },
+    { href: "/programacion", label: "Programación gratis en CINEMEX" },
+    { href: "/#", label: "Campus FICC" },
+    { href: "/homenaje", label: "Homenaje a Eugenio Caballero" },
+    { href: "/animacion", label: "Selección de Animación" },
+    { href: "/invitados", label: "Invitados especiales" },
+    { href: "/travel", label: "Planea tu visita" },
+    { href: "/#", label: "Comprar boletos" },
+];
+
+const aboutLinks = [
+    { href: "/#about", label: "Sobre el FICC" },
+    { href: "/patrocinadores", label: "Aliados y Patrocinadores" },
+    { href: "/#", label: "Contáctanos" },
+];
+
+const initiativesLinks = [
+    { href: "/industria", label: "Impulso a la Industria" },
+    { href: "/industria", label: "Fondo Fílmico Gabriel Figueroa" },
+    { href: "/la-baja-inspira", label: "La Baja Inspira" },
+];
+
+const pressLinks = [
+    { href: "/#", label: "Comunicados de prensa" },
+    { href: "/#", label: "Acreditaciones" },
+    { href: "/#", label: "Contacto" },
+];
+
+const plcLinks = [
+    { href: "/#", label: "Acerca de PLC" },
+    { href: "/travel", label: "Hoteles" },
+];
+
 
 export default function Footer() {
   return (
     <footer className="bg-card text-card-foreground border-t border-border/50">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="md:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-               <Image src="/Images/logos/FESTIVAL DE CINE LOS CABOS-negro.png" alt="CaboCine Logo" width={150} height={40} data-ai-hint="logo"/>
-            </Link>
-            <p className="text-sm text-muted-foreground">
-              Festival Internacional de Cine de Los Cabos
-            </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+
+          {/* FICC 2025 */}
+          <div>
+            <h3 className="font-semibold text-foreground mb-4">FICC 2025</h3>
+            <ul className="space-y-2">
+              {ficcLinks.map(link => (
+                <li key={link.label}><Link href={link.href} className="text-sm text-muted-foreground hover:text-accent transition-colors">{link.label}</Link></li>
+              ))}
+            </ul>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 md:col-span-3 gap-8">
-            <div>
-              <h3 className="font-semibold text-foreground mb-4">Festival</h3>
-              <ul className="space-y-2">
-                <li><Link href="/programacion" className="text-sm text-muted-foreground hover:text-accent transition-colors">Programación</Link></li>
-                 <li><Link href="/homenaje" className="text-sm text-muted-foreground hover:text-accent transition-colors">Homenaje</Link></li>
-                 <li><Link href="/invitados" className="text-sm text-muted-foreground hover:text-accent transition-colors">Invitados</Link></li>
-                <li><Link href="#" className="text-sm text-muted-foreground hover:text-accent transition-colors">Boletos</Link></li>
-                <li><Link href="/impacto" className="text-sm text-muted-foreground hover:text-accent transition-colors">Impacto</Link></li>
-                 <li><Link href="/travel" className="text-sm text-muted-foreground hover:text-accent transition-colors">Travel</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold text-foreground mb-4">Industria</h3>
-              <ul className="space-y-2">
-                <li><Link href="/la-baja-inspira" className="text-sm text-muted-foreground hover:text-accent transition-colors">La Baja Inspira</Link></li>
-                <li><Link href="/industria" className="text-sm text-muted-foreground hover:text-accent transition-colors">Fondo Fílmico</Link></li>
-                <li><Link href="/industria" className="text-sm text-muted-foreground hover:text-accent transition-colors">Acreditaciones</Link></li>
-              </ul>
-            </div>
-            <div className="col-span-2 md:col-span-1">
-              <h3 className="font-semibold text-foreground mb-4">Newsletter</h3>
-              <p className="text-sm text-muted-foreground mb-4">
-                Recibe noticias y contenido exclusivo del festival.
-              </p>
-              <NewsletterForm />
-            </div>
+          {/* Acerca de */}
+          <div>
+            <h3 className="font-semibold text-foreground mb-4">Acerca de</h3>
+            <ul className="space-y-2">
+              {aboutLinks.map(link => (
+                <li key={link.label}><Link href={link.href} className="text-sm text-muted-foreground hover:text-accent transition-colors">{link.label}</Link></li>
+              ))}
+            </ul>
           </div>
+
+          {/* Iniciativas */}
+          <div>
+            <h3 className="font-semibold text-foreground mb-4">Iniciativas</h3>
+            <ul className="space-y-2">
+              {initiativesLinks.map(link => (
+                <li key={link.label}><Link href={link.href} className="text-sm text-muted-foreground hover:text-accent transition-colors">{link.label}</Link></li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Prensa */}
+          <div>
+            <h3 className="font-semibold text-foreground mb-4">Prensa</h3>
+            <ul className="space-y-2">
+              {pressLinks.map(link => (
+                <li key={link.label}><Link href={link.href} className="text-sm text-muted-foreground hover:text-accent transition-colors">{link.label}</Link></li>
+              ))}
+            </ul>
+          </div>
+          
+          {/* Puerto Los Cabos */}
+          <div>
+            <h3 className="font-semibold text-foreground mb-4">Puerto Los Cabos</h3>
+            <ul className="space-y-2">
+              {plcLinks.map(link => (
+                <li key={link.label}><Link href={link.href} className="text-sm text-muted-foreground hover:text-accent transition-colors">{link.label}</Link></li>
+              ))}
+            </ul>
+          </div>
+
         </div>
 
-        <div className="mt-8 pt-8 border-t border-border/50 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} CaboCine. Todos los derechos reservados.
-          </p>
-          <div className="flex space-x-4 mt-4 sm:mt-0">
-            <Link href="#" className="text-muted-foreground hover:text-accent transition-colors"><Facebook className="h-5 w-5" /></Link>
-            <Link href="#" className="text-muted-foreground hover:text-accent transition-colors"><Twitter className="h-5 w-5" /></Link>
-            <Link href="#" className="text-muted-foreground hover:text-accent transition-colors"><Instagram className="h-5 w-5" /></Link>
-            <Link href="#" className="text-muted-foreground hover:text-accent transition-colors"><Youtube className="h-5 w-5" /></Link>
-          </div>
+        <div className="mt-12 pt-8 border-t border-border/50">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                <Link href="/" className="flex items-center gap-2">
+                   <Image src="/Images/logos/FESTIVAL DE CINE LOS CABOS-negro.png" alt="CaboCine Logo" width={150} height={40} data-ai-hint="logo"/>
+                </Link>
+                
+                <Button asChild className="group">
+                    <Link href="/impacto">
+                        Sé voluntario del FICC 2025
+                        <HandHeart className="ml-2 h-5 w-5 transition-transform group-hover:rotate-12" />
+                    </Link>
+                </Button>
+
+                 <div className="flex space-x-6">
+                    <Link href="#" className="text-muted-foreground hover:text-accent transition-colors"><Instagram className="h-6 w-6" /></Link>
+                    <Link href="#" className="text-muted-foreground hover:text-accent transition-colors"><Facebook className="h-6 w-6" /></Link>
+                    <Link href="#" className="text-muted-foreground hover:text-accent transition-colors"><Youtube className="h-6 w-6" /></Link>
+                    <Link href="#" className="text-muted-foreground hover:text-accent transition-colors"><Linkedin className="h-6 w-6" /></Link>
+                </div>
+            </div>
+             <p className="text-sm text-muted-foreground text-center mt-8">
+                &copy; {new Date().getFullYear()} CaboCine. Todos los derechos reservados.
+            </p>
         </div>
       </div>
     </footer>
