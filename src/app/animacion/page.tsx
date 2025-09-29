@@ -52,16 +52,18 @@ export default function AnimacionPage() {
     <div className="flex flex-col min-h-screen bg-card">
       <Header />
       <main className="flex-grow pt-20">
-        {/* Hero Section */}
-        <section className="bg-background py-20 sm:py-28 text-center">
-          <div className="container mx-auto px-4">
-            <h1 className="font-headline text-5xl md:text-7xl font-bold text-foreground">
-              Foco en <span className="text-accent">Animación</span>
-            </h1>
-            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-              Un nuevo espacio para celebrar la innovación, la creatividad y el talento que definen a la animación como un pilar de la cultura audiovisual contemporánea.
-            </p>
-          </div>
+        {/* Banner Section */}
+        <section className="py-16 sm:py-20 bg-primary text-primary-foreground">
+            <div className="container mx-auto px-4 text-center max-w-3xl">
+                <p className="font-semibold text-accent mb-2">Nueva sección</p>
+                <h2 className="font-headline text-4xl sm:text-5xl font-bold">Animación</h2>
+                <p className="mt-4 text-lg text-primary-foreground/90 mx-auto">
+                    Por primera vez, el Festival Internacional de Cine de Los Cabos integra la animación a su programación oficial, con una selección de cortos y mediometrajes de escuelas nacionales e internacionales, masterclasses con profesionales de la industria y el anuncio de la convocatoria de animación 2026 junto a un taller formativo para creadores de Baja California.
+                </p>
+                <Button variant="secondary" size="lg" className="mt-8" disabled>
+                    Descúbrelo próximamente
+                </Button>
+            </div>
         </section>
 
         {/* Intro Section */}
@@ -135,20 +137,6 @@ export default function AnimacionPage() {
             </div>
         </section>
 
-        {/* Banner Section */}
-        <section className="py-16 sm:py-20 bg-primary text-primary-foreground">
-            <div className="container mx-auto px-4 text-center max-w-3xl">
-                <p className="font-semibold text-accent mb-2">Nueva sección</p>
-                <h2 className="font-headline text-4xl sm:text-5xl font-bold">Animación</h2>
-                <p className="mt-4 text-lg text-primary-foreground/90 mx-auto">
-                    Por primera vez, el Festival Internacional de Cine de Los Cabos integra la animación a su programación oficial, con una selección de cortos y mediometrajes de escuelas nacionales e internacionales, masterclasses con profesionales de la industria y el anuncio de la convocatoria de animación 2026 junto a un taller formativo para creadores de Baja California.
-                </p>
-                <Button variant="secondary" size="lg" className="mt-8" disabled>
-                    Descúbrelo próximamente
-                </Button>
-            </div>
-        </section>
-        
       </main>
       <Footer />
     </div>
