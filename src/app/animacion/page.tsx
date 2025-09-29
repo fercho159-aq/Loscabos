@@ -4,6 +4,7 @@ import Footer from '@/components/cabo-cine/footer';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Globe, TrendingUp, Cpu, Award, Film, Users, Calendar, Sparkles, Handshake, Bot } from 'lucide-react';
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
 
 const justificationPoints = [
     {
@@ -131,6 +132,20 @@ export default function AnimacionPage() {
                         </Card>
                     ))}
                 </div>
+            </div>
+        </section>
+
+        {/* Banner Section */}
+        <section className="py-16 sm:py-20 bg-primary text-primary-foreground">
+            <div className="container mx-auto px-4 text-center max-w-3xl">
+                <p className="font-semibold text-accent mb-2">Nueva sección</p>
+                <h2 className="font-headline text-4xl sm:text-5xl font-bold">Animación</h2>
+                <p className="mt-4 text-lg text-primary-foreground/90 mx-auto">
+                    Por primera vez, el Festival Internacional de Cine de Los Cabos integra la animación a su programación oficial, con una selección de cortos y mediometrajes de escuelas nacionales e internacionales, masterclasses con profesionales de la industria y el anuncio de la convocatoria de animación 2026 junto a un taller formativo para creadores de Baja California.
+                </p>
+                <Button variant="secondary" size="lg" className="mt-8" disabled>
+                    Descúbrelo próximamente
+                </Button>
             </div>
         </section>
         
