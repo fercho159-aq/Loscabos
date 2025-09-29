@@ -2,7 +2,7 @@
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Globe, TrendingUp, Cpu, Award, Film, Users, Calendar } from 'lucide-react';
+import { Globe, TrendingUp, Cpu, Award, Film, Users, Calendar, Sparkles, Handshake, Bot } from 'lucide-react';
 import Image from 'next/image';
 
 const justificationPoints = [
@@ -65,10 +65,24 @@ export default function AnimacionPage() {
 
         {/* Intro Section */}
         <section className="py-16 sm:py-24 bg-card">
-            <div className="container mx-auto px-4 max-w-4xl text-lg text-muted-foreground space-y-6 text-center">
-                <p>El Festival Internacional de Cine de Los Cabos (FICC) ha sido, por más de una década, un espacio de encuentro entre México y la industria cinematográfica global. En 2025, el Festival celebra su 13ª edición del 10 al 14 de diciembre, reafirmando al cine como eje rector y expandiendo su alcance hacia disciplinas que hoy definen la cultura contemporánea, bajo la visión #BeyondTheScreen.</p>
-                <p>En esta nueva etapa, la Escuela Superior de Cine (ESCINE) asume un papel central en la curaduría de la programación y en la evaluación de las secciones competitivas, aportando legitimidad, rigor académico y credibilidad al proceso. La alianza permite también integrar nuevos lenguajes como la animación, consolidada ya como industria global y símbolo de la transformación digital, que suma diversidad narrativa y potencia creativa al Festival.</p>
-                <p>De esta manera, el FICC 2025 no solo celebra el cine, sino que se consolida como un laboratorio de innovación cultural y un nodo creativo que articula arte, tecnología y comunidad, proyectando a Puerto Los Cabos en el mapa internacional como destino de creatividad, regeneración y nuevas industrias.</p>
+            <div className="container mx-auto px-4">
+                <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <Image
+                            src="https://picsum.photos/seed/anim-intro/800/1000"
+                            alt="Proceso creativo de animación"
+                            data-ai-hint="animation process creative"
+                            width={800}
+                            height={1000}
+                            className="rounded-lg shadow-2xl object-cover w-full h-auto"
+                        />
+                    </div>
+                    <div className="text-lg text-muted-foreground space-y-6">
+                        <p>El Festival Internacional de Cine de Los Cabos (FICC) ha sido, por más de una década, un espacio de encuentro entre México y la industria cinematográfica global. En 2025, el Festival celebra su 13ª edición del 10 al 14 de diciembre, reafirmando al cine como eje rector y expandiendo su alcance hacia disciplinas que hoy definen la cultura contemporánea, bajo la visión <span className="font-semibold text-accent">#BeyondTheScreen</span>.</p>
+                        <p>En esta nueva etapa, la <span className="font-semibold text-foreground">Escuela Superior de Cine (ESCINE)</span> asume un papel central en la curaduría y evaluación, aportando legitimidad y rigor académico. <Handshake className="inline-block h-5 w-5 mr-1" /> Esta alianza permite integrar nuevos lenguajes como la animación, una industria global y símbolo de la transformación digital <Bot className="inline-block h-5 w-5 mx-1" />, que suma diversidad narrativa y potencia creativa al Festival.</p>
+                        <p>Así, el FICC 2025 no solo celebra el cine, sino que se consolida como un laboratorio de innovación cultural y un nodo creativo que articula arte, tecnología y comunidad <Sparkles className="inline-block h-5 w-5 ml-1" />, proyectando a Puerto Los Cabos como destino de creatividad y nuevas industrias.</p>
+                    </div>
+                </div>
             </div>
         </section>
         
