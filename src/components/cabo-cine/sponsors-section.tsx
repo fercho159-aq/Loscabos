@@ -4,14 +4,25 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const sponsors = [
-  { name: "Sponsor 1", logo: "https://picsum.photos/200/100?grayscale&random=1", hint: "company logo" },
-  { name: "Sponsor 2", logo: "https://picsum.photos/200/100?grayscale&random=2", hint: "company logo" },
-  { name: "Sponsor 3", logo: "https://picsum.photos/200/100?grayscale&random=3", hint: "company logo" },
-  { name: "Sponsor 4", logo: "https://picsum.photos/200/100?grayscale&random=4", hint: "company logo" },
-  { name: "Sponsor 5", logo: "https://picsum.photos/200/100?grayscale&random=5", hint: "company logo" },
-  { name: "Sponsor 6", logo: "https://picsum.photos/200/100?grayscale&random=6", hint: "company logo" },
-  { name: "Sponsor 7", logo: "https://picsum.photos/200/100?grayscale&random=7", hint: "company logo" },
-  { name: "Sponsor 8", logo: "https://picsum.photos/200/100?grayscale&random=8", hint: "company logo" },
+  { name: "FITURCA", logo: "https://picsum.photos/200/100?grayscale&seed=fiturca", hint: "company logo" },
+  { name: "ESCINE", logo: "https://picsum.photos/200/100?grayscale&seed=escine", hint: "company logo" },
+  { name: "Cinemex", logo: "https://picsum.photos/200/100?grayscale&seed=cinemex", hint: "company logo" },
+  { name: "Hotel El Ganzo", logo: "https://picsum.photos/200/100?grayscale&seed=elganzo", hint: "company logo" },
+  { name: "Kundavi", logo: "https://picsum.photos/200/100?grayscale&seed=kundavi", hint: "company logo" },
+  { name: "Questro", logo: "https://picsum.photos/200/100?grayscale&seed=questro", hint: "company logo" },
+  { name: "Puerto Los Cabos", logo: "https://picsum.photos/200/100?grayscale&seed=plc", hint: "company logo" },
+  { name: "Crania", logo: "https://picsum.photos/200/100?grayscale&seed=crania", hint: "company logo" },
+  { name: "Veleros Beach Club", logo: "https://picsum.photos/200/100?grayscale&seed=veleros", hint: "company logo" },
+  { name: "San Jose del Este", logo: "https://picsum.photos/200/100?grayscale&seed=sanjose", hint: "company logo" },
+  { name: "Casa Ballena", logo: "https://picsum.photos/200/100?grayscale&seed=ballena", hint: "company logo" },
+  { name: "Haas Producciones", logo: "https://picsum.photos/200/100?grayscale&seed=haas", hint: "company logo" },
+  { name: "National Car Rental", logo: "https://picsum.photos/200/100?grayscale&seed=national", hint: "company logo" },
+  { name: "Secrets Hotel", logo: "https://picsum.photos/200/100?grayscale&seed=secrets", hint: "company logo" },
+  { name: "Ritz Carlton", logo: "https://picsum.photos/200/100?grayscale&seed=ritz", hint: "company logo" },
+  { name: "Suelo Sur", logo: "https://picsum.photos/200/100?grayscale&seed=suelo", hint: "company logo" },
+  { name: "Jose Cuervo", logo: "https://picsum.photos/200/100?grayscale&seed=cuervo", hint: "company logo" },
+  { name: "Netflix", logo: "https://picsum.photos/200/100?grayscale&seed=netflix", hint: "company logo" },
+  { name: "GAP", logo: "https://picsum.photos/200/100?grayscale&seed=gap", hint: "company logo" },
 ];
 
 const extendedSponsors = [...sponsors, ...sponsors]; // Duplicate for seamless loop
@@ -24,7 +35,7 @@ export default function SponsorsSection() {
           Nuestros Aliados
         </h2>
         <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-          Agradecemos a las marcas y organizaciones que hacen posible este encuentro cinematográfico.
+          Juntos construimos un espacio donde el cine conecta con la cultura, la comunidad y la biodiversidad.
         </p>
       </div>
       
