@@ -22,7 +22,7 @@ const navLinks = [
   { href: '/#campus', label: 'Campus FICC' },
   { href: '/industria', label: 'Fondo Fílmico' },
   { href: '/la-baja-inspira', label: 'La Baja Inspira'},
-  { href: '/#animacion', label: 'Animación' },
+  { href: '/animacion', label: 'Animación' },
   { href: '/#about', label: 'Sobre el FICC' },
 ];
 
