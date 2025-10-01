@@ -5,10 +5,8 @@ import AboutSection from '@/components/cabo-cine/about-section';
 import BeyondTheScreenSection from '@/components/cabo-cine/beyond-the-screen-section';
 import ProgramSection from '@/components/cabo-cine/program-section';
 import AnimationSection from '@/components/cabo-cine/animation-section';
-import IndustrySection from '@/components/cabo-cine/industry-section';
 import LaBajaInspiraHomeSection from '@/components/cabo-cine/la-baja-inspira-home-section';
 import SponsorsSection from '@/components/cabo-cine/sponsors-section';
-import VolunteeringSection from '@/components/cabo-cine/volunteering-section';
 import Footer from '@/components/cabo-cine/footer';
 import GFFFHomeSection from '@/components/cabo-cine/gfff-home-section';
 
@@ -25,7 +23,6 @@ export default function Home() {
         <GFFFHomeSection />
         <LaBajaInspiraHomeSection />
         <SponsorsSection />
-        <VolunteeringSection />
       </main>
       <Footer />
     </div>
