@@ -11,7 +11,7 @@ export default function ProgramacionPage() {
         <section className="py-20 sm:py-28 text-center">
             <div className="container mx-auto px-4 flex flex-col items-center gap-8">
                 <div>
-                    <h1 className="font-headline text-4xl md:text-5xl font-bold text-foreground">
+                    <h1 className="font-headline text-4xl md:text-5xl font-bold text-accent">
                         La programación oficial del FICLosCabos 2025 será anunciada próximamente.
                     </h1>
                     <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
