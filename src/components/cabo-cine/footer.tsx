@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 const ficcLinks = [
     { href: "/#about", label: "Acerca de la 13ª edición" },
     { href: "/programacion", label: "Programación 2025" },
-    { href: "/#", label: "Campus FICLosCabos" },
+    { href: "/campus", label: "Campus FICLosCabos" },
     { href: "/#", label: "Comprar boletos" },
 ];
 
@@ -40,7 +40,7 @@ export default function Footer() {
 
           {/* FIC LosCabos 2025 */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">FIC LosCabos 2025</h3>
+            <h3 className="font-semibold text-foreground mb-4">FICLosCabos 2025</h3>
             <ul className="space-y-2">
               {ficcLinks.map(link => (
                 <li key={link.label}><Link href={link.href} className="text-sm text-muted-foreground hover:text-accent transition-colors">{link.label}</Link></li>

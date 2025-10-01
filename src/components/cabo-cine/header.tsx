@@ -18,7 +18,7 @@ import Image from 'next/image';
 
 
 const navLinks = [
-  { href: '/#', label: 'Campus FICLosCabos' },
+  { href: '/campus', label: 'Campus FICLosCabos' },
   { href: '/industria', label: 'Fondo Fílmico Gabriel Figueroa' },
   { href: '/la-baja-inspira', label: 'La Baja Inspira'},
   { href: '/animacion', label: 'Animación' },
