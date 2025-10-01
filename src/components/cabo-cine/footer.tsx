@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 
 const ficcLinks = [
-    { href: "/#about", label: "Acerca de la 13ª edición" },
+    { href: "/acerca-de", label: "Acerca de la 13ª edición" },
     { href: "/programacion", label: "Programación 2025" },
     { href: "/campus", label: "Campus FICLosCabos" },
     { href: "/#", label: "Comprar boletos" },

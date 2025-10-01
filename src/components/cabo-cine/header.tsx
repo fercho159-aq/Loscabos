@@ -28,7 +28,7 @@ export default function Header() {
     { href: '/industria', label: 'Fondo Fílmico Gabriel Figueroa' },
     { href: '/la-baja-inspira', label: 'La Baja Inspira'},
     { href: '/animacion', label: 'Animación' },
-    { href: '/#about', label: 'Sobre el FICLosCabos' },
+    { href: '/acerca-de', label: 'Sobre el FICLosCabos' },
   ];
   
   const isHomePage = pathname === '/';

@@ -12,7 +12,7 @@ export default function AboutSection() {
         </p>
         <div className="mt-8">
             <Button asChild size="lg">
-                <Link href="#acerca-de">
+                <Link href="/acerca-de">
                     Más información <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
             </Button>
