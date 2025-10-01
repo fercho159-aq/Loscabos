@@ -13,7 +13,6 @@ const ficcLinks = [
 
 const aboutLinks = [
     { href: "/#", label: "Ediciones anteriores" },
-    { href: "/patrocinadores", label: "Aliados y Patrocinadores" },
     { href: "/#", label: "Contáctanos" },
 ];
 
@@ -97,18 +96,10 @@ export default function Footer() {
                    <Image src="/Images/logos/FESTIVAL DE CINE LOS CABOS-negro.png" alt="CaboCine Logo" width={150} height={40} data-ai-hint="logo"/>
                 </Link>
                 
-                <Button asChild className="group">
-                    <Link href="/impacto">
-                        Sé voluntario del FICLosCabos 2025
-                        <HandHeart className="ml-2 h-5 w-5 transition-transform group-hover:rotate-12" />
-                    </Link>
-                </Button>
-
                  <div className="flex space-x-6">
                     <Link href="#" className="text-muted-foreground hover:text-accent transition-colors"><Instagram className="h-6 w-6" /></Link>
                     <Link href="#" className="text-muted-foreground hover:text-accent transition-colors"><Facebook className="h-6 w-6" /></Link>
                     <Link href="#" className="text-muted-foreground hover:text-accent transition-colors"><Youtube className="h-6 w-6" /></Link>
-                    <Link href="#" className="text-muted-foreground hover:text-accent transition-colors"><Linkedin className="h-6 w-6" /></Link>
                 </div>
             </div>
              <p className="text-sm text-muted-foreground text-center mt-8">
