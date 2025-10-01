@@ -13,7 +13,7 @@ const ficcLinks = [
 
 const aboutLinks = [
     { href: "/#", label: "Ediciones anteriores" },
-    { href: "/#", label: "Contáctanos" },
+    { href: "/contacto", label: "Contáctanos" },
 ];
 
 const initiativesLinks = [
