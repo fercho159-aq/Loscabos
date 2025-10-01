@@ -132,12 +132,12 @@ export default function IndustriaPage() {
             <div className="container mx-auto px-4">
                 <div className="grid md:grid-cols-5 gap-12 items-center">
                     <div className='md:col-span-3'>
-                        <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Fondo Fílmico Gabriel Figueroa – FICC 2025</h2>
+                        <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Fondo Fílmico Gabriel Figueroa – FIC Los Cabos 2025</h2>
                         <div className="mt-6 text-lg text-muted-foreground space-y-4">
                             <p>En el marco del Festival Internacional de Cine de Los Cabos 2025, el Fondo Fílmico Gabriel Figueroa (GFFF) entra en una etapa renovada como parte de la visión #BeyondTheScreen. Creado en 2012, este programa ha impulsado la consolidación de nuevas voces del cine mexicano, y hoy se proyecta como un motor estratégico dentro del ecosistema de las industrias creativas.</p>
                             <p>Las industrias creativas son hoy uno de los principales motores de transformación económica, cultural y social a nivel internacional. En Baja California Sur, el GFFF se convierte en un vehículo clave para articular talento, formación y producción audiovisual, al tiempo que fortalece la proyección de México en el mundo.</p>
                             <p>En alianza con la Escuela Superior de Cine (ESCINE), el Fondo gana legitimidad, credibilidad y alcance, ofreciendo a cineastas emergentes un puente con productores, distribuidores, inversionistas y festivales internacionales. Más que un programa de apoyo, el GFFF es un espacio de convergencia entre cultura, tecnología y creatividad interdisciplinaria, que conecta la potencia del cine con los nuevos lenguajes digitales y con la necesidad de narrativas diversas y sostenibles.</p>
-                            <p>Con esta visión renovada, el Fondo Fílmico Gabriel Figueroa reafirma el compromiso del FICC 2025: ser no solo un festival de cine, sino una plataforma que potencia a Puerto Los Cabos como hub creativo y regenerativo, al tiempo que fortalece el desarrollo económico y cultural de la región y de la industria audiovisual mexicana.</p>
+                            <p>Con esta visión renovada, el Fondo Fílmico Gabriel Figueroa reafirma el compromiso del FIC Los Cabos 2025: ser no solo un festival de cine, sino una plataforma que potencia a Puerto Los Cabos como hub creativo y regenerativo, al tiempo que fortalece el desarrollo económico y cultural de la región y de la industria audiovisual mexicana.</p>
                         </div>
                     </div>
                      <div className='md:col-span-2'>
@@ -196,7 +196,7 @@ export default function IndustriaPage() {
                       <p>Podrán inscribirse proyectos de largometraje (más de 60 minutos), de ficción o documental, que sean óperas primas o segundas películas producidas o coproducidas por México.</p>
                       <p>La etapa requerida para los proyectos es edición o inicio de postproducción.</p>
                       <p>Cinco proyectos serán seleccionados para participar en mentorías con reconocidos miembros de la industria nacional y sostendrán reuniones privadas con las compañías aliadas del Festival.</p>
-                      <p>Los ganadores se anunciarán en la premiación oficial del FICC 2025.</p>
+                      <p>Los ganadores se anunciarán en la premiación oficial del FIC Los Cabos 2025.</p>
                     </AccordionContent>
                   </AccordionItem>
                    <AccordionItem value="item-2">
@@ -275,7 +275,7 @@ export default function IndustriaPage() {
                     <Image src="/Images/Biografias/FICC_DECK2025.pdf-image-115.jpg" alt="Gabriel Figueroa" width={200} height={200} data-ai-hint="man portrait monochrome" className="mx-auto rounded-full my-6 shadow-lg" />
                     <div className="text-base text-muted-foreground space-y-4 text-left sm:text-center">
                         <p>Gabriel Figueroa (1907–1997) fue uno de los grandes directores de fotografía del cine mexicano y mundial. Con más de 200 películas, colaboraciones con Buñuel, Huston y Ford, y una nominación al Oscar por La noche de la iguana, su legado se convirtió en símbolo de excelencia cinematográfica.</p>
-                        <p>El Fondo Fílmico Gabriel Figueroa, creado en 2012 en su honor, se ha consolidado como el brazo estratégico del Festival para vincularse con la industria audiovisual. En esta nueva etapa, y en alianza con ESCINE, el Fondo reafirma que el FICC no solo proyecta cine: también lo produce, lo impulsa y lo conecta con el mundo.</p>
+                        <p>El Fondo Fílmico Gabriel Figueroa, creado en 2012 en su honor, se ha consolidado como el brazo estratégico del Festival para vincularse con la industria audiovisual. En esta nueva etapa, y en alianza con ESCINE, el Fondo reafirma que el FIC Los Cabos no solo proyecta cine: también lo produce, lo impulsa y lo conecta con el mundo.</p>
                     </div>
                 </div>
             </div>

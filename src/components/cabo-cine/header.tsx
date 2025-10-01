@@ -18,12 +18,11 @@ import Image from 'next/image';
 
 
 const navLinks = [
-  { href: '/programacion', label: 'Programación 2025' },
-  { href: '/#campus', label: 'Campus FICC' },
+  { href: '/#', label: 'Campus FICLosCabos' },
   { href: '/industria', label: 'Fondo Fílmico Gabriel Figueroa' },
   { href: '/la-baja-inspira', label: 'La Baja Inspira'},
   { href: '/animacion', label: 'Animación' },
-  { href: '/#about', label: 'Sobre el FICC' },
+  { href: '/#about', label: 'Sobre el FICLosCabos' },
 ];
 
 export default function Header() {

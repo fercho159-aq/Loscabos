@@ -34,7 +34,7 @@ export default function GFFFHomeSection() {
               <p className="font-semibold text-accent mb-2">Convocatoria abierta a partir del 20 de Octubre.</p>
               <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Fondo Fílmico <span className="text-accent">Gabriel Figueroa</span></h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                El Fondo Fílmico Gabriel Figueroa, creado en 2012 en honor al gran cinefotógrafo mexicano, entra en una nueva etapa en el marco del FICC 2025. En alianza con la Escuela Superior de Cine (ESCINE), se consolida como motor estratégico del festival para impulsar al cine mexicano, ofreciendo a cineastas emergentes un puente hacia productores, distribuidores, inversionistas y festivales internacionales, con apoyos para proyectos en desarrollo y postproducción.
+                El Fondo Fílmico Gabriel Figueroa, creado en 2012 en honor al gran cinefotógrafo mexicano, entra en una nueva etapa en el marco del FIC Los Cabos 2025. En alianza con la Escuela Superior de Cine (ESCINE), se consolida como motor estratégico del festival para impulsar al cine mexicano, ofreciendo a cineastas emergentes un puente hacia productores, distribuidores, inversionistas y festivales internacionales, con apoyos para proyectos en desarrollo y postproducción.
               </p>
             </div>
             

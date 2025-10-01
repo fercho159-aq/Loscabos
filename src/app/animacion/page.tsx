@@ -43,7 +43,7 @@ const integrationProposal = [
     {
         icon: Calendar,
         title: "Proyección hacia 2026",
-        description: "Anunciar en el FICC 2025 la apertura de la convocatoria oficial de animación para 2026, junto con un taller formativo para creadores bajacalifornianos."
+        description: "Anunciar en el FIC Los Cabos 2025 la apertura de la convocatoria oficial de animación para 2026, junto con un taller formativo para creadores bajacalifornianos."
     }
 ];
 
@@ -81,9 +81,9 @@ export default function AnimacionPage() {
                         />
                     </div>
                     <div className="text-lg text-muted-foreground space-y-6">
-                        <p>El Festival Internacional de Cine de Los Cabos (FICC) ha sido, por más de una década, un espacio de encuentro entre México y la industria cinematográfica global. En 2025, el Festival celebra su 13ª edición del 10 al 14 de diciembre, reafirmando al cine como eje rector y expandiendo su alcance hacia disciplinas que hoy definen la cultura contemporánea, bajo la visión <span className="font-semibold text-accent">#BeyondTheScreen</span>.</p>
+                        <p>El Festival Internacional de Cine de Los Cabos (FIC Los Cabos) ha sido, por más de una década, un espacio de encuentro entre México y la industria cinematográfica global. En 2025, el Festival celebra su 13ª edición del 10 al 14 de diciembre, reafirmando al cine como eje rector y expandiendo su alcance hacia disciplinas que hoy definen la cultura contemporánea, bajo la visión <span className="font-semibold text-accent">#BeyondTheScreen</span>.</p>
                         <p>En esta nueva etapa, la <span className="font-semibold text-foreground">Escuela Superior de Cine (ESCINE)</span> asume un papel central en la curaduría y evaluación, aportando legitimidad y rigor académico. <Handshake className="inline-block h-5 w-5 mr-1" /> Esta alianza permite integrar nuevos lenguajes como la animación, una industria global y símbolo de la transformación digital <Bot className="inline-block h-5 w-5 mx-1" />, que suma diversidad narrativa y potencia creativa al Festival.</p>
-                        <p>Así, el FICC 2025 no solo celebra el cine, sino que se consolida como un laboratorio de innovación cultural y un nodo creativo que articula arte, tecnología y comunidad <Sparkles className="inline-block h-5 w-5 ml-1" />, proyectando a Puerto Los Cabos como destino de creatividad y nuevas industrias.</p>
+                        <p>Así, el FIC Los Cabos 2025 no solo celebra el cine, sino que se consolida como un laboratorio de innovación cultural y un nodo creativo que articula arte, tecnología y comunidad <Sparkles className="inline-block h-5 w-5 ml-1" />, proyectando a Puerto Los Cabos como destino de creatividad y nuevas industrias.</p>
                     </div>
                 </div>
             </div>
@@ -118,7 +118,7 @@ export default function AnimacionPage() {
         <section className="py-16 sm:py-24 bg-card">
             <div className="container mx-auto px-4">
                  <div className="text-center mb-12">
-                    <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Propuesta de Integración en el FICC</h2>
+                    <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Propuesta de Integración en el FIC Los Cabos</h2>
                      <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
                         Pasos concretos para consolidar la animación como un pilar del festival.
                     </p>

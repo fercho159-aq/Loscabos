@@ -7,12 +7,12 @@ import { Button } from "../ui/button";
 const ficcLinks = [
     { href: "/#about", label: "Acerca de la 13ª edición" },
     { href: "/programacion", label: "Programación 2025" },
-    { href: "/#", label: "Campus FICC" },
+    { href: "/#", label: "Campus FICLosCabos" },
     { href: "/#", label: "Comprar boletos" },
 ];
 
 const aboutLinks = [
-    { href: "/#about", label: "Sobre el FICC" },
+    { href: "/#", label: "Ediciones anteriores" },
     { href: "/patrocinadores", label: "Aliados y Patrocinadores" },
     { href: "/#", label: "Contáctanos" },
 ];
@@ -39,9 +39,9 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
 
-          {/* FICC 2025 */}
+          {/* FIC LosCabos 2025 */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">FICC 2025</h3>
+            <h3 className="font-semibold text-foreground mb-4">FIC LosCabos 2025</h3>
             <ul className="space-y-2">
               {ficcLinks.map(link => (
                 <li key={link.label}><Link href={link.href} className="text-sm text-muted-foreground hover:text-accent transition-colors">{link.label}</Link></li>
@@ -99,7 +99,7 @@ export default function Footer() {
                 
                 <Button asChild className="group">
                     <Link href="/impacto">
-                        Sé voluntario del FICC 2025
+                        Sé voluntario del FICLosCabos 2025
                         <HandHeart className="ml-2 h-5 w-5 transition-transform group-hover:rotate-12" />
                     </Link>
                 </Button>
