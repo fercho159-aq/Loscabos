@@ -47,34 +47,8 @@ export default function ProgramSection() {
         <div className="text-center mb-12">
           <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Programación 2025</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Descubre las joyas cinematográficas, galas, conciertos y experiencias únicas que hemos preparado para esta edición.
+            Muy pronto revelaremos las películas, encuentros y experiencias que marcarán esta edición.
           </p>
-        </div>
-
-        <div className="space-y-16">
-          {categories.map((category) => (
-            <div key={category.name}>
-              <h3 className="font-headline text-3xl font-bold text-foreground mb-6">{category.name}</h3>
-              <Carousel opts={{ align: "start", dragFree: true }} className="w-full">
-                <CarouselContent className="-ml-4">
-                  {category.films.map((film, index) => (
-                    <CarouselItem key={index} className="pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
-                      <MovieCard {...film} />
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="hidden sm:flex" />
-                <CarouselNext className="hidden sm:flex" />
-              </Carousel>
-            </div>
-          ))}
-        </div>
-        <div className="text-center mt-16">
-            <Button size="lg" asChild>
-                <Link href="/programacion">
-                    Ver programación completa <ArrowRight className="ml-2 h-5 w-5"/>
-                </Link>
-            </Button>
         </div>
       </div>
     </section>
