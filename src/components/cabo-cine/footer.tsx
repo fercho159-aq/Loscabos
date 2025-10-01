@@ -23,8 +23,8 @@ const initiativesLinks = [
 ];
 
 const pressLinks = [
-    { href: "/#", label: "Comunicados de prensa" },
-    { href: "/#", label: "Contacto" },
+    { href: "/prensa", label: "Comunicados de prensa" },
+    { href: "/contacto", label: "Contacto PR" },
 ];
 
 const plcLinks = [
