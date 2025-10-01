@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import { Button } from "../ui/button";
 import Link from "next/link";
@@ -5,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 
 const sponsors = [
   { name: "FITURCA", logo: "https://picsum.photos/200/100?grayscale&seed=fiturca", hint: "company logo" },
-  { name: "ESCINE", logo: "https://picsum.photos/200/100?grayscale&seed=escine", hint: "company logo" },
+  { name: "ESCINE", logo: "https://picsum.photos/200/100?grayscale&seed=escine", hint: "film school logo", href: "https://escine.mx/" },
   { name: "Cinemex", logo: "https://picsum.photos/200/100?grayscale&seed=cinemex", hint: "company logo" },
   { name: "Hotel El Ganzo", logo: "/Images/patrocinadores/HG_GENERAL-13.png", hint: "company logo" },
   { name: "Kundavi", logo: "/Images/patrocinadores/Lockup (Noche)@10x.png", hint: "company logo" },
@@ -43,28 +44,32 @@ export default function SponsorsSection() {
         <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
           {extendedSponsors.map((sponsor, index) => (
             <li key={`sponsor-${index}`}>
-              <Image 
-                src={sponsor.logo}
-                alt={sponsor.name}
-                data-ai-hint={sponsor.hint}
-                width={160}
-                height={80}
-                className="opacity-60 hover:opacity-100 transition-opacity duration-300"
-              />
+              <Link href={sponsor.href || '#'} target="_blank" rel="noopener noreferrer" className={!sponsor.href ? 'cursor-default' : ''}>
+                <Image 
+                  src={sponsor.logo}
+                  alt={sponsor.name}
+                  data-ai-hint={sponsor.hint}
+                  width={160}
+                  height={80}
+                  className="opacity-60 hover:opacity-100 transition-opacity duration-300"
+                />
+              </Link>
             </li>
           ))}
         </ul>
         <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
           {extendedSponsors.map((sponsor, index) => (
             <li key={`sponsor-clone-${index}`}>
-              <Image 
-                src={sponsor.logo}
-                alt={sponsor.name}
-                data-ai-hint={sponsor.hint}
-                width={160}
-                height={80}
-                className="opacity-60 hover:opacity-100 transition-opacity duration-300"
-              />
+               <Link href={sponsor.href || '#'} target="_blank" rel="noopener noreferrer" className={!sponsor.href ? 'cursor-default' : ''}>
+                <Image 
+                  src={sponsor.logo}
+                  alt={sponsor.name}
+                  data-ai-hint={sponsor.hint}
+                  width={160}
+                  height={80}
+                  className="opacity-60 hover:opacity-100 transition-opacity duration-300"
+                />
+              </Link>
             </li>
           ))}
         </ul>

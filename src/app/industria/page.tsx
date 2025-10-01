@@ -6,6 +6,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { CheckCircle, Award, Calendar, DollarSign, Target, Milestone, UserCheck, Handshake, Info, Users, Film } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const results = [
   {
@@ -136,7 +137,7 @@ export default function IndustriaPage() {
                         <div className="mt-6 text-lg text-muted-foreground space-y-4">
                             <p>En el marco del Festival Internacional de Cine de Los Cabos 2025, el Fondo Fílmico Gabriel Figueroa (GFFF) entra en una etapa renovada como parte de la visión #BeyondTheScreen. Creado en 2012, este programa ha impulsado la consolidación de nuevas voces del cine mexicano, y hoy se proyecta como un motor estratégico dentro del ecosistema de las industrias creativas.</p>
                             <p>Las industrias creativas son hoy uno de los principales motores de transformación económica, cultural y social a nivel internacional. En Baja California Sur, el GFFF se convierte en un vehículo clave para articular talento, formación y producción audiovisual, al tiempo que fortalece la proyección de México en el mundo.</p>
-                            <p>En alianza con la Escuela Superior de Cine (ESCINE), el Fondo gana legitimidad, credibilidad y alcance, ofreciendo a cineastas emergentes un puente con productores, distribuidores, inversionistas y festivales internacionales. Más que un programa de apoyo, el GFFF es un espacio de convergencia entre cultura, tecnología y creatividad interdisciplinaria, que conecta la potencia del cine con los nuevos lenguajes digitales y con la necesidad de narrativas diversas y sostenibles.</p>
+                            <p>En alianza con la Escuela Superior de Cine (<Link href="https://escine.mx/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ESCINE</Link>), el Fondo gana legitimidad, credibilidad y alcance, ofreciendo a cineastas emergentes un puente con productores, distribuidores, inversionistas y festivales internacionales. Más que un programa de apoyo, el GFFF es un espacio de convergencia entre cultura, tecnología y creatividad interdisciplinaria, que conecta la potencia del cine con los nuevos lenguajes digitales y con la necesidad de narrativas diversas y sostenibles.</p>
                             <p>Con esta visión renovada, el Fondo Fílmico Gabriel Figueroa reafirma el compromiso del FIC Los Cabos 2025: ser no solo un festival de cine, sino una plataforma que potencia a Puerto Los Cabos como hub creativo y regenerativo, al tiempo que fortalece el desarrollo económico y cultural de la región y de la industria audiovisual mexicana.</p>
                         </div>
                     </div>
@@ -213,7 +214,7 @@ export default function IndustriaPage() {
                         <div>
                             <h4 className="font-bold text-foreground mb-2">Etapas del proceso:</h4>
                             <p><span className='font-semibold'>1. Elegibilidad:</span> Revisión técnica y formal de requisitos.</p>
-                            <p><span className='font-semibold'>2. Evaluación cualitativa (ESCINE):</span> Visionado doble; en caso de discrepancia, tercera valoración.</p>
+                            <p><span className='font-semibold'>2. Evaluación cualitativa (<Link href="https://escine.mx/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ESCINE</Link>):</span> Visionado doble; en caso de discrepancia, tercera valoración.</p>
                             <p><span className='font-semibold'>3. Selección final:</span> Jurado de cineastas de renombre define la selección oficial (5 largometrajes + 10–15 cortos).</p>
                         </div>
                         <div>
@@ -230,8 +231,10 @@ export default function IndustriaPage() {
                     <AccordionTrigger className='text-xl font-semibold'>Comité de selección (propuestos)</AccordionTrigger>
                      <AccordionContent className='text-base text-muted-foreground space-y-3 pt-3'>
                        {selectionCommittee.map((member, index) => (
-                           <p key={index}>{member}</p>
+                           <p key={index}>{member.replace('ESCINE', '<a href="https://escine.mx/" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">ESCINE</a>')}</p>
                        ))}
+                       <p>Jaime Romandía. Fundador de Mantarraya, productor de más de 45 filmes premiados en Cannes y Venecia. Dirige <Link href="https://escine.mx/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ESCINE</Link>.</p>
+                       <p>Alfredo Ruiz. Director de la Licenciatura en Cinematografía en <Link href="https://escine.mx/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ESCINE</Link>. Experiencia en curaduría, crítica y formación académica.</p>
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -275,7 +278,7 @@ export default function IndustriaPage() {
                     <Image src="/Images/Biografias/FICC_DECK2025.pdf-image-115.jpg" alt="Gabriel Figueroa" width={200} height={200} data-ai-hint="man portrait monochrome" className="mx-auto rounded-full my-6 shadow-lg" />
                     <div className="text-base text-muted-foreground space-y-4 text-left sm:text-center">
                         <p>Gabriel Figueroa (1907–1997) fue uno de los grandes directores de fotografía del cine mexicano y mundial. Con más de 200 películas, colaboraciones con Buñuel, Huston y Ford, y una nominación al Oscar por La noche de la iguana, su legado se convirtió en símbolo de excelencia cinematográfica.</p>
-                        <p>El Fondo Fílmico Gabriel Figueroa, creado en 2012 en su honor, se ha consolidado como el brazo estratégico del Festival para vincularse con la industria audiovisual. En esta nueva etapa, y en alianza con ESCINE, el Fondo reafirma que el FIC Los Cabos no solo proyecta cine: también lo produce, lo impulsa y lo conecta con el mundo.</p>
+                        <p>El Fondo Fílmico Gabriel Figueroa, creado en 2012 en su honor, se ha consolidado como el brazo estratégico del Festival para vincularse con la industria audiovisual. En esta nueva etapa, y en alianza con <Link href="https://escine.mx/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ESCINE</Link>, el Fondo reafirma que el FIC Los Cabos no solo proyecta cine: también lo produce, lo impulsa y lo conecta con el mundo.</p>
                     </div>
                 </div>
             </div>

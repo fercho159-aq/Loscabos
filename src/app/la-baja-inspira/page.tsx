@@ -6,6 +6,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { CheckCircle, Award, Calendar, Target, Milestone, UserCheck, Handshake, Info, Users, Film, ListChecks, Goal, GitBranch } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const requirements = [
     "Producción o coproducción mexicana.",
@@ -72,8 +73,8 @@ export default function LaBajaInspiraPage() {
                         <Image src="https://picsum.photos/seed/escine-logo/800/600" alt="Logo de ESCINE" data-ai-hint="film school logo" width={800} height={600} className="rounded-lg shadow-xl" />
                     </div>
                     <div className="order-1 md:order-2 space-y-4">
-                        <h2 className="font-headline text-3xl sm:text-4xl font-bold text-foreground">Alianza con <span className="text-accent">ESCINE</span></h2>
-                        <p className="text-lg text-muted-foreground">En esta edición, la Escuela Superior de Cine (ESCINE) participa en el proceso de evaluación, aportando legitimidad y veracidad a cada etapa. Gracias a esta colaboración, la sección se convierte en una plataforma sólida para los proyectos inscritos este año, de los cuales resultarán 5 largometrajes y 10 cortometrajes seleccionados para la programación oficial.</p>
+                        <h2 className="font-headline text-3xl sm:text-4xl font-bold text-foreground">Alianza con <Link href="https://escine.mx/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ESCINE</Link></h2>
+                        <p className="text-lg text-muted-foreground">En esta edición, la Escuela Superior de Cine (<Link href="https://escine.mx/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ESCINE</Link>) participa en el proceso de evaluación, aportando legitimidad y veracidad a cada etapa. Gracias a esta colaboración, la sección se convierte en una plataforma sólida para los proyectos inscritos este año, de los cuales resultarán 5 largometrajes y 10 cortometrajes seleccionados para la programación oficial.</p>
                     </div>
                 </div>
             </div>
@@ -154,5 +155,3 @@ export default function LaBajaInspiraPage() {
     </div>
   );
 }
-
-    
