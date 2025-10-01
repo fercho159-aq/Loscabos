@@ -6,8 +6,7 @@ import { pressData } from '@/lib/press-data';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Download, FolderOpen } from 'lucide-react';
-import PressContactForm from '@/components/cabo-cine/press-contact-form';
+import { Download, FolderOpen, ArrowRight } from 'lucide-react';
 
 export default function PressReleasePage({ params }: { params: { slug: string } }) {
   const note = pressData.find(p => p.slug === params.slug);
@@ -77,7 +76,21 @@ export default function PressReleasePage({ params }: { params: { slug: string } 
           </div>
         </section>
 
-        <PressContactForm />
+        <section className="py-16 sm:py-24 bg-card">
+            <div className="container mx-auto px-4 text-center">
+                 <h2 className="font-headline text-4xl md:text-5xl font-bold text-foreground">
+                    Contacto para Prensa
+                 </h2>
+                 <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+                    Para entrevistas, acreditaciones o solicitudes de material, por favor visita nuestra página de contacto.
+                </p>
+                <Button size="lg" asChild className="mt-8">
+                    <Link href="/contacto">
+                        Información de Contacto <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                </Button>
+            </div>
+        </section>
 
       </main>
       <Footer />
