@@ -28,7 +28,7 @@ const pressLinks = [
 ];
 
 const plcLinks = [
-    { href: "/#", label: "Acerca de PLC" },
+    { href: "/puerto-los-cabos", label: "Acerca de Puerto Los Cabos" },
 ];
 
 
