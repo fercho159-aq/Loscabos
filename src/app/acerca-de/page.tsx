@@ -140,7 +140,7 @@ export default function AcercaDePage() {
                                     <CardTitle className="text-2xl">{link.title}</CardTitle>
                                 </CardHeader>
                                 <CardContent>
-                                    <Button variant="ghost" asChild className="text-muted-foreground group-hover:text-accent">
+                                    <Button variant="ghost" asChild className="text-muted-foreground group-hover:bg-accent group-hover:text-accent-foreground">
                                         <Link href={link.href}>
                                             Saber más <ArrowRight className="ml-2 h-4 w-4" />
                                         </Link>
@@ -161,7 +161,7 @@ export default function AcercaDePage() {
                                     <CardTitle className="text-2xl">{link.title}</CardTitle>
                                 </CardHeader>
                                 <CardContent>
-                                    <Button variant="ghost" asChild className="text-muted-foreground group-hover:text-accent">
+                                    <Button variant="ghost" asChild className="text-muted-foreground group-hover:bg-accent group-hover:text-accent-foreground">
                                         <Link href={link.href}>
                                             Saber más <ArrowRight className="ml-2 h-4 w-4" />
                                         </Link>
