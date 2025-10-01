@@ -46,7 +46,7 @@ export default function LaBajaInspiraHomeSection() {
             </div>
             
              <div>
-                <h3 className="font-headline text-3xl font-bold text-foreground mb-4">Fechas Clave</h3>
+                <h3 className="font-headline text-3xl font-bold text-foreground mb-4">Fechas clave</h3>
                 <Accordion type="single" collapsible className="w-full">
                   {keyDates.map((item, index) => (
                     <AccordionItem value={`item-${index + 1}`} key={item.title}>
