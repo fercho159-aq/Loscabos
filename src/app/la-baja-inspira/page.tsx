@@ -8,9 +8,9 @@ import { CheckCircle, Award, Calendar, Target, Milestone, UserCheck, Handshake, 
 import Image from 'next/image';
 
 const requirements = [
-    "País de producción o coproducción: México.",
-    "Vínculo directo con Baja California o Baja California Sur.",
-    "Duración mínima: 10 minutos.",
+    "Producción o coproducción mexicana.",
+    "Vínculo directo con Baja California o Baja California Sur (filmación, producción o integrantes originarios).",
+    "Duración mínima: 10 minutos (cortometraje, mediometraje o largometraje).",
     "Año de producción: 2022–2025.",
     "Género: ficción o no ficción.",
     "Formato de proyección: archivo digital.",
@@ -32,6 +32,13 @@ const evaluationCriteria = [
     "Diversidad e identidad del Festival."
 ]
 
+const additionalGuidelines = [
+    "No se aceptarán películas con integrantes del Festival en créditos principales.",
+    "No se aceptarán obras que no demuestren el vínculo regional.",
+    "Es obligatorio entregar un link digital (no se aceptan materiales físicos).",
+    "La inscripción implica la aceptación de estas bases y del reglamento.",
+]
+
 export default function LaBajaInspiraPage() {
   return (
     <div className="flex flex-col min-h-screen bg-card">
@@ -43,37 +50,30 @@ export default function LaBajaInspiraPage() {
             <h1 className="font-headline text-5xl md:text-7xl font-bold text-foreground">
               La Baja <span className="text-accent">Inspira</span>
             </h1>
-            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-              La sección competitiva dedicada a celebrar y visibilizar las historias que nacen del territorio de la península de Baja California.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-                 <Button size="lg" className="group">
-                    Inscribe tu Proyecto
-                </Button>
-            </div>
           </div>
         </section>
 
         {/* Intro Section */}
-        <section className="py-16 sm:py-24 bg-card">
+        <section className="py-16 sm:py-24 bg-card space-y-16">
             <div className="container mx-auto px-4">
-                <div className="grid md:grid-cols-5 gap-12 items-center">
-                    <div className="md:col-span-3">
-                        <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Un Puente Entre lo Local y lo Global</h2>
-                        <div className="mt-6 text-lg text-muted-foreground space-y-4">
-                            <p>En el corazón del Festival, La Baja Inspira es un puente para que el talento de la región dialogue con México y el mundo, fortaleciendo la identidad cultural y consolidando a Baja California como un epicentro audiovisual con voz propia.</p>
-                            <p>En colaboración con la Escuela Superior de Cine (ESCINE), esta sección se convierte en una plataforma sólida para los proyectos inscritos, garantizando un proceso de selección legítimo y creíble.</p>
-                        </div>
+                <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div className="space-y-4 text-lg text-muted-foreground">
+                        <p>La Baja Inspira es la sección competitiva dedicada a celebrar las historias que nacen del territorio. Este programa reconoce y visibiliza a los cineastas que retratan la esencia de la península de Baja California, desde sus paisajes hasta sus comunidades, ofreciendo a la audiencia local la posibilidad de verse reflejada en la pantalla.</p>
+                        <p>La Baja Inspira es un puente entre lo local y lo global: abre un espacio para que el talento de la región dialogue con México y el mundo, fortaleciendo la identidad cultural y consolidando a Baja California como un epicentro audiovisual con voz propia.</p>
                     </div>
-                     <div className="md:col-span-2">
-                        <Card className="bg-background shadow-lg">
-                            <CardHeader>
-                                <CardTitle className='flex items-center gap-3'><Goal className='h-6 w-6 text-accent'/> Objetivo</CardTitle>
-                            </CardHeader>
-                             <CardContent>
-                                <p className="text-base text-muted-foreground">Vincular e integrar a la comunidad cinematográfica de la península con el resto de México y el mundo, reconociendo la identidad regional y fortaleciendo el tejido cultural local.</p>
-                            </CardContent>
-                        </Card>
+                    <div>
+                        <Image src="https://picsum.photos/seed/baja-intro-1/800/600" alt="Paisaje de Baja California" data-ai-hint="baja california scenery" width={800} height={600} className="rounded-lg shadow-xl" />
+                    </div>
+                </div>
+            </div>
+             <div className="container mx-auto px-4">
+                <div className="grid md:grid-cols-2 gap-12 items-center bg-background p-8 md:p-12 rounded-lg">
+                     <div className="order-2 md:order-1">
+                        <Image src="https://picsum.photos/seed/escine-logo/800/600" alt="Logo de ESCINE" data-ai-hint="film school logo" width={800} height={600} className="rounded-lg shadow-xl" />
+                    </div>
+                    <div className="order-1 md:order-2 space-y-4">
+                        <h2 className="font-headline text-3xl sm:text-4xl font-bold text-foreground">Alianza con <span className="text-accent">ESCINE</span></h2>
+                        <p className="text-lg text-muted-foreground">En esta edición, la Escuela Superior de Cine (ESCINE) participa en el proceso de evaluación, aportando legitimidad y veracidad a cada etapa. Gracias a esta colaboración, la sección se convierte en una plataforma sólida para los proyectos inscritos este año, de los cuales resultarán 5 largometrajes y 10 cortometrajes seleccionados para la programación oficial.</p>
                     </div>
                 </div>
             </div>
@@ -83,9 +83,9 @@ export default function LaBajaInspiraPage() {
         <section className="py-16 sm:py-24 bg-background">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Metodología</h2>
-                     <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Un proceso claro y transparente para descubrir las mejores historias de la región.
+                    <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Convocatoria y Metodología</h2>
+                     <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+                        La convocatoria se lanzó el 4 de marzo y cerró el 30 de abril de 2025, con gestión y difusión a través de FilmFreeway. Se recibieron 1,600 proyectos, todos visionados por un comité de programación especializado. El anuncio de los seleccionados se realizará el 31 de octubre de 2025 mediante newsletter, redes sociales y FilmFreeway.
                     </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
@@ -105,15 +105,9 @@ export default function LaBajaInspiraPage() {
         {/* Details Section */}
         <section className="py-16 sm:py-24 bg-card">
             <div className="container mx-auto px-4 max-w-4xl">
-                 <div className="text-center mb-12">
-                    <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Detalles de la Convocatoria</h2>
-                     <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Bases, beneficios y reglamento para los cineastas que quieran formar parte de La Baja Inspira.
-                    </p>
-                </div>
                 <Accordion type="single" collapsible className="w-full" defaultValue="item-1">
                   <AccordionItem value="item-1">
-                    <AccordionTrigger className='text-xl font-semibold flex items-center gap-3'><ListChecks/> Requerimientos</AccordionTrigger>
+                    <AccordionTrigger className='text-xl font-semibold flex items-center gap-3'><ListChecks/> Requerimientos de participación</AccordionTrigger>
                     <AccordionContent className='text-base text-muted-foreground space-y-4 pt-4'>
                         <ul className="space-y-3">
                         {requirements.map((item, index) => (
@@ -123,41 +117,32 @@ export default function LaBajaInspiraPage() {
                             </li>
                         ))}
                         </ul>
-                        <div className="p-4 bg-background rounded-lg mt-4">
-                            <h4 className="font-semibold text-foreground mb-2">Lineamientos Adicionales</h4>
-                            <ul className="list-disc list-inside text-sm space-y-1">
-                                <li>No se aceptarán películas con integrantes del Festival en créditos principales.</li>
-                                <li>No se aceptarán películas que no demuestren el vínculo regional.</li>
-                                <li>Se requiere link digital (no se aceptan materiales físicos).</li>
-                                <li>La inscripción implica aceptación de estas bases y del reglamento.</li>
-                            </ul>
-                        </div>
                     </AccordionContent>
                   </AccordionItem>
                    <AccordionItem value="item-2">
-                    <AccordionTrigger className='text-xl font-semibold flex items-center gap-3'><GitBranch /> Proceso de selección</AccordionTrigger>
+                    <AccordionTrigger className='text-xl font-semibold flex items-center gap-3'><GitBranch /> Criterios de evaluación</AccordionTrigger>
                      <AccordionContent className='text-base text-muted-foreground space-y-4 pt-4'>
-                        <div>
-                            <h4 className="font-bold text-foreground mb-2">Fases del Proceso:</h4>
-                            <p><span className='font-semibold'>1. Elegibilidad (Primer Filtro):</span> Revisión técnica y formal de requisitos básicos.</p>
-                            <p><span className='font-semibold'>2. Evaluación cualitativa – ESCINE (Segundo Filtro):</span> Visionado doble y comparativo. En caso de discrepancia, un tercer evaluador define.</p>
-                            <p><span className='font-semibold'>3. Selección final – Jurado de renombre (Último Filtro):</span> Un jurado invitado de cineastas delibera y define la selección oficial.</p>
-                        </div>
-                        <div>
-                            <h4 className="font-bold text-foreground mb-2">Criterios de evaluación cualitativa:</h4>
-                            <ul className="list-disc list-inside space-y-1">
-                                {evaluationCriteria.map((criterion, index) => (
-                                    <li key={index}>{criterion}</li>
-                                ))}
-                            </ul>
-                             <p className="text-sm mt-2">* Este esquema garantiza al menos dos visionados independientes por película.</p>
-                        </div>
+                        <ul className="list-disc list-inside space-y-1">
+                            {evaluationCriteria.map((criterion, index) => (
+                                <li key={index}>{criterion}</li>
+                            ))}
+                        </ul>
                     </AccordionContent>
                   </AccordionItem>
-                   <AccordionItem value="item-3">
+                  <AccordionItem value="item-3">
+                    <AccordionTrigger className='text-xl font-semibold flex items-center gap-3'><Info/> Lineamientos adicionales</AccordionTrigger>
+                    <AccordionContent className='text-base text-muted-foreground pt-4'>
+                         <ul className="list-disc list-inside space-y-2">
+                            {additionalGuidelines.map((guideline, index) => (
+                                <li key={index}>{guideline}</li>
+                            ))}
+                        </ul>
+                    </AccordionContent>
+                  </AccordionItem>
+                   <AccordionItem value="item-4">
                     <AccordionTrigger className='text-xl font-semibold flex items-center gap-3'><Users /> Jurado</AccordionTrigger>
                      <AccordionContent className='text-base text-muted-foreground space-y-3 pt-3'>
-                        <p>El jurado se anunciará públicamente previo al 31 de octubre de 2025.</p>
+                        <p>La integración del jurado será anunciada antes del 31 de octubre de 2025.</p>
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -169,3 +154,5 @@ export default function LaBajaInspiraPage() {
     </div>
   );
 }
+
+    
