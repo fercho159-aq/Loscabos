@@ -13,11 +13,10 @@ const ficcLinks = [
 
 const aboutLinks = [
     { href: "/ediciones-anteriores", label: "Ediciones anteriores" },
-    { href: "/contacto", label: "Contáctanos" },
+    { href: "/contacto", label: "Contacto" },
 ];
 
 const initiativesLinks = [
-    { href: "/industria", label: "Impulso a la Industria" },
     { href: "/industria", label: "Fondo Fílmico Gabriel Figueroa" },
     { href: "/la-baja-inspira", label: "La Baja Inspira" },
 ];
