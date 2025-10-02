@@ -12,7 +12,7 @@ const ficcLinks = [
 ];
 
 const aboutLinks = [
-    { href: "/#", label: "Ediciones anteriores" },
+    { href: "/ediciones-anteriores", label: "Ediciones anteriores" },
     { href: "/contacto", label: "Contáctanos" },
 ];
 
