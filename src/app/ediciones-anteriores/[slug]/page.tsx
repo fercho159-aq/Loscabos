@@ -6,7 +6,7 @@ import { editionsData } from '@/lib/editions-data';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Download, FileText } from 'lucide-react';
+import { ArrowLeft, Download, FileText, Film, Award, Users, Zap, Trophy } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -88,40 +88,65 @@ export default function EditionDetailPage({ params }: { params: { slug: string }
                  <Accordion type="single" collapsible className="w-full" defaultValue="programacion">
                     {edition.program && (
                          <AccordionItem value="programacion">
-                            <AccordionTrigger className="text-2xl font-semibold">Programación</AccordionTrigger>
-                            <AccordionContent className="text-base text-muted-foreground whitespace-pre-wrap pt-4">
+                            <AccordionTrigger className="text-2xl font-bold hover:no-underline">
+                               <div className="flex items-center gap-3">
+                                    <Film className="h-6 w-6 text-accent" />
+                                    <span>Programación</span>
+                               </div>
+                            </AccordionTrigger>
+                            <AccordionContent className="text-base text-muted-foreground whitespace-pre-wrap pt-4 pl-12">
                                {renderTextWithLineBreaks(edition.program)}
                             </AccordionContent>
                         </AccordionItem>
                     )}
                     {edition.tributes && (
                          <AccordionItem value="homenajes">
-                            <AccordionTrigger className="text-2xl font-semibold">Homenajes / Invitados Especiales</AccordionTrigger>
-                            <AccordionContent className="text-base text-muted-foreground whitespace-pre-wrap pt-4">
+                             <AccordionTrigger className="text-2xl font-bold hover:no-underline">
+                               <div className="flex items-center gap-3">
+                                    <Award className="h-6 w-6 text-accent" />
+                                    <span>Homenajes / Invitados Especiales</span>
+                               </div>
+                            </AccordionTrigger>
+                            <AccordionContent className="text-base text-muted-foreground whitespace-pre-wrap pt-4 pl-12">
                                 {renderTextWithLineBreaks(edition.tributes)}
                             </AccordionContent>
                         </AccordionItem>
                     )}
                      {edition.panels && edition.panels.trim() !== '\\' && edition.panels.trim() !== '/' && (
                          <AccordionItem value="paneles">
-                            <AccordionTrigger className="text-2xl font-semibold">Paneles</AccordionTrigger>
-                            <AccordionContent className="text-base text-muted-foreground whitespace-pre-wrap pt-4">
+                            <AccordionTrigger className="text-2xl font-bold hover:no-underline">
+                                <div className="flex items-center gap-3">
+                                    <Users className="h-6 w-6 text-accent" />
+                                    <span>Paneles</span>
+                                </div>
+                            </AccordionTrigger>
+                            <AccordionContent className="text-base text-muted-foreground whitespace-pre-wrap pt-4 pl-12">
                                 {renderTextWithLineBreaks(edition.panels)}
                             </AccordionContent>
                         </AccordionItem>
                     )}
                      {edition.igniteSessions && edition.igniteSessions.trim() !== '/' && (
                          <AccordionItem value="ignite">
-                            <AccordionTrigger className="text-2xl font-semibold">Ignite Sessions</AccordionTrigger>
-                            <AccordionContent className="text-base text-muted-foreground whitespace-pre-wrap pt-4">
+                            <AccordionTrigger className="text-2xl font-bold hover:no-underline">
+                               <div className="flex items-center gap-3">
+                                    <Zap className="h-6 w-6 text-accent" />
+                                    <span>Ignite Sessions</span>
+                               </div>
+                            </AccordionTrigger>
+                            <AccordionContent className="text-base text-muted-foreground whitespace-pre-wrap pt-4 pl-12">
                                 {renderTextWithLineBreaks(edition.igniteSessions)}
                             </AccordionContent>
                         </AccordionItem>
                     )}
                     {edition.awards && (
                          <AccordionItem value="premios">
-                            <AccordionTrigger className="text-2xl font-semibold">Premios</AccordionTrigger>
-                            <AccordionContent className="text-base text-muted-foreground whitespace-pre-wrap pt-4">
+                            <AccordionTrigger className="text-2xl font-bold hover:no-underline">
+                               <div className="flex items-center gap-3">
+                                    <Trophy className="h-6 w-6 text-accent" />
+                                    <span>Premios</span>
+                               </div>
+                            </AccordionTrigger>
+                            <AccordionContent className="text-base text-muted-foreground whitespace-pre-wrap pt-4 pl-12">
                                 {renderTextWithLineBreaks(edition.awards)}
                             </AccordionContent>
                         </AccordionItem>
