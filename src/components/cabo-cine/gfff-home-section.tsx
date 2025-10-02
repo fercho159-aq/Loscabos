@@ -9,7 +9,7 @@ const convocatoriaItems = [
     {
         icon: Calendar,
         title: "Convocatoria nacional",
-        description: "Activa del 20 al 28 de octubre 2025."
+        description: "Activa del 13 al 31 de octubre 2025."
     },
     {
         icon: Award,
@@ -32,10 +32,10 @@ export default function GFFFHomeSection() {
           {/* Left Column */}
           <div className="space-y-6">
             <div>
-              <p className="font-semibold text-accent mb-2">Convocatoria abierta a partir del 20 de Octubre.</p>
+              <p className="font-semibold text-accent mb-2">Convocatoria abierta a partir del 13 de Octubre.</p>
               <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Fondo Fílmico <span className="text-accent">Gabriel Figueroa</span></h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                El Fondo Fílmico Gabriel Figueroa, creado en 2012 en honor al gran cinefotógrafo mexicano, entra en una nueva etapa en el marco del FIC Los Cabos 2025. En alianza con la Escuela Superior de Cine (<Link href="https://escine.mx/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ESCINE</Link>), se consolida como motor estratégico del festival para impulsar al cine mexicano, ofreciendo a cineastas emergentes un puente hacia productores, distribuidores, inversionistas y festivales internacionales, con apoyos para proyectos en desarrollo y postproducción.
+                El Fondo Fílmico Gabriel Figueroa, creado en 2012 en honor al gran cinefotógrafo mexicano, entra en una nueva etapa en el marco del FICLosCabos 2025. En alianza con la Escuela Superior de Cine (ESCINE), se consolida como motor estratégico del festival para impulsar al cine mexicano, ofreciendo a cineastas emergentes un puente hacia productores, distribuidores, inversionistas y festivales internacionales, con apoyos para proyectos en desarrollo y postproducción.
               </p>
             </div>
 
