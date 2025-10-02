@@ -95,7 +95,7 @@ export const editionsData = [
       "slug": "edicion-2013",
       "year": "2013",
       "title": "Intercambio Cultural",
-      "posterSrc": "https://static.wixstatic.com/media/589d69_3f017daa60d34abe9a45b74326e3a031d~mv2.jpeg/v1/fill/w_536,h_792,fp_0.50_0.41,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Poster_2013.jpeg",
+      "posterSrc": "https://static.wixstatic.com/media/589d69_3f017daa60d34abe9a4574326e3a031d~mv2.jpeg/v1/fill/w_536,h_792,fp_0.50_0.41,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Poster_2013.jpeg",
       "posterHint": "abstract whale poster",
       "description": "Los Cabos nos dio la bienvenida del 13 al 16 de noviembre para celebrar la segunda edición del Festival. Este año el Festival se redefinió como un evento enfocado al cine de Norteamérica con el objetivo de lograr un intercambio cultural, profesional y comercial entre las industrias cinematográficas de México, Estados Unidos y Canadá. En esta edición nacieron las secciones competitivas Competencia Los Cabos y México Primero dentro de la Selección Oficial. En esta edición se dio inicio a las actividades del Fondo Fílmico Gabriel Figueroa con las secciones de Desarrollo y Work in Progress. Alfombras rojas, conciertos (Café Tacuva) funciones gratuitas, fiestas y galas nos acompañaron en el 2013.",
       "gallery": []
@@ -110,3 +110,5 @@ export const editionsData = [
       "gallery": []
     }
   ]
+
+    
