@@ -65,7 +65,13 @@ export default function ContactoPage() {
 
             <Card className="p-8 bg-card shadow-lg">
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+                <form 
+                  name="contact"
+                  data-netlify="true"
+                  onSubmit={form.handleSubmit(onSubmit)} 
+                  className="space-y-8"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <FormField
                       control={form.control}
