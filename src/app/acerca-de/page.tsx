@@ -72,7 +72,7 @@ export default function AcercaDePage() {
                         />
                     </div>
                     <div className="order-1 md:order-2 text-lg text-muted-foreground space-y-4">
-                       <p>En 2025, el Festival celebrará su 13ª edición del 10 al 14 de diciembre, reafirmando su espíritu innovador y expandiendo su alcance hacia disciplinas que hoy definen la cultura contemporánea. El cine se mantiene como eje rector, convergiendo con la música, el arte digital, el diseño y la gastronomía bajo la narrativa #BeyondTheScreen.</p>
+                       <p>En 2025, el Festival celebrará su 13ª edición del 10 al 14 de diciembre, reafirmando su espíritu innovador y expandiendo su alcance hacia disciplinas que hoy definen la cultura contemporánea. El cine se mantiene como eje rector, convergiendo con la música, el arte digital y la gastronomía bajo la narrativa #BeyondTheScreen.</p>
                     </div>
                 </div>
                 
