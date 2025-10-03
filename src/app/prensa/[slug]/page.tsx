@@ -77,16 +77,30 @@ export default function PressReleasePage({ params }: { params: { slug: string } 
         </section>
 
         <section className="py-16 sm:py-24 bg-card">
-            <div className="container mx-auto px-4 text-center">
-                 <h2 className="font-headline text-4xl md:text-5xl font-bold text-foreground">
+            <div className="container mx-auto px-4">
+                <div className="grid md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
+                <div className="text-center md:text-left">
+                    <h1 className="font-headline text-4xl md:text-5xl font-bold text-foreground">
                     Contacto de Prensa
-                 </h2>
-                 <div className="mt-4 text-lg text-muted-foreground space-y-1 max-w-2xl mx-auto">
-                    <p>Para entrevistas, acreditaciones o solicitudes de material, escribe a:</p>
-                    <p className="font-semibold text-foreground pt-2">Cynthia Huerta</p>
-                    <a href="mailto:cynthia@comunicacionlateral.com" className="text-accent hover:underline block !mt-0">
-                        cynthia@comunicacionlateral.com
-                    </a>
+                    </h1>
+                    <div className="mt-6 text-lg text-muted-foreground space-y-2">
+                        <p>Para entrevistas, acreditaciones y solicitudes de prensa, escribe a:</p>
+                        <p className="font-semibold text-foreground">Cynthia Huerta</p>
+                        <a href="mailto:cynthia@comunicacionlateral.com" className="text-accent hover:underline">
+                            cynthia@comunicacionlateral.com
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <Image
+                        src="https://picsum.photos/seed/contact-press/800/600"
+                        alt="Contacto de Prensa"
+                        data-ai-hint="desk phone notebook"
+                        width={800}
+                        height={600}
+                        className="rounded-lg shadow-2xl object-cover w-full h-auto"
+                    />
+                </div>
                 </div>
             </div>
         </section>
