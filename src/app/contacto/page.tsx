@@ -41,12 +41,31 @@ export default function ContactoPage() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: '¡Formulario enviado!',
-      description: 'Gracias por contactarnos. Te responderemos pronto.',
+    const formData = new FormData();
+    formData.append('form-name', 'contact');
+    Object.entries(values).forEach(([key, value]) => {
+      formData.append(key, value);
     });
-    form.reset();
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData as any).toString(),
+    })
+      .then(() => {
+        toast({
+          title: '¡Formulario enviado!',
+          description: 'Gracias por contactarnos. Te responderemos pronto.',
+        });
+        form.reset();
+      })
+      .catch((error) => {
+        toast({
+          variant: 'destructive',
+          title: 'Error al enviar el formulario.',
+          description: 'Por favor, inténtalo de nuevo más tarde.',
+        });
+      });
   }
 
   return (
@@ -68,6 +87,7 @@ export default function ContactoPage() {
               <Form {...form}>
                 <form 
                   name="contact"
+                  method="POST"
                   data-netlify="true"
                   onSubmit={form.handleSubmit(onSubmit)} 
                   className="space-y-8"
