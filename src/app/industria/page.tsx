@@ -4,7 +4,7 @@ import Footer from '@/components/cabo-cine/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { CheckCircle, Award, Calendar, DollarSign, Target, Handshake, Info, Users, Film, ListChecks, Goal, GitBranch } from 'lucide-react';
+import { CheckCircle, Award, Calendar, DollarSign, Target, Handshake, Info, Users, Film, ListChecks, Goal, GitBranch, Milestone } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -22,19 +22,8 @@ const results = [
   {
     icon: Users,
     stat: "230+",
-    description: "proyectos recibidos por edición en promedio.",
+    description: "proyectos recibidos por edición; hasta 12 seleccionados para reuniones uno a uno.",
   },
-];
-
-const confirmedAwards = [
-    "Renta de equipo cinematográfico.",
-    "Corrección de color y postproducción.",
-    "Distribución y estreno comercial.",
-    "Diseño de trailer y cartel.",
-    "Premio EGEDA: participación internacional en Iberseries Platino 2026, Madrid.",
-    "Hospedaje del 10 al 14 de diciembre 2025 en hotel sede para un representante por proyecto.",
-    "Vuelo nacional redondo para un representante.",
-    "Acreditación de Industria del Festival."
 ];
 
 const gfffRepresents = [
@@ -50,19 +39,31 @@ const selectionCommittee = [
     { name: "Alfredo Ruiz", bio: "Director de la Licenciatura en Cinematografía en ESCINE. Experiencia en curaduría, crítica y formación académica.", imgSrc: "https://picsum.photos/seed/ruiz/400/400" },
 ];
 
+const confirmedAwards = [
+    "Renta de equipo cinematográfico.",
+    "Corrección de color y postproducción.",
+    "Distribución y estreno comercial.",
+    "Diseño de trailer y cartel.",
+    "Premio EGEDA: participación internacional en Iberseries Platino 2026, Madrid.",
+    "Hospedaje del 10 al 14 de diciembre 2025 en hotel sede para un representante por proyecto.",
+    "Vuelo nacional redondo para un representante.",
+    "Acreditación de Industria del Festival."
+];
+
 const evaluationCriteria = [
     "Vínculo y pertinencia regional.",
     "Narrativa y voz autoral.",
     "Coherencia artística y calidad técnica.",
     "Impacto y resonancia cultural.",
     "Diversidad e identidad del Festival."
-]
+];
 
 const selectionProcess = [
     { stage: "Etapa 1 – Elegibilidad", description: "Revisión técnica y formal de requisitos." },
     { stage: "Etapa 2 – Evaluación cualitativa (ESCINE)", description: "Visionado doble; en caso de discrepancia, tercera valoración." },
     { stage: "Etapa 3 – Selección final", description: "Jurado de cineastas de renombre define la selección oficial (5 largometrajes + 10 cortos)." }
 ];
+
 
 export default function IndustriaPage() {
   return (
@@ -76,9 +77,6 @@ export default function IndustriaPage() {
               Fondo Fílmico <span className="text-accent">Gabriel Figueroa</span>
             </h1>
             <p className="mt-4 text-xl font-semibold text-accent">Convocatoria abierta a partir del 13 de Octubre.</p>
-            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-             El motor estratégico de la industria audiovisual en México y América Latina, impulsando la creación y conectando talento con oportunidades globales.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
                  <Button size="lg" disabled>
                     Aplicar a la Convocatoria
@@ -155,34 +153,55 @@ export default function IndustriaPage() {
             </div>
         </section>
 
+        {/* Convocatoria Banner */}
+        <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground">
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="https://picsum.photos/seed/convocatoria-banner/1920/1080"
+                    alt="Banner Convocatoria"
+                    data-ai-hint="film slate camera"
+                    fill
+                    className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black/70" />
+            </div>
+            <div className="container mx-auto px-4 relative z-10 text-center">
+                 <h2 className="font-headline text-5xl sm:text-7xl font-bold">Convocatoria Edición 2025</h2>
+            </div>
+        </section>
 
-        {/* Convocatoria Section */}
+        {/* Convocatoria Details Section */}
         <section className="py-16 sm:py-24 bg-card">
             <div className="container mx-auto px-4">
-                 <div className="text-center mb-12">
-                    <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Convocatoria Edición 2025</h2>
-                </div>
                 <div className="max-w-4xl mx-auto">
                     <Accordion type="single" collapsible className="w-full" defaultValue='item-1'>
                         <AccordionItem value="item-1">
                             <AccordionTrigger className='text-2xl font-semibold hover:no-underline'><div className='flex items-center gap-3'><ListChecks className='h-6 w-6 text-accent'/>Términos de participación</div></AccordionTrigger>
-                            <AccordionContent className='text-base text-muted-foreground space-y-6 pt-6 pl-4'>
-                                <div>
-                                    <h4 className="font-bold text-foreground mb-2">Proyectos elegibles</h4>
-                                    <ul className="list-disc list-inside space-y-1">
-                                        <li>Largometrajes de más de 60 minutos.</li>
-                                        <li>Ficción o documental.</li>
-                                        <li>Óperas primas o segundas películas producidas o coproducidas por México.</li>
-                                    </ul>
-                                </div>
-                                 <div>
-                                    <h4 className="font-bold text-foreground mb-2">Etapa requerida</h4>
-                                    <p>Proyectos en edición o inicio de postproducción.</p>
-                                </div>
-                                 <div>
-                                    <h4 className="font-bold text-foreground mb-2">Selección</h4>
-                                    <p>Se elegirán 5 proyectos para participar en mentorías con reconocidos miembros de la industria nacional.</p>
-                                </div>
+                            <AccordionContent className='text-base text-muted-foreground space-y-2 pt-6 pl-4'>
+                                <Accordion type="single" collapsible className="w-full bg-background/50 rounded-lg p-4">
+                                     <AccordionItem value="sub-item-1" className="border-b-0">
+                                        <AccordionTrigger className="text-lg font-medium hover:no-underline"><div className="flex items-center gap-2"><Target className="h-5 w-5 text-secondary"/>Proyectos elegibles</div></AccordionTrigger>
+                                        <AccordionContent className='text-base text-muted-foreground space-y-2 pt-4 pl-8'>
+                                            <ul className="list-disc list-inside space-y-1">
+                                                <li>Largometrajes de más de 60 minutos.</li>
+                                                <li>Ficción o documental.</li>
+                                                <li>Óperas primas o segundas películas producidas o coproducidas por México.</li>
+                                            </ul>
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                     <AccordionItem value="sub-item-2" className="border-b-0">
+                                        <AccordionTrigger className="text-lg font-medium hover:no-underline"><div className="flex items-center gap-2"><Milestone className="h-5 w-5 text-secondary"/>Etapa requerida</div></AccordionTrigger>
+                                        <AccordionContent className='text-base text-muted-foreground space-y-2 pt-4 pl-8'>
+                                             <p>Proyectos en edición o inicio de postproducción.</p>
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                    <AccordionItem value="sub-item-3" className="border-b-0">
+                                        <AccordionTrigger className="text-lg font-medium hover:no-underline"><div className="flex items-center gap-2"><UserCheck className="h-5 w-5 text-secondary"/>Selección</div></AccordionTrigger>
+                                        <AccordionContent className='text-base text-muted-foreground space-y-2 pt-4 pl-8'>
+                                            <p>Se elegirán 5 proyectos para participar en mentorías con reconocidos miembros de la industria nacional.</p>
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                </Accordion>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">
@@ -281,7 +300,5 @@ export default function IndustriaPage() {
     </div>
   );
 }
-
-    
 
     
