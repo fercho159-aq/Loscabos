@@ -65,7 +65,6 @@ export default function PuertoLosCabosPage() {
         {/* Map Section */}
         <section className="py-16 sm:py-24 bg-card">
             <div className="container mx-auto px-4 text-center">
-                <h2 className="font-headline text-3xl sm:text-4xl font-bold text-foreground mb-10">Mapa del Ecosistema Creativo</h2>
                 <div className="max-w-4xl mx-auto">
                     <Image 
                         src="https://picsum.photos/seed/mapa-plc/1000/800"
