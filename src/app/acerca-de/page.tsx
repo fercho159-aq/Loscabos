@@ -108,16 +108,24 @@ export default function AcercaDePage() {
         </section>
 
         {/* ESCINE Alliance Section */}
-        <section className="py-16 sm:py-24 bg-card">
-             <div className="container mx-auto px-4 max-w-4xl">
-                 <div className="text-center">
-                    <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Alianza con <Link href="https://escine.mx/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ESCINE</Link></h2>
-                    <div className="mt-8 text-lg text-muted-foreground max-w-3xl mx-auto space-y-4">
-                        <p>En esta edición, el FICLosCabos 2025 fortalece su legitimidad y proyección gracias a la alianza con la Escuela Superior de Cine (<Link href="https://escine.mx/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ESCINE</Link>), institución líder en formación audiovisual en México. <Link href="https://escine.mx/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ESCINE</Link> acompaña la curaduría de las convocatorias y garantiza rigor y credibilidad en los procesos.</p>
-                        <p>A través de su participación en La Baja Inspira, potencia la visibilidad de historias vinculadas a la región; en el Fondo Fílmico Gabriel Figueroa, impulsa proyectos en etapa de postproducción conectándolos con la industria global; y con la incorporación de la animación como disciplina emergente, suma un nuevo eje de innovación que prepara al Festival para expandirse hacia lenguajes y nuevas narrativas.</p>
-                    </div>
+        <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground">
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="https://picsum.photos/seed/escine-alliance/1920/1080"
+                    alt="Alianza con ESCINE"
+                    data-ai-hint="film students collaboration"
+                    fill
+                    className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black/70" />
+            </div>
+            <div className="container mx-auto px-4 relative z-10 text-center">
+                <h2 className="font-headline text-4xl sm:text-5xl font-bold">Alianza con <Link href="https://escine.mx/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ESCINE</Link></h2>
+                <div className="mt-8 text-lg max-w-3xl mx-auto space-y-4 text-background/90">
+                    <p>En esta edición, el FICLosCabos 2025 fortalece su legitimidad y proyección gracias a la alianza con la Escuela Superior de Cine (<Link href="https://escine.mx/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ESCINE</Link>), institución líder en formación audiovisual en México. <Link href="https://escine.mx/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ESCINE</Link> acompaña la curaduría de las convocatorias y garantiza rigor y credibilidad en los procesos.</p>
+                    <p>A través de su participación en La Baja Inspira, potencia la visibilidad de historias vinculadas a la región; en el Fondo Fílmico Gabriel Figueroa, impulsa proyectos en etapa de postproducción conectándolos con la industria global; y con la incorporación de la animación como disciplina emergente, suma un nuevo eje de innovación que prepara al Festival para expandirse hacia lenguajes y nuevas narrativas.</p>
                 </div>
-             </div>
+            </div>
         </section>
 
         {/* Navigation Blocks */}
