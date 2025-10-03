@@ -112,29 +112,28 @@ export default function CampusPage() {
             </div>
         </section>
 
-        {/* Section 3: Vision */}
-        <section className="py-16 sm:py-24 bg-background space-y-16">
-            <div className="container mx-auto px-4">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-                    <div className="order-2 md:order-1">
-                        <p className="text-lg text-muted-foreground leading-relaxed">
-                             El Campus FICLosCabos se concibe, más allá de un conjunto de sedes, como la manifestación física de la visión #BeyondTheScreen, donde cada espacio aporta su identidad para consolidar al Festival como experiencia inmersiva y multidisciplinaria.
-                        </p>
-                    </div>
-                    <div className="order-1 md:order-2">
-                        <Card className="overflow-hidden shadow-xl">
-                            <Image 
-                                src="https://picsum.photos/seed/sjc-venue/800/600"
-                                alt="Sede del festival en San José del Cabo"
-                                data-ai-hint="festival venue evening"
-                                width={800}
-                                height={600}
-                                className="w-full h-auto object-cover"
-                            />
-                        </Card>
-                    </div>
-                </div>
+        {/* Section 3: Vision Banner */}
+        <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground">
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="https://picsum.photos/seed/sjc-venue/1920/1080"
+                    alt="Sede del festival en San José del Cabo"
+                    data-ai-hint="festival venue evening"
+                    fill
+                    className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black/70" />
             </div>
+            <div className="container mx-auto px-4 relative z-10 text-center">
+                <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
+                    El Campus FICLosCabos se concibe, más allá de un conjunto de sedes, como la manifestación física de la visión #BeyondTheScreen, donde cada espacio aporta su identidad para consolidar al Festival como experiencia inmersiva y multidisciplinaria.
+                </p>
+            </div>
+        </section>
+
+
+        {/* Section 4: Strategic Medium */}
+        <section className="py-16 sm:py-24 bg-background">
             <div className="container mx-auto px-4">
                  <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div>
