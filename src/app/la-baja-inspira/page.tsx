@@ -99,29 +99,6 @@ export default function LaBajaInspiraPage() {
             </div>
         </section>
         
-        {/* Methodology Section */}
-        <section className="py-16 sm:py-24 bg-background">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Convocatoria y Metodología</h2>
-                     <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                        La convocatoria se lanzó el 4 de marzo y cerró el 30 de abril de 2025, con gestión y difusión a través de FilmFreeway. Se recibieron 1,600 proyectos, todos visionados por un comité de programación especializado. El anuncio de los seleccionados se realizará el 31 de octubre de 2025 mediante newsletter, redes sociales y FilmFreeway.
-                    </p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
-                    {methodology.map((item, index) => (
-                        <div key={item.step} className="text-center flex flex-col items-center">
-                            <div className="bg-primary/10 text-accent p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                                <span className="text-2xl font-bold font-headline">{index + 1}</span>
-                            </div>
-                            <h3 className="text-xl font-bold font-headline text-foreground mb-2">{item.step}</h3>
-                            <p className="text-muted-foreground text-sm">{item.description}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-
         {/* Details Section */}
         <section className="py-16 sm:py-24 bg-card">
             <div className="container mx-auto px-4 max-w-4xl">
@@ -174,7 +151,3 @@ export default function LaBajaInspiraPage() {
     </div>
   );
 }
-
-    
-
-    
