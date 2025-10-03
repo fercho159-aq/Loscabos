@@ -1,4 +1,11 @@
 
+'use client';
+
+import { useFormState, useFormStatus } from 'react-dom';
+import { savePreRegistration } from '@/lib/actions/savePreRegistration';
+import { useEffect, useRef } from 'react';
+import { useToast } from "@/hooks/use-toast";
+
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
@@ -14,7 +21,45 @@ import Footer from '@/components/cabo-cine/footer';
 import { Card } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 
+function SubmitButton() {
+  const { pending } = useFormStatus();
+  return (
+    <Button type="submit" size="lg" className="w-full" disabled={pending}>
+      {pending ? 'Enviando...' : 'Enviar Pre-registro'}
+    </Button>
+  );
+}
+
 export default function PreRegistroPage() {
+  const initialState = { message: null, errors: {} };
+  const [state, dispatch] = useFormState(savePreRegistration, initialState);
+  const { toast } = useToast();
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if (state.message) {
+      if (state.errors && Object.keys(state.errors).length > 0) {
+        toast({
+            variant: "destructive",
+            title: "Error de validación",
+            description: "Por favor revisa los campos del formulario.",
+        });
+      } else if (state.message.includes('Error')) {
+         toast({
+            variant: "destructive",
+            title: "Error",
+            description: state.message,
+        });
+      } else {
+        toast({
+          title: "¡Éxito!",
+          description: state.message,
+        });
+        formRef.current?.reset();
+      }
+    }
+  }, [state, toast]);
+
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
@@ -31,34 +76,24 @@ export default function PreRegistroPage() {
             </div>
 
             <Card className="p-6 sm:p-10 bg-card shadow-xl">
-              <form 
-                name="pre-registro"
-                method="POST"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                className="space-y-8"
-              >
-                <input type="hidden" name="form-name" value="pre-registro" />
-                <p className="hidden">
-                  <label>
-                    Don’t fill this out if you’re human: <input name="bot-field" />
-                  </label>
-                </p>
-
+              <form ref={formRef} action={dispatch} className="space-y-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   <div className="space-y-2">
                     <Label htmlFor="firstName">Nombre</Label>
                     <Input id="firstName" name="firstName" placeholder="Tu nombre" required />
+                    {state.errors?.firstName && <p className="text-sm font-medium text-destructive">{state.errors.firstName.join(', ')}</p>}
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="lastName">Apellido</Label>
                     <Input id="lastName" name="lastName" placeholder="Tu apellido" required />
+                     {state.errors?.lastName && <p className="text-sm font-medium text-destructive">{state.errors.lastName.join(', ')}</p>}
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="email">Correo Electrónico</Label>
                   <Input id="email" name="email" type="email" placeholder="tu@correo.com" required />
+                  {state.errors?.email && <p className="text-sm font-medium text-destructive">{state.errors.email.join(', ')}</p>}
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -76,10 +111,12 @@ export default function PreRegistroPage() {
                     <div className="space-y-2">
                         <Label htmlFor="state">Estado</Label>
                         <Input id="state" name="state" placeholder="Ej. Baja California Sur" required />
+                         {state.errors?.state && <p className="text-sm font-medium text-destructive">{state.errors.state.join(', ')}</p>}
                     </div>
                     <div className="space-y-2">
                         <Label htmlFor="city">Ciudad</Label>
                         <Input id="city" name="city" placeholder="Ej. La Paz" required />
+                         {state.errors?.city && <p className="text-sm font-medium text-destructive">{state.errors.city.join(', ')}</p>}
                     </div>
                 </div>
                 
@@ -96,11 +133,12 @@ export default function PreRegistroPage() {
                             <SelectItem value="otra">Otra</SelectItem>
                         </SelectContent>
                     </Select>
+                     {state.errors?.industry && <p className="text-sm font-medium text-destructive">{state.errors.industry.join(', ')}</p>}
                 </div>
 
                 <div className="space-y-2">
                     <Label>¿Eres estudiante o profesional?</Label>
-                    <RadioGroup name="professionalStatus" required className="flex flex-col space-y-1">
+                    <RadioGroup name="professionalStatus" defaultValue="profesional" required className="flex flex-col space-y-1">
                         <div className="flex items-center space-x-3 space-y-0">
                             <RadioGroupItem value="estudiante" id="estudiante" />
                             <Label htmlFor="estudiante" className="font-normal">Estudiante</Label>
@@ -110,11 +148,10 @@ export default function PreRegistroPage() {
                             <Label htmlFor="profesional" className="font-normal">Profesional</Label>
                         </div>
                     </RadioGroup>
+                     {state.errors?.professionalStatus && <p className="text-sm font-medium text-destructive">{state.errors.professionalStatus.join(', ')}</p>}
                 </div>
 
-                <Button type="submit" size="lg" className="w-full">
-                  Enviar Pre-registro
-                </Button>
+                <SubmitButton />
               </form>
             </Card>
           </div>

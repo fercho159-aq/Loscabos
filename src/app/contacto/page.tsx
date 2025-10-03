@@ -1,4 +1,9 @@
 
+'use client';
+
+import { useFormState, useFormStatus } from 'react-dom';
+import { saveContact } from '@/lib/actions/saveContact';
+
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Card } from '@/components/ui/card';
@@ -6,8 +11,48 @@ import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
+import { useToast } from "@/hooks/use-toast";
+import { useEffect, useRef } from 'react';
+
+function SubmitButton() {
+  const { pending } = useFormStatus();
+  return (
+    <Button type="submit" size="lg" className="w-full" disabled={pending}>
+      {pending ? 'Enviando...' : 'Enviar Mensaje'}
+    </Button>
+  );
+}
 
 export default function ContactoPage() {
+  const initialState = { message: null, errors: {} };
+  const [state, dispatch] = useFormState(saveContact, initialState);
+  const { toast } = useToast();
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if (state.message) {
+      if (state.errors && Object.keys(state.errors).length > 0) {
+        toast({
+            variant: "destructive",
+            title: "Error de validación",
+            description: "Por favor revisa los campos del formulario.",
+        });
+      } else if (state.message.includes('Error')) {
+         toast({
+            variant: "destructive",
+            title: "Error",
+            description: state.message,
+        });
+      } else {
+        toast({
+          title: "¡Éxito!",
+          description: state.message,
+        });
+        formRef.current?.reset();
+      }
+    }
+  }, [state, toast]);
+
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
@@ -25,58 +70,30 @@ export default function ContactoPage() {
             </div>
 
             <Card className="p-8 bg-card shadow-lg">
-            <form name="contact" method="POST" data-netlify="true">
-  <p>
-    <label>Your Name: <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Your Email: <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <label>Your Role: <select name="role[]" multiple>
-      <option value="leader">Leader</option>
-      <option value="follower">Follower</option>
-    </select></label>
-  </p>
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
-               <form
-                name="contacto"
-                method="POST"
-                data-netlify="true"
-                className="space-y-8"
-              >
-                <input type="hidden" name="form-name" value="contact" />
-                <p className="hidden">
-                  <label>
-                    Don’t fill this out if you’re human: <input name="bot-field" />
-                  </label>
-                </p>
-
+              <form ref={formRef} action={dispatch} className="space-y-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   <div className="space-y-2">
                     <Label htmlFor="firstName">Nombre</Label>
                     <Input id="firstName" name="firstName" placeholder="Tu nombre" required />
+                     {state.errors?.firstName && <p className="text-sm font-medium text-destructive">{state.errors.firstName.join(', ')}</p>}
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="lastName">Apellido</Label>
                     <Input id="lastName" name="lastName" placeholder="Tu apellido" required />
+                     {state.errors?.lastName && <p className="text-sm font-medium text-destructive">{state.errors.lastName.join(', ')}</p>}
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="email">Correo Electrónico</Label>
                   <Input id="email" name="email" type="email" placeholder="tu@correo.com" required />
+                  {state.errors?.email && <p className="text-sm font-medium text-destructive">{state.errors.email.join(', ')}</p>}
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="subject">Asunto</Label>
                   <Input id="subject" name="subject" placeholder="Asunto del mensaje" required />
+                  {state.errors?.subject && <p className="text-sm font-medium text-destructive">{state.errors.subject.join(', ')}</p>}
                 </div>
 
                 <div className="space-y-2">
@@ -88,11 +105,10 @@ export default function ContactoPage() {
                     className="min-h-[150px]"
                     required
                   />
+                   {state.errors?.message && <p className="text-sm font-medium text-destructive">{state.errors.message.join(', ')}</p>}
                 </div>
-
-                <Button type="submit" size="lg" className="w-full">
-                  Enviar Mensaje
-                </Button>
+                
+                <SubmitButton />
               </form>
             </Card>
           </div>
