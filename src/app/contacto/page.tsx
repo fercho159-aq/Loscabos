@@ -41,7 +41,7 @@ export default function ContactoPage() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    const formData = new FormData();
+    const formData = new URLSearchParams();
     formData.append('form-name', 'contact');
     Object.entries(values).forEach(([key, value]) => {
       formData.append(key, value);
@@ -50,7 +50,7 @@ export default function ContactoPage() {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData as any).toString(),
+      body: formData.toString(),
     })
       .then(() => {
         toast({
@@ -89,6 +89,7 @@ export default function ContactoPage() {
                   name="contact"
                   method="POST"
                   data-netlify="true"
+                  data-netlify-honeypot="bot-field"
                   onSubmit={form.handleSubmit(onSubmit)} 
                   className="space-y-8"
                 >
