@@ -55,7 +55,7 @@ export default function Header() {
           href={link.href} 
           onClick={() => setOpen(false)} 
           className={cn(
-            "text-sm font-medium transition-colors block py-2 lg:py-0",
+            "text-xs font-medium transition-colors block py-2 lg:py-0",
             isTransparent ? "text-background hover:text-background/80" : "text-foreground hover:text-accent"
           )}
         >
@@ -75,10 +75,10 @@ export default function Header() {
       <div className="container mx-auto px-4 h-20 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2">
            <Image 
-            src={isTransparent ? "/Images/logos/FESTIVAL DE CINE LOS CABOS- blanco.png" : "/Images/logos/FESTIVAL DE CINE LOS CABOS-negro.png"} 
+            src={isTransparent ? "/Images/logos/logoheader.png" : "/Images/logos/logoheaderN.png"} 
             alt="CaboCine Logo" 
-            width={150} 
-            height={40} 
+            width={50} 
+            height={20} 
             data-ai-hint="logo"
             className="transition-all duration-300"
             key={isTransparent ? 'logo-top' : 'logo-scrolled'}
@@ -88,7 +88,10 @@ export default function Header() {
           <NavContent />
         </nav>
         <div className="flex items-center gap-4">
-          <Button asChild variant="link" className={cn(isTransparent ? "text-background" : "text-foreground", "hidden sm:inline-flex font-headline text-accent")}>
+          <Button asChild variant="link" className={cn(
+              "hidden sm:inline-flex text-xs font-medium",
+              isTransparent ? "text-accent hover:text-accent/80" : "text-accent hover:text-accent/80"
+          )}>
             <Link href="/pre-registro">
                 PRE-REGÍSTRATE
             </Link>
