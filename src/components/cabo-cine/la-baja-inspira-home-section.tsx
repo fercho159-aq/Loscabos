@@ -52,7 +52,7 @@ export default function LaBajaInspiraHomeSection() {
           {/* Right Column: Image */}
            <div>
              <Image 
-                src="https://picsum.photos/seed/baja-inspira/800/600"
+                src="/Images/Main/La Baja Inspira.jpg"
                 alt="Carretera en Baja California al atardecer"
                 data-ai-hint="baja california road sunset"
                 width={800}

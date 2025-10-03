@@ -22,15 +22,18 @@ export default function SponsorsSection() {
   return (
     <section id="patrocinadores" className="py-16 sm:py-24 bg-card">
        <div className="container mx-auto px-4 text-center">
-        <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">
-          Nuestros aliados y patrocinadores
-        </h2>
-        <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+        <div className="inline-block">
+            <h2 className="font-headline text-2xl text-accent tracking-widest">
+              NUESTROS ALIADOS Y PATROCINADORES
+            </h2>
+            <div className="border-b-2 border-secondary w-2/3 mx-auto mt-1"></div>
+        </div>
+        <p className="mt-6 text-base text-muted-foreground max-w-lg mx-auto">
           Juntos construimos un espacio donde el cine conecta con la cultura, la comunidad y la biodiversidad.
         </p>
       </div>
       
-      <div className="w-full inline-flex flex-nowrap overflow-hidden mt-12 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+      <div className="w-full inline-flex flex-nowrap overflow-hidden mt-16 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
         <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
           {extendedSponsors.map((sponsor, index) => (
             <li key={`sponsor-${index}`}>
