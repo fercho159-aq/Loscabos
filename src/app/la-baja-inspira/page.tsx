@@ -17,14 +17,6 @@ const requirements = [
     "Formato de proyección: archivo digital.",
 ];
 
-const methodology = [
-    { step: "Convocatoria", description: "Lanzada vía newsletter, redes sociales y FilmFreeway (4 de marzo al 30 de abril de 2025)." },
-    { step: "Recepción", description: "Se recibieron 1,600 registros." },
-    { step: "Preselección", description: "400 películas cumplen con los requisitos iniciales." },
-    { step: "Análisis", description: "Comité de programación especializado revisará todas las películas candidatas." },
-    { step: "Anuncio", description: "La selección oficial (5 largos y 10-15 cortos) se anunciará el 31 de octubre de 2025." },
-]
-
 const evaluationCriteria = [
     "Vínculo y pertinencia regional.",
     "Narrativa y voz autoral.",
@@ -104,8 +96,8 @@ export default function LaBajaInspiraPage() {
             <div className="container mx-auto px-4 max-w-4xl">
                 <Accordion type="single" collapsible className="w-full" defaultValue="item-1">
                   <AccordionItem value="item-1">
-                    <AccordionTrigger className='text-xl font-semibold flex items-center gap-3'><ListChecks/> Requerimientos de participación</AccordionTrigger>
-                    <AccordionContent className='text-base text-muted-foreground space-y-4 pt-4'>
+                    <AccordionTrigger className='text-2xl font-bold hover:no-underline'><div className='flex items-center gap-3'><ListChecks className='h-6 w-6 text-accent'/>Requerimientos de participación</div></AccordionTrigger>
+                    <AccordionContent className='text-base text-muted-foreground pt-6 pl-4'>
                         <ul className="space-y-3">
                         {requirements.map((item, index) => (
                             <li key={index} className="flex items-start gap-3">
@@ -117,9 +109,9 @@ export default function LaBajaInspiraPage() {
                     </AccordionContent>
                   </AccordionItem>
                    <AccordionItem value="item-2">
-                    <AccordionTrigger className='text-xl font-semibold flex items-center gap-3'><GitBranch /> Criterios de evaluación</AccordionTrigger>
-                     <AccordionContent className='text-base text-muted-foreground space-y-4 pt-4'>
-                        <ul className="list-disc list-inside space-y-1">
+                    <AccordionTrigger className='text-2xl font-bold hover:no-underline'><div className='flex items-center gap-3'><GitBranch className='h-6 w-6 text-accent'/> Criterios de evaluación</div></AccordionTrigger>
+                     <AccordionContent className='text-base text-muted-foreground pt-6 pl-4'>
+                        <ul className="list-disc list-inside space-y-2">
                             {evaluationCriteria.map((criterion, index) => (
                                 <li key={index}>{criterion}</li>
                             ))}
@@ -127,8 +119,8 @@ export default function LaBajaInspiraPage() {
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-3">
-                    <AccordionTrigger className='text-xl font-semibold flex items-center gap-3'><Info/> Lineamientos adicionales</AccordionTrigger>
-                    <AccordionContent className='text-base text-muted-foreground pt-4'>
+                    <AccordionTrigger className='text-2xl font-bold hover:no-underline'><div className='flex items-center gap-3'><Info className='h-6 w-6 text-accent'/> Lineamientos adicionales</div></AccordionTrigger>
+                    <AccordionContent className='text-base text-muted-foreground pt-6 pl-4'>
                          <ul className="list-disc list-inside space-y-2">
                             {additionalGuidelines.map((guideline, index) => (
                                 <li key={index}>{guideline}</li>
@@ -137,8 +129,8 @@ export default function LaBajaInspiraPage() {
                     </AccordionContent>
                   </AccordionItem>
                    <AccordionItem value="item-4">
-                    <AccordionTrigger className='text-xl font-semibold flex items-center gap-3'><Users /> Jurado</AccordionTrigger>
-                     <AccordionContent className='text-base text-muted-foreground space-y-3 pt-3'>
+                    <AccordionTrigger className='text-2xl font-bold hover:no-underline'><div className='flex items-center gap-3'><Users className='h-6 w-6 text-accent'/> Jurado</div></AccordionTrigger>
+                     <AccordionContent className='text-base text-muted-foreground space-y-3 pt-6 pl-4'>
                         <p>La integración del jurado será anunciada antes del 31 de octubre de 2025.</p>
                     </AccordionContent>
                   </AccordionItem>
