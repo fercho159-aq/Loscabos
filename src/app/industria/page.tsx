@@ -83,9 +83,6 @@ export default function IndustriaPage() {
                  <Button size="lg" disabled>
                     Aplicar a la Convocatoria
                 </Button>
-                <Button size="lg" variant="outline">
-                    Conviértete en Aliado
-                </Button>
             </div>
           </div>
         </section>
@@ -284,5 +281,7 @@ export default function IndustriaPage() {
     </div>
   );
 }
+
+    
 
     
