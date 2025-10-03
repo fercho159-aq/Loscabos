@@ -31,26 +31,23 @@ export default function HeroSection() {
                 />
         </div>
 
-        <p className="text-lg md:text-xl max-w-2xl mx-auto text-background/90">
-          13ª Edición del 10 al 14 de diciembre 2025
-        </p>
-
         <p className="mt-4 font-headline text-3xl md:text-4xl text-accent tracking-widest">
             #BEYONDTHESCREEN
         </p>
 
-        <div className="mt-8">
-          <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-lg py-7 px-8 group transition-all duration-300 transform hover:scale-105 shadow-lg shadow-black/30">
-            <Link href="/pre-registro">
-                <Ticket className="mr-2 h-6 w-6 transition-transform group-hover:rotate-12" />
-                Pre-regístrate
-            </Link>
-          </Button>
+        <div className="mt-12">
+            <p className="text-base text-background/80 mb-2">
+            ¿TE INTERESA ASISTIR?
+            </p>
+            <Button asChild size="lg" variant="link" className="text-accent hover:text-accent/90 font-bold text-lg py-3 px-8 group transition-all duration-300 transform hover:scale-105">
+                <Link href="/pre-registro">
+                    PRE-REGÍSTRATE AQUÍ
+                </Link>
+            </Button>
+            <p className="mt-2 text-sm text-background/80">
+            TE AVISAREMOS CUANDO SE ABRA LA TAQUILLA.
+            </p>
         </div>
-
-        <p className="mt-4 text-base text-background/80">
-          ¿Te interesa asistir? Te avisaremos cuando se abra la taquilla.
-        </p>
 
       </div>
     </section>
