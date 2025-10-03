@@ -47,6 +47,11 @@ export default function HeroSection() {
             </Link>
           </Button>
         </div>
+
+        <p className="mt-4 text-base text-background/80">
+          ¿Te interesa asistir? Te avisaremos cuando se abra la taquilla.
+        </p>
+
       </div>
     </section>
   );
