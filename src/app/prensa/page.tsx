@@ -65,7 +65,7 @@ export default function PrensaPage() {
                     Para entrevistas, acreditaciones o solicitudes de material, por favor visita nuestra página de contacto.
                 </p>
                 <Button size="lg" asChild className="mt-8">
-                    <Link href="/contacto">
+                    <Link href="/contacto-prensa">
                         Información de Contacto <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                 </Button>
