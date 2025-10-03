@@ -71,9 +71,7 @@ export default function AnimacionPage() {
                     <p><span className="font-semibold text-foreground">La Escuela Superior de Cine (<Link href="https://escine.mx/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ESCINE</Link>)</span> asume un rol clave en la curaduría de esta nueva sección, garantizando excelencia artística, pertinencia cultural y proyección internacional.</p>
                     <p>El programa contempla una <span className="font-semibold text-foreground">Sección Oficial de Animación</span> con cortos y mediometrajes de escuelas nacionales e internacionales; <span className="font-semibold text-foreground">masterclasses y diálogos</span> con profesionales de la industria; y el anuncio de la <span className="font-semibold text-foreground">convocatoria oficial de animación para 2026</span>, junto con un taller formativo para creadores de Baja California. Con ello, el festival abre un nuevo capítulo que refuerza su vocación de descubrimiento, formación e innovación.</p>
                      <div className="pt-4 text-center">
-                        <Button variant="secondary" size="lg" disabled>
-                            La programación será anunciada próximamente
-                        </Button>
+                        <p className="text-accent font-semibold text-xl">La programación será anunciada próximamente</p>
                     </div>
                 </div>
             </div>
