@@ -98,7 +98,7 @@ export default function IndustriaPage() {
                     </div>
                      <div className='md:col-span-2'>
                         <Image
-                            src="https://picsum.photos/seed/gfff-intro/800/1000"
+                            src="/Images/FF/Foto Gabriel Figueroa_tiff.png"
                             alt="Cineasta en set"
                             data-ai-hint="filmmaker on set"
                             width={800}
