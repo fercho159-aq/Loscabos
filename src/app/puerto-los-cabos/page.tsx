@@ -61,41 +61,24 @@ export default function PuertoLosCabosPage() {
                 <p>Hoy, Puerto Los Cabos ya opera como un ecosistema creativo donde artistas, chefs, cineastas, diseñadores, e innovadores coexisten en un mismo territorio. El FICLosCabos no es solo un evento anual: es un medio estratégico de comunicación y posicionamiento para Puerto Los Cabos. Con su enfoque curatorial, estratégico y regenerativo, el Festival no solo amplía el alcance internacional de este ecosistema, sino que también funciona como vehículo de atracción para un nuevo perfil de visitante e inversionista: aquel que valora el arte, la diversidad cultural, la conexión con la comunidad y el respeto por el entorno.</p>
             </div>
         </section>
-
-        {/* Gallery Section */}
+        
+        {/* Map Section */}
         <section className="py-16 sm:py-24 bg-card">
-            <div className="container mx-auto px-4">
-                 <Carousel
-                    opts={{
-                        align: "start",
-                        loop: true,
-                    }}
-                    className="w-full max-w-6xl mx-auto"
-                    >
-                    <CarouselContent className="-ml-4">
-                        {galleryImages.map((image, index) => (
-                        <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                            <div className="p-1">
-                                <Card className="overflow-hidden">
-                                    <CardContent className="p-0 aspect-video relative">
-                                        <Image
-                                            src={image.src}
-                                            alt={image.alt}
-                                            data-ai-hint={image.hint}
-                                            fill
-                                            className="object-cover"
-                                        />
-                                    </CardContent>
-                                </Card>
-                            </div>
-                        </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                    <CarouselPrevious className="hidden sm:flex" />
-                    <CarouselNext className="hidden sm:flex" />
-                </Carousel>
+            <div className="container mx-auto px-4 text-center">
+                <h2 className="font-headline text-3xl sm:text-4xl font-bold text-foreground mb-10">Mapa del Ecosistema Creativo</h2>
+                <div className="max-w-4xl mx-auto">
+                    <Image 
+                        src="https://picsum.photos/seed/mapa-plc/1000/800"
+                        alt="Mapa de Puerto Los Cabos"
+                        data-ai-hint="illustrated map"
+                        width={1000}
+                        height={800}
+                        className="w-full h-auto object-cover rounded-lg shadow-xl"
+                    />
+                </div>
             </div>
         </section>
+
 
         {/* Logos Section */}
         <section className="py-16 sm:py-24 bg-background">
