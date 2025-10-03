@@ -14,10 +14,10 @@ export default function BeyondTheScreenSection() {
         />
       </div>
       <div className="container mx-auto px-4 relative z-10">
-        <div className="bg-card max-w-6xl mx-auto p-8 sm:p-12 rounded-lg shadow-xl h-[50vh] flex items-center">
-            <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+        <div className="bg-card max-w-6xl mx-auto p-8 sm:p-12 rounded-lg shadow-xl flex items-center py-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
                 <div className="text-center md:text-left">
-                    <h2 className="font-headline text-5xl md:text-6xl text-accent tracking-wider">
+                    <h2 className="font-headline text-4xl sm:text-5xl md:text-6xl text-accent tracking-wider">
                     BEYOND THE SCREEN
                     </h2>
                 </div>
