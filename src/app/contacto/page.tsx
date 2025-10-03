@@ -17,6 +17,8 @@ import { Textarea } from '@/components/ui/textarea';
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Card } from '@/components/ui/card';
+import { useToast } from '@/hooks/use-toast';
+import { useRouter } from 'next/navigation';
 
 const formSchema = z.object({
   firstName: z.string().min(2, 'El nombre debe tener al menos 2 caracteres.'),
@@ -27,16 +29,47 @@ const formSchema = z.object({
 });
 
 export default function ContactoPage() {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      firstName: '',
-      lastName: '',
-      email: '',
-      subject: '',
-      message: '',
-    },
-  });
+    const { toast } = useToast();
+    const router = useRouter();
+
+    const form = useForm<z.infer<typeof formSchema>>({
+        resolver: zodResolver(formSchema),
+        defaultValues: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        subject: '',
+        message: '',
+        },
+    });
+
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const myForm = e.currentTarget;
+    const formData = new FormData(myForm);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData as any).toString(),
+    })
+    .then(() => {
+        toast({
+          title: '¡Mensaje enviado!',
+          description: 'Gracias por contactarnos. Te responderemos a la brevedad.',
+        });
+        form.reset();
+        router.push('/contacto');
+    })
+    .catch((error) => {
+        toast({
+            title: 'Error al enviar',
+            description: 'Hubo un problema con tu envío. Inténtalo de nuevo.',
+            variant: 'destructive',
+        });
+        console.error(error);
+    });
+  }
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -57,13 +90,13 @@ export default function ContactoPage() {
             <Card className="p-8 bg-card shadow-lg">
               <Form {...form}>
                 <form
-                  name="contact"
-                  method="POST"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
-                  className="space-y-8"
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    onSubmit={onSubmit}
+                    className="space-y-8"
                 >
-                  {/* Campo oculto para Netlify */}
                   <input type="hidden" name="form-name" value="contact" />
                   <p className="hidden">
                     <label>
@@ -79,7 +112,7 @@ export default function ContactoPage() {
                         <FormItem>
                           <FormLabel>Nombre</FormLabel>
                           <FormControl>
-                            <Input name="firstName" placeholder="Tu nombre" {...field} />
+                            <Input placeholder="Tu nombre" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -92,7 +125,7 @@ export default function ContactoPage() {
                         <FormItem>
                           <FormLabel>Apellido</FormLabel>
                           <FormControl>
-                            <Input name="lastName" placeholder="Tu apellido" {...field} />
+                            <Input placeholder="Tu apellido" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -107,7 +140,7 @@ export default function ContactoPage() {
                       <FormItem>
                         <FormLabel>Correo Electrónico</FormLabel>
                         <FormControl>
-                          <Input name="email" type="email" placeholder="tu@correo.com" {...field} />
+                          <Input type="email" placeholder="tu@correo.com" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -121,7 +154,7 @@ export default function ContactoPage() {
                       <FormItem>
                         <FormLabel>Asunto</FormLabel>
                         <FormControl>
-                          <Input name="subject" placeholder="Asunto del mensaje" {...field} />
+                          <Input placeholder="Asunto del mensaje" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -136,7 +169,6 @@ export default function ContactoPage() {
                         <FormLabel>Mensaje</FormLabel>
                         <FormControl>
                           <Textarea
-                            name="message"
                             placeholder="Escribe tu mensaje aquí..."
                             className="min-h-[150px]"
                             {...field}
