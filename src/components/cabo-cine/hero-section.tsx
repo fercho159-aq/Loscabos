@@ -45,7 +45,7 @@ export default function HeroSection() {
                     </Link>
                 </Button>
             </div>
-            <p className="mt-2 text-sm text-background/80">
+            <p className="mt-[50px] text-sm text-background/80">
             TE AVISAREMOS CUANDO
             </p>
             <p className="mt-2 text-sm text-background/80">
