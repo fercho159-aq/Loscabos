@@ -26,11 +26,7 @@ export default function SponsorsSection() {
             <h2 className="font-headline text-2xl text-accent tracking-widest">
               NUESTROS ALIADOS Y PATROCINADORES
             </h2>
-            <div className="border-b-2 border-secondary w-2/3 mx-auto mt-1"></div>
         </div>
-        <p className="mt-6 text-base text-muted-foreground max-w-lg mx-auto">
-          Juntos construimos un espacio donde el cine conecta con la cultura, la comunidad y la biodiversidad.
-        </p>
       </div>
       
       <div className="w-full inline-flex flex-nowrap overflow-hidden mt-16 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
