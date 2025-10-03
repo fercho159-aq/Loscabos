@@ -25,8 +25,8 @@ export default function HeroSection() {
             <Image 
                 src="/Images/Main/logo main.png" 
                 alt="CaboCine Logo" 
-                width={400} 
-                height={107}
+                width={600} 
+                height={160}
                 data-ai-hint="logo white"
                 />
         </div>
