@@ -65,7 +65,7 @@ export default function LaBajaInspiraPage() {
         </section>
 
         {/* Intro Section */}
-        <section className="py-16 sm:py-24 bg-card space-y-16">
+        <section className="py-16 sm:py-24 bg-card">
             <div className="container mx-auto px-4">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="space-y-4 text-lg text-muted-foreground">
@@ -77,16 +77,25 @@ export default function LaBajaInspiraPage() {
                     </div>
                 </div>
             </div>
-             <div className="container mx-auto px-4">
-                <div className="grid md:grid-cols-2 gap-12 items-center bg-background p-8 md:p-12 rounded-lg">
-                     <div className="order-2 md:order-1">
-                        <Image src="https://picsum.photos/seed/escine-logo/800/600" alt="Logo de ESCINE" data-ai-hint="film school logo" width={800} height={600} className="rounded-lg shadow-xl" />
-                    </div>
-                    <div className="order-1 md:order-2 space-y-4">
-                        <h2 className="font-headline text-3xl sm:text-4xl font-bold text-foreground">Alianza con <Link href="https://escine.mx/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ESCINE</Link></h2>
-                        <p className="text-lg text-muted-foreground">En esta edición, la Escuela Superior de Cine (<Link href="https://escine.mx/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ESCINE</Link>) participa en el proceso de evaluación, aportando legitimidad y veracidad a cada etapa. Gracias a esta colaboración, la sección se convierte en una plataforma sólida para los proyectos inscritos este año, de los cuales resultarán 5 largometrajes y 10 cortometrajes seleccionados para la programación oficial.</p>
-                    </div>
-                </div>
+        </section>
+
+        {/* ESCINE Alliance Banner */}
+        <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground">
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="https://picsum.photos/seed/escine-banner-2/1920/1080"
+                    alt="Alianza con ESCINE"
+                    data-ai-hint="film students collaboration"
+                    fill
+                    className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black/70" />
+            </div>
+            <div className="container mx-auto px-4 relative z-10 text-center">
+                <h2 className="font-headline text-4xl sm:text-5xl font-bold">Alianza con <Link href="https://escine.mx/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ESCINE</Link></h2>
+                <p className="mt-6 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+                    En esta edición, la Escuela Superior de Cine (ESCINE) participa en el proceso de evaluación, aportando legitimidad y veracidad a cada etapa. Gracias a esta colaboración, la sección se convierte en una plataforma sólida para los proyectos inscritos este año, de los cuales resultarán 5 largometrajes y 10 cortometrajes seleccionados para la programación oficial.
+                </p>
             </div>
         </section>
         
@@ -165,5 +174,7 @@ export default function LaBajaInspiraPage() {
     </div>
   );
 }
+
+    
 
     
