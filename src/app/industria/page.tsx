@@ -4,7 +4,7 @@ import Footer from '@/components/cabo-cine/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { CheckCircle, Award, Calendar, DollarSign, Target, Handshake, Info, Users, Film, ListChecks, Goal, GitBranch, Milestone } from 'lucide-react';
+import { CheckCircle, Award, Calendar, DollarSign, Target, Handshake, Info, Users, Film, ListChecks, Goal, GitBranch, Milestone, UserCheck } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -300,5 +300,7 @@ export default function IndustriaPage() {
     </div>
   );
 }
+
+    
 
     
