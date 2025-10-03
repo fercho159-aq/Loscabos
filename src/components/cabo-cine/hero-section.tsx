@@ -22,7 +22,7 @@ export default function HeroSection() {
         
         <div className="mb-4">
             <Image 
-                src="/Images/logos/FESTIVAL DE CINE LOS CABOS-13-edicion.png" 
+                src="/Images/Main/logo main.png" 
                 alt="CaboCine Logo" 
                 width={600} 
                 height={160}

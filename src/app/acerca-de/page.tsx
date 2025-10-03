@@ -27,7 +27,7 @@ export default function AcercaDePage() {
         <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground text-center">
             <div className="absolute inset-0 z-0">
                 <Image
-                src="https://picsum.photos/seed/about-banner/1920/1080"
+                src="https://picsum.photos/seed/discover-3/600/400"
                 alt="Banner de la sección Sobre el FICLosCabos"
                 data-ai-hint="festival crowd lights"
                 fill
@@ -37,7 +37,7 @@ export default function AcercaDePage() {
             </div>
             <div className="container mx-auto px-4 relative z-10 flex justify-center items-center h-32 sm:h-48">
                  <Image 
-                    src="/Images/logos/FESTIVAL DE CINE LOS CABOS-13-edicion.png" 
+                    src="/Images/Main/logo main.png" 
                     alt="CaboCine 13ª Edición Logo" 
                     width={600} 
                     height={160}
