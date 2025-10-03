@@ -21,7 +21,7 @@ export default {
       },
       fontFamily: {
         body: ['ACRE', 'sans-serif'],
-        headline: ['IBRAND', 'serif'],
+        headline: ['PRINTF', 'serif'],
         code: ['monospace'],
       },
       colors: {

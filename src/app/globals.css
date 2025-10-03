@@ -17,6 +17,13 @@
     font-style: normal;
   }
 
+  @font-face {
+    font-family: 'PRINTF';
+    src: url('/fonts/PRINTF Regular.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
   :root {
     --background: 43 78% 95%; /* #F7EEDD */
     --foreground: 199 43% 16%; /* #18323A */
