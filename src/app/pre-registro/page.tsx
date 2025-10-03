@@ -31,7 +31,7 @@ function SubmitButton() {
 }
 
 export default function PreRegistroPage() {
-  const initialState = { message: null, errors: {} };
+  const initialState = { message: '', errors: {} };
   const [state, dispatch] = useFormState(savePreRegistration, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);

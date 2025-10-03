@@ -24,7 +24,7 @@ function SubmitButton() {
 }
 
 export default function ContactoPage() {
-  const initialState = { message: null, errors: {} };
+  const initialState = { message: '', errors: {} };
   const [state, dispatch] = useFormState(saveContact, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
