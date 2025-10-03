@@ -31,7 +31,9 @@ const venues = [
         name: "Crania",
         description: "Sede principal del miércoles 10 al viernes 12 de diciembre, epicentro creativo y escénico donde cine, música y arte digital se encuentran bajo las estrellas.",
         imgSrc: "/Images/Campus/Copia de DSC01799.jpg",
-        imgHint: "outdoor venue night"
+        imgHint: "outdoor venue night",
+        instagram: "@craniareclaim",
+        instagramLink: "https://www.instagram.com/craniareclaim"
     },
     {
         name: "Jardín IKAL",
