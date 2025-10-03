@@ -8,14 +8,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const discoverLinks = [
-    { title: "Programación 2025", href: "/programacion" },
-    { title: "Campus FICLosCabos", href: "/campus" },
-    { title: "Animación", href: "/animacion" },
+    { title: "Programación 2025", href: "/programacion", imgSrc: "https://picsum.photos/seed/discover-1/600/400", imgHint: "cinema screen" },
+    { title: "Campus FICLosCabos", href: "/campus", imgSrc: "https://picsum.photos/seed/discover-2/600/400", imgHint: "event location" },
+    { title: "Animación", href: "/animacion", imgSrc: "https://picsum.photos/seed/discover-3/600/400", imgHint: "animation art" },
 ];
 
 const initiativesLinks = [
-    { title: "Fondo Fílmico Gabriel Figueroa", href: "/industria" },
-    { title: "La Baja Inspira", href: "/la-baja-inspira" },
+    { title: "Fondo Fílmico Gabriel Figueroa", href: "/industria", imgSrc: "https://picsum.photos/seed/initiatives-1/600/400", imgHint: "film award" },
+    { title: "La Baja Inspira", href: "/la-baja-inspira", imgSrc: "https://picsum.photos/seed/initiatives-2/600/400", imgHint: "desert landscape" },
 ];
 
 export default function AcercaDePage() {
@@ -137,7 +137,16 @@ export default function AcercaDePage() {
                     </div>
                      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {discoverLinks.map((link) => (
-                            <Card key={link.title} className="bg-card hover:shadow-lg transition-shadow group">
+                            <Card key={link.title} className="bg-card hover:shadow-lg transition-shadow group overflow-hidden">
+                                <div className="relative aspect-video w-full overflow-hidden">
+                                    <Image
+                                        src={link.imgSrc}
+                                        alt={link.title}
+                                        data-ai-hint={link.imgHint}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                </div>
                                 <CardHeader>
                                     <CardTitle className="text-2xl">{link.title}</CardTitle>
                                 </CardHeader>
@@ -158,7 +167,16 @@ export default function AcercaDePage() {
                     </div>
                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                         {initiativesLinks.map((link) => (
-                           <Card key={link.title} className="bg-card hover:shadow-lg transition-shadow group">
+                           <Card key={link.title} className="bg-card hover:shadow-lg transition-shadow group overflow-hidden">
+                                <div className="relative aspect-video w-full overflow-hidden">
+                                    <Image
+                                        src={link.imgSrc}
+                                        alt={link.title}
+                                        data-ai-hint={link.imgHint}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                </div>
                                 <CardHeader>
                                     <CardTitle className="text-2xl">{link.title}</CardTitle>
                                 </CardHeader>
