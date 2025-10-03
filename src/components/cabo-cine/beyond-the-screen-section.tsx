@@ -19,7 +19,7 @@ export default function BeyondTheScreenSection() {
           Beyond the Screen
         </h2>
         <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-background/90 leading-relaxed">
-          #BeyondtheScreen expresa la evolución del Festival de un evento de cine hacia una plataforma creativa expandida, donde las historias no se quedan en la pantalla: se viven en proyecciones site-specific, conciertos, instalaciones y encuentros con la comunidad. El mar, el desierto, la arquitectura y la memoria cultural de Baja California Sur se integran al lenguaje del cine para generar narrativas únicas.
+          #BeyondtheScreen expresa la evolución del Festival de un evento de cine hacia una plataforma creativa expandida, donde las historias no se quedan en la pantalla: se viven en proyecciones site-specific, conciertos, instalaciones y encuentros con la comunidad. El mar, el desierto, y la memoria cultural de Baja California Sur se integran al lenguaje del cine para generar narrativas únicas.
         </p>
       </div>
     </section>
