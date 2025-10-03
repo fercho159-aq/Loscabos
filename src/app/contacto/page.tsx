@@ -19,6 +19,7 @@ import { useToast } from '@/hooks/use-toast';
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Card } from '@/components/ui/card';
+import { useRouter } from 'next/navigation';
 
 const formSchema = z.object({
   firstName: z.string().min(2, 'El nombre debe tener al menos 2 caracteres.'),
@@ -30,6 +31,7 @@ const formSchema = z.object({
 
 export default function ContactoPage() {
   const { toast } = useToast();
+  const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -41,14 +43,15 @@ export default function ContactoPage() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const myForm = e.currentTarget;
+    const formData = new FormData(myForm);
+
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({
-        'form-name': 'contact',
-        ...values,
-      }).toString(),
+      body: new URLSearchParams(formData as any).toString(),
     })
       .then(() => {
         toast({
@@ -56,16 +59,17 @@ export default function ContactoPage() {
           description: 'Gracias por contactarnos. Te responderemos pronto.',
         });
         form.reset();
+        router.push('/contacto'); // O a una página de agradecimiento
       })
       .catch((error) => {
-        console.error('Error:', error);
         toast({
           variant: 'destructive',
           title: 'Error al enviar el formulario.',
           description: 'Por favor, inténtalo de nuevo más tarde.',
         });
+        console.error(error);
       });
-  }
+  };
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -73,6 +77,7 @@ export default function ContactoPage() {
       
       {/* Formulario oculto para Netlify */}
       <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+          <input type="hidden" name="form-name" value="contact" />
           <input type="text" name="firstName" />
           <input type="text" name="lastName" />
           <input type="email" name="email" />
@@ -95,9 +100,19 @@ export default function ContactoPage() {
             <Card className="p-8 bg-card shadow-lg">
               <Form {...form}>
                 <form 
-                  onSubmit={form.handleSubmit(onSubmit)} 
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  onSubmit={onSubmit} 
                   className="space-y-8"
                 >
+                  <input type="hidden" name="form-name" value="contact" />
+                   <p className="hidden">
+                    <label>
+                      Don’t fill this out if you’re human: <input name="bot-field" />
+                    </label>
+                  </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <FormField
                       control={form.control}

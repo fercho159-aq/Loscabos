@@ -26,6 +26,7 @@ import { useToast } from '@/hooks/use-toast';
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Card, CardContent } from '@/components/ui/card';
+import { useRouter } from 'next/navigation';
 
 // El esquema de Zod se mantiene igual
 const preRegFormSchema = z.object({
@@ -53,6 +54,7 @@ type PreRegFormValues = z.infer<typeof preRegFormSchema>;
 
 export default function PreRegistroPage() {
   const { toast } = useToast();
+  const router = useRouter();
   const form = useForm<PreRegFormValues>({
     resolver: zodResolver(preRegFormSchema),
     defaultValues: {
@@ -67,19 +69,15 @@ export default function PreRegistroPage() {
 
   const industry = form.watch('industry');
 
-  function onSubmit(values: PreRegFormValues) {
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const myForm = e.currentTarget;
+    const formData = new FormData(myForm);
+
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({
-        'form-name': 'pre-registro',
-        ...Object.entries(values).reduce((acc, [key, value]) => {
-          if (value) {
-            acc[key] = String(value);
-          }
-          return acc;
-        }, {} as Record<string, string>),
-      }).toString(),
+      body: new URLSearchParams(formData as any).toString(),
     })
     .then(() => {
         toast({
@@ -87,6 +85,7 @@ export default function PreRegistroPage() {
           description: 'Gracias por tu interés. Te mantendremos informado sobre el festival.',
         });
         form.reset();
+        router.push('/pre-registro');
     })
     .catch((error) => {
         toast({
@@ -100,25 +99,6 @@ export default function PreRegistroPage() {
 
   return (
     <>
-      <form name="pre-registro" data-netlify="true" netlify-honeypot="bot-field" hidden>
-          <input type="text" name="firstName" />
-          <input type="text" name="lastName" />
-          <input type="email" name="email" />
-          <input type="number" name="age" />
-          <input type="text" name="instagram" />
-          <input type="text" name="state" />
-          <input type="text" name="city" />
-          <select name="industry">
-              <option value="cine" />
-              <option value="arte" />
-              <option value="diseño" />
-              <option value="otra" />
-          </select>
-          <input type="text" name="otherIndustry" />
-          <input type="radio" name="professionalStatus" value="estudiante" />
-          <input type="radio" name="professionalStatus" value="profesional" />
-      </form>
-      
       <div className="flex flex-col min-h-screen bg-background">
         <Header />
         <main className="flex-grow flex items-center justify-center pt-28 pb-16">
@@ -135,7 +115,20 @@ export default function PreRegistroPage() {
 
               <Card className="p-6 sm:p-10 bg-card shadow-xl">
                 <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+                  <form 
+                    name="pre-registro"
+                    method="POST"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    onSubmit={onSubmit} 
+                    className="space-y-8"
+                  >
+                     <input type="hidden" name="form-name" value="pre-registro" />
+                     <p className="hidden">
+                        <label>
+                          Don’t fill this out if you’re human: <input name="bot-field" />
+                        </label>
+                      </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                       <FormField control={form.control} name="firstName" render={({ field }) => (
                         <FormItem>
