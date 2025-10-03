@@ -78,7 +78,7 @@ export default function AcercaDePage() {
                 
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="text-lg text-muted-foreground space-y-4">
-                       <p>Esta transformación se inspira en el cruce único entre desierto y mar que caracteriza a Puerto Los Cabos. La biodiversidad del Mar de Cortés y la memoria cultural sudcaliforniana dialogan con la arquitectura y la comunidad, convirtiendo al Festival en un espacio donde naturaleza y creatividad se entrelazan en armonía.</p>
+                       <p>Esta transformación se inspira en el cruce único entre desierto y mar que caracteriza a <Link href="/puerto-los-cabos" className="text-accent hover:underline">Puerto Los Cabos</Link>. La biodiversidad del Mar de Cortés y la memoria cultural sudcaliforniana dialogan con la arquitectura y la comunidad, convirtiendo al Festival en un espacio donde naturaleza y creatividad se entrelazan en armonía.</p>
                     </div>
                     <div>
                          <Image
