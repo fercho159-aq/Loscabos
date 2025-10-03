@@ -24,6 +24,7 @@ import { Card } from '@/components/ui/card';
 const formSchema = z.object({
   firstName: z.string().min(2, 'El nombre debe tener al menos 2 caracteres.'),
   lastName: z.string().min(2, 'El apellido debe tener al menos 2 caracteres.'),
+  email: z.string().email('Por favor ingresa un correo electrónico válido.'),
   subject: z.string().min(5, 'El asunto debe tener al menos 5 caracteres.'),
   message: z.string().min(10, 'El mensaje debe tener al menos 10 caracteres.'),
 });
@@ -35,6 +36,7 @@ export default function ContactoPage() {
     defaultValues: {
       firstName: '',
       lastName: '',
+      email: '',
       subject: '',
       message: '',
     },
@@ -94,6 +96,11 @@ export default function ContactoPage() {
                   className="space-y-8"
                 >
                   <input type="hidden" name="form-name" value="contact" />
+                  <p className="hidden">
+                    <label>
+                      Don’t fill this out if you’re human: <input name="bot-field" />
+                    </label>
+                  </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <FormField
                       control={form.control}
@@ -122,6 +129,19 @@ export default function ContactoPage() {
                       )}
                     />
                   </div>
+                   <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Correo Electrónico</FormLabel>
+                          <FormControl>
+                            <Input type="email" placeholder="tu@correo.com" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
                   <FormField
                     control={form.control}
                     name="subject"
