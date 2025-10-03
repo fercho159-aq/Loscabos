@@ -46,12 +46,22 @@ export default function LaBajaInspiraPage() {
       <Header />
       <main className="flex-grow pt-20">
         {/* Hero Section */}
-        <section className="bg-background py-20 sm:py-28 text-center">
-          <div className="container mx-auto px-4">
-            <h1 className="font-headline text-5xl md:text-7xl font-bold text-foreground">
-              La Baja <span className="text-accent">Inspira</span>
-            </h1>
-          </div>
+        <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground text-center">
+            <div className="absolute inset-0 z-0">
+                <Image
+                src="https://picsum.photos/seed/baja-inspira-banner/1920/1080"
+                alt="Banner de La Baja Inspira"
+                data-ai-hint="baja california desert ocean"
+                fill
+                className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black/70"></div>
+            </div>
+            <div className="container mx-auto px-4 relative z-10">
+                <h1 className="font-headline text-5xl md:text-7xl font-bold">
+                  La Baja <span className="text-accent">Inspira</span>
+                </h1>
+            </div>
         </section>
 
         {/* Intro Section */}
@@ -155,3 +165,5 @@ export default function LaBajaInspiraPage() {
     </div>
   );
 }
+
+    
