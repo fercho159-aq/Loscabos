@@ -57,19 +57,18 @@ export default function PrensaPage() {
         </section>
 
         <section className="py-16 sm:py-24 bg-card">
-            <div className="container mx-auto px-4 text-center">
-                 <h2 className="font-headline text-4xl md:text-5xl font-bold text-foreground">
-                    Contacto para Prensa
-                 </h2>
-                 <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                    Para entrevistas, acreditaciones o solicitudes de material, por favor visita nuestra página de contacto.
-                </p>
-                <Button size="lg" asChild className="mt-8">
-                    <Link href="/contacto-prensa">
-                        Información de Contacto <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                </Button>
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="font-headline text-4xl md:text-5xl font-bold text-foreground">
+              Contacto de Prensa
+            </h2>
+            <div className="mt-4 text-lg text-muted-foreground space-y-1 max-w-2xl mx-auto">
+                <p>Para entrevistas, acreditaciones y solicitudes de prensa, escribe a:</p>
+                <p className="font-semibold text-foreground pt-2">Cynthia Huerta</p>
+                <a href="mailto:cynthia@comunicacionlateral.com" className="text-accent hover:underline block !mt-0">
+                    cynthia@comunicacionlateral.com
+                </a>
             </div>
+          </div>
         </section>
       </main>
       <Footer />
