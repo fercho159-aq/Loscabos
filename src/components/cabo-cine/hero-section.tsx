@@ -31,7 +31,7 @@ export default function HeroSection() {
                 />
         </div>
 
-        <p className="mt-4 font-headline text-2xl md:text-3xl text-background tracking-widest">
+        <p className="mt-4 font-headline text-sm text-background tracking-widest">
             #BEYONDTHESCREEN
         </p>
 
