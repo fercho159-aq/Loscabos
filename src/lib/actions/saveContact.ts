@@ -31,6 +31,8 @@ export async function saveContact(prevState: any, formData: FormData) {
   const { firstName, lastName, email, subject, message } = validatedFields.data;
 
   try {
+    // Note: You need to create the 'contacts' table in your Neon database first.
+    // Example SQL: CREATE TABLE contacts (id SERIAL PRIMARY KEY, firstName TEXT, lastName TEXT, email TEXT, subject TEXT, message TEXT, createdAt TIMESTAMP DEFAULT NOW());
     await sql`
       INSERT INTO contacts (firstName, lastName, email, subject, message)
       VALUES (${firstName}, ${lastName}, ${email}, ${subject}, ${message})
@@ -38,6 +40,7 @@ export async function saveContact(prevState: any, formData: FormData) {
     revalidatePath('/contacto');
     return { message: '¡Gracias! Tu mensaje ha sido enviado.' };
   } catch (e) {
+    console.error(e);
     return {
       message: 'Error de base de datos: No se pudo guardar el mensaje.',
     };

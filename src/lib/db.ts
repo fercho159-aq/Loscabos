@@ -1,9 +1,6 @@
-import { neon } from '@neondatabase/serverless';
+import { neon } from '@netlify/neon';
 
-if (!process.env.DATABASE_URL) {
-  throw new Error('DATABASE_URL is not set');
-}
-
-const sql = neon(process.env.DATABASE_URL);
+// This will automatically use the NETLIFY_DATABASE_URL environment variable.
+const sql = neon();
 
 export default sql;
