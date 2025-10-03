@@ -34,7 +34,7 @@ const gfffRepresents = [
 ];
 
 const selectionCommittee = [
-    { name: "Juan Patricio Riveroll", bio: "Director y productor. Ha sido docente, novelista y director ejecutivo de Diplomacia Cultural y Turística en la SRE.", imgSrc: "https://picsum.photos/seed/riveroll/400/400" },
+    { name: "Juan Patricio Riveroll", bio: "Director, productor y guionista de tres largometrajes de ficción, entre ellos Ópera (2007), ganador del premio Naguib Mahfouz a la primera película de un director, mejor actriz y el FIPRESCI en el Festival del Cairo. Ha publicado cuatro novelas, Todo el oro de Lisboa (Tusquets) es la más reciente.", imgSrc: "/Images/FF/_RSL1446.jpg" },
     { name: "Jaime Romandía", bio: "Fundador de Mantarraya, productor de más de 45 filmes premiados en Cannes y Venecia. Dirige ESCINE.", imgSrc: "https://picsum.photos/seed/romandia/400/400" },
     { name: "Alfredo Ruiz", bio: "Director de la Licenciatura en Cinematografía en ESCINE. Experiencia en curaduría, crítica y formación académica.", imgSrc: "https://picsum.photos/seed/ruiz/400/400" },
 ];

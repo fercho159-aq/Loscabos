@@ -1,4 +1,3 @@
-
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -42,25 +41,31 @@ export default function ContactoPage() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    const formData = new URLSearchParams();
+    const formData = new FormData();
     formData.append('form-name', 'contact');
-    Object.entries(values).forEach(([key, value]) => {
-      formData.append(key, value);
-    });
+    formData.append('firstName', values.firstName);
+    formData.append('lastName', values.lastName);
+    formData.append('email', values.email);
+    formData.append('subject', values.subject);
+    formData.append('message', values.message);
 
     fetch('/', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: formData.toString(),
+      body: formData,
     })
-      .then(() => {
-        toast({
-          title: '¡Formulario enviado!',
-          description: 'Gracias por contactarnos. Te responderemos pronto.',
-        });
-        form.reset();
+      .then((response) => {
+        if (response.ok) {
+          toast({
+            title: '¡Formulario enviado!',
+            description: 'Gracias por contactarnos. Te responderemos pronto.',
+          });
+          form.reset();
+        } else {
+          throw new Error('Error en la respuesta del servidor');
+        }
       })
       .catch((error) => {
+        console.error('Error:', error);
         toast({
           variant: 'destructive',
           title: 'Error al enviar el formulario.',
@@ -72,6 +77,16 @@ export default function ContactoPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
+      
+      {/* Formulario HTML estático oculto para Netlify */}
+      <form name="contact" netlify="true" netlify-honeypot="bot-field" hidden>
+        <input type="text" name="firstName" />
+        <input type="text" name="lastName" />
+        <input type="email" name="email" />
+        <input type="text" name="subject" />
+        <textarea name="message"></textarea>
+      </form>
+
       <main className="flex-grow flex items-center justify-center pt-20">
         <section className="container mx-auto px-4 py-16 sm:py-24">
           <div className="max-w-4xl mx-auto">
@@ -87,19 +102,9 @@ export default function ContactoPage() {
             <Card className="p-8 bg-card shadow-lg">
               <Form {...form}>
                 <form 
-                  name="contact"
-                  method="POST"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
                   onSubmit={form.handleSubmit(onSubmit)} 
                   className="space-y-8"
                 >
-                  <input type="hidden" name="form-name" value="contact" />
-                  <p className="hidden">
-                    <label>
-                      Don’t fill this out if you’re human: <input name="bot-field" />
-                    </label>
-                  </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <FormField
                       control={form.control}
