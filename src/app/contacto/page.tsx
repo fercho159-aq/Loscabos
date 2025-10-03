@@ -41,28 +41,20 @@ export default function ContactoPage() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    const formData = new FormData();
-    formData.append('form-name', 'contact');
-    formData.append('firstName', values.firstName);
-    formData.append('lastName', values.lastName);
-    formData.append('email', values.email);
-    formData.append('subject', values.subject);
-    formData.append('message', values.message);
-
     fetch('/', {
       method: 'POST',
-      body: formData,
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        'form-name': 'contact',
+        ...values,
+      }).toString(),
     })
-      .then((response) => {
-        if (response.ok) {
-          toast({
-            title: '¡Formulario enviado!',
-            description: 'Gracias por contactarnos. Te responderemos pronto.',
-          });
-          form.reset();
-        } else {
-          throw new Error('Error en la respuesta del servidor');
-        }
+      .then(() => {
+        toast({
+          title: '¡Formulario enviado!',
+          description: 'Gracias por contactarnos. Te responderemos pronto.',
+        });
+        form.reset();
       })
       .catch((error) => {
         console.error('Error:', error);
@@ -78,7 +70,6 @@ export default function ContactoPage() {
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
       
-      {/* Formulario HTML estático oculto para Netlify */}
       <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
         <input type="text" name="firstName" />
         <input type="text" name="lastName" />

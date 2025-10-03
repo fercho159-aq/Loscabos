@@ -67,15 +67,18 @@ export default function PreRegistroPage() {
 
   const industry = form.watch('industry');
 
-  // <-- CAMBIO 1: Lógica de envío actualizada para Netlify
   function onSubmit(values: PreRegFormValues) {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams({
         'form-name': 'pre-registro',
-        ...values,
-        age: values.age ? values.age.toString() : '',
+        ...Object.entries(values).reduce((acc, [key, value]) => {
+          if (value) {
+            acc[key] = String(value);
+          }
+          return acc;
+        }, {} as Record<string, string>),
       }).toString(),
     })
     .then(() => {
@@ -97,7 +100,6 @@ export default function PreRegistroPage() {
 
   return (
     <>
-      {/* <-- CAMBIO 2: Formulario oculto para que Netlify lo detecte */}
       <form name="pre-registro" data-netlify="true" netlify-honeypot="bot-field" hidden>
           <input type="text" name="firstName" />
           <input type="text" name="lastName" />
@@ -134,7 +136,6 @@ export default function PreRegistroPage() {
               <Card className="p-6 sm:p-10 bg-card shadow-xl">
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                    {/* El resto de tu formulario JSX se mantiene exactamente igual */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                       <FormField control={form.control} name="firstName" render={({ field }) => (
                         <FormItem>
@@ -164,7 +165,7 @@ export default function PreRegistroPage() {
                         <FormField control={form.control} name="age" render={({ field }) => (
                           <FormItem>
                             <FormLabel>Edad</FormLabel>
-                            <FormControl><Input type="number" placeholder="25" {...field} /></FormControl>
+                            <FormControl><Input type="number" placeholder="25" {...field} onChange={e => field.onChange(e.target.value === '' ? undefined : +e.target.value)} /></FormControl>
                             <FormMessage />
                           </FormItem>
                         )} />
