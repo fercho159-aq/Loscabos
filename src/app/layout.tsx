@@ -1,3 +1,4 @@
+
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
@@ -34,6 +35,17 @@ export default function RootLayout({
           />
         </noscript>
         {/* End Meta Pixel Code */}
+
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SPNV1KVWNX"></script>
+        <script dangerouslySetInnerHTML={{ __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-SPNV1KVWNX');
+        `}} />
+        {/* End Google tag */}
       </head>
       <body className="font-body antialiased">
         {children}
