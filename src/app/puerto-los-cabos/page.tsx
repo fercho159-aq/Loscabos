@@ -54,7 +54,7 @@ export default function PuertoLosCabosPage() {
         </section>
 
         {/* Content Section */}
-        <section className="py-16 sm:py-24 bg-background">
+        <section className="pt-16 sm:pt-24 pb-8 sm:pb-12 bg-background">
             <div className="container mx-auto px-4 max-w-4xl space-y-8 text-lg text-muted-foreground">
                 <p>Ubicado en la costa este de Baja California Sur, Puerto Los Cabos se encuentra en el punto exacto donde el desierto se encuentra con el Mar de Cortés, una de las regiones marinas con mayor biodiversidad del planeta, reconocida por la UNESCO como Patrimonio Natural de la Humanidad.</p>
                 <p>Durante la última década, Puerto Los Cabos ha evolucionado hacia un destino que trasciende el turismo tradicional. Gracias a iniciativas pioneras como las residencias artísticas del Hotel El Ganzo, los festivales de música en Crania e IKAL, y centros de consumo como Veleros, la región se ha posicionado como un referente del turismo consciente en México.</p>
@@ -63,11 +63,11 @@ export default function PuertoLosCabosPage() {
         </section>
         
         {/* Map Section */}
-        <section className="py-16 sm:py-24 bg-card">
+        <section className="pt-8 sm:pt-12 pb-16 sm:pb-24 bg-background">
             <div className="container mx-auto px-4 text-center">
                 <div className="max-w-4xl mx-auto">
                     <Image 
-                        src="https://picsum.photos/seed/mapa-plc/1000/800"
+                        src="/Images/PLC-_-Master-Plan-_-Digital-_-Baja.png"
                         alt="Mapa de Puerto Los Cabos"
                         data-ai-hint="illustrated map"
                         width={1000}
