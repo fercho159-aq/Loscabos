@@ -19,6 +19,7 @@ import { useToast } from '@/hooks/use-toast';
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import Image from 'next/image';
+import { Card } from '@/components/ui/card';
 
 const formSchema = z.object({
   firstName: z.string().min(2, 'El nombre debe tener al menos 2 caracteres.'),
@@ -143,6 +144,3 @@ export default function ContactoPage() {
     </div>
   );
 }
-
-// Necesitamos importar Card para usarlo.
-import { Card } from '@/components/ui/card';
