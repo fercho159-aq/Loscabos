@@ -27,7 +27,7 @@ export default function GFFFHomeSection() {
           {/* Left Column: Image */}
           <div className="md:col-span-1">
             <Image 
-              src="https://picsum.photos/seed/gfff-home/800/1000"
+              src="/Images/Main/fondofilmico.png"
               alt="Cineasta en la playa durante el atardecer"
               data-ai-hint="filmmaker beach sunset"
               width={800}
@@ -56,7 +56,7 @@ export default function GFFFHomeSection() {
             </div>
             
             <div className="pt-4">
-              <Button variant="link" asChild className="p-0 text-accent h-auto border-b border-accent rounded-none hover:no-underline">
+              <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline px-6">
                   <Link href="/industria">
                       DESCUBRE MÁS
                   </Link>
