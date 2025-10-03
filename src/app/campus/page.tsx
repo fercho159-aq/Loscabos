@@ -25,7 +25,9 @@ const venues = [
         name: "Veleros Beach Club",
         description: "Centro de registro, hospitalidad y networking internacional. Un espacio para la convivencia con música local y experiencias de la comunidad.",
         imgSrc: "/Images/Campus/Drone-edit2 (1).png",
-        imgHint: "beach club ocean"
+        imgHint: "beach club ocean",
+        instagram: "@velerosbeachclub",
+        instagramLink: "https://www.instagram.com/velerosbeachclub"
     },
     {
         name: "Crania",
