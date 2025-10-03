@@ -35,9 +35,8 @@ export default function AcercaDePage() {
                 />
                 <div className="absolute inset-0 bg-black/70"></div>
             </div>
-            <div className="container mx-auto px-4 relative z-10">
-                <p className="font-headline text-lg sm:text-xl text-accent">13ª Edición</p>
-                <h1 className="font-headline text-5xl sm:text-7xl font-bold">Festival Internacional de Cine de Los Cabos</h1>
+            <div className="container mx-auto px-4 relative z-10 h-32 sm:h-48">
+                {/* Space for image text */}
             </div>
         </section>
 
