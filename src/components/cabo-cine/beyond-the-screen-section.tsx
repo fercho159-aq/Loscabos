@@ -6,13 +6,12 @@ export default function BeyondTheScreenSection() {
     <section className="relative py-16 sm:py-24 bg-background">
        <div className="absolute inset-0 z-0">
         <Image
-          src="https://picsum.photos/seed/bts-bg/1920/1080"
+          src="/Images/Main/bg1.png"
           alt="Experiencia inmersiva en el festival"
           data-ai-hint="immersive festival experience"
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/60" />
       </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="bg-card max-w-6xl mx-auto p-8 sm:p-12 rounded-lg shadow-xl">
