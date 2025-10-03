@@ -18,7 +18,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
-import Image from 'next/image';
 import { Card } from '@/components/ui/card';
 
 const formSchema = z.object({
