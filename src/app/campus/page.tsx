@@ -3,36 +3,40 @@ import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
+import { Instagram } from 'lucide-react';
+import Link from 'next/link';
 
 const venues = [
     {
         name: "La Marina de Puerto Los Cabos",
         description: "Se establece como el eje que conecta a los distintos sitios del Campus.",
-        imgSrc: "https://picsum.photos/seed/marina-plc/800/600",
+        imgSrc: "/Images/Campus/Dalu_finales-323.jpg",
         imgHint: "yacht marina boats"
     },
     {
         name: "Hotel El Ganzo",
         description: "Pionero cultural del destino, aporta su programa de residencias artísticas y su visión disruptiva como laboratorio creativo frente al Mar de Cortés.",
-        imgSrc: "https://picsum.photos/seed/el-ganzo/800/600",
-        imgHint: "modern hotel art"
+        imgSrc: "/Images/Campus/DSC_9298.jpg",
+        imgHint: "modern hotel art",
+        instagram: "@hotelelganzo",
+        instagramLink: "https://www.instagram.com/hotelelganzo"
     },
     {
         name: "Veleros Beach Club",
         description: "Centro de registro, hospitalidad y networking internacional. Un espacio para la convivencia con música local y experiencias de la comunidad.",
-        imgSrc: "https://picsum.photos/seed/veleros-club/800/600",
+        imgSrc: "/Images/Campus/Drone-edit2 (1).png",
         imgHint: "beach club ocean"
     },
     {
         name: "Crania",
         description: "Sede principal del miércoles 10 al viernes 12 de diciembre, epicentro creativo y escénico donde cine, música y arte digital se encuentran bajo las estrellas.",
-        imgSrc: "https://picsum.photos/seed/crania-venue/800/600",
+        imgSrc: "/Images/Campus/Copia de DSC01799.jpg",
         imgHint: "outdoor venue night"
     },
     {
         name: "Jardín IKAL",
         description: "Enclave natural y escénico que albergará un acto especial el sábado 13 de diciembre y la fiesta de clausura cerrando con una celebración en sintonía con la naturaleza.",
-        imgSrc: "https://picsum.photos/seed/jardin-ikal/800/600",
+        imgSrc: "/Images/Campus/Dalu_finales-400.jpg",
         imgHint: "lush garden nature"
     }
 ];
@@ -89,6 +93,14 @@ export default function CampusPage() {
                             <CardContent className="p-6 flex-grow flex flex-col">
                                 <h3 className="text-2xl font-bold font-headline text-card-foreground">{venue.name}</h3>
                                 <p className="text-muted-foreground mt-2 flex-grow">{venue.description}</p>
+                                {venue.instagram && venue.instagramLink && (
+                                    <div className="mt-4">
+                                        <Link href={venue.instagramLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-accent hover:underline text-sm font-semibold">
+                                            <Instagram className="h-4 w-4" />
+                                            <span>{venue.instagram}</span>
+                                        </Link>
+                                    </div>
+                                )}
                             </CardContent>
                         </Card>
                     ))}
