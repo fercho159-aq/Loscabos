@@ -93,7 +93,7 @@ export default function AcercaDePage() {
                 </div>
 
                 <div className="text-lg text-muted-foreground space-y-6 bg-card p-8 rounded-lg shadow-lg">
-                    <p>Al incorporar lenguajes digitales, experiencias inmersivas y narrativas transmedia, el Festival responde a los retos de la era tecnológica y se consolida como un vehículo de desarrollo económico, cultural y creativo a nivel internacional, proyectando a Puerto Los Cabos como un nodo creativo y regenerativo con voz global.</p>
+                    <p>Al incorporar lenguajes digitales, experiencias inmersivas y narrativas transmedia, el Festival responde a los retos de la era tecnológica y se consolida como un vehículo de desarrollo económico, cultural y creativo a nivel internacional, proyectando a Puerto Los Cabos como un ecosistema creativo y regenerativo con voz global.</p>
                      <div className="pt-4 text-center">
                         <Button size="lg">
                             <Ticket className="mr-2 h-5 w-5" />
