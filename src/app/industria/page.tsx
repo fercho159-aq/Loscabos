@@ -75,11 +75,12 @@ export default function IndustriaPage() {
             <h1 className="font-headline text-5xl md:text-7xl font-bold text-foreground">
               Fondo Fílmico <span className="text-accent">Gabriel Figueroa</span>
             </h1>
+            <p className="mt-4 text-xl font-semibold text-accent">Convocatoria abierta a partir del 13 de Octubre.</p>
             <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
              El motor estratégico de la industria audiovisual en México y América Latina, impulsando la creación y conectando talento con oportunidades globales.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-                 <Button size="lg">
+                 <Button size="lg" disabled>
                     Aplicar a la Convocatoria
                 </Button>
                 <Button size="lg" variant="outline">
@@ -239,7 +240,7 @@ export default function IndustriaPage() {
                         </AccordionItem>
                     </Accordion>
                     <div className="text-center mt-12">
-                        <Button size="lg">Aplica a la convocatoria</Button>
+                        <Button size="lg" disabled>Aplica a la convocatoria</Button>
                     </div>
                 </div>
             </div>
@@ -257,7 +258,7 @@ export default function IndustriaPage() {
                         <Card key={member.name} className="bg-card text-center p-6 shadow-lg">
                            <Image src={member.imgSrc} alt={`Retrato de ${member.name}`} data-ai-hint="portrait" width={150} height={150} className="mx-auto rounded-full mb-4"/>
                            <h3 className="text-2xl font-bold font-headline text-foreground">{member.name}</h3>
-                           <p className="text-muted-foreground mt-2 text-sm">{member.bio.replace('ESCINE', '<a href="https://escine.mx/" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">ESCINE</a>')}</p>
+                           <p className="text-muted-foreground mt-2 text-sm" dangerouslySetInnerHTML={{ __html: member.bio.replace('ESCINE', '<a href="https://escine.mx/" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">ESCINE</a>') }} />
                         </Card>
                     ))}
                 </div>
@@ -283,3 +284,5 @@ export default function IndustriaPage() {
     </div>
   );
 }
+
+    
