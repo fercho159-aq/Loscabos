@@ -1,76 +1,13 @@
-'use client';
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import * as z from 'zod';
-import { Button } from '@/components/ui/button';
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Card } from '@/components/ui/card';
-import { useToast } from '@/hooks/use-toast';
-import { useRouter } from 'next/navigation';
-
-const formSchema = z.object({
-  firstName: z.string().min(2, 'El nombre debe tener al menos 2 caracteres.'),
-  lastName: z.string().min(2, 'El apellido debe tener al menos 2 caracteres.'),
-  email: z.string().email('Por favor ingresa un correo electrónico válido.'),
-  subject: z.string().min(5, 'El asunto debe tener al menos 5 caracteres.'),
-  message: z.string().min(10, 'El mensaje debe tener al menos 10 caracteres.'),
-});
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
 
 export default function ContactoPage() {
-    const { toast } = useToast();
-    const router = useRouter();
-
-    const form = useForm<z.infer<typeof formSchema>>({
-        resolver: zodResolver(formSchema),
-        defaultValues: {
-        firstName: '',
-        lastName: '',
-        email: '',
-        subject: '',
-        message: '',
-        },
-    });
-
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const myForm = e.currentTarget;
-    const formData = new FormData(myForm);
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData as any).toString(),
-    })
-    .then(() => {
-        toast({
-          title: '¡Mensaje enviado!',
-          description: 'Gracias por contactarnos. Te responderemos a la brevedad.',
-        });
-        form.reset();
-        router.push('/contacto');
-    })
-    .catch((error) => {
-        toast({
-            title: 'Error al enviar',
-            description: 'Hubo un problema con tu envío. Inténtalo de nuevo.',
-            variant: 'destructive',
-        });
-        console.error(error);
-    });
-  }
-
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
@@ -88,102 +25,56 @@ export default function ContactoPage() {
             </div>
 
             <Card className="p-8 bg-card shadow-lg">
-              <Form {...form}>
-                <form
-                    name="contact"
-                    method="POST"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
-                    onSubmit={onSubmit}
-                    className="space-y-8"
-                >
-                  <input type="hidden" name="form-name" value="contact" />
-                  <p className="hidden">
-                    <label>
-                      Don’t fill this out if you’re human: <input name="bot-field" />
-                    </label>
-                  </p>
+               <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                className="space-y-8"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <p className="hidden">
+                  <label>
+                    Don’t fill this out if you’re human: <input name="bot-field" />
+                  </label>
+                </p>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                    <FormField
-                      control={form.control}
-                      name="firstName"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Nombre</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Tu nombre" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="lastName"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Apellido</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Tu apellido" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  <div className="space-y-2">
+                    <Label htmlFor="firstName">Nombre</Label>
+                    <Input id="firstName" name="firstName" placeholder="Tu nombre" required />
                   </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="lastName">Apellido</Label>
+                    <Input id="lastName" name="lastName" placeholder="Tu apellido" required />
+                  </div>
+                </div>
 
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Correo Electrónico</FormLabel>
-                        <FormControl>
-                          <Input type="email" placeholder="tu@correo.com" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                <div className="space-y-2">
+                  <Label htmlFor="email">Correo Electrónico</Label>
+                  <Input id="email" name="email" type="email" placeholder="tu@correo.com" required />
+                </div>
 
-                  <FormField
-                    control={form.control}
-                    name="subject"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Asunto</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Asunto del mensaje" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                <div className="space-y-2">
+                  <Label htmlFor="subject">Asunto</Label>
+                  <Input id="subject" name="subject" placeholder="Asunto del mensaje" required />
+                </div>
 
-                  <FormField
-                    control={form.control}
+                <div className="space-y-2">
+                  <Label htmlFor="message">Mensaje</Label>
+                  <Textarea
+                    id="message"
                     name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Mensaje</FormLabel>
-                        <FormControl>
-                          <Textarea
-                            placeholder="Escribe tu mensaje aquí..."
-                            className="min-h-[150px]"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
+                    placeholder="Escribe tu mensaje aquí..."
+                    className="min-h-[150px]"
+                    required
                   />
+                </div>
 
-                  <Button type="submit" size="lg" className="w-full">
-                    Enviar Mensaje
-                  </Button>
-                </form>
-              </Form>
+                <Button type="submit" size="lg" className="w-full">
+                  Enviar Mensaje
+                </Button>
+              </form>
             </Card>
           </div>
         </section>

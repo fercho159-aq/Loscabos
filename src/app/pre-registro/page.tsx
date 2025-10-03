@@ -1,18 +1,5 @@
-'use client';
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import * as z from 'zod';
 import { Button } from '@/components/ui/button';
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import {
   Select,
@@ -22,232 +9,118 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { useToast } from '@/hooks/use-toast';
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
-import { Card, CardContent } from '@/components/ui/card';
-import { useRouter } from 'next/navigation';
-
-// El esquema de Zod se mantiene igual
-const preRegFormSchema = z.object({
-  firstName: z.string().min(2, { message: 'El nombre debe tener al menos 2 caracteres.' }),
-  lastName: z.string().min(2, { message: 'El apellido debe tener al menos 2 caracteres.' }),
-  email: z.string().email({ message: 'Por favor ingresa un correo válido.' }),
-  age: z.coerce.number().min(16, { message: 'Debes tener al menos 16 años.' }).optional(),
-  instagram: z.string().optional(),
-  state: z.string().min(2, { message: 'El estado es requerido.' }),
-  city: z.string().min(2, { message: 'La ciudad es requerida.' }),
-  industry: z.string({ required_error: 'Por favor selecciona una industria.' }),
-  otherIndustry: z.string().optional(),
-  professionalStatus: z.enum(['estudiante', 'profesional'], { required_error: 'Debes seleccionar un estatus.' }),
-}).refine(data => {
-    if (data.industry === 'otra' && (!data.otherIndustry || data.otherIndustry.length < 2)) {
-        return false;
-    }
-    return true;
-}, {
-    message: 'Por favor especifica la industria.',
-    path: ['otherIndustry'],
-});
-
-type PreRegFormValues = z.infer<typeof preRegFormSchema>;
+import { Card } from '@/components/ui/card';
+import { Label } from '@/components/ui/label';
 
 export default function PreRegistroPage() {
-  const { toast } = useToast();
-  const router = useRouter();
-  const form = useForm<PreRegFormValues>({
-    resolver: zodResolver(preRegFormSchema),
-    defaultValues: {
-      firstName: '',
-      lastName: '',
-      email: '',
-      instagram: '',
-      state: '',
-      city: '',
-    },
-  });
-
-  const industry = form.watch('industry');
-
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const myForm = e.currentTarget;
-    const formData = new FormData(myForm);
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData as any).toString(),
-    })
-    .then(() => {
-        toast({
-          title: '¡Pre-registro completado!',
-          description: 'Gracias por tu interés. Te mantendremos informado sobre el festival.',
-        });
-        form.reset();
-        router.push('/pre-registro');
-    })
-    .catch((error) => {
-        toast({
-            title: 'Error al enviar',
-            description: 'Hubo un problema con tu registro. Inténtalo de nuevo.',
-            variant: 'destructive',
-        });
-        console.error(error);
-    });
-  }
-
   return (
-    <>
-      <div className="flex flex-col min-h-screen bg-background">
-        <Header />
-        <main className="flex-grow flex items-center justify-center pt-28 pb-16">
-          <section className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              <div className="text-center mb-12">
-                <h1 className="font-headline text-5xl md:text-6xl font-bold text-foreground">
-                  Pre-registro FICLosCabos 2025
-                </h1>
-                <p className="mt-4 text-lg text-muted-foreground">
-                  ¡Sé el primero en enterarte de todo! Completa el formulario para recibir noticias exclusivas, acceso a preventas y más.
-                </p>
-              </div>
-
-              <Card className="p-6 sm:p-10 bg-card shadow-xl">
-                <Form {...form}>
-                  <form 
-                    name="pre-registro"
-                    method="POST"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
-                    onSubmit={onSubmit} 
-                    className="space-y-8"
-                  >
-                     <input type="hidden" name="form-name" value="pre-registro" />
-                     <p className="hidden">
-                        <label>
-                          Don’t fill this out if you’re human: <input name="bot-field" />
-                        </label>
-                      </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                      <FormField control={form.control} name="firstName" render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Nombre</FormLabel>
-                          <FormControl><Input placeholder="Tu nombre" {...field} /></FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )} />
-                      <FormField control={form.control} name="lastName" render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Apellido</FormLabel>
-                          <FormControl><Input placeholder="Tu apellido" {...field} /></FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )} />
-                    </div>
-
-                    <FormField control={form.control} name="email" render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Correo Electrónico</FormLabel>
-                        <FormControl><Input type="email" placeholder="tu@correo.com" {...field} /></FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )} />
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                        <FormField control={form.control} name="age" render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Edad</FormLabel>
-                            <FormControl><Input type="number" placeholder="25" {...field} onChange={e => field.onChange(e.target.value === '' ? undefined : +e.target.value)} /></FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )} />
-                        <FormField control={form.control} name="instagram" render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Instagram (Opcional)</FormLabel>
-                            <FormControl><Input placeholder="@tu-usuario" {...field} /></FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )} />
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                       <FormField control={form.control} name="state" render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Estado</FormLabel>
-                            <FormControl><Input placeholder="Ej. Baja California Sur" {...field} /></FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )} />
-                       <FormField control={form.control} name="city" render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Ciudad</FormLabel>
-                            <FormControl><Input placeholder="Ej. La Paz" {...field} /></FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )} />
-                    </div>
-
-                    <FormField control={form.control} name="industry" render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Industria</FormLabel>
-                         <Select onValueChange={field.onChange} defaultValue={field.value}>
-                            <FormControl>
-                              <SelectTrigger>
-                                <SelectValue placeholder="Selecciona tu industria" />
-                              </SelectTrigger>
-                            </FormControl>
-                            <SelectContent>
-                              <SelectItem value="cine">Cine</SelectItem>
-                              <SelectItem value="arte">Arte</SelectItem>
-                              <SelectItem value="diseño">Diseño</SelectItem>
-                              <SelectItem value="otra">Otra</SelectItem>
-                            </SelectContent>
-                          </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )} />
-
-                    {industry === 'otra' && (
-                       <FormField control={form.control} name="otherIndustry" render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>¿Cuál?</FormLabel>
-                            <FormControl><Input placeholder="Especifica tu industria" {...field} /></FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )} />
-                    )}
-
-                    <FormField control={form.control} name="professionalStatus" render={({ field }) => (
-                      <FormItem className="space-y-3">
-                        <FormLabel>¿Eres estudiante o profesional?</FormLabel>
-                        <FormControl>
-                          <RadioGroup onValueChange={field.onChange} defaultValue={field.value} className="flex flex-col space-y-1">
-                            <FormItem className="flex items-center space-x-3 space-y-0">
-                              <FormControl><RadioGroupItem value="estudiante" /></FormControl>
-                              <FormLabel className="font-normal">Estudiante</FormLabel>
-                            </FormItem>
-                            <FormItem className="flex items-center space-x-3 space-y-0">
-                              <FormControl><RadioGroupItem value="profesional" /></FormControl>
-                              <FormLabel className="font-normal">Profesional</FormLabel>
-                            </FormItem>
-                          </RadioGroup>
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )} />
-
-                    <Button type="submit" size="lg" className="w-full">
-                      Enviar Pre-registro
-                    </Button>
-                  </form>
-                </Form>
-              </Card>
+    <div className="flex flex-col min-h-screen bg-background">
+      <Header />
+      <main className="flex-grow flex items-center justify-center pt-28 pb-16">
+        <section className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <h1 className="font-headline text-5xl md:text-6xl font-bold text-foreground">
+                Pre-registro FICLosCabos 2025
+              </h1>
+              <p className="mt-4 text-lg text-muted-foreground">
+                ¡Sé el primero en enterarte de todo! Completa el formulario para recibir noticias exclusivas, acceso a preventas y más.
+              </p>
             </div>
-          </section>
-        </main>
-        <Footer />
-      </div>
-    </>
+
+            <Card className="p-6 sm:p-10 bg-card shadow-xl">
+              <form 
+                name="pre-registro"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                className="space-y-8"
+              >
+                <input type="hidden" name="form-name" value="pre-registro" />
+                <p className="hidden">
+                  <label>
+                    Don’t fill this out if you’re human: <input name="bot-field" />
+                  </label>
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  <div className="space-y-2">
+                    <Label htmlFor="firstName">Nombre</Label>
+                    <Input id="firstName" name="firstName" placeholder="Tu nombre" required />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="lastName">Apellido</Label>
+                    <Input id="lastName" name="lastName" placeholder="Tu apellido" required />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="email">Correo Electrónico</Label>
+                  <Input id="email" name="email" type="email" placeholder="tu@correo.com" required />
+                </div>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div className="space-y-2">
+                        <Label htmlFor="age">Edad</Label>
+                        <Input id="age" name="age" type="number" placeholder="25" />
+                    </div>
+                    <div className="space-y-2">
+                        <Label htmlFor="instagram">Instagram (Opcional)</Label>
+                        <Input id="instagram" name="instagram" placeholder="@tu-usuario" />
+                    </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div className="space-y-2">
+                        <Label htmlFor="state">Estado</Label>
+                        <Input id="state" name="state" placeholder="Ej. Baja California Sur" required />
+                    </div>
+                    <div className="space-y-2">
+                        <Label htmlFor="city">Ciudad</Label>
+                        <Input id="city" name="city" placeholder="Ej. La Paz" required />
+                    </div>
+                </div>
+                
+                <div className="space-y-2">
+                    <Label htmlFor="industry">Industria</Label>
+                    <Select name="industry" required>
+                        <SelectTrigger id="industry">
+                            <SelectValue placeholder="Selecciona tu industria" />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectItem value="cine">Cine</SelectItem>
+                            <SelectItem value="arte">Arte</SelectItem>
+                            <SelectItem value="diseño">Diseño</SelectItem>
+                            <SelectItem value="otra">Otra</SelectItem>
+                        </SelectContent>
+                    </Select>
+                </div>
+
+                <div className="space-y-2">
+                    <Label>¿Eres estudiante o profesional?</Label>
+                    <RadioGroup name="professionalStatus" required className="flex flex-col space-y-1">
+                        <div className="flex items-center space-x-3 space-y-0">
+                            <RadioGroupItem value="estudiante" id="estudiante" />
+                            <Label htmlFor="estudiante" className="font-normal">Estudiante</Label>
+                        </div>
+                        <div className="flex items-center space-x-3 space-y-0">
+                            <RadioGroupItem value="profesional" id="profesional" />
+                            <Label htmlFor="profesional" className="font-normal">Profesional</Label>
+                        </div>
+                    </RadioGroup>
+                </div>
+
+                <Button type="submit" size="lg" className="w-full">
+                  Enviar Pre-registro
+                </Button>
+              </form>
+            </Card>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 }
