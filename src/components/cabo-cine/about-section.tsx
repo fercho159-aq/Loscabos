@@ -17,7 +17,7 @@ export default function AboutSection() {
             </div>
             <div>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                    Reafirmando su espíritu innovador y expandiendo su alcance hacia disciplinas que hoy definen la cultura contemporánea. El cine se mantiene como eje rector convergiendo con la música, el arte digital y la gastronomía.
+                    En 2025, el Festival Internacional de Cine de Los Cabos celebrará su 13ª edición del 10 al 14 de diciembre, reafirmando su espíritu innovador y expandiendo su alcance hacia disciplinas que hoy definen la cultura contemporánea. El cine se mantiene como eje rector convergiendo con la música, el arte digital y la gastronomía.
                 </p>
             </div>
         </div>
