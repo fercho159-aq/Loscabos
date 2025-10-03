@@ -79,7 +79,7 @@ export default function ContactoPage() {
       <Header />
       
       {/* Formulario HTML estático oculto para Netlify */}
-      <form name="contact" netlify="true" netlify-honeypot="bot-field" hidden>
+      <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
         <input type="text" name="firstName" />
         <input type="text" name="lastName" />
         <input type="email" name="email" />
