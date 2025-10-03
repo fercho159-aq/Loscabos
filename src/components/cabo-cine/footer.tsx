@@ -1,6 +1,7 @@
 
 import Link from "next/link";
 import { Facebook, Instagram, Youtube } from "lucide-react";
+import Image from "next/image";
 
 const ficcLinks = [
     { href: "/acerca-de", label: "Acerca de la 13ª edición" },
@@ -94,23 +95,14 @@ export default function Footer() {
         </div>
 
         <div className="mt-20 text-center">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-x-6 gap-y-2">
-                <div className="text-center md:text-right font-headline tracking-widest leading-tight">
-                    <p>FESTIVAL</p>
-                    <p>INTERNACIONAL</p>
-                    <p>DE CINE DE</p>
-                </div>
-                <div className="flex items-center gap-4">
-                    <div className="font-headline text-5xl tracking-wider leading-none">LOS<br/>CABOS</div>
-                    {/* Placeholder for the SVG logo part */}
-                    <svg width="40" height="30" viewBox="0 0 106 72" fill="none" xmlns="http://www.w3.org/2000/svg" className="inline-block">
-                        <path d="M105.5 30.284C105.5 13.824 92.2 0.5 76 0.5H0.5V71.5H76C92.2 71.5 105.5 58.184 105.5 41.724C105.5 38.304 105.02 34.984 104.18 31.864C103.54 29.584 102.34 27.504 100.78 25.724C98.44 23.104 95.14 21.224 91.3 20.384C89.5 19.964 87.64 19.744 85.72 19.744H41.5V52.5H85.72C87.64 52.5 89.5 52.28 91.3 51.86C95.14 50.98 98.44 49.1 100.78 46.52C102.34 44.74 103.54 42.66 104.18 40.38C105.02 37.26 105.5 33.94 105.5 30.5V30.284Z" stroke="#F7EEDD"/>
-                    </svg>
-                </div>
-                <div className="text-left font-headline text-accent-foreground leading-none">
-                    <p className="text-4xl">13ª <span className="font-body italic text-3xl">Edición</span></p>
-                    <p className="text-xs tracking-widest mt-1">DEL 10 AL 14 DE DICIEMBRE 2025</p>
-                </div>
+            <div className="flex justify-center">
+                <Image 
+                    src="/Images/logos/FESTIVAL DE CINE LOS CABOS-blanco.png"
+                    alt="CaboCine Logo"
+                    width={300}
+                    height={100}
+                    data-ai-hint="logo white"
+                />
             </div>
             <p className="text-xs text-accent-foreground/80 text-center mt-20">
                 &copy; {new Date().getFullYear()} Cabocine. todos los derechos reservados.
