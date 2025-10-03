@@ -104,7 +104,7 @@ export default function Footer() {
                     data-ai-hint="logo white"
                 />
             </div>
-            <p className="text-xs text-accent-foreground/80 text-center mt-20">
+            <p className="text-xs text-accent-foreground/80 text-center mt-[100px]">
                 &copy; {new Date().getFullYear()} Cabocine. todos los derechos reservados.
             </p>
         </div>
