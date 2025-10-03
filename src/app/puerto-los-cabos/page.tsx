@@ -14,11 +14,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const galleryImages = [
-  { src: "https://picsum.photos/seed/plc-gallery-1/800/600", alt: "Vista de la marina de Puerto Los Cabos", hint: "marina boats" },
-  { src: "https://picsum.photos/seed/plc-gallery-2/800/600", alt: "Atardecer en la playa", hint: "beach sunset" },
-  { src: "https://picsum.photos/seed/plc-gallery-3/800/600", alt: "Campo de golf con vista al mar", hint: "golf course ocean" },
-  { src: "https://picsum.photos/seed/plc-gallery-4/800/600", alt: "Arte en el Hotel El Ganzo", hint: "hotel art" },
-  { src: "https://picsum.photos/seed/plc-gallery-5/800/600", alt: "Evento en Crania", hint: "outdoor event night" },
+  { src: "https://picsum.photos/seed/plc-gallery-1/600/800", alt: "Vista de la marina de Puerto Los Cabos", hint: "marina boats" },
+  { src: "https://picsum.photos/seed/plc-gallery-2/600/800", alt: "Atardecer en la playa", hint: "beach sunset" },
+  { src: "https://picsum.photos/seed/plc-gallery-3/600/800", alt: "Campo de golf con vista al mar", hint: "golf course ocean" },
+  { src: "https://picsum.photos/seed/plc-gallery-4/600/800", alt: "Arte en el Hotel El Ganzo", hint: "hotel art" },
+  { src: "https://picsum.photos/seed/plc-gallery-5/600/800", alt: "Evento en Crania", hint: "outdoor event night" },
 ];
 
 const logos = [
@@ -75,6 +75,39 @@ export default function PuertoLosCabosPage() {
                         className="w-full h-auto object-cover rounded-lg shadow-xl"
                     />
                 </div>
+            </div>
+        </section>
+
+        {/* Gallery Section */}
+        <section className="py-16 sm:py-24 bg-card">
+            <div className="container mx-auto px-4">
+                 <Carousel
+                    opts={{
+                        align: "start",
+                        loop: true,
+                    }}
+                    className="w-full max-w-6xl mx-auto"
+                    >
+                    <CarouselContent className="-ml-4">
+                        {galleryImages.map((image, index) => (
+                        <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                            <Card className="overflow-hidden">
+                                <CardContent className="p-0 aspect-[3/4] relative">
+                                    <Image
+                                        src={image.src}
+                                        alt={image.alt}
+                                        data-ai-hint={image.hint}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </CardContent>
+                            </Card>
+                        </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="hidden sm:flex" />
+                    <CarouselNext className="hidden sm:flex" />
+                </Carousel>
             </div>
         </section>
 
