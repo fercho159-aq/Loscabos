@@ -22,15 +22,6 @@ export default function AboutSection() {
             </div>
         </div>
         <div className="text-center">
-            <div className="relative aspect-video max-w-4xl mx-auto mb-8">
-                <Image 
-                    src="https://picsum.photos/seed/about-main/1200/675"
-                    alt="Público en el festival de cine"
-                    data-ai-hint="festival audience"
-                    fill
-                    className="object-cover rounded-lg shadow-lg"
-                />
-            </div>
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                 <Link href="/acerca-de">
                     Más información <ArrowRight className="ml-2 h-5 w-5" />
