@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Award, Film, User, Calendar, Ticket } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Link from 'next/link';
 
 export default function HomenajePage() {
   const guest = guestData.find(g => g.slug === 'eugenio-caballero');
@@ -74,9 +75,11 @@ export default function HomenajePage() {
                             </p>
                              <p className="font-semibold text-sm text-foreground flex items-center gap-2 mb-1"><Calendar className="h-4 w-4"/>Fecha: Por definir</p>
                              <p className="font-semibold text-sm text-foreground flex items-center gap-2 mb-4"><User className="h-4 w-4"/>Espacios disponibles: 50</p>
-                            <Button className="w-full group">
-                                <Ticket className="mr-2 h-5 w-5 transform group-hover:rotate-12 transition-transform" />
-                                Registrarse (Sin costo)
+                            <Button className="w-full group" asChild>
+                                <Link href="/pre-registro">
+                                    <Ticket className="mr-2 h-5 w-5 transform group-hover:rotate-12 transition-transform" />
+                                    Registrarse (Sin costo)
+                                </Link>
                             </Button>
                         </CardContent>
                     </Card>
@@ -93,8 +96,10 @@ export default function HomenajePage() {
                             </p>
                             <p className="font-semibold text-sm text-foreground flex items-center gap-2 mb-1"><Calendar className="h-4 w-4"/>Fecha: Por definir</p>
                              <p className="font-semibold text-sm text-foreground flex items-center gap-2 mb-4"><User className="h-4 w-4"/>Espacios disponibles: 100</p>
-                            <Button variant="secondary" className="w-full">
-                                Comprar Boletos
+                            <Button variant="secondary" className="w-full" asChild>
+                                <Link href="/pre-registro">
+                                    Comprar Boletos
+                                </Link>
                             </Button>
                         </CardContent>
                     </Card>

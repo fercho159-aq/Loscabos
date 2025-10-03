@@ -88,9 +88,11 @@ export default function Header() {
           <NavContent />
         </nav>
         <div className="flex items-center gap-4">
-          <Button className="hidden sm:inline-flex bg-accent hover:bg-accent/90 text-accent-foreground font-bold group">
-            <Ticket className="mr-2 h-5 w-5 transform group-hover:rotate-12 transition-transform" />
-            Compra tu boleto
+          <Button asChild className="hidden sm:inline-flex bg-accent hover:bg-accent/90 text-accent-foreground font-bold group">
+            <Link href="/pre-registro">
+                <Ticket className="mr-2 h-5 w-5 transform group-hover:rotate-12 transition-transform" />
+                Pre-regístrate
+            </Link>
           </Button>
           <div className="lg:hidden">
             <Sheet open={open} onOpenChange={setOpen}>

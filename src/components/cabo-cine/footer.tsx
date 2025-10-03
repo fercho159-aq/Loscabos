@@ -8,7 +8,7 @@ const ficcLinks = [
     { href: "/acerca-de", label: "Acerca de la 13ª edición" },
     { href: "/programacion", label: "Programación 2025" },
     { href: "/campus", label: "Campus FICLosCabos" },
-    { href: "/#", label: "Comprar boletos" },
+    { href: "/pre-registro", label: "Pre-registro" },
 ];
 
 const aboutLinks = [

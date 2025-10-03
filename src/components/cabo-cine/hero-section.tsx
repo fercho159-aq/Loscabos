@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Ticket } from 'lucide-react';
+import Link from 'next/link';
 
 export default function HeroSection() {
   return (
@@ -39,9 +40,11 @@ export default function HeroSection() {
         </p>
 
         <div className="mt-8">
-          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-lg py-7 px-8 group transition-all duration-300 transform hover:scale-105 shadow-lg shadow-black/30">
-            <Ticket className="mr-2 h-6 w-6 transition-transform group-hover:rotate-12" />
-            Comprar boletos
+          <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-lg py-7 px-8 group transition-all duration-300 transform hover:scale-105 shadow-lg shadow-black/30">
+            <Link href="/pre-registro">
+                <Ticket className="mr-2 h-6 w-6 transition-transform group-hover:rotate-12" />
+                Pre-regístrate
+            </Link>
           </Button>
         </div>
       </div>

@@ -24,7 +24,7 @@ const galleryImages = [
 const logos = [
   { name: "Hotel El Ganzo", logo: "/Images/patrocinadores/HG_GENERAL-13.png", hint: "company logo" },
   { name: "Kundavi", logo: "/Images/patrocinadores/Lockup (Noche)@10x.png", hint: "company logo" },
-  { name: "Questro", logo: "https://picsum.photos/200/100?grayscale&seed=questro", hint: "company logo" },
+  { name: "Questro", logo: "/Images/patrocinadores/Logos Questro _Mesa de trabajo 1 copia 21.png", hint: "company logo" },
   { name: "Puerto Los Cabos", logo: "/Images/patrocinadores/Logos para margie _Mesa de trabajo 1 copia 9.png", hint: "company logo" },
   { name: "Crania", logo: "/Images/patrocinadores/Crania _ Logos _Mesa de trabajo 1 copia.png", hint: "company logo" },
   { name: "Veleros Beach Club", logo: "/Images/patrocinadores/VELEROS-01.png", hint: "company logo" },

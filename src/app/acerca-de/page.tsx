@@ -95,9 +95,11 @@ export default function AcercaDePage() {
                 <div className="text-lg text-muted-foreground space-y-6 bg-card p-8 rounded-lg shadow-lg">
                     <p>Al incorporar lenguajes digitales, experiencias inmersivas y narrativas transmedia, el Festival responde a los retos de la era tecnológica y se consolida como un vehículo de desarrollo económico, cultural y creativo a nivel internacional, proyectando a Puerto Los Cabos como un ecosistema creativo y regenerativo con voz global.</p>
                      <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg">
+                        <Button size="lg" asChild>
+                           <Link href="/pre-registro">
                             <Ticket className="mr-2 h-5 w-5" />
-                            Compra tu boleto
+                            Pre-regístrate
+                           </Link>
                         </Button>
                          <Button size="lg" variant="outline">
                             Explora las ediciones anteriores
