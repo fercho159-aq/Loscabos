@@ -20,7 +20,7 @@ export default {
         '5': 'repeat(5, minmax(0, 1fr))',
       },
       fontFamily: {
-        body: ['ACRE', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
         headline: ['PRINTF', 'serif'],
         code: ['monospace'],
       },

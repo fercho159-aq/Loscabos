@@ -11,10 +11,9 @@
   }
 
   @font-face {
-    font-family: 'ACRE';
-    src: url('/fonts/Acre-Regular.ttf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Inter';
+    src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
   }
 
   @font-face {
