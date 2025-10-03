@@ -36,7 +36,7 @@ export default function HeroSection() {
         </p>
 
         <div className="mt-12">
-            <p className="text-base text-background/80 mb-2">
+            <p className="text-sm text-background/80 mb-2">
             ¿TE INTERESA ASISTIR?
             </p>
             <Button asChild size="lg" variant="link" className="font-headline text-accent hover:text-accent/90 text-lg py-3 px-8 group transition-all duration-300 transform hover:scale-105">
