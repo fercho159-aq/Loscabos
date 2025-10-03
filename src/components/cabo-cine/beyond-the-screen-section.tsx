@@ -21,11 +21,11 @@ export default function BeyondTheScreenSection() {
                     BEYOND THE SCREEN
                     </h2>
                 </div>
-                <div className="space-y-4 text-lg text-muted-foreground">
-                    <p>
+                <div className="space-y-4 text-lg">
+                    <p className='text-foreground font-medium'>
                     #BeyondtheScreen expresa la evolución del Festival de un evento de cine hacia una plataforma creativa expandida, donde las historias no se quedan en la pantalla: se viven en proyecciones site-specific, conciertos, instalaciones y encuentros con la comunidad.
                     </p>
-                    <p>
+                    <p className='text-muted-foreground'>
                     El mar, el desierto, y la memoria cultural de Baja California Sur se integran al lenguaje del cine para generar narrativas únicas.
                     </p>
                 </div>
