@@ -22,7 +22,7 @@ export default function AnimationSection() {
         <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-background/90 leading-relaxed">
           Por primera vez, el Festival Internacional de Cine de Los Cabos integra la animación a su programación oficial, con una selección de cortos y mediometrajes de escuelas nacionales e internacionales, masterclasses con profesionales de la industria y el anuncio de la convocatoria de animación 2026 junto a un taller formativo para creadores de Baja California.
         </p>
-        <p className="mt-8 text-accent font-semibold text-xl">La programación será anunciada próximamente</p>
+        <p className="mt-8 text-accent font-semibold text-xl">Descúbrelo próximamente</p>
       </div>
     </section>
   );
