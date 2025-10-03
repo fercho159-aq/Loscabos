@@ -35,8 +35,15 @@ export default function AcercaDePage() {
                 />
                 <div className="absolute inset-0 bg-black/70"></div>
             </div>
-            <div className="container mx-auto px-4 relative z-10 h-32 sm:h-48">
-                {/* Space for image text */}
+            <div className="container mx-auto px-4 relative z-10 flex justify-center items-center h-32 sm:h-48">
+                 <Image 
+                    src="/Images/logos/FESTIVAL DE CINE LOS CABOS-13-edicion.png" 
+                    alt="CaboCine 13ª Edición Logo" 
+                    width={600} 
+                    height={160}
+                    data-ai-hint="logo white"
+                    className="object-contain"
+                />
             </div>
         </section>
 
