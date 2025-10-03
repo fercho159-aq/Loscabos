@@ -97,7 +97,7 @@ export default function Footer() {
         <div className="mt-20 text-center">
             <div className="flex justify-center">
                 <Image 
-                    src="/Images/logos/FESTIVAL DE CINE LOS CABOS-blanco.png"
+                    src="/Images/Main/logo main.png"
                     alt="CaboCine Logo"
                     width={300}
                     height={100}
