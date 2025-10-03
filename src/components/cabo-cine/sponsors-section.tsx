@@ -3,9 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const sponsors = [
-  { name: "FITURCA", logo: "https://picsum.photos/200/100?grayscale&seed=fiturca", hint: "company logo" },
   { name: "ESCINE", logo: "/Images/patrocinadores/Logo_ESCINE_Sintetizado_Negro.png", hint: "film school logo", href: "https://escine.mx/" },
-  { name: "Cinemex", logo: "https://picsum.photos/200/100?grayscale&seed=cinemex", hint: "company logo" },
   { name: "Hotel El Ganzo", logo: "/Images/patrocinadores/HG_GENERAL-13.png", hint: "company logo" },
   { name: "Kundavi", logo: "/Images/patrocinadores/Lockup (Noche)@10x.png", hint: "company logo" },
   { name: "Questro", logo: "/Images/patrocinadores/Logos Questro _Mesa de trabajo 1 copia 21.png", hint: "company logo" },
@@ -14,14 +12,8 @@ const sponsors = [
   { name: "Veleros Beach Club", logo: "/Images/patrocinadores/VELEROS-01.png", hint: "company logo" },
   { name: "San Jose del Este", logo: "/Images/patrocinadores/Logos para margie _Mesa de trabajo 1 copia 13.png", hint: "company logo" },
   { name: "Casa Ballena", logo: "/Images/patrocinadores/CB_logo.png", hint: "company logo" },
-  { name: "Haas Producciones", logo: "https://picsum.photos/200/100?grayscale&seed=haas", hint: "company logo" },
-  { name: "National Car Rental", logo: "https://picsum.photos/200/100?grayscale&seed=national", hint: "company logo" },
   { name: "Secrets Hotel", logo: "/Images/patrocinadores/SEPLC-logo-black-RGB.png", hint: "company logo" },
-  { name: "Ritz Carlton", logo: "https://picsum.photos/200/100?grayscale&seed=ritz", hint: "company logo" },
   { name: "Suelo Sur", logo: "/Images/patrocinadores/SUELOLOGOS-03.png", hint: "company logo" },
-  { name: "Jose Cuervo", logo: "https://picsum.photos/200/100?grayscale&seed=cuervo", hint: "company logo" },
-  { name: "Netflix", logo: "https://picsum.photos/200/100?grayscale&seed=netflix", hint: "company logo" },
-  { name: "GAP", logo: "https://picsum.photos/200/100?grayscale&seed=gap", hint: "company logo" },
 ];
 
 const extendedSponsors = [...sponsors, ...sponsors]; // Duplicate for seamless loop
