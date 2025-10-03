@@ -39,7 +39,7 @@ export default function HeroSection() {
             <p className="text-sm text-background/80 mb-2">
             ¿TE INTERESA ASISTIR?
             </p>
-            <Button asChild size="lg" className="font-headline text-lg py-3 px-8 group transition-all duration-300 transform hover:scale-105 bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button asChild className="font-headline text-lg group transition-all duration-300 transform hover:scale-105 bg-accent text-accent-foreground hover:bg-accent/90 w-[266px] h-[46px] py-[10px] px-[2px]">
                 <Link href="/pre-registro">
                     PRE-REGÍSTRATE AQUÍ
                 </Link>
@@ -53,3 +53,4 @@ export default function HeroSection() {
     </section>
   );
 }
+
