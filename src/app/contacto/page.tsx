@@ -1,4 +1,3 @@
-
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -15,11 +14,9 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Card } from '@/components/ui/card';
-import { useRouter } from 'next/navigation';
 
 const formSchema = z.object({
   firstName: z.string().min(2, 'El nombre debe tener al menos 2 caracteres.'),
@@ -30,8 +27,6 @@ const formSchema = z.object({
 });
 
 export default function ContactoPage() {
-  const { toast } = useToast();
-  const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -43,47 +38,9 @@ export default function ContactoPage() {
     },
   });
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const myForm = e.currentTarget;
-    const formData = new FormData(myForm);
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData as any).toString(),
-    })
-      .then(() => {
-        toast({
-          title: '¡Formulario enviado!',
-          description: 'Gracias por contactarnos. Te responderemos pronto.',
-        });
-        form.reset();
-        router.push('/contacto'); // O a una página de agradecimiento
-      })
-      .catch((error) => {
-        toast({
-          variant: 'destructive',
-          title: 'Error al enviar el formulario.',
-          description: 'Por favor, inténtalo de nuevo más tarde.',
-        });
-        console.error(error);
-      });
-  };
-
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
-      
-      {/* Formulario oculto para Netlify */}
-      <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
-          <input type="hidden" name="form-name" value="contact" />
-          <input type="text" name="firstName" />
-          <input type="text" name="lastName" />
-          <input type="email" name="email" />
-          <input type="text" name="subject" />
-          <textarea name="message"></textarea>
-      </form>
 
       <main className="flex-grow flex items-center justify-center pt-20">
         <section className="container mx-auto px-4 py-16 sm:py-24">
@@ -99,20 +56,21 @@ export default function ContactoPage() {
 
             <Card className="p-8 bg-card shadow-lg">
               <Form {...form}>
-                <form 
+                <form
                   name="contact"
                   method="POST"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
-                  onSubmit={onSubmit} 
                   className="space-y-8"
                 >
+                  {/* Campo oculto para Netlify */}
                   <input type="hidden" name="form-name" value="contact" />
-                   <p className="hidden">
+                  <p className="hidden">
                     <label>
                       Don’t fill this out if you’re human: <input name="bot-field" />
                     </label>
                   </p>
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <FormField
                       control={form.control}
@@ -121,7 +79,7 @@ export default function ContactoPage() {
                         <FormItem>
                           <FormLabel>Nombre</FormLabel>
                           <FormControl>
-                            <Input placeholder="Tu nombre" {...field} />
+                            <Input name="firstName" placeholder="Tu nombre" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -134,26 +92,28 @@ export default function ContactoPage() {
                         <FormItem>
                           <FormLabel>Apellido</FormLabel>
                           <FormControl>
-                            <Input placeholder="Tu apellido" {...field} />
+                            <Input name="lastName" placeholder="Tu apellido" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
                       )}
                     />
                   </div>
+
                   <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Correo Electrónico</FormLabel>
-                          <FormControl>
-                            <Input type="email" placeholder="tu@correo.com" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Correo Electrónico</FormLabel>
+                        <FormControl>
+                          <Input name="email" type="email" placeholder="tu@correo.com" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
                   <FormField
                     control={form.control}
                     name="subject"
@@ -161,12 +121,13 @@ export default function ContactoPage() {
                       <FormItem>
                         <FormLabel>Asunto</FormLabel>
                         <FormControl>
-                          <Input placeholder="Asunto del mensaje" {...field} />
+                          <Input name="subject" placeholder="Asunto del mensaje" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
                   />
+
                   <FormField
                     control={form.control}
                     name="message"
@@ -175,6 +136,7 @@ export default function ContactoPage() {
                         <FormLabel>Mensaje</FormLabel>
                         <FormControl>
                           <Textarea
+                            name="message"
                             placeholder="Escribe tu mensaje aquí..."
                             className="min-h-[150px]"
                             {...field}
@@ -184,6 +146,7 @@ export default function ContactoPage() {
                       </FormItem>
                     )}
                   />
+
                   <Button type="submit" size="lg" className="w-full">
                     Enviar Mensaje
                   </Button>
