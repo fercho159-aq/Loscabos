@@ -89,7 +89,7 @@ export default function Header() {
         </nav>
         <div className="flex items-center gap-4">
           <Button asChild variant="link" className={cn(
-              "hidden sm:inline-flex text-xs font-medium",
+              "hidden sm:inline-flex text-xs font-headline",
               isTransparent ? "text-accent hover:text-accent/80" : "text-accent hover:text-accent/80"
           )}>
             <Link href="/pre-registro">
