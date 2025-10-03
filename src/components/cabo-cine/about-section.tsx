@@ -19,14 +19,14 @@ export default function AboutSection() {
                 <p className="text-lg text-muted-foreground leading-relaxed">
                     En 2025, el Festival Internacional de Cine de Los Cabos celebrará su 13ª edición del 10 al 14 de diciembre, reafirmando su espíritu innovador y expandiendo su alcance hacia disciplinas que hoy definen la cultura contemporánea. El cine se mantiene como eje rector convergiendo con la música, el arte digital y la gastronomía.
                 </p>
+                <div className="mt-8">
+                    <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                        <Link href="/acerca-de">
+                            Más información <ArrowRight className="ml-2 h-5 w-5" />
+                        </Link>
+                    </Button>
+                </div>
             </div>
-        </div>
-        <div className="text-center">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                <Link href="/acerca-de">
-                    Más información <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-            </Button>
         </div>
       </div>
     </section>
