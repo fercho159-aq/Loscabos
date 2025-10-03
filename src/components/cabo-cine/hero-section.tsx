@@ -34,7 +34,7 @@ export default function HeroSection() {
             #BEYONDTHESCREEN
         </p>
 
-        <div className="mt-12">
+        <div className="mt-[150px]">
             <p className="text-sm text-background/80 mb-2">
             ¿TE INTERESA ASISTIR?
             </p>
