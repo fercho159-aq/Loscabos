@@ -60,7 +60,7 @@ export default function GFFFHomeSection() {
             
             <Button size="lg" asChild>
                 <Link href="/industria">
-                    Postula tu proyecto
+                    Descubre más
                 </Link>
             </Button>
           </div>

@@ -66,7 +66,7 @@ export default function LaBajaInspiraHomeSection() {
 
             <Button size="lg" asChild>
                 <Link href="/la-baja-inspira">
-                    Conoce más
+                    Descubre más
                 </Link>
             </Button>
           </div>
