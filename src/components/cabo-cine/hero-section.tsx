@@ -20,13 +20,14 @@ export default function HeroSection() {
      
       <div className="relative z-10 p-4 animate-in fade-in duration-1000 flex flex-col items-center">
         
-        <div className="mb-4">
+        <div className="w-screen px-4">
             <Image 
                 src="/Images/Main/logo main.png" 
                 alt="CaboCine Logo" 
-                width={900} 
-                height={240}
+                width={1200}
+                height={320}
                 data-ai-hint="logo white"
+                className="w-full h-auto"
                 />
         </div>
 
