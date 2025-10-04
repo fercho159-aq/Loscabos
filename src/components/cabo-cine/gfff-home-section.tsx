@@ -61,7 +61,7 @@ export default function GFFFHomeSection() {
             </div>
             
             <div className="pt-4">
-              <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline px-6">
+              <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline px-9 h-14 py-3 text-lg">
                   <Link href="/industria">
                       DESCUBRE MÁS
                   </Link>
