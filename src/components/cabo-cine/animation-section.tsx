@@ -6,7 +6,7 @@ export default function AnimationSection() {
     <section className="relative py-20 sm:py-32 bg-background flex items-center justify-center text-center text-white">
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://picsum.photos/seed/animation/1920/1080"
+          src="/Images/Main/FICC_BannerAnimacion.jpg"
           alt="Banner de la sección de animación"
           data-ai-hint="abstract animation"
           fill

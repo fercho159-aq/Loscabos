@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const convocatoriaItems = [
     {
@@ -46,13 +47,17 @@ export default function GFFFHomeSection() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 pt-4">
+            <div className="pt-4">
+              <Accordion type="single" collapsible className="w-full">
                 {convocatoriaItems.map((item, index) => (
-                    <div key={index}>
-                        <h3 className="text-accent font-semibold text-sm mb-1">{item.title}</h3>
-                        <p className="text-muted-foreground text-sm">{item.description}</p>
-                    </div>
+                  <AccordionItem value={`item-${index + 1}`} key={index}>
+                    <AccordionTrigger className="text-accent font-semibold text-sm hover:no-underline">{item.title}</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground text-sm">
+                      {item.description}
+                    </AccordionContent>
+                  </AccordionItem>
                 ))}
+              </Accordion>
             </div>
             
             <div className="pt-4">

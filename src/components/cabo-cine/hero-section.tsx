@@ -35,7 +35,7 @@ export default function HeroSection() {
             #BEYONDTHESCREEN
         </p>
 
-        <div className="">
+        <div className="mt-20">
             <p className="text-sm text-background/80 mb-2">
             ¿TE INTERESA ASISTIR?
             </p>
@@ -46,10 +46,10 @@ export default function HeroSection() {
                     </Link>
                 </Button>
             </div>
-            <p className="text-[1vw] text-background/80">
+            <p className="text-[2vw] text-background/80 mt-10">
             TE AVISAREMOS CUANDO
             </p>
-            <p className="text-sm text-background/80">
+            <p className="text-[2vw] text-background/80">
             SE ABRA LA TAQUILLA.
             </p>
         </div>
