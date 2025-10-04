@@ -40,7 +40,7 @@ export default function SponsorsSection() {
                   data-ai-hint={sponsor.hint}
                   width={200}
                   height={100}
-                  className="opacity-60 hover:opacity-100 transition-opacity duration-300"
+                  className="hover:opacity-100 transition-opacity duration-300"
                 />
               </Link>
             </li>
@@ -56,7 +56,7 @@ export default function SponsorsSection() {
                   data-ai-hint={sponsor.hint}
                   width={200}
                   height={100}
-                  className="opacity-60 hover:opacity-100 transition-opacity duration-300"
+                  className="hover:opacity-100 transition-opacity duration-300"
                 />
               </Link>
             </li>
