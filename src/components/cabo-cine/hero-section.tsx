@@ -35,18 +35,18 @@ export default function HeroSection() {
             #BEYONDTHESCREEN
         </p>
 
-        <div className="mt-[150px]">
+        <div className="mt-8">
             <p className="text-sm text-background/80 mb-2">
             ¿TE INTERESA ASISTIR?
             </p>
-            <div className="my-[50px]">
+            <div className="my-2">
                 <Button asChild className="font-headline text-lg group transition-all duration-300 transform hover:scale-105 bg-accent text-accent-foreground hover:bg-accent/90 w-[266px] h-[46px] py-[10px] px-[2px] rounded-none">
                     <Link href="/pre-registro">
                         PRE-REGÍSTRATE AQUÍ
                     </Link>
                 </Button>
             </div>
-            <p className="mt-[100px] text-sm text-background/80">
+            <p className="mt-2 text-sm text-background/80">
             TE AVISAREMOS CUANDO
             </p>
             <p className="mt-2 text-sm text-background/80">
