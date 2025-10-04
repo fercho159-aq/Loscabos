@@ -16,7 +16,7 @@ import Link from 'next/link';
 const galleryImages = [
   { src: "https://picsum.photos/seed/plc-gallery-1/600/800", alt: "Vista de la marina de Puerto Los Cabos", hint: "marina boats" },
   { src: "https://picsum.photos/seed/plc-gallery-2/600/800", alt: "Atardecer en la playa", hint: "beach sunset" },
-  { src: "https://picsum.photos/seed/plc-gallery-3/600/800", alt: "Campo de golf con vista al mar", hint: "golf course ocean" },
+  { src: "/Images/PuertoCabos/FICC_Banner_1.png", alt: "Campo de golf con vista al mar", hint: "golf course ocean" },
   { src: "https://picsum.photos/seed/plc-gallery-4/600/800", alt: "Arte en el Hotel El Ganzo", hint: "hotel art" },
   { src: "https://picsum.photos/seed/plc-gallery-5/600/800", alt: "Evento en Crania", hint: "outdoor event night" },
 ];
@@ -40,7 +40,7 @@ export default function PuertoLosCabosPage() {
         <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground text-center">
             <div className="absolute inset-0 z-0">
                 <Image
-                src="https://picsum.photos/seed/plc-banner/1920/1080"
+                src="/Images/PuertoCabos/FICC_Banner13.png"
                 alt="Landscape de Puerto Los Cabos"
                 data-ai-hint="puerto los cabos landscape"
                 fill

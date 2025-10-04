@@ -25,7 +25,7 @@ export default function ContactoPrensaPage() {
               </div>
               <div>
                 <Image
-                    src="https://picsum.photos/seed/contact-press/800/600"
+                    src="/Images/Prensa/FICC_Banner_2.png"
                     alt="Contacto de Prensa"
                     data-ai-hint="desk phone notebook"
                     width={800}
