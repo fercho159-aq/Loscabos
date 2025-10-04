@@ -78,7 +78,7 @@ export default function IndustriaPage() {
             </h1>
             <p className="mt-4 text-xl font-semibold text-accent">Convocatoria abierta a partir del 13 de Octubre.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-                 <Button size="lg" disabled>
+                 <Button size="lg" disabled className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
                     Aplicar a la Convocatoria
                 </Button>
             </div>
@@ -256,7 +256,7 @@ export default function IndustriaPage() {
                         </AccordionItem>
                     </Accordion>
                     <div className="text-center mt-12">
-                        <Button size="lg" disabled>Aplica a la convocatoria</Button>
+                        <Button size="lg" disabled className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">Aplica a la convocatoria</Button>
                     </div>
                 </div>
             </div>
@@ -304,3 +304,4 @@ export default function IndustriaPage() {
     
 
     
+
