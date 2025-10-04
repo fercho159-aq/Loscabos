@@ -89,10 +89,7 @@ export default function Header() {
           <NavContent />
         </nav>
         <div className="flex items-center gap-4">
-          <Button asChild variant="link" className={cn(
-              "hidden sm:inline-flex text-xs font-headline",
-              isTransparent ? "text-accent hover:text-accent/80" : "text-accent hover:text-accent/80"
-          )}>
+          <Button asChild className="hidden sm:inline-flex bg-accent text-accent-foreground hover:bg-accent/90 font-headline rounded-none">
             <Link href="/pre-registro">
                 PRE-REGÍSTRATE
             </Link>
