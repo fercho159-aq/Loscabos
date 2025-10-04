@@ -63,7 +63,7 @@ export default function CampusPage() {
                     <div>
                         <Card className="overflow-hidden shadow-2xl">
                            <Image 
-                                src="https://picsum.photos/seed/mapa-plc/1000/800"
+                                src="/Images/Campus/FICC_Banner2.jpg"
                                 alt="Mapa de Puerto Los Cabos"
                                 data-ai-hint="illustrated map"
                                 width={1000}
@@ -116,7 +116,7 @@ export default function CampusPage() {
         <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground">
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="https://picsum.photos/seed/sjc-venue/1920/1080"
+                    src="/Images/Campus/FICC_Banner4.jpg"
                     alt="Sede del festival en San José del Cabo"
                     data-ai-hint="festival venue evening"
                     fill
@@ -139,7 +139,7 @@ export default function CampusPage() {
                     <div>
                          <Card className="overflow-hidden shadow-xl">
                             <Image 
-                                src="https://picsum.photos/seed/plc-vision/800/600"
+                                src="/Images/Campus/FICC_Banner7.jpg"
                                 alt="Vista de Puerto Los Cabos"
                                 data-ai-hint="puerto los cabos view"
                                 width={800}

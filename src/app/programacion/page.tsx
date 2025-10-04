@@ -20,7 +20,7 @@ export default function ProgramacionPage() {
                 </div>
                 <div className="w-full max-w-4xl">
                      <Image 
-                        src="https://picsum.photos/seed/program-soon/1200/600"
+                        src="/Images/Programacion/FICC_Banner3.png"
                         alt="Próximamente"
                         data-ai-hint="cinema curtain stage"
                         width={1200}
