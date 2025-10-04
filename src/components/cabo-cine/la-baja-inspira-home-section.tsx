@@ -23,8 +23,8 @@ export default function LaBajaInspiraHomeSection() {
           {/* Left Column: Content */}
           <div className="space-y-6">
             <div>
-                <p className="font-headline text-accent tracking-widest text-sm">EN EL CORAZÓN DEL FESTIVAL</p>
-                <p className="font-headline text-accent tracking-widest text-sm mb-4">INTERNACIONAL DE CINE DE LOS CABOS</p>
+                <p className="font-headline text-accent tracking-widest text-[2vw]">EN EL CORAZÓN DEL FESTIVAL</p>
+                <p className="font-headline text-accent tracking-widest text-[2vw]   mb-4">INTERNACIONAL DE CINE DE LOS CABOS</p>
                 <h2 className="font-headline text-5xl sm:text-6xl font-bold text-foreground">LA BAJA <span className="text-accent">INSPIRA</span></h2>
                 <p className="mt-4 text-lg text-muted-foreground">
                     La Baja Inspira es la sección competitiva dedicada a celebrar las historias que nacen del territorio. Este programa reconoce y visibiliza a los cineastas que retratan la esencia de la península de Baja California, desde sus paisajes hasta sus comunidades, ofreciendo a la audiencia local la posibilidad de verse reflejada en la pantalla.
