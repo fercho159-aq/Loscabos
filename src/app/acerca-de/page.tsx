@@ -27,7 +27,7 @@ export default function AcercaDePage() {
         <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground text-center">
             <div className="absolute inset-0 z-0">
                 <Image
-                src="https://picsum.photos/seed/discover-3/600/400"
+                src="/Images/13a/FICC_Banner14.jpg"
                 alt="Banner de la sección Sobre el FICLosCabos"
                 data-ai-hint="festival crowd lights"
                 fill
@@ -56,7 +56,7 @@ export default function AcercaDePage() {
                     </div>
                     <div>
                          <Image
-                            src="https://picsum.photos/seed/about-1/800/600"
+                            src="/Images/13a/FICC_Banner_4.png"
                             alt="Talento internacional en el festival"
                             data-ai-hint="international talent festival"
                             width={800}
@@ -69,7 +69,7 @@ export default function AcercaDePage() {
                  <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="order-2 md:order-1">
                         <Image
-                            src="https://picsum.photos/seed/about-2/800/600"
+                            src="/Images/13a/FICC_Banner_5.png"
                             alt="Convergencia de disciplinas creativas"
                             data-ai-hint="creative disciplines convergence"
                             width={800}
@@ -88,7 +88,7 @@ export default function AcercaDePage() {
                     </div>
                     <div>
                          <Image
-                            src="https://picsum.photos/seed/about-3/800/600"
+                            src="/Images/13a/FICC_Banner_3.png"
                             alt="Naturaleza y creatividad en Los Cabos"
                             data-ai-hint="nature creativity cabo"
                             width={800}
@@ -101,13 +101,13 @@ export default function AcercaDePage() {
                 <div className="text-lg text-muted-foreground space-y-6 bg-card p-8 rounded-lg shadow-lg">
                     <p>Al incorporar lenguajes digitales, experiencias inmersivas y narrativas transmedia, el Festival responde a los retos de la era tecnológica y se consolida como un vehículo de desarrollo económico, cultural y creativo a nivel internacional, proyectando a Puerto Los Cabos como un ecosistema creativo y regenerativo con voz global.</p>
                      <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" asChild>
+                        <Button size="lg" asChild className="font-headline rounded-none bg-accent text-accent-foreground hover:bg-accent/90">
                            <Link href="/pre-registro">
                             <Ticket className="mr-2 h-5 w-5" />
                             Pre-regístrate
                            </Link>
                         </Button>
-                         <Button size="lg" variant="outline">
+                         <Button size="lg" variant="outline" className="font-headline rounded-none">
                             Explora las ediciones anteriores
                         </Button>
                     </div>

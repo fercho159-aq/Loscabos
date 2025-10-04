@@ -16,7 +16,7 @@ export default function AnimacionPage() {
         <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground text-center">
             <div className="absolute inset-0 z-0">
                 <Image
-                src="https://picsum.photos/seed/anim-banner/1920/1080"
+                src="/Images/Animacion/FICC_Banner12.png"
                 alt="Banner de la sección de animación"
                 data-ai-hint="abstract animation"
                 fill
@@ -41,7 +41,7 @@ export default function AnimacionPage() {
                     </div>
                     <div>
                          <Image
-                            src="https://picsum.photos/seed/anim-1/800/600"
+                            src="/Images/Animacion/FICC_Banner_6.jpg"
                             alt="Proceso creativo de animación"
                             data-ai-hint="animation creation process"
                             width={800}
@@ -54,7 +54,7 @@ export default function AnimacionPage() {
                  <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="order-2 md:order-1">
                         <Image
-                            src="https://picsum.photos/seed/anim-2/800/600"
+                            src="/Images/Animacion/FICC_Banner_7.jpg"
                             alt="Ventana de talento emergente"
                             data-ai-hint="emerging talent showcase"
                             width={800}

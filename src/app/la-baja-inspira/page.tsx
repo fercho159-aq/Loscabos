@@ -41,7 +41,7 @@ export default function LaBajaInspiraPage() {
         <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground text-center">
             <div className="absolute inset-0 z-0">
                 <Image
-                src="https://picsum.photos/seed/baja-inspira-banner/1920/1080"
+                src="/Images/BajaInspira/FICC_Banner9.png"
                 alt="Banner de La Baja Inspira"
                 data-ai-hint="baja california desert ocean"
                 fill
@@ -65,7 +65,7 @@ export default function LaBajaInspiraPage() {
                         <p>La Baja Inspira es un puente entre lo local y lo global: abre un espacio para que el talento de la región dialogue con México y el mundo, fortaleciendo la identidad cultural y consolidando a Baja California como un epicentro audiovisual con voz propia.</p>
                     </div>
                     <div>
-                        <Image src="https://picsum.photos/seed/baja-intro-1/800/600" alt="Paisaje de Baja California" data-ai-hint="baja california scenery" width={800} height={600} className="rounded-lg shadow-xl" />
+                        <Image src="/Images/BajaInspira/FICC_Banner10.png" alt="Paisaje de Baja California" data-ai-hint="baja california scenery" width={800} height={600} className="rounded-lg shadow-xl" />
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@ export default function LaBajaInspiraPage() {
         <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground">
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="https://picsum.photos/seed/escine-banner-2/1920/1080"
+                    src="/Images/BajaInspira/FICC_Banner11.png"
                     alt="Alianza con ESCINE"
                     data-ai-hint="film students collaboration"
                     fill

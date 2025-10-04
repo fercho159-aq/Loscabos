@@ -98,7 +98,7 @@ export default function IndustriaPage() {
                     </div>
                      <div className='md:col-span-2'>
                         <Image
-                            src="/Images/FF/Foto Gabriel Figueroa_tiff.png"
+                            src="/Images/FF/FICC_Banner5.jpg"
                             alt="Cineasta en set"
                             data-ai-hint="filmmaker on set"
                             width={800}
@@ -116,7 +116,7 @@ export default function IndustriaPage() {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div>
                         <Image 
-                            src="https://picsum.photos/seed/gfff-represent/800/600"
+                            src="/Images/FF/FICC_Banner6.jpg"
                             alt="Networking en evento de cine"
                             data-ai-hint="cinema networking event"
                             width={800}
@@ -157,7 +157,7 @@ export default function IndustriaPage() {
         <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground">
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="https://picsum.photos/seed/convocatoria-banner/1920/1080"
+                    src="/Images/FF/FICC_Banner8.jpg"
                     alt="Banner Convocatoria"
                     data-ai-hint="film slate camera"
                     fill
@@ -286,7 +286,7 @@ export default function IndustriaPage() {
             <div className="container mx-auto px-4 max-w-4xl">
                  <div className="text-center">
                     <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground mb-4">Sobre Gabriel Figueroa</h2>
-                    <Image src="/Images/Biografias/FICC_DECK2025.pdf-image-115.jpg" alt="Gabriel Figueroa" width={200} height={200} data-ai-hint="man portrait monochrome" className="mx-auto rounded-full my-6 shadow-lg" />
+                    <Image src="/Images/FF/Foto Gabriel Figueroa_tiff.png" alt="Gabriel Figueroa" width={200} height={200} data-ai-hint="man portrait monochrome" className="mx-auto rounded-full my-6 shadow-lg" />
                     <div className="text-lg text-muted-foreground space-y-4 text-left sm:text-center">
                         <p>Gabriel Figueroa (1907–1997) fue uno de los grandes directores de fotografía del cine mexicano y mundial. Con más de 200 películas, colaboraciones con Luis Buñuel, John Huston y John Ford, y una nominación al Oscar por La noche de la iguana, su legado se convirtió en símbolo de excelencia cinematográfica.</p>
                         <p>El Fondo Fílmico Gabriel Figueroa, creado en 2012 en su honor, se ha consolidado como el brazo estratégico del FICLosCabos para vincularse con la industria fílmica. Ha otorgado más de 46 millones de pesos en apoyos y premios, impulsando proyectos de postproducción y coproducción internacional.</p>
