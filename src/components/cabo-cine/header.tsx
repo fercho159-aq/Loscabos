@@ -54,7 +54,7 @@ export default function Header() {
           key={link.href} 
           href={link.href} 
           onClick={() => setOpen(false)} 
-          style={{ fontSize: '17px' }}
+          style={{ fontSize: '15px' }}
           className={cn(
             "font-medium transition-colors block py-2 lg:py-0",
             isTransparent ? "text-background hover:text-background/80" : "text-foreground hover:text-accent"
