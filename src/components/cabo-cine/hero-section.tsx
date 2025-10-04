@@ -46,10 +46,10 @@ export default function HeroSection() {
                     </Link>
                 </Button>
             </div>
-            <p className="text-[3vw] text-background/80">
+            <p className="text-[1vw] text-background/80">
             TE AVISAREMOS CUANDO
             </p>
-            <p className="mt-2 text-sm text-background/80">
+            <p className="text-sm text-background/80">
             SE ABRA LA TAQUILLA.
             </p>
         </div>
