@@ -71,7 +71,7 @@ export default function PreRegistroPage() {
                 Pre-registro FICLosCabos 2025
               </h1>
               <p className="mt-4 text-lg text-muted-foreground">
-                acceso a nuestra taquilla.
+                Pre-regístrate para recibir la notificación oficial de la apertura de taquilla y asegurar tu lugar en las proyecciones, conciertos, paneles y experiencias inmersivas que transformarán Puerto Los Cabos en un campus creativo global.
               </p>
             </div>
 
