@@ -278,7 +278,7 @@ export default function IndustriaPage() {
                                     alt={`Retrato de ${member.name}`} 
                                     data-ai-hint="portrait" 
                                     fill
-                                    className="object-cover"
+                                    className="object-cover aspect-square"
                                 />
                            </div>
                            <h3 className="text-2xl font-bold font-headline text-foreground">{member.name}</h3>
@@ -312,4 +312,5 @@ export default function IndustriaPage() {
     
 
     
+
 

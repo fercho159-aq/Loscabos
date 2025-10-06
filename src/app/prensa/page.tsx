@@ -78,7 +78,7 @@ export default function PrensaPage() {
                     data-ai-hint="desk phone notebook"
                     width={800}
                     height={600}
-                    className="rounded-lg shadow-2xl object-cover w-full h-auto"
+                    className="rounded-lg object-cover w-full h-auto"
                 />
               </div>
             </div>
