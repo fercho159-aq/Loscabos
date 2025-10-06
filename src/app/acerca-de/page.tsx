@@ -8,14 +8,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const discoverLinks = [
-    { title: "Programación 2025", href: "/programacion", imgSrc: "https://picsum.photos/seed/discover-1/600/400", imgHint: "cinema screen" },
-    { title: "Campus FICLosCabos", href: "/campus", imgSrc: "https://picsum.photos/seed/discover-2/600/400", imgHint: "event location" },
-    { title: "Animación", href: "/animacion", imgSrc: "https://picsum.photos/seed/discover-3/600/400", imgHint: "animation art" },
+    { title: "Programación 2025", href: "/programacion", imgSrc: "/Images/Programacion/FICC_Banner3.png", imgHint: "cinema screen" },
+    { title: "Campus FICLosCabos", href: "/campus", imgSrc: "/Images/Campus/Ganzo-Beach-Jetty-20.jpg", imgHint: "event location" },
+    { title: "Animación", href: "/animacion", imgSrc: "/Images/Animacion/FICC_Banner12.png", imgHint: "animation art" },
 ];
 
 const initiativesLinks = [
-    { title: "Fondo Fílmico Gabriel Figueroa", href: "/industria", imgSrc: "https://picsum.photos/seed/initiatives-1/600/400", imgHint: "film award" },
-    { title: "La Baja Inspira", href: "/la-baja-inspira", imgSrc: "https://picsum.photos/seed/initiatives-2/600/400", imgHint: "desert landscape" },
+    { title: "Fondo Fílmico Gabriel Figueroa", href: "/industria", imgSrc: "/Images/FF/FICC_Banner8.jpg", imgHint: "film award" },
+    { title: "La Baja Inspira", href: "/la-baja-inspira", imgSrc: "/Images/BajaInspira/FICC_Banner9.png", imgHint: "desert landscape" },
 ];
 
 export default function AcercaDePage() {
