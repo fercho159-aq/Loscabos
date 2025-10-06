@@ -1,6 +1,6 @@
+import 'dotenv/config';
 import { neon } from '@netlify/neon';
 
-// This will automatically use the NETLIFY_DATABASE_URL environment variable.
-const sql = neon();
+const sql = neon(process.env.DATABASE_URL!);
 
 export default sql;
