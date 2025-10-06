@@ -20,9 +20,9 @@ export default function HeroSection() {
      
       <div className="relative z-10 p-4 animate-in fade-in duration-1000 flex flex-col items-center">
         
-        <div className="w-[60vw] px-4">
+        <div className="w-[80vw] md:w-[60vw] px-4">
             <Image 
-                src="/Images/Main/logo main.png" 
+                src="/Images/Main/FICC_Logo2.png" 
                 alt="CaboCine Logo" 
                 width={1200}
                 height={320}
@@ -31,22 +31,22 @@ export default function HeroSection() {
                 />
         </div>
 
-        <p className="mt-4 font-headline text-[3vw] text-background tracking-widest leading-none">
+        <p className="mt-4 font-headline text-[5vw] md:text-[3vw] text-background tracking-widest leading-none">
             #BEYONDTHESCREEN
         </p>
 
-        <div className="mt-20 flex flex-col items-center gap-2">
-            <p className="text-sm text-background/80">
+        <div className="mt-12 md:mt-20 flex flex-col items-center gap-2">
+            <p className="text-base md:text-sm text-background/80">
             ¿TE INTERESA ASISTIR?
             </p>
-            <div className="">
-                <Button asChild className="font-headline text-lg group transition-all duration-300 transform hover:scale-105 bg-accent text-accent-foreground hover:bg-accent/90 w-[266px] h-[46px] py-[10px] px-[2px] rounded-none">
+            <div className="my-2">
+                <Button asChild className="font-headline text-xl md:text-lg group transition-all duration-300 transform hover:scale-105 bg-accent text-accent-foreground hover:bg-accent/90 w-[266px] h-14 md:h-[46px] py-[10px] px-[2px] rounded-none">
                     <Link href="/pre-registro">
                         PRE-REGÍSTRATE AQUÍ
                     </Link>
                 </Button>
             </div>
-            <p className="text-m text-background/80 mt-1">
+            <p className="text-lg md:text-base text-background/80 mt-1 text-center">
             TE AVISAREMOS CUANDO
             <br />
             SE ABRA LA TAQUILLA.
