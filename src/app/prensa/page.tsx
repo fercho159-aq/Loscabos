@@ -73,7 +73,7 @@ export default function PrensaPage() {
               </div>
               <div>
                 <Image
-                    src="https://picsum.photos/seed/contact-press/800/600"
+                    src="/Images/Prensa/FICC_Banner_5 (1).png"
                     alt="Contacto de Prensa"
                     data-ai-hint="desk phone notebook"
                     width={800}
