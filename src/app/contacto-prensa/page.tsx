@@ -25,12 +25,12 @@ export default function ContactoPrensaPage() {
               </div>
               <div>
                 <Image
-                    src="/Images/Prensa/FICC_Banner_2.png"
+                    src="/Images/Prensa/FICC_Banner_4 (1).png"
                     alt="Contacto de Prensa"
                     data-ai-hint="desk phone notebook"
                     width={800}
                     height={600}
-                    className="rounded-lg shadow-2xl object-cover w-full h-auto"
+                    className="rounded-lg object-cover w-full h-auto"
                 />
               </div>
             </div>
