@@ -63,7 +63,7 @@ export default function CampusPage() {
                     <div>
                         <Card className="overflow-hidden shadow-2xl">
                            <Image 
-                                src="/Images/Campus/FICC_Banner2.jpg"
+                                src="/Images/Campus/Ganzo-Beach-Jetty-20.jpg"
                                 alt="Mapa de Puerto Los Cabos"
                                 data-ai-hint="illustrated map"
                                 width={1000}

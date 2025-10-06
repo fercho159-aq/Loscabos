@@ -36,7 +36,7 @@ const gfffRepresents = [
 const selectionCommittee = [
     { name: "Juan Patricio Riveroll", bio: "Director, productor y guionista de tres largometrajes de ficción, entre ellos Ópera (2007), ganador del premio Naguib Mahfouz a la primera película de un director, mejor actriz y el FIPRESCI en el Festival del Cairo. Ha publicado cuatro novelas, Todo el oro de Lisboa (Tusquets) es la más reciente.", imgSrc: "/Images/FF/_RSL1446.jpg" },
     { name: "Jaime Romandía", bio: "Fundador de Mantarraya, productor de más de 45 filmes premiados en Cannes y Venecia. Dirige ESCINE.", imgSrc: "https://picsum.photos/seed/romandia/400/400" },
-    { name: "Alfredo Ruiz", bio: "Director de la Licenciatura en Cinematografía en ESCINE. Experiencia en curaduría, crítica y formación académica.", imgSrc: "https://picsum.photos/seed/ruiz/400/400" },
+    { name: "Alfredo Ruiz", bio: "Alfredo Ruiz Arias estudió Comunicación y se formó en UNAM, SOMA y MUAC en Historia del Arte y Curaduría. En 2019 cursó el posgrado en Comisariado Cinematográfico en la Elías Querejeta Zine Eskola. Alumni del Locarno Industry Academy, desde 2020 dirige la Licenciatura en Cinematografía en ESCINE y colabora en proyectos curatoriales.", imgSrc: "/Images/FF/foto alfredo r.jpeg" },
 ];
 
 const confirmedAwards = [
@@ -91,7 +91,7 @@ export default function IndustriaPage() {
                 <div className="grid md:grid-cols-5 gap-12 items-center">
                     <div className='md:col-span-3'>
                         <div className="text-lg text-muted-foreground space-y-4">
-                            <p>En el marco del Festival Internacional de Cine de Los Cabos 2025, el Fondo Fílmico Gabriel Figueroa (GFFF) entra en una etapa renovada como parte de la visión #BeyondTheScreen. Creado en 2012, este programa ha impulsado la consolidación de nuevas voces del cine mexicano, y hoy se proyecta como un motor estratégico dentro del ecosistema de las industrias creativas.</p>
+                            <p>En el marco del FICLosCabos 2025, el Fondo Fílmico Gabriel Figueroa (GFFF) entra en una etapa renovada como parte de la visión #BeyondTheScreen. Creado en 2012, este programa ha impulsado la consolidación de nuevas voces del cine mexicano, y hoy se proyecta como un motor estratégico dentro del ecosistema de las industrias creativas.</p>
                             <p>En alianza con la Escuela Superior de Cine (<Link href="https://escine.mx/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">ESCINE</Link>), el Fondo gana legitimidad, credibilidad y alcance, ofreciendo a cineastas emergentes un puente con productores, distribuidores, inversionistas y festivales internacionales.</p>
                             <p>Con esta visión renovada, el Fondo Fílmico Gabriel Figueroa reafirma el compromiso del FICLosCabos 2025: ser no solo un festival de cine, sino una plataforma que potencia a Puerto Los Cabos como ecosistema creativo y regenerativo, al tiempo que fortalece el desarrollo económico y cultural de la industria cinematográfica mexicana.</p>
                         </div>
@@ -272,7 +272,15 @@ export default function IndustriaPage() {
                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                     {selectionCommittee.map((member) => (
                         <Card key={member.name} className="bg-card text-center p-6 shadow-lg">
-                           <Image src={member.imgSrc} alt={`Retrato de ${member.name}`} data-ai-hint="portrait" width={150} height={150} className="mx-auto rounded-full mb-4"/>
+                           <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden">
+                                <Image 
+                                    src={member.imgSrc} 
+                                    alt={`Retrato de ${member.name}`} 
+                                    data-ai-hint="portrait" 
+                                    fill
+                                    className="object-cover"
+                                />
+                           </div>
                            <h3 className="text-2xl font-bold font-headline text-foreground">{member.name}</h3>
                            <p className="text-muted-foreground mt-2 text-sm" dangerouslySetInnerHTML={{ __html: member.bio.replace('ESCINE', '<a href="https://escine.mx/" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">ESCINE</a>') }} />
                         </Card>
@@ -304,3 +312,4 @@ export default function IndustriaPage() {
     
 
     
+
