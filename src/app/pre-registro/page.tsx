@@ -71,7 +71,7 @@ export default function PreRegistroPage() {
                 Pre-registro FICLosCabos 2025
               </h1>
               <p className="mt-4 text-lg text-muted-foreground">
-                ¡Sé el primero en enterarte de todo! Completa el formulario para recibir noticias exclusivas, acceso a preventas y más.
+                acceso a nuestra taquilla.
               </p>
             </div>
 
