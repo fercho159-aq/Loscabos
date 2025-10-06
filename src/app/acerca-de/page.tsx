@@ -57,7 +57,7 @@ export default function AcercaDePage() {
                     <div>
                          <Image
                             src="/Images/13a/FICC_Banner_4.png"
-                            alt="Talento internacional en el festival"
+                            alt="Talento internaxcional en el festival"
                             data-ai-hint="international talent festival"
                             width={800}
                             height={600}
@@ -119,7 +119,7 @@ export default function AcercaDePage() {
         <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground">
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="https://picsum.photos/seed/escine-alliance/1920/1080"
+                    src="/Images/Acerca de/FICC_Banner8 (1).png"
                     alt="Alianza con ESCINE"
                     data-ai-hint="film students collaboration"
                     fill
