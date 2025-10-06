@@ -20,7 +20,7 @@ export default function HeroSection() {
      
       <div className="relative z-10 p-4 animate-in fade-in duration-1000 flex flex-col items-center">
         
-        <div className="w-[80vw] px-4">
+        <div className="w-[85vw] px-4">
             <Image 
                 src="/Images/Main/logo main.png" 
                 alt="CaboCine Logo" 
@@ -31,7 +31,7 @@ export default function HeroSection() {
                 />
         </div>
 
-        <p className="mt-4 font-headline text-[5vw] text-background tracking-widest leading-none">
+        <p className="mt-4 font-headline text-[4vw] text-background tracking-widest leading-none">
             #BEYONDTHESCREEN
         </p>
 
@@ -46,7 +46,7 @@ export default function HeroSection() {
                     </Link>
                 </Button>
             </div>
-            <p className="text-[2vw] text-background/80 mt-10">
+            <p className="text-m text-background/80 mt-10">
             TE AVISAREMOS CUANDO
             <br />
             SE ABRA LA TAQUILLA.

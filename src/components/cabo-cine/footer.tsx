@@ -35,7 +35,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         
         <div className="flex justify-center space-x-6 mb-[150px]">
-            <Link href="#" className="text-accent-foreground hover:text-accent-foreground/80 transition-colors"><Instagram className="h-5 w-5" /></Link>
+            <Link href="https://www.instagram.com/loscabosiff/" target="_blank" rel="noopener noreferrer" className="text-accent-foreground hover:text-accent-foreground/80 transition-colors"><Instagram className="h-5 w-5" /></Link>
             <Link href="#" className="text-accent-foreground hover:text-accent-foreground/80 transition-colors"><Facebook className="h-5 w-5" /></Link>
             <Link href="#" className="text-accent-foreground hover:text-accent-foreground/80 transition-colors"><Youtube className="h-5 w-5" /></Link>
         </div>

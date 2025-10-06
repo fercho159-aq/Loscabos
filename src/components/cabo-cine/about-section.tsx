@@ -10,7 +10,7 @@ export default function AboutSection() {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-12">
             <div className="space-y-4">
-                <p className="font-headline text-[4vw] text-accent tracking-widest">10 AL 14 DE DICIEMBRE DEL 2025</p>
+                <p className="font-headline text-l text-accent tracking-widest">10 AL 14 DE DICIEMBRE DEL 2025</p>
                 <h2 className="font-headline text-4xl md:text-5xl text-foreground">
                     EL FESTIVAL INTERNACIONAL DE CINE DE LOS CABOS CELEBRARÁ SU 13ª EDICIÓN
                 </h2>
