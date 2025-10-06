@@ -14,10 +14,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const galleryImages = [
-  { src: "https://picsum.photos/seed/plc-gallery-1/600/800", alt: "Vista de la marina de Puerto Los Cabos", hint: "marina boats" },
-  { src: "https://picsum.photos/seed/plc-gallery-2/600/800", alt: "Atardecer en la playa", hint: "beach sunset" },
+  { src: "/Images/PuertoCabos/FICC_Banner__PLC.png", alt: "Vista de la marina de Puerto Los Cabos", hint: "marina boats" },
+  { src: "/Images/PuertoCabos/FICC_Banner_PLC2.png", alt: "Atardecer en la playa", hint: "beach sunset" },
   { src: "/Images/PuertoCabos/FICC_Banner_1.png", alt: "Campo de golf con vista al mar", hint: "golf course ocean" },
-  { src: "https://picsum.photos/seed/plc-gallery-4/600/800", alt: "Arte en el Hotel El Ganzo", hint: "hotel art" },
+  { src: "/Images/PuertoCabos/FICC_Banner_PLC3.png", alt: "Arte en el Hotel El Ganzo", hint: "hotel art" },
   { src: "https://picsum.photos/seed/plc-gallery-5/600/800", alt: "Evento en Crania", hint: "outdoor event night" },
 ];
 
