@@ -42,7 +42,7 @@ export default function Footer() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center sm:text-left">
 
-          {/* FIC LosCabos 2025 */}
+          {/* FICLosCabos 2025 */}
           <div className="sm:mx-auto">
             <h3 className="font-headline tracking-widest text-accent-foreground mb-4">#FICLOSCABOS 2025</h3>
             <ul className="space-y-2">

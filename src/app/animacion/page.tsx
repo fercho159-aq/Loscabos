@@ -63,7 +63,7 @@ export default function AnimacionPage() {
                         />
                     </div>
                     <div className="order-1 md:order-2 text-lg text-muted-foreground space-y-4">
-                       <p>La inclusión de la animación en el FIC Los Cabos 2025 posiciona al festival como una ventana para el talento emergente en México y el mundo, reconociendo la fuerza creativa que hoy define la cultura contemporánea.</p>
+                       <p>La inclusión de la animación en el FICLosCabos 2025 posiciona al festival como una ventana para el talento emergente en México y el mundo, reconociendo la fuerza creativa que hoy define la cultura contemporánea.</p>
                     </div>
                 </div>
 

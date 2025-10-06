@@ -70,7 +70,7 @@ export default function Header() {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isTransparent ? 'bg-transparent' : 'bg-card/95 backdrop-blur-sm shadow-md'
+        isTransparent ? 'bg-transparent' : 'bg-card/95 backdrop-blur-sm'
       )}
     >
       <div className="container mx-auto px-4 h-20 flex justify-between items-center">

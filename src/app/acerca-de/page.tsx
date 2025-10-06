@@ -141,7 +141,7 @@ export default function AcercaDePage() {
             <div className="container mx-auto px-4 space-y-16">
                 <div>
                     <div className="text-center mb-10">
-                        <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Descubre el FIC Los Cabos 2025</h2>
+                        <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Descubre el FICLosCabos 2025</h2>
                     </div>
                      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {discoverLinks.map((link) => (

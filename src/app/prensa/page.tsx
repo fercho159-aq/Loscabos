@@ -20,7 +20,7 @@ export default function PrensaPage() {
                 Sala de Prensa
               </h1>
               <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                Encuentra aquí los últimos comunicados, noticias y recursos oficiales del Festival Internacional de Cine de Los Cabos.
+                Encuentra aquí los últimos comunicados, noticias y recursos oficiales del FICLosCabos.
               </p>
             </div>
 

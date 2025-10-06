@@ -4,7 +4,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'CaboCine | Festival Internacional de Cine de Los Cabos',
+  title: 'CaboCine | FICLosCabos',
   description: 'El portal al destino y al cine. Explora la programación, compra boletos y conecta con la industria cinematográfica en Los Cabos.',
 };
 
