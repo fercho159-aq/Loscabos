@@ -35,12 +35,12 @@ export default function ImpulsoIndustriaPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="md:order-2">
                     <Image
-                        src="/Images/FF/FICC_Banner8.jpg"
+                        src="/Images/Impulso/FICC_Banner_Iniciativas1.png"
                         alt="Fondo Fílmico Gabriel Figueroa"
                         data-ai-hint="film award"
                         width={800}
                         height={600}
-                        className="rounded-lg shadow-2xl"
+                        className="rounded-lg "
                     />
                 </div>
                 <div className="md:order-1">
@@ -59,12 +59,12 @@ export default function ImpulsoIndustriaPage() {
              <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                      <Image
-                        src="/Images/BajaInspira/FICC_Banner9.png"
+                        src="/Images/Impulso/FICC_Banner_Iniciativas2.png"
                         alt="La Baja Inspira"
                         data-ai-hint="baja california landscape"
                         width={800}
                         height={600}
-                        className="rounded-lg shadow-2xl"
+                        className="rounded-lg "
                     />
                 </div>
                 <div>
@@ -96,12 +96,12 @@ export default function ImpulsoIndustriaPage() {
                     </div>
                      <div>
                         <Image
-                            src="/Images/Acerca de/FICC_Banner8 (1).png"
+                            src="/Images/Impulso/FICC_Banner_Iniciativas3.png"
                             alt="Alianza con ESCINE"
                             data-ai-hint="film students collaboration"
                             width={800}
                             height={600}
-                            className="rounded-lg shadow-2xl"
+                            className="rounded-lg"
                         />
                     </div>
                 </div>
