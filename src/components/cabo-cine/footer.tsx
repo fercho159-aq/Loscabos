@@ -98,7 +98,7 @@ export default function Footer() {
         <div className="mt-20 text-center">
             <div className="flex justify-center">
                 <Image 
-                    src="/Images/Main/logo main.png"
+                    src="/Images/Main/FICC_Logo2.png"
                     alt="CaboCine Logo"
                     width={300}
                     height={100}
