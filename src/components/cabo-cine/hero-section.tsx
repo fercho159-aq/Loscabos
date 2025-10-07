@@ -15,7 +15,7 @@ export default function HeroSection() {
           className="object-cover"
           priority
         />
-        
+        <div className="absolute inset-0 bg-black/20"></div>
       </div>
      
       <div className="relative z-10 p-4 animate-in fade-in duration-1000 flex flex-col items-center">
@@ -31,12 +31,12 @@ export default function HeroSection() {
                 />
         </div>
 
-        <p className="mt-4 font-headline text-[5vw] md:text-[3vw] text-background tracking-widest leading-none">
+        <p className="mt-4 font-headline text-[5vw] md:text-[3vw] lg:text-[2.5vw] text-background tracking-widest leading-none">
             #BEYONDTHESCREEN
         </p>
 
         <div className="mt-12 md:mt-20 flex flex-col items-center gap-2">
-            <p className="text-base md:text-sm text-background/80">
+            <p className="text-lg md:text-sm text-background/80">
             ¿TE INTERESA ASISTIR?
             </p>
             <div className="my-2">
