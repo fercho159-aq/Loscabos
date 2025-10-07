@@ -15,7 +15,7 @@ export default function HeroSection() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
      
       <div className="relative z-10 p-4 animate-in fade-in duration-1000 flex flex-col items-center">

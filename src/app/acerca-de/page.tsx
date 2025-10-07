@@ -56,12 +56,12 @@ export default function AcercaDePage() {
                     </div>
                     <div>
                          <Image
-                            src="/Images/13a/FICC_Banner_4.png"
+                            src="/Images/Acerca de/FICC_Banner_3 (1).png"
                             alt="Talento internaxcional en el festival"
                             data-ai-hint="international talent festival"
                             width={800}
                             height={600}
-                            className="rounded-lg shadow-2xl object-cover w-full h-auto"
+                            className="rounded-lg object-cover w-full h-auto"
                         />
                     </div>
                 </div>
@@ -69,12 +69,12 @@ export default function AcercaDePage() {
                  <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="order-2 md:order-1">
                         <Image
-                            src="/Images/13a/FICC_Banner_5.png"
+                            src="/Images/Acerca de/FICC_Banner_2 (1).png"
                             alt="Convergencia de disciplinas creativas"
                             data-ai-hint="creative disciplines convergence"
                             width={800}
                             height={600}
-                            className="rounded-lg shadow-2xl object-cover w-full h-auto"
+                            className="rounded-lg object-cover w-full h-auto"
                         />
                     </div>
                     <div className="order-1 md:order-2 text-lg text-muted-foreground space-y-4">
@@ -88,12 +88,12 @@ export default function AcercaDePage() {
                     </div>
                     <div>
                          <Image
-                            src="/Images/13a/FICC_Banner_3.png"
+                            src="/Images/Acerca de/FICC_Banner_1 (1).png"
                             alt="Naturaleza y creatividad en Los Cabos"
                             data-ai-hint="nature creativity cabo"
                             width={800}
                             height={600}
-                            className="rounded-lg shadow-2xl object-cover w-full h-auto"
+                            className="rounded-lg object-cover w-full h-auto"
                         />
                     </div>
                 </div>
