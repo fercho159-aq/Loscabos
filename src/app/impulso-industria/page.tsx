@@ -3,39 +3,12 @@ import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { CheckCircle, Award, Handshake, Users, Film } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const industrySupportPoints = [
-    "Plataforma de networking para creadores, productores y distribuidores.",
-    "Paneles y mesas de diálogo con líderes de la industria.",
-    "Talleres de desarrollo profesional y capacitación.",
-    "Mercado de coproducción para proyectos norteamericanos.",
-    "Oportunidades de vinculación con agentes de ventas y festivales internacionales."
-];
-
-const stats = [
-  {
-    icon: Film,
-    stat: "+500",
-    description: "proyectos impulsados a través de nuestras plataformas.",
-  },
-  {
-    icon: Handshake,
-    stat: "+200",
-    description: "alianzas estratégicas con empresas de la industria.",
-  },
-  {
-    icon: Users,
-    stat: "+1,500",
-    description: "profesionales de la industria reunidos cada edición.",
-  },
-];
-
 export default function ImpulsoIndustriaPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-card">
+    <div className="flex flex-col min-h-screen bg-background">
       <Header />
       <main className="flex-grow pt-20">
         {/* Hero Section */}
@@ -44,117 +17,106 @@ export default function ImpulsoIndustriaPage() {
             <h1 className="font-headline text-5xl md:text-7xl font-bold text-foreground">
               Impulso a la <span className="text-accent">Industria</span>
             </h1>
-            <p className="mt-4 text-xl font-semibold text-muted-foreground max-w-3xl mx-auto">
-              Conectando el talento de México, Estados Unidos y Canadá para fortalecer el futuro del cine.
+            <p className="mt-6 text-lg text-muted-foreground max-w-3xl mx-auto">
+              En esta edición, el Festival fortalece sus brazos de apoyo a la industria cinematográfica mediante alianzas institucionales que aportan fuerza, credibilidad y legitimidad a sus programas principales.
             </p>
-             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-                 <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
-                    <Link href="/acerca-de">
-                        Conoce el Festival
-                    </Link>
-                </Button>
+          </div>
+        </section>
+
+        {/* Initiatives Section */}
+        <section className="py-16 sm:py-24 bg-card">
+          <div className="container mx-auto px-4 space-y-20">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="md:order-2">
+                    <Image
+                        src="https://picsum.photos/seed/fondo-filmico/800/600"
+                        alt="Fondo Fílmico Gabriel Figueroa"
+                        data-ai-hint="film award ceremony"
+                        width={800}
+                        height={600}
+                        className="rounded-lg shadow-2xl"
+                    />
+                </div>
+                <div className="md:order-1">
+                    <h2 className="font-headline text-4xl font-bold text-foreground mb-4">Fondo Fílmico Gabriel Figueroa</h2>
+                    <p className="text-lg text-muted-foreground mb-6">
+                        Un programa especializado en la etapa de postproducción, que brinda a cineastas mexicanos la posibilidad de concluir sus proyectos con calidad técnica y artística. El fondo ofrece acompañamiento profesional, mentorías y acceso a aliados estratégicos que permiten que las películas puedan alcanzar circuitos nacionales e internacionales de exhibición.
+                    </p>
+                    <Button asChild size="lg">
+                        <Link href="/industria">
+                            Aplica a la convocatoria
+                        </Link>
+                    </Button>
+                </div>
+            </div>
+
+             <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                     <Image
+                        src="https://picsum.photos/seed/baja-inspira-page/800/600"
+                        alt="La Baja Inspira"
+                        data-ai-hint="baja california landscape"
+                        width={800}
+                        height={600}
+                        className="rounded-lg shadow-2xl"
+                    />
+                </div>
+                <div>
+                    <h2 className="font-headline text-4xl font-bold text-foreground mb-4">La Baja Inspira</h2>
+                    <p className="text-lg text-muted-foreground mb-6">
+                        Sección competitiva dedicada a las historias vinculadas con la región. Surgida como parte del esfuerzo del FICLosCabos por estrechar lazos con la comunidad local, esta iniciativa abre un espacio en el que el público de Baja California Sur puede reconocerse en sus propias narrativas: en los paisajes, los personajes y las historias que retratan la península. El programa acepta películas en distintos formatos y géneros, con requisito principal de que exista un vínculo directo con la región de Baja California o Baja California Sur.
+                    </p>
+                     <Button asChild size="lg">
+                        <Link href="/la-baja-inspira">
+                            Descubre más
+                        </Link>
+                    </Button>
+                </div>
             </div>
           </div>
         </section>
 
-        {/* Intro Section */}
-        <section className="py-16 sm:py-24 bg-card">
+        {/* ESCINE Alliance Section */}
+        <section className="py-16 sm:py-24 bg-background">
             <div className="container mx-auto px-4">
-                <div className="grid md:grid-cols-5 gap-12 items-center">
-                    <div className='md:col-span-3'>
-                        <div className="text-lg text-muted-foreground space-y-4">
-                            <p>El Festival Internacional de Cine de Los Cabos es más que una celebración del cine; es un motor fundamental para el desarrollo y la colaboración dentro de la industria cinematográfica de Norteamérica. Nuestra misión es crear un ecosistema vibrante donde cineastas, productores, distribuidores e inversionistas puedan conectar, crear y crecer.</p>
-                            <p>Desde nuestra fundación, hemos facilitado la realización de cientos de películas, fomentando un diálogo creativo y comercial que trasciende fronteras. A través de nuestros programas de industria, buscamos fortalecer la producción independiente y abrir nuevas vías para que las historias de nuestra región lleguen a una audiencia global.</p>
-                            <p>Cada año, reunimos a los profesionales más influyentes para discutir las tendencias que están moldeando el futuro del cine, desde nuevas tecnologías de producción hasta modelos de distribución innovadores.</p>
-                        </div>
+                 <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                         <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                           Este ecosistema se refuerza a través de la alianza estratégica con la Escuela Superior de Cine (ESCINE), institución de referencia en la formación audiovisual en México. Gracias a esta colaboración, los procesos de selección, evaluación y acompañamiento de proyectos cuentan con el respaldo académico y profesional que promueve la proyección internacional de los proyectos ganadores.
+                        </p>
+                        <p className="text-lg text-muted-foreground leading-relaxed">
+                           De esta manera, el FICLosCabos 2025 no solo celebra el cine: se consolida como un vehículo de desarrollo cultural y económico, capaz de articular talento, instituciones y comunidad en un mismo territorio. Estableciéndose como un medio estratégico de comunicación y desarrollo para Puerto Los Cabos, alineado con la visión global de las industrias creativas.
+                        </p>
                     </div>
-                     <div className='md:col-span-2'>
+                     <div>
                         <Image
-                            src="/Images/FF/FICC_Banner6.jpg"
-                            alt="Networking en evento de cine"
-                            data-ai-hint="cinema networking event"
+                            src="https://picsum.photos/seed/escine-alliance/800/600"
+                            alt="Alianza con ESCINE"
+                            data-ai-hint="film students collaboration"
                             width={800}
-                            height={1000}
-                            className="rounded-lg shadow-2xl object-cover"
+                            height={600}
+                            className="rounded-lg shadow-2xl"
                         />
                     </div>
                 </div>
             </div>
         </section>
         
-        {/* Represents & Results Section */}
-        <section className="py-16 sm:py-24 bg-background">
-            <div className="container mx-auto px-4 space-y-20">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <Image 
-                            src="https://picsum.photos/seed/industry-panel/800/600"
-                            alt="Panel de discusión en el festival"
-                            data-ai-hint="discussion panel festival"
-                            width={800}
-                            height={600}
-                            className="rounded-lg shadow-2xl"
-                        />
-                    </div>
-                     <div>
-                        <h2 className="font-headline text-4xl font-bold text-foreground mb-6">¿Qué Ofrecemos a la Industria?</h2>
-                         <div className="space-y-4">
-                            {industrySupportPoints.map((item, index) => (
-                                <div key={index} className="flex items-start gap-4">
-                                    <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                                    <p className="text-lg text-muted-foreground">{item}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div className="text-center mb-12">
-                        <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Nuestro Impacto</h2>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                        {stats.map((result) => (
-                            <Card key={result.stat} className="bg-card text-center p-6 shadow-lg">
-                                <result.icon className="w-12 h-12 mb-4 text-accent mx-auto" />
-                                <p className="text-5xl font-bold text-foreground font-headline">{result.stat}</p>
-                                <p className="text-muted-foreground mt-2">{result.description}</p>
-                            </Card>
-                        ))}
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        {/* Initiatives Banner */}
-        <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground">
-            <div className="absolute inset-0 z-0">
-                <Image
-                    src="/Images/FF/FICC_Banner8.jpg"
-                    alt="Banner Convocatoria"
-                    data-ai-hint="film slate camera"
-                    fill
-                    className="object-cover"
-                />
-                <div className="absolute inset-0 bg-black/70" />
-            </div>
-            <div className="container mx-auto px-4 relative z-10 text-center">
-                 <h2 className="font-headline text-5xl sm:text-7xl font-bold">Nuestras Iniciativas Clave</h2>
-            </div>
-        </section>
-
-        {/* Initiatives Details Section */}
+        {/* Navigation Blocks Section */}
         <section className="py-16 sm:py-24 bg-card">
             <div className="container mx-auto px-4">
-                <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div className="text-center mb-12">
+                    <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Conoce nuestras iniciativas</h2>
+                </div>
+                <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                    <Card className="hover:shadow-xl transition-shadow">
                         <CardHeader>
                             <CardTitle className="font-headline text-3xl">Fondo Fílmico Gabriel Figueroa</CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <p className="text-muted-foreground mb-6">Apoyamos a cineastas mexicanos en la etapa de postproducción, conectándolos con la industria global y brindando apoyos clave para la finalización de sus proyectos.</p>
-                            <Button asChild>
+                           <Button asChild>
                                 <Link href="/industria">
-                                    Conocer el Fondo
+                                    Saber más
                                 </Link>
                             </Button>
                         </CardContent>
@@ -164,10 +126,9 @@ export default function ImpulsoIndustriaPage() {
                             <CardTitle className="font-headline text-3xl">La Baja Inspira</CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <p className="text-muted-foreground mb-6">Celebramos las historias que nacen de la península, dando visibilidad al talento local y fortaleciendo la identidad cultural de Baja California a través del cine.</p>
                              <Button asChild>
                                 <Link href="/la-baja-inspira">
-                                    Explorar la Sección
+                                    Saber más
                                 </Link>
                             </Button>
                         </CardContent>
@@ -175,6 +136,7 @@ export default function ImpulsoIndustriaPage() {
                 </div>
             </div>
         </section>
+
       </main>
       <Footer />
     </div>
