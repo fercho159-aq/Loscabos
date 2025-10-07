@@ -42,7 +42,7 @@ export default function ImpulsoIndustriaPage() {
                     <p className="text-lg text-muted-foreground mb-6">
                         Un programa especializado en la etapa de postproducción, que brinda a cineastas mexicanos la posibilidad de concluir sus proyectos con calidad técnica y artística. El fondo ofrece acompañamiento profesional, mentorías y acceso a aliados estratégicos que permiten que las películas puedan alcanzar circuitos nacionales e internacionales de exhibición.
                     </p>
-                    <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                    <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                         <Link href="/industria">
                             Aplica a la convocatoria
                         </Link>
@@ -66,7 +66,7 @@ export default function ImpulsoIndustriaPage() {
                     <p className="text-lg text-muted-foreground mb-6">
                         Sección competitiva dedicada a las historias vinculadas con la región. Surgida como parte del esfuerzo del FICLosCabos por estrechar lazos con la comunidad local, esta iniciativa abre un espacio en el que el público de Baja California Sur puede reconocerse en sus propias narrativas: en los paisajes, los personajes y las historias que retratan la península. El programa acepta películas en distintos formatos y géneros, con requisito principal de que exista un vínculo directo con la región de Baja California o Baja California Sur.
                     </p>
-                     <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                     <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                         <Link href="/la-baja-inspira">
                             Descubre más
                         </Link>
@@ -114,7 +114,7 @@ export default function ImpulsoIndustriaPage() {
                             <CardTitle className="font-headline text-3xl">Fondo Fílmico Gabriel Figueroa</CardTitle>
                         </CardHeader>
                         <CardContent>
-                           <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+                           <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
                                 <Link href="/industria">
                                     Saber más
                                 </Link>
@@ -126,7 +126,7 @@ export default function ImpulsoIndustriaPage() {
                             <CardTitle className="font-headline text-3xl">La Baja Inspira</CardTitle>
                         </CardHeader>
                         <CardContent>
-                             <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+                             <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
                                 <Link href="/la-baja-inspira">
                                     Saber más
                                 </Link>
