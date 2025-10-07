@@ -5,6 +5,12 @@ import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+
+const initiativesLinks = [
+    { title: "Fondo Fílmico Gabriel Figueroa", href: "/industria", imgSrc: "/Images/FF/FICC_Banner8.jpg", imgHint: "film award" },
+    { title: "La Baja Inspira", href: "/la-baja-inspira", imgSrc: "/Images/BajaInspira/FICC_Banner9.png", imgHint: "desert landscape" },
+];
 
 export default function ImpulsoIndustriaPage() {
   return (
@@ -29,9 +35,9 @@ export default function ImpulsoIndustriaPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="md:order-2">
                     <Image
-                        src="https://picsum.photos/seed/fondo-filmico/800/600"
+                        src="/Images/FF/FICC_Banner8.jpg"
                         alt="Fondo Fílmico Gabriel Figueroa"
-                        data-ai-hint="film award ceremony"
+                        data-ai-hint="film award"
                         width={800}
                         height={600}
                         className="rounded-lg shadow-2xl"
@@ -53,7 +59,7 @@ export default function ImpulsoIndustriaPage() {
              <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                      <Image
-                        src="https://picsum.photos/seed/baja-inspira-page/800/600"
+                        src="/Images/BajaInspira/FICC_Banner9.png"
                         alt="La Baja Inspira"
                         data-ai-hint="baja california landscape"
                         width={800}
@@ -90,7 +96,7 @@ export default function ImpulsoIndustriaPage() {
                     </div>
                      <div>
                         <Image
-                            src="https://picsum.photos/seed/escine-alliance/800/600"
+                            src="/Images/Acerca de/FICC_Banner8 (1).png"
                             alt="Alianza con ESCINE"
                             data-ai-hint="film students collaboration"
                             width={800}
@@ -108,31 +114,30 @@ export default function ImpulsoIndustriaPage() {
                 <div className="text-center mb-12">
                     <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Conoce nuestras iniciativas</h2>
                 </div>
-                <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                   <Card className="hover:shadow-xl transition-shadow">
-                        <CardHeader>
-                            <CardTitle className="font-headline text-3xl">Fondo Fílmico Gabriel Figueroa</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                           <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
-                                <Link href="/industria">
-                                    Saber más
-                                </Link>
-                            </Button>
-                        </CardContent>
-                    </Card>
-                     <Card className="hover:shadow-xl transition-shadow">
-                        <CardHeader>
-                            <CardTitle className="font-headline text-3xl">La Baja Inspira</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                             <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
-                                <Link href="/la-baja-inspira">
-                                    Saber más
-                                </Link>
-                            </Button>
-                        </CardContent>
-                    </Card>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    {initiativesLinks.map((link) => (
+                       <Card key={link.title} className="bg-card hover:shadow-lg transition-shadow group overflow-hidden">
+                            <div className="relative aspect-video w-full overflow-hidden">
+                                <Image
+                                    src={link.imgSrc}
+                                    alt={link.title}
+                                    data-ai-hint={link.imgHint}
+                                    fill
+                                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                />
+                            </div>
+                            <CardHeader>
+                                <CardTitle className="text-2xl">{link.title}</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <Button variant="ghost" asChild className="text-muted-foreground group-hover:bg-accent group-hover:text-accent-foreground">
+                                    <Link href={link.href}>
+                                        Saber más <ArrowRight className="ml-2 h-4 w-4" />
+                                    </Link>
+                                </Button>
+                            </CardContent>
+                        </Card>
+                    ))}
                 </div>
             </div>
         </section>
