@@ -18,7 +18,7 @@ const aboutLinks = [
 const initiativesLinks = [
     { href: "/industria", label: "Fondo Fílmico Gabriel Figueroa" },
     { href: "/la-baja-inspira", label: "La Baja Inspira" },
-    { href: "/industria", label: "Impulso a la industria" },
+    { href: "/impulso-industria", label: "Impulso a la industria" },
 ];
 
 const pressLinks = [
