@@ -21,10 +21,19 @@ import Footer from '@/components/cabo-cine/footer';
 import { Card } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 
+declare function gtag_report_conversion(url?: string): boolean;
+
 function SubmitButton() {
   const { pending } = useFormStatus();
+  
+  const handleClick = () => {
+    if (typeof gtag_report_conversion === 'function') {
+      gtag_report_conversion();
+    }
+  };
+
   return (
-    <Button type="submit" size="lg" className="w-full" disabled={pending}>
+    <Button type="submit" size="lg" className="w-full" disabled={pending} onClick={handleClick}>
       {pending ? 'Enviando...' : 'Enviar Pre-registro'}
     </Button>
   );
@@ -158,6 +167,20 @@ export default function PreRegistroPage() {
         </section>
       </main>
       <Footer />
+      <script dangerouslySetInnerHTML={{ __html: `
+        function gtag_report_conversion(url) {
+          var callback = function () {
+            if (typeof(url) != 'undefined') {
+              window.location = url;
+            }
+          };
+          gtag('event', 'conversion', {
+              'send_to': 'AW-17633221839/JcbPCLCIoaobEM-5lthB',
+              'event_callback': callback
+          });
+          return false;
+        }
+      `}} />
     </div>
   );
 }

@@ -46,6 +46,17 @@ export default function RootLayout({
           gtag('config', 'G-SPNV1KVWNX');
         `}} />
         {/* End Google tag */}
+
+        {/* Google tag (gtag.js) for Ads */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17633221839"></script>
+        <script dangerouslySetInnerHTML={{ __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'AW-17633221839');
+        `}} />
+        {/* End Google tag for Ads */}
       </head>
       <body className="font-body antialiased">
         {children}
