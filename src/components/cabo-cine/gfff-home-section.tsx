@@ -40,7 +40,7 @@ export default function GFFFHomeSection() {
           {/* Right Column: Content */}
           <div className="space-y-6">
             <div>
-              <p className="font-semibold text-accent mb-2">CONVOCATORIA ABIERTA A PARTIR DEL 13 DE OCTUBRE.</p>
+              <p className="font-semibold text-accent mb-2">Convocatoria abierta hasta el 31 de Octubre</p>
               <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">FONDO FÍLMICO <br /> GABRIEL FIGUEROA</h2>
               <p className="mt-4 text-lg text-muted-foreground">
                 El Fondo Fílmico Gabriel Figueroa, creado en 2012 en honor al gran cinefotógrafo mexicano, entra en una nueva etapa en el marco del FICLosCabos 2025. En alianza con la Escuela Superior de Cine (ESCINE), se consolida como motor estratégico del festival para impulsar al cine mexicano, ofreciendo a cineastas emergentes un puente hacia productores, distribuidores, inversionistas y festivales internacionales, con apoyos para proyectos en desarrollo y postproducción.
@@ -74,3 +74,5 @@ export default function GFFFHomeSection() {
     </section>
   );
 }
+
+    

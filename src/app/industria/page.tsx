@@ -76,7 +76,7 @@ export default function IndustriaPage() {
             <h1 className="font-headline text-5xl md:text-7xl font-bold text-foreground">
               Fondo Fílmico <span className="text-accent">Gabriel Figueroa</span>
             </h1>
-            <p className="mt-4 text-xl font-semibold text-accent">Convocatoria abierta a partir del 13 de Octubre.</p>
+            <p className="mt-4 text-xl font-semibold text-accent">Convocatoria abierta hasta el 31 de Octubre</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
                  <Button size="lg" disabled className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
                     Aplicar a la Convocatoria
@@ -314,3 +314,6 @@ export default function IndustriaPage() {
     
 
 
+
+
+    
