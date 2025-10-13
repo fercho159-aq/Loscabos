@@ -78,8 +78,10 @@ export default function IndustriaPage() {
             </h1>
             <p className="mt-4 text-xl font-semibold text-accent">Convocatoria abierta de 13 al 31 de Octubre de 2025</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-                 <Button size="lg" disabled className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
-                    Aplicar a la Convocatoria
+                 <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
+                    <Link href="https://forms.gle/2GMvdQ7SyatX1R8w5" target='_blank' rel='noopener noreferrer'>
+                        Aplicar a la Convocatoria
+                    </Link>
                 </Button>
                 <Button size="lg" asChild variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground rounded-none font-headline">
                     <Link href="/faq-ffgf">
@@ -261,7 +263,11 @@ export default function IndustriaPage() {
                         </AccordionItem>
                     </Accordion>
                     <div className="text-center mt-12">
-                        <Button size="lg" disabled className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">Aplica a la convocatoria</Button>
+                        <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
+                             <Link href="https://forms.gle/2GMvdQ7SyatX1R8w5" target='_blank' rel='noopener noreferrer'>
+                                Aplica a la convocatoria
+                            </Link>
+                        </Button>
                     </div>
                 </div>
             </div>
@@ -313,3 +319,5 @@ export default function IndustriaPage() {
     </div>
   );
 }
+
+    
