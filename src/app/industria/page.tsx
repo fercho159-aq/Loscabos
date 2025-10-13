@@ -44,7 +44,6 @@ const confirmedAwards = [
     "Corrección de color y postproducción.",
     "Distribución y estreno comercial.",
     "Diseño de trailer y cartel.",
-    "Premio EGEDA: participación internacional en Iberseries Platino 2026, Madrid.",
     "Hospedaje del 10 al 14 de diciembre 2025 en hotel sede para un representante por proyecto.",
     "Vuelo nacional redondo para un representante.",
     "Acreditación de Industria del Festival."
