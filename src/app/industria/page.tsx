@@ -63,6 +63,14 @@ const selectionProcess = [
     { stage: "Etapa 3 – Selección final", description: "Jurado de cineastas de renombre define la selección oficial (5 largometrajes + 10 cortos)." }
 ];
 
+const ffgfSponsors = [
+    { name: "Art Kingdom", href: "https://www.artkingdom.tv/", logo: "" },
+    { name: "CTT Exp & Rentals", href: "https://cttrentals.com/", logo: "" },
+    { name: "Shalala Sound Designer", href: "https://shalala.mx/", logo: "" },
+    { name: "Artegios", href: "https://artegios.com/", logo: "" },
+    { name: "Chemistry Cine", href: "https://vimeo.com/1090606548", logo: "" }
+];
+
 
 export default function IndustriaPage() {
   return (
@@ -312,11 +320,30 @@ export default function IndustriaPage() {
                 </div>
             </div>
         </section>
+        
+        {/* FFGF Sponsors Section */}
+        <section className="py-16 sm:py-24 bg-background">
+            <div className="container mx-auto px-4">
+                <div className="text-center mb-12">
+                    <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Patrocinadores del FFGF 2025</h2>
+                    <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+                        El Fondo Fílmico Gabriel Figueroa se fortalece gracias a la colaboración de aliados estratégicos que aportan premios en especie desde sus distintas áreas de especialización.
+                    </p>
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-center max-w-5xl mx-auto">
+                    {ffgfSponsors.map((sponsor) => (
+                        <Link key={sponsor.name} href={sponsor.href} target="_blank" rel="noopener noreferrer" className="text-center font-semibold text-muted-foreground hover:text-accent transition-colors">
+                           {/* Replace with Image component when logos are available */}
+                           {sponsor.name}
+                        </Link>
+                    ))}
+                </div>
+            </div>
+        </section>
+
 
       </main>
       <Footer />
     </div>
   );
 }
-
-    
