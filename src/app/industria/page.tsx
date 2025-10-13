@@ -350,7 +350,7 @@ export default function IndustriaPage() {
                             <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/4">
                                 <div className="p-1">
                                     <Link href={sponsor.href} target="_blank" rel="noopener noreferrer">
-                                        <Card className="flex items-center justify-center p-6 h-32 bg-card hover:bg-card/80">
+                                        <Card className="flex items-center justify-center p-6 h-32 bg-transparent border-none shadow-none">
                                             {sponsor.logo ? (
                                                 <Image
                                                     src={sponsor.logo}
