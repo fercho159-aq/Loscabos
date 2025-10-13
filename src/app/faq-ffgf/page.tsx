@@ -3,7 +3,60 @@ import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Card } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { HelpCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+
+const faqData = [
+    {
+        question: "¿Qué es el Fondo Fílmico Gabriel Figueroa (GFFF)?",
+        answer: "El GFFF es una iniciativa del Festival Internacional de Cine de Los Cabos (FICLosCabos) creada en 2012 para impulsar el cine mexicano en etapas de desarrollo, postproducción y coproducción internacional. Más que un programa de apoyo, el Fondo funciona como un puente entre la creación cinematográfica y la industria, conectando a nuevos talentos con productores, distribuidores, inversionistas y festivales globales."
+    },
+    {
+        question: "¿Qué tipo de proyectos pueden aplicar?",
+        answer: "Podrán inscribirse largometrajes de ficción o documental con duración superior a 60 minutos, que sean óperas primas o segundas películas producidas o coproducidas por México.\n Los proyectos deben encontrarse en etapa de edición o inicio de postproducción."
+    },
+    {
+        question: "¿Cuál es el proceso de selección?",
+        answer: "El proceso consta de tres etapas:\n1. Elegibilidad: revisión técnica y formal de requisitos.\n2. Evaluación cualitativa: visionado doble realizado por el comité académico de ESCINE.\n3. Selección final: jurado de cineastas de renombre define hasta 5 proyectos ganadores."
+    },
+    {
+        question: "¿Cuáles son los criterios de evaluación?",
+        answer: "Los criterios de evaluación incluyen:\n- Coherencia artística y calidad técnica.\n- Narrativa y voz autoral.\n- Impacto y resonancia cultural.\n- Diversidad y vínculo con la identidad del Festival."
+    },
+    {
+        question: "¿Qué beneficios ofrece el Fondo?",
+        answer: "Los proyectos seleccionados reciben premios en especie, mentorías profesionales y reuniones privadas con empresas líderes de la industria durante el festival. El Fondo también cubre hospedaje, vuelos nacionales redondos y acreditación de industria para un representante por proyecto."
+    },
+    {
+        question: "¿Qué empresas colaboran y qué aportan?",
+        answer: "El Fondo se fortalece gracias a aliados estratégicos que contribuyen con apoyos en especie según su especialización:\n- CTT Exp & Rentals: renta de equipo cinematográfico profesional.\n- Chemistry Cine: servicios de postproducción y corrección de color.\n- Shalala: diseño y mezcla de sonido de alta calidad.\n- Artegios: distribución y promoción de documentales.\n- Art Kingdom: diseño gráfico y comunicación visual.\nCada aliado aporta su experiencia para elevar la calidad técnica, artística y comunicacional de los proyectos ganadores."
+    },
+    {
+        question: "¿Hasta cuándo puedo aplicar?",
+        answer: "La convocatoria estará abierta del 13 al 31 de octubre de 2025. Durante ese periodo podrás registrar tu proyecto y enviar el material solicitado en las bases disponibles en el sitio oficial del festival."
+    },
+    {
+        question: "¿Cuándo se anuncian los resultados?",
+        answer: "Los resultados se publicarán el 15 de noviembre de 2025. Los proyectos seleccionados serán notificados por correo electrónico y en los canales oficiales del FICLosCabos."
+    },
+    {
+        question: "¿Dónde será la premiación?",
+        answer: "La premiación oficial del Fondo se realizará del 10 al 14 de diciembre de 2025 en Puerto Los Cabos, en el marco del Festival Internacional de Cine de Los Cabos 2025."
+    },
+    {
+        question: "¿Qué ofrece el Fondo más allá de los premios?",
+        answer: "El GFFF brinda visibilidad internacional y acompañamiento profesional a los proyectos seleccionados, además de integrarlos en una red de colaboración entre cineastas, instituciones y empresas que impulsan la industria audiovisual mexicana."
+    },
+    {
+        question: "¿Quién fue Gabriel Figueroa?",
+        answer: "Gabriel Figueroa (1907–1997) fue uno de los grandes directores de fotografía del cine mexicano y mundial. Colaboró con Buñuel, Huston y Ford, y fue nominado al Óscar por La noche de la iguana. Su legado de excelencia visual y compromiso artístico inspira la misión del Fondo que lleva su nombre."
+    },
+];
+
+const finalQuestion = {
+    question: "¿Dónde puedo registrar mi proyecto o pedir más información?",
+    answer: `Las inscripciones se realizarán a través del sitio oficial del festival.<br/>Contacto: <a href="mailto:comunidadficloscabos@comunicacionlateral.com" class="text-accent hover:underline">comunidadficloscabos@comunicacionlateral.com</a><br/>Más información: <a href="https://festivaldecineloscabos.mx/industria" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">https://festivaldecineloscabos.mx/industria</a>`
+};
 
 export default function FaqFfgfPage() {
   return (
@@ -23,10 +76,27 @@ export default function FaqFfgfPage() {
             </div>
 
             <Card className="p-6 sm:p-10 bg-card shadow-xl">
-                <div className="text-center text-muted-foreground">
-                    <HelpCircle className="mx-auto h-12 w-12 mb-4 text-accent" />
-                    <h2 className="text-2xl font-bold text-foreground mb-2">Contenido Próximamente</h2>
-                    <p>Estamos preparando las respuestas a las preguntas más comunes. ¡Vuelve pronto!</p>
+                 <Accordion type="single" collapsible className="w-full">
+                    {faqData.map((item, index) => (
+                        <AccordionItem value={`item-${index}`} key={index}>
+                            <AccordionTrigger className="text-lg text-left font-semibold text-foreground hover:no-underline">{item.question}</AccordionTrigger>
+                            <AccordionContent className="text-base text-muted-foreground whitespace-pre-line pt-4">
+                                {item.answer}
+                            </AccordionContent>
+                        </AccordionItem>
+                    ))}
+                     <AccordionItem value="item-final">
+                        <AccordionTrigger className="text-lg text-left font-semibold text-foreground hover:no-underline">{finalQuestion.question}</AccordionTrigger>
+                        <AccordionContent className="text-base text-muted-foreground pt-4" dangerouslySetInnerHTML={{ __html: finalQuestion.answer }} />
+                    </AccordionItem>
+                </Accordion>
+
+                 <div className="mt-12 text-center">
+                    <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
+                        <Link href="https://forms.gle/2GMvdQ7SyatX1R8w5" target="_blank" rel="noopener noreferrer">
+                            Aplicar a la convocatoria
+                        </Link>
+                    </Button>
                 </div>
             </Card>
           </div>
