@@ -87,7 +87,9 @@ export default function FaqFfgfPage() {
                     ))}
                      <AccordionItem value="item-final">
                         <AccordionTrigger className="text-lg text-left font-semibold text-foreground hover:no-underline">{finalQuestion.question}</AccordionTrigger>
-                        <AccordionContent className="text-base text-muted-foreground pt-4" dangerouslySetInnerHTML={{ __html: finalQuestion.answer }} />
+                        <AccordionContent className="text-base text-muted-foreground pt-4">
+                           <div dangerouslySetInnerHTML={{ __html: finalQuestion.answer }} />
+                        </AccordionContent>
                     </AccordionItem>
                 </Accordion>
 
