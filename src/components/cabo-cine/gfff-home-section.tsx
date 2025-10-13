@@ -60,10 +60,15 @@ export default function GFFFHomeSection() {
               </Accordion>
             </div>
             
-            <div className="pt-4">
+            <div className="pt-4 flex flex-wrap gap-4">
               <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline px-9 h-14 py-3 text-lg">
                   <Link href="/industria">
                       DESCUBRE MÁS
+                  </Link>
+              </Button>
+              <Button asChild variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground rounded-none font-headline px-9 h-14 py-3 text-lg">
+                  <Link href="/faq-ffgf">
+                      FAQ
                   </Link>
               </Button>
             </div>
@@ -74,5 +79,3 @@ export default function GFFFHomeSection() {
     </section>
   );
 }
-
-    
