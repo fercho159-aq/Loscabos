@@ -3,6 +3,8 @@ import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
+declare function gtag(...args: any[]): void;
+
 export const metadata: Metadata = {
   title: 'CaboCine | FICLosCabos',
   description: 'El portal al destino y al cine. Explora la programación, compra boletos y conecta con la industria cinematográfica en Los Cabos.',
@@ -57,6 +59,21 @@ export default function RootLayout({
           gtag('config', 'AW-17633221839');
         `}} />
         {/* End Google tag for Ads */}
+
+        <script dangerouslySetInnerHTML={{ __html: `
+          function gtag_report_conversion(url) {
+            var callback = function () {
+              if (typeof(url) != 'undefined') {
+                window.location = url;
+              }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17633221839/JcbPCLCIoaobEM-5lthB',
+                'event_callback': callback
+            });
+            return false;
+          }
+        `}} />
       </head>
       <body className="font-body antialiased">
         {children}
