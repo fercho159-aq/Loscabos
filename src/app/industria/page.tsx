@@ -7,6 +7,14 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { CheckCircle, Award, Calendar, DollarSign, Target, Handshake, Info, Users, Film, ListChecks, Goal, GitBranch, Milestone, UserCheck } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
 
 const results = [
   {
@@ -64,11 +72,11 @@ const selectionProcess = [
 ];
 
 const ffgfSponsors = [
-    { name: "Art Kingdom", href: "https://www.artkingdom.tv/", logo: "" },
-    { name: "CTT Exp & Rentals", href: "https://cttrentals.com/", logo: "" },
-    { name: "Shalala Sound Designer", href: "https://shalala.mx/", logo: "" },
-    { name: "Artegios", href: "https://artegios.com/", logo: "" },
-    { name: "Chemistry Cine", href: "https://vimeo.com/1090606548", logo: "" }
+    { name: "Art Kingdom", href: "https://www.artkingdom.tv/", logo: "/Images/SponsorIndustria/Logos_Web-ArtKindom.png" },
+    { name: "CTT Exp & Rentals", href: "https://cttrentals.com/", logo: "/Images/SponsorIndustria/Logos_Web-CTT.png" },
+    { name: "Shalala Sound Designer", href: "https://shalala.mx/", logo: "/Images/SponsorIndustria/Logos_Web-Shalala.png" },
+    { name: "Artegios", href: "https://artegios.com/", logo: "/Images/SponsorIndustria/Logos_Web-Artegios.png" },
+    { name: "Chemistry Cine", href: "https://vimeo.com/1090606548", logo: "/Images/SponsorIndustria/Logos_Web-Chemistry.png" }
 ];
 
 
@@ -330,25 +338,40 @@ export default function IndustriaPage() {
                         El Fondo Fílmico Gabriel Figueroa se fortalece gracias a la colaboración de aliados estratégicos que aportan premios en especie desde sus distintas áreas de especialización.
                     </p>
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-center max-w-5xl mx-auto">
-                    {ffgfSponsors.map((sponsor) => (
-                        <Link key={sponsor.name} href={sponsor.href} target="_blank" rel="noopener noreferrer" className="text-center font-semibold text-muted-foreground hover:text-accent transition-colors">
-                           {/* Replace with Image component when logos are available */}
-                           {sponsor.logo ? (
-                                <Image
-                                    src={sponsor.logo}
-                                    alt={sponsor.name}
-                                    data-ai-hint="sponsor logo"
-                                    width={150}
-                                    height={75}
-                                    className="mx-auto"
-                                />
-                           ) : (
-                                <span>{sponsor.name}</span>
-                           )}
-                        </Link>
-                    ))}
-                </div>
+                <Carousel
+                    opts={{
+                        align: "start",
+                        loop: true,
+                    }}
+                    className="w-full max-w-4xl mx-auto"
+                >
+                    <CarouselContent>
+                        {ffgfSponsors.map((sponsor, index) => (
+                            <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/4">
+                                <div className="p-1">
+                                    <Link href={sponsor.href} target="_blank" rel="noopener noreferrer">
+                                        <Card className="flex items-center justify-center p-6 h-32 bg-card hover:bg-card/80">
+                                            {sponsor.logo ? (
+                                                <Image
+                                                    src={sponsor.logo}
+                                                    alt={sponsor.name}
+                                                    data-ai-hint="sponsor logo"
+                                                    width={150}
+                                                    height={75}
+                                                    className="object-contain"
+                                                />
+                                            ) : (
+                                                <span className="text-center font-semibold text-muted-foreground">{sponsor.name}</span>
+                                            )}
+                                        </Card>
+                                    </Link>
+                                </div>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                </Carousel>
             </div>
         </section>
 
