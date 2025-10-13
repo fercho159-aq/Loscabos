@@ -334,7 +334,18 @@ export default function IndustriaPage() {
                     {ffgfSponsors.map((sponsor) => (
                         <Link key={sponsor.name} href={sponsor.href} target="_blank" rel="noopener noreferrer" className="text-center font-semibold text-muted-foreground hover:text-accent transition-colors">
                            {/* Replace with Image component when logos are available */}
-                           {sponsor.name}
+                           {sponsor.logo ? (
+                                <Image
+                                    src={sponsor.logo}
+                                    alt={sponsor.name}
+                                    data-ai-hint="sponsor logo"
+                                    width={150}
+                                    height={75}
+                                    className="mx-auto"
+                                />
+                           ) : (
+                                <span>{sponsor.name}</span>
+                           )}
                         </Link>
                     ))}
                 </div>
