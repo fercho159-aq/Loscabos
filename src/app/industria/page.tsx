@@ -315,20 +315,6 @@ export default function IndustriaPage() {
             </div>
         </section>
 
-        {/* About Gabriel Figueroa Section */}
-        <section className="py-16 sm:py-24 bg-card">
-            <div className="container mx-auto px-4 max-w-4xl">
-                 <div className="text-center">
-                    <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground mb-4">Sobre Gabriel Figueroa</h2>
-                    <Image src="/Images/FF/Foto Gabriel Figueroa_tiff.png" alt="Gabriel Figueroa" width={200} height={200} data-ai-hint="man portrait monochrome" className="mx-auto rounded-full my-6 shadow-lg" />
-                    <div className="text-lg text-muted-foreground space-y-4 text-left sm:text-center">
-                        <p>Gabriel Figueroa (1907–1997) fue uno de los grandes directores de fotografía del cine mexicano y mundial. Con más de 200 películas, colaboraciones con Luis Buñuel, John Huston y John Ford, y una nominación al Oscar por La noche de la iguana, su legado se convirtió en símbolo de excelencia cinematográfica.</p>
-                        <p>El Fondo Fílmico Gabriel Figueroa, creado en 2012 en su honor, se ha consolidado como el brazo estratégico del FICLosCabos para vincularse con la industria fílmica. Ha otorgado más de 46 millones de pesos en apoyos y premios, impulsando proyectos de postproducción y coproducción internacional.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
         {/* FFGF Sponsors Section */}
         <section className="py-16 sm:py-24 bg-background">
             <div className="container mx-auto px-4">
@@ -375,7 +361,20 @@ export default function IndustriaPage() {
             </div>
         </section>
 
-
+        {/* About Gabriel Figueroa Section */}
+        <section className="py-16 sm:py-24 bg-card">
+            <div className="container mx-auto px-4 max-w-4xl">
+                 <div className="text-center">
+                    <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground mb-4">Sobre Gabriel Figueroa</h2>
+                    <Image src="/Images/FF/Foto Gabriel Figueroa_tiff.png" alt="Gabriel Figueroa" width={200} height={200} data-ai-hint="man portrait monochrome" className="mx-auto rounded-full my-6 shadow-lg" />
+                    <div className="text-lg text-muted-foreground space-y-4 text-left sm:text-center">
+                        <p>Gabriel Figueroa (1907–1997) fue uno de los grandes directores de fotografía del cine mexicano y mundial. Con más de 200 películas, colaboraciones con Luis Buñuel, John Huston y John Ford, y una nominación al Oscar por La noche de la iguana, su legado se convirtió en símbolo de excelencia cinematográfica.</p>
+                        <p>El Fondo Fílmico Gabriel Figueroa, creado en 2012 en su honor, se ha consolidado como el brazo estratégico del FICLosCabos para vincularse con la industria fílmica. Ha otorgado más de 46 millones de pesos en apoyos y premios, impulsando proyectos de postproducción y coproducción internacional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
       </main>
       <Footer />
     </div>
