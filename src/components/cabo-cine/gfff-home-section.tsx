@@ -1,8 +1,11 @@
 
+'use client';
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
+declare function gtag_report_conversion_subscribe(url?: string): boolean;
 
 const convocatoriaItems = [
     {
@@ -20,6 +23,12 @@ const convocatoriaItems = [
 ];
 
 export default function GFFFHomeSection() {
+    const handleApplyClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        if (typeof gtag_report_conversion_subscribe === 'function') {
+        gtag_report_conversion_subscribe('https://forms.gle/2GMvdQ7SyatX1R8w5');
+        }
+    };
   return (
     <section id="gfff-home" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4">
@@ -62,7 +71,7 @@ export default function GFFFHomeSection() {
             
             <div className="pt-4 flex flex-wrap gap-4">
               <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline px-9 h-14 py-3 text-lg">
-                  <Link href="/industria">
+                  <Link href="/industria" onClick={handleApplyClick}>
                       DESCUBRE MÁS
                   </Link>
               </Button>

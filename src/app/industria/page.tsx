@@ -1,4 +1,6 @@
 
+'use client';
+
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Button } from '@/components/ui/button';
@@ -15,6 +17,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+declare function gtag_report_conversion_subscribe(url?: string): boolean;
 
 const results = [
   {
@@ -81,6 +84,13 @@ const ffgfSponsors = [
 
 
 export default function IndustriaPage() {
+  const handleApplyClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (typeof gtag_report_conversion_subscribe === 'function') {
+      gtag_report_conversion_subscribe('https://forms.gle/2GMvdQ7SyatX1R8w5');
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-card">
       <Header />
@@ -94,7 +104,7 @@ export default function IndustriaPage() {
             <p className="mt-4 text-xl font-semibold text-accent">Convocatoria abierta de 13 al 31 de Octubre de 2025</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
                  <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
-                    <Link href="https://forms.gle/2GMvdQ7SyatX1R8w5" target='_blank' rel='noopener noreferrer'>
+                    <Link href="https://forms.gle/2GMvdQ7SyatX1R8w5" target='_blank' rel='noopener noreferrer' onClick={handleApplyClick}>
                         Aplicar a la Convocatoria
                     </Link>
                 </Button>
@@ -279,7 +289,7 @@ export default function IndustriaPage() {
                     </Accordion>
                     <div className="text-center mt-12">
                         <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
-                             <Link href="https://forms.gle/2GMvdQ7SyatX1R8w5" target='_blank' rel='noopener noreferrer'>
+                             <Link href="https://forms.gle/2GMvdQ7SyatX1R8w5" target='_blank' rel='noopener noreferrer' onClick={handleApplyClick}>
                                 Aplica a la convocatoria
                             </Link>
                         </Button>

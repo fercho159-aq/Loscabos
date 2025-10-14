@@ -73,6 +73,19 @@ export default function RootLayout({
             });
             return false;
           }
+
+          function gtag_report_conversion_subscribe(url) {
+            var callback = function () {
+              if (typeof(url) != 'undefined') {
+                window.location = url;
+              }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17633221839/zvYwCLvxp60bEM-5lthB',
+                'event_callback': callback
+            });
+            return false;
+          }
         `}} />
       </head>
       <body className="font-body antialiased">

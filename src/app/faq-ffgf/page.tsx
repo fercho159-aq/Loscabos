@@ -1,10 +1,14 @@
 
+'use client';
+
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Card } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+
+declare function gtag_report_conversion_subscribe(url?: string): boolean;
 
 const faqData = [
     {
@@ -59,6 +63,12 @@ const finalQuestion = {
 };
 
 export default function FaqFfgfPage() {
+    const handleApplyClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        if (typeof gtag_report_conversion_subscribe === 'function') {
+        gtag_report_conversion_subscribe('https://forms.gle/2GMvdQ7SyatX1R8w5');
+        }
+    };
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
@@ -95,7 +105,7 @@ export default function FaqFfgfPage() {
 
                  <div className="mt-12 text-center">
                     <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
-                        <Link href="https://forms.gle/2GMvdQ7SyatX1R8w5" target="_blank" rel="noopener noreferrer">
+                        <Link href="https://forms.gle/2GMvdQ7SyatX1R8w5" target="_blank" rel="noopener noreferrer" onClick={handleApplyClick}>
                             Aplicar a la convocatoria
                         </Link>
                     </Button>
