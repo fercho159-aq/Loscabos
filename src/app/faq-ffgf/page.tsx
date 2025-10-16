@@ -77,7 +77,7 @@ export default function FaqFfgfPage() {
         <section className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h1 className="font-headline text-5xl md:text-6xl font-bold text-foreground">
+              <h1 className="font-headline text-5xl md:text-6xl font-bold text-accent">
                 Preguntas Frecuentes
               </h1>
               <p className="mt-4 text-lg text-muted-foreground">

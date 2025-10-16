@@ -99,13 +99,13 @@ export default function IndustriaPage() {
         <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground text-center">
             <div className="absolute inset-0 z-0">
                 <Image
-                src="/Images/FF/FICC_Banner8.jpg"
+                src="/Images/FF/Banner_FICC_FondoFilmico.png"
                 alt="Banner Fondo Fílmico"
                 data-ai-hint="film slate camera"
                 fill
                 className="object-cover"
                 />
-                <div className="absolute inset-0 bg-black/70"></div>
+                <div className="absolute inset-0 bg-black/10"></div>
             </div>
             <div className="container mx-auto px-4 relative z-10">
                 <h1 className="font-headline text-5xl md:text-7xl font-bold text-background">
