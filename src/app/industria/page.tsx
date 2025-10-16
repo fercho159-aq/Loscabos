@@ -96,25 +96,35 @@ export default function IndustriaPage() {
       <Header />
       <main className="flex-grow pt-20">
         {/* Hero Section */}
-        <section className="bg-background py-20 sm:py-28 text-center">
-          <div className="container mx-auto px-4">
-            <h1 className="font-headline text-5xl md:text-7xl font-bold text-foreground">
-              Fondo Fílmico <span className="text-accent">Gabriel Figueroa</span>
-            </h1>
-            <p className="mt-4 text-xl font-semibold text-accent">Convocatoria abierta de 13 al 31 de Octubre de 2025</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-                 <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
-                    <Link href="https://forms.gle/2GMvdQ7SyatX1R8w5" target='_blank' rel='noopener noreferrer' onClick={handleApplyClick}>
-                        Aplicar a la Convocatoria
-                    </Link>
-                </Button>
-                <Button size="lg" asChild variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground rounded-none font-headline">
-                    <Link href="/faq-ffgf">
-                        FAQ
-                    </Link>
-                </Button>
+        <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground text-center">
+            <div className="absolute inset-0 z-0">
+                <Image
+                src="/Images/FF/FICC_Banner8.jpg"
+                alt="Banner Fondo Fílmico"
+                data-ai-hint="film slate camera"
+                fill
+                className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black/70"></div>
             </div>
-          </div>
+            <div className="container mx-auto px-4 relative z-10">
+                <h1 className="font-headline text-5xl md:text-7xl font-bold text-background">
+                Fondo Fílmico <span className="text-accent">Gabriel Figueroa</span>
+                </h1>
+                <p className="mt-4 text-xl font-semibold text-accent">Convocatoria abierta de 13 al 31 de Octubre de 2025</p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                    <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
+                        <Link href="https://forms.gle/2GMvdQ7SyatX1R8w5" target='_blank' rel='noopener noreferrer' onClick={handleApplyClick}>
+                            Aplicar a la Convocatoria
+                        </Link>
+                    </Button>
+                    <Button size="lg" asChild variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground rounded-none font-headline bg-transparent hover:bg-accent">
+                        <Link href="/faq-ffgf">
+                            FAQ
+                        </Link>
+                    </Button>
+                </div>
+            </div>
         </section>
 
         {/* Intro Section */}
