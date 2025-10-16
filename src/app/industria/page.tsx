@@ -71,7 +71,7 @@ const evaluationCriteria = [
 const selectionProcess = [
     { stage: "Etapa 1 – Elegibilidad", description: "Revisión técnica y formal de requisitos." },
     { stage: "Etapa 2 – Evaluación cualitativa (ESCINE)", description: "Visionado doble; en caso de discrepancia, tercera valoración." },
-    { stage: "Etapa 3 – Selección final", description: "Jurado de cineastas de renombre define la selección oficial (5 largometrajes + 10 cortos)." }
+    { stage: "Etapa 3 – Selección final", description: "Jurado de cineastas de renombre define la selección oficial." }
 ];
 
 const ffgfSponsors = [
