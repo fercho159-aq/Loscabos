@@ -2,27 +2,18 @@
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import Image from 'next/image';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogDescription,
   DialogFooter,
 } from "@/components/ui/dialog";
 import { DialogTrigger } from '@radix-ui/react-dialog';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Ticket, Mic, Video, Star, Clapperboard, Users, Music, VenetianMask, Info, FileText, CalendarDays } from 'lucide-react';
+import { Ticket, Mic, Video, Star, Clapperboard, Users, Music, VenetianMask, Info, FileText, ArrowLeft, View } from 'lucide-react';
 
 const schedule = [
   {
@@ -227,7 +218,7 @@ const renderTechInfo = (techInfo: any[]) => (
 );
 
 
-export default function ProgramacionPage() {
+export default function AgendaPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
@@ -236,118 +227,103 @@ export default function ProgramacionPage() {
             <div className="container mx-auto px-4">
                  <div className="text-center mb-12">
                     <h1 className="font-headline text-5xl md:text-7xl font-bold text-foreground">
-                        Programación <span className="text-accent">2025</span>
+                        Agenda <span className="text-accent">2025</span>
                     </h1>
                     <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                        Descubre los eventos, proyecciones y experiencias que marcarán esta edición del festival.
+                        Explora la programación del festival en un formato de lista cronológica.
                     </p>
-                    <div className="mt-8 flex justify-center">
+                     <div className="mt-8 flex justify-center">
                         <Button asChild variant="outline">
-                            <Link href="/programacion/agenda">
-                                <CalendarDays className="mr-2 h-4 w-4" />
-                                Ver en formato de Agenda
+                            <Link href="/programacion">
+                                <View className="mr-2 h-4 w-4" />
+                                Ver en formato de Carrusel
                             </Link>
                         </Button>
                     </div>
                 </div>
 
-                <div className="space-y-16">
+                <div className="space-y-16 max-w-5xl mx-auto">
                     {schedule.map((day, dayIndex) => (
                         <div key={dayIndex}>
                             <h2 className="font-headline text-4xl text-accent font-bold mb-8 border-b-2 border-accent pb-2">{day.day}</h2>
-                            <Carousel
-                                opts={{
-                                    align: "start",
-                                }}
-                                className="w-full"
-                            >
-                                <CarouselContent className="-ml-4">
-                                    {day.events.map((event, eventIndex) => (
-                                    <CarouselItem key={eventIndex} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                                        <div className="p-1">
-                                             <Dialog>
-                                                <DialogTrigger asChild>
-                                                    <Card className="overflow-hidden group relative border-none shadow-xl shadow-black/20 cursor-pointer">
-                                                        <CardContent className="p-0">
-                                                            <div className="aspect-[3/4] relative">
-                                                                <Image
-                                                                    src={event.imageSrc}
-                                                                    alt={event.title}
-                                                                    data-ai-hint={event.imageHint}
-                                                                    fill
-                                                                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                                                                />
-                                                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                                                                <div className="absolute bottom-0 left-0 right-0 p-6">
-                                                                    <div className="flex items-start gap-3">
-                                                                        <div className="bg-accent/80 p-2 rounded-md mt-1">
-                                                                            <event.icon className="h-5 w-5 text-accent-foreground" />
-                                                                        </div>
-                                                                        <div>
-                                                                            <p className="text-xs font-semibold text-accent-foreground/80">{event.subtitle}</p>
-                                                                            <h3 className="font-bold text-xl font-headline text-background">{event.title}</h3>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </CardContent>
-                                                    </Card>
-                                                </DialogTrigger>
-                                                <DialogContent className="sm:max-w-3xl max-h-[90vh] overflow-y-auto">
-                                                    <DialogHeader>
-                                                        <div className="relative w-full h-64 rounded-lg overflow-hidden mb-4">
-                                                            <Image
-                                                                src={event.imageSrc}
-                                                                alt={event.title}
-                                                                data-ai-hint={event.imageHint}
-                                                                fill
-                                                                className="object-cover"
-                                                            />
-                                                        </div>
-                                                        <p className="text-sm font-semibold text-accent">{event.subtitle}</p>
-                                                        <DialogTitle className="text-3xl font-bold font-headline">{event.title}</DialogTitle>
-                                                    </DialogHeader>
-                                                    <div className="grid gap-6 py-4">
-                                                        <p className="text-base text-muted-foreground">{event.text}</p>
-                                                        
-                                                        {event.synopsis && (
-                                                            <div>
-                                                                <h4 className="font-semibold text-lg flex items-center gap-2 mb-2"><Info className="h-5 w-5 text-accent"/>Sinopsis</h4>
-                                                                <p className="text-sm text-muted-foreground pl-7">{event.synopsis}</p>
-                                                            </div>
-                                                        )}
-
-                                                        {event.techInfo && (
-                                                             <div>
-                                                                <h4 className="font-semibold text-lg flex items-center gap-2 mb-2"><FileText className="h-5 w-5 text-accent"/>Ficha Técnica</h4>
-                                                                <div className="pl-7">
-                                                                    {renderTechInfo(event.techInfo)}
-                                                                </div>
-                                                            </div>
-                                                        )}
-
-                                                        <div>
-                                                            <h4 className="font-semibold text-lg flex items-center gap-2 mb-2"><Ticket className="h-5 w-5 text-accent"/>Acceso</h4>
-                                                             <p className="text-sm text-muted-foreground pl-7">{event.access}</p>
-                                                        </div>
-                                                        
-                                                        {event.title === "Nuevas voces en el cine" && (
-                                                            <DialogFooter>
-                                                                <Button asChild>
-                                                                    <Link href="/participantes">Ver Participantes</Link>
-                                                                </Button>
-                                                            </DialogFooter>
-                                                        )}
+                            <div className="space-y-8">
+                                {day.events.map((event, eventIndex) => (
+                                    <Dialog key={eventIndex}>
+                                        <Card className="flex flex-col md:flex-row items-center overflow-hidden group border-border/50 hover:shadow-lg transition-shadow duration-300">
+                                            <div className="relative h-48 md:h-full w-full md:w-1/3 flex-shrink-0">
+                                                <Image
+                                                    src={event.imageSrc}
+                                                    alt={event.title}
+                                                    data-ai-hint={event.imageHint}
+                                                    fill
+                                                    className="object-cover"
+                                                />
+                                            </div>
+                                            <CardContent className="p-6 flex-grow w-full">
+                                                <p className="text-xs font-semibold text-accent">{event.subtitle}</p>
+                                                <h3 className="text-2xl font-bold font-headline text-card-foreground mb-2">{event.title}</h3>
+                                                <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{event.text}</p>
+                                                <div className="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center">
+                                                    <div className="flex items-center gap-2 text-sm font-semibold text-foreground">
+                                                        <event.icon className="h-5 w-5 text-accent" />
+                                                        <span>{event.access}</span>
                                                     </div>
-                                                </DialogContent>
-                                            </Dialog>
-                                        </div>
-                                    </CarouselItem>
-                                    ))}
-                                </CarouselContent>
-                                <CarouselPrevious className="hidden sm:flex" />
-                                <CarouselNext className="hidden sm:flex" />
-                            </Carousel>
+                                                    <DialogTrigger asChild>
+                                                        <Button>Ver Detalles</Button>
+                                                    </DialogTrigger>
+                                                </div>
+                                            </CardContent>
+                                        </Card>
+                                        <DialogContent className="sm:max-w-3xl max-h-[90vh] overflow-y-auto">
+                                            <DialogHeader>
+                                                <div className="relative w-full h-64 rounded-lg overflow-hidden mb-4">
+                                                    <Image
+                                                        src={event.imageSrc}
+                                                        alt={event.title}
+                                                        data-ai-hint={event.imageHint}
+                                                        fill
+                                                        className="object-cover"
+                                                    />
+                                                </div>
+                                                <p className="text-sm font-semibold text-accent">{event.subtitle}</p>
+                                                <DialogTitle className="text-3xl font-bold font-headline">{event.title}</DialogTitle>
+                                            </DialogHeader>
+                                            <div className="grid gap-6 py-4">
+                                                <p className="text-base text-muted-foreground">{event.text}</p>
+                                                
+                                                {event.synopsis && (
+                                                    <div>
+                                                        <h4 className="font-semibold text-lg flex items-center gap-2 mb-2"><Info className="h-5 w-5 text-accent"/>Sinopsis</h4>
+                                                        <p className="text-sm text-muted-foreground pl-7">{event.synopsis}</p>
+                                                    </div>
+                                                )}
+
+                                                {event.techInfo && (
+                                                        <div>
+                                                        <h4 className="font-semibold text-lg flex items-center gap-2 mb-2"><FileText className="h-5 w-5 text-accent"/>Ficha Técnica</h4>
+                                                        <div className="pl-7">
+                                                            {renderTechInfo(event.techInfo)}
+                                                        </div>
+                                                    </div>
+                                                )}
+
+                                                <div>
+                                                    <h4 className="font-semibold text-lg flex items-center gap-2 mb-2"><Ticket className="h-5 w-5 text-accent"/>Acceso</h4>
+                                                    <p className="text-sm text-muted-foreground pl-7">{event.access}</p>
+                                                </div>
+                                                
+                                                {event.title === "Nuevas voces en el cine" && (
+                                                    <DialogFooter>
+                                                        <Button asChild>
+                                                            <Link href="/participantes">Ver Participantes</Link>
+                                                        </Button>
+                                                    </DialogFooter>
+                                                )}
+                                            </div>
+                                        </DialogContent>
+                                    </Dialog>
+                                ))}
+                            </div>
                         </div>
                     ))}
                 </div>
@@ -358,7 +334,5 @@ export default function ProgramacionPage() {
     </div>
   );
 }
-
-    
 
     
