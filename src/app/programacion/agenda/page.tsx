@@ -273,8 +273,8 @@ export default function AgendaPage() {
                             <div className="space-y-8">
                                 {day.events.map((event, eventIndex) => (
                                     <Dialog key={eventIndex}>
-                                        <Card className="flex flex-col md:flex-row items-center overflow-hidden group border-border/50 hover:shadow-lg transition-shadow duration-300">
-                                            <div className="relative h-48 md:h-full w-full md:w-1/3 flex-shrink-0">
+                                        <Card className="flex flex-col md:flex-row items-stretch overflow-hidden group border-border/50 hover:shadow-lg transition-shadow duration-300 bg-card">
+                                            <div className="relative h-48 md:h-auto w-full md:w-1/3 flex-shrink-0">
                                                 <Image
                                                     src={event.imageSrc}
                                                     alt={event.title}
@@ -283,17 +283,19 @@ export default function AgendaPage() {
                                                     className="object-cover"
                                                 />
                                             </div>
-                                            <CardContent className="p-6 flex-grow w-full">
-                                                <div className="flex justify-between items-start mb-2 text-xs font-semibold text-accent">
-                                                   <span>{event.subtitle}</span>
-                                                    <div className="flex items-center gap-4">
-                                                        <span className="flex items-center gap-1"><Clock className="h-3 w-3"/> {event.time}</span>
-                                                        <span className="flex items-center gap-1"><MapPin className="h-3 w-3"/> {event.location}</span>
+                                            <CardContent className="p-6 flex-grow w-full flex flex-col justify-between">
+                                                <div>
+                                                    <div className="flex justify-between items-start mb-2 text-xs font-semibold text-accent flex-wrap gap-x-4 gap-y-1">
+                                                    <span>{event.subtitle}</span>
+                                                        <div className="flex items-center gap-4">
+                                                            <span className="flex items-center gap-1"><Clock className="h-3 w-3"/> {event.time}</span>
+                                                            <span className="flex items-center gap-1"><MapPin className="h-3 w-3"/> {event.location}</span>
+                                                        </div>
                                                     </div>
+                                                    <h3 className="text-2xl font-bold font-headline text-card-foreground mb-2">{event.title}</h3>
+                                                    <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{event.text}</p>
                                                 </div>
-                                                <h3 className="text-2xl font-bold font-headline text-card-foreground mb-2">{event.title}</h3>
-                                                <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{event.text}</p>
-                                                <div className="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center">
+                                                <div className="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center mt-auto pt-4">
                                                     <div className="flex items-center gap-2 text-sm font-semibold text-foreground">
                                                         <event.icon className="h-5 w-5 text-accent" />
                                                         <span>{event.access}</span>
@@ -364,7 +366,3 @@ export default function AgendaPage() {
     </div>
   );
 }
-
-    
-
-    
