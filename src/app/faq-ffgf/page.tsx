@@ -13,8 +13,8 @@ declare function gtag_report_conversion_subscribe(url?: string): boolean;
 
 const faqData = [
     {
-        question: "¿Qué es el Fondo Fílmico Gabriel Figueroa (GFFF)?",
-        answer: "El GFFF es una iniciativa del Festival Internacional de Cine de Los Cabos (FICLosCabos) creada en 2012 para impulsar el cine mexicano en etapas de desarrollo, postproducción y coproducción internacional. Más que un programa de apoyo, el Fondo funciona como un puente entre la creación cinematográfica y la industria, conectando a nuevos talentos con productores, distribuidores, inversionistas y festivales globales."
+        question: "¿Qué es el Fondo Fílmico Gabriel Figueroa (FFGF)?",
+        answer: "El FFGF es una iniciativa del Festival Internacional de Cine de Los Cabos (FICLosCabos) creada en 2012 para impulsar el cine mexicano en etapas de desarrollo, postproducción y coproducción internacional. Más que un programa de apoyo, el Fondo funciona como un puente entre la creación cinematográfica y la industria, conectando a nuevos talentos con productores, distribuidores, inversionistas y festivales globales."
     },
     {
         question: "¿Qué tipo de proyectos pueden aplicar?",
@@ -79,13 +79,13 @@ export default function FaqFfgfPage() {
         <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground text-center">
             <div className="absolute inset-0 z-0">
                 <Image
-                src="/Images/FAQ/FICC_BannerFAQ.jpg"
+                src="/Images/FF/Banner_FICC_FondoFilmico.png"
                 alt="Banner de Preguntas Frecuentes"
                 data-ai-hint="cinema seats empty"
                 fill
                 className="object-cover"
                 />
-                <div className="absolute inset-0 bg-black/70"></div>
+                <div className="absolute inset-0"></div>
             </div>
             <div className="container mx-auto px-4 relative z-10">
                 <h1 className="font-headline text-5xl sm:text-7xl font-bold">Preguntas Frecuentes</h1>
