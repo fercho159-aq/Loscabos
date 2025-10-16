@@ -2,10 +2,23 @@
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Ticket, Mic, Video, Star, Clapperboard, Users, Music, VenetianMask } from 'lucide-react';
-import Link from 'next/link';
+import { Card, CardContent } from '@/components/ui/card';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Ticket, Mic, Video, Star, Clapperboard, Users, Music, VenetianMask, Info, FileText } from 'lucide-react';
 
 const schedule = [
   {
@@ -64,6 +77,8 @@ const schedule = [
         text: "Como parte del homenaje del FICLosCabos 2025 a Eugenio Caballero, diseñador de producción y ganador del Premio de la Academia, esta masterclass ofrece una mirada profunda a su proceso creativo. A través de su colaboración con cineastas como Guillermo del Toro, Alfonso Cuarón y J.A. Bayona, Caballero compartirá cómo el diseño visual se convierte en una fuerza narrativa capaz de transformar la experiencia cinematográfica.",
         access: "Acceso con registro previo",
         icon: Star,
+        synopsis: null,
+        techInfo: null,
       },
       {
         title: "Proyección al aire libre en Crania",
@@ -73,6 +88,8 @@ const schedule = [
         text: "En el marco del homenaje a Eugenio Caballero, el FICLosCabos 2025 presenta una proyección especial al aire libre en Crania, epicentro creativo de Puerto Los Cabos. Bajo las estrellas y frente al mar, el público vivirá una experiencia inmersiva donde la obra visual de Caballero dialoga con la naturaleza y reafirma el espíritu de #BeyondTheScreen.",
         access: "Acceso general con cupo limitado",
         icon: Video,
+        synopsis: null,
+        techInfo: null,
       },
       {
         title: "Cóctel de gala en Casa Ballena",
@@ -82,6 +99,8 @@ const schedule = [
         text: "El homenaje a Eugenio Caballero culminará con un cóctel privado en Casa Ballena, espacio dedicado a la producción y difusión del arte contemporáneo en San José del Cabo. En este entorno íntimo y simbólico, la comunidad cinematográfica, aliados y creadores se reunirán para celebrar la trayectoria del diseñador de producción acompañada por la música del Ganzo Collective, ensamble residente del Hotel El Ganzo.",
         access: "Acceso solo por invitación",
         icon: VenetianMask,
+        synopsis: null,
+        techInfo: null,
       }
     ]
   },
@@ -96,6 +115,8 @@ const schedule = [
         text: "En esta edición, el Festival amplía su mirada hacia las nuevas voces del cine, reuniendo a una selección de jóvenes directores, productores y artistas con reconocimiento nacional e internacional, que están redefiniendo los lenguajes cinematográficos con una fuerza creativa única. Una conversación que celebra la diversidad de miradas y conecta al público con la generación que está moldeando el futuro del cine nacional.",
         access: "Acceso con registro previo",
         icon: Users,
+        synopsis: null,
+        techInfo: null,
       },
       {
         title: "Venado Azul",
@@ -105,6 +126,8 @@ const schedule = [
         text: "En el marco de la nueva sección de animación del FICLosCabos 2025, se presenta Venado Azul, largometraje dirigido por Pablo Calvillo, que sigue el viaje iniciático de Iyari, una joven wixárika que se adentra en el desierto sagrado de Wirikuta. La película propone una reflexión profunda sobre la conexión entre el ser humano y la naturaleza, y sobre la urgencia de preservar los ecosistemas que sostienen nuestra existencia. Como parte del programa #BeyondTheScreen, el Festival presentará un encuentro exclusivo con el director, que incluirá una masterclass y una preview especial dedicada al proceso de dirección y producción de Venado Azul, explorando las decisiones creativas detrás de su universo visual. A través de materiales inéditos —desde el diseño de flora y fauna endémica hasta la creación de robots, personajes y escenarios en 2D y 3D—, el público podrá conocer el proceso que da vida a esta obra, donde tradición, tecnología y narrativa autoral se entrelazan en una experiencia única.",
         access: "Acceso con registro previo",
         icon: Mic,
+        synopsis: null,
+        techInfo: null,
       },
        {
         title: "Personas Haciendo Cosas",
@@ -114,6 +137,8 @@ const schedule = [
         text: "La artista mexicana Tania Reza presenta Personas Haciendo Cosas, una instalación audiovisual que explora el movimiento contemporáneo a través de la repetición sostenida de gestos cotidianos. Utilizando live coding y un circuito cerrado de video, diez pantallas proyectan en tiempo real a distintas personas repitiendo un movimiento de su rutina u oficio, transformando lo ordinario en una experiencia escénica.",
         access: "Acceso general con cupo limitado",
         icon: Video,
+        synopsis: null,
+        techInfo: null,
       },
        {
         title: "Celebración del cine mexicano y sus nuevas voces",
@@ -123,6 +148,8 @@ const schedule = [
         text: "La Cena de Gala del FICLosCabos 2025 rinde homenaje al talento que impulsa el futuro del cine mexicano. La velada se llevará a cabo en Suelo Sur, restaurante insignia de Los Cabos encabezado por el chef Guillermo Gómez, reconocido por la Guía Michelin por su enfoque en la sostenibilidad, el respeto al territorio y la reinterpretación contemporánea de los ingredientes de Baja California Sur. Cada plato es una historia contada con el lenguaje de la naturaleza. Durante la cena se reconocerá a los ganadores del Fondo Fílmico Gabriel Figueroa, programa que impulsa proyectos mexicanos en etapa de postproducción mediante mentorías y acompañamiento profesional, así como a los finalistas de La Baja Inspira, sección competitiva dedicada a las narrativas con raíces en la península que fortalecen el vínculo entre cine, comunidad y territorio.",
         access: "Acceso solo por invitación",
         icon: VenetianMask,
+        synopsis: null,
+        techInfo: null,
       },
     ]
   },
@@ -147,7 +174,7 @@ const schedule = [
             icon: Clapperboard,
         },
         {
-            title: "Amores Perros – 25 años de una obra que transformó el cine mexicano",
+            title: "Amores Perros – 25 años",
             subtitle: "Proyección especial y conversación con Marta Sosa",
             imageSrc: "/Images/Programacion/Amores_Perros.png",
             imageHint: "urban drama movie poster",
@@ -172,6 +199,8 @@ const schedule = [
             text: "El Festival Internacional de Cine de Los Cabos 2025 presentará una de sus experiencias más memorables: La Nube en el Jardín, documental protagonizado por Ed Maverick desde la Sala Nezahualcóyotl en la Ciudad de México. La película se proyectará en una mega pantalla, creando un entorno inmersivo donde la música en vivo y el lenguaje cinematográfico se entrelazan para generar una experiencia sensorial total. Al finalizar la proyección, Ed Maverick compartirá una conversación íntima sobre el proceso creativo detrás del documental.",
             access: "Acceso general con cupo limitado",
             icon: Music,
+            synopsis: null,
+            techInfo: null,
         },
     ],
   },
@@ -179,14 +208,14 @@ const schedule = [
 
 
 const renderTechInfo = (techInfo: any[]) => (
-    <div className="space-y-1 text-sm">
+    <div className="space-y-1 text-sm text-muted-foreground">
         {techInfo.map((info, index) => (
             <p key={index}>
                 <span className="font-semibold text-foreground">{info.label}:</span>{' '}
                 {info.link ? (
                     <a href={info.link} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">{info.value}</a>
                 ) : (
-                    <span className="text-muted-foreground">{info.value}</span>
+                    <span>{info.value}</span>
                 )}
             </p>
         ))}
@@ -214,55 +243,91 @@ export default function ProgramacionPage() {
                     {schedule.map((day, dayIndex) => (
                         <div key={dayIndex}>
                             <h2 className="font-headline text-4xl text-accent font-bold mb-8 border-b-2 border-accent pb-2">{day.day}</h2>
-                            <div className="space-y-12">
-                                {day.events.map((event, eventIndex) => (
-                                    <Card key={eventIndex} className="overflow-hidden shadow-lg border-border/50 grid md:grid-cols-5 gap-0">
-                                        <div className="md:col-span-2 relative min-h-[300px] md:min-h-0">
-                                             <Image
-                                                src={event.imageSrc}
-                                                alt={event.title}
-                                                data-ai-hint={event.imageHint}
-                                                fill
-                                                className="object-cover"
-                                            />
-                                        </div>
-                                        <div className="md:col-span-3 p-6 sm:p-8 flex flex-col">
-                                            <CardHeader className="p-0 mb-4">
-                                                <div className="flex items-start gap-4">
-                                                    <div className="bg-accent/10 p-3 rounded-md mt-1">
-                                                        <event.icon className="h-6 w-6 text-accent" />
-                                                    </div>
-                                                    <div>
+                            <Carousel
+                                opts={{
+                                    align: "start",
+                                }}
+                                className="w-full"
+                            >
+                                <CarouselContent className="-ml-4">
+                                    {day.events.map((event, eventIndex) => (
+                                    <CarouselItem key={eventIndex} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                                        <div className="p-1">
+                                             <Dialog>
+                                                <DialogTrigger asChild>
+                                                    <Card className="overflow-hidden group relative border-none shadow-xl shadow-black/20 cursor-pointer">
+                                                        <CardContent className="p-0">
+                                                            <div className="aspect-[3/4] relative">
+                                                                <Image
+                                                                    src={event.imageSrc}
+                                                                    alt={event.title}
+                                                                    data-ai-hint={event.imageHint}
+                                                                    fill
+                                                                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                                                />
+                                                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                                                                <div className="absolute bottom-0 left-0 right-0 p-6">
+                                                                    <div className="flex items-start gap-3">
+                                                                        <div className="bg-accent/80 p-2 rounded-md mt-1">
+                                                                            <event.icon className="h-5 w-5 text-accent-foreground" />
+                                                                        </div>
+                                                                        <div>
+                                                                            <p className="text-xs font-semibold text-accent-foreground/80">{event.subtitle}</p>
+                                                                            <h3 className="font-bold text-xl font-headline text-background">{event.title}</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </CardContent>
+                                                    </Card>
+                                                </DialogTrigger>
+                                                <DialogContent className="sm:max-w-3xl max-h-[90vh] overflow-y-auto">
+                                                    <DialogHeader>
+                                                        <div className="relative w-full h-64 rounded-lg overflow-hidden mb-4">
+                                                            <Image
+                                                                src={event.imageSrc}
+                                                                alt={event.title}
+                                                                data-ai-hint={event.imageHint}
+                                                                fill
+                                                                className="object-cover"
+                                                            />
+                                                        </div>
                                                         <p className="text-sm font-semibold text-accent">{event.subtitle}</p>
-                                                        <CardTitle className="text-2xl font-bold">{event.title}</CardTitle>
+                                                        <DialogTitle className="text-3xl font-bold font-headline">{event.title}</DialogTitle>
+                                                    </DialogHeader>
+                                                    <div className="grid gap-6 py-4">
+                                                        <p className="text-base text-muted-foreground">{event.text}</p>
+                                                        
+                                                        {event.synopsis && (
+                                                            <div>
+                                                                <h4 className="font-semibold text-lg flex items-center gap-2 mb-2"><Info className="h-5 w-5 text-accent"/>Sinopsis</h4>
+                                                                <p className="text-sm text-muted-foreground pl-7">{event.synopsis}</p>
+                                                            </div>
+                                                        )}
+
+                                                        {event.techInfo && (
+                                                             <div>
+                                                                <h4 className="font-semibold text-lg flex items-center gap-2 mb-2"><FileText className="h-5 w-5 text-accent"/>Ficha Técnica</h4>
+                                                                <div className="pl-7">
+                                                                    {renderTechInfo(event.techInfo)}
+                                                                </div>
+                                                            </div>
+                                                        )}
+
+                                                        <div>
+                                                            <h4 className="font-semibold text-lg flex items-center gap-2 mb-2"><Ticket className="h-5 w-5 text-accent"/>Acceso</h4>
+                                                             <p className="text-sm text-muted-foreground pl-7">{event.access}</p>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </CardHeader>
-                                            <CardContent className="p-0 flex-grow">
-                                                <p className="text-muted-foreground mb-6">{event.text}</p>
-                                                <Accordion type="single" collapsible className="w-full">
-                                                    {event.synopsis && (
-                                                        <AccordionItem value="sinopsis">
-                                                            <AccordionTrigger>Sinopsis</AccordionTrigger>
-                                                            <AccordionContent>{event.synopsis}</AccordionContent>
-                                                        </AccordionItem>
-                                                    )}
-                                                    {event.techInfo && (
-                                                        <AccordionItem value="ficha-tecnica">
-                                                            <AccordionTrigger>Ficha Técnica</AccordionTrigger>
-                                                            <AccordionContent>{renderTechInfo(event.techInfo)}</AccordionContent>
-                                                        </AccordionItem>
-                                                    )}
-                                                </Accordion>
-                                            </CardContent>
-                                            <div className="mt-6 flex items-center gap-2 font-semibold text-sm text-foreground">
-                                                <Ticket className="h-5 w-5 text-accent" />
-                                                <span>{event.access}</span>
-                                            </div>
+                                                </DialogContent>
+                                            </Dialog>
                                         </div>
-                                    </Card>
-                                ))}
-                            </div>
+                                    </CarouselItem>
+                                    ))}
+                                </CarouselContent>
+                                <CarouselPrevious className="hidden sm:flex" />
+                                <CarouselNext className="hidden sm:flex" />
+                            </Carousel>
                         </div>
                     ))}
                 </div>
