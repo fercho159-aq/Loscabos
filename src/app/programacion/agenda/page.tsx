@@ -1,4 +1,5 @@
 
+'use client';
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import Image from 'next/image';
@@ -13,7 +14,10 @@ import {
 import { DialogTrigger } from '@radix-ui/react-dialog';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Ticket, Mic, Video, Star, Clapperboard, Users, Music, VenetianMask, Info, FileText, ArrowLeft, View, Clock, MapPin } from 'lucide-react';
+import { Ticket, Mic, Video, Star, Clapperboard, Users, Music, VenetianMask, Info, FileText, View, Clock, MapPin, CalendarPlus } from 'lucide-react';
+import { format } from 'date-fns';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+
 
 const schedule = [
   {
@@ -22,7 +26,7 @@ const schedule = [
       {
         title: "Sinfonía Oceánica",
         subtitle: "Proyección inaugural",
-        time: "19:00 hrs",
+        time: "19:00",
         location: "Crania",
         imageSrc: "https://picsum.photos/seed/sinfonia/800/600",
         imageHint: "ocean whale symphony",
@@ -46,7 +50,7 @@ const schedule = [
       {
         title: "Bardo, falsa crónica de unas cuantas verdades",
         subtitle: "Proyección especial en Cinemex en Homenaje a Eugenio Caballero",
-        time: "21:00 hrs",
+        time: "21:00",
         location: "Cinemex Puerto Paraíso",
         imageSrc: "https://picsum.photos/seed/bardo/800/600",
         imageHint: "surreal movie scene",
@@ -71,7 +75,7 @@ const schedule = [
       {
         title: "Masterclass con Eugenio Caballero",
         subtitle: "Homenaje a Eugenio Caballero",
-        time: "17:00 hrs",
+        time: "17:00",
         location: "Hotel El Ganzo",
         imageSrc: "https://picsum.photos/seed/eugenio-masterclass/800/600",
         imageHint: "man portrait",
@@ -84,7 +88,7 @@ const schedule = [
       {
         title: "Proyección al aire libre en Crania",
         subtitle: "en Homenaje a Eugenio Caballero (película por confirmar)",
-        time: "20:00 hrs",
+        time: "20:00",
         location: "Crania",
         imageSrc: "https://picsum.photos/seed/crania/800/600",
         imageHint: "outdoor venue night",
@@ -97,7 +101,7 @@ const schedule = [
       {
         title: "Cóctel de gala en Casa Ballena",
         subtitle: "en Homenaje a Eugenio Caballero",
-        time: "22:00 hrs",
+        time: "22:00",
         location: "Casa Ballena",
         imageSrc: "https://picsum.photos/seed/casaballena/800/600",
         imageHint: "art gallery interior",
@@ -115,7 +119,7 @@ const schedule = [
       {
         title: "Nuevas voces en el cine",
         subtitle: "Panel de cineastas emergentes",
-        time: "12:00 hrs",
+        time: "12:00",
         location: "Hotel El Ganzo",
         imageSrc: "https://picsum.photos/seed/nuevasvoces/800/600",
         imageHint: "young filmmakers group",
@@ -128,7 +132,7 @@ const schedule = [
       {
         title: "Venado Azul",
         subtitle: "Masterclass: Animación mexicana en desarrollo",
-        time: "17:00 hrs",
+        time: "17:00",
         location: "Hotel El Ganzo",
         imageSrc: "https://picsum.photos/seed/venadoazul/800/600",
         imageHint: "animation deer art",
@@ -141,7 +145,7 @@ const schedule = [
        {
         title: "Personas Haciendo Cosas",
         subtitle: "Live Cinema / Performance",
-        time: "20:00 hrs",
+        time: "20:00",
         location: "Crania",
         imageSrc: "https://picsum.photos/seed/performance/800/600",
         imageHint: "live coding performance",
@@ -154,7 +158,7 @@ const schedule = [
        {
         title: "Celebración del cine mexicano y sus nuevas voces",
         subtitle: "Cena de gala para ganadores del Fondo Fílmico Gabriel Figueroa y finalistas de La Baja Inspira.",
-        time: "21:00 hrs",
+        time: "21:00",
         location: "Suelo Sur",
         imageSrc: "https://picsum.photos/seed/cenagala/800/600",
         imageHint: "gala dinner night",
@@ -172,7 +176,7 @@ const schedule = [
         {
             title: "El Pulmo",
             subtitle: "Proyección especial",
-            time: "18:00 hrs",
+            time: "18:00",
             location: "Cinemex Puerto Paraíso",
             imageSrc: "https://picsum.photos/seed/elpulmo/800/600",
             imageHint: "underwater documentary",
@@ -191,7 +195,7 @@ const schedule = [
         {
             title: "Amores Perros – 25 años",
             subtitle: "Proyección especial y conversación con Marta Sosa",
-            time: "20:00 hrs",
+            time: "20:00",
             location: "Cinemex Puerto Paraíso",
             imageSrc: "https://picsum.photos/seed/amoresperros/800/600",
             imageHint: "urban drama movie poster",
@@ -211,7 +215,7 @@ const schedule = [
         {
             title: "La Nube en el Jardín",
             subtitle: "Proyección especial con Ed Maverick",
-            time: "22:00 hrs",
+            time: "22:00",
             location: "Jardín Ikal",
             imageSrc: "https://picsum.photos/seed/edmaverick/800/600",
             imageHint: "musician on stage",
@@ -240,6 +244,58 @@ const renderTechInfo = (techInfo: any[]) => (
         ))}
     </div>
 );
+
+type AddToCalendarButtonProps = {
+  event: typeof schedule[0]['events'][0];
+  day: string;
+};
+
+function AddToCalendarButton({ event, day }: AddToCalendarButtonProps) {
+  const generateCalendarLink = (calendarType: 'google' | 'outlook') => {
+    const dayOfMonth = parseInt(day.split(' ')[0], 10);
+    const [hours, minutes] = event.time.split(':').map(Number);
+    
+    // Create start date assuming December 2025
+    const startDate = new Date(2025, 11, dayOfMonth, hours, minutes);
+    // Assume a 2 hour duration for all events
+    const endDate = new Date(startDate.getTime() + 2 * 60 * 60 * 1000);
+
+    const title = encodeURIComponent(event.title);
+    const details = encodeURIComponent(event.text || '');
+    const location = encodeURIComponent(event.location);
+
+    if (calendarType === 'google') {
+      const googleStartDate = format(startDate, "yyyyMMdd'T'HHmmss'Z'");
+      const googleEndDate = format(endDate, "yyyyMMdd'T'HHmmss'Z'");
+      return `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${googleStartDate}/${googleEndDate}&details=${details}&location=${location}`;
+    }
+
+    if (calendarType === 'outlook') {
+        const outlookStartDate = format(startDate, "yyyy-MM-dd'T'HH:mm:ss");
+        const outlookEndDate = format(endDate, "yyyy-MM-dd'T'HH:mm:ss");
+        return `https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent&subject=${title}&startdt=${outlookStartDate}&enddt=${outlookEndDate}&body=${details}&location=${location}`;
+    }
+    return '#';
+  };
+
+  return (
+    <Popover>
+        <PopoverTrigger asChild>
+             <Button variant="outline" size="sm"><CalendarPlus className="mr-2 h-4 w-4" /> Añadir al Calendario</Button>
+        </PopoverTrigger>
+        <PopoverContent className="w-auto p-1">
+            <div className="flex flex-col gap-1">
+                <Button variant="ghost" size="sm" asChild>
+                    <a href={generateCalendarLink('google')} target="_blank" rel="noopener noreferrer">Google Calendar</a>
+                </Button>
+                 <Button variant="ghost" size="sm" asChild>
+                    <a href={generateCalendarLink('outlook')} target="_blank" rel="noopener noreferrer">Outlook</a>
+                </Button>
+            </div>
+        </PopoverContent>
+    </Popover>
+  );
+}
 
 
 export default function AgendaPage() {
@@ -288,7 +344,7 @@ export default function AgendaPage() {
                                                     <div className="flex justify-between items-start mb-2 text-xs font-semibold text-accent flex-wrap gap-x-4 gap-y-1">
                                                     <span>{event.subtitle}</span>
                                                         <div className="flex items-center gap-4">
-                                                            <span className="flex items-center gap-1"><Clock className="h-3 w-3"/> {event.time}</span>
+                                                            <span className="flex items-center gap-1"><Clock className="h-3 w-3"/> {event.time} hrs</span>
                                                             <span className="flex items-center gap-1"><MapPin className="h-3 w-3"/> {event.location}</span>
                                                         </div>
                                                     </div>
@@ -344,13 +400,14 @@ export default function AgendaPage() {
                                                     <p className="text-sm text-muted-foreground pl-7">{event.access}</p>
                                                 </div>
                                                 
-                                                {event.title === "Nuevas voces en el cine" && (
-                                                    <DialogFooter>
+                                                <DialogFooter className="sm:justify-start pt-4 gap-2">
+                                                    <AddToCalendarButton event={event} day={day.day} />
+                                                    {event.title === "Nuevas voces en el cine" && (
                                                         <Button asChild>
                                                             <Link href="/participantes">Ver Participantes</Link>
                                                         </Button>
-                                                    </DialogFooter>
-                                                )}
+                                                    )}
+                                                </DialogFooter>
                                             </div>
                                         </DialogContent>
                                     </Dialog>
@@ -366,3 +423,4 @@ export default function AgendaPage() {
     </div>
   );
 }
+
