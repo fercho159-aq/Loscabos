@@ -7,6 +7,7 @@ import { Card } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
 
 declare function gtag_report_conversion_subscribe(url?: string): boolean;
 
@@ -70,21 +71,33 @@ export default function FaqFfgfPage() {
         }
     };
   return (
-    <div className="flex flex-col min-h-screen bg-background">
+    <div className="flex flex-col min-h-screen bg-card">
       <Header />
 
-      <main className="flex-grow flex items-center justify-center pt-28 pb-16">
-        <section className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h1 className="font-headline text-5xl md:text-6xl font-bold text-accent">
-                Preguntas Frecuentes
-              </h1>
-              <p className="mt-4 text-lg text-muted-foreground">
-                Fondo Fílmico Gabriel Figueroa (FFGF)
-              </p>
+      <main className="flex-grow pt-20">
+        {/* Banner Section */}
+        <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground text-center">
+            <div className="absolute inset-0 z-0">
+                <Image
+                src="/Images/FAQ/FICC_BannerFAQ.jpg"
+                alt="Banner de Preguntas Frecuentes"
+                data-ai-hint="cinema seats empty"
+                fill
+                className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black/70"></div>
             </div>
+            <div className="container mx-auto px-4 relative z-10">
+                <h1 className="font-headline text-5xl sm:text-7xl font-bold">Preguntas Frecuentes</h1>
+                 <p className="mt-4 text-lg text-primary-foreground/90 mx-auto max-w-2xl">
+                    Fondo Fílmico Gabriel Figueroa (FFGF)
+                </p>
+            </div>
+        </section>
 
+        {/* FAQ Content Section */}
+        <section className="py-16 sm:py-24 bg-background">
+          <div className="container mx-auto px-4 max-w-4xl">
             <Card className="p-6 sm:p-10 bg-card shadow-xl">
                  <Accordion type="single" collapsible className="w-full">
                     {faqData.map((item, index) => (
