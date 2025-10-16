@@ -8,9 +8,13 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
   DialogDescription,
+  DialogFooter,
 } from "@/components/ui/dialog";
+import { DialogTrigger } from '@radix-ui/react-dialog';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+
 import {
   Carousel,
   CarouselContent,
@@ -318,6 +322,14 @@ export default function ProgramacionPage() {
                                                             <h4 className="font-semibold text-lg flex items-center gap-2 mb-2"><Ticket className="h-5 w-5 text-accent"/>Acceso</h4>
                                                              <p className="text-sm text-muted-foreground pl-7">{event.access}</p>
                                                         </div>
+                                                        
+                                                        {event.title === "Nuevas voces en el cine" && (
+                                                            <DialogFooter>
+                                                                <Button asChild>
+                                                                    <Link href="/participantes">Ver Participantes</Link>
+                                                                </Button>
+                                                            </DialogFooter>
+                                                        )}
                                                     </div>
                                                 </DialogContent>
                                             </Dialog>
