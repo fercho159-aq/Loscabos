@@ -5,6 +5,7 @@ import Link from "next/link";
 const sponsors = [
   { name: "ESCINE", logo: "/Images/patrocinadores/Logo_ESCINE_Sintetizado_Negro.png", hint: "film school logo", href: "https://escine.mx/" },
   { name: "Hotel El Ganzo", logo: "/Images/patrocinadores/HG_GENERAL-13.png", hint: "company logo" },
+  { name: "Cinemex", logo: "/Images/patrocinadores/Cinemex_Logo-01.png", hint: "company logo" },
   { name: "Kundavi", logo: "/Images/patrocinadores/Lockup (Noche)@10x.png", hint: "company logo" },
   { name: "Questro", logo: "/Images/patrocinadores/Logos Questro _Mesa de trabajo 1 copia 21.png", hint: "company logo" },
   { name: "Puerto Los Cabos", logo: "/Images/patrocinadores/Logos para margie _Mesa de trabajo 1 copia 9.png", hint: "company logo" },
