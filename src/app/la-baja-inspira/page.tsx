@@ -96,7 +96,7 @@ export default function LaBajaInspiraPage() {
             <div className="container mx-auto px-4 max-w-3xl text-center">
                 <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Convocatoria y metodología</h2>
                 <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                    La convocatoria se lanzó el 4 de marzo y cerró el 30 de abril de 2025, con gestión y difusión a través de FilmFreeway. Se recibieron 1,600 proyectos, todos visionados por un comité de programación especializado. El anuncio de los seleccionados se realizará el 31 de octubre de 2025 mediante newsletter, redes sociales y FilmFreeway.
+                    La convocatoria se lanzó el 4 de marzo y cerró el 30 de abril de 2025, con gestión y difusión a través de FilmFreeway. Se recibieron 1,600 proyectos, todos visionados por un comité de programación especializado. El anuncio de los seleccionados se realizará el 30 de noviembre de 2025 mediante newsletter, redes sociales y FilmFreeway.
                 </p>
             </div>
         </section>
