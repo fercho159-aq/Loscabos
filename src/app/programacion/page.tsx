@@ -352,14 +352,6 @@ export default function ProgramacionPage() {
               <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
                 Explora los eventos, proyecciones y experiencias que marcarán la 13ª edición del Festival.
               </p>
-               <div className="mt-8">
-                <Button asChild>
-                    <Link href="/programacion/agenda">
-                        Ver en formato de Agenda
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                </Button>
-            </div>
             </div>
 
             {programData.map((day) => (
