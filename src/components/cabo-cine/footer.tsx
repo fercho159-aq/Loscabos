@@ -6,7 +6,7 @@ import Image from "next/image";
 const ficcLinks = [
     { href: "/acerca-de", label: "Acerca de la 13ª edición" },
     { href: "/programacion", label: "Programación 2025" },
-    { href: "/homenaje", label: "Homenaje 2025" },
+    { href: "/homenaje", label: "Homenaje a Eugenio Caballero" },
     { href: "/campus", label: "Campus FICLosCabos" },
     { href: "/travel", label: "Planea tu visita" },
     { href: "/pre-registro", label: "Pre-registro" },
