@@ -6,7 +6,7 @@ import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Calendar, Info, Ticket } from 'lucide-react';
+import { ArrowRight, Calendar, Info, Ticket, Share2 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import {
   Carousel,
@@ -24,6 +24,9 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Link from 'next/link';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { format, parse } from 'date-fns';
+import { es } from 'date-fns/locale';
 
 type Event = {
   title: string;
@@ -245,8 +248,39 @@ const programData: DayProgram[] = [
   }
 ];
 
+const CalendarLinks = ({ event, day }: { event: Event, day: DayProgram }) => {
+    const getEventDate = (dayString: string, timeString: string) => {
+        const dayOfMonth = parseInt(dayString.split(' ')[0], 10);
+        const [hours, minutes] = timeString.split(':').map(Number);
+        // Assuming the festival is in December 2025
+        return new Date(2025, 11, dayOfMonth, hours, minutes);
+    };
 
-const EventDialogContent = ({ event }: { event: Event }) => (
+    const startTime = getEventDate(day.title, event.time);
+    const endTime = new Date(startTime.getTime() + (parseInt(event.techInfo?.Duración || '90') * 60000));
+    
+    const formatForGoogle = (date: Date) => format(date, "yyyyMMdd'T'HHmmss'Z'");
+
+    const details = `${event.text}\n\nAcceso: ${event.access}`;
+
+    const googleCalendarUrl = new URL("https://www.google.com/calendar/render");
+    googleCalendarUrl.searchParams.append("action", "TEMPLATE");
+    googleCalendarUrl.searchParams.append("text", event.title);
+    googleCalendarUrl.searchParams.append("dates", `${formatForGoogle(startTime)}/${formatForGoogle(endTime)}`);
+    googleCalendarUrl.searchParams.append("details", details);
+    googleCalendarUrl.searchParams.append("location", event.place);
+
+    return (
+        <Button asChild>
+            <Link href={googleCalendarUrl.toString()} target="_blank" rel="noopener noreferrer">
+                <Calendar className="mr-2 h-4 w-4" /> Añadir a Google Calendar
+            </Link>
+        </Button>
+    );
+};
+
+
+const EventDialogContent = ({ event, day }: { event: Event, day: DayProgram }) => (
     <DialogContent className="sm:max-w-[600px] bg-card">
         <DialogHeader>
             <DialogTitle className="font-headline text-3xl text-foreground">{event.title}</DialogTitle>
@@ -288,11 +322,14 @@ const EventDialogContent = ({ event }: { event: Event }) => (
                     <span className="font-semibold text-foreground">{event.time} @ {event.place}</span>
                 </div>
             </div>
-            {event.participantsButton && (
-                <Button asChild className="mt-4">
-                    <Link href="/participantes">Ver Participantes</Link>
-                </Button>
-            )}
+            <div className="flex flex-wrap gap-4 mt-4">
+                {event.participantsButton && (
+                    <Button asChild>
+                        <Link href="/participantes">Ver Participantes</Link>
+                    </Button>
+                )}
+                 <CalendarLinks event={event} day={day} />
+            </div>
         </div>
     </DialogContent>
 );
@@ -366,12 +403,12 @@ export default function ProgramacionPage() {
                                     </CardContent>
                                 </Card>
                             </DialogTrigger>
-                             <EventDialogContent event={event} />
+                             <EventDialogContent event={event} day={day} />
                         </Dialog>
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  {day.events.length > 1 && (
+                  {day.events.length > 3 && (
                     <>
                         <CarouselPrevious className="hidden sm:flex -left-8" />
                         <CarouselNext className="hidden sm:flex -right-8" />
