@@ -347,12 +347,13 @@ export default function ProgramacionPage() {
                                             fill
                                             className="object-cover transition-transform duration-500 group-hover:scale-110"
                                         />
+                                        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+                                            <h3 className="text-xl font-bold font-headline text-background">{event.title}</h3>
+                                            <p className="text-sm text-accent font-semibold mt-1">{event.subtitle}</p>
+                                        </div>
                                     </div>
-                                    <CardContent className="p-6 flex-grow flex flex-col">
-                                        <h3 className="text-xl font-bold font-headline text-card-foreground">{event.title}</h3>
-                                        <p className="text-sm text-accent font-semibold mt-1">{event.subtitle}</p>
-                                        <p className="text-sm text-muted-foreground mt-2 line-clamp-3 flex-grow">{event.text}</p>
-                                        <div className="flex items-center justify-between mt-4 pt-4 border-t">
+                                    <CardContent className="p-6">
+                                       <div className="flex items-center justify-between">
                                             <div className="flex items-center gap-2 text-xs text-muted-foreground">
                                                 <Calendar className="h-4 w-4"/>
                                                 <span>{event.time} @ {event.place}</span>
@@ -387,3 +388,5 @@ export default function ProgramacionPage() {
     </div>
   );
 }
+
+    
