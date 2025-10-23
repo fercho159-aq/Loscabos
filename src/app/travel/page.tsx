@@ -6,29 +6,54 @@ import { Card, CardContent } from '@/components/ui/card';
 import { BedDouble, MapPin, Sparkles, Sun, Utensils, Award } from 'lucide-react';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
 
 const hotels = [
   {
     name: "Hotel El Ganzo",
     description: "Un centro de creatividad y sofisticación con vistas a la marina.",
-    imgSrc: "https://picsum.photos/800/600?random=30",
-    imgHint: "modern hotel marina",
-    perks: ["Tarifa preferencial", "Transporte al festival"]
+    imgSrc: "/Images/Campus/DSC_9298.jpg",
+    imgHint: "modern hotel art",
+    perks: ["Tarifa preferencial", "Transporte al festival"],
+    link: "https://www.hotelelganzo.com/"
   },
   {
     name: "The Cape, a Thompson Hotel",
     description: "Vistas inigualables del Arco y un ambiente de lujo contemporáneo.",
-    imgSrc: "https://picsum.photos/800/600?random=31",
+    imgSrc: "https://picsum.photos/seed/the-cape/800/600",
     imgHint: "luxury hotel ocean",
-    perks: ["Coctel de bienvenida", "Acceso a after-party"]
+    perks: ["Coctel de bienvenida", "Acceso a after-party"],
+    link: "https://www.hyatt.com/thompson-hotels/cslth-the-cape"
   },
   {
     name: "Viceroy Los Cabos",
     description: "Arquitectura vanguardista y espejos de agua que se funden con el mar.",
-    imgSrc: "https://picsum.photos/800/600?random=32",
+    imgSrc: "https://picsum.photos/seed/viceroy/800/600",
     imgHint: "architectural hotel pools",
-    perks: ["Descuento en spa", "Check-out extendido"]
+    perks: ["Descuento en spa", "Check-out extendido"],
+    link: "https://www.viceroyhotelsandresorts.com/los-cabos"
   }
+];
+
+const venues = [
+    {
+        name: "Crania",
+        description: "Epicentro creativo y escénico donde cine, música y arte digital se encuentran.",
+        imgSrc: "/Images/Campus/Copia de DSC01799.jpg",
+        imgHint: "outdoor venue night",
+    },
+    {
+        name: "Veleros Beach Club",
+        description: "Un espacio para la convivencia con música local y experiencias de la comunidad.",
+        imgSrc: "/Images/Campus/Drone-edit2 (1).png",
+        imgHint: "beach club ocean",
+    },
+    {
+        name: "Jardín IKAL",
+        description: "Enclave natural y escénico que albergará actos especiales y la fiesta de clausura.",
+        imgSrc: "/Images/Campus/Dalu_finales-400.jpg",
+        imgHint: "lush garden nature"
+    }
 ];
 
 const experiences = [
@@ -58,7 +83,7 @@ export default function TravelPage() {
         <section className="bg-card text-center py-20 sm:py-28 relative overflow-hidden">
             <div className="absolute inset-0 z-0">
                  <Image
-                    src="https://picsum.photos/1920/1081"
+                    src="/Images/Main/Banner inicial.jpg"
                     alt="Paisaje aéreo de Los Cabos"
                     data-ai-hint="aerial landscape beach"
                     fill
@@ -109,7 +134,47 @@ export default function TravelPage() {
                                         </div>
                                     ))}
                                 </div>
-                                <Button className="mt-auto w-full">Ver Tarifas y Reservar</Button>
+                                <Button asChild className="mt-auto w-full">
+                                    <Link href={hotel.link} target="_blank" rel="noopener noreferrer">
+                                        Ver Tarifas y Reservar
+                                    </Link>
+                                </Button>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        {/* Venues Section */}
+        <section className="py-16 sm:py-24 bg-card">
+            <div className="container mx-auto px-4">
+                 <div className="text-center mb-12">
+                    <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Sedes del Festival</h2>
+                    <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+                        Estos son los epicentros de la creatividad donde la magia del cine cobrará vida.
+                    </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {venues.map((venue) => (
+                        <Card key={venue.name} className="overflow-hidden group flex flex-col border-border/50 hover:shadow-xl transition-shadow duration-300">
+                             <div className="relative h-80 w-full">
+                                <Image
+                                    src={venue.imgSrc}
+                                    alt={venue.name}
+                                    data-ai-hint={venue.imgHint}
+                                    fill
+                                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                />
+                            </div>
+                            <CardContent className="p-6 flex-grow flex flex-col">
+                                <h3 className="text-2xl font-bold font-headline text-card-foreground">{venue.name}</h3>
+                                <p className="text-muted-foreground mt-2 flex-grow">{venue.description}</p>
+                                 <Button asChild variant="outline" className="mt-4">
+                                  <Link href="/campus">
+                                    Explorar Campus
+                                  </Link>
+                                </Button>
                             </CardContent>
                         </Card>
                     ))}
@@ -118,7 +183,7 @@ export default function TravelPage() {
         </section>
 
         {/* Experiences Section */}
-         <section className="py-16 sm:py-24 bg-card">
+         <section className="py-16 sm:py-24 bg-background">
             <div className="container mx-auto px-4">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="order-2 md:order-1">
@@ -145,7 +210,7 @@ export default function TravelPage() {
                      <div className="order-1 md:order-2">
                         <Card className="overflow-hidden shadow-2xl shadow-black/20">
                             <Image 
-                                src="https://picsum.photos/800/600?random=35"
+                                src="/Images/Main/Banner inicial.jpg"
                                 alt="El Arco de Cabo San Lucas"
                                 data-ai-hint="cabo san lucas arch"
                                 width={800}
@@ -163,3 +228,5 @@ export default function TravelPage() {
     </div>
   );
 }
+
+    
