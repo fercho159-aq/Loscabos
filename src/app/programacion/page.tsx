@@ -329,7 +329,7 @@ export default function ProgramacionPage() {
                 <Carousel
                   opts={{
                     align: "start",
-                    loop: day.events.length > 3,
+                    loop: true,
                   }}
                   className="w-full"
                 >
@@ -388,5 +388,3 @@ export default function ProgramacionPage() {
     </div>
   );
 }
-
-    
