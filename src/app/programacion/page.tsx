@@ -208,7 +208,7 @@ const programData: DayProgram[] = [
             Duración: "32 minutos",
             Género: "Documental"
         },
-        sinopsis: "Mario Castro es un pescador comercial retirado, cuyos incansables esfuerzos han posicionado a Cabo Pulmo, México, como un referente mundial en conservación marina. Sin embargo, su entorno enfrenta nuevas amenazas: el crecimiento turístico, la falta de regulación y las consecuencias del desarrollo desmedido.",
+        sinopsis: "Mario Castro es un pescador comercial retirado, cuyos incansables esfuerzos han posicionando a Cabo Pulmo, México, como un referente mundial en conservación marina. Sin embargo, su entorno enfrenta nuevas amenazas: el crecimiento turístico, la falta de regulación y las consecuencias del desarrollo desmedido.",
         access: "Acceso general con cupo limitado",
         image: "https://picsum.photos/seed/el-pulmo/800/600",
         imageHint: "coral reef documentary",
@@ -281,55 +281,57 @@ const CalendarLinks = ({ event, day }: { event: Event, day: DayProgram }) => {
 
 
 const EventDialogContent = ({ event, day }: { event: Event, day: DayProgram }) => (
-    <DialogContent className="sm:max-w-[600px] bg-card">
-        <DialogHeader>
+    <DialogContent className="sm:max-w-2xl bg-card max-h-[90svh] flex flex-col">
+        <DialogHeader className="flex-shrink-0">
             <DialogTitle className="font-headline text-3xl text-foreground">{event.title}</DialogTitle>
             <DialogDescription className="text-accent font-semibold pt-1">{event.subtitle}</DialogDescription>
         </DialogHeader>
-        <div className="grid gap-6 py-4">
-            <div className="relative aspect-video w-full rounded-lg overflow-hidden">
-                <Image
-                    src={event.image}
-                    alt={event.title}
-                    data-ai-hint={event.imageHint}
-                    fill
-                    className="object-cover"
-                />
-            </div>
-            <p className="text-muted-foreground">{event.text}</p>
-            {event.sinopsis && (
-                <blockquote className="mt-2 border-l-2 pl-4 italic text-muted-foreground">"{event.sinopsis}"</blockquote>
-            )}
-            {event.techInfo && (
-                <div>
-                    <h4 className="font-semibold text-foreground mb-2">Ficha Técnica</h4>
-                    <div className="text-sm text-muted-foreground space-y-1">
-                        {Object.entries(event.techInfo).map(([key, value]) => (
-                            <p key={key}>
-                                <span className="font-semibold text-foreground/80">{key}:</span> {value}
-                            </p>
-                        ))}
-                    </div>
-                </div>
-            )}
-            <div className="flex items-center gap-4 text-sm mt-4">
-                <div className="flex items-center gap-2">
-                    <Ticket className="h-5 w-5 text-accent" />
-                    <span className="font-semibold text-foreground">{event.access}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                    <Calendar className="h-5 w-5 text-accent" />
-                    <span className="font-semibold text-foreground">{event.time} @ {event.place}</span>
-                </div>
-            </div>
-            <div className="flex flex-wrap gap-4 mt-4">
-                {event.participantsButton && (
-                    <Button asChild>
-                        <Link href="/participantes">Ver Participantes</Link>
-                    </Button>
-                )}
-                 <CalendarLinks event={event} day={day} />
-            </div>
+        <div className="flex-grow overflow-y-auto pr-6 -mr-6">
+          <div className="grid gap-6 py-4">
+              <div className="relative aspect-video w-full rounded-lg overflow-hidden">
+                  <Image
+                      src={event.image}
+                      alt={event.title}
+                      data-ai-hint={event.imageHint}
+                      fill
+                      className="object-cover"
+                  />
+              </div>
+              <p className="text-muted-foreground">{event.text}</p>
+              {event.sinopsis && (
+                  <blockquote className="mt-2 border-l-2 pl-4 italic text-muted-foreground">"{event.sinopsis}"</blockquote>
+              )}
+              {event.techInfo && (
+                  <div>
+                      <h4 className="font-semibold text-foreground mb-2">Ficha Técnica</h4>
+                      <div className="text-sm text-muted-foreground space-y-1">
+                          {Object.entries(event.techInfo).map(([key, value]) => (
+                              <p key={key}>
+                                  <span className="font-semibold text-foreground/80">{key}:</span> {value}
+                              </p>
+                          ))}
+                      </div>
+                  </div>
+              )}
+              <div className="flex items-center gap-4 text-sm mt-4">
+                  <div className="flex items-center gap-2">
+                      <Ticket className="h-5 w-5 text-accent" />
+                      <span className="font-semibold text-foreground">{event.access}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                      <Calendar className="h-5 w-5 text-accent" />
+                      <span className="font-semibold text-foreground">{event.time} @ {event.place}</span>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div className="flex-shrink-0 pt-4 flex flex-wrap gap-4 mt-auto border-t">
+          {event.participantsButton && (
+              <Button asChild>
+                  <Link href="/participantes">Ver Participantes</Link>
+              </Button>
+          )}
+            <CalendarLinks event={event} day={day} />
         </div>
     </DialogContent>
 );
@@ -425,3 +427,4 @@ export default function ProgramacionPage() {
     </div>
   );
 }
+
