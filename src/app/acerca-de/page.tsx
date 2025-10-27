@@ -115,6 +115,22 @@ export default function AcercaDePage() {
             </div>
         </section>
 
+        {/* Team Section */}
+        <section className="py-16 sm:py-24 bg-card">
+            <div className="container mx-auto px-4 max-w-4xl space-y-8">
+                <div className="text-center">
+                    <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">¿Quién está detrás del FICLosCabos 2025?</h2>
+                </div>
+                <div className="text-lg text-muted-foreground space-y-6">
+                    <p>El Festival Internacional de Cine de Los Cabos es posible gracias a un equipo con experiencia probada en gestión cultural, curaduría cinematográfica y artes interdisciplinarias.</p>
+                    <p><span className="font-semibold text-foreground">Paola Desentis Vía, Directora General,</span> cuenta con más de 15 años liderando proyectos de industrias creativas, desarrollo cultural y comunicación integral, consolidando plataformas de alto impacto en México y en el extranjero.</p>
+                    <p><span className="font-semibold text-foreground">Salvador Amores, Director de Programación,</span> es curador con trayectoria internacional, especializado en cine contemporáneo y narrativas emergentes. Ha colaborado con festivales y espacios de relevancia global, aportando una mirada innovadora y rigurosa a la selección del FICC.</p>
+                    <p><span className="font-semibold text-foreground">Ximena Lamadrid, Coordinadora Artística,</span> es actriz y productora mexicana con presencia internacional en cine y televisión. Su experiencia conecta el lenguaje del cine con la música y las artes escénicas, aportando una dimensión interdisciplinaria que enriquece la identidad del FICC 2025.</p>
+                    <p>La <span className="font-semibold text-foreground">Escuela Superior de Cine (ESCINE)</span> es el aliado estratégico del Festival. Institución líder en formación audiovisual en México, acompaña la curaduría de la programación y la evaluación de las secciones competitivas, garantizando legitimidad, rigor académico y credibilidad. ESCINE también respalda procesos clave como La Baja Inspira y el Fondo Fílmico Gabriel Figueroa, consolidando al Festival como una plataforma sólida para el talento emergente y la industria audiovisual en México.</p>
+                </div>
+            </div>
+        </section>
+
         {/* ESCINE Alliance Section */}
         <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground">
             <div className="absolute inset-0 z-0">
