@@ -272,7 +272,7 @@ const EventDialogContent = ({ event }: { event: Event }) => {
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
                             <AccordionTrigger>
-                                <Button className='w-full'>{getTalentButtonText()}</Button>
+                                {getTalentButtonText()}
                             </AccordionTrigger>
                             <AccordionContent>
                                <div className="space-y-8 pt-4">
@@ -339,7 +339,7 @@ export default function ProgramacionPage() {
                 Programación <span className="text-accent">2025</span>
               </h1>
               <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                Explora los eventos, proyecciones y experiencias que marcarán la 13ª edición del Festival.
+                Antes de que la historia completa se proyecte… Descubre un adelanto del universo #BeyondTheScreen
               </p>
             </div>
 
