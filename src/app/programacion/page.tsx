@@ -233,24 +233,6 @@ const programData: DayProgram[] = [
     title: "13 de diciembre",
     events: [
       {
-        title: "El Pulmo",
-        subtitle: "Proyección especial",
-        text: "El Pulmo se presenta como una de las proyecciones especiales del festival, reafirmando el compromiso con las historias que emergen del territorio y la conciencia ambiental. Dirigido por Mark Kronemeyer y Begoña Félix, el documental retrata la vida de Mario Castro, un pescador retirado cuya lucha por la conservación marina ha convertido a Cabo Pulmo en un ejemplo mundial de resiliencia y esperanza ecológica. A través de una fotografía sublime y una narrativa profundamente humana, la película revela las tensiones entre desarrollo, sostenibilidad y comunidad, mostrando cómo la preservación del entorno natural puede convertirse en una forma de resistencia cultural. Esta función forma parte del eje #BeyondTheScreen, que busca conectar el cine con la biodiversidad, la identidad local y el arte como herramienta de transformación.",
-        techInfo: {
-            Dirección: "Mark Kronemeyer, Begoña Félix",
-            País: "México",
-            Año: "2024",
-            Duración: "32 minutos",
-            Género: "Documental"
-        },
-        sinopsis: "Mario Castro es un pescador comercial retirado, cuyos incansables esfuerzos han posicionando a Cabo Pulmo, México, como un referente mundial en conservación marina. Sin embargo, su entorno enfrenta nuevas amenazas: el crecimiento turístico, la falta de regulación y las consecuencias del desarrollo desmedido.",
-        access: "Acceso general con cupo limitado",
-        image: "https://picsum.photos/seed/el-pulmo/800/600",
-        imageHint: "coral reef documentary",
-        time: "17:00",
-        place: "Cinemex San José del Cabo"
-      },
-      {
         title: "Amores Perros – 25 años de una obra que transformó el cine mexicano",
         subtitle: "Proyección especial y conversación con Martha Sosa",
         text: "El Festival rinde homenaje a una de las películas que redefinió la narrativa audiovisual mexicana contemporánea: Amores Perros, dirigida por Alejandro González Iñárritu, a 25 años de su estreno. La proyección especial contará con la participación de Marta Sosa, productora mexicana con una destacada trayectoria en la cinematografía nacional, reconocida por su trabajo en películas como Presunto Culpable (2008), P.O.V. (1988) y, por supuesto, Amores Perros (2000); obras que marcaron la identidad del cine mexicano moderno. Más que una retrospectiva, este encuentro propone un diálogo entre el pasado y el presente, explorando cómo las narrativas urbanas, la fragmentación del relato y la crudeza emocional de Amores Perros siguen resonando hoy en un contexto donde la tecnología y las nuevas formas de comunicación transforman la manera en que contamos y consumimos historias.",
