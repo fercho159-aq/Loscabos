@@ -350,11 +350,10 @@ const EventDialogContent = ({ event, day }: { event: Event, day: DayProgram }) =
                   {event.talent && event.talent.length > 0 && (
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
-                            <AccordionTrigger className="text-base font-semibold p-0 justify-start gap-2 hover:no-underline [&[data-state=open]>svg]:rotate-180">
-                                <Button variant="ghost" asChild className="p-0 h-auto text-base font-semibold hover:bg-transparent">
-                                    <span>{getTalentButtonText()}</span>
+                            <AccordionTrigger className="text-base font-semibold p-0 justify-start gap-2 hover:no-underline [&>svg]:rotate-180">
+                                <Button variant="outline" asChild className="p-0 h-auto text-base font-semibold hover:bg-transparent text-accent border-accent hover:text-accent">
+                                    <span className="flex items-center">{getTalentButtonText()} <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 ml-2 accordion-chevron" /></span>
                                 </Button>
-                                <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
                             </AccordionTrigger>
                             <AccordionContent>
                                <div className="space-y-8 pt-4">
@@ -461,7 +460,7 @@ export default function ProgramacionPage() {
                                             fill
                                             className="object-cover transition-transform duration-500 group-hover:scale-110"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4 transition-opacity group-hover:opacity-0">
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4 transition-opacity opacity-100 group-hover:opacity-0">
                                             <h3 className="text-xl font-bold font-headline text-background">{event.title}</h3>
                                             <p className="text-sm text-accent font-semibold mt-1">{event.subtitle}</p>
                                         </div>
