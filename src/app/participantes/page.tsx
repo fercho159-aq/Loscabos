@@ -45,6 +45,18 @@ const participants = [
     imgHint: 'portrait María Fernanda Prieto',
   },
   {
+    name: 'Julián Lamadrid',
+    bio: 'Cantante, compositor y cineasta mexicano. Su trabajo fusiona música y cine en proyectos como Mala Noche y Rebels of the Neon God.',
+    imgSrc: 'https://picsum.photos/seed/julian/400/400',
+    imgHint: 'portrait Julián Lamadrid'
+  },
+  {
+    name: 'Ximena Lamadrid',
+    bio: 'Actriz y cineasta mexicana, reconocida por Bardo, ¿Quién Mató a Sara? y Marea, proyecto que escribió, dirigió y produjo.',
+    imgSrc: 'https://picsum.photos/seed/ximena/400/400',
+    imgHint: 'portrait Ximena Lamadrid'
+  },
+  {
     name: 'David Zonana',
     bio: 'Cineasta y guionista mexicano reconocido por su trabajo en Heroico, película aclamada internacionalmente por su fuerza visual y su mirada crítica sobre la juventud y el poder. David fungirá como moderador del panel de talento emergente, tejiendo un diálogo profundo sobre la nueva ola de creación cinematográfica en México.',
     imgSrc: 'https://picsum.photos/seed/david/400/400',
