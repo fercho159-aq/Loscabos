@@ -452,7 +452,7 @@ export default function ProgramacionPage() {
                        <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                           <Dialog>
                             <DialogTrigger asChild>
-                                <Card className="overflow-hidden group cursor-pointer h-full flex flex-col">
+                                <Card className="overflow-hidden group cursor-pointer h-full flex flex-col bg-card/80">
                                     <div className="relative aspect-video w-full">
                                         <Image
                                             src={event.image}
@@ -461,12 +461,12 @@ export default function ProgramacionPage() {
                                             fill
                                             className="object-cover transition-transform duration-500 group-hover:scale-110"
                                         />
-                                        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent transition-opacity group-hover:opacity-0">
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4 transition-opacity group-hover:opacity-0">
                                             <h3 className="text-xl font-bold font-headline text-background">{event.title}</h3>
                                             <p className="text-sm text-accent font-semibold mt-1">{event.subtitle}</p>
                                         </div>
                                     </div>
-                                    <CardContent className="p-6 mt-auto">
+                                    <CardContent className="p-4 mt-auto">
                                        <div className="flex items-center justify-between">
                                             <div className="flex items-center gap-2 text-xs text-muted-foreground">
                                                 <Calendar className="h-4 w-4"/>
@@ -485,10 +485,10 @@ export default function ProgramacionPage() {
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  {day.events.length > 3 && (
+                  {day.events.length > 1 && (
                     <>
-                        <CarouselPrevious className="hidden sm:flex -left-8" />
-                        <CarouselNext className="hidden sm:flex -right-8" />
+                        <CarouselPrevious className="flex -left-4" />
+                        <CarouselNext className="flex -right-4" />
                     </>
                   )}
                 </Carousel>
@@ -502,3 +502,5 @@ export default function ProgramacionPage() {
     </div>
   );
 }
+
+    
