@@ -125,25 +125,6 @@ const programData: DayProgram[] = [
                 imageHint: "woman portrait professional"
             }
         ]
-      },
-      {
-        title: "Bardo, falsa crónica de unas cuantas verdades",
-        subtitle: "Proyección especial en Cinemex en Homenaje a Eugenio Caballero",
-        text: "Como parte del homenaje a Eugenio Caballero, diseñador de producción ganador del Óscar por El laberinto del fauno, el FICLosCabos 2025 presenta una función especial de Bardo acompañada de una conversación con Ana Terrazas (diseñadora de vestuario) y Ximena Lamadrid (actriz), moderada por Julio Patán. Una oportunidad única para explorar el arte del diseño cinematográfico y su poder narrativo dentro del cine contemporáneo.",
-        techInfo: {
-          Dirección: "Alejandro González. Iñárritu",
-          Guión: "Alejandro G. Iñárritu y Nicolás Giacobone",
-          País: "México / Estados Unidos",
-          Año: "2022",
-          Duración: "174 min",
-          Género: "Drama / Comedia surrealista"
-        },
-        sinopsis: "Un reconocido periodista y documentalista regresa a México y se enfrenta a una crisis existencial mientras revisita su pasado, sus vínculos familiares y la historia reciente del país. Con un lenguaje visual desbordante, Bardo es una reflexión sobre la identidad, la memoria y el absurdo de la existencia contemporánea.",
-        access: "Acceso con registro previo",
-        image: "https://picsum.photos/seed/bardo/800/600",
-        imageHint: "surreal movie scene",
-        time: "20:30",
-        place: "Cinemex Puerto Paraíso"
       }
     ]
   },
@@ -350,9 +331,10 @@ const EventDialogContent = ({ event, day }: { event: Event, day: DayProgram }) =
                   {event.talent && event.talent.length > 0 && (
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
-                            <AccordionTrigger asChild>
-                                <Button className="w-full">
+                            <AccordionTrigger className="w-full" asChild>
+                                <Button>
                                     {getTalentButtonText()}
+                                    <ChevronDown className="ml-2 h-4 w-4 shrink-0 transition-transform duration-200" />
                                 </Button>
                             </AccordionTrigger>
                             <AccordionContent>
