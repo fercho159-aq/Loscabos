@@ -181,7 +181,7 @@ const programData: DayProgram[] = [
         subtitle: "Panel de cineastas emergentes",
         text: "En esta edición, el Festival amplía su mirada hacia las nuevas voces del cine, reuniendo a una selección de jóvenes directores, productores y artistas con reconocimiento nacional e internacional, que están redefiniendo los lenguajes cinematográficos con una fuerza creativa única. Una conversación que celebra la diversidad de miradas y conecta al público con la generación que está moldeando el futuro del cine nacional.",
         access: "Acceso con registro previo",
-        image: "https://picsum.photos/seed/new-voices/800/600",
+        image: "/Images/nuevasvoces/jakob-owens-vIwkdibacK0-unsplash.jpg",
         imageHint: "young filmmakers panel",
         participantsButton: true,
         time: "17:00",
