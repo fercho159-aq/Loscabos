@@ -172,7 +172,7 @@ const programData: DayProgram[] = [
       {
         title: "Cóctel de gala en Casa Ballena",
         subtitle: "en Homenaje a Eugenio Caballero",
-        text: "El homenaje a Eugenio Caballero culminará con un cóctel privado en Casa Ballena, espacio dedicado a la producción y difusión del arte contemporáneo en San José del Cabo. En este entorno íntimo y simbólico, la comunidad cinematográfica, aliados y creadores se reunirán para celebrar la trayectoria del diseñador de producción acompañada por la música del Ganzo Collective, ensamble residente del Hotel El Ganzo.",
+        text: "El homenaje a Eugenio Caballero culminará con un cóctel privado en Casa Ballena, espacio dedicado a la producción y difusión del arte contemporáneo en San José del Cabo. En este entorno íntimo y simbólico, la comunidad cinematográfica, aliados y creadores se reunirán para celebrar la trayectoria del diseñador de producción acompañada por la música de El Ganzo Collective, ensamble residente del Hotel El Ganzo.",
         access: "Acceso solo por invitación.",
         image: "https://picsum.photos/seed/gala-ballena/800/600",
         imageHint: "elegant cocktail party",
@@ -205,26 +205,6 @@ const programData: DayProgram[] = [
         participantsButton: true,
         time: "17:00",
         place: "Hotel El Ganzo"
-      },
-      {
-        title: "Venado Azul",
-        subtitle: "Masterclass: Animación mexicana en desarrollo",
-        text: "En el marco de la nueva sección de animación del FICLosCabos 2025, se presenta Venado Azul, largometraje dirigido por Pablo Calvillo, que sigue el viaje iniciático de Iyari, una joven wixárika que se adentra en el desierto sagrado de Wirikuta. La película propone una reflexión profunda sobre la conexión entre el ser humano y la naturaleza, y sobre la urgencia de preservar los ecosistemas que sostienen nuestra existencia. Como parte del programa #BeyondTheScreen, el Festival presentará un encuentro exclusivo con el director, que incluirá una masterclass y una preview especial dedicada al proceso de dirección y producción de Venado Azul, explorando las decisiones creativas detrás de su universo visual. A través de materiales inéditos —desde el diseño de flora y fauna endémica hasta la creación de robots, personajes y escenarios en 2D y 3D—, el público podrá conocer el proceso que da vida a esta obra, donde tradición, tecnología y narrativa autoral se entrelazan en una experiencia única.",
-        access: "Acceso con registro previo",
-        image: "https://picsum.photos/seed/venado-azul/800/600",
-        imageHint: "animation concept art",
-        time: "18:00",
-        place: "Cinemex Puerto Paraíso"
-      },
-      {
-        title: "Personas Haciendo Cosas",
-        subtitle: "Live Cinema / Performance",
-        text: "La artista mexicana Tania Reza presenta Personas Haciendo Cosas, una instalación audiovisual que explora el movimiento contemporáneo a través de la repetición sostenida de gestos cotidianos. Utilizando live coding y un circuito cerrado de video, diez pantallas proyectan en tiempo real a distintas personas repitiendo un movimiento de su rutina u oficio, transformando lo ordinario en una experiencia escénica.",
-        access: "Acceso general con cupo limitado.",
-        image: "https://picsum.photos/seed/live-cinema/800/600",
-        imageHint: "art installation video",
-        time: "20:00",
-        place: "Crania"
       },
       {
         title: "Celebración del cine mexicano y sus nuevas voces",
@@ -525,5 +505,3 @@ export default function ProgramacionPage() {
     </div>
   );
 }
-
-    
