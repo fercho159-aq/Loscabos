@@ -271,7 +271,7 @@ const EventDialogContent = ({ event }: { event: Event }) => {
                   {event.talent && event.talent.length > 0 && (
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
-                             <AccordionTrigger className="w-full">
+                            <AccordionTrigger>
                                 <Button className='w-full'>{getTalentButtonText()}</Button>
                             </AccordionTrigger>
                             <AccordionContent>
@@ -343,58 +343,38 @@ export default function ProgramacionPage() {
               </p>
             </div>
 
-            {programData.map((day) => (
-              <div key={day.day} className="mb-16">
-                <Carousel
-                  opts={{
-                    align: "start",
-                    loop: day.events.length > 3,
-                  }}
-                  className="w-full"
-                >
-                  <CarouselContent className="-ml-4">
-                    {day.events.map((event, index) => (
-                       <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                          <Dialog>
-                            <DialogTrigger asChild>
-                                <Card className="overflow-hidden group cursor-pointer h-full flex flex-col bg-card/80">
-                                    <div className="relative aspect-video w-full">
-                                        <Image
-                                            src={event.image}
-                                            alt={event.title}
-                                            data-ai-hint={event.imageHint}
-                                            fill
-                                            className="object-cover transition-transform duration-500 group-hover:scale-110"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4">
-                                            <h3 className="text-xl font-bold font-headline text-background">{event.title}</h3>
-                                            <p className="text-sm text-accent font-semibold mt-1">{event.subtitle}</p>
-                                        </div>
-                                    </div>
-                                    <CardContent className="p-4 mt-auto">
-                                       <div className="flex items-center justify-end">
-                                            <div className="flex items-center gap-2 text-xs text-accent">
-                                                <Info className="h-4 w-4"/>
-                                                <span>Ver detalles</span>
-                                            </div>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-                            </DialogTrigger>
-                             <EventDialogContent event={event} />
-                        </Dialog>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  {day.events.length > 1 && (
-                    <>
-                        <CarouselPrevious className="flex" />
-                        <CarouselNext className="flex" />
-                    </>
-                  )}
-                </Carousel>
-              </div>
-            ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {programData.flatMap(day => day.events).map((event, index) => (
+                <Dialog key={index}>
+                  <DialogTrigger asChild>
+                      <Card className="overflow-hidden group cursor-pointer h-full flex flex-col bg-card/80">
+                          <div className="relative aspect-video w-full">
+                              <Image
+                                  src={event.image}
+                                  alt={event.title}
+                                  data-ai-hint={event.imageHint}
+                                  fill
+                                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4">
+                                  <h3 className="text-xl font-bold font-headline text-background">{event.title}</h3>
+                                  <p className="text-sm text-accent font-semibold mt-1">{event.subtitle}</p>
+                              </div>
+                          </div>
+                          <CardContent className="p-4 mt-auto">
+                             <div className="flex items-center justify-end">
+                                  <div className="flex items-center gap-2 text-xs text-accent">
+                                      <Info className="h-4 w-4"/>
+                                      <span>Ver detalles</span>
+                                  </div>
+                              </div>
+                          </CardContent>
+                      </Card>
+                  </DialogTrigger>
+                   <EventDialogContent event={event} />
+                </Dialog>
+              ))}
+            </div>
 
           </div>
         </section>
@@ -403,3 +383,4 @@ export default function ProgramacionPage() {
     </div>
   );
 }
+
