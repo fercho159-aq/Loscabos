@@ -164,7 +164,7 @@ const programData: DayProgram[] = [
             {
                 name: "Eugenio Caballero",
                 bio: "Diseñador de producción mexicano ganador del Óscar por El laberinto del fauno. Ha trabajado en más de 30 películas con cineastas como Guillermo del Toro, Alfonso Cuarón, J.A. Bayona y Alejandro G. Iñárritu. Responsable del diseño en ROMA, Lo imposible, Un monstruo viene a verme y Bardo. Miembro de la Academia desde 2007, es una de las figuras más influyentes del cine contemporáneo.",
-                image: "https://picsum.photos/seed/eugenio-caballero-bio/400/400",
+                image: "/Images/Biografias/FICC_DECK2025.pdf-image-115.jpg",
                 imageHint: "man portrait professional"
             }
         ]
@@ -249,6 +249,34 @@ const programData: DayProgram[] = [
         imageHint: "coral reef documentary",
         time: "17:00",
         place: "Cinemex San José del Cabo"
+      },
+      {
+        title: "Amores Perros – 25 años de una obra que transformó el cine mexicano",
+        subtitle: "Proyección especial y conversación con Martha Sosa",
+        text: "El Festival rinde homenaje a una de las películas que redefinió la narrativa audiovisual mexicana contemporánea: Amores Perros, dirigida por Alejandro González Iñárritu, a 25 años de su estreno. La proyección especial contará con la participación de Marta Sosa, productora mexicana con una destacada trayectoria en la cinematografía nacional, reconocida por su trabajo en películas como Presunto Culpable (2008), P.O.V. (1988) y, por supuesto, Amores Perros (2000); obras que marcaron la identidad del cine mexicano moderno. Más que una retrospectiva, este encuentro propone un diálogo entre el pasado y el presente, explorando cómo las narrativas urbanas, la fragmentación del relato y la crudeza emocional de Amores Perros siguen resonando hoy en un contexto donde la tecnología y las nuevas formas de comunicación transforman la manera en que contamos y consumimos historias.",
+        techInfo: {
+            Dirección: "Alejandro González Iñárritu",
+            Guión: "Guillermo Arriaga",
+            País: "México",
+            Año: "2000",
+            Duración: "154 minutos",
+            Género: "Drama"
+        },
+        sinopsis: "En la Ciudad de México, un trágico accidente automovilístico entrelaza las vidas de tres personajes: Octavio, un joven que huye de la violencia doméstica y el deseo prohibido; Valeria, una modelo cuyo mundo se derrumba tras perderlo todo; y El Chivo, un exguerrillero que busca redención entre el crimen y la soledad. A través de sus historias, Amores Perros revela la fragilidad humana, el amor, la pérdida y la violencia como pulsos inevitables de una sociedad fragmentada.",
+        access: "General con cupo limitado",
+        image: "https://picsum.photos/seed/amores-perros-25/800/600",
+        imageHint: "movie poster dogs",
+        time: "20:00",
+        place: "Cinemex Puerto Paraíso",
+        talent: [
+          {
+            name: "Martha Sosa Elizondo",
+            bio: "Martha Sosa Elizondo, es una destacada productora mexicana involucrada en la producción cinematográfica desde 1997. Es ampliamente reconocida por su trabajo en filmes emblemáticos como Amores Perros y Presunto culpable. Sosa cree profundamente en el poder emocional del cine como instrumento para visibilizar problemáticas sociales y generar cambio. Ha impulsado películas que han alcanzado éxito internacional y popularidad masiva.",
+            image: "/Images/Biografias/FICC_DECK2025.pdf-image-145.jpg",
+            imageHint: "woman portrait elegant",
+            instagram: "@marthasosa"
+          }
+        ]
       }
     ]
   }
@@ -295,6 +323,9 @@ const EventDialogContent = ({ event, day }: { event: Event, day: DayProgram }) =
              if (event.talent[0].name === "Guillermo J. Gómez") {
                 return "Conoce más sobre el chef Guillermo Gómez y Suelo Sur";
             }
+             if (event.talent[0].name === "Martha Sosa Elizondo") {
+                return "Conoce a Martha Sosa";
+             }
             return `Conoce a ${event.talent[0].name}`;
         }
         return "Descubre al talento que nos acompaña en el Festival";
@@ -430,7 +461,7 @@ export default function ProgramacionPage() {
                 <Carousel
                   opts={{
                     align: "start",
-                    loop: true,
+                    loop: day.events.length > 3,
                   }}
                   className="w-full"
                 >
