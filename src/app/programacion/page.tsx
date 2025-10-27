@@ -95,7 +95,7 @@ const programData: DayProgram[] = [
         },
         sinopsis: "Sinfonía Oceánica es una invitación a sentir el mar a través de un diálogo único entre el contrabajo y las ballenas, donde la música despierta nuestra conexión profunda con el océano.",
         access: "Acceso general con cupo limitado",
-        image: "https://picsum.photos/seed/ocean-symphony/800/600",
+        image: "/Images/sinfonia/DSC05588.jpg",
         imageHint: "underwater whale",
         time: "19:00",
         place: "Crania",
@@ -103,25 +103,25 @@ const programData: DayProgram[] = [
             {
                 name: "Andy Mann",
                 bio: "Fotógrafo de National Geographic y director nominado al Emmy. Cofundador de SeaLegacy, su trabajo ha impulsado la protección de los océanos. Ha filmado en siete continentes y dirige Sinfonía Oceánica.",
-                image: "https://picsum.photos/seed/andy-mann/400/400",
+                image: "/Images/sinfonia/DSC05588.jpg",
                 imageHint: "man portrait photographer"
             },
             {
                 name: "Garth Stevenson",
                 bio: "Es contrabajista y compositor reconocido por conectar su música con la naturaleza. En 2010 tocó para ballenas en la Antártida junto al Dr. Roger Payne. En 2025, invitado por FOMARES, interpretó su contrabajo para ballenas jorobadas en Baja California Sur mediante bocinas submarinas e hidrófonos, creando un encuentro sonoro único.",
-                image: "https://picsum.photos/seed/garth-stevenson/400/400",
+                image: "/Images/sinfonia/garth head shot_photo by Sonya Kitchell copy.jpg",
                 imageHint: "man with cello"
             },
             {
                 name: "Maru Brito",
                 bio: "Es miembro de ORGCAS, ha colaborado con NatGeo, Disney TV y BBC en documentales de naturaleza. Piloto de dron y fotógrafa subacuática, su mirada ha sido clave en proyectos de conservación. En Sinfonía Oceánica participó como videógrafa, aportando tomas esenciales y experiencia técnica bajo la dirección de Andy Mann.",
-                image: "https://picsum.photos/seed/maru-brito/400/400",
+                image: "/Images/sinfonia/MARU BRITO.png",
                 imageHint: "woman underwater camera"
             },
             {
                 name: "Gabriela Gómez",
                 bio: "Es cofundadora y directora de FOMARES. Abogada enfocada en la conservación marina a través de políticas públicas, alianzas comunitarias y proyectos que integran ciencia, arte y cultura. Promotora de iniciativas que impulsan la protección ambiental mediante conciencia social y participación activa en territorio.",
-                image: "https://picsum.photos/seed/gabriela-gomez/400/400",
+                image: "/Images/sinfonia/DSC07242.jpg",
                 imageHint: "woman portrait professional"
             }
         ]
@@ -156,7 +156,7 @@ const programData: DayProgram[] = [
         subtitle: "Homenaje a Eugenio Caballero",
         text: "Como parte del homenaje del FICLosCabos 2025 a Eugenio Caballero, diseñador de producción y ganador del Premio de la Academia, esta masterclass ofrece una mirada profunda a su proceso creativo. A través de su colaboración con cineastas como Guillermo del Toro, Alfonso Cuarón y J.A. Bayona, Caballero compartirá cómo el diseño visual se convierte en una fuerza narrativa capaz de transformar la experiencia cinematográfica.",
         access: "Acceso con registro previo",
-        image: "https://picsum.photos/seed/masterclass-caballero/800/600",
+        image: "/Images/Biografias/FICC_DECK2025.pdf-image-115.jpg",
         imageHint: "film set design",
         time: "12:00",
         place: "Hotel El Ganzo",
@@ -174,7 +174,7 @@ const programData: DayProgram[] = [
         subtitle: "en Homenaje a Eugenio Caballero",
         text: "El homenaje a Eugenio Caballero culminará con un cóctel privado en Casa Ballena, espacio dedicado a la producción y difusión del arte contemporáneo en San José del Cabo. En este entorno íntimo y simbólico, la comunidad cinematográfica, aliados y creadores se reunirán para celebrar la trayectoria del diseñador de producción acompañada por la música de El Ganzo Collective, ensamble residente del Hotel El Ganzo.",
         access: "Acceso solo por invitación.",
-        image: "https://picsum.photos/seed/gala-ballena/800/600",
+        image: "/Images/Casa Ballena/Casa ballena (50 cm alto).JPG",
         imageHint: "elegant cocktail party",
         time: "22:00",
         place: "Casa Ballena",
@@ -182,7 +182,7 @@ const programData: DayProgram[] = [
             {
                 name: "Casa Ballena",
                 bio: "Casa Ballena es un espacio artístico ubicado en San José del Cabo que fusiona creación contemporánea con el entorno natural donde se encuentran el Pacífico y el Mar de Cortés. Fundada por el artista El Nacho en 2011, es un lugar dedicado a la producción y exhibición de arte, impulsando un legado que conecta comunidad y territorio.",
-                image: "https://picsum.photos/seed/casa-ballena/400/400",
+                image: "/Images/Casa Ballena/IMG_7868.jpg",
                 imageHint: "art space gallery",
                 website: "https://casaballena.com/",
                 instagram: "@casa_ballenamx"
@@ -211,7 +211,7 @@ const programData: DayProgram[] = [
         subtitle: "Cena de gala para ganadores del Fondo Fílmico Gabriel Figueroa y finalistas de La Baja Inspira.",
         text: "La Cena de Gala del FICLosCabos 2025 rinde homenaje al talento que impulsa el futuro del cine mexicano. La velada se llevará a cabo en Suelo Sur, restaurante insignia de Los Cabos encabezado por el chef Guillermo Gómez, reconocido por la Guía Michelin por su enfoque en la sostenibilidad, el respeto al territorio y la reinterpretación contemporánea de los ingredientes de Baja California Sur. Cada plato es una historia contada con el lenguaje de la naturaleza. Durante la cena se reconocerá a los ganadores del Fondo Fílmico Gabriel Figueroa, programa que impulsa proyectos mexicanos en etapa de postproducción mediante mentorías y acompañamiento profesional, así como a los finalistas de La Baja Inspira, sección competitiva dedicada a las narrativas con raíces en la península que fortalecen el vínculo entre cine, comunidad y territorio.",
         access: "Acceso solo por invitación",
-        image: "https://picsum.photos/seed/gala-dinner/800/600",
+        image: "/Images/nuevasvoces/Suelo Sur Foto .jpg",
         imageHint: "gourmet dinner",
         time: "21:00",
         place: "Suelo Sur",
@@ -219,7 +219,7 @@ const programData: DayProgram[] = [
           {
             name: "Guillermo J. Gómez",
             bio: "Guillermo J. Gómez es un chef de origen argentino radicado en Los Cabos. Su cocina celebra la pesca artesanal, los cultivos locales y la conexión con quienes trabajan la tierra. Formado en Europa y enriquecido por sabores del mundo, crea platillos que honran sus raíces y el territorio sudcaliforniano. Su propuesta en Suelo Sur será el marco perfecto para la Cena de Premiación del FICLosCabos 2025.",
-            image: "https://picsum.photos/seed/chef-gomez/400/400",
+            image: "/Images/nuevasvoces/Chef Guillermo @ SAGE Master cooking Class.jpg",
             imageHint: "chef portrait",
             website: "https://www.suelosur.com/",
             instagram: "@suelosurbaja"

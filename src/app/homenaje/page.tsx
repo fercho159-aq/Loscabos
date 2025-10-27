@@ -45,64 +45,61 @@ export default function HomenajePage() {
                     <div className="md:col-span-3">
                         <p className="text-accent font-semibold mb-2">Homenaje 2025</p>
                         <h1 className="font-headline text-5xl md:text-7xl font-bold text-foreground">{guest.name}</h1>
-                        <p className="text-muted-foreground mt-6 text-lg leading-relaxed">{guest.bio}</p>
+                        <p className="text-muted-foreground mt-6 text-lg leading-relaxed">El Festival Internacional de Cine de Los Cabos celebra su 13ª edición rindiendo homenaje a Eugenio Caballero, uno de los diseñadores de producción más influyentes del cine contemporáneo. Ganador del Premio de la Academia y colaborador de cineastas como Guillermo del Toro, Alfonso Cuarón y J.A. Bayona, Caballero ha redefinido el poder visual del cine mexicano y latinoamericano, transformando cada proyecto en una obra de arte cinematográfica.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        {/* Activities Section */}
+        {/* Schedule Section */}
         <section className="py-16 sm:py-24 bg-card">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Actividades Especiales</h2>
-                    <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Una oportunidad única para aprender y convivir con una leyenda del cine.
-                    </p>
+            <div className="container mx-auto px-4 max-w-4xl space-y-12">
+                
+                {/* Day 1: December 10 */}
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                    <div className="space-y-4">
+                        <h3 className="font-headline text-3xl text-foreground"><span className="text-accent">10 de diciembre:</span> Proyección Especial de "Bardo"</h3>
+                        <p className="text-muted-foreground">El homenaje iniciará con la proyección especial de Bardo en Cinemex, acompañada por una conversación con Ana Terrazas (diseñadora de vestuario) y Ximena Lamadrid (actriz), moderada por Julio Patán. Un encuentro que invita a reflexionar sobre el diseño de producción como una de las fuerzas narrativas más potentes del cine contemporáneo.</p>
+                        <Button asChild>
+                            <Link href="/programacion">Ver detalles del evento</Link>
+                        </Button>
+                    </div>
+                    <div>
+                        <Image
+                            src="https://picsum.photos/seed/bardo/800/600"
+                            alt="Proyección de Bardo"
+                            data-ai-hint="surreal movie scene"
+                            width={800}
+                            height={600}
+                            className="rounded-lg shadow-xl"
+                        />
+                    </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <Card className="hover:shadow-lg transition-shadow">
-                        <CardHeader>
-                            <CardTitle className="flex items-center gap-3">
-                                <Award className="h-8 w-8 text-accent" />
-                                <span>Masterclass</span>
-                            </CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <p className="text-muted-foreground mb-4">
-                                Un encuentro íntimo donde Eugenio Caballero compartirá su proceso creativo, su visión artística y las experiencias que definieron su carrera.
-                            </p>
-                             <p className="font-semibold text-sm text-foreground flex items-center gap-2 mb-1"><Calendar className="h-4 w-4"/>Fecha: Por definir</p>
-                             <p className="font-semibold text-sm text-foreground flex items-center gap-2 mb-4"><User className="h-4 w-4"/>Espacios disponibles: 50</p>
-                            <Button className="w-full group" asChild>
-                                <Link href="/pre-registro">
-                                    <Ticket className="mr-2 h-5 w-5 transform group-hover:rotate-12 transition-transform" />
-                                    Registrarse (Sin costo)
-                                </Link>
-                            </Button>
-                        </CardContent>
-                    </Card>
-                    <Card className="hover:shadow-lg transition-shadow">
-                        <CardHeader>
-                            <CardTitle className="flex items-center gap-3">
-                                <Film className="h-8 w-8 text-accent" />
-                                <span>Cena de Gala y Homenaje</span>
-                            </CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                             <p className="text-muted-foreground mb-4">
-                                Sé parte de una noche exclusiva para celebrar la trayectoria de Eugenio Caballero. Incluye alfombra roja, cena y proyección especial.
-                            </p>
-                            <p className="font-semibold text-sm text-foreground flex items-center gap-2 mb-1"><Calendar className="h-4 w-4"/>Fecha: Por definir</p>
-                             <p className="font-semibold text-sm text-foreground flex items-center gap-2 mb-4"><User className="h-4 w-4"/>Espacios disponibles: 100</p>
-                            <Button variant="secondary" className="w-full" asChild>
-                                <Link href="/pre-registro">
-                                    Comprar Boletos
-                                </Link>
-                            </Button>
-                        </CardContent>
-                    </Card>
+                {/* Day 2: December 11 */}
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                    <div className="md:order-2 space-y-4">
+                        <h3 className="font-headline text-3xl text-foreground"><span className="text-accent">11 de diciembre:</span> Masterclass y Celebración</h3>
+                        <p className="text-muted-foreground">El homenaje continúa con una Masterclass exclusiva de Eugenio Caballero, donde compartirá su proceso creativo. Posteriormente, se celebrará un cóctel privado en Casa Ballena, un espacio exclusivo donde la comunidad cinematográfica se reunirá para una velada de arte y conversación.</p>
+                        <ul className="text-muted-foreground list-disc pl-5 space-y-2">
+                            <li><strong>Masterclass:</strong> Una oportunidad para aprender del maestro del diseño de producción.</li>
+                            <li><strong>Proyección al aire libre:</strong> Una experiencia inmersiva en Crania bajo las estrellas.</li>
+                            <li><strong>Cóctel de Gala:</strong> Evento exclusivo con la música de Ganzo Collective (solo por invitación).</li>
+                        </ul>
+                         <Button asChild>
+                            <Link href="/programacion">Ver detalles del evento</Link>
+                        </Button>
+                    </div>
+                     <div className="md:order-1">
+                        <Image
+                            src="/Images/Campus/DSC_9298.jpg"
+                            alt="Masterclass y celebración"
+                            data-ai-hint="masterclass film elegant party"
+                            width={800}
+                            height={600}
+                            className="rounded-lg shadow-xl"
+                        />
+                    </div>
                 </div>
             </div>
         </section>
