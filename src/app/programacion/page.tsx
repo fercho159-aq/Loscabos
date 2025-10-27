@@ -6,7 +6,7 @@ import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Calendar, Info, Ticket, Share2 } from 'lucide-react';
+import { ArrowRight, Calendar, ChevronDown, Info, Ticket, Share2 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import {
   Carousel,
@@ -27,6 +27,14 @@ import Link from 'next/link';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { format, parse } from 'date-fns';
 import { es } from 'date-fns/locale';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+
+type Talent = {
+  name: string;
+  bio: string;
+  image: string;
+  imageHint: string;
+};
 
 type Event = {
   title: string;
@@ -53,6 +61,7 @@ type Event = {
   participantsButton?: boolean;
   time: string;
   place: string;
+  talent?: Talent[];
 };
 
 type DayProgram = {
@@ -87,7 +96,33 @@ const programData: DayProgram[] = [
         image: "https://picsum.photos/seed/ocean-symphony/800/600",
         imageHint: "underwater whale",
         time: "19:00",
-        place: "Crania"
+        place: "Crania",
+        talent: [
+            {
+                name: "Andy Mann",
+                bio: "Fotógrafo de National Geographic y director nominado al Emmy. Cofundador de SeaLegacy, su trabajo ha impulsado la protección de los océanos. Ha filmado en siete continentes y dirige Sinfonía Oceánica.",
+                image: "https://picsum.photos/seed/andy-mann/400/400",
+                imageHint: "man portrait photographer"
+            },
+            {
+                name: "Garth Stevenson",
+                bio: "Es contrabajista y compositor reconocido por conectar su música con la naturaleza. En 2010 tocó para ballenas en la Antártida junto al Dr. Roger Payne. En 2025, invitado por FOMARES, interpretó su contrabajo para ballenas jorobadas en Baja California Sur mediante bocinas submarinas e hidrófonos, creando un encuentro sonoro único.",
+                image: "https://picsum.photos/seed/garth-stevenson/400/400",
+                imageHint: "man with cello"
+            },
+            {
+                name: "Maru Brito",
+                bio: "Es miembro de ORGCAS, ha colaborado con NatGeo, Disney TV y BBC en documentales de naturaleza. Piloto de dron y fotógrafa subacuática, su mirada ha sido clave en proyectos de conservación. En Sinfonía Oceánica participó como videógrafa, aportando tomas esenciales y experiencia técnica bajo la dirección de Andy Mann.",
+                image: "https://picsum.photos/seed/maru-brito/400/400",
+                imageHint: "woman underwater camera"
+            },
+            {
+                name: "Gabriela Gómez",
+                bio: "Es cofundadora y directora de FOMARES. Abogada enfocada en la conservación marina a través de políticas públicas, alianzas comunitarias y proyectos que integran ciencia, arte y cultura. Promotora de iniciativas que impulsan la protección ambiental mediante conciencia social y participación activa en territorio.",
+                image: "https://picsum.photos/seed/gabriela-gomez/400/400",
+                imageHint: "woman portrait professional"
+            }
+        ]
       },
       {
         title: "Bardo, falsa crónica de unas cuantas verdades",
@@ -313,6 +348,41 @@ const EventDialogContent = ({ event, day }: { event: Event, day: DayProgram }) =
                       </div>
                   </div>
               )}
+              
+              {event.talent && event.talent.length > 0 && (
+                 <Accordion type="single" collapsible className="w-full">
+                    <AccordionItem value="item-1">
+                        <AccordionTrigger>
+                            <Button variant="ghost" className="text-base font-semibold">
+                                Descubre al talento que nos acompaña en el Festival
+                                <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 ml-2" />
+                            </Button>
+                        </AccordionTrigger>
+                        <AccordionContent>
+                           <div className="space-y-8 pt-4">
+                                {event.talent.map(person => (
+                                    <div key={person.name} className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-start">
+                                        <div className="relative aspect-square w-full rounded-lg overflow-hidden">
+                                            <Image 
+                                                src={person.image}
+                                                alt={person.name}
+                                                data-ai-hint={person.imageHint}
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </div>
+                                        <div className="sm:col-span-2">
+                                            <h5 className="font-bold text-foreground">{person.name}</h5>
+                                            <p className="text-sm text-muted-foreground mt-1">{person.bio}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                           </div>
+                        </AccordionContent>
+                    </AccordionItem>
+                </Accordion>
+              )}
+
               <div className="flex items-center gap-4 text-sm mt-4">
                   <div className="flex items-center gap-2">
                       <Ticket className="h-5 w-5 text-accent" />
