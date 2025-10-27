@@ -137,7 +137,7 @@ const programData: DayProgram[] = [
         subtitle: "Homenaje a Eugenio Caballero",
         text: "Como parte del homenaje del FICLosCabos 2025 a Eugenio Caballero, diseñador de producción y ganador del Premio de la Academia, esta masterclass ofrece una mirada profunda a su proceso creativo. A través de su colaboración con cineastas como Guillermo del Toro, Alfonso Cuarón y J.A. Bayona, Caballero compartirá cómo el diseño visual se convierte en una fuerza narrativa capaz de transformar la experiencia cinematográfica.",
         access: "Acceso con registro previo",
-        image: "/Images/Biografias/FICC_DECK2025.pdf-image-115.jpg",
+        image: "/Images/Eugenio Caballero/EugenioCaballero.png",
         imageHint: "film set design",
         time: "12:00",
         place: "Hotel El Ganzo",
