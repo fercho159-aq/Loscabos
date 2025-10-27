@@ -461,7 +461,7 @@ export default function ProgramacionPage() {
                                             fill
                                             className="object-cover transition-transform duration-500 group-hover:scale-110"
                                         />
-                                        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+                                        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent transition-opacity group-hover:opacity-0">
                                             <h3 className="text-xl font-bold font-headline text-background">{event.title}</h3>
                                             <p className="text-sm text-accent font-semibold mt-1">{event.subtitle}</p>
                                         </div>
