@@ -157,7 +157,15 @@ const programData: DayProgram[] = [
         image: "https://picsum.photos/seed/masterclass-caballero/800/600",
         imageHint: "film set design",
         time: "12:00",
-        place: "Hotel El Ganzo"
+        place: "Hotel El Ganzo",
+        talent: [
+            {
+                name: "Eugenio Caballero",
+                bio: "Diseñador de producción mexicano ganador del Óscar por El laberinto del fauno. Ha trabajado en más de 30 películas con cineastas como Guillermo del Toro, Alfonso Cuarón, J.A. Bayona y Alejandro G. Iñárritu. Responsable del diseño en ROMA, Lo imposible, Un monstruo viene a verme y Bardo. Miembro de la Academia desde 2007, es una de las figuras más influyentes del cine contemporáneo.",
+                image: "https://picsum.photos/seed/eugenio-caballero-bio/400/400",
+                imageHint: "man portrait professional"
+            }
+        ]
       },
       {
         title: "Proyección al aire libre en Crania",
@@ -315,96 +323,105 @@ const CalendarLinks = ({ event, day }: { event: Event, day: DayProgram }) => {
 };
 
 
-const EventDialogContent = ({ event, day }: { event: Event, day: DayProgram }) => (
-    <DialogContent className="sm:max-w-2xl bg-card max-h-[90svh] flex flex-col">
-        <DialogHeader className="flex-shrink-0">
-            <DialogTitle className="font-headline text-3xl text-foreground">{event.title}</DialogTitle>
-            <DialogDescription className="text-accent font-semibold pt-1">{event.subtitle}</DialogDescription>
-        </DialogHeader>
-        <div className="flex-grow overflow-y-auto pr-6 -mr-6">
-          <div className="grid gap-6 py-4">
-              <div className="relative aspect-video w-full rounded-lg overflow-hidden">
-                  <Image
-                      src={event.image}
-                      alt={event.title}
-                      data-ai-hint={event.imageHint}
-                      fill
-                      className="object-cover"
-                  />
-              </div>
-              <p className="text-muted-foreground">{event.text}</p>
-              {event.sinopsis && (
-                  <blockquote className="mt-2 border-l-2 pl-4 italic text-muted-foreground">"{event.sinopsis}"</blockquote>
-              )}
-              {event.techInfo && (
-                  <div>
-                      <h4 className="font-semibold text-foreground mb-2">Ficha Técnica</h4>
-                      <div className="text-sm text-muted-foreground space-y-1">
-                          {Object.entries(event.techInfo).map(([key, value]) => (
-                              <p key={key}>
-                                  <span className="font-semibold text-foreground/80">{key}:</span> {value}
-                              </p>
-                          ))}
+const EventDialogContent = ({ event, day }: { event: Event, day: DayProgram }) => {
+    const getTalentButtonText = () => {
+        if (event.talent && event.talent.length === 1) {
+            return `Conoce a ${event.talent[0].name}`;
+        }
+        return "Descubre al talento que nos acompaña en el Festival";
+    };
+
+    return (
+        <DialogContent className="sm:max-w-2xl bg-card max-h-[90svh] flex flex-col">
+            <DialogHeader className="flex-shrink-0">
+                <DialogTitle className="font-headline text-3xl text-foreground">{event.title}</DialogTitle>
+                <DialogDescription className="text-accent font-semibold pt-1">{event.subtitle}</DialogDescription>
+            </DialogHeader>
+            <div className="flex-grow overflow-y-auto pr-6 -mr-6">
+              <div className="grid gap-6 py-4">
+                  <div className="relative aspect-video w-full rounded-lg overflow-hidden">
+                      <Image
+                          src={event.image}
+                          alt={event.title}
+                          data-ai-hint={event.imageHint}
+                          fill
+                          className="object-cover"
+                      />
+                  </div>
+                  <p className="text-muted-foreground">{event.text}</p>
+                  {event.sinopsis && (
+                      <blockquote className="mt-2 border-l-2 pl-4 italic text-muted-foreground">"{event.sinopsis}"</blockquote>
+                  )}
+                  {event.techInfo && (
+                      <div>
+                          <h4 className="font-semibold text-foreground mb-2">Ficha Técnica</h4>
+                          <div className="text-sm text-muted-foreground space-y-1">
+                              {Object.entries(event.techInfo).map(([key, value]) => (
+                                  <p key={key}>
+                                      <span className="font-semibold text-foreground/80">{key}:</span> {value}
+                                  </p>
+                              ))}
+                          </div>
+                      </div>
+                  )}
+                  
+                  {event.talent && event.talent.length > 0 && (
+                     <Accordion type="single" collapsible className="w-full">
+                        <AccordionItem value="item-1">
+                            <AccordionTrigger>
+                                <Button variant="ghost" className="text-base font-semibold">
+                                    {getTalentButtonText()}
+                                    <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 ml-2" />
+                                </Button>
+                            </AccordionTrigger>
+                            <AccordionContent>
+                               <div className="space-y-8 pt-4">
+                                    {event.talent.map(person => (
+                                        <div key={person.name} className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-start">
+                                            <div className="relative aspect-square w-full rounded-lg overflow-hidden">
+                                                <Image 
+                                                    src={person.image}
+                                                    alt={person.name}
+                                                    data-ai-hint={person.imageHint}
+                                                    fill
+                                                    className="object-cover"
+                                                />
+                                            </div>
+                                            <div className="sm:col-span-2">
+                                                <h5 className="font-bold text-foreground">{person.name}</h5>
+                                                <p className="text-sm text-muted-foreground mt-1">{person.bio}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                               </div>
+                            </AccordionContent>
+                        </AccordionItem>
+                    </Accordion>
+                  )}
+    
+                  <div className="flex items-center gap-4 text-sm mt-4">
+                      <div className="flex items-center gap-2">
+                          <Ticket className="h-5 w-5 text-accent" />
+                          <span className="font-semibold text-foreground">{event.access}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                          <Calendar className="h-5 w-5 text-accent" />
+                          <span className="font-semibold text-foreground">{event.time} @ {event.place}</span>
                       </div>
                   </div>
-              )}
-              
-              {event.talent && event.talent.length > 0 && (
-                 <Accordion type="single" collapsible className="w-full">
-                    <AccordionItem value="item-1">
-                        <AccordionTrigger>
-                            <Button variant="ghost" className="text-base font-semibold">
-                                Descubre al talento que nos acompaña en el Festival
-                                <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 ml-2" />
-                            </Button>
-                        </AccordionTrigger>
-                        <AccordionContent>
-                           <div className="space-y-8 pt-4">
-                                {event.talent.map(person => (
-                                    <div key={person.name} className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-start">
-                                        <div className="relative aspect-square w-full rounded-lg overflow-hidden">
-                                            <Image 
-                                                src={person.image}
-                                                alt={person.name}
-                                                data-ai-hint={person.imageHint}
-                                                fill
-                                                className="object-cover"
-                                            />
-                                        </div>
-                                        <div className="sm:col-span-2">
-                                            <h5 className="font-bold text-foreground">{person.name}</h5>
-                                            <p className="text-sm text-muted-foreground mt-1">{person.bio}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                           </div>
-                        </AccordionContent>
-                    </AccordionItem>
-                </Accordion>
-              )}
-
-              <div className="flex items-center gap-4 text-sm mt-4">
-                  <div className="flex items-center gap-2">
-                      <Ticket className="h-5 w-5 text-accent" />
-                      <span className="font-semibold text-foreground">{event.access}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                      <Calendar className="h-5 w-5 text-accent" />
-                      <span className="font-semibold text-foreground">{event.time} @ {event.place}</span>
-                  </div>
               </div>
-          </div>
-        </div>
-        <div className="flex-shrink-0 pt-4 flex flex-wrap gap-4 mt-auto border-t">
-          {event.participantsButton && (
-              <Button asChild>
-                  <Link href="/participantes">Ver Participantes</Link>
-              </Button>
-          )}
-            <CalendarLinks event={event} day={day} />
-        </div>
-    </DialogContent>
-);
+            </div>
+            <div className="flex-shrink-0 pt-4 flex flex-wrap gap-4 mt-auto border-t">
+              {event.participantsButton && (
+                  <Button asChild>
+                      <Link href="/participantes">Ver Participantes</Link>
+                  </Button>
+              )}
+                <CalendarLinks event={event} day={day} />
+            </div>
+        </DialogContent>
+    );
+}
 
 
 export default function ProgramacionPage() {
@@ -453,7 +470,7 @@ export default function ProgramacionPage() {
                                             <p className="text-sm text-accent font-semibold mt-1">{event.subtitle}</p>
                                         </div>
                                     </div>
-                                    <CardContent className="p-6">
+                                    <CardContent className="p-6 mt-auto">
                                        <div className="flex items-center justify-between">
                                             <div className="flex items-center gap-2 text-xs text-muted-foreground">
                                                 <Calendar className="h-4 w-4"/>
@@ -489,4 +506,3 @@ export default function ProgramacionPage() {
     </div>
   );
 }
-
