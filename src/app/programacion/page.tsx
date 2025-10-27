@@ -213,34 +213,6 @@ const programData: DayProgram[] = [
     day: "4",
     title: "13 de diciembre",
     events: [
-      {
-        title: "Amores Perros – 25 años de una obra que transformó el cine mexicano",
-        subtitle: "Proyección especial y conversación con Martha Sosa",
-        text: "El Festival rinde homenaje a una de las películas que redefinió la narrativa audiovisual mexicana contemporánea: Amores Perros, dirigida por Alejandro González Iñárritu, a 25 años de su estreno. La proyección especial contará con la participación de Marta Sosa, productora mexicana con una destacada trayectoria en la cinematografía nacional, reconocida por su trabajo en películas como Presunto Culpable (2008), P.O.V. (1988) y, por supuesto, Amores Perros (2000); obras que marcaron la identidad del cine mexicano moderno. Más que una retrospectiva, este encuentro propone un diálogo entre el pasado y el presente, explorando cómo las narrativas urbanas, la fragmentación del relato y la crudeza emocional de Amores Perros siguen resonando hoy en un contexto donde la tecnología y las nuevas formas de comunicación transforman la manera en que contamos y consumimos historias.",
-        techInfo: {
-            Dirección: "Alejandro González Iñárritu",
-            Guión: "Guillermo Arriaga",
-            País: "México",
-            Año: "2000",
-            Duración: "154 minutos",
-            Género: "Drama"
-        },
-        sinopsis: "En la Ciudad de México, un trágico accidente automovilístico entrelaza las vidas de tres personajes: Octavio, un joven que huye de la violencia doméstica y el deseo prohibido; Valeria, una modelo cuyo mundo se derrumba tras perderlo todo; y El Chivo, un exguerrillero que busca redención entre el crimen y la soledad. A través de sus historias, Amores Perros revela la fragilidad humana, el amor, la pérdida y la violencia como pulsos inevitables de una sociedad fragmentada.",
-        access: "General con cupo limitado",
-        image: "https://picsum.photos/seed/amores-perros-25/800/600",
-        imageHint: "movie poster dogs",
-        time: "20:00",
-        place: "Cinemex Puerto Paraíso",
-        talent: [
-          {
-            name: "Martha Sosa Elizondo",
-            bio: "Martha Sosa Elizondo, es una destacada productora mexicana involucrada en la producción cinematográfica desde 1997. Es ampliamente reconocida por su trabajo en filmes emblemáticos como Amores Perros y Presunto culpable. Sosa cree profundamente en el poder emocional del cine como instrumento para visibilizar problemáticas sociales y generar cambio. Ha impulsado películas que han alcanzado éxito internacional y popularidad masiva.",
-            image: "/Images/Biografias/FICC_DECK2025.pdf-image-145.jpg",
-            imageHint: "woman portrait elegant",
-            instagram: "@marthasosa"
-          }
-        ]
-      }
     ]
   }
 ];
@@ -299,10 +271,8 @@ const EventDialogContent = ({ event }: { event: Event }) => {
                   {event.talent && event.talent.length > 0 && (
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
-                            <AccordionTrigger className="w-full justify-start gap-2">
-                                <Button className='w-full'>
-                                    {getTalentButtonText()}
-                                </Button>
+                             <AccordionTrigger className="w-full">
+                                <Button className='w-full'>{getTalentButtonText()}</Button>
                             </AccordionTrigger>
                             <AccordionContent>
                                <div className="space-y-8 pt-4">
