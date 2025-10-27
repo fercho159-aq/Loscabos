@@ -249,35 +249,6 @@ const programData: DayProgram[] = [
         imageHint: "coral reef documentary",
         time: "17:00",
         place: "Cinemex San José del Cabo"
-      },
-      {
-        title: "Amores Perros – 25 años de una obra que transformó el cine mexicano",
-        subtitle: "Proyección especial y conversación con Marta Sosa",
-        text: "El Festival rinde homenaje a una de las películas que redefinió la narrativa audiovisual mexicana contemporánea: Amores Perros, dirigida por Alejandro González Iñárritu, a 25 años de su estreno. La proyección especial contará con la participación de Marta Sosa, productora mexicana con una destacada trayectoria en la cinematografía nacional, reconocida por su trabajo en películas como Presunto Culpable (2008), P.O.V. (1988) y, por supuesto, Amores Perros (2000); obras que marcaron la identidad del cine mexicano moderno. Más que una retrospectiva, este encuentro propone un diálogo entre el pasado y el presente, explorando cómo las narrativas urbanas, la fragmentación del relato y la crudeza emocional de Amores Perros siguen resonando hoy en un contexto donde la tecnología y las nuevas formas de comunicación transforman la manera en que contamos y consumimos historias.",
-        techInfo: {
-          Dirección: "Alejandro González Iñárritu",
-          Guión: "Guillermo Arriaga",
-          País: "México",
-          Año: "2000",
-          Duración: "154 minutos",
-          Género: "Drama"
-        },
-        sinopsis: "En la Ciudad de México, un trágico accidente automovilístico entrelaza las vidas de tres personajes: Octavio, un joven que huye de la violencia doméstica y el deseo prohibido; Valeria, una modelo cuyo mundo se derrumba tras perderlo todo; y El Chivo, un exguerrillero que busca redención entre el crimen y la soledad. A través de sus historias, Amores Perros revela la fragilidad humana, el amor, la pérdida y la violencia como pulsos inevitables de una sociedad fragmentada.",
-        access: "Acceso general con cupo limitado",
-        image: "https://picsum.photos/seed/amores-perros/800/600",
-        imageHint: "gritty film scene",
-        time: "19:00",
-        place: "Cinemex Puerto Paraíso"
-      },
-      {
-        title: "La Nube en el Jardín",
-        subtitle: "Proyección especial con Ed Maverick",
-        text: "El Festival Internacional de Cine de Los Cabos 2025 presentará una de sus experiencias más memorables: La Nube en el Jardín, documental protagonizado por Ed Maverick desde la Sala Nezahualcóyotl en la Ciudad de México. La película se proyectará en una mega pantalla, creando un entorno inmersivo donde la música en vivo y el lenguaje cinematográfico se entrelazan para generar una experiencia sensorial total. Al finalizar la proyección, Ed Maverick compartirá una conversación íntima sobre el proceso creativo detrás del documental.",
-        access: "Acceso general con cupo limitado",
-        image: "https://picsum.photos/seed/ed-maverick/800/600",
-        imageHint: "musician on stage",
-        time: "21:00",
-        place: "Jardín Ikal"
       }
     ]
   }
