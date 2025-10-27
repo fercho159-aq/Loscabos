@@ -350,7 +350,7 @@ const EventDialogContent = ({ event, day }: { event: Event, day: DayProgram }) =
                   {event.talent && event.talent.length > 0 && (
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
-                            <AccordionTrigger>
+                            <AccordionTrigger asChild>
                                 <Button className="w-full">
                                     {getTalentButtonText()}
                                 </Button>
@@ -460,17 +460,13 @@ export default function ProgramacionPage() {
                                             fill
                                             className="object-cover transition-transform duration-500 group-hover:scale-110"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4 transition-opacity opacity-100 group-hover:opacity-0">
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4">
                                             <h3 className="text-xl font-bold font-headline text-background">{event.title}</h3>
                                             <p className="text-sm text-accent font-semibold mt-1">{event.subtitle}</p>
                                         </div>
                                     </div>
                                     <CardContent className="p-4 mt-auto">
-                                       <div className="flex items-center justify-between">
-                                            <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                                                <Calendar className="h-4 w-4"/>
-                                                <span>{event.time} @ {event.place}</span>
-                                            </div>
+                                       <div className="flex items-center justify-end">
                                             <div className="flex items-center gap-2 text-xs text-accent">
                                                 <Info className="h-4 w-4"/>
                                                 <span>Ver detalles</span>
@@ -486,8 +482,8 @@ export default function ProgramacionPage() {
                   </CarouselContent>
                   {day.events.length > 1 && (
                     <>
-                        <CarouselPrevious className="flex -left-4" />
-                        <CarouselNext className="flex -right-4" />
+                        <CarouselPrevious className="flex" />
+                        <CarouselNext className="flex" />
                     </>
                   )}
                 </Carousel>
