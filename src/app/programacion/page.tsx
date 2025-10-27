@@ -350,9 +350,10 @@ const EventDialogContent = ({ event, day }: { event: Event, day: DayProgram }) =
                   {event.talent && event.talent.length > 0 && (
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
-                            <AccordionTrigger className="text-base font-semibold p-0 justify-start gap-2 hover:no-underline [&>svg]:rotate-180">
-                                <Button variant="outline" asChild className="p-0 h-auto text-base font-semibold hover:bg-transparent text-accent border-accent hover:text-accent">
-                                    <span className="flex items-center">{getTalentButtonText()} <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 ml-2 accordion-chevron" /></span>
+                            <AccordionTrigger asChild>
+                                <Button className="w-full">
+                                    {getTalentButtonText()}
+                                    <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 ml-2 accordion-chevron" />
                                 </Button>
                             </AccordionTrigger>
                             <AccordionContent>
