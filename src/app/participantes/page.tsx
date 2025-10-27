@@ -82,7 +82,7 @@ export default function ParticipantesPage() {
             </div>
             <div className="text-center mb-12">
               <h1 className="font-headline text-5xl md:text-7xl font-bold text-foreground">
-                Participantes: <span className="text-accent">Nuevas Voces en el Cine</span>
+                Participantes <span className="text-accent">Nuevas Voces en el Cine</span>
               </h1>
               <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
                 Conoce a la nueva generación de cineastas que están redefiniendo el futuro del cine mexicano.
