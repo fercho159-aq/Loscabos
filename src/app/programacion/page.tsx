@@ -214,7 +214,17 @@ const programData: DayProgram[] = [
         image: "https://picsum.photos/seed/gala-dinner/800/600",
         imageHint: "gourmet dinner",
         time: "21:00",
-        place: "Suelo Sur"
+        place: "Suelo Sur",
+        talent: [
+          {
+            name: "Guillermo J. Gómez",
+            bio: "Guillermo J. Gómez es un chef de origen argentino radicado en Los Cabos. Su cocina celebra la pesca artesanal, los cultivos locales y la conexión con quienes trabajan la tierra. Formado en Europa y enriquecido por sabores del mundo, crea platillos que honran sus raíces y el territorio sudcaliforniano. Su propuesta en Suelo Sur será el marco perfecto para la Cena de Premiación del FICLosCabos 2025.",
+            image: "https://picsum.photos/seed/chef-gomez/400/400",
+            imageHint: "chef portrait",
+            website: "https://www.suelosur.com/",
+            instagram: "@suelosurbaja"
+          }
+        ]
       }
     ]
   },
@@ -308,8 +318,11 @@ const CalendarLinks = ({ event, day }: { event: Event, day: DayProgram }) => {
 const EventDialogContent = ({ event, day }: { event: Event, day: DayProgram }) => {
     const getTalentButtonText = () => {
         if (event.talent && event.talent.length === 1) {
-            if(event.talent[0].name === "Casa Ballena") {
+            if (event.talent[0].name === "Casa Ballena") {
                 return `Más sobre ${event.talent[0].name}`;
+            }
+             if (event.talent[0].name === "Guillermo J. Gómez") {
+                return "Conoce más sobre el chef Guillermo Gómez y Suelo Sur";
             }
             return `Conoce a ${event.talent[0].name}`;
         }
