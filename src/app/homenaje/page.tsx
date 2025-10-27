@@ -43,7 +43,7 @@ export default function HomenajePage() {
                         </div>
                     </div>
                     <div className="md:col-span-3">
-                        <p className="text-accent font-semibold mb-2 text-xl">Homenaje 2025</p>
+                        <p className="text-accent font-semibold mb-2 text-[35px]">Homenaje 2025</p>
                         <h1 className="font-headline text-5xl md:text-7xl font-bold text-foreground">{guest.name}</h1>
                         <p className="text-muted-foreground mt-6 text-lg leading-relaxed">El Festival Internacional de Cine de Los Cabos celebra su 13ª edición rindiendo homenaje a Eugenio Caballero, uno de los diseñadores de producción más influyentes del cine contemporáneo. Ganador del Premio de la Academia y colaborador de cineastas como Guillermo del Toro, Alfonso Cuarón y J.A. Bayona, Caballero ha redefinido el poder visual del cine mexicano y latinoamericano, transformando cada proyecto en una obra de arte cinematográfica.</p>
                     </div>
