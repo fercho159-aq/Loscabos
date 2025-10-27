@@ -350,10 +350,9 @@ const EventDialogContent = ({ event, day }: { event: Event, day: DayProgram }) =
                   {event.talent && event.talent.length > 0 && (
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
-                            <AccordionTrigger asChild>
+                            <AccordionTrigger>
                                 <Button className="w-full">
                                     {getTalentButtonText()}
-                                    <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 ml-2 accordion-chevron" />
                                 </Button>
                             </AccordionTrigger>
                             <AccordionContent>
