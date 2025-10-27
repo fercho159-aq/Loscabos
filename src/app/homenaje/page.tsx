@@ -55,27 +55,6 @@ export default function HomenajePage() {
         <section className="py-16 sm:py-24 bg-card">
             <div className="container mx-auto px-4 max-w-4xl space-y-12">
                 
-                {/* Day 1: December 10 */}
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                    <div className="space-y-4">
-                        <h3 className="font-headline text-3xl text-foreground"><span className="text-accent">10 de diciembre:</span> Proyección Especial de "Bardo"</h3>
-                        <p className="text-muted-foreground">El homenaje iniciará con la proyección especial de Bardo en Cinemex, acompañada por una conversación con Ana Terrazas (diseñadora de vestuario) y Ximena Lamadrid (actriz), moderada por Julio Patán. Un encuentro que invita a reflexionar sobre el diseño de producción como una de las fuerzas narrativas más potentes del cine contemporáneo.</p>
-                        <Button asChild>
-                            <Link href="/programacion">Ver detalles del evento</Link>
-                        </Button>
-                    </div>
-                    <div>
-                        <Image
-                            src="https://picsum.photos/seed/bardo/800/600"
-                            alt="Proyección de Bardo"
-                            data-ai-hint="surreal movie scene"
-                            width={800}
-                            height={600}
-                            className="rounded-lg shadow-xl"
-                        />
-                    </div>
-                </div>
-
                 {/* Day 2: December 11 */}
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                     <div className="md:order-2 space-y-4">
