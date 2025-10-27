@@ -245,39 +245,7 @@ const programData: DayProgram[] = [
   }
 ];
 
-const CalendarLinks = ({ event, day }: { event: Event, day: DayProgram }) => {
-    const getEventDate = (dayString: string, timeString: string) => {
-        const dayOfMonth = parseInt(dayString.split(' ')[0], 10);
-        const [hours, minutes] = timeString.split(':').map(Number);
-        // Assuming the festival is in December 2025
-        return new Date(2025, 11, dayOfMonth, hours, minutes);
-    };
-
-    const startTime = getEventDate(day.title, event.time);
-    const endTime = new Date(startTime.getTime() + (parseInt(event.techInfo?.Duración || '90') * 60000));
-    
-    const formatForGoogle = (date: Date) => format(date, "yyyyMMdd'T'HHmmss'Z'");
-
-    const details = `${event.text}\n\nAcceso: ${event.access}`;
-
-    const googleCalendarUrl = new URL("https://www.google.com/calendar/render");
-    googleCalendarUrl.searchParams.append("action", "TEMPLATE");
-    googleCalendarUrl.searchParams.append("text", event.title);
-    googleCalendarUrl.searchParams.append("dates", `${formatForGoogle(startTime)}/${formatForGoogle(endTime)}`);
-    googleCalendarUrl.searchParams.append("details", details);
-    googleCalendarUrl.searchParams.append("location", event.place);
-
-    return (
-        <Button asChild>
-            <Link href={googleCalendarUrl.toString()} target="_blank" rel="noopener noreferrer">
-                <Calendar className="mr-2 h-4 w-4" /> Añadir a Google Calendar
-            </Link>
-        </Button>
-    );
-};
-
-
-const EventDialogContent = ({ event, day }: { event: Event, day: DayProgram }) => {
+const EventDialogContent = ({ event }: { event: Event }) => {
     const getTalentButtonText = () => {
         if (event.talent && event.talent.length === 1) {
             if (event.talent[0].name === "Casa Ballena") {
@@ -331,10 +299,9 @@ const EventDialogContent = ({ event, day }: { event: Event, day: DayProgram }) =
                   {event.talent && event.talent.length > 0 && (
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
-                            <AccordionTrigger asChild>
+                            <AccordionTrigger className="w-full justify-start gap-2">
                                 <Button className='w-full'>
                                     {getTalentButtonText()}
-                                    <ChevronDown className="ml-2 h-4 w-4 shrink-0 transition-transform duration-200" />
                                 </Button>
                             </AccordionTrigger>
                             <AccordionContent>
@@ -375,17 +342,6 @@ const EventDialogContent = ({ event, day }: { event: Event, day: DayProgram }) =
                         </AccordionItem>
                     </Accordion>
                   )}
-    
-                  <div className="flex items-center gap-4 text-sm mt-4">
-                      <div className="flex items-center gap-2">
-                          <Ticket className="h-5 w-5 text-accent" />
-                          <span className="font-semibold text-foreground">{event.access}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                          <Calendar className="h-5 w-5 text-accent" />
-                          <span className="font-semibold text-foreground">{event.time} @ {event.place}</span>
-                      </div>
-                  </div>
               </div>
             </div>
             <div className="flex-shrink-0 pt-4 flex flex-wrap gap-4 mt-auto border-t">
@@ -394,7 +350,6 @@ const EventDialogContent = ({ event, day }: { event: Event, day: DayProgram }) =
                       <Link href="/participantes">Ver Participantes</Link>
                   </Button>
               )}
-                <CalendarLinks event={event} day={day} />
             </div>
         </DialogContent>
     );
@@ -420,7 +375,6 @@ export default function ProgramacionPage() {
 
             {programData.map((day) => (
               <div key={day.day} className="mb-16">
-                <h2 className="font-headline text-4xl font-bold text-foreground mb-8 text-center">{day.title}</h2>
                 <Carousel
                   opts={{
                     align: "start",
@@ -457,7 +411,7 @@ export default function ProgramacionPage() {
                                     </CardContent>
                                 </Card>
                             </DialogTrigger>
-                             <EventDialogContent event={event} day={day} />
+                             <EventDialogContent event={event} />
                         </Dialog>
                       </CarouselItem>
                     ))}
