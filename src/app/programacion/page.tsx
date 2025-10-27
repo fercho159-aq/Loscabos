@@ -6,7 +6,7 @@ import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Calendar, ChevronDown, Info, Ticket, Share2 } from 'lucide-react';
+import { ArrowRight, Calendar, ChevronDown, Info, Ticket, Share2, Link as LinkIcon, Instagram } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import {
   Carousel,
@@ -25,7 +25,7 @@ import {
 } from "@/components/ui/dialog";
 import Link from 'next/link';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
-import { format, parse } from 'date-fns';
+import { format } from 'date-fns';
 import { es } from 'date-fns/locale';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
@@ -34,6 +34,8 @@ type Talent = {
   bio: string;
   image: string;
   imageHint: string;
+  website?: string;
+  instagram?: string;
 };
 
 type Event = {
@@ -175,7 +177,17 @@ const programData: DayProgram[] = [
         image: "https://picsum.photos/seed/gala-ballena/800/600",
         imageHint: "elegant cocktail party",
         time: "22:00",
-        place: "Casa Ballena"
+        place: "Casa Ballena",
+        talent: [
+            {
+                name: "Casa Ballena",
+                bio: "Casa Ballena es un espacio artístico ubicado en San José del Cabo que fusiona creación contemporánea con el entorno natural donde se encuentran el Pacífico y el Mar de Cortés. Fundada por el artista El Nacho en 2011, es un lugar dedicado a la producción y exhibición de arte, impulsando un legado que conecta comunidad y territorio.",
+                image: "https://picsum.photos/seed/casa-ballena/400/400",
+                imageHint: "art space gallery",
+                website: "https://casaballena.com/",
+                instagram: "@casa_ballenamx"
+            }
+        ]
       }
     ]
   },
@@ -316,6 +328,9 @@ const CalendarLinks = ({ event, day }: { event: Event, day: DayProgram }) => {
 const EventDialogContent = ({ event, day }: { event: Event, day: DayProgram }) => {
     const getTalentButtonText = () => {
         if (event.talent && event.talent.length === 1) {
+            if(event.talent[0].name === "Casa Ballena") {
+                return `Más sobre ${event.talent[0].name}`;
+            }
             return `Conoce a ${event.talent[0].name}`;
         }
         return "Descubre al talento que nos acompaña en el Festival";
@@ -380,6 +395,20 @@ const EventDialogContent = ({ event, day }: { event: Event, day: DayProgram }) =
                                             <div className="sm:col-span-2">
                                                 <h5 className="font-bold text-foreground">{person.name}</h5>
                                                 <p className="text-sm text-muted-foreground mt-1">{person.bio}</p>
+                                                <div className="flex gap-4 mt-2">
+                                                    {person.website && (
+                                                        <Link href={person.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-accent hover:underline text-sm font-semibold">
+                                                            <LinkIcon className="h-4 w-4" />
+                                                            <span>Sitio web</span>
+                                                        </Link>
+                                                    )}
+                                                    {person.instagram && (
+                                                         <Link href={`https://instagram.com/${person.instagram.replace('@','')}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-accent hover:underline text-sm font-semibold">
+                                                            <Instagram className="h-4 w-4" />
+                                                            <span>{person.instagram}</span>
+                                                        </Link>
+                                                    )}
+                                                </div>
                                             </div>
                                         </div>
                                     ))}
@@ -496,3 +525,5 @@ export default function ProgramacionPage() {
     </div>
   );
 }
+
+    
