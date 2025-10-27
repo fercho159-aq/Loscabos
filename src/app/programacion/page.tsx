@@ -168,16 +168,6 @@ const programData: DayProgram[] = [
         ]
       },
       {
-        title: "Proyección al aire libre en Crania",
-        subtitle: "en Homenaje a Eugenio Caballero (película por confirmar)",
-        text: "En el marco del homenaje a Eugenio Caballero, el FICLosCabos 2025 presenta una proyección especial al aire libre en Crania, epicentro creativo de Puerto Los Cabos. Bajo las estrellas y frente al mar, el público vivirá una experiencia inmersiva donde la obra visual de Caballero dialoga con la naturaleza y reafirma el espíritu de #BeyondTheScreen.",
-        access: "Acceso general con cupo limitado.",
-        image: "https://picsum.photos/seed/crania-screening/800/600",
-        imageHint: "outdoor cinema night",
-        time: "20:00",
-        place: "Crania"
-      },
-      {
         title: "Cóctel de gala en Casa Ballena",
         subtitle: "en Homenaje a Eugenio Caballero",
         text: "El homenaje a Eugenio Caballero culminará con un cóctel privado en Casa Ballena, espacio dedicado a la producción y difusión del arte contemporáneo en San José del Cabo. En este entorno íntimo y simbólico, la comunidad cinematográfica, aliados y creadores se reunirán para celebrar la trayectoria del diseñador de producción acompañada por la música del Ganzo Collective, ensamble residente del Hotel El Ganzo.",
