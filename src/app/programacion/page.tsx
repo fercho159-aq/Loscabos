@@ -331,8 +331,8 @@ const EventDialogContent = ({ event, day }: { event: Event, day: DayProgram }) =
                   {event.talent && event.talent.length > 0 && (
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
-                            <AccordionTrigger className="w-full" asChild>
-                                <Button>
+                            <AccordionTrigger asChild>
+                                <Button className='w-full'>
                                     {getTalentButtonText()}
                                     <ChevronDown className="ml-2 h-4 w-4 shrink-0 transition-transform duration-200" />
                                 </Button>
@@ -479,5 +479,3 @@ export default function ProgramacionPage() {
     </div>
   );
 }
-
-    
