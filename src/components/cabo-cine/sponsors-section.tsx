@@ -8,7 +8,6 @@ const sponsors = [
   { name: "Cinemex", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-03.png", hint: "company logo" },
   { name: "Kundavi", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-04.png", hint: "company logo" },
   { name: "Questro", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-05.png", hint: "company logo" },
-  { name: "Puerto Los Cabos", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-05.png", hint: "company logo" },
   { name: "Crania", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-06.png", hint: "company logo" },
   { name: "Veleros Beach Club", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-07.png", hint: "company logo" },
   { name: "San Jose del Este", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-08.png", hint: "company logo" },
