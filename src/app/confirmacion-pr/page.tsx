@@ -228,7 +228,17 @@ export default function ConfirmacionPRPage() {
                   <RadioGroup name="attendance" onValueChange={setAttending} required className="flex flex-col space-y-1">
                     <div className="flex items-center space-x-3 space-y-0">
                       <RadioGroupItem value="si" id="si" />
-                      <Label htmlFor="si" className="font-normal">Sí, asistiré</Label>
+                       <div className="flex items-center gap-4">
+                         <Label htmlFor="si" className="font-normal">Sí, asistiré</Label>
+                          {attending === 'si' && (
+                            <div className="flex items-center space-x-2">
+                              <Checkbox id="plusOne" name="plusOne" />
+                              <Label htmlFor="plusOne" className="font-normal text-sm">
+                                +1
+                              </Label>
+                            </div>
+                          )}
+                        </div>
                     </div>
                     <div className="flex items-center space-x-3 space-y-0">
                       <RadioGroupItem value="no" id="no" />
@@ -239,18 +249,6 @@ export default function ConfirmacionPRPage() {
                 </div>
 
                 {attending === 'si' && (
-                  <>
-                    <div className="space-y-2">
-                      <div className="items-top flex space-x-2">
-                        <Checkbox id="plusOne" name="plusOne" />
-                        <div className="grid gap-1.5 leading-none">
-                          <Label htmlFor="plusOne" className="font-normal">
-                            Asistiré con un acompañante (+1)
-                          </Label>
-                        </div>
-                      </div>
-                    </div>
-                    
                     <div className="space-y-4">
                       <Label>¿Qué día(s) te interesa más asistir?</Label>
                       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -263,7 +261,6 @@ export default function ConfirmacionPRPage() {
                       </div>
                        {state.errors?.interestedDays && <p className="text-sm font-medium text-destructive">{state.errors.interestedDays.join(', ')}</p>}
                     </div>
-                  </>
                 )}
                 
                 <SubmitButton />
