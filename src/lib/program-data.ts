@@ -47,55 +47,6 @@ export const programData: DayProgram[] = [
     day: "1",
     title: "10 de diciembre",
     events: [
-      {
-        title: "Sinfonía Oceánica",
-        subtitle: "Proyección inaugural",
-        text: "Esta función forma parte del programa #BeyondTheScreen, que celebra la convergencia entre arte, ciencia y conciencia ambiental. Inspirada en los paisajes submarinos de Baja California Sur, Sinfonía Oceánica invita a escuchar al mar como nunca antes: un concierto vivo entre ballenas y humanos que trasciende los límites del cine documental. Creada por el galardonado cineasta y fotógrafo de National Geographic Andy Mann, acompañada por la composición original del músico y compositor Garth Stevenson.",
-        techInfo: {
-          'Dirección y concepto': "FOMARES",
-          Música: "Garth Stevenson",
-          Fotografía: "Andy Mann",
-          Producción: "Gabriela Gómez",
-          País: "México / Estados Unidos",
-          Año: "2025",
-          Duración: "25 min (aprox.)",
-          Género: "Documental",
-          'Sitio web': "www.fomares.org",
-          Instagram: "@fomaresorg"
-        },
-        sinopsis: "Sinfonía Oceánica es una invitación a sentir el mar a través de un diálogo único entre el contrabajo y las ballenas, donde la música despierta nuestra conexión profunda con el océano.",
-        access: "Acceso general con cupo limitado",
-        image: "/Images/sinfonia/DSC05588.jpg",
-        imageHint: "underwater whale",
-        time: "19:00",
-        place: "Crania",
-        talent: [
-            {
-                name: "Andy Mann",
-                bio: "Fotógrafo de National Geographic y director nominado al Emmy. Cofundador de SeaLegacy, su trabajo ha impulsado la protección de los océanos. Ha filmado en siete continentes y dirige Sinfonía Oceánica.",
-                image: "/Images/sinfonia/DSC05588.jpg",
-                imageHint: "man portrait photographer"
-            },
-            {
-                name: "Garth Stevenson",
-                bio: "Es contrabajista y compositor reconocido por conectar su música con la naturaleza. En 2010 tocó para ballenas en la Antártida junto al Dr. Roger Payne. En 2025, invitado por FOMARES, interpretó su contrabajo para ballenas jorobadas en Baja California Sur mediante bocinas submarinas e hidrófonos, creando un encuentro sonoro único.",
-                image: "/Images/sinfonia/garth head shot_photo by Sonya Kitchell copy.jpg",
-                imageHint: "man with cello"
-            },
-            {
-                name: "Maru Brito",
-                bio: "Es miembro de ORGCAS, ha colaborado con NatGeo, Disney TV y BBC en documentales de naturaleza. Piloto de dron y fotógrafa subacuática, su mirada ha sido clave en proyectos de conservación. En Sinfonía Oceánica participó como videógrafa, aportando tomas esenciales y experiencia técnica bajo la dirección de Andy Mann.",
-                image: "/Images/sinfonia/MARU BRITO.png",
-                imageHint: "woman underwater camera"
-            },
-            {
-                name: "Gabriela Gómez",
-                bio: "Es cofundadora y directora de FOMARES. Abogada enfocada en la conservación marina a través de políticas públicas, alianzas comunitarias y proyectos que integran ciencia, arte y cultura. Promotora de iniciativas que impulsan la protección ambiental mediante conciencia social y participación activa en territorio.",
-                image: "/Images/sinfonia/DSC07242.jpg",
-                imageHint: "woman portrait professional"
-            }
-        ]
-      }
     ]
   },
   {
@@ -121,10 +72,10 @@ export const programData: DayProgram[] = [
         ]
       },
       {
-        title: "Cóctel de gala en Casa Ballena",
-        subtitle: "en Homenaje a Eugenio Caballero",
-        text: "El homenaje a Eugenio Caballero culminará con un cóctel privado en Casa Ballena, espacio dedicado a la producción y difusión del arte contemporáneo en San José del Cabo. En este entorno íntimo y simbólico, la comunidad cinematográfica, aliados y creadores se reunirán para celebrar la trayectoria del diseñador de producción acompañada por la música de El Ganzo Collective, ensamble residente del Hotel El Ganzo.",
-        access: "Acceso solo por invitación.",
+        title: "Cena de Gala",
+        subtitle: "Premiación del Fondo Fílmico Gabriel Figueroa y La Baja",
+        text: "La Cena de Gala del FICLosCabos 2025 rinde homenaje al talento que impulsa el futuro del cine mexicano. La velada se llevará a cabo en Suelo Sur, restaurante insignia de Los Cabos encabezado por el chef Guillermo Gómez, reconocido por la Guía Michelin por su enfoque en la sostenibilidad, el respeto al territorio y la reinterpretación contemporánea de los ingredientes de Baja California Sur. Cada plato es una historia contada con el lenguaje de la naturaleza. Durante la cena se reconocerá a los ganadores del Fondo Fílmico Gabriel Figueroa, programa que impulsa proyectos mexicanos en etapa de postproducción mediante mentorías y acompañamiento profesional, así como a los finalistas de La Baja Inspira, sección competitiva dedicada a las narrativas con raíces en la península que fortalecen el vínculo entre cine, comunidad y territorio.",
+        access: "Acceso solo por invitación",
         image: "/Images/Casa Ballena/Casa ballena (50 cm alto).JPG",
         imageHint: "elegant cocktail party",
         time: "22:00",
