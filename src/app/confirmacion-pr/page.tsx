@@ -190,18 +190,30 @@ export default function ConfirmacionPRPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
-      <main className="flex-grow flex items-center justify-center pt-28 pb-16">
-        <section className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <h1 className="font-headline text-5xl md:text-6xl font-bold text-foreground">
+      <main className="flex-grow pt-20">
+         <section className="relative py-20 sm:py-24 bg-primary text-primary-foreground text-center">
+            <div className="absolute inset-0 z-0">
+                <Image
+                src="/Images/13a/FICC_Banner14.jpg"
+                alt="Banner de la sección Sobre el FICLosCabos"
+                data-ai-hint="festival crowd lights"
+                fill
+                className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black/70"></div>
+            </div>
+            <div className="container mx-auto px-4 relative z-10">
+              <h1 className="font-headline text-5xl md:text-6xl font-bold text-background">
                 Confirmación de Asistencia PR
               </h1>
-              <p className="mt-4 text-lg text-muted-foreground">
+              <p className="mt-4 text-lg text-background/90">
                 Por favor, confirma tu asistencia al FICLosCabos 2025.
               </p>
             </div>
+        </section>
 
+        <section className="container mx-auto px-4 py-16">
+          <div className="max-w-3xl mx-auto">
             <Card className="p-6 sm:p-10 bg-card shadow-xl">
               <form ref={formRef} action={dispatch} className="space-y-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
