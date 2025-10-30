@@ -204,7 +204,7 @@ export default function ConfirmacionPRPage() {
             </div>
             <div className="container mx-auto px-4 relative z-10">
               <h1 className="font-headline text-5xl md:text-6xl font-bold text-background">
-                Confirmación de Asistencia PR
+                Confirmación de asistencia RSVP
               </h1>
               <p className="mt-4 text-lg text-background/90">
                 Por favor, confirma tu asistencia al FICLosCabos 2025.
