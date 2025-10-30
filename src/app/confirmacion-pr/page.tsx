@@ -191,7 +191,7 @@ export default function ConfirmacionPRPage() {
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
       <main className="flex-grow pt-20">
-         <section className="relative py-20 sm:py-24 bg-primary text-primary-foreground text-center">
+         <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground text-center">
             <div className="absolute inset-0 z-0">
                 <Image
                 src="/Images/13a/FICC_Banner14.jpg"
