@@ -4,6 +4,17 @@ import { z } from 'zod';
 import sql from '@/lib/db';
 import { revalidatePath } from 'next/cache';
 
+// Para crear la tabla, ejecuta esta sentencia SQL en tu base de datos de Neon:
+// CREATE TABLE contacts (
+//   id SERIAL PRIMARY KEY,
+//   firstName TEXT,
+//   lastName TEXT,
+//   email TEXT,
+//   subject TEXT,
+//   message TEXT,
+//   createdAt TIMESTAMP DEFAULT NOW()
+// );
+
 const schema = z.object({
   firstName: z.string().min(1, { message: 'El nombre es requerido.' }),
   lastName: z.string().min(1, { message: 'El apellido es requerido.' }),
@@ -31,8 +42,6 @@ export async function saveContact(prevState: any, formData: FormData) {
   const { firstName, lastName, email, subject, message } = validatedFields.data;
 
   try {
-    // Note: You need to create the 'contacts' table in your Neon database first.
-    // Example SQL: CREATE TABLE contacts (id SERIAL PRIMARY KEY, firstName TEXT, lastName TEXT, email TEXT, subject TEXT, message TEXT, createdAt TIMESTAMP DEFAULT NOW());
     await sql`
       INSERT INTO contacts (firstName, lastName, email, subject, message)
       VALUES (${firstName}, ${lastName}, ${email}, ${subject}, ${message})

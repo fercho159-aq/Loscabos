@@ -5,6 +5,18 @@ import { z } from 'zod';
 import sql from '@/lib/db';
 import { revalidatePath } from 'next/cache';
 
+// Para crear la tabla, ejecuta esta sentencia SQL en tu base de datos de Neon:
+// CREATE TABLE pr_confirmations (
+//   id SERIAL PRIMARY KEY,
+//   firstName TEXT,
+//   lastName TEXT,
+//   email TEXT,
+//   attending BOOLEAN,
+//   plusOne BOOLEAN,
+//   interestedDays TEXT,
+//   createdAt TIMESTAMP DEFAULT NOW()
+// );
+
 const schema = z.object({
   firstName: z.string().min(1, { message: 'El nombre es requerido.' }),
   lastName: z.string().min(1, { message: 'El apellido es requerido.' }),
@@ -40,8 +52,6 @@ export async function savePrConfirmation(prevState: any, formData: FormData) {
   const days = willAttend ? interestedDays?.join(', ') : null;
 
   try {
-    // Note: You need to create the 'pr_confirmations' table in your Neon database first.
-    // Example SQL: CREATE TABLE pr_confirmations (id SERIAL PRIMARY KEY, firstName TEXT, lastName TEXT, email TEXT, attending BOOLEAN, plusOne BOOLEAN, interestedDays TEXT, createdAt TIMESTAMP DEFAULT NOW());
     await sql`
       INSERT INTO pr_confirmations (firstName, lastName, email, attending, plusOne, interestedDays)
       VALUES (${firstName}, ${lastName}, ${email}, ${willAttend}, ${hasPlusOne}, ${days})
