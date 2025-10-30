@@ -1,14 +1,14 @@
 
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState, useEffect, useRef, useState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { savePrConfirmation } from '@/lib/actions/savePrConfirmation';
-import { useEffect, useRef, useState } from 'react';
 import { useToast } from "@/hooks/use-toast";
 
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -68,7 +68,7 @@ function SubmitButton() {
 
 export default function ConfirmacionPRPage() {
   const initialState = { message: '', errors: {} };
-  const [state, dispatch] = useFormState(savePrConfirmation, initialState);
+  const [state, dispatch] = useActionState(savePrConfirmation, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
   const [attending, setAttending] = useState<string | null>(null);

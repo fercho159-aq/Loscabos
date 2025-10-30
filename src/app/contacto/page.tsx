@@ -1,7 +1,8 @@
 
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState, useEffect, useRef } from 'react';
+import { useFormStatus } from 'react-dom';
 import { saveContact } from '@/lib/actions/saveContact';
 
 import Header from '@/components/cabo-cine/header';
@@ -12,7 +13,6 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { useToast } from "@/hooks/use-toast";
-import { useEffect, useRef } from 'react';
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -25,7 +25,7 @@ function SubmitButton() {
 
 export default function ContactoPage() {
   const initialState = { message: '', errors: {} };
-  const [state, dispatch] = useFormState(saveContact, initialState);
+  const [state, dispatch] = useActionState(saveContact, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
 

@@ -1,9 +1,9 @@
 
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState, useEffect, useRef } from 'react';
+import { useFormStatus } from 'react-dom';
 import { savePreRegistration } from '@/lib/actions/savePreRegistration';
-import { useEffect, useRef } from 'react';
 import { useToast } from "@/hooks/use-toast";
 
 import { Button } from '@/components/ui/button';
@@ -35,7 +35,7 @@ function SubmitButton() {
 
 export default function PreRegistroPage() {
   const initialState = { message: '', errors: {} };
-  const [state, dispatch] = useFormState(savePreRegistration, initialState);
+  const [state, dispatch] = useActionState(savePreRegistration, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
 
