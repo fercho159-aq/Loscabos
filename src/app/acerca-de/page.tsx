@@ -102,9 +102,9 @@ export default function AcercaDePage() {
                     <p>Al incorporar lenguajes digitales, experiencias inmersivas y narrativas transmedia, el Festival responde a los retos de la era tecnológica y se consolida como un vehículo de desarrollo económico, cultural y creativo a nivel internacional, proyectando a Puerto Los Cabos como un ecosistema creativo y regenerativo con voz global.</p>
                      <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                         <Button size="lg" asChild className="font-headline rounded-none bg-accent text-accent-foreground hover:bg-accent/90">
-                           <Link href="/pre-registro">
+                           <Link href="https://festival-internacional-de-cine-de-los-cabos-2025.boletia.com/" target="_blank" rel="noopener noreferrer">
                             <Ticket className="mr-2 h-5 w-5" />
-                            Pre-regístrate
+                            Comprar Boletos
                            </Link>
                         </Button>
                          <Button size="lg" variant="outline" className="font-headline rounded-none">

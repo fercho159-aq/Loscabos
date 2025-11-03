@@ -37,19 +37,17 @@ export default function HeroSection() {
 
         <div className="mt-12 md:mt-20 flex flex-col items-center gap-2">
             <p className="text-lg md:text-sm text-background/80">
-            ¿TE INTERESA ASISTIR?
+            ASEGURA TU LUGAR
             </p>
             <div className="my-2">
                 <Button asChild className="font-headline text-xl md:text-lg group transition-all duration-300 transform hover:scale-105 bg-accent text-accent-foreground hover:bg-accent/90 w-[266px] h-14 md:h-[46px] py-[10px] px-[2px] rounded-none">
-                    <Link href="/pre-registro">
-                        PRE-REGÍSTRATE AQUÍ
+                    <Link href="https://festival-internacional-de-cine-de-los-cabos-2025.boletia.com/" target="_blank" rel="noopener noreferrer">
+                        COMPRAR BOLETOS
                     </Link>
                 </Button>
             </div>
             <p className="text-lg md:text-base text-background/80 mt-1 text-center">
-            TE AVISAREMOS CUANDO
-            <br />
-            SE ABRA LA TAQUILLA.
+            Y VIVE LA EXPERIENCIA.
             </p>
         </div>
 

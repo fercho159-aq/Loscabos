@@ -9,7 +9,7 @@ const ficcLinks = [
     { href: "/homenaje", label: "Homenaje a Eugenio Caballero" },
     { href: "/campus", label: "Campus FICLosCabos" },
     { href: "/travel", label: "Planea tu visita" },
-    { href: "/pre-registro", label: "Pre-registro" },
+    { href: "https://festival-internacional-de-cine-de-los-cabos-2025.boletia.com/", label: "Comprar Boletos", external: true },
 ];
 
 const aboutLinks = [
@@ -51,7 +51,16 @@ export default function Footer() {
             <h3 className="font-headline tracking-widest text-accent-foreground mb-4">#FICLOSCABOS 2025</h3>
             <ul className="space-y-2">
               {ficcLinks.map(link => (
-                <li key={link.label}><Link href={link.href} className="text-sm text-accent-foreground/80 hover:text-accent-foreground transition-colors">{link.label}</Link></li>
+                <li key={link.label}>
+                    <Link 
+                        href={link.href} 
+                        className="text-sm text-accent-foreground/80 hover:text-accent-foreground transition-colors"
+                        target={link.external ? '_blank' : undefined}
+                        rel={link.external ? 'noopener noreferrer' : undefined}
+                    >
+                        {link.label}
+                    </Link>
+                </li>
               ))}
             </ul>
           </div>

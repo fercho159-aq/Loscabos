@@ -90,8 +90,8 @@ export default function Header() {
         </nav>
         <div className="flex items-center gap-4">
           <Button asChild className="hidden sm:inline-flex bg-accent text-accent-foreground hover:bg-accent/90 font-headline rounded-none">
-            <Link href="/pre-registro">
-                PRE-REGÍSTRATE
+            <Link href="https://festival-internacional-de-cine-de-los-cabos-2025.boletia.com/" target="_blank" rel="noopener noreferrer">
+                COMPRAR BOLETOS
             </Link>
           </Button>
           <div className="lg:hidden">
