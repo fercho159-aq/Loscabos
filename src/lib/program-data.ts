@@ -112,11 +112,12 @@ export const programData: DayProgram[] = [
             bio: 'Luisa Reyes Retana es escritora, editora y mentora creativa. Su primera novela, "Arde Josefina", recibió el Premio Mauricio Achar 2017 (Literatura Random House y Librerías Gandhi). Es autora de "Tu lengua en mi boca" (2022) y próximamente de "Mal de Río" (2025). Ha colaborado en medios como El País, Gatopardo, Revista de la Universidad de México, Arte al Día y Kulturaustausch (Alemania). Luisa artista en residencia (AIR) durante el mes de diciembre en El Ganzo.',
             image: "/Images/Programacion/Conferencia/Luisa_Reyes_Retana.png",
             imageHint: "woman writer portrait"
-          }, {
+          },
+          {
             name: "En alianza con el programa de arte del Hotel El Ganzo",
             bio: 'En alianza con el programa de arte del Hotel El Ganzo —pionero cultural de Puerto Los Cabos—, el Festival presenta un ciclo de actividades que exploran la creatividad como un acto vital, un puente entre arte, territorio y conciencia. Bajo el concepto #BeyondTheScreen, el cine dialoga con la palabra, el pensamiento y la experiencia artística en dos encuentros que reflejan la energía viva del entorno y la profundidad de los procesos creativos. ',
             image: "/Images/Programacion/Conferencia/DJI_0218 (5).jpg",
-            imageHint: "woman writer portrait"
+            imageHint: "hotel art program"
           }
         ]
       },
@@ -130,6 +131,24 @@ export const programData: DayProgram[] = [
         participantsButton: true,
         time: "17:00",
         place: "Hotel El Ganzo"
+      },
+       {
+        title: "La Nube en el Jardín en vivo desde la Sala Nezahualcóyotl",
+        subtitle: "Proyección especial con Ed Maverick",
+        text: "El Festival Internacional de Cine de Los Cabos 2025 presentará una de sus experiencias más memorables: La Nube en el Jardín, documental protagonizado por Ed Maverick y filmado en vivo desde la Sala Nezahualcóyotl de la Ciudad de México. La película ofrece una inmersión profunda en el universo emocional de uno de los artistas más auténticos de su generación, capturando la noche en que Eduardo Hernández Saucedo (Ed Maverick) convirtió la emblemática sala en un santuario de vulnerabilidad y conexión colectiva.\nDesde un revelador ataque de pánico previo a subir al escenario hasta la catarsis compartida con un público rendido, el documental sigue al cantautor chihuahuense en un recorrido de honestidad brutal y comunión artística. Acompañado solo de su guitarra, su voz desnuda y un cuarteto de cuerdas, Ed interpreta su último álbum de principio a fin.",
+        access: "Acceso con registro previo",
+        image: "/Images/Programacion/la nube/Ed maverick foto 2.png",
+        imageHint: "documentary concert",
+        time: "20:00",
+        place: "Crania",
+        talent: [
+          {
+            name: "Ed Maverick",
+            bio: "Ed Maverick (Eduardo Hernández Saucedo) irrumpió en la escena musical en 2018 y redefinió el folk alternativo en español con su voz cruda y letras íntimas. A los 17 años pasó de fenómeno viral a referente generacional, ganando un Grammy Latino por su colaboración con C. Tangana y presentándose en festivales como Coachella y Lollapalooza. Tras un silencio de tres años, regresó con La Nube En El Jardín, un álbum-concepto de 53 minutos que consagra su madurez artística y su búsqueda de autenticidad.",
+            image: "/Images/Programacion/la nube/Ed Maverick Foto.png",
+            imageHint: "musician portrait"
+          }
+        ]
       },
       {
         title: "Cena de Gala",
@@ -148,24 +167,6 @@ export const programData: DayProgram[] = [
             imageHint: "chef portrait",
             website: "https://www.suelosur.com/",
             instagram: "@suelosurbaja"
-          }
-        ]
-      },
-      {
-        title: "La Nube en el Jardín en vivo desde la Sala Nezahualcóyotl",
-        subtitle: "Proyección especial con Ed Maverick",
-        text: "El Festival Internacional de Cine de Los Cabos 2025 presentará una de sus experiencias más memorables: La Nube en el Jardín, documental protagonizado por Ed Maverick y filmado en vivo desde la Sala Nezahualcóyotl de la Ciudad de México. La película ofrece una inmersión profunda en el universo emocional de uno de los artistas más auténticos de su generación, capturando la noche en que Eduardo Hernández Saucedo (Ed Maverick) convirtió la emblemática sala en un santuario de vulnerabilidad y conexión colectiva.\nDesde un revelador ataque de pánico previo a subir al escenario hasta la catarsis compartida con un público rendido, el documental sigue al cantautor chihuahuense en un recorrido de honestidad brutal y comunión artística. Acompañado solo de su guitarra, su voz desnuda y un cuarteto de cuerdas, Ed interpreta su último álbum de principio a fin.",
-        access: "Acceso con registro previo",
-        image: "/Images/Programacion/la nube/Ed maverick foto 2.png",
-        imageHint: "documentary concert",
-        time: "20:00",
-        place: "Crania",
-        talent: [
-          {
-            name: "Ed Maverick",
-            bio: "Ed Maverick (Eduardo Hernández Saucedo) irrumpió en la escena musical en 2018 y redefinió el folk alternativo en español con su voz cruda y letras íntimas. A los 17 años pasó de fenómeno viral a referente generacional, ganando un Grammy Latino por su colaboración con C. Tangana y presentándose en festivales como Coachella y Lollapalooza. Tras un silencio de tres años, regresó con La Nube En El Jardín, un álbum-concepto de 53 minutos que consagra su madurez artística y su búsqueda de autenticidad.",
-            image: "/Images/Programacion/la nube/Ed Maverick Foto.png",
-            imageHint: "musician portrait"
           }
         ]
       }
