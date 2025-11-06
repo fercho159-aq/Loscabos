@@ -98,11 +98,11 @@ export const programData: DayProgram[] = [
     title: "12 de diciembre",
     events: [
       {
-        title: "Conferencia: La Conexión Creativa",
-        subtitle: "Por Luisa Reyes Retana, en alianza con Hotel El Ganzo",
-        text: "En alianza con el programa de arte del Hotel El Ganzo —pionero cultural de Puerto Los Cabos—, el Festival presenta un ciclo de actividades que exploran la creatividad como un acto vital, un puente entre arte, territorio y conciencia. A través de su programa de arte, El Ganzo fomenta espacios de encuentro y reflexión sobre los procesos creativos que vinculan la práctica artística con la vida cotidiana. En esta conferencia, la escritora mexicana Luisa Reyes Retana invita a los participantes a explorar su propia relación con el impulso creador, comprendiendo la creatividad no solo como herramienta artística, sino como una forma de pensamiento expansivo y transformador. Con su estilo íntimo y lúcido, Luisa compartirá una reflexión sobre la curiosidad, la observación y el propósito de crear, invitando a los asistentes a reconocer y activar su potencial creativo desde la vida misma.",
+        title: "Conferencia: La Conexión Creativa Por Luisa Reyes Retana",
+        subtitle: "Programa de arte del Hotel El Ganzo",
+        text: "En alianza con el programa de arte del Hotel El Ganzo —pionero cultural de Puerto Los Cabos—, el Festival presenta un ciclo de actividades que exploran la creatividad como un acto vital, un puente entre arte, territorio y conciencia. A través de su programa de arte, El Ganzo fomenta espacios de encuentro y reflexión sobre los procesos creativos que vinculan la práctica artística con la vida cotidiana. En esta conferencia, la escritora mexicana Luisa Reyes Retana invita a los participantes a explorar su propia relación con el impulso creador, comprendiendo la creatividad no solo como herramienta artística, sino como una forma de pensamiento expansivo y transformador. Con su estilo íntimo y lúcido, Luisa compartirá una reflexión sobre la curiosidad, la observación y el propósito de crear, invitando a los asistentes a reconocer y activar su potencial creativo desde la vida misma. Bajo el concepto #BeyondTheScreen, el cine dialoga con la palabra, el pensamiento y la experiencia artística en dos encuentros que reflejan la energía viva del entorno y la profundidad de los procesos creativos.",
         access: "Acceso con registro previo",
-        image: "https://picsum.photos/seed/conexion-creativa/800/600",
+        image: "/Images/Programacion/Conferencia/Luisa.png",
         imageHint: "creative workshop art",
         time: "16:00",
         place: "La Galería, Hotel El Ganzo",
@@ -151,7 +151,7 @@ export const programData: DayProgram[] = [
         subtitle: "Proyección especial con Ed Maverick",
         text: "El Festival Internacional de Cine de Los Cabos 2025 presentará una de sus experiencias más memorables: La Nube en el Jardín, documental protagonizado por Ed Maverick y filmado en vivo desde la Sala Nezahualcóyotl de la Ciudad de México. La película ofrece una inmersión profunda en el universo emocional de uno de los artistas más auténticos de su generación, capturando la noche en que Eduardo Hernández Saucedo (Ed Maverick) convirtió la emblemática sala en un santuario de vulnerabilidad y conexión colectiva.\nDesde un revelador ataque de pánico previo a subir al escenario hasta la catarsis compartida con un público rendido, el documental sigue al cantautor chihuahuense en un recorrido de honestidad brutal y comunión artística. Acompañado solo de su guitarra, su voz desnuda y un cuarteto de cuerdas, Ed interpreta su último álbum de principio a fin.",
         access: "Acceso con registro previo",
-        image: "https://picsum.photos/seed/ed-maverick-doc/800/600",
+        image: "/Images/Programacion/la nube/Ed maverick foto 2.png",
         imageHint: "documentary concert",
         time: "20:00",
         place: "Crania",
@@ -159,7 +159,7 @@ export const programData: DayProgram[] = [
           {
             name: "Ed Maverick",
             bio: "Ed Maverick (Eduardo Hernández Saucedo) irrumpió en la escena musical en 2018 y redefinió el folk alternativo en español con su voz cruda y letras íntimas. A los 17 años pasó de fenómeno viral a referente generacional, ganando un Grammy Latino por su colaboración con C. Tangana y presentándose en festivales como Coachella y Lollapalooza. Tras un silencio de tres años, regresó con La Nube En El Jardín, un álbum-concepto de 53 minutos que consagra su madurez artística y su búsqueda de autenticidad.",
-            image: "https://picsum.photos/seed/ed-maverick-portrait/400/400",
+            image: "/Images/Programacion/la nube/Ed Maverick Foto.png",
             imageHint: "musician portrait"
           }
         ]
@@ -170,25 +170,7 @@ export const programData: DayProgram[] = [
     day: "4",
     title: "13 de diciembre",
     events: [
-      {
-        title: "Personas Haciendo Cosas",
-        subtitle: "Live Cinema / Performance",
-        text: "La artista mexicana Tania Reza presenta Personas Haciendo Cosas, una instalación audiovisual que explora el movimiento contemporáneo a través de la repetición sostenida de gestos cotidianos. Utilizando live coding y un circuito cerrado de video, diez pantallas proyectan en tiempo real a distintas personas repitiendo un movimiento de su oficio, transformando lo ordinario en una experiencia escénica. En el marco del FICLosCabos2025 la artista presentará una edición especial de la obra inspirada en el territorio de la Baja.",
-        access: "Acceso con registro previo",
-        image: "https://picsum.photos/seed/personas/800/600",
-        imageHint: "audiovisual installation",
-        time: "19:00",
-        place: "Crania",
-        talent: [
-          {
-            name: "Tania Reza",
-            bio: "Tania Reza es licenciada en Danza Contemporánea con especialidad en Arte y Mediación Tecnológica. Ganadora del Premio Nacional de Arte Joven en 2019. Su práctica actual se nutre de la hibridación entre el video, la performance, la tecnología y las imágenes generadas por código, explorando un territorio intermedio entre el arte corporal, el audiovisual y la new media.",
-            image: "https://picsum.photos/seed/tania-reza/400/400",
-            imageHint: "artist portrait"
-          }
-        ]
-      },
-      {
+       {
         title: "Sesión de poesía performática: “Somos como los ríos”",
         subtitle: "Programa de arte del Hotel El Ganzo",
         text: "El programa de arte de El Ganzo promueve el diálogo entre la creación contemporánea y los ecosistemas naturales del entorno. En esta lectura performática, Luisa Reyes Retana y Mercedes Reynoso —poetisa bajacaliforniana— entrelazan palabra, cuerpo y voz para explorar la relación entre lenguaje, identidad y naturaleza, inspiradas en el flujo y la memoria de los cuerpos de agua de Baja California Sur.\nDurante la sesión se leerán fragmentos del nuevo libro de Luisa, Mal de Río, inspirado en el Usumacinta. A través de esta experiencia poética, la palabra se convierte en corriente, en eco del territorio y en una reflexión viva sobre nuestra conexión con la naturaleza.",
@@ -211,6 +193,24 @@ export const programData: DayProgram[] = [
             imageHint: "woman poet portrait"
           }
         ]
+      },
+      {
+        title: "Personas Haciendo Cosas",
+        subtitle: "Live Cinema / Performance",
+        text: "La artista mexicana Tania Reza presenta Personas Haciendo Cosas, una instalación audiovisual que explora el movimiento contemporáneo a través de la repetición sostenida de gestos cotidianos. Utilizando live coding y un circuito cerrado de video, diez pantallas proyectan en tiempo real a distintas personas repitiendo un movimiento de su oficio, transformando lo ordinario en una experiencia escénica. En el marco del FICLosCabos2025 la artista presentará una edición especial de la obra inspirada en el territorio de la Baja.",
+        access: "Acceso con registro previo",
+        image: "/Images/Programacion/evento 5.jpg",
+        imageHint: "audiovisual installation",
+        time: "19:00",
+        place: "Crania",
+        talent: [
+          {
+            name: "Tania Reza",
+            bio: "Tania Reza es licenciada en Danza Contemporánea con especialidad en Arte y Mediación Tecnológica. Ganadora del Premio Nacional de Arte Joven en 2019. Su práctica actual se nutre de la hibridación entre el video, la performance, la tecnología y las imágenes generadas por código, explorando un territorio intermedio entre el arte corporal, el audiovisual y la new media.",
+            image: "/Images/Programacion/evento 5.jpg",
+            imageHint: "artist portrait"
+          }
+        ]
       }
     ]
   },
@@ -224,7 +224,7 @@ export const programData: DayProgram[] = [
         text: "El Pulmo se presenta como una de las proyecciones especiales del festival, reafirmando el compromiso con las historias que emergen del territorio y la conciencia ambiental. Dirigido por Mark Kronemeyer y Begoña Félix, el documental retrata la vida de Mario Castro, un pescador retirado cuya lucha por la conservación marina ha convertido a Cabo Pulmo en un ejemplo mundial de resiliencia y esperanza ecológica.\n\nA través de una fotografía sublime y una narrativa profundamente humana, la película revela las tensiones entre desarrollo, sostenibilidad y comunidad, mostrando cómo la preservación del entorno natural puede convertirse en una forma de resistencia cultural.\n\nEsta función forma parte del eje #BeyondTheScreen, que busca conectar el cine con la biodiversidad, la identidad local y el arte como herramienta de transformación.",
         sinopsis: "Mario Castro es un pescador comercial retirado, cuyos incansables esfuerzos han posicionado a Cabo Pulmo, México, como un referente mundial en conservación marina. Sin embargo, su entorno enfrenta nuevas amenazas: el crecimiento turístico, la falta de regulación y las consecuencias del desarrollo desmedido.",
         access: "Acceso con registro previo",
-        image: "https://picsum.photos/seed/el-pulmo/800/600",
+        image: "/Images/Programacion/elpulmo/ELPULMOPOSTER (1)Fest.jpg",
         imageHint: "marine life documentary",
         time: "18:00",
         place: "Veleros Beach Club",
@@ -232,13 +232,13 @@ export const programData: DayProgram[] = [
           {
             name: "Mark Kronemeyer",
             bio: "Mark Kronemeyer es fotógrafo acuático, experto en documentar olas y surf. Su trabajo ha sido publicado en ediciones por The Surfer’s Journal, Outside Magazine, Rizzoli y Lonely planet. Su obra se caracteriza por fragmentar la majestuosidad de la naturaleza en archivos trascendentales.",
-            image: "https://picsum.photos/seed/mark-k/400/400",
+            image: "/Images/Programacion/elpulmo/MK.jpg",
             imageHint: "photographer portrait water"
           },
           {
             name: "Begoña Félix",
             bio: "Bego Félix es arquitecta de profesión, apasionada de la literatura, pintura y fotografía. Su obra plástica está inspirada por la yuxtaposición de formas en la naturaleza. Como artista busca documentar y enaltecer la representación de la cotidianidad y los dilemas sociales.",
-            image: "https://picsum.photos/seed/bego-f/400/400",
+            image: "/Images/Programacion/elpulmo/BG.jpg",
             imageHint: "artist portrait nature"
           }
         ]
@@ -248,7 +248,7 @@ export const programData: DayProgram[] = [
         subtitle: "Proyección especial",
         text: "El Festival Internacional de Cine de Los Cabos presenta DEPECHE MODE: M, un viaje cinematográfico al corazón de la relación de la cultura mexicana con la muerte, enmarcado por las icónicas presentaciones de Depeche Mode durante su gira Memento Mori 2023. Concebida y dirigida por el galardonado cineasta mexicano Fernando Frías, la película captura los tres conciertos con entradas agotadas en la Ciudad de México —a los que asistieron más de 200,000 fans—, combinando material en vivo con secuencias interpretativas y archivos históricos.",
         access: "Acceso con registro previo",
-        image: "https://picsum.photos/seed/depeche/800/600",
+        image: "/Images/Programacion/Depeche Mode M/DSC_3850_Credit Toni François_rt.jpg",
         imageHint: "concert crowd silhouette",
         time: "20:00",
         place: "Crania",
@@ -256,7 +256,7 @@ export const programData: DayProgram[] = [
             {
                 name: "Fernando Frías",
                 bio: "Es un director, guionista y documentalista mexicano galardonado. Escribió, dirigió y produjo Ya no estoy aquí, ganadora de 10 Premios Ariel, del Festival de Morelia y del Festival de El Cairo, además de ser nominada al Goya y preseleccionada al Óscar. Su más reciente filme, No voy a pedirle a nadie que me crea, se estrenó globalmente en Netflix en 2023. También ha dirigido para HBO, STARZ y FOX.",
-                image: "https://picsum.photos/seed/frias/400/400",
+                image: "/Images/Programacion/Depeche Mode M/FernandoPhoto1.jpg",
                 imageHint: "director portrait monochrome"
             }
         ]
