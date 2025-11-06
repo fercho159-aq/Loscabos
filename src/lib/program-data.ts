@@ -110,7 +110,12 @@ export const programData: DayProgram[] = [
           {
             name: "Luisa Reyes Retana",
             bio: 'Luisa Reyes Retana es escritora, editora y mentora creativa. Su primera novela, "Arde Josefina", recibió el Premio Mauricio Achar 2017 (Literatura Random House y Librerías Gandhi). Es autora de "Tu lengua en mi boca" (2022) y próximamente de "Mal de Río" (2025). Ha colaborado en medios como El País, Gatopardo, Revista de la Universidad de México, Arte al Día y Kulturaustausch (Alemania). Luisa artista en residencia (AIR) durante el mes de diciembre en El Ganzo.',
-            image: "https://picsum.photos/seed/luisa-reyes/400/400",
+            image: "/Images/Programacion/Conferencia/",
+            imageHint: "woman writer portrait"
+          }, {
+            name: "En alianza con el programa de arte del Hotel El Ganzo",
+            bio: 'En alianza con el programa de arte del Hotel El Ganzo —pionero cultural de Puerto Los Cabos—, el Festival presenta un ciclo de actividades que exploran la creatividad como un acto vital, un puente entre arte, territorio y conciencia. Bajo el concepto #BeyondTheScreen, el cine dialoga con la palabra, el pensamiento y la experiencia artística en dos encuentros que reflejan la energía viva del entorno y la profundidad de los procesos creativos. ',
+            image: "/Images/Programacion/Conferencia/DJI_0218 (5).jpg",
             imageHint: "woman writer portrait"
           }
         ]
