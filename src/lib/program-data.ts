@@ -97,30 +97,7 @@ export const programData: DayProgram[] = [
     day: "3",
     title: "12 de diciembre",
     events: [
-      {
-        title: "Conferencia: La Conexión Creativa Por Luisa Reyes Retana",
-        subtitle: "Programa de arte del Hotel El Ganzo",
-        text: "En alianza con el programa de arte del Hotel El Ganzo —pionero cultural de Puerto Los Cabos—, el Festival presenta un ciclo de actividades que exploran la creatividad como un acto vital, un puente entre arte, territorio y conciencia. A través de su programa de arte, El Ganzo fomenta espacios de encuentro y reflexión sobre los procesos creativos que vinculan la práctica artística con la vida cotidiana. En esta conferencia, la escritora mexicana Luisa Reyes Retana invita a los participantes a explorar su propia relación con el impulso creador, comprendiendo la creatividad no solo como herramienta artística, sino como una forma de pensamiento expansivo y transformador. Con su estilo íntimo y lúcido, Luisa compartirá una reflexión sobre la curiosidad, la observación y el propósito de crear, invitando a los asistentes a reconocer y activar su potencial creativo desde la vida misma. Bajo el concepto #BeyondTheScreen, el cine dialoga con la palabra, el pensamiento y la experiencia artística en dos encuentros que reflejan la energía viva del entorno y la profundidad de los procesos creativos.",
-        access: "Acceso con registro previo",
-        image: "/Images/Programacion/Conferencia/Luisa.png",
-        imageHint: "creative workshop art",
-        time: "16:00",
-        place: "La Galería, Hotel El Ganzo",
-        talent: [
-          {
-            name: "Luisa Reyes Retana",
-            bio: 'Luisa Reyes Retana es escritora, editora y mentora creativa. Su primera novela, "Arde Josefina", recibió el Premio Mauricio Achar 2017 (Literatura Random House y Librerías Gandhi). Es autora de "Tu lengua en mi boca" (2022) y próximamente de "Mal de Río" (2025). Ha colaborado en medios como El País, Gatopardo, Revista de la Universidad de México, Arte al Día y Kulturaustausch (Alemania). Luisa artista en residencia (AIR) durante el mes de diciembre en El Ganzo.',
-            image: "/Images/Programacion/Conferencia/Luisa_Reyes_Retana.png",
-            imageHint: "woman writer portrait"
-          },
-          {
-            name: "En alianza con el programa de arte del Hotel El Ganzo",
-            bio: 'En alianza con el programa de arte del Hotel El Ganzo —pionero cultural de Puerto Los Cabos—, el Festival presenta un ciclo de actividades que exploran la creatividad como un acto vital, un puente entre arte, territorio y conciencia. Bajo el concepto #BeyondTheScreen, el cine dialoga con la palabra, el pensamiento y la experiencia artística en dos encuentros que reflejan la energía viva del entorno y la profundidad de los procesos creativos. ',
-            image: "/Images/Programacion/Conferencia/DJI_0218 (5).jpg",
-            imageHint: "hotel art program"
-          }
-        ]
-      },
+      
       {
         title: "Nuevas caras en el cine",
         subtitle: "Panel de cineastas emergentes",
@@ -169,7 +146,31 @@ export const programData: DayProgram[] = [
             instagram: "@suelosurbaja"
           }
         ]
-      }
+      },
+      {
+        title: "Conferencia: La Conexión Creativa Por Luisa Reyes Retana",
+        subtitle: "Programa de arte del Hotel El Ganzo",
+        text: "En alianza con el programa de arte del Hotel El Ganzo —pionero cultural de Puerto Los Cabos—, el Festival presenta un ciclo de actividades que exploran la creatividad como un acto vital, un puente entre arte, territorio y conciencia. A través de su programa de arte, El Ganzo fomenta espacios de encuentro y reflexión sobre los procesos creativos que vinculan la práctica artística con la vida cotidiana. En esta conferencia, la escritora mexicana Luisa Reyes Retana invita a los participantes a explorar su propia relación con el impulso creador, comprendiendo la creatividad no solo como herramienta artística, sino como una forma de pensamiento expansivo y transformador. Con su estilo íntimo y lúcido, Luisa compartirá una reflexión sobre la curiosidad, la observación y el propósito de crear, invitando a los asistentes a reconocer y activar su potencial creativo desde la vida misma. Bajo el concepto #BeyondTheScreen, el cine dialoga con la palabra, el pensamiento y la experiencia artística en dos encuentros que reflejan la energía viva del entorno y la profundidad de los procesos creativos.",
+        access: "Acceso con registro previo",
+        image: "/Images/Programacion/Conferencia/Luisa.png",
+        imageHint: "creative workshop art",
+        time: "16:00",
+        place: "La Galería, Hotel El Ganzo",
+        talent: [
+          {
+            name: "Luisa Reyes Retana",
+            bio: 'Luisa Reyes Retana es escritora, editora y mentora creativa. Su primera novela, "Arde Josefina", recibió el Premio Mauricio Achar 2017 (Literatura Random House y Librerías Gandhi). Es autora de "Tu lengua en mi boca" (2022) y próximamente de "Mal de Río" (2025). Ha colaborado en medios como El País, Gatopardo, Revista de la Universidad de México, Arte al Día y Kulturaustausch (Alemania). Luisa artista en residencia (AIR) durante el mes de diciembre en El Ganzo.',
+            image: "/Images/Programacion/Conferencia/Luisa_Reyes_Retana.png",
+            imageHint: "woman writer portrait"
+          },
+          {
+            name: "En alianza con el programa de arte del Hotel El Ganzo",
+            bio: 'En alianza con el programa de arte del Hotel El Ganzo —pionero cultural de Puerto Los Cabos—, el Festival presenta un ciclo de actividades que exploran la creatividad como un acto vital, un puente entre arte, territorio y conciencia. Bajo el concepto #BeyondTheScreen, el cine dialoga con la palabra, el pensamiento y la experiencia artística en dos encuentros que reflejan la energía viva del entorno y la profundidad de los procesos creativos. ',
+            image: "/Images/Programacion/Conferencia/DJI_0218 (5).jpg",
+            imageHint: "hotel art program"
+          }
+        ]
+      },
     ]
   },
   {
