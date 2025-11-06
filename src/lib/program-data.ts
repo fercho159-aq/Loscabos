@@ -109,24 +109,6 @@ export const programData: DayProgram[] = [
         place: "Hotel El Ganzo"
       },
       {
-        title: "La Nube en el Jardín en vivo desde la Sala Nezahualcóyotl",
-        subtitle: "Proyección especial con Ed Maverick",
-        text: "El Festival Internacional de Cine de Los Cabos 2025 presentará una de sus experiencias más memorables: La Nube en el Jardín, documental protagonizado por Ed Maverick y filmado en vivo desde la Sala Nezahualcóyotl de la Ciudad de México. La película ofrece una inmersión profunda en el universo emocional de uno de los artistas más auténticos de su generación, capturando la noche en que Eduardo Hernández Saucedo (Ed Maverick) convirtió la emblemática sala en un santuario de vulnerabilidad y conexión colectiva.\nDesde un revelador ataque de pánico previo a subir al escenario hasta la catarsis compartida con un público rendido, el documental sigue al cantautor chihuahuense en un recorrido de honestidad brutal y comunión artística. Acompañado solo de su guitarra, su voz desnuda y un cuarteto de cuerdas, Ed interpreta su último álbum de principio a fin.",
-        access: "Acceso con registro previo",
-        image: "https://picsum.photos/seed/ed-maverick-doc/800/600",
-        imageHint: "documentary concert",
-        time: "20:00",
-        place: "Crania",
-        talent: [
-          {
-            name: "Ed Maverick",
-            bio: "Ed Maverick (Eduardo Hernández Saucedo) irrumpió en la escena musical en 2018 y redefinió el folk alternativo en español con su voz cruda y letras íntimas. A los 17 años pasó de fenómeno viral a referente generacional, ganando un Grammy Latino por su colaboración con C. Tangana y presentándose en festivales como Coachella y Lollapalooza. Tras un silencio de tres años, regresó con La Nube En El Jardín, un álbum-concepto de 53 minutos que consagra su madurez artística y su búsqueda de autenticidad.",
-            image: "https://picsum.photos/seed/ed-maverick-portrait/400/400",
-            imageHint: "musician portrait"
-          }
-        ]
-      },
-      {
         title: "Cena de Gala",
         subtitle: "Premiación del Fondo Fílmico Gabriel Figueroa y La Baja Inspira",
         text: "La Cena de Gala del FICLosCabos 2025 rinde homenaje al talento que impulsa el futuro del cine mexicano. La velada se llevará a cabo en Suelo Sur, restaurante insignia de Los Cabos encabezado por el chef Guillermo Gómez, reconocido por la Guía Michelin por su enfoque en la sostenibilidad, el respeto al territorio y la reinterpretación contemporánea de los ingredientes de Baja California Sur. Cada plato es una historia contada con el lenguaje de la naturaleza. Durante la cena se reconocerá a los ganadores del Fondo Fílmico Gabriel Figueroa, programa que impulsa proyectos mexicanos en etapa de postproducción mediante mentorías y acompañamiento profesional, así como a los finalistas de La Baja Inspira, sección competitiva dedicada a las narrativas con raíces en la península que fortalecen el vínculo entre cine, comunidad y territorio.",
@@ -143,6 +125,24 @@ export const programData: DayProgram[] = [
             imageHint: "chef portrait",
             website: "https://www.suelosur.com/",
             instagram: "@suelosurbaja"
+          }
+        ]
+      },
+      {
+        title: "La Nube en el Jardín en vivo desde la Sala Nezahualcóyotl",
+        subtitle: "Proyección especial con Ed Maverick",
+        text: "El Festival Internacional de Cine de Los Cabos 2025 presentará una de sus experiencias más memorables: La Nube en el Jardín, documental protagonizado por Ed Maverick y filmado en vivo desde la Sala Nezahualcóyotl de la Ciudad de México. La película ofrece una inmersión profunda en el universo emocional de uno de los artistas más auténticos de su generación, capturando la noche en que Eduardo Hernández Saucedo (Ed Maverick) convirtió la emblemática sala en un santuario de vulnerabilidad y conexión colectiva.\nDesde un revelador ataque de pánico previo a subir al escenario hasta la catarsis compartida con un público rendido, el documental sigue al cantautor chihuahuense en un recorrido de honestidad brutal y comunión artística. Acompañado solo de su guitarra, su voz desnuda y un cuarteto de cuerdas, Ed interpreta su último álbum de principio a fin.",
+        access: "Acceso con registro previo",
+        image: "https://picsum.photos/seed/ed-maverick-doc/800/600",
+        imageHint: "documentary concert",
+        time: "20:00",
+        place: "Crania",
+        talent: [
+          {
+            name: "Ed Maverick",
+            bio: "Ed Maverick (Eduardo Hernández Saucedo) irrumpió en la escena musical en 2018 y redefinió el folk alternativo en español con su voz cruda y letras íntimas. A los 17 años pasó de fenómeno viral a referente generacional, ganando un Grammy Latino por su colaboración con C. Tangana y presentándose en festivales como Coachella y Lollapalooza. Tras un silencio de tres años, regresó con La Nube En El Jardín, un álbum-concepto de 53 minutos que consagra su madurez artística y su búsqueda de autenticidad.",
+            image: "https://picsum.photos/seed/ed-maverick-portrait/400/400",
+            imageHint: "musician portrait"
           }
         ]
       }
