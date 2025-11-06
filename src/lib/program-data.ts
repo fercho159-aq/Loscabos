@@ -110,7 +110,7 @@ export const programData: DayProgram[] = [
       },
       {
         title: "Cena de Gala",
-        subtitle: "Premiación del Fondo Fílmico Gabriel Figueroa y La Baja",
+        subtitle: "Premiación del Fondo Fílmico Gabriel Figueroa y La Baja Inspira",
         text: "La Cena de Gala del FICLosCabos 2025 rinde homenaje al talento que impulsa el futuro del cine mexicano. La velada se llevará a cabo en Suelo Sur, restaurante insignia de Los Cabos encabezado por el chef Guillermo Gómez, reconocido por la Guía Michelin por su enfoque en la sostenibilidad, el respeto al territorio y la reinterpretación contemporánea de los ingredientes de Baja California Sur. Cada plato es una historia contada con el lenguaje de la naturaleza. Durante la cena se reconocerá a los ganadores del Fondo Fílmico Gabriel Figueroa, programa que impulsa proyectos mexicanos en etapa de postproducción mediante mentorías y acompañamiento profesional, así como a los finalistas de La Baja Inspira, sección competitiva dedicada a las narrativas con raíces en la península que fortalecen el vínculo entre cine, comunidad y territorio.",
         access: "Acceso solo por invitación",
         image: "/Images/nuevasvoces/Suelo Sur Foto .jpg",
@@ -134,6 +134,24 @@ export const programData: DayProgram[] = [
     day: "4",
     title: "13 de diciembre",
     events: [
+      {
+        title: "Personas Haciendo Cosas",
+        subtitle: "Live Cinema / Performance",
+        text: "La artista mexicana Tania Reza presenta Personas Haciendo Cosas, una instalación audiovisual que explora el movimiento contemporáneo a través de la repetición sostenida de gestos cotidianos. Utilizando live coding y un circuito cerrado de video, diez pantallas proyectan en tiempo real a distintas personas repitiendo un movimiento de su oficio, transformando lo ordinario en una experiencia escénica. En el marco del FICLosCabos2025 la artista presentará una edición especial de la obra inspirada en el territorio de la Baja.",
+        access: "Acceso con registro previo",
+        image: "https://picsum.photos/seed/personas/800/600",
+        imageHint: "audiovisual installation",
+        time: "19:00",
+        place: "Crania",
+        talent: [
+          {
+            name: "Tania Reza",
+            bio: "Tania Reza es licenciada en Danza Contemporánea con especialidad en Arte y Mediación Tecnológica. Ganadora del Premio Nacional de Arte Joven en 2019. Su práctica actual se nutre de la hibridación entre el video, la performance, la tecnología y las imágenes generadas por código, explorando un territorio intermedio entre el arte corporal, el audiovisual y la new media.",
+            image: "https://picsum.photos/seed/tania-reza/400/400",
+            imageHint: "artist portrait"
+          }
+        ]
+      }
     ]
   }
 ];
