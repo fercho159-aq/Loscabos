@@ -170,7 +170,7 @@ export const programData: DayProgram[] = [
     day: "4",
     title: "13 de diciembre",
     events: [
-       {
+      {
         title: "Sesión de poesía performática: “Somos como los ríos”",
         subtitle: "Programa de arte del Hotel El Ganzo",
         text: "El programa de arte de El Ganzo promueve el diálogo entre la creación contemporánea y los ecosistemas naturales del entorno. En esta lectura performática, Luisa Reyes Retana y Mercedes Reynoso —poetisa bajacaliforniana— entrelazan palabra, cuerpo y voz para explorar la relación entre lenguaje, identidad y naturaleza, inspiradas en el flujo y la memoria de los cuerpos de agua de Baja California Sur.\nDurante la sesión se leerán fragmentos del nuevo libro de Luisa, Mal de Río, inspirado en el Usumacinta. A través de esta experiencia poética, la palabra se convierte en corriente, en eco del territorio y en una reflexión viva sobre nuestra conexión con la naturaleza.",
