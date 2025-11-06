@@ -201,8 +201,8 @@ export const programData: DayProgram[] = [
         ]
       },
       {
-        title: "Personas Haciendo Cosas",
-        subtitle: "Live Cinema / Performance",
+        title: "Performance: Personas Haciendo Cosas",
+        subtitle: "Presentado por Tania Reza",
         text: "La artista mexicana Tania Reza presenta Personas Haciendo Cosas, una instalación audiovisual que explora el movimiento contemporáneo a través de la repetición sostenida de gestos cotidianos. Utilizando live coding y un circuito cerrado de video, diez pantallas proyectan en tiempo real a distintas personas repitiendo un movimiento de su oficio, transformando lo ordinario en una experiencia escénica. En el marco del FICLosCabos2025 la artista presentará una edición especial de la obra inspirada en el territorio de la Baja.",
         access: "Acceso con registro previo",
         image: "/Images/Programacion/evento 5.jpg",
