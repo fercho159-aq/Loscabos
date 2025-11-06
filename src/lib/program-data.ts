@@ -133,8 +133,8 @@ export const programData: DayProgram[] = [
         place: "Hotel El Ganzo"
       },
        {
-        title: "La Nube en el Jardín en vivo desde la Sala Nezahualcóyotl",
-        subtitle: "Proyección especial con Ed Maverick",
+        title: "Documental: Ed Maverick, La nube en el jardín en vivo desde la Sala Nezahualcóyotl",
+        subtitle: "Proyección especial",
         text: "El Festival Internacional de Cine de Los Cabos 2025 presentará una de sus experiencias más memorables: La Nube en el Jardín, documental protagonizado por Ed Maverick y filmado en vivo desde la Sala Nezahualcóyotl de la Ciudad de México. La película ofrece una inmersión profunda en el universo emocional de uno de los artistas más auténticos de su generación, capturando la noche en que Eduardo Hernández Saucedo (Ed Maverick) convirtió la emblemática sala en un santuario de vulnerabilidad y conexión colectiva.\nDesde un revelador ataque de pánico previo a subir al escenario hasta la catarsis compartida con un público rendido, el documental sigue al cantautor chihuahuense en un recorrido de honestidad brutal y comunión artística. Acompañado solo de su guitarra, su voz desnuda y un cuarteto de cuerdas, Ed interpreta su último álbum de principio a fin.",
         access: "Acceso con registro previo",
         image: "/Images/Programacion/la nube/Ed maverick foto 2.png",
