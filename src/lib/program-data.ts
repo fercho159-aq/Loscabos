@@ -151,8 +151,8 @@ export const programData: DayProgram[] = [
         ]
       },
       {
-        title: "Cena de Gala",
-        subtitle: "Premiación del Fondo Fílmico Gabriel Figueroa y La Baja Inspira",
+        title: "Premiación del Fondo Fílmico Gabriel Figueroa y La Baja Inspira.",
+        subtitle: "Cena de Gala en Suelo Sur",
         text: "La Cena de Gala del FICLosCabos 2025 rinde homenaje al talento que impulsa el futuro del cine mexicano. La velada se llevará a cabo en Suelo Sur, restaurante insignia de Los Cabos encabezado por el chef Guillermo Gómez, reconocido por la Guía Michelin por su enfoque en la sostenibilidad, el respeto al territorio y la reinterpretación contemporánea de los ingredientes de Baja California Sur. Cada plato es una historia contada con el lenguaje de la naturaleza. Durante la cena se reconocerá a los ganadores del Fondo Fílmico Gabriel Figueroa, programa que impulsa proyectos mexicanos en etapa de postproducción mediante mentorías y acompañamiento profesional, así como a los finalistas de La Baja Inspira, sección competitiva dedicada a las narrativas con raíces en la península que fortalecen el vínculo entre cine, comunidad y territorio.",
         access: "Acceso solo por invitación",
         image: "/Images/nuevasvoces/Suelo Sur Foto .jpg",
