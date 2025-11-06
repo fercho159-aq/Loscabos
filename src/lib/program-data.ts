@@ -153,5 +153,36 @@ export const programData: DayProgram[] = [
         ]
       }
     ]
+  },
+   {
+    day: "5",
+    title: "14 de diciembre",
+    events: [
+      {
+        title: "El Pulmo",
+        subtitle: "Proyección especial",
+        text: "El Pulmo se presenta como una de las proyecciones especiales del festival, reafirmando el compromiso con las historias que emergen del territorio y la conciencia ambiental. Dirigido por Mark Kronemeyer y Begoña Félix, el documental retrata la vida de Mario Castro, un pescador retirado cuya lucha por la conservación marina ha convertido a Cabo Pulmo en un ejemplo mundial de resiliencia y esperanza ecológica.\n\nA través de una fotografía sublime y una narrativa profundamente humana, la película revela las tensiones entre desarrollo, sostenibilidad y comunidad, mostrando cómo la preservación del entorno natural puede convertirse en una forma de resistencia cultural.\n\nEsta función forma parte del eje #BeyondTheScreen, que busca conectar el cine con la biodiversidad, la identidad local y el arte como herramienta de transformación.",
+        sinopsis: "Mario Castro es un pescador comercial retirado, cuyos incansables esfuerzos han posicionado a Cabo Pulmo, México, como un referente mundial en conservación marina. Sin embargo, su entorno enfrenta nuevas amenazas: el crecimiento turístico, la falta de regulación y las consecuencias del desarrollo desmedido.",
+        access: "Acceso con registro previo",
+        image: "https://picsum.photos/seed/el-pulmo/800/600",
+        imageHint: "marine life documentary",
+        time: "18:00",
+        place: "Veleros Beach Club",
+        talent: [
+          {
+            name: "Mark Kronemeyer",
+            bio: "Mark Kronemeyer es fotógrafo acuático, experto en documentar olas y surf. Su trabajo ha sido publicado en ediciones por The Surfer’s Journal, Outside Magazine, Rizzoli y Lonely planet. Su obra se caracteriza por fragmentar la majestuosidad de la naturaleza en archivos trascendentales.",
+            image: "https://picsum.photos/seed/mark-k/400/400",
+            imageHint: "photographer portrait water"
+          },
+          {
+            name: "Begoña Félix",
+            bio: "Bego Félix es arquitecta de profesión, apasionada de la literatura, pintura y fotografía. Su obra plástica está inspirada por la yuxtaposición de formas en la naturaleza. Como artista busca documentar y enaltecer la representación de la cotidianidad y los dilemas sociales.",
+            image: "https://picsum.photos/seed/bego-f/400/400",
+            imageHint: "artist portrait nature"
+          }
+        ]
+      }
+    ]
   }
 ];
