@@ -113,9 +113,6 @@ export default function IndustriaPage() {
                 </h1>
                 <p className="mt-4 text-xl font-semibold text-accent">Convocatoria abierta de 13 al 31 de Octubre de 2025</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-                    <Button size="lg" disabled className="bg-accent/50 text-accent-foreground/70 rounded-none font-headline cursor-not-allowed">
-                        Convocatoria Cerrada
-                    </Button>
                     <Button size="lg" asChild variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground rounded-none font-headline bg-transparent hover:bg-accent">
                         <Link href="/faq-ffgf">
                             FAQ
@@ -396,3 +393,5 @@ export default function IndustriaPage() {
     </div>
   );
 }
+
+    
