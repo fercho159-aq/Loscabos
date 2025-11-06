@@ -122,7 +122,7 @@ export const programData: DayProgram[] = [
         ]
       },
       {
-        title: "Nuevas caras en el cine",
+        title: "Panel: Nuevas caras en el cine",
         subtitle: "Panel de cineastas emergentes",
         text: "En esta edición, el Festival amplía su mirada hacia las nuevas voces del cine, reuniendo a una selección de jóvenes directores, productores y artistas con reconocimiento nacional e internacional, que están redefiniendo los lenguajes cinematográficos con una fuerza creativa única. Una conversación que celebra la diversidad de miradas y conecta al público con la generación que está moldeando el futuro del cine nacional.",
         access: "Acceso con registro previo",
