@@ -250,8 +250,8 @@ export const programData: DayProgram[] = [
         ]
       },
       {
-        title: "Depeche Mode M",
-        subtitle: "Proyección especial",
+        title: "Documental: Depeche Mode M",
+        subtitle: "Proyección especial con Fernando Frías",
         text: "El Festival Internacional de Cine de Los Cabos presenta DEPECHE MODE: M, un viaje cinematográfico al corazón de la relación de la cultura mexicana con la muerte, enmarcado por las icónicas presentaciones de Depeche Mode durante su gira Memento Mori 2023. Concebida y dirigida por el galardonado cineasta mexicano Fernando Frías, la película captura los tres conciertos con entradas agotadas en la Ciudad de México —a los que asistieron más de 200,000 fans—, combinando material en vivo con secuencias interpretativas y archivos históricos.",
         access: "Acceso con registro previo",
         image: "/Images/Programacion/Depeche Mode M/DSC_3850_Credit Toni François_rt.jpg",
