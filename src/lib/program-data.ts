@@ -72,7 +72,7 @@ export const programData: DayProgram[] = [
         ]
       },
       {
-        title: "Cóctel de gala en Casa Ballena",
+        title: "Cóctel: clausura en Casa Ballena",
         subtitle: "en Homenaje a Eugenio Caballero",
         text: "El homenaje a Eugenio Caballero culminará con un cóctel privado en Casa Ballena, espacio dedicado a la producción y difusión del arte contemporáneo en San José del Cabo. En este entorno íntimo y simbólico, la comunidad cinematográfica, aliados y creadores se reunirán para celebrar la trayectoria del diseñador de producción acompañada por la música de El Ganzo Collective, ensamble residente del Hotel El Ganzo.",
         access: "Acceso solo por invitación",
