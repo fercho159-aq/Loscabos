@@ -98,6 +98,24 @@ export const programData: DayProgram[] = [
     title: "12 de diciembre",
     events: [
       {
+        title: "Conferencia: La Conexión Creativa",
+        subtitle: "Por Luisa Reyes Retana, en alianza con Hotel El Ganzo",
+        text: "En alianza con el programa de arte del Hotel El Ganzo —pionero cultural de Puerto Los Cabos—, el Festival presenta un ciclo de actividades que exploran la creatividad como un acto vital, un puente entre arte, territorio y conciencia. A través de su programa de arte, El Ganzo fomenta espacios de encuentro y reflexión sobre los procesos creativos que vinculan la práctica artística con la vida cotidiana. En esta conferencia, la escritora mexicana Luisa Reyes Retana invita a los participantes a explorar su propia relación con el impulso creador, comprendiendo la creatividad no solo como herramienta artística, sino como una forma de pensamiento expansivo y transformador. Con su estilo íntimo y lúcido, Luisa compartirá una reflexión sobre la curiosidad, la observación y el propósito de crear, invitando a los asistentes a reconocer y activar su potencial creativo desde la vida misma.",
+        access: "Acceso con registro previo",
+        image: "https://picsum.photos/seed/conexion-creativa/800/600",
+        imageHint: "creative workshop art",
+        time: "16:00",
+        place: "La Galería, Hotel El Ganzo",
+        talent: [
+          {
+            name: "Luisa Reyes Retana",
+            bio: 'Luisa Reyes Retana es escritora, editora y mentora creativa. Su primera novela, "Arde Josefina", recibió el Premio Mauricio Achar 2017 (Literatura Random House y Librerías Gandhi). Es autora de "Tu lengua en mi boca" (2022) y próximamente de "Mal de Río" (2025). Ha colaborado en medios como El País, Gatopardo, Revista de la Universidad de México, Arte al Día y Kulturaustausch (Alemania). Luisa artista en residencia (AIR) durante el mes de diciembre en El Ganzo.',
+            image: "https://picsum.photos/seed/luisa-reyes/400/400",
+            imageHint: "woman writer portrait"
+          }
+        ]
+      },
+      {
         title: "Nuevas caras en el cine",
         subtitle: "Panel de cineastas emergentes",
         text: "En esta edición, el Festival amplía su mirada hacia las nuevas voces del cine, reuniendo a una selección de jóvenes directores, productores y artistas con reconocimiento nacional e internacional, que están redefiniendo los lenguajes cinematográficos con una fuerza creativa única. Una conversación que celebra la diversidad de miradas y conecta al público con la generación que está moldeando el futuro del cine nacional.",
