@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const sponsors = [
-  { name: "ESCINE", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-01.png", hint: "film school logo"},
+  { name: "ESCINE", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-01.png", hint: "film school logo" },
   { name: "Hotel El Ganzo", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-02.png", hint: "company logo" },
   { name: "Cinemex", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-03.png", hint: "company logo" },
   { name: "Kundavi", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-04.png", hint: "company logo" },
@@ -14,18 +14,22 @@ const sponsors = [
   { name: "Casa Ballena", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-09.png", hint: "company logo" },
   { name: "Secrets Hotel", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-10.png", hint: "company logo" },
   { name: "Suelo Sur", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-11.png", hint: "company logo" },
-  { name: "Sponsor 12", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-12.png", hint: "company logo"},
+  { name: "Sponsor 12", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-12.png", hint: "company logo" },
   { name: "Sponsor 13", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-13.png", hint: "company logo" },
   { name: "Sponsor 14", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-14.png", hint: "company logo" },
   { name: "Sponsor 15", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-15.png", hint: "company logo" },
   { name: "Sponsor 16", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-16.png", hint: "company logo" },
+  { name: "Sponsor 17", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-17.png", hint: "company logo" },
+  { name: "Sponsor 18", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-18.png", hint: "company logo" },
   { name: "Sponsor 19", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-19.png", hint: "company logo" },
   { name: "Sponsor 20", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-20.png", hint: "company logo" },
   { name: "Sponsor 21", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-21.png", hint: "company logo" },
   { name: "Sponsor 22", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-22.png", hint: "company logo" },
   { name: "Sponsor 23", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-23.png", hint: "company logo" },
   { name: "Sponsor 24", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-24.png", hint: "company logo" },
+  { name: "Sponsor 24a", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-24a.png", hint: "company logo" },
   { name: "Sponsor 25", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-25.png", hint: "company logo" },
+  { name: "Sponsor 26", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-26.png", hint: "company logo" },
   { name: "Sponsor 27", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-27.png", hint: "company logo" },
   { name: "Sponsor 28", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-28.png", hint: "company logo" },
   { name: "Sponsor 29", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-29.png", hint: "company logo" },
@@ -35,8 +39,8 @@ const sponsors = [
   { name: "Sponsor 33", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-33.png", hint: "company logo" },
   { name: "Sponsor 34", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-34.png", hint: "company logo" },
   { name: "Sponsor 35", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-35.png", hint: "company logo" },
-  { name: "Sponsor 36", logo: "/Images/Aliados y Patrocinadores/FICC Logos_Aliados-36.png", hint: "company logo" },
-  { name: "Sponsor 37", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-37.png", hint: "company logo" },
+  { name: "Sponsor 36", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-36.png", hint: "company logo" },
+  { name: "Sponsor 37", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-37.png", hint: "company logo" }
 ];
 
 const extendedSponsors = [...sponsors, ...sponsors]; // Duplicate for seamless loop
