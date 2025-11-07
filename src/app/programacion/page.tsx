@@ -18,7 +18,7 @@ import {
 import Link from 'next/link';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Instagram, Link as LinkIcon } from 'lucide-react';
-import { programData, type Event } from '@/lib/program-data';
+import { programData, orderedEvents, type Event } from '@/lib/program-data';
 
 
 const EventDialogContent = ({ event }: { event: Event }) => {
@@ -160,7 +160,7 @@ export default function ProgramacionPage() {
         <section className="py-16 sm:py-24">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {programData.flatMap(day => day.events).map((event, index) => (
+              {orderedEvents.map((event, index) => (
                 <Dialog key={index}>
                   <DialogTrigger asChild>
                       <Card className="overflow-hidden group cursor-pointer h-full flex flex-col bg-card/80">
