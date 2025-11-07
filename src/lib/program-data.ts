@@ -270,3 +270,51 @@ export const programData: DayProgram[] = [
     ]
   }
 ];
+
+const programEvents = programData.flatMap(day => day.events);
+
+const orderedEvents = [
+    programEvents.find(e => e.title === "Documental: Depeche Mode M"),
+    programEvents.find(e => e.title === "Masterclass: Eugenio Caballero"),
+    programEvents.find(e => e.title === "Documental: Ed Maverick, La nube en el jardín en vivo desde la Sala Nezahualcóyotl"),
+    programEvents.find(e => e.title === "Panel: Nuevas caras en el cine"),
+    programEvents.find(e => e.title === "Performance: Personas Haciendo Cosas"),
+    programEvents.find(e => e.title === "Documental: El Pulmo"),
+    programEvents.find(e => e.title === "Conferencia: La Conexión Creativa Por Luisa Reyes Retana"),
+    programEvents.find(e => e.title === "Sesión de poesía performática: “Somos como los ríos”"),
+    programEvents.find(e => e.title === "Premiación del Fondo Fílmico Gabriel Figueroa y La Baja Inspira."),
+    programEvents.find(e => e.title === "Cóctel: clausura en Casa Ballena"),
+].filter((e): e is Event => e !== undefined);
+
+programData.forEach(day => {
+    day.events = [];
+});
+
+orderedEvents.forEach(event => {
+    if (event.time.startsWith('12:00') && event.place === 'Hotel El Ganzo') { // Masterclass Caballero (11 dic)
+        programData.find(d => d.day === '2')!.events.push(event);
+    } else if (event.time.startsWith('22:00') && event.place === 'Casa Ballena') { // Coctel (11 dic)
+        programData.find(d => d.day === '2')!.events.push(event);
+    } else if (event.time.startsWith('16:00')) { // Conferencia (12 dic)
+        programData.find(d => d.day === '3')!.events.push(event);
+    } else if (event.time.startsWith('17:00') && event.place === 'Hotel El Ganzo') { // Panel Nuevas Caras (12 dic)
+        programData.find(d => d.day === '3')!.events.push(event);
+    } else if (event.time.startsWith('20:00') && event.place === 'Crania' && event.title.includes('Ed Maverick')) { // Ed Maverick (12 dic)
+        programData.find(d => d.day === '3')!.events.push(event);
+    } else if (event.time.startsWith('21:00')) { // Cena Gala (12 dic)
+        programData.find(d => d.day === '3')!.events.push(event);
+    } else if (event.time.startsWith('17:00') && event.place.startsWith('Rooftop')) { // Poesia (13 dic)
+        programData.find(d => d.day === '4')!.events.push(event);
+    } else if (event.time.startsWith('19:00')) { // Performance (13 dic)
+        programData.find(d => d.day === '4')!.events.push(event);
+    } else if (event.time.startsWith('18:00')) { // El Pulmo (14 dic)
+        programData.find(d => d.day === '5')!.events.push(event);
+    } else if (event.time.startsWith('20:00') && event.place === 'Crania' && event.title.includes('Depeche Mode')) { // Depeche Mode (14 dic)
+        programData.find(d => d.day === '5')!.events.push(event);
+    }
+});
+
+// Final sort within each day
+programData.forEach(day => {
+    day.events.sort((a, b) => parseInt(a.time.replace(':', '')) - parseInt(b.time.replace(':', '')));
+});
