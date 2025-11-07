@@ -47,8 +47,15 @@ export default function ProgramSection() {
         <div className="text-center mb-12">
           <h2 className="font-headline text-4xl sm:text-5xl font-bold text-foreground">Programación 2025</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Muy pronto revelaremos las películas, encuentros y experiencias que marcarán esta edición.
+            Descubre el universo #BeyondTheScreen del Festival de Cine de los Cabos
           </p>
+           <div className="mt-8">
+             <Button asChild>
+                <Link href="/programacion">
+                    Descubre más <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
