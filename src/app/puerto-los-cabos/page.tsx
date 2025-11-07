@@ -33,45 +33,45 @@ const logos = [
 const hotels = [
     {
         name: "Hotel El Ganzo",
-        imgSrc: "/Images/Campus/DSC_9298.jpg",
+        imgSrc: "/Images/Hoteles/ElGanzoAlberca.jpg",
         imgHint: "modern hotel art",
         link: "https://www.hotelelganzo.com/"
     },
     {
         name: "Zadún, a Ritz-Carlton Reserve",
-        imgSrc: "https://picsum.photos/seed/zadun/800/600",
+        imgSrc: "/Images/Hoteles/Zadun.png",
         imgHint: "luxury resort ocean",
-        link: "https://www.ritzcarlton.com/en/hotels/sjdro-zadun-a-ritz-carlton-reserve/"
+        link: "https://www.ritzcarlton.com/en/hotels/sjdzr-zadun-a-ritz-carlton-reserve/overview/"
     },
     {
         name: "Secrets Puerto Los Cabos",
-        imgSrc: "https://picsum.photos/seed/secrets/800/600",
+        imgSrc: "/Images/Hoteles/Secrets.png",
         imgHint: "all inclusive resort",
-        link: "https://www.hyattinclusivecollection.com/en/resorts-hotels/secrets/mexico/puerto-los-cabos-golf-spa-resort/"
+        link: "https://www.hyatt.com/en-US/hotel/mexico/secrets-puerto-los-cabos/seplc"
     },
     {
         name: "Tropicana Los Cabos",
-        imgSrc: "https://picsum.photos/seed/tropicana/800/600",
+        imgSrc: "/Images/Hoteles/Tropicana.png",
         imgHint: "boutique hotel garden",
-        link: "https://www.tropicanainn.com.mx/"
+        link: "https://www.hilton.com/en/hotels/sjdtlup-tropicana-los-cabos/"
     },
     {
         name: "Marquis Los Cabos",
-        imgSrc: "https://picsum.photos/seed/marquis/800/600",
+        imgSrc: "/Images/Hoteles/Marquis.jpg",
         imgHint: "luxury hotel infinity pool",
         link: "https://www.marquisloscabos.com/"
     },
     {
         name: "The Cape, a Thompson Hotel",
-        imgSrc: "https://picsum.photos/seed/the-cape/800/600",
+        imgSrc: "/Images/Hoteles/TheCape.png",
         imgHint: "hotel view arch",
-        link: "https://www.hyatt.com/thompson-hotels/cslth-the-cape"
+        link: "https://www.hyatt.com/thompson-hotels/de-DE/cslth-the-cape"
     },
     {
         name: "JW Marriott Los Cabos Beach Resort & Spa",
-        imgSrc: "https://picsum.photos/seed/jw-marriott/800/600",
+        imgSrc: "/Images/Hoteles/Marriott.jpg",
         imgHint: "resort spa beach",
-        link: "https://www.marriott.com/en-us/hotels/sjdjw-jw-marriott-los-cabos-beach-resort-and-spa/"
+        link: "https://www.marriott.com/en-us/hotels/sjdjw-jw-marriott-los-cabos-beach-resort-and-spa/overview/"
     }
 ];
 
