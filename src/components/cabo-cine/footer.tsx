@@ -31,6 +31,7 @@ const pressLinks = [
 
 const plcLinks = [
     { href: "/puerto-los-cabos", label: "Acerca de Puerto Los Cabos" },
+    { href: "/hoteles-aliados", label: "Hoteles Aliados" },
 ];
 
 export default function Footer() {
