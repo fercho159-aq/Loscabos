@@ -37,12 +37,6 @@ const venues = [
         instagram: "@craniareclaim",
         instagramLink: "https://www.instagram.com/craniareclaim"
     },
-    {
-        name: "Jardín IKAL",
-        description: "Enclave natural y escénico que albergará un acto especial el sábado 13 de diciembre y la fiesta de clausura cerrando con una celebración en sintonía con la naturaleza.",
-        imgSrc: "/Images/Campus/Dalu_finales-400.jpg",
-        imgHint: "lush garden nature"
-    }
 ];
 
 export default function CampusPage() {
