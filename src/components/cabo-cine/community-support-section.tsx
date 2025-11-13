@@ -9,7 +9,7 @@ export default function CommunitySupportSection() {
     <section className="relative py-20 sm:py-32 bg-background flex items-center justify-center text-center text-white">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/Images/Main/crania.png"
+          src="/Images/comunidad/Captura de pantalla 2025-11-13 a la(s) 8.44.28 p.m..png"
           alt="Niños de la comunidad sonriendo"
           data-ai-hint="community children smiling"
           fill
