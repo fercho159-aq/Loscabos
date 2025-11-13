@@ -9,6 +9,7 @@ import LaBajaInspiraHomeSection from '@/components/cabo-cine/la-baja-inspira-hom
 import SponsorsSection from '@/components/cabo-cine/sponsors-section';
 import Footer from '@/components/cabo-cine/footer';
 import GFFFHomeSection from '@/components/cabo-cine/gfff-home-section';
+import CommunitySupportSection from '@/components/cabo-cine/community-support-section';
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <GFFFHomeSection />
         <LaBajaInspiraHomeSection />
         <SponsorsSection />
+        <CommunitySupportSection />
       </main>
       <Footer />
     </div>
