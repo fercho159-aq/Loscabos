@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { HandHeart } from 'lucide-react';
 
 export default function HeroSection() {
   return (
@@ -39,10 +40,15 @@ export default function HeroSection() {
             <p className="text-lg md:text-sm text-background/80">
             ASEGURA TU LUGAR
             </p>
-            <div className="my-2">
+            <div className="my-2 flex flex-col md:flex-row gap-4">
                 <Button asChild className="font-headline text-xl md:text-lg group transition-all duration-300 transform hover:scale-105 bg-accent text-accent-foreground hover:bg-accent/90 w-[266px] h-14 md:h-[46px] py-[10px] px-[2px] rounded-none">
                     <Link href="https://festival-internacional-de-cine-de-los-cabos-2025.boletia.com/" target="_blank" rel="noopener noreferrer">
                         COMPRAR BOLETOS
+                    </Link>
+                </Button>
+                 <Button asChild variant="outline" className="font-headline text-xl md:text-lg group transition-all duration-300 transform hover:scale-105 bg-transparent text-background hover:bg-background hover:text-foreground border-background w-[266px] h-14 md:h-[46px] py-[10px] px-[2px] rounded-none">
+                    <Link href="https://www.laplayacentrocomunitario.org/" target="_blank" rel="noopener noreferrer">
+                        Apoya a la comunidad <HandHeart className="ml-2" />
                     </Link>
                 </Button>
             </div>
