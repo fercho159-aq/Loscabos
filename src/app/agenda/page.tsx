@@ -6,7 +6,7 @@ import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
-import { agendaData, venues, timeSlots, Event } from '@/lib/agenda-data';
+import { agendaData, venues, timeSlots, type Event } from '@/lib/agenda-data';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 function getEvent(day: string, time: string, venue: string): Event | undefined {
@@ -31,8 +31,20 @@ function getEventDurationInHours(event: Event): number {
 }
 
 const DayTab = ({ day }: { day: string }) => {
-  const processedEvents = new Set<string>();
+  const isOccupied = (time: string, venue: string): boolean => {
+    return agendaData.some(e => {
+        if (e.Dia !== day || e.SEDE !== venue) return false;
+        
+        const eventStartHour = parseInt(e['HORA DE INICIO'].split(':')[0], 10);
+        const eventDuration = getEventDurationInHours(e);
+        const eventEndHour = eventStartHour + eventDuration;
+        
+        const currentHour = parseInt(time.split(':')[0], 10);
 
+        return currentHour > eventStartHour && currentHour < eventEndHour;
+    });
+  };
+    
   return (
     <div className="overflow-x-auto">
       <div className="grid gap-px bg-border" style={{ gridTemplateColumns: `auto repeat(${venues.length}, 1fr)` }}>
@@ -50,30 +62,12 @@ const DayTab = ({ day }: { day: string }) => {
                const event = getEvent(day, time, venue);
                
                if(event) {
-                  const eventKey = `${event.EVENTO}-${time}-${venue}`;
-                  if (processedEvents.has(eventKey)) {
-                    return null;
-                  }
                   const durationInHours = getEventDurationInHours(event);
-                  // The grid row span is based on the number of 1-hour slots.
                   const rowSpan = Math.round(durationInHours);
-                  
-                  // Mark all slots this event will occupy as processed
-                  const startHour = parseInt(time.split(':')[0], 10);
-                  for (let i = 0; i < rowSpan; i++) {
-                      const nextHour = startHour + i;
-                      if (nextHour < 24) {
-                          const nextTime = `${String(nextHour).padStart(2, '0')}:00`;
-                          const keyToProcess = `${event.EVENTO}-${nextTime}-${venue}`;
-                          // This logic is tricky. A simpler way is needed, but for now we just process the start time.
-                      }
-                  }
-                   processedEvents.add(eventKey);
-
 
                   return (
                     <div
-                      key={eventKey}
+                      key={`${event.EVENTO}-${time}-${venue}`}
                       className="p-3 text-white flex flex-col justify-between"
                       style={{ 
                         gridRow: `span ${rowSpan}`, 
@@ -91,21 +85,10 @@ const DayTab = ({ day }: { day: string }) => {
                     </div>
                   );
                }
-               // Check if an event from a previous timeslot is spanning into this one
-                const isOccupied = agendaData.some(e => {
-                    if (e.Dia !== day || e['SEDE'] !== venue) return false;
-                    const duration = getEventDurationInHours(e);
-                    if (duration <= 1) return false;
-
-                    const startHour = parseInt(e['HORA DE INICIO'].split(':')[0], 10);
-                    const currentHour = parseInt(time.split(':')[0], 10);
-                    
-                    return currentHour > startHour && currentHour < (startHour + duration);
-                });
-
-                if (isOccupied) {
-                    return null;
-                }
+               
+               if (isOccupied(time, venue)) {
+                  return null; // This slot is spanned by a previous event
+               }
                
                return <div key={`${time}-${venue}`} className="bg-card min-h-[4rem] border-t border-border"></div>
             })}
@@ -119,7 +102,7 @@ const DayTab = ({ day }: { day: string }) => {
 
 export default function AgendaPage() {
   const agendaDays = [...new Set(agendaData.map(e => e.Dia))];
-  const sortedDays = ["Miércoles 10 Dic", "Jueves 11 Dic", "Viernes 12 Dic", "Sábado 13 Dic", "Domingo 14 Dic"].filter(d => agendaDays.includes(d));
+  const sortedDays = ["Jueves 11 Dic", "Viernes 12 Dic", "Sábado 13 Dic", "Domingo 14 Dic"].filter(d => agendaDays.includes(d));
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
