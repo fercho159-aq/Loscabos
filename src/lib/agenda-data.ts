@@ -293,12 +293,6 @@ export const groupedAgenda = agendaData.reduce((acc, event) => {
   return acc;
 }, {} as Record<string, AgendaEvent[]>);
 
-export const agendaDays = [
-    "Jueves 11 Dic",
-    "Viernes 12 Dic",
-    "Sábado 13 Dic",
-    "Domingo 14 Dic"
-];
 
 const allVenues = [...new Set(agendaData.map(e => e['SEDE']))];
 export const venues = allVenues.sort();
