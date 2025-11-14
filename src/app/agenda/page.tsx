@@ -57,7 +57,7 @@ export default function AgendaPage() {
                 
                 {/* Body */}
                 {timeSlots.map(time => (
-                  <>
+                  <React.Fragment key={time}>
                     <div className="bg-card p-3 text-center font-semibold">{time}</div>
                     {venues.map(venue => {
                        const event = getEvent(agendaDays[0], time, venue); // Simplified for one day view for now
@@ -93,7 +93,7 @@ export default function AgendaPage() {
                        
                        return <div key={`${time}-${venue}`} className="bg-card min-h-[4rem]"></div>
                     })}
-                  </>
+                  </React.Fragment>
                 ))}
               </div>
             </div>
