@@ -44,19 +44,23 @@ export default function AgendaPage() {
 
               {agendaDays.map(day => (
                 <TabsContent key={day} value={day}>
-                  <Card className="mt-6 bg-card border-none shadow-none">
-                    <CardContent className="space-y-4 p-0 sm:p-4">
+                  <Card className="mt-6 bg-transparent border-none shadow-none">
+                    <CardContent className="space-y-4 p-0">
                       {groupedAgenda[day].map((event, index) => (
-                        <div key={index} className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-x-8 gap-y-2 p-4 border-b last:border-b-0">
-                          <div className="flex flex-col text-sm text-muted-foreground">
+                        <div 
+                          key={index} 
+                          className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-x-8 gap-y-2 p-4 rounded-lg text-white"
+                          style={{ backgroundColor: event.COLOR }}
+                        >
+                          <div className="flex flex-col text-sm">
                             <span className="font-semibold">{event['HORA DE INICIO']} - {event['HORA DE FIN']}</span>
-                            <span className="text-xs">{event['SEDE']}</span>
+                            <span className="text-xs opacity-80">{event['SEDE']}</span>
                           </div>
                           <div>
-                            <p className="font-semibold text-foreground whitespace-pre-line">{event.EVENTO}</p>
+                            <p className="font-semibold whitespace-pre-line">{event.EVENTO}</p>
                             <Badge 
-                              style={{ backgroundColor: event.COLOR, color: '#FFFFFF' }}
-                              className="mt-2 text-xs"
+                              variant="secondary"
+                              className="mt-2 text-xs bg-white/20 text-white border-none"
                             >
                               {event['CATEGORÍA']}
                             </Badge>
