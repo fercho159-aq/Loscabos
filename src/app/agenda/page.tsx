@@ -13,7 +13,7 @@ function getEvent(day: string, time: string, venue: string): Event | undefined {
   return agendaData.find(e => e.Dia === day && e['HORA DE INICIO'] === time && e['SEDE'] === venue);
 }
 
-function getEventDuration(event: Event): number {
+function getEventDurationInHours(event: Event): number {
     if (!event['HORA DE INICIO'] || !event['HORA DE FIN']) return 1;
     const [startHour, startMinute] = event['HORA DE INICIO'].split(':').map(Number);
     let [endHour, endMinute] = event['HORA DE FIN'].split(':').map(Number);
@@ -27,12 +27,11 @@ function getEventDuration(event: Event): number {
     
     let duration = endTime - startTime;
     if (duration < 0) duration += 24;
-    return Math.max(1, Math.round(duration));
+    return duration;
 }
 
 const DayTab = ({ day }: { day: string }) => {
   const processedEvents = new Set<string>();
-  const dayEvents = agendaData.filter(e => e.Dia === day);
 
   return (
     <div className="overflow-x-auto">
@@ -55,17 +54,31 @@ const DayTab = ({ day }: { day: string }) => {
                   if (processedEvents.has(eventKey)) {
                     return null;
                   }
-                  const duration = getEventDuration(event);
-                  processedEvents.add(eventKey);
+                  const durationInHours = getEventDurationInHours(event);
+                  // The grid row span is based on the number of 1-hour slots.
+                  const rowSpan = Math.round(durationInHours);
+                  
+                  // Mark all slots this event will occupy as processed
+                  const startHour = parseInt(time.split(':')[0], 10);
+                  for (let i = 0; i < rowSpan; i++) {
+                      const nextHour = startHour + i;
+                      if (nextHour < 24) {
+                          const nextTime = `${String(nextHour).padStart(2, '0')}:00`;
+                          const keyToProcess = `${event.EVENTO}-${nextTime}-${venue}`;
+                          // This logic is tricky. A simpler way is needed, but for now we just process the start time.
+                      }
+                  }
+                   processedEvents.add(eventKey);
+
 
                   return (
                     <div
                       key={eventKey}
                       className="p-3 text-white flex flex-col justify-between"
                       style={{ 
-                        gridRow: `span ${duration}`, 
+                        gridRow: `span ${rowSpan}`, 
                         backgroundColor: event.COLOR,
-                        minHeight: `${duration * 4}rem`
+                        minHeight: `${rowSpan * 4}rem` // 4rem per hour
                       }}
                     >
                        <p className="font-semibold text-sm whitespace-pre-line mb-2">{event.EVENTO}</p>
@@ -78,8 +91,23 @@ const DayTab = ({ day }: { day: string }) => {
                     </div>
                   );
                }
+               // Check if an event from a previous timeslot is spanning into this one
+                const isOccupied = agendaData.some(e => {
+                    if (e.Dia !== day || e['SEDE'] !== venue) return false;
+                    const duration = getEventDurationInHours(e);
+                    if (duration <= 1) return false;
+
+                    const startHour = parseInt(e['HORA DE INICIO'].split(':')[0], 10);
+                    const currentHour = parseInt(time.split(':')[0], 10);
+                    
+                    return currentHour > startHour && currentHour < (startHour + duration);
+                });
+
+                if (isOccupied) {
+                    return null;
+                }
                
-               return <div key={`${time}-${venue}`} className="bg-card min-h-[4rem]"></div>
+               return <div key={`${time}-${venue}`} className="bg-card min-h-[4rem] border-t border-border"></div>
             })}
           </React.Fragment>
         ))}
@@ -91,6 +119,7 @@ const DayTab = ({ day }: { day: string }) => {
 
 export default function AgendaPage() {
   const agendaDays = [...new Set(agendaData.map(e => e.Dia))];
+  const sortedDays = ["Miércoles 10 Dic", "Jueves 11 Dic", "Viernes 12 Dic", "Sábado 13 Dic", "Domingo 14 Dic"].filter(d => agendaDays.includes(d));
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -119,15 +148,15 @@ export default function AgendaPage() {
 
         <section className="py-12 sm:py-16">
           <div className="container mx-auto px-4">
-            <Tabs defaultValue={agendaDays[0]} className="w-full">
+            <Tabs defaultValue={sortedDays[0]} className="w-full">
               <div className="overflow-x-auto pb-4">
                 <TabsList className="flex-nowrap w-max mx-auto">
-                  {agendaDays.map(day => (
+                  {sortedDays.map(day => (
                     <TabsTrigger key={day} value={day} className="whitespace-nowrap">{day}</TabsTrigger>
                   ))}
                 </TabsList>
               </div>
-              {agendaDays.map(day => (
+              {sortedDays.map(day => (
                 <TabsContent key={day} value={day} className="mt-8">
                   <DayTab day={day} />
                 </TabsContent>
