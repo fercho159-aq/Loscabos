@@ -46,7 +46,7 @@ export default function AgendaPage() {
                 <TabsContent key={day} value={day}>
                   <Card className="mt-6 bg-transparent border-none shadow-none">
                     <CardContent className="space-y-4 p-0">
-                      {groupedAgenda[day].map((event, index) => (
+                      {groupedAgenda[day]?.map((event, index) => (
                         <div 
                           key={index} 
                           className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-x-8 gap-y-2 p-4 rounded-lg text-white"
@@ -66,7 +66,7 @@ export default function AgendaPage() {
                             </Badge>
                           </div>
                         </div>
-                      ))}
+                      )) || <p className="text-center text-muted-foreground mt-8">No hay eventos programados para este día.</p>}
                     </CardContent>
                   </Card>
                 </TabsContent>
