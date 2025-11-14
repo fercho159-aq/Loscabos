@@ -12,7 +12,7 @@ export type AgendaEvent = {
 export const agendaData: AgendaEvent[] = [
     {
     "HORA DE INICIO": "12:00",
-    "HORA DE FIN": "0:00",
+    "HORA DE FIN": "23:59",
     "EVENTO": "Programación fílmica FICLosCabos",
     "SEDE": "Cinemex San José",
     "CATEGORÍA": "Programa de cine",
@@ -21,7 +21,7 @@ export const agendaData: AgendaEvent[] = [
   },
     {
     "HORA DE INICIO": "12:00",
-    "HORA DE FIN": "0:00",
+    "HORA DE FIN": "23:59",
     "EVENTO": "Programación fílmica FICLosCabos",
     "SEDE": "Cinemex San José",
     "CATEGORÍA": "Programa de cine",
@@ -328,3 +328,5 @@ export const groupedAgenda = agendaData.reduce((acc, event) => {
 }, {} as Record<string, AgendaEvent[]>);
 
 export const agendaDays = Object.keys(groupedAgenda);
+
+    
