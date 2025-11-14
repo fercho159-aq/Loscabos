@@ -36,11 +36,13 @@ export default function AgendaPage() {
         <section className="py-16 sm:py-24">
           <div className="container mx-auto px-4">
             <Tabs defaultValue={agendaDays[0]} className="w-full">
-              <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2">
-                {agendaDays.map(day => (
-                  <TabsTrigger key={day} value={day}>{day}</TabsTrigger>
-                ))}
-              </TabsList>
+              <div className="overflow-x-auto pb-2 -mx-4 px-4">
+                <TabsList className="w-max sm:w-full sm:grid sm:grid-cols-4 gap-2">
+                  {agendaDays.map(day => (
+                    <TabsTrigger key={day} value={day}>{day}</TabsTrigger>
+                  ))}
+                </TabsList>
+              </div>
 
               {agendaDays.map(day => (
                 <TabsContent key={day} value={day}>
