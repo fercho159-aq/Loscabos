@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Ticket } from 'lucide-react';
+import { ChevronDown, Ticket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import {
@@ -13,6 +13,12 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 import { Menu } from 'lucide-react';
 import Image from 'next/image';
 
@@ -23,8 +29,14 @@ export default function Header() {
   const pathname = usePathname();
 
   const navLinks = [
-    { href: '/agenda', label: 'Agenda' },
-    { href: '/programacion', label: 'Programación 2025' },
+    { 
+      label: 'Programación 2025', 
+      isDropdown: true,
+      sublinks: [
+        { href: '/programacion', label: 'Eventos y Proyecciones' },
+        { href: '/agenda', label: 'Agenda' },
+      ]
+    },
     { href: '/campus', label: 'Campus FICLosCabos' },
     { href: '/industria', label: 'Fondo Fílmico Gabriel Figueroa' },
     { href: '/la-baja-inspira', label: 'La Baja Inspira'},
@@ -51,18 +63,46 @@ export default function Header() {
   const NavContent = () => (
     <>
       {navLinks.map((link) => (
-        <Link 
-          key={link.href} 
-          href={link.href} 
-          onClick={() => setOpen(false)} 
-          style={{ fontSize: '15px' }}
-          className={cn(
-            "font-medium transition-colors block py-2 lg:py-0",
-            isTransparent ? "text-background hover:text-background/80" : "text-foreground hover:text-accent"
-          )}
-        >
-          {link.label}
-        </Link>
+        link.isDropdown && link.sublinks ? (
+          <DropdownMenu key={link.label}>
+            <DropdownMenuTrigger asChild>
+              <button
+                style={{ fontSize: '15px' }}
+                className={cn(
+                  "flex items-center gap-1 font-medium transition-colors outline-none",
+                  isTransparent ? "text-background hover:text-background/80" : "text-foreground hover:text-accent"
+                )}
+              >
+                {link.label}
+                <ChevronDown className="h-4 w-4" />
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-card">
+              {link.sublinks.map(sublink => (
+                 <DropdownMenuItem key={sublink.href} asChild>
+                  <Link 
+                    href={sublink.href}
+                    className="text-foreground hover:bg-accent"
+                  >
+                    {sublink.label}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+        ) : (
+          <Link 
+            key={link.href} 
+            href={link.href!} 
+            style={{ fontSize: '15px' }}
+            className={cn(
+              "font-medium transition-colors block py-2 lg:py-0",
+              isTransparent ? "text-background hover:text-background/80" : "text-foreground hover:text-accent"
+            )}
+          >
+            {link.label}
+          </Link>
+        )
       ))}
     </>
   );
@@ -110,14 +150,32 @@ export default function Header() {
                   </Link>
                   <nav className="flex flex-col gap-6">
                      {navLinks.map((link) => (
+                       link.isDropdown && link.sublinks ? (
+                         <div key={link.label}>
+                            <p className="text-lg font-medium text-foreground/70 mb-2">{link.label}</p>
+                            <div className="flex flex-col gap-4 pl-4">
+                                {link.sublinks.map(sublink => (
+                                    <Link 
+                                        key={sublink.href} 
+                                        href={sublink.href} 
+                                        onClick={() => setOpen(false)} 
+                                        className="text-lg font-medium text-foreground hover:text-accent transition-colors block"
+                                    >
+                                        {sublink.label}
+                                    </Link>
+                                ))}
+                            </div>
+                         </div>
+                       ) : (
                         <Link 
                           key={link.href} 
-                          href={link.href} 
+                          href={link.href!} 
                           onClick={() => setOpen(false)} 
                           className="text-lg font-medium text-foreground hover:text-accent transition-colors block py-2 lg:py-0"
                         >
                           {link.label}
                         </Link>
+                       )
                       ))}
                   </nav>
                 </div>

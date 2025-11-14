@@ -10,14 +10,23 @@ export type AgendaEvent = {
 };
 
 export const agendaData: AgendaEvent[] = [
-  {
+    {
     "HORA DE INICIO": "12:00",
     "HORA DE FIN": "0:00",
     "EVENTO": "Programación fílmica FICLosCabos",
     "SEDE": "Cinemex San José",
     "CATEGORÍA": "Programa de cine",
     "COLOR": "#3a3a08",
-    "Dia": "jueves 11 dic"
+    "Dia": "Miércoles 10 Dic"
+  },
+    {
+    "HORA DE INICIO": "12:00",
+    "HORA DE FIN": "0:00",
+    "EVENTO": "Programación fílmica FICLosCabos",
+    "SEDE": "Cinemex San José",
+    "CATEGORÍA": "Programa de cine",
+    "COLOR": "#3a3a08",
+    "Dia": "Jueves 11 Dic"
   },
   {
     "HORA DE INICIO": "11:00",
@@ -26,7 +35,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Hotel el Ganzo",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
-    "Dia": "jueves 11 dic"
+    "Dia": "Jueves 11 Dic"
   },
   {
     "HORA DE INICIO": "12:00",
@@ -35,7 +44,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Hotel el Ganzo",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
-    "Dia": "jueves 11 dic"
+    "Dia": "Jueves 11 Dic"
   },
   {
     "HORA DE INICIO": "12:30",
@@ -44,7 +53,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Hotel el Ganzo",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
-    "Dia": "jueves 11 dic"
+    "Dia": "Jueves 11 Dic"
   },
   {
     "HORA DE INICIO": "15:00",
@@ -53,7 +62,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "jueves 11 dic"
+    "Dia": "Jueves 11 Dic"
   },
   {
     "HORA DE INICIO": "17:30",
@@ -62,7 +71,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "jueves 11 dic"
+    "Dia": "Jueves 11 Dic"
   },
   {
     "HORA DE INICIO": "18:00",
@@ -71,7 +80,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "jueves 11 dic"
+    "Dia": "Jueves 11 Dic"
   },
   {
     "HORA DE INICIO": "18:15",
@@ -80,7 +89,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "jueves 11 dic"
+    "Dia": "Jueves 11 Dic"
   },
   {
     "HORA DE INICIO": "20:00",
@@ -89,7 +98,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania",
     "CATEGORÍA": "Music Sessions FICLosCabos",
     "COLOR": "#e67050",
-    "Dia": "jueves 11 dic"
+    "Dia": "Jueves 11 Dic"
   },
   {
     "HORA DE INICIO": "20:45",
@@ -98,7 +107,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania (Cate)",
     "CATEGORÍA": "Music Sessions FICLosCabos",
     "COLOR": "#e67050",
-    "Dia": "jueves 11 dic"
+    "Dia": "Jueves 11 Dic"
   },
   {
     "HORA DE INICIO": "12:00",
@@ -107,7 +116,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Cinemex San José",
     "CATEGORÍA": "Programa de cine",
     "COLOR": "#3a3a08",
-    "Dia": "viernes 12 dic"
+    "Dia": "Viernes 12 Dic"
   },
   {
     "HORA DE INICIO": "11:15",
@@ -116,7 +125,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Hotel el Ganzo",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
-    "Dia": "viernes 12 dic"
+    "Dia": "Viernes 12 Dic"
   },
   {
     "HORA DE INICIO": "12:00",
@@ -125,7 +134,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Hotel el Ganzo",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
-    "Dia": "viernes 12 dic"
+    "Dia": "Viernes 12 Dic"
   },
   {
     "HORA DE INICIO": "12:30",
@@ -134,7 +143,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Hotel el Ganzo",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
-    "Dia": "viernes 12 dic"
+    "Dia": "Viernes 12 Dic"
   },
   {
     "HORA DE INICIO": "15:00",
@@ -143,7 +152,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "viernes 12 dic"
+    "Dia": "Viernes 12 Dic"
   },
   {
     "HORA DE INICIO": "16:00",
@@ -152,7 +161,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Hotel el Ganzo (Galería)",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#17323a",
-    "Dia": "viernes 12 dic"
+    "Dia": "Viernes 12 Dic"
   },
   {
     "HORA DE INICIO": "17:30",
@@ -161,7 +170,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "viernes 12 dic"
+    "Dia": "Viernes 12 Dic"
   },
   {
     "HORA DE INICIO": "18:00",
@@ -170,7 +179,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "viernes 12 dic"
+    "Dia": "Viernes 12 Dic"
   },
   {
     "HORA DE INICIO": "20:00",
@@ -179,7 +188,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "viernes 12 dic"
+    "Dia": "Viernes 12 Dic"
   },
   {
     "HORA DE INICIO": "22:00",
@@ -188,7 +197,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania",
     "CATEGORÍA": "Music Sessions FICLosCabos",
     "COLOR": "#e67050",
-    "Dia": "viernes 12 dic"
+    "Dia": "Viernes 12 Dic"
   },
   {
     "HORA DE INICIO": "12:00",
@@ -197,7 +206,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Cinemex San José",
     "CATEGORÍA": "Programa de cine",
     "COLOR": "#3a3a08",
-    "Dia": "sábado 13 dic"
+    "Dia": "Sábado 13 Dic"
   },
   {
     "HORA DE INICIO": "11:15",
@@ -206,7 +215,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Hotel el Ganzo (Galería)",
     "CATEGORÍA": "Industria",
     "COLOR": "#17323a",
-    "Dia": "sábado 13 dic"
+    "Dia": "Sábado 13 Dic"
   },
   {
     "HORA DE INICIO": "12:00",
@@ -215,7 +224,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Hotel el Ganzo",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
-    "Dia": "sábado 13 dic"
+    "Dia": "Sábado 13 Dic"
   },
   {
     "HORA DE INICIO": "12:30",
@@ -224,7 +233,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Hotel el Ganzo",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
-    "Dia": "sábado 13 dic"
+    "Dia": "Sábado 13 Dic"
   },
   {
     "HORA DE INICIO": "15:00",
@@ -233,7 +242,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "sábado 13 dic"
+    "Dia": "Sábado 13 Dic"
   },
   {
     "HORA DE INICIO": "17:00",
@@ -242,7 +251,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Hotel el Ganzo",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#051723",
-    "Dia": "sábado 13 dic"
+    "Dia": "Sábado 13 Dic"
   },
   {
     "HORA DE INICIO": "17:30",
@@ -251,7 +260,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "sábado 13 dic"
+    "Dia": "Sábado 13 Dic"
   },
   {
     "HORA DE INICIO": "17:45",
@@ -260,7 +269,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "sábado 13 dic"
+    "Dia": "Sábado 13 Dic"
   },
   {
     "HORA DE INICIO": "20:00",
@@ -269,7 +278,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "sábado 13 dic"
+    "Dia": "Sábado 13 Dic"
   },
   {
     "HORA DE INICIO": "22:00",
@@ -278,7 +287,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania",
     "CATEGORÍA": "Music Sessions FICLosCabos",
     "COLOR": "#e67050",
-    "Dia": "sábado 13 dic"
+    "Dia": "Sábado 13 Dic"
   },
   {
     "HORA DE INICIO": "12:00",
@@ -287,7 +296,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Cinemex San José",
     "CATEGORÍA": "Programa de cine",
     "COLOR": "#3a3a08",
-    "Dia": "domingo 14 dic"
+    "Dia": "Domingo 14 Dic"
   },
   {
     "HORA DE INICIO": "18:00",
@@ -296,7 +305,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Jetty",
     "CATEGORÍA": "Programa de cine",
     "COLOR": "#6688c5",
-    "Dia": "domingo 14 dic"
+    "Dia": "Domingo 14 Dic"
   },
   {
     "HORA DE INICIO": "19:00",
@@ -305,7 +314,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Jetty",
     "CATEGORÍA": "Programa de cine",
     "COLOR": "#6688c5",
-    "Dia": "domingo 14 dic"
+    "Dia": "Domingo 14 Dic"
   }
 ];
 

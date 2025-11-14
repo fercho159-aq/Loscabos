@@ -36,7 +36,7 @@ export default function AgendaPage() {
         <section className="py-16 sm:py-24">
           <div className="container mx-auto px-4">
             <Tabs defaultValue={agendaDays[0]} className="w-full">
-              <TabsList className="grid w-full grid-cols-2 md:grid-cols-4">
+              <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-2">
                 {agendaDays.map(day => (
                   <TabsTrigger key={day} value={day}>{day}</TabsTrigger>
                 ))}
