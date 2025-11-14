@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { agendaData, venues, timeSlots, type Event } from '@/lib/agenda-data';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { cn } from '@/lib/utils';
 
 function getEvent(day: string, time: string, venue: string): Event | undefined {
   return agendaData.find(e => e.Dia === day && e['HORA DE INICIO'] === time && e['SEDE'] === venue);
@@ -31,70 +32,75 @@ function getEventDurationInHours(event: Event): number {
 }
 
 const DayTab = ({ day }: { day: string }) => {
-  const isOccupied = (time: string, venue: string): boolean => {
-    return agendaData.some(e => {
-        if (e.Dia !== day || e.SEDE !== venue) return false;
-        
-        const eventStartHour = parseInt(e['HORA DE INICIO'].split(':')[0], 10);
-        const eventDuration = getEventDurationInHours(e);
-        const eventEndHour = eventStartHour + eventDuration;
-        
-        const currentHour = parseInt(time.split(':')[0], 10);
+  const occupiedCells = new Set<string>();
 
-        return currentHour > eventStartHour && currentHour < eventEndHour;
-    });
-  };
+  agendaData.forEach(event => {
+    if (event.Dia === day) {
+      const durationInHours = getEventDurationInHours(event);
+      if (durationInHours > 1) {
+        const rowSpan = Math.round(durationInHours);
+        const [startHour] = event['HORA DE INICIO'].split(':').map(Number);
+
+        for (let i = 1; i < rowSpan; i++) {
+          const occupiedHour = startHour + i;
+          const occupiedTime = `${occupiedHour.toString().padStart(2, '0')}:00`;
+          occupiedCells.add(`${occupiedTime}-${event.SEDE}`);
+        }
+      }
+    }
+  });
     
   return (
-    <div className="overflow-x-auto">
-      <div className="grid gap-px bg-border" style={{ gridTemplateColumns: `auto repeat(${venues.length}, 1fr)` }}>
-        {/* Header */}
-        <div className="bg-muted p-3 text-center font-semibold sticky left-0 z-10">Hora</div>
-        {venues.map(venue => (
-           <div key={venue} className="bg-muted p-3 text-center font-semibold whitespace-nowrap">{venue}</div>
-        ))}
-        
-        {/* Body */}
-        {timeSlots.map(time => (
-          <React.Fragment key={time}>
-            <div className="bg-card p-3 text-center font-semibold sticky left-0 z-10">{time}</div>
-            {venues.map(venue => {
-               const event = getEvent(day, time, venue);
-               
-               if(event) {
-                  const durationInHours = getEventDurationInHours(event);
-                  const rowSpan = Math.round(durationInHours);
+    <div className="overflow-x-auto border-t border-b border-border">
+      <table className="w-full border-collapse">
+        <thead className='bg-muted'>
+          <tr>
+            <th className="sticky left-0 z-20 bg-muted p-3 text-center font-semibold whitespace-nowrap border-r border-border">Hora</th>
+            {venues.map(venue => (
+               <th key={venue} className="p-3 text-center font-semibold whitespace-nowrap min-w-[200px]">{venue}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {timeSlots.map(time => (
+            <tr key={time} className='border-t border-border'>
+              <td className="sticky left-0 z-10 bg-card p-3 text-center font-semibold whitespace-nowrap border-r border-border">{time}</td>
+              {venues.map(venue => {
+                 if (occupiedCells.has(`${time}-${venue}`)) {
+                    return null;
+                 }
+                 const event = getEvent(day, time, venue);
+                 
+                 if(event) {
+                    const durationInHours = getEventDurationInHours(event);
+                    const rowSpan = Math.round(durationInHours);
 
-                  return (
-                    <div
-                      key={`${event.EVENTO}-${time}-${venue}`}
-                      className="p-3 text-white flex flex-col justify-between"
-                      style={{ 
-                        gridRow: `span ${rowSpan}`, 
-                        backgroundColor: event.COLOR,
-                        minHeight: `${rowSpan * 4}rem` // 4rem per hour
-                      }}
-                    >
-                       <p className="font-semibold text-sm whitespace-pre-line mb-2">{event.EVENTO}</p>
-                       <Badge 
-                        variant="secondary"
-                        className="mt-auto text-xs bg-white/20 text-white border-none w-fit"
-                        >
-                        {event['CATEGORÍA']}
-                      </Badge>
-                    </div>
-                  );
-               }
-               
-               if (isOccupied(time, venue)) {
-                  return null; // This slot is spanned by a previous event
-               }
-               
-               return <div key={`${time}-${venue}`} className="bg-card min-h-[4rem] border-t border-border"></div>
-            })}
-          </React.Fragment>
-        ))}
-      </div>
+                    return (
+                      <td
+                        key={`${event.EVENTO}-${time}-${venue}`}
+                        rowSpan={rowSpan}
+                        className="p-3 text-white align-top"
+                        style={{ backgroundColor: event.COLOR }}
+                      >
+                         <div className="flex flex-col justify-between h-full min-h-[4rem]">
+                           <p className="font-semibold text-sm whitespace-pre-line mb-2">{event.EVENTO}</p>
+                           <Badge 
+                            variant="secondary"
+                            className="mt-auto text-xs bg-white/20 text-white border-none w-fit"
+                            >
+                            {event['CATEGORÍA']}
+                          </Badge>
+                         </div>
+                      </td>
+                    );
+                 }
+                 
+                 return <td key={`${time}-${venue}`} className="bg-card min-h-[4rem] border-l border-border"></td>
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
