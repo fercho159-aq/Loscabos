@@ -25,7 +25,7 @@ export const agendaData: AgendaEvent[] = [
     "HORA DE INICIO": "11:00",
     "HORA DE FIN": "12:00",
     "EVENTO": "Panel de cineastas emergentes:\nNuevas caras en el cine",
-    "SEDE": "Hotel el Ganzo",
+    "SEDE": "Hotel El Ganzo",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
     "Dia": "Jueves 11 Dic"
@@ -34,7 +34,7 @@ export const agendaData: AgendaEvent[] = [
     "HORA DE INICIO": "12:00",
     "HORA DE FIN": "12:30",
     "EVENTO": "Networking de industria",
-    "SEDE": "Hotel el Ganzo",
+    "SEDE": "Hotel El Ganzo",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
     "Dia": "Jueves 11 Dic"
@@ -43,7 +43,7 @@ export const agendaData: AgendaEvent[] = [
     "HORA DE INICIO": "12:30",
     "HORA DE FIN": "13:15",
     "EVENTO": "Brunch & Learn \nFondo Fïlmico Gabriel Figueroa + Anuncio convocatoria 2026",
-    "SEDE": "Hotel el Ganzo",
+    "SEDE": "Hotel El Ganzo",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
     "Dia": "Jueves 11 Dic"
@@ -106,7 +106,7 @@ export const agendaData: AgendaEvent[] = [
     "HORA DE INICIO": "11:15",
     "HORA DE FIN": "12:00",
     "EVENTO": "Conversación de industria por confirmar",
-    "SEDE": "Hotel el Ganzo",
+    "SEDE": "Hotel El Ganzo",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
     "Dia": "Viernes 12 Dic"
@@ -115,7 +115,7 @@ export const agendaData: AgendaEvent[] = [
     "HORA DE INICIO": "12:00",
     "HORA DE FIN": "12:30",
     "EVENTO": "Networking de industria",
-    "SEDE": "Hotel el Ganzo",
+    "SEDE": "Hotel El Ganzo",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
     "Dia": "Viernes 12 Dic"
@@ -124,7 +124,7 @@ export const agendaData: AgendaEvent[] = [
     "HORA DE INICIO": "12:30",
     "HORA DE FIN": "13:15",
     "EVENTO": "Brunch & Learn \nLa Baja Inspira + Anuncio convocatoria 2026",
-    "SEDE": "Hotel el Ganzo",
+    "SEDE": "Hotel El Ganzo",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
     "Dia": "Viernes 12 Dic"
@@ -142,7 +142,7 @@ export const agendaData: AgendaEvent[] = [
     "HORA DE INICIO": "16:00",
     "HORA DE FIN": "18:00",
     "EVENTO": "Conferencia \nLa Conexión Creativa \ncon Luisa Reyes Retana",
-    "SEDE": "Hotel el Ganzo (Galería)",
+    "SEDE": "Hotel El Ganzo (Galería)",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#17323a",
     "Dia": "Viernes 12 Dic"
@@ -187,7 +187,7 @@ export const agendaData: AgendaEvent[] = [
     "HORA DE INICIO": "11:15",
     "HORA DE FIN": "12:00",
     "EVENTO": "Masterclass\ncon Eugenio Caballero",
-    "SEDE": "Hotel el Ganzo (Galería)",
+    "SEDE": "Hotel El Ganzo (Galería)",
     "CATEGORÍA": "Industria",
     "COLOR": "#17323a",
     "Dia": "Sábado 13 Dic"
@@ -196,7 +196,7 @@ export const agendaData: AgendaEvent[] = [
     "HORA DE INICIO": "12:00",
     "HORA DE FIN": "12:30",
     "EVENTO": "Networking de industria",
-    "SEDE": "Hotel el Ganzo",
+    "SEDE": "Hotel El Ganzo",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
     "Dia": "Sábado 13 Dic"
@@ -205,7 +205,7 @@ export const agendaData: AgendaEvent[] = [
     "HORA DE INICIO": "12:30",
     "HORA DE FIN": "13:15",
     "EVENTO": "Brunch & Learn \nIncentivos IMCINE",
-    "SEDE": "Hotel el Ganzo",
+    "SEDE": "Hotel El Ganzo",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
     "Dia": "Sábado 13 Dic"
@@ -223,7 +223,7 @@ export const agendaData: AgendaEvent[] = [
     "HORA DE INICIO": "17:00",
     "HORA DE FIN": "19:00",
     "EVENTO": "Sesión de poesía performática\nSomos como los ríos\ncon Luisa Reyes Retana y Mercedes Reynosa\n(Seguido por diálogos en torno al territorio y sus cuerpos de agua)",
-    "SEDE": "Hotel el Ganzo",
+    "SEDE": "Hotel El Ganzo",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#051723",
     "Dia": "Sábado 13 Dic"
@@ -300,3 +300,4 @@ export const venues = allVenues.sort();
 export const timeSlots = [
   "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"
 ];
+

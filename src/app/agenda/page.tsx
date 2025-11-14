@@ -15,16 +15,24 @@ function getEvent(day: string, time: string, venue: string): Event | undefined {
 
 function getEventDuration(event: Event): number {
     if (!event['HORA DE INICIO'] || !event['HORA DE FIN']) return 1;
-    const start = parseInt(event['HORA DE INICIO'].split(':')[0], 10);
-    let end = parseInt(event['HORA DE FIN'].split(':')[0], 10);
-    if (end === 0) end = 24; // Midnight case
-    let duration = end - start;
+    const [startHour, startMinute] = event['HORA DE INICIO'].split(':').map(Number);
+    let [endHour, endMinute] = event['HORA DE FIN'].split(':').map(Number);
+    
+    if (endHour === 0 && endMinute === 0) {
+      endHour = 24; 
+    }
+
+    const startTime = startHour + startMinute / 60;
+    const endTime = endHour + endMinute / 60;
+    
+    let duration = endTime - startTime;
     if (duration < 0) duration += 24;
-    return duration;
+    return Math.max(1, Math.round(duration));
 }
 
 const DayTab = ({ day }: { day: string }) => {
   const processedEvents = new Set<string>();
+  const dayEvents = agendaData.filter(e => e.Dia === day);
 
   return (
     <div className="overflow-x-auto">
