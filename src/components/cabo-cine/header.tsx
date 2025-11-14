@@ -23,6 +23,7 @@ export default function Header() {
   const pathname = usePathname();
 
   const navLinks = [
+    { href: '/agenda', label: 'Agenda' },
     { href: '/programacion', label: 'Programación 2025' },
     { href: '/campus', label: 'Campus FICLosCabos' },
     { href: '/industria', label: 'Fondo Fílmico Gabriel Figueroa' },

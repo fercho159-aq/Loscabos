@@ -4,6 +4,7 @@ import { Facebook, Instagram, Youtube } from "lucide-react";
 import Image from "next/image";
 
 const ficcLinks = [
+    { href: "/agenda", label: "Agenda" },
     { href: "/acerca-de", label: "Acerca de la 13ª edición" },
     { href: "/programacion", label: "Programación 2025" },
     { href: "/homenaje", label: "Homenaje a Eugenio Caballero" },
