@@ -12,9 +12,9 @@ export type AgendaEvent = {
 export type Event = AgendaEvent;
 
 export const agendaData: AgendaEvent[] = [
-    {
+  {
     "HORA DE INICIO": "12:00",
-    "HORA DE FIN": "00:00",
+    "HORA DE FIN": "24:00",
     "EVENTO": "Programación fílmica FICLosCabos",
     "SEDE": "Cinemex San José",
     "CATEGORÍA": "Programa de cine",
@@ -95,12 +95,21 @@ export const agendaData: AgendaEvent[] = [
   },
   {
     "HORA DE INICIO": "20:45",
-    "HORA DE FIN": "00:00",
+    "HORA DE FIN": "24:00",
     "EVENTO": "Fiesta Inaugural\nDJ Set",
     "SEDE": "Crania (Cate)",
     "CATEGORÍA": "Music Sessions FICLosCabos",
     "COLOR": "#e67050",
     "Dia": "Jueves 11 Dic"
+  },
+  {
+    "HORA DE INICIO": "12:00",
+    "HORA DE FIN": "24:00",
+    "EVENTO": "Programación fílmica FICLosCabos",
+    "SEDE": "Cinemex San José",
+    "CATEGORÍA": "Programa de cine",
+    "COLOR": "#3a3a08",
+    "Dia": "Viernes 12 Dic"
   },
   {
     "HORA DE INICIO": "11:15",
@@ -176,12 +185,21 @@ export const agendaData: AgendaEvent[] = [
   },
   {
     "HORA DE INICIO": "22:00",
-    "HORA DE FIN": "00:00",
+    "HORA DE FIN": "24:00",
     "EVENTO": "DJ Set",
     "SEDE": "Crania",
     "CATEGORÍA": "Music Sessions FICLosCabos",
     "COLOR": "#e67050",
     "Dia": "Viernes 12 Dic"
+  },
+  {
+    "HORA DE INICIO": "12:00",
+    "HORA DE FIN": "24:00",
+    "EVENTO": "Programación fílmica FICLosCabos",
+    "SEDE": "Cinemex San José",
+    "CATEGORÍA": "Programa de cine",
+    "COLOR": "#3a3a08",
+    "Dia": "Sábado 13 Dic"
   },
   {
     "HORA DE INICIO": "11:15",
@@ -257,12 +275,21 @@ export const agendaData: AgendaEvent[] = [
   },
   {
     "HORA DE INICIO": "22:00",
-    "HORA DE FIN": "00:00",
+    "HORA DE FIN": "24:00",
     "EVENTO": "Space Xmas\nEvento aliado",
     "SEDE": "Crania",
     "CATEGORÍA": "Music Sessions FICLosCabos",
     "COLOR": "#e67050",
     "Dia": "Sábado 13 Dic"
+  },
+  {
+    "HORA DE INICIO": "12:00",
+    "HORA DE FIN": "24:00",
+    "EVENTO": "Programación fílmica FICLosCabos",
+    "SEDE": "Cinemex San José",
+    "CATEGORÍA": "Programa de cine",
+    "COLOR": "#3a3a08",
+    "Dia": "Domingo 14 Dic"
   },
   {
     "HORA DE INICIO": "18:00",
@@ -295,9 +322,13 @@ export const groupedAgenda = agendaData.reduce((acc, event) => {
 
 
 const allVenues = [...new Set(agendaData.map(e => e['SEDE']))];
-export const venues = allVenues.sort();
+export const venues = allVenues.sort((a,b) => {
+    const order = ["Hotel El Ganzo", "Hotel El Ganzo (Galería)", "Crania", "Crania (Cate)", "Cinemex San José", "Jetty"];
+    return order.indexOf(a) - order.indexOf(b);
+});
 
 export const timeSlots = [
   "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"
 ];
 
+    
