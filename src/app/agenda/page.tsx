@@ -1,4 +1,5 @@
 
+import React from 'react';
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Badge } from '@/components/ui/badge';
