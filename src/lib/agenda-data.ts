@@ -306,15 +306,6 @@ export const agendaData: AgendaEvent[] = [
     "CATEGORÍA": "Programa de cine",
     "COLOR": "#6688c5",
     "Dia": "Domingo 14 Dic"
-  },
-  {
-    "HORA DE INICIO": "12:00",
-    "HORA DE FIN": "23:59",
-    "EVENTO": "Programación fílmica FICLosCabos",
-    "SEDE": "Cinemex San José",
-    "CATEGORÍA": "Programa de cine",
-    "COLOR": "#3a3a08",
-    "Dia": "Miércoles 10 Dic"
   }
 ];
 
@@ -328,7 +319,6 @@ export const groupedAgenda = agendaData.reduce((acc, event) => {
 }, {} as Record<string, AgendaEvent[]>);
 
 export const agendaDays = [
-    "Miércoles 10 Dic",
     "Jueves 11 Dic",
     "Viernes 12 Dic",
     "Sábado 13 Dic",
