@@ -90,7 +90,7 @@ export const agendaData: AgendaEvent[] = [
     "EVENTO": "Live Show\nShamans",
     "SEDE": "Crania",
     "CATEGORÍA": "Music Sessions FICLosCabos",
-    "COLOR": "#e67050",
+    "COLOR": "#6688c5",
     "Dia": "Jueves 11 Dic"
   },
   {
@@ -99,7 +99,7 @@ export const agendaData: AgendaEvent[] = [
     "EVENTO": "Fiesta Inaugural\nDJ Set",
     "SEDE": "Crania (Cate)",
     "CATEGORÍA": "Music Sessions FICLosCabos",
-    "COLOR": "#e67050",
+    "COLOR": "#6688c5",
     "Dia": "Jueves 11 Dic"
   },
   {
@@ -153,7 +153,7 @@ export const agendaData: AgendaEvent[] = [
     "EVENTO": "Conferencia \nLa Conexión Creativa \ncon Luisa Reyes Retana",
     "SEDE": "Hotel El Ganzo (Galería)",
     "CATEGORÍA": "Programa #BeyondTheScreen",
-    "COLOR": "#17323a",
+    "COLOR": "#e67050",
     "Dia": "Viernes 12 Dic"
   },
   {
@@ -189,7 +189,7 @@ export const agendaData: AgendaEvent[] = [
     "EVENTO": "DJ Set",
     "SEDE": "Crania",
     "CATEGORÍA": "Music Sessions FICLosCabos",
-    "COLOR": "#e67050",
+    "COLOR": "#6688c5",
     "Dia": "Viernes 12 Dic"
   },
   {
@@ -207,7 +207,7 @@ export const agendaData: AgendaEvent[] = [
     "EVENTO": "Masterclass\ncon Eugenio Caballero",
     "SEDE": "Hotel El Ganzo (Galería)",
     "CATEGORÍA": "Industria",
-    "COLOR": "#17323a",
+    "COLOR": "#051722",
     "Dia": "Sábado 13 Dic"
   },
   {
@@ -243,7 +243,7 @@ export const agendaData: AgendaEvent[] = [
     "EVENTO": "Sesión de poesía performática\nSomos como los ríos\ncon Luisa Reyes Retana y Mercedes Reynosa\n(Seguido por diálogos en torno al territorio y sus cuerpos de agua)",
     "SEDE": "Hotel El Ganzo",
     "CATEGORÍA": "Programa #BeyondTheScreen",
-    "COLOR": "#051723",
+    "COLOR": "#e67050",
     "Dia": "Sábado 13 Dic"
   },
   {
@@ -279,7 +279,7 @@ export const agendaData: AgendaEvent[] = [
     "EVENTO": "Space Xmas\nEvento aliado",
     "SEDE": "Crania",
     "CATEGORÍA": "Music Sessions FICLosCabos",
-    "COLOR": "#e67050",
+    "COLOR": "#6688c5",
     "Dia": "Sábado 13 Dic"
   },
   {
@@ -297,7 +297,7 @@ export const agendaData: AgendaEvent[] = [
     "EVENTO": "Proyección de cortometrajes animados\nen alianza con Cut Out Fest\n\nAbierto al público con acceso gratuito",
     "SEDE": "Jetty",
     "CATEGORÍA": "Programa de cine",
-    "COLOR": "#6688c5",
+    "COLOR": "#3a3a08",
     "Dia": "Domingo 14 Dic"
   },
   {
@@ -306,7 +306,7 @@ export const agendaData: AgendaEvent[] = [
     "EVENTO": "Amores Perros\nProyección gratuita\n\nAbierto al público con acceso gratuito",
     "SEDE": "Jetty",
     "CATEGORÍA": "Programa de cine",
-    "COLOR": "#6688c5",
+    "COLOR": "#3a3a09",
     "Dia": "Domingo 14 Dic"
   }
 ];
@@ -345,3 +345,4 @@ function generateDetailedTimeSlots() {
 }
 
 export const detailedTimeSlots = generateDetailedTimeSlots();
+
