@@ -6,7 +6,7 @@ import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
-import { agendaData, venues, timeSlots, type Event } from '@/lib/agenda-data';
+import { agendaData, venues, detailedTimeSlots, type Event } from '@/lib/agenda-data';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from '@/lib/utils';
 
@@ -14,8 +14,8 @@ function getEvent(day: string, time: string, venue: string): Event | undefined {
   return agendaData.find(e => e.Dia === day && e['HORA DE INICIO'] === time && e['SEDE'] === venue);
 }
 
-function getEventDurationInHours(event: Event): number {
-    if (!event['HORA DE INICIO'] || !event['HORA DE FIN']) return 1;
+function getEventDurationInMinutes(event: Event): number {
+    if (!event['HORA DE INICIO'] || !event['HORA DE FIN']) return 15;
     const [startHour, startMinute] = event['HORA DE INICIO'].split(':').map(Number);
     let [endHour, endMinute] = event['HORA DE FIN'].split(':').map(Number);
     
@@ -23,11 +23,11 @@ function getEventDurationInHours(event: Event): number {
       endHour = 24; 
     }
 
-    const startTime = startHour + startMinute / 60;
-    const endTime = endHour + endMinute / 60;
+    const startTimeInMinutes = startHour * 60 + startMinute;
+    const endTimeInMinutes = endHour * 60 + endMinute;
     
-    let duration = endTime - startTime;
-    if (duration < 0) duration += 24;
+    let duration = endTimeInMinutes - startTimeInMinutes;
+    if (duration < 0) duration += 24 * 60;
     return duration;
 }
 
@@ -36,14 +36,15 @@ const DayTab = ({ day }: { day: string }) => {
 
   agendaData.forEach(event => {
     if (event.Dia === day) {
-      const durationInHours = getEventDurationInHours(event);
-      if (durationInHours > 1) {
-        const rowSpan = Math.round(durationInHours);
-        const [startHour] = event['HORA DE INICIO'].split(':').map(Number);
+      const durationInMinutes = getEventDurationInMinutes(event);
+      if (durationInMinutes > 15) {
+        const rowSpan = Math.ceil(durationInMinutes / 15);
+        const [startHour, startMinute] = event['HORA DE INICIO'].split(':').map(Number);
 
         for (let i = 1; i < rowSpan; i++) {
-          const occupiedHour = startHour + i;
-          const occupiedTime = `${occupiedHour.toString().padStart(2, '0')}:00`;
+          const nextSlotTime = new Date();
+          nextSlotTime.setHours(startHour, startMinute + i * 15, 0, 0);
+          const occupiedTime = `${nextSlotTime.getHours().toString().padStart(2, '0')}:${nextSlotTime.getMinutes().toString().padStart(2, '0')}`;
           occupiedCells.add(`${occupiedTime}-${event.SEDE}`);
         }
       }
@@ -62,9 +63,12 @@ const DayTab = ({ day }: { day: string }) => {
           </tr>
         </thead>
         <tbody>
-          {timeSlots.map(time => (
+          {detailedTimeSlots.map(time => (
             <tr key={time} className='border-t border-border'>
-              <td className="sticky left-0 z-10 bg-card p-3 text-center font-semibold whitespace-nowrap border-r border-border">{time}</td>
+              {time.endsWith(':00') ? (
+                <td rowSpan={4} className="sticky left-0 z-10 bg-card p-3 text-center font-semibold whitespace-nowrap border-r border-border align-top h-16">{time}</td>
+              ) : null}
+
               {venues.map(venue => {
                  if (occupiedCells.has(`${time}-${venue}`)) {
                     return null;
@@ -72,18 +76,19 @@ const DayTab = ({ day }: { day: string }) => {
                  const event = getEvent(day, time, venue);
                  
                  if(event) {
-                    const durationInHours = getEventDurationInHours(event);
-                    const rowSpan = Math.round(durationInHours);
+                    const durationInMinutes = getEventDurationInMinutes(event);
+                    const rowSpan = Math.ceil(durationInMinutes / 15);
 
                     return (
                       <td
                         key={`${event.EVENTO}-${time}-${venue}`}
                         rowSpan={rowSpan}
                         className="p-3 text-white align-top"
-                        style={{ backgroundColor: event.COLOR }}
+                        style={{ backgroundColor: event.COLOR, minHeight: `${rowSpan * 1}rem` }}
                       >
-                         <div className="flex flex-col justify-between h-full min-h-[4rem]">
+                         <div className="flex flex-col justify-between h-full">
                            <p className="font-semibold text-sm whitespace-pre-line mb-2">{event.EVENTO}</p>
+                           <p className="text-xs text-white/80">{event['HORA DE INICIO']} - {event['HORA DE FIN'] === '00:00' ? '24:00' : event['HORA DE FIN']}</p>
                            <Badge 
                             variant="secondary"
                             className="mt-auto text-xs bg-white/20 text-white border-none w-fit"
@@ -95,7 +100,7 @@ const DayTab = ({ day }: { day: string }) => {
                     );
                  }
                  
-                 return <td key={`${time}-${venue}`} className="bg-card min-h-[4rem] border-l border-border"></td>
+                 return <td key={`${time}-${venue}`} className="bg-card min-h-[1rem] border-l border-border h-4"></td>
               })}
             </tr>
           ))}

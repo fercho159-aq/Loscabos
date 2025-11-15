@@ -95,7 +95,7 @@ export const agendaData: AgendaEvent[] = [
   },
   {
     "HORA DE INICIO": "20:45",
-    "HORA DE FIN": "24:00",
+    "HORA DE FIN": "00:00",
     "EVENTO": "Fiesta Inaugural\nDJ Set",
     "SEDE": "Crania (Cate)",
     "CATEGORÍA": "Music Sessions FICLosCabos",
@@ -104,7 +104,7 @@ export const agendaData: AgendaEvent[] = [
   },
   {
     "HORA DE INICIO": "12:00",
-    "HORA DE FIN": "24:00",
+    "HORA DE FIN": "00:00",
     "EVENTO": "Programación fílmica FICLosCabos",
     "SEDE": "Cinemex San José",
     "CATEGORÍA": "Programa de cine",
@@ -194,7 +194,7 @@ export const agendaData: AgendaEvent[] = [
   },
   {
     "HORA DE INICIO": "12:00",
-    "HORA DE FIN": "24:00",
+    "HORA DE FIN": "00:00",
     "EVENTO": "Programación fílmica FICLosCabos",
     "SEDE": "Cinemex San José",
     "CATEGORÍA": "Programa de cine",
@@ -275,7 +275,7 @@ export const agendaData: AgendaEvent[] = [
   },
   {
     "HORA DE INICIO": "22:00",
-    "HORA DE FIN": "24:00",
+    "HORA DE FIN": "00:00",
     "EVENTO": "Space Xmas\nEvento aliado",
     "SEDE": "Crania",
     "CATEGORÍA": "Music Sessions FICLosCabos",
@@ -284,7 +284,7 @@ export const agendaData: AgendaEvent[] = [
   },
   {
     "HORA DE INICIO": "12:00",
-    "HORA DE FIN": "24:00",
+    "HORA DE FIN": "00:00",
     "EVENTO": "Programación fílmica FICLosCabos",
     "SEDE": "Cinemex San José",
     "CATEGORÍA": "Programa de cine",
@@ -331,4 +331,17 @@ export const timeSlots = [
   "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"
 ];
 
-    
+function generateDetailedTimeSlots() {
+  const slots: string[] = [];
+  const startHour = 11;
+  const endHour = 23;
+  for (let hour = startHour; hour <= endHour; hour++) {
+    slots.push(`${hour.toString().padStart(2, '0')}:00`);
+    slots.push(`${hour.toString().padStart(2, '0')}:15`);
+    slots.push(`${hour.toString().padStart(2, '0')}:30`);
+    slots.push(`${hour.toString().padStart(2, '0')}:45`);
+  }
+  return slots;
+}
+
+export const detailedTimeSlots = generateDetailedTimeSlots();
