@@ -29,6 +29,15 @@ export default function Header() {
   const pathname = usePathname();
 
   const navLinks = [
+    { href: '/programacion', label: 'Programación 2025' },
+    { href: '/campus', label: 'Campus FICLosCabos' },
+    { href: '/industria', label: 'Fondo Fílmico Gabriel Figueroa' },
+    { href: '/la-baja-inspira', label: 'La Baja Inspira'},
+    { href: '/animacion', label: 'Animación' },
+    { href: '/acerca-de', label: 'Sobre el FICLosCabos' },
+  ];
+  
+  const mobileNavLinks = [
     { 
       label: 'Programación 2025', 
       isDropdown: true,
@@ -37,11 +46,7 @@ export default function Header() {
         { href: '/agenda', label: 'Agenda' },
       ]
     },
-    { href: '/campus', label: 'Campus FICLosCabos' },
-    { href: '/industria', label: 'Fondo Fílmico Gabriel Figueroa' },
-    { href: '/la-baja-inspira', label: 'La Baja Inspira'},
-    { href: '/animacion', label: 'Animación' },
-    { href: '/acerca-de', label: 'Sobre el FICLosCabos' },
+    ...navLinks.slice(1),
   ];
   
   const isHomePage = pathname === '/';
@@ -63,34 +68,6 @@ export default function Header() {
   const NavContent = () => (
     <>
       {navLinks.map((link) => (
-        link.isDropdown && link.sublinks ? (
-          <DropdownMenu key={link.label}>
-            <DropdownMenuTrigger asChild>
-              <button
-                style={{ fontSize: '15px' }}
-                className={cn(
-                  "flex items-center gap-1 font-medium transition-colors outline-none",
-                  isTransparent ? "text-background hover:text-background/80" : "text-foreground hover:text-accent"
-                )}
-              >
-                {link.label}
-                <ChevronDown className="h-4 w-4" />
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-card">
-              {link.sublinks.map(sublink => (
-                 <DropdownMenuItem key={sublink.href} asChild>
-                  <Link 
-                    href={sublink.href}
-                    className="text-foreground hover:bg-accent"
-                  >
-                    {sublink.label}
-                  </Link>
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-        ) : (
           <Link 
             key={link.href} 
             href={link.href!} 
@@ -102,7 +79,6 @@ export default function Header() {
           >
             {link.label}
           </Link>
-        )
       ))}
     </>
   );
@@ -149,8 +125,8 @@ export default function Header() {
                      <Image src="/Images/logos/FESTIVAL DE CINE LOS CABOS-negro.png" alt="CaboCine Logo" width={150} height={40} data-ai-hint="logo"/>
                   </Link>
                   <nav className="flex flex-col gap-6">
-                     {navLinks.map((link) => (
-                       link.isDropdown && link.sublinks ? (
+                     {mobileNavLinks.map((link) => (
+                       'isDropdown' in link && link.isDropdown && link.sublinks ? (
                          <div key={link.label}>
                             <p className="text-lg font-medium text-foreground/70 mb-2">{link.label}</p>
                             <div className="flex flex-col gap-4 pl-4">
@@ -167,6 +143,7 @@ export default function Header() {
                             </div>
                          </div>
                        ) : (
+                        'href' in link &&
                         <Link 
                           key={link.href} 
                           href={link.href!} 
