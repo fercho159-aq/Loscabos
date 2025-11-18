@@ -72,7 +72,7 @@ export default function ProgramaCinePage() {
                       <div className="relative aspect-[2/3] w-full">
                         {film.imagen ? (
                            <Image
-                            src={`/images/Programa de cine FICLosCabos 2025/${film.Sección}/${film.imagen}`}
+                            src={`/images/Programa de cine FICLosCabos 2025/${film.Sección.replace(' (Largometrajes mexicanos)', '')}/${film.imagen}`}
                             alt={`Póster de ${film.Título}`}
                             data-ai-hint="movie poster"
                             fill
