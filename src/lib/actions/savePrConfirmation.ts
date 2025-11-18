@@ -18,9 +18,9 @@ import { revalidatePath } from 'next/cache';
 // );
 
 const schema = z.object({
-  firstName: z.string().min(1, { message: 'El nombre es requerido.' }),
-  lastName: z.string().min(1, { message: 'El apellido es requerido.' }),
-  email: z.string().email({ message: 'Por favor ingresa un email válido.' }),
+  firstName: z.string({ required_error: 'El nombre es requerido.' }).min(1, { message: 'El nombre es requerido.' }),
+  lastName: z.string({ required_error: 'El apellido es requerido.' }).min(1, { message: 'El apellido es requerido.' }),
+  email: z.string({ required_error: 'El correo electrónico es requerido.' }).email({ message: 'Por favor ingresa un email válido.' }),
   attendance: z.enum(['si', 'no'], {
     required_error: 'Debes seleccionar una opción de asistencia.',
   }),
@@ -58,11 +58,12 @@ export async function savePrConfirmation(prevState: any, formData: FormData) {
     `;
     
     revalidatePath('/confirmacion-pr');
-    return { message: 'Tu respuesta ha sido registrada. ¡Gracias!' };
+    return { message: 'Tu respuesta ha sido registrada. ¡Gracias!', errors: {} };
   } catch (e) {
     console.error(e);
     return {
       message: 'Error de base de datos: No se pudo guardar tu respuesta.',
+      errors: {},
     };
   }
 }

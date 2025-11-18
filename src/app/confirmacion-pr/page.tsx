@@ -164,7 +164,7 @@ export default function ConfirmacionPRPage() {
 
   useEffect(() => {
     if (state.message) {
-      if (state.errors && Object.keys(state.errors).length > 0) {
+      if (state.message.includes('Error') && state.errors && Object.keys(state.errors).length > 0) {
         toast({
           variant: "destructive",
           title: "Error de validación",
@@ -219,25 +219,25 @@ export default function ConfirmacionPRPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   <div className="space-y-2">
                     <Label htmlFor="firstName">Nombre</Label>
-                    <Input id="firstName" name="firstName" placeholder="Tu nombre" required />
+                    <Input id="firstName" name="firstName" placeholder="Tu nombre" />
                     {state.errors?.firstName && <p className="text-sm font-medium text-destructive">{state.errors.firstName.join(', ')}</p>}
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="lastName">Apellido</Label>
-                    <Input id="lastName" name="lastName" placeholder="Tu apellido" required />
+                    <Input id="lastName" name="lastName" placeholder="Tu apellido" />
                     {state.errors?.lastName && <p className="text-sm font-medium text-destructive">{state.errors.lastName.join(', ')}</p>}
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="email">Correo Electrónico</Label>
-                  <Input id="email" name="email" type="email" placeholder="tu@correo.com" required />
+                  <Input id="email" name="email" type="email" placeholder="tu@correo.com" />
                   {state.errors?.email && <p className="text-sm font-medium text-destructive">{state.errors.email.join(', ')}</p>}
                 </div>
 
                 <div className="space-y-2">
                   <Label>¿Asistirás al evento?</Label>
-                  <RadioGroup name="attendance" onValueChange={setAttending} required className="flex flex-col space-y-1">
+                  <RadioGroup name="attendance" onValueChange={setAttending} className="flex flex-col space-y-1">
                     <div className="flex items-center space-x-3 space-y-0">
                       <RadioGroupItem value="si" id="si" />
                        <div className="flex items-center gap-4">
@@ -326,5 +326,3 @@ export default function ConfirmacionPRPage() {
     </div>
   );
 }
-
-    
