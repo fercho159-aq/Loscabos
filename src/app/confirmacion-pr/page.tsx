@@ -3,7 +3,7 @@
 
 import { useActionState, useEffect, useRef } from 'react';
 import { useFormStatus } from 'react-dom';
-import { savePrConfirmation } from '@/lib/actions/savePrConfirmation';
+import { savePrConfirmation, type State } from '@/lib/actions/savePrConfirmation';
 import { useToast } from "@/hooks/use-toast";
 
 import Header from '@/components/cabo-cine/header';
@@ -156,14 +156,14 @@ const EventDialogContent = ({ event }: { event: (typeof programEvents)[0] }) => 
 }
 
 export default function ConfirmacionPRPage() {
-  const initialState = { message: '', errors: {} };
+  const initialState: State = { message: null, errors: {} };
   const [state, dispatch] = useActionState(savePrConfirmation, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
     if (state.message) {
-      if (state.message.includes('Error') && state.errors && Object.keys(state.errors).length > 0) {
+      if (state.errors && Object.keys(state.errors).length > 0) {
         toast({
           variant: "destructive",
           title: "Error de validación",
@@ -217,19 +217,19 @@ export default function ConfirmacionPRPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   <div className="space-y-2">
                     <Label htmlFor="firstName">Nombre</Label>
-                    <Input id="firstName" name="firstName" placeholder="Tu nombre" />
+                    <Input id="firstName" name="firstName" placeholder="Tu nombre" defaultValue={state.fields?.firstName}/>
                     {state.errors?.firstName && <p className="text-sm font-medium text-destructive">{state.errors.firstName.join(', ')}</p>}
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="lastName">Apellido</Label>
-                    <Input id="lastName" name="lastName" placeholder="Tu apellido" />
+                    <Input id="lastName" name="lastName" placeholder="Tu apellido" defaultValue={state.fields?.lastName}/>
                     {state.errors?.lastName && <p className="text-sm font-medium text-destructive">{state.errors.lastName.join(', ')}</p>}
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="email">Correo Electrónico</Label>
-                  <Input id="email" name="email" type="email" placeholder="tu@correo.com" />
+                  <Input id="email" name="email" type="email" placeholder="tu@correo.com" defaultValue={state.fields?.email}/>
                   {state.errors?.email && <p className="text-sm font-medium text-destructive">{state.errors.email.join(', ')}</p>}
                 </div>
 

@@ -5,32 +5,44 @@ import { z } from 'zod';
 import sql from '@/lib/db';
 import { revalidatePath } from 'next/cache';
 
-// Para crear la tabla, ejecuta esta sentencia SQL en tu base de datos de Neon:
-// CREATE TABLE pr_confirmations (
-//   id SERIAL PRIMARY KEY,
-//   firstName TEXT,
-//   lastName TEXT,
-//   email TEXT,
-//   attending BOOLEAN,
-//   plusOne BOOLEAN,
-//   interestedDays TEXT,
-//   createdAt TIMESTAMP DEFAULT NOW()
-// );
-
-const schema = z.object({
+const FormSchema = z.object({
   firstName: z.string().min(1, { message: 'El nombre es requerido.' }),
   lastName: z.string().min(1, { message: 'El apellido es requerido.' }),
   email: z.string().email({ message: 'Por favor ingresa un email válido.' }),
   attendance: z.enum(['si', 'no'], {
-    errorMap: () => ({ message: 'Debes seleccionar una opción de asistencia.' }),
+    required_error: 'Debes seleccionar una opción de asistencia.',
   }),
-  plusOne: z.string().optional(),
-  interestedDays: z.preprocess((val) => (Array.isArray(val) ? val : [val].filter(Boolean)), z.array(z.string()).optional()),
+  plusOne: z.preprocess((val) => val === 'on', z.boolean().optional()),
+  interestedDays: z.preprocess(
+    (val) => (Array.isArray(val) ? val.filter(Boolean) : val ? [val] : []),
+    z.array(z.string())
+  ),
 });
 
 
-export async function savePrConfirmation(prevState: any, formData: FormData) {
-  const data = {
+export type State = {
+  errors?: {
+    firstName?: string[];
+    lastName?: string[];
+    email?: string[];
+    attendance?: string[];
+    plusOne?: string[];
+    interestedDays?: string[];
+  };
+  message?: string | null;
+  fields?: {
+    firstName?: string;
+    lastName?: string;
+    email?: string;
+    attendance?: string;
+    plusOne?: boolean;
+    interestedDays?: string[];
+  }
+};
+
+
+export async function savePrConfirmation(prevState: State, formData: FormData): Promise<State> {
+  const rawData = {
     firstName: formData.get('firstName'),
     lastName: formData.get('lastName'),
     email: formData.get('email'),
@@ -39,20 +51,27 @@ export async function savePrConfirmation(prevState: any, formData: FormData) {
     interestedDays: formData.getAll('interestedDays'),
   };
 
-  const validatedFields = schema.safeParse(data);
+  const validatedFields = FormSchema.safeParse(rawData);
 
   if (!validatedFields.success) {
     return {
       errors: validatedFields.error.flatten().fieldErrors,
       message: 'Error: Por favor revisa los campos.',
-      fields: data,
+      fields: {
+        firstName: rawData.firstName as string,
+        lastName: rawData.lastName as string,
+        email: rawData.email as string,
+        attendance: rawData.attendance as string,
+        plusOne: rawData.plusOne === 'on',
+        interestedDays: rawData.interestedDays as string[],
+      }
     };
   }
 
   const { firstName, lastName, email, attendance, plusOne, interestedDays } = validatedFields.data;
   
   const willAttend = attendance === 'si';
-  const hasPlusOne = willAttend && plusOne === 'on';
+  const hasPlusOne = willAttend && plusOne;
   const days = (willAttend && interestedDays && interestedDays.length > 0) 
     ? interestedDays.join(', ') 
     : null;
@@ -64,13 +83,19 @@ export async function savePrConfirmation(prevState: any, formData: FormData) {
     `;
     
     revalidatePath('/confirmacion-pr');
-    return { message: 'Tu respuesta ha sido registrada. ¡Gracias!', errors: {}, fields: {} };
+    return { message: 'Tu respuesta ha sido registrada. ¡Gracias!' };
   } catch (e) {
     console.error(e);
     return {
       message: 'Error de base de datos: No se pudo guardar tu respuesta.',
-      errors: {},
-      fields: data,
+      fields: {
+        firstName: rawData.firstName as string,
+        lastName: rawData.lastName as string,
+        email: rawData.email as string,
+        attendance: rawData.attendance as string,
+        plusOne: rawData.plusOne === 'on',
+        interestedDays: rawData.interestedDays as string[],
+      }
     };
   }
 }
