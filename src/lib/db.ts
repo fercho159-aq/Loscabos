@@ -1,7 +1,11 @@
 'use server';
 import { neon } from '@neondatabase/serverless';
+import 'dotenv/config';
 
-const connectionString = 'postgresql://neondb_owner:npg_C2tgjwQu8zUm@ep-green-bar-adztcgj1-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require';
-const sql = neon(connectionString);
+if (!process.env.DATABASE_URL) {
+  throw new Error('DATABASE_URL is not set');
+}
+
+const sql = neon(process.env.DATABASE_URL);
 
 export default sql;
