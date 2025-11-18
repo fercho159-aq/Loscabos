@@ -8,6 +8,14 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { filmData } from '@/lib/cinema-program-data';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const sections = [
   {
@@ -69,33 +77,62 @@ export default function ProgramaCinePage() {
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                   {filmsBySection[section.id as keyof typeof filmsBySection].map(film => (
-                    <Card key={film.Título} className="bg-background overflow-hidden shadow-lg group">
-                      <div className="relative aspect-video w-full">
-                        {film.imagen && film.imagen.length > 1 ? (
-                           <Image
-                            src={film.imagen}
-                            alt={`Póster de ${film.Título}`}
-                            data-ai-hint="movie poster"
-                            fill
-                            className="object-cover"
-                          />
-                        ) : (
-                          <div className="w-full h-full bg-muted flex items-center justify-center">
-                            <p className="text-muted-foreground text-sm">Póster no disponible</p>
+                    <Dialog key={film.Título}>
+                      <DialogTrigger asChild>
+                        <Card className="bg-background overflow-hidden shadow-lg group cursor-pointer">
+                          <div className="relative aspect-video w-full">
+                            {film.imagen && film.imagen.length > 1 ? (
+                              <Image
+                                src={film.imagen}
+                                alt={`Póster de ${film.Título}`}
+                                data-ai-hint="movie poster"
+                                fill
+                                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                              />
+                            ) : (
+                              <div className="w-full h-full bg-muted flex items-center justify-center">
+                                <p className="text-muted-foreground text-sm">Póster no disponible</p>
+                              </div>
+                            )}
                           </div>
-                        )}
-                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end">
-                            <p className="text-background/90 text-sm line-clamp-6">{film['Sinopsis / Notas']}</p>
+                          <CardHeader>
+                            <CardTitle className="text-xl leading-tight">{film.Título}</CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <p className="text-sm text-muted-foreground"><strong>Director(a):</strong> {film['Director(a)']}</p>
+                            <p className="text-sm text-muted-foreground"><strong>País / Año:</strong> {film['País / Año']}</p>
+                          </CardContent>
+                        </Card>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-2xl bg-card">
+                        <DialogHeader>
+                          <DialogTitle className="text-2xl font-headline">{film.Título}</DialogTitle>
+                          <DialogDescription>
+                            {film['Director(a)']} • {film['País / Año']}
+                          </DialogDescription>
+                        </DialogHeader>
+                        <div className="grid gap-4 py-4">
+                          <div className="relative aspect-video w-full rounded-lg overflow-hidden">
+                             {film.imagen && film.imagen.length > 1 ? (
+                              <Image
+                                src={film.imagen}
+                                alt={`Póster de ${film.Título}`}
+                                data-ai-hint="movie poster"
+                                fill
+                                className="object-cover"
+                              />
+                            ) : (
+                              <div className="w-full h-full bg-muted flex items-center justify-center">
+                                <p className="text-muted-foreground text-sm">Póster no disponible</p>
+                              </div>
+                            )}
+                          </div>
+                          <p className="text-base text-muted-foreground leading-relaxed">
+                            {film['Sinopsis / Notas']}
+                          </p>
                         </div>
-                      </div>
-                      <CardHeader>
-                        <CardTitle className="text-xl leading-tight">{film.Título}</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-sm text-muted-foreground"><strong>Director(a):</strong> {film['Director(a)']}</p>
-                        <p className="text-sm text-muted-foreground"><strong>País / Año:</strong> {film['País / Año']}</p>
-                      </CardContent>
-                    </Card>
+                      </DialogContent>
+                    </Dialog>
                   ))}
                 </div>
 
