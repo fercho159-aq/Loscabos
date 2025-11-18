@@ -67,10 +67,10 @@ export default function ProgramaCinePage() {
                 <h2 className="font-headline text-4xl font-bold text-foreground mb-4">{section.title}</h2>
                 <p className="text-lg text-muted-foreground mb-12">{section.description}</p>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                   {filmsBySection[section.id as keyof typeof filmsBySection].map(film => (
                     <Card key={film.Título} className="bg-background overflow-hidden shadow-lg group">
-                      <div className="relative aspect-[2/3] w-full">
+                      <div className="relative aspect-video w-full">
                         {film.imagen && film.imagen.length > 1 ? (
                            <Image
                             src={film.imagen}
