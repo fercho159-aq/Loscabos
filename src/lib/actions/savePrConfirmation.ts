@@ -5,6 +5,18 @@ import { z } from 'zod';
 import sql from '@/lib/db';
 import { revalidatePath } from 'next/cache';
 
+// Para crear la tabla, ejecuta esta sentencia SQL en tu base de datos de Neon:
+// CREATE TABLE pr_confirmations (
+//   id SERIAL PRIMARY KEY,
+//   firstName TEXT,
+//   lastName TEXT,
+//   email TEXT,
+//   attending BOOLEAN,
+//   plusOne BOOLEAN,
+//   interestedDays TEXT,
+//   createdAt TIMESTAMP DEFAULT NOW()
+// );
+
 const FormSchema = z.object({
   firstName: z.string().min(1, { message: 'El nombre es requerido.' }),
   lastName: z.string().min(1, { message: 'El apellido es requerido.' }),
