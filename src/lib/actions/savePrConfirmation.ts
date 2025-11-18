@@ -18,11 +18,11 @@ import { revalidatePath } from 'next/cache';
 // );
 
 const schema = z.object({
-  firstName: z.string({ required_error: 'El nombre es requerido.' }).min(1, { message: 'El nombre es requerido.' }),
-  lastName: z.string({ required_error: 'El apellido es requerido.' }).min(1, { message: 'El apellido es requerido.' }),
-  email: z.string({ required_error: 'El correo electrónico es requerido.' }).email({ message: 'Por favor ingresa un email válido.' }),
+  firstName: z.string().min(1, { message: 'El nombre es requerido.' }),
+  lastName: z.string().min(1, { message: 'El apellido es requerido.' }),
+  email: z.string().email({ message: 'Por favor ingresa un email válido.' }),
   attendance: z.enum(['si', 'no'], {
-    required_error: 'Debes seleccionar una opción de asistencia.',
+    errorMap: () => ({ message: 'Debes seleccionar una opción de asistencia.' }),
   }),
   plusOne: z.string().optional(),
   interestedDays: z.preprocess((val) => (Array.isArray(val) ? val : [val]), z.array(z.string()).optional()),
@@ -49,7 +49,9 @@ export async function savePrConfirmation(prevState: any, formData: FormData) {
   
   const willAttend = attendance === 'si';
   const hasPlusOne = willAttend && plusOne === 'on';
-  const days = willAttend ? interestedDays?.join(', ') : null;
+  const days = (willAttend && interestedDays && interestedDays.length > 0 && interestedDays[0] !== '') 
+    ? interestedDays.join(', ') 
+    : null;
 
   try {
     await sql`
