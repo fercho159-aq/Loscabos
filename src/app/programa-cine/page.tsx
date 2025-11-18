@@ -1,4 +1,5 @@
 
+
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import Image from 'next/image';
@@ -70,9 +71,9 @@ export default function ProgramaCinePage() {
                   {filmsBySection[section.id as keyof typeof filmsBySection].map(film => (
                     <Card key={film.Título} className="bg-background overflow-hidden shadow-lg group">
                       <div className="relative aspect-[2/3] w-full">
-                        {film.imagen ? (
+                        {film.imagen && film.imagen.length > 1 ? (
                            <Image
-                            src={`/images/Programa de cine FICLosCabos 2025/${film.Sección.replace(' (Largometrajes mexicanos)', '')}/${film.imagen}`}
+                            src={film.imagen}
                             alt={`Póster de ${film.Título}`}
                             data-ai-hint="movie poster"
                             fill
