@@ -7,7 +7,7 @@ export const filmData = [
     "Director(a)": "Gianfranco Rosi",
     "País / Año": "Italia, 2025",
     "Sinopsis / Notas": "El aclamado documentalista italiano Gianfranco Rosi presenta Sotto le nuvole... (Obra sobre una comunidad napolitana bajo el Vesubio).",
-    "imagen": "3-SOTTO LE NUVOLE_©GIANFRANCO_ROSI.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/3-SOTTO LE NUVOLE_©GIANFRANCO_ROSI.jpg"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -16,7 +16,7 @@ export const filmData = [
     "Director(a)": "Harris Dickinson",
     "País / Año": "Reino Unido 2025",
     "Sinopsis / Notas": "Mike es un hombre sin hogar en Londres atrapado en un ciclo de autodestrucción...",
-    "imagen": "Urchin_Cannes_Image_1.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/Urchin_Cannes_Image_1.jpg"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -25,7 +25,7 @@ export const filmData = [
     "Director(a)": "László Nemes",
     "País / Año": "Hungría, Reino Unido, Alemania, Francia 2025",
     "Sinopsis / Notas": "Ambientada tras la revolución húngara de 1956, narra la historia de un niño criado bajo el mito de un padre idealizado...",
-    "imagen": "ORPHAN_Still_1.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/ORPHAN_Still_1.jpg"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -34,7 +34,7 @@ export const filmData = [
     "Director(a)": "Kim Torres",
     "País / Año": "Costa Rica, México, Francia 2025",
     "Sinopsis / Notas": "Laura intenta adaptarse a su nueva familia entre bosques y plantaciones de palma, descubriendo un secreto siniestro...",
-    "imagen": "SNA-15.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/SNA-15.jpg"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -43,7 +43,7 @@ export const filmData = [
     "Director(a)": "Joel Alfonso Vargas",
     "País / Año": "Estados Unidos 2025",
     "Sinopsis / Notas": "Rico pasa el verano en el Bronx, pero la llegada de su novia Destiny trae el caos...",
-    "imagen": "MAD BILLS TO PAY_STILL 04_LQ.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/MAD BILLS TO PAY_STILL 04_LQ.jpg"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -52,7 +52,7 @@ export const filmData = [
     "Director(a)": "Elizabeth Lo",
     "País / Año": "China, Estados Unidos 2024",
     "Sinopsis / Notas": "Documental sobre Wang Zhenxi, contratada para separar amantes y salvar matrimonios en China.",
-    "imagen": "Teacher Wang in office.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/Teacher Wang in office.jpg"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -61,7 +61,7 @@ export const filmData = [
     "Director(a)": "Mark Jenkin",
     "País / Año": "Reino Unido 2025",
     "Sinopsis / Notas": "Un barco perdido hace 30 años reaparece. Al regresar de un viaje, la tripulación descubre que el tiempo se ha distorsionado.",
-    "imagen": "RON-Production-038_Steve Tanner.JPG"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/RON-Production-038_Steve Tanner.JPG"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -79,7 +79,7 @@ export const filmData = [
     "Director(a)": "Kent Jones",
     "País / Año": "Estados Unidos 2025",
     "Sinopsis / Notas": "Willem Dafoe interpreta a Ed Saxberger, un poeta olvidado que es redescubierto por jóvenes artistas.",
-    "imagen": "Late Fame  (c) Late Fame LLC.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/Late Fame  (c) Late Fame LLC.jpg"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -97,7 +97,7 @@ export const filmData = [
     "Director(a)": "Ildikó Enyedi",
     "País / Año": "Alemania, Hungría, Francia 2025",
     "Sinopsis / Notas": "Tres historias en diferentes tiempos (1908, 1972, 2020) entrelazadas en torno a un árbol en un jardín botánico.",
-    "imagen": "SILENT FRIEND still (4).jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/SILENT FRIEND still (4).jpg"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -106,7 +106,7 @@ export const filmData = [
     "Director(a)": "Claire Denis",
     "País / Año": "Francia 2025",
     "Sinopsis / Notas": "Un proyecto de obras en África Occidental se ve perturbado por un hombre que exige el cuerpo de su hermano fallecido.",
-    "imagen": "Main Still.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/Main Still.jpg"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -124,7 +124,7 @@ export const filmData = [
     "Director(a)": "Clemente Castor",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Mario, sin recuerdos, conoce a Lázaro y aprende a entrar en cuerpos ajenos en el oriente de la CDMX.",
-    "imagen": "FM4.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/FM4.png"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -142,7 +142,7 @@ export const filmData = [
     "Director(a)": "Diego Hernández",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Diego siente un cansancio severo tras abrir una caja de zapatos; su amiga Liz padece insomnio misterioso.",
-    "imagen": "29.1.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/29.1.png"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -151,7 +151,7 @@ export const filmData = [
     "Director(a)": "Nuria Ibáñez",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Basilio cuida una playa desierta en Baja California e intenta hacer lo correcto en una comunidad con reglas propias.",
-    "imagen": "EG_STILLS_FLORES__1.1.18.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/EG_STILLS_FLORES__1.1.18.png"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -160,7 +160,7 @@ export const filmData = [
     "Director(a)": "Pablo Pérez Lombardini",
     "País / Año": "México, Catar 2025",
     "Sinopsis / Notas": "La guardabosque Julia lucha sola contra talamontes ilegales mientras la comunidad le da la espalda.",
-    "imagen": "LARESERVA_1.138.2.tif"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/LARESERVA_1.138.2.tif"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -169,7 +169,7 @@ export const filmData = [
     "Director(a)": "Racornelia",
     "País / Año": "México, Grecia 2025",
     "Sinopsis / Notas": "Exploración de dinámicas familiares en una Nochebuena de los 90s, inspirada en telenovelas y videos caseros.",
-    "imagen": "HD Still Alicia + Estelle.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/HD Still Alicia + Estelle.png"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -187,7 +187,7 @@ export const filmData = [
     "Director(a)": "Paloma López Carrillo",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Acompaña a Rosa, Sol y Javier en un viaje íntimo de duelo tras una desaparición.",
-    "imagen": "SAYGOODBYE STILLS09.tif"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/SAYGOODBYE STILLS09.tif"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -205,7 +205,7 @@ export const filmData = [
     "Director(a)": "Adolfo Margulis",
     "País / Año": "México 2024",
     "Sinopsis / Notas": "Ramiro, un joven adicto, comienza a ver su realidad gracias a las vivencias en un centro de rehabilitación.",
-    "imagen": "05_SPIRITUM_STILL_BAJA.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/05_SPIRITUM_STILL_BAJA.jpg"
   },
   {
     "Sección": "Cortometrajes de cineastas emergentes",
@@ -214,7 +214,7 @@ export const filmData = [
     "Director(a)": "Gerardo Coello Escalante",
     "País / Año": "México 2024",
     "Sinopsis / Notas": "Daniel sospecha que sus tenis nuevos, regalo de su padre, son clave de un terrible secreto.",
-    "imagen": "Daniel Walking.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/Daniel Walking.png"
   },
   {
     "Sección": "Cortometrajes de cineastas emergentes",
@@ -223,7 +223,7 @@ export const filmData = [
     "Director(a)": "Isabel Vaca, Arturo Mendicuti Barroeta",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Oso salva a la gata de su vecino Iván, lo que desata un conflicto mayor entre ambos.",
-    "imagen": "Matagatos_1.94.1.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/Matagatos_1.94.1.jpg"
   },
   {
     "Sección": "Cortometrajes de cineastas emergentes",
@@ -241,7 +241,7 @@ export const filmData = [
     "Director(a)": "María Fernanda Prieto",
     "País / Año": "México 2024",
     "Sinopsis / Notas": "Una niña navega entre la inocencia y la madurez en el restaurante familiar en Boyle Heights.",
-    "imagen": "El Sarape4.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/El Sarape4.jpg"
   },
   {
     "Sección": "Cortometrajes de cineastas emergentes",
@@ -250,6 +250,8 @@ export const filmData = [
     "Director(a)": "Ximena Lamadrid, Julian Lamadrid",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Una joven en Cancún enfrenta el desafío de convertirse en madre a principios de los 2000 mientras cuida a su hermano.",
-    "imagen": "Still 3.TIFF"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/Still 3.TIFF"
   }
 ];
+
+    
