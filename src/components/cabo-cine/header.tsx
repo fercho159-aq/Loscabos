@@ -29,7 +29,7 @@ export default function Header() {
   const pathname = usePathname();
 
   const navLinks = [
-    { href: '/programacion', label: 'Programación 2025' },
+    { href: '/programa-cine', label: 'Programación 2025' },
     { href: '/campus', label: 'Campus FICLosCabos' },
     { href: '/industria', label: 'Fondo Fílmico Gabriel Figueroa' },
     { href: '/la-baja-inspira', label: 'La Baja Inspira'},
@@ -42,6 +42,7 @@ export default function Header() {
       label: 'Programación 2025', 
       isDropdown: true,
       sublinks: [
+        { href: '/programa-cine', label: 'Programa de Cine' },
         { href: '/programacion', label: 'Eventos y Proyecciones' },
         { href: '/agenda', label: 'Agenda' },
       ]
