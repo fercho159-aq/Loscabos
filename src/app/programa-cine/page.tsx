@@ -5,6 +5,33 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { filmData } from '@/lib/cinema-program-data';
+
+const sections = [
+  {
+    id: "marejada",
+    title: "Marejada: Panorama de largometrajes internacionales",
+    description: "Próximamente se anunciará la selección de películas que conforman este panorama."
+  },
+  {
+    id: "competencia",
+    title: "Competencia FICLosCabos de largometrajes mexicanos",
+    description: "En Los Cabos, donde el desierto se encuentra con el mar, el cine también encuentra su punto de convergencia. De esa intersección nace la nueva competencia mexicana de largometrajes del FICLosCabos 2025: un espacio donde las voces independientes del país dialogan con el territorio, la comunidad y las nuevas formas de narrar el mundo. La competencia mexicana de largometrajes del Festival Internacional de Cine de Los Cabos 2025, concebida como una plataforma de visibilidad y apoyo para cineastas independientes. Su objetivo es impulsar la circulación, el diálogo y la proyección internacional de nuevas narrativas cinematográficas mexicanas."
+  },
+  {
+    id: "cortometrajes",
+    title: "Cortometrajes de cineastas emergentes",
+    description: "El Festival Internacional de Cine de Los Cabos se consolida como un punto de encuentro entre múltiples generaciones de creadores. En su 13ª edición, el Festival amplía su mirada hacia las nuevas voces del cine reuniendo a una selección de jóvenes directores con reconocimiento nacional e internacional que están redefiniendo los lenguajes cinematográficos con una fuerza creativa única. Como parte de la programación oficial, el FICLosCabos proyectará los cortometrajes de los invitados al Panel de cineastas emergentes: Nuevas caras del cine."
+  }
+];
+
+const filmsBySection = {
+  marejada: filmData.filter(film => film.Sección.includes("Marejada")),
+  competencia: filmData.filter(film => film.Sección.includes("Competencia")),
+  cortometrajes: filmData.filter(film => film.Sección.includes("Cortometrajes")),
+};
+
 
 export default function ProgramaCinePage() {
   return (
@@ -32,35 +59,56 @@ export default function ProgramaCinePage() {
 
         {/* Content Section */}
         <section className="py-16 sm:py-24 bg-card">
-          <div className="container mx-auto px-4 max-w-4xl space-y-12">
+          <div className="container mx-auto px-4 max-w-7xl space-y-16">
             
-            <div className="p-8 rounded-lg">
-              <h2 className="font-headline text-4xl font-bold text-foreground mb-4">Marejada: Panorama de largometrajes internacionales</h2>
-              <p className="text-lg text-muted-foreground">Próximamente se anunciará la selección de películas que conforman este panorama.</p>
-            </div>
+            {sections.map(section => (
+              <div key={section.id} className="p-8 rounded-lg">
+                <h2 className="font-headline text-4xl font-bold text-foreground mb-4">{section.title}</h2>
+                <p className="text-lg text-muted-foreground mb-12">{section.description}</p>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                  {filmsBySection[section.id as keyof typeof filmsBySection].map(film => (
+                    <Card key={film.Título} className="bg-background overflow-hidden shadow-lg group">
+                      <div className="relative aspect-[2/3] w-full">
+                        {film.imagen ? (
+                           <Image
+                            src={`/images/Programa de cine FICLosCabos 2025/${film.Sección}/${film.imagen}`}
+                            alt={`Póster de ${film.Título}`}
+                            data-ai-hint="movie poster"
+                            fill
+                            className="object-cover"
+                          />
+                        ) : (
+                          <div className="w-full h-full bg-muted flex items-center justify-center">
+                            <p className="text-muted-foreground text-sm">Póster no disponible</p>
+                          </div>
+                        )}
+                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end">
+                            <p className="text-background/90 text-sm line-clamp-6">{film['Sinopsis / Notas']}</p>
+                        </div>
+                      </div>
+                      <CardHeader>
+                        <CardTitle className="text-xl leading-tight">{film.Título}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-sm text-muted-foreground"><strong>Director(a):</strong> {film['Director(a)']}</p>
+                        <p className="text-sm text-muted-foreground"><strong>País / Año:</strong> {film['País / Año']}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
 
-            <div className="p-8 rounded-lg bg-background shadow-lg">
-              <h2 className="font-headline text-4xl font-bold text-foreground mb-4">Competencia FICLosCabos de largometrajes mexicanos</h2>
-              <p className="text-lg text-muted-foreground space-y-4">
-                <span>En Los Cabos, donde el desierto se encuentra con el mar, el cine también encuentra su punto de convergencia. De esa intersección nace la nueva competencia mexicana de largometrajes del FICLosCabos 2025: un espacio donde las voces independientes del país dialogan con el territorio, la comunidad y las nuevas formas de narrar el mundo.</span>
-                <span>La competencia mexicana de largometrajes del Festival Internacional de Cine de Los Cabos 2025, concebida como una plataforma de visibilidad y apoyo para cineastas independientes. Su objetivo es impulsar la circulación, el diálogo y la proyección internacional de nuevas narrativas cinematográficas mexicanas.</span>
-              </p>
-            </div>
-
-            <div className="p-8 rounded-lg">
-              <h2 className="font-headline text-4xl font-bold text-foreground mb-4">Cortometrajes de cineastas emergentes</h2>
-              <div className="text-lg text-muted-foreground space-y-4">
-                <p>El Festival Internacional de Cine de Los Cabos se consolida como un punto de encuentro entre múltiples generaciones de creadores. En su 13ª edición, el Festival amplía su mirada hacia las nuevas voces del cine reuniendo a una selección de jóvenes directores con reconocimiento nacional e internacional que están redefiniendo los lenguajes cinematográficos con una fuerza creativa única.</p>
-                <p>Como parte de la programación oficial, el FICLosCabos proyectará los cortometrajes de los invitados al Panel de cineastas emergentes: Nuevas caras del cine.</p>
+                {section.id === 'cortometrajes' && (
+                   <div className="mt-12 text-center">
+                    <Button asChild>
+                      <Link href="/participantes">
+                        Conoce a los cineastas <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </div>
+                )}
               </div>
-               <div className="mt-8">
-                <Button asChild>
-                  <Link href="/participantes">
-                    Conoce a los cineastas <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
+            ))}
 
           </div>
         </section>
