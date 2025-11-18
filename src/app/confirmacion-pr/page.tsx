@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useActionState, useEffect, useRef, useState } from 'react';
+import { useActionState, useEffect, useRef } from 'react';
 import { useFormStatus } from 'react-dom';
 import { savePrConfirmation } from '@/lib/actions/savePrConfirmation';
 import { useToast } from "@/hooks/use-toast";
@@ -160,7 +160,6 @@ export default function ConfirmacionPRPage() {
   const [state, dispatch] = useActionState(savePrConfirmation, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
-  const [attending, setAttending] = useState<string | null>(null);
 
   useEffect(() => {
     if (state.message) {
@@ -182,7 +181,6 @@ export default function ConfirmacionPRPage() {
           description: state.message,
         });
         formRef.current?.reset();
-        setAttending(null);
       }
     }
   }, [state, toast]);
@@ -237,19 +235,17 @@ export default function ConfirmacionPRPage() {
 
                 <div className="space-y-2">
                   <Label>¿Asistirás al evento?</Label>
-                  <RadioGroup name="attendance" onValueChange={setAttending} className="flex flex-col space-y-1">
+                  <RadioGroup name="attendance" defaultValue={state.fields?.attendance} className="flex flex-col space-y-1">
                     <div className="flex items-center space-x-3 space-y-0">
                       <RadioGroupItem value="si" id="si" />
                        <div className="flex items-center gap-4">
                          <Label htmlFor="si" className="font-normal">Sí, asistiré</Label>
-                          {attending === 'si' && (
-                            <div className="flex items-center space-x-2">
-                              <Checkbox id="plusOne" name="plusOne" />
-                              <Label htmlFor="plusOne" className="font-normal text-sm">
-                                +1
-                              </Label>
-                            </div>
-                          )}
+                          <div className="flex items-center space-x-2">
+                            <Checkbox id="plusOne" name="plusOne" defaultChecked={state.fields?.plusOne} />
+                            <Label htmlFor="plusOne" className="font-normal text-sm">
+                              +1
+                            </Label>
+                          </div>
                         </div>
                     </div>
                     <div className="flex items-center space-x-3 space-y-0">
@@ -259,21 +255,24 @@ export default function ConfirmacionPRPage() {
                   </RadioGroup>
                   {state.errors?.attendance && <p className="text-sm font-medium text-destructive">{state.errors.attendance.join(', ')}</p>}
                 </div>
-
-                {attending === 'si' && (
-                    <div className="space-y-4">
-                      <Label>¿Qué día(s) te interesa más asistir?</Label>
-                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                          {festivalDays.map(day => (
-                              <div key={day.id} className="flex items-center space-x-2">
-                                  <Checkbox id={day.id} name="interestedDays" value={day.label} />
-                                  <Label htmlFor={day.id} className="font-normal">{day.label}</Label>
-                              </div>
-                          ))}
-                      </div>
-                       {state.errors?.interestedDays && <p className="text-sm font-medium text-destructive">{state.errors.interestedDays.join(', ')}</p>}
-                    </div>
-                )}
+                
+                <div className="space-y-4">
+                  <Label>¿Qué día(s) te interesa más asistir?</Label>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                      {festivalDays.map(day => (
+                          <div key={day.id} className="flex items-center space-x-2">
+                              <Checkbox 
+                                id={day.id} 
+                                name="interestedDays" 
+                                value={day.label} 
+                                defaultChecked={state.fields?.interestedDays?.includes(day.label)}
+                              />
+                              <Label htmlFor={day.id} className="font-normal">{day.label}</Label>
+                          </div>
+                      ))}
+                  </div>
+                    {state.errors?.interestedDays && <p className="text-sm font-medium text-destructive">{state.errors.interestedDays.join(', ')}</p>}
+                </div>
                 
                 <SubmitButton />
               </form>

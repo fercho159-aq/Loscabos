@@ -25,23 +25,27 @@ const schema = z.object({
     errorMap: () => ({ message: 'Debes seleccionar una opción de asistencia.' }),
   }),
   plusOne: z.string().optional(),
-  interestedDays: z.preprocess((val) => (Array.isArray(val) ? val : [val]), z.array(z.string()).optional()),
+  interestedDays: z.preprocess((val) => (Array.isArray(val) ? val : [val].filter(Boolean)), z.array(z.string()).optional()),
 });
 
+
 export async function savePrConfirmation(prevState: any, formData: FormData) {
-  const validatedFields = schema.safeParse({
+  const data = {
     firstName: formData.get('firstName'),
     lastName: formData.get('lastName'),
     email: formData.get('email'),
     attendance: formData.get('attendance'),
     plusOne: formData.get('plusOne'),
     interestedDays: formData.getAll('interestedDays'),
-  });
+  };
+
+  const validatedFields = schema.safeParse(data);
 
   if (!validatedFields.success) {
     return {
       errors: validatedFields.error.flatten().fieldErrors,
       message: 'Error: Por favor revisa los campos.',
+      fields: data,
     };
   }
 
@@ -49,7 +53,7 @@ export async function savePrConfirmation(prevState: any, formData: FormData) {
   
   const willAttend = attendance === 'si';
   const hasPlusOne = willAttend && plusOne === 'on';
-  const days = (willAttend && interestedDays && interestedDays.length > 0 && interestedDays[0] !== '') 
+  const days = (willAttend && interestedDays && interestedDays.length > 0) 
     ? interestedDays.join(', ') 
     : null;
 
@@ -60,12 +64,13 @@ export async function savePrConfirmation(prevState: any, formData: FormData) {
     `;
     
     revalidatePath('/confirmacion-pr');
-    return { message: 'Tu respuesta ha sido registrada. ¡Gracias!', errors: {} };
+    return { message: 'Tu respuesta ha sido registrada. ¡Gracias!', errors: {}, fields: {} };
   } catch (e) {
     console.error(e);
     return {
       message: 'Error de base de datos: No se pudo guardar tu respuesta.',
       errors: {},
+      fields: data,
     };
   }
 }
