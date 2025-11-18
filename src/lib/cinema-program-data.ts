@@ -70,7 +70,7 @@ export const filmData = [
     "Director(a)": "Mary Bronstein",
     "País / Año": "Estados Unidos 2025",
     "Sinopsis / Notas": "Linda ve su vida desmoronarse por la enfermedad de su hijo y problemas familiares...",
-    "imagen": ""
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -88,7 +88,7 @@ export const filmData = [
     "Director(a)": "Harry Lighton",
     "País / Año": "Reino Unido 2025",
     "Sinopsis / Notas": "Colin entra en una relación de sumisión BDSM con un motociclista enigmático llamado Ray.",
-    "imagen": ""
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -115,7 +115,7 @@ export const filmData = [
     "Director(a)": "Alauda Ruiz de Azua",
     "País / Año": "España, Francia 2025",
     "Sinopsis / Notas": "Ainara, de 17 años, sorprende a su familia al plantearse ser monja de clausura en lugar de ir a la universidad.",
-    "imagen": ""
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -133,7 +133,7 @@ export const filmData = [
     "Director(a)": "César Talamantes",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "X",
-    "imagen": ""
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -178,7 +178,7 @@ export const filmData = [
     "Director(a)": "Rigoberto Perezcano",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "X",
-    "imagen": ""
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -196,7 +196,7 @@ export const filmData = [
     "Director(a)": "Grupo Cinema Biocultural",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "X",
-    "imagen": ""
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/"
   },
   {
     "Sección": "Cortometrajes de cineastas emergentes",
@@ -232,7 +232,7 @@ export const filmData = [
     "Director(a)": "Lau Charles",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Dos hermanos descubren la otra familia de su papá. La directora reconstruye sus memorias fragmentadas.",
-    "imagen": ""
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/"
   },
   {
     "Sección": "Cortometrajes de cineastas emergentes",
