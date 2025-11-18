@@ -50,6 +50,15 @@ export async function savePrConfirmation(prevState: State, formData: FormData): 
     plusOne: formData.get('plusOne'),
     interestedDays: formData.getAll('interestedDays'),
   };
+  
+  console.log('Raw FormData:', {
+    firstName: rawData.firstName,
+    lastName: rawData.lastName,
+    email: rawData.email,
+    attendance: rawData.attendance,
+    plusOne: rawData.plusOne,
+    interestedDays: rawData.interestedDays,
+  });
 
   const validatedFields = FormSchema.safeParse(rawData);
 
