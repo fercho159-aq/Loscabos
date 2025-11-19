@@ -46,25 +46,6 @@ export default function ProgramaCinePage() {
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
       <main className="flex-grow pt-20">
-        {/* Banner Section */}
-        <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground text-center">
-            <div className="absolute inset-0 z-0">
-                <Image
-                src="/Images/Programacion/FICC_Banner_Programacion.png"
-                alt="Banner de la sección de Programa de Cine"
-                data-ai-hint="graphic composition"
-                fill
-                className="object-cover"
-                />
-                <div className="absolute inset-0 bg-black/10"></div>
-            </div>
-            <div className="container mx-auto px-4 relative z-10">
-              <h1 className="font-headline text-5xl md:text-6xl font-bold text-background">
-                Programa de cine FICLosCabos 2025
-              </h1>
-            </div>
-        </section>
-
         {/* Content Section */}
         <section className="py-16 sm:py-24 bg-card">
           <div className="container mx-auto px-4 max-w-7xl space-y-16">
