@@ -21,7 +21,7 @@ const sections = [
   {
     id: "marejada",
     title: "Marejada: Panorama de largometrajes internacionales",
-    description: ""
+    description: "Marejada, la muestra internacional del 13º Festival de Cine de Los Cabos, nace desde la idea de reinvención: una sección que convierte los límites en oportunidad y abre nuestras costas al cine que se está creando en el mundo. Esta selección reúne voces consolidadas y nuevas miradas que, desde geografías y lenguajes diversos, trazan un mapa vibrante del presente cinematográfico."
   },
   {
     id: "competencia",
@@ -73,7 +73,7 @@ export default function ProgramaCinePage() {
             {sections.map(section => (
               <div key={section.id} className="p-8 rounded-lg">
                 <h2 className="font-headline text-4xl font-bold text-accent text-center mb-4">{section.title}</h2>
-                <p className="text-lg text-muted-foreground mb-12 text-center">{section.description}</p>
+                <p className="text-lg text-muted-foreground mb-12 text-center max-w-4xl mx-auto">{section.description}</p>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                   {filmsBySection[section.id as keyof typeof filmsBySection].map(film => (
