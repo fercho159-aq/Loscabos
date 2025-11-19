@@ -294,7 +294,7 @@ export const agendaData: AgendaEvent[] = [
   {
     "HORA DE INICIO": "17:30",
     "HORA DE FIN": "18:30",
-    "EVENTO": "Proyección de cortometrajes animados\nen alianza con Cut Out Fest\n\nAbierto al público con acceso gratuito",
+    "EVENTO": "Proyección de cortometrajes animados en alianza con Cut Out Fest. Abierto al público con acceso gratuito",
     "SEDE": "Jetty",
     "CATEGORÍA": "Programa de cine",
     "COLOR": "#3a3a08",
@@ -303,7 +303,7 @@ export const agendaData: AgendaEvent[] = [
   {
     "HORA DE INICIO": "18:30",
     "HORA DE FIN": "21:00",
-    "EVENTO": "Amores Perros\nProyección gratuita\n\nAbierto al público con acceso gratuito",
+    "EVENTO": "Amores Perros. Proyección gratuita. Abierto al público con acceso gratuito",
     "SEDE": "Jetty",
     "CATEGORÍA": "Programa de cine",
     "COLOR": "#3a3a09",
