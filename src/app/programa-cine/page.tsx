@@ -96,7 +96,7 @@ export default function ProgramaCinePage() {
                             )}
                           </div>
                           <CardHeader>
-                            <CardTitle className="text-xl leading-tight">{film.Título}</CardTitle>
+                            <CardTitle className="text-xl leading-tight font-headline text-accent">{film.Título}</CardTitle>
                           </CardHeader>
                           <CardContent>
                             <p className="text-sm text-muted-foreground"><strong>Director(a):</strong> {film['Director(a)']}</p>
@@ -104,14 +104,14 @@ export default function ProgramaCinePage() {
                           </CardContent>
                         </Card>
                       </DialogTrigger>
-                      <DialogContent className="sm:max-w-2xl bg-card">
+                      <DialogContent className="sm:max-w-2xl bg-card max-h-[90vh] flex flex-col">
                         <DialogHeader>
-                          <DialogTitle className="text-2xl font-headline">{film.Título}</DialogTitle>
+                          <DialogTitle className="text-2xl font-headline text-accent">{film.Título}</DialogTitle>
                           <DialogDescription>
                             {film['Director(a)']} • {film['País / Año']}
                           </DialogDescription>
                         </DialogHeader>
-                        <div className="grid gap-4 py-4">
+                        <div className="grid gap-4 py-4 overflow-y-auto">
                           <div className="relative aspect-video w-full rounded-lg overflow-hidden">
                              {film.imagen && film.imagen.length > 1 ? (
                               <Image
