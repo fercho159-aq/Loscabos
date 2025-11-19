@@ -9,6 +9,9 @@ import Image from 'next/image';
 import { agendaData, venues, detailedTimeSlots, type Event } from '@/lib/agenda-data';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+import { Download } from 'lucide-react';
+import Link from 'next/link';
 
 function getEvent(day: string, time: string, venue: string): Event | undefined {
   return agendaData.find(e => e.Dia === day && e['HORA DE INICIO'] === time && e['SEDE'] === venue);
@@ -137,6 +140,14 @@ export default function AgendaPage() {
               <p className="mt-4 text-lg text-background/90 max-w-3xl mx-auto">
                 Explora el programa completo de proyecciones, paneles, eventos especiales y más.
               </p>
+              <div className="mt-8">
+                <Button asChild>
+                  <Link href="https://drive.google.com/file/d/1nVyY_Wmfq87PgfALftAZeQPN98VvW7ws/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                    <Download className="mr-2 h-4 w-4" />
+                    Descargar Agenda
+                  </Link>
+                </Button>
+              </div>
             </div>
         </section>
 
