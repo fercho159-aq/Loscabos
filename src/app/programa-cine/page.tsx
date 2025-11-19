@@ -21,7 +21,7 @@ const sections = [
   {
     id: "marejada",
     title: "Marejada: Panorama de largometrajes internacionales",
-    description: "Próximamente se anunciará la selección de películas que conforman este panorama."
+    description: ""
   },
   {
     id: "competencia",
@@ -136,11 +136,6 @@ export default function ProgramaCinePage() {
                   ))}
                 </div>
 
-                {section.id === 'cortometrajes' && (
-                   <div className="mt-12 text-center">
-                    
-                  </div>
-                )}
               </div>
             ))}
 
