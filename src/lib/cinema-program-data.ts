@@ -70,7 +70,7 @@ export const filmData = [
     "Director(a)": "Mary Bronstein",
     "País / Año": "Estados Unidos 2025",
     "Sinopsis / Notas": "Linda ve su vida desmoronarse: la misteriosa enfermedad de su hijo, un marido ausente, una persona desaparecida y una relación cada vez más tensa con su terapeuta la empujan al límite. Con intensidad psicológica y tono visceral, la película explora los bordes de la desesperación y la frágil red de afectos que intenta sostener a una madre en crisis.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/still3.jpg"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -88,7 +88,7 @@ export const filmData = [
     "Director(a)": "Harry Lighton",
     "País / Año": "Reino Unido 2025",
     "Sinopsis / Notas": "Colin, un joven tímido que trabaja en la calle asignando multas, es abordado por Ray, un motociclista enigmático y dominante. Acepta la invitación de Ray y entra en una relación de sumisión BDSM que transforma su vida, llevándolo a cuestionar identidad, deseo y límites.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/still2.jpg"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -133,7 +133,7 @@ export const filmData = [
     "Director(a)": "César Talamantes",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "En el marco de un impresionante patrimonio natural y paisajístico, transcurre la peculiar vida familiar isleña, espejo de dificultades y posibilidades donde cualquiera puede mirarse. Retrato documental de la vida en las islas habitadas de Baja California Sur y exploración profunda en una cultura marginal forjada por el aislamiento geográfico y la escasez de recursos.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/5.jpg"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -178,7 +178,7 @@ export const filmData = [
     "Director(a)": "Rigoberto Perezcano",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Elida, una joven de 16 años, es forzada por usos y costumbres a un matrimonio arreglado con Damián, hombre mayor y altivo. Sin embargo, ella no piensa seguir con estas viejas usanzas debido al amor que le profesa a Olivo, joven que no deja de invocar a su padre fallecido.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/Foto 4.png"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -196,7 +196,7 @@ export const filmData = [
     "Director(a)": "Grupo Cinema Biocultural",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "El cerro de polvo y sus veinte alrededores” documenta el proceso tradicional de la producción de amaranto a lo largo de un año en el sur de la Ciudad de México. Observamos los cambios estacionales, algunas fiestas tradicionales e indagamos sobre la presencia del pasado prehispánico incrustada en la geomorfología de la zona. Las olas de calor y la ausencia de lluvias interfieren con el crecimiento de la planta, pero los restos arqueológicos parecen tener una solución. La vida continua a pesar de la catástrofe.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/Cerro_still_6.jpg"
   },
   {
     "Sección": "Cortometrajes de cineastas emergentes",
@@ -232,7 +232,7 @@ export const filmData = [
     "Director(a)": "Lau Charles",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Valentina, de 5 años, y su hermano Quique, de 11, conocen a la otra familia de su papá y sus vidas dan un vuelco al descubrir que su media hermana tiene la misma edad que Valentina. A través de dos miradas construidas desde la infancia, la película reconstruye las memorias fragmentadas de la directora, culminando con una reveladora imagen: su familia real 25 años después.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/cc38baja 2.png"
   },
   {
     "Sección": "Cortometrajes de cineastas emergentes",

@@ -72,8 +72,12 @@ export default function ProgramaCinePage() {
             {sections.map(section => (
               <div key={section.id} className="p-8 rounded-lg">
                 <h2 className="font-headline text-4xl font-bold text-accent text-center mb-4">{section.title}</h2>
-                <p className="text-lg text-muted-foreground mb-12 text-center max-w-4xl mx-auto">{section.description}</p>
+                <p className="text-lg text-muted-foreground mb-8 text-center max-w-4xl mx-auto">{section.description}</p>
                 
+                {section.id === 'competencia' && (
+                  <h3 className="font-headline text-3xl text-foreground text-center mb-12">Nominados</h3>
+                )}
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                   {filmsBySection[section.id as keyof typeof filmsBySection].map(film => (
                     <Dialog key={film.Título}>
@@ -126,9 +130,9 @@ export default function ProgramaCinePage() {
                               </div>
                             )}
                           </div>
-                          <p className="text-base text-muted-foreground leading-relaxed">
+                          <div className="text-base text-muted-foreground leading-relaxed overflow-y-auto">
                             {film['Sinopsis / Notas']}
-                          </p>
+                          </div>
                         </div>
                       </DialogContent>
                     </Dialog>
