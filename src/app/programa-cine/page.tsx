@@ -1,5 +1,4 @@
 
-
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import Image from 'next/image';
@@ -20,7 +19,7 @@ import {
 const sections = [
   {
     id: "marejada",
-    title: "Marejada: Panorama de largometrajes internacionales",
+    title: "Marejada: Muestra de largometrajes internacionales",
     description: "Marejada, la muestra internacional del 13º Festival de Cine de Los Cabos, nace desde la idea de reinvención: una sección que convierte los límites en oportunidad y abre nuestras costas al cine que se está creando en el mundo. Esta selección reúne voces consolidadas y nuevas miradas que, desde geografías y lenguajes diversos, trazan un mapa vibrante del presente cinematográfico."
   },
   {
