@@ -155,9 +155,15 @@ export default function AgendaPage() {
           <div className="container mx-auto px-4">
             <Tabs defaultValue={sortedDays[0]} className="w-full">
               <div className="overflow-x-auto pb-4">
-                <TabsList className="flex-nowrap w-max mx-auto">
+                <TabsList className="flex-nowrap w-max mx-auto bg-transparent p-0 gap-2">
                   {sortedDays.map(day => (
-                    <TabsTrigger key={day} value={day} className="whitespace-nowrap">{day}</TabsTrigger>
+                    <TabsTrigger 
+                      key={day} 
+                      value={day} 
+                      className="whitespace-nowrap rounded-full data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=inactive]:bg-card data-[state=inactive]:hover:bg-accent/20 data-[state=inactive]:hover:text-accent transition-colors duration-200"
+                    >
+                      {day}
+                    </TabsTrigger>
                   ))}
                 </TabsList>
               </div>
