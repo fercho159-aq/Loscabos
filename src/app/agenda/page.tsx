@@ -160,7 +160,7 @@ export default function AgendaPage() {
                     <TabsTrigger 
                       key={day} 
                       value={day} 
-                      className="whitespace-nowrap rounded-full data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=inactive]:bg-card data-[state=inactive]:hover:bg-accent/20 data-[state=inactive]:hover:text-accent transition-colors duration-200"
+                      className="whitespace-nowrap rounded-full px-6 py-2 text-base data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=inactive]:bg-card data-[state=inactive]:hover:bg-accent/20 data-[state=inactive]:hover:text-accent transition-colors duration-200"
                     >
                       {day}
                     </TabsTrigger>
