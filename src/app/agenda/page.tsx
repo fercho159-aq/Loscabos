@@ -14,7 +14,7 @@ import { Download } from 'lucide-react';
 import Link from 'next/link';
 
 function getEvent(day: string, time: string, venue: string): Event | undefined {
-  return agendaData.find(e => e.Dia === day && e['HORA DE INICIO'] === time && e['SEDE'] === venue);
+  return agendaData.find(e => e.Dia.toLowerCase() === day.toLowerCase() && e['HORA DE INICIO'] === time && e['SEDE'] === venue);
 }
 
 function getEventDurationInMinutes(event: Event): number {
@@ -38,7 +38,7 @@ const DayTab = ({ day }: { day: string }) => {
   const occupiedCells = new Set<string>();
 
   agendaData.forEach(event => {
-    if (event.Dia === day) {
+    if (event.Dia.toLowerCase() === day.toLowerCase()) {
       const durationInMinutes = getEventDurationInMinutes(event);
       if (durationInMinutes > 15) {
         const rowSpan = Math.ceil(durationInMinutes / 15);
@@ -115,8 +115,8 @@ const DayTab = ({ day }: { day: string }) => {
 
 
 export default function AgendaPage() {
-  const agendaDays = [...new Set(agendaData.map(e => e.Dia))];
-  const sortedDays = ["Jueves 11 Dic", "Viernes 12 Dic", "Sábado 13 Dic", "Domingo 14 Dic"].filter(d => agendaDays.includes(d));
+  const agendaDays = [...new Set(agendaData.map(e => e.Dia.toLowerCase()))];
+  const sortedDays = ["jueves 11 dic", "viernes 12 de dic", "sábado 13 de dic", "domingo 14 de dic"].filter(d => agendaDays.includes(d));
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -154,18 +154,20 @@ export default function AgendaPage() {
         <section className="py-12 sm:py-16">
           <div className="container mx-auto px-4">
             <Tabs defaultValue={sortedDays[0]} className="w-full">
-              <div className="overflow-x-auto pb-4">
-                <TabsList className="flex-nowrap w-max mx-auto bg-transparent p-0 gap-2">
-                  {sortedDays.map(day => (
-                    <TabsTrigger 
-                      key={day} 
-                      value={day} 
-                      className="whitespace-nowrap rounded-full px-6 py-2 text-base data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=inactive]:bg-card data-[state=inactive]:hover:bg-accent/20 data-[state=inactive]:hover:text-accent transition-colors duration-200"
-                    >
-                      {day}
-                    </TabsTrigger>
-                  ))}
-                </TabsList>
+              <div className="flex justify-center pb-4">
+                <div className="overflow-x-auto">
+                    <TabsList className="flex-nowrap w-max bg-transparent p-0 gap-2">
+                    {sortedDays.map(day => (
+                        <TabsTrigger 
+                        key={day} 
+                        value={day} 
+                        className="whitespace-nowrap rounded-full px-6 py-2 text-base data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=inactive]:bg-card data-[state=inactive]:hover:bg-accent/20 data-[state=inactive]:hover:text-accent transition-colors duration-200 capitalize"
+                        >
+                        {day}
+                        </TabsTrigger>
+                    ))}
+                    </TabsList>
+                </div>
               </div>
               {sortedDays.map(day => (
                 <TabsContent key={day} value={day} className="mt-8">

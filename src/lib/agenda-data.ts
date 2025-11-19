@@ -19,16 +19,16 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Cinemex San José",
     "CATEGORÍA": "Programa de cine",
     "COLOR": "#3a3a08",
-    "Dia": "Jueves 11 Dic"
+    "Dia": "jueves 11 dic"
   },
   {
     "HORA DE INICIO": "11:00",
     "HORA DE FIN": "12:00",
-    "EVENTO": "Panel de cineastas emergentes:\nNuevas caras en el cine",
+    "EVENTO": "Panel de cineastas emergentes: Nuevas caras en el cine",
     "SEDE": "Hotel El Ganzo Rooftop",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
-    "Dia": "Jueves 11 Dic"
+    "Dia": "jueves 11 dic"
   },
   {
     "HORA DE INICIO": "12:00",
@@ -37,16 +37,16 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Hotel El Ganzo Rooftop",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
-    "Dia": "Jueves 11 Dic"
+    "Dia": "jueves 11 dic"
   },
   {
     "HORA DE INICIO": "12:30",
     "HORA DE FIN": "13:15",
-    "EVENTO": "Brunch & Learn \nFondo Fïlmico Gabriel Figueroa + Anuncio convocatoria 2026",
+    "EVENTO": "Brunch & Learn Fondo Fïlmico Gabriel Figueroa + Anuncio convocatoria 2026",
     "SEDE": "Hotel El Ganzo Rooftop",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
-    "Dia": "Jueves 11 Dic"
+    "Dia": "jueves 11 dic"
   },
   {
     "HORA DE INICIO": "15:00",
@@ -55,34 +55,34 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "Jueves 11 Dic"
+    "Dia": "jueves 11 dic"
   },
   {
     "HORA DE INICIO": "17:30",
     "HORA DE FIN": "18:00",
-    "EVENTO": "Inauguración oficial\nHost: José María Yazpik",
+    "EVENTO": "Inauguración oficial Host: José María Yazpik",
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "Jueves 11 Dic"
+    "Dia": "jueves 11 dic"
   },
   {
     "HORA DE INICIO": "18:00",
     "HORA DE FIN": "18:15",
-    "EVENTO": "Live Cinema Performance \nPersonas Haciendo Cosas con Tania Reza",
+    "EVENTO": "Live Cinema Performance Personas Haciendo Cosas con Tania Reza",
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "Jueves 11 Dic"
+    "Dia": "jueves 11 dic"
   },
   {
     "HORA DE INICIO": "18:15",
     "HORA DE FIN": "20:00",
-    "EVENTO": "Proyección especial\nLargometraje Sorpresa",
+    "EVENTO": "Proyección especial Largometraje Sorpresa",
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "Jueves 11 Dic"
+    "Dia": "jueves 11 dic"
   },
   {
     "HORA DE INICIO": "20:00",
@@ -91,16 +91,16 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania",
     "CATEGORÍA": "Music Sessions FICLosCabos",
     "COLOR": "#6688c5",
-    "Dia": "Jueves 11 Dic"
+    "Dia": "jueves 11 dic"
   },
   {
     "HORA DE INICIO": "20:45",
     "HORA DE FIN": "00:00",
-    "EVENTO": "Fiesta Inaugural\nDJ Set",
+    "EVENTO": "Fiesta Inaugural DJ Set",
     "SEDE": "Crania Cate",
     "CATEGORÍA": "Music Sessions FICLosCabos",
     "COLOR": "#6688c5",
-    "Dia": "Jueves 11 Dic"
+    "Dia": "jueves 11 dic"
   },
   {
     "HORA DE INICIO": "12:00",
@@ -109,7 +109,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Cinemex San José",
     "CATEGORÍA": "Programa de cine",
     "COLOR": "#3a3a08",
-    "Dia": "Viernes 12 Dic"
+    "Dia": "viernes 12 de dic"
   },
   {
     "HORA DE INICIO": "11:15",
@@ -118,7 +118,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Hotel El Ganzo Rooftop",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
-    "Dia": "Viernes 12 Dic"
+    "Dia": "viernes 12 de dic"
   },
   {
     "HORA DE INICIO": "12:00",
@@ -127,16 +127,16 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Hotel El Ganzo Rooftop",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
-    "Dia": "Viernes 12 Dic"
+    "Dia": "viernes 12 de dic"
   },
   {
     "HORA DE INICIO": "12:30",
     "HORA DE FIN": "13:15",
-    "EVENTO": "Brunch & Learn \nLa Baja Inspira + Anuncio convocatoria 2026",
+    "EVENTO": "Brunch & Learn La Baja Inspira + Anuncio convocatoria 2026",
     "SEDE": "Hotel El Ganzo Rooftop",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
-    "Dia": "Viernes 12 Dic"
+    "Dia": "viernes 12 de dic"
   },
   {
     "HORA DE INICIO": "15:00",
@@ -145,43 +145,43 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "Viernes 12 Dic"
+    "Dia": "viernes 12 de dic"
   },
   {
     "HORA DE INICIO": "16:00",
     "HORA DE FIN": "18:00",
-    "EVENTO": "Conferencia \nLa Conexión Creativa \ncon Luisa Reyes Retana",
+    "EVENTO": "Conferencia La Conexión Creativa con Luisa Reyes Retana",
     "SEDE": "Hotel El Ganzo Galería",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "Viernes 12 Dic"
+    "Dia": "viernes 12 de dic"
   },
   {
     "HORA DE INICIO": "17:30",
     "HORA DE FIN": "18:00",
-    "EVENTO": "Proyección especial \nEl Pulmo\ncon presentación de Mark Kronemeyer y Begoña Félix",
+    "EVENTO": "Proyección especial El Pulmo con presentación de Mark Kronemeyer y Begoña Félix",
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "Viernes 12 Dic"
+    "Dia": "viernes 12 de dic"
   },
   {
     "HORA DE INICIO": "18:00",
     "HORA DE FIN": "20:00",
-    "EVENTO": "Proyección Especial\nDocumental Depeche Mode: M\n+ Q&A con Director Fernando Frías",
+    "EVENTO": "Proyección Especial Documental Depeche Mode: M + Q&A con Director Fernando Frías",
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "Viernes 12 Dic"
+    "Dia": "viernes 12 de dic"
   },
   {
     "HORA DE INICIO": "20:00",
     "HORA DE FIN": "22:00",
-    "EVENTO": "Proyección Especial\nEd Maverick, La Nube en el jardín en vivo desde la sala Nezahualcóyotl\n+ Conversatorio",
+    "EVENTO": "Proyección Especial Ed Maverick, La Nube en el jardín en vivo desde la sala Nezahualcóyotl + Conversatorio",
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "Viernes 12 Dic"
+    "Dia": "viernes 12 de dic"
   },
   {
     "HORA DE INICIO": "22:00",
@@ -190,7 +190,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania Cate",
     "CATEGORÍA": "Music Sessions FICLosCabos",
     "COLOR": "#6688c5",
-    "Dia": "Viernes 12 Dic"
+    "Dia": "viernes 12 de dic"
   },
   {
     "HORA DE INICIO": "12:00",
@@ -199,16 +199,16 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Cinemex San José",
     "CATEGORÍA": "Programa de cine",
     "COLOR": "#3a3a08",
-    "Dia": "Sábado 13 Dic"
+    "Dia": "sábado 13 de dic"
   },
   {
     "HORA DE INICIO": "11:15",
     "HORA DE FIN": "12:00",
-    "EVENTO": "Masterclass\ncon Eugenio Caballero",
+    "EVENTO": "Masterclass con Eugenio Caballero",
     "SEDE": "Hotel El Ganzo Galería",
     "CATEGORÍA": "Industria",
     "COLOR": "#051722",
-    "Dia": "Sábado 13 Dic"
+    "Dia": "sábado 13 de dic"
   },
   {
     "HORA DE INICIO": "12:00",
@@ -217,16 +217,16 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Hotel El Ganzo Rooftop",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
-    "Dia": "Sábado 13 Dic"
+    "Dia": "sábado 13 de dic"
   },
   {
     "HORA DE INICIO": "12:30",
     "HORA DE FIN": "13:15",
-    "EVENTO": "Brunch & Learn \nIncentivos IMCINE",
+    "EVENTO": "Brunch & Learn Incentivos IMCINE",
     "SEDE": "Hotel El Ganzo Rooftop",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
-    "Dia": "Sábado 13 Dic"
+    "Dia": "sábado 13 de dic"
   },
   {
     "HORA DE INICIO": "15:00",
@@ -235,25 +235,25 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "Sábado 13 Dic"
+    "Dia": "sábado 13 de dic"
   },
   {
     "HORA DE INICIO": "17:00",
     "HORA DE FIN": "19:00",
-    "EVENTO": "Sesión de poesía performática\nSomos como los ríos\ncon Luisa Reyes Retana y Mercedes Reynosa\n(Seguido por diálogos en torno al territorio y sus cuerpos de agua)",
+    "EVENTO": "Sesión de poesía performática Somos como los ríos con Luisa Reyes Retana y Mercedes Reynosa (Seguido por diálogos en torno al territorio y sus cuerpos de agua)",
     "SEDE": "Hotel El Ganzo Rooftop",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "Sábado 13 Dic"
+    "Dia": "sábado 13 de dic"
   },
   {
     "HORA DE INICIO": "17:30",
     "HORA DE FIN": "17:45",
-    "EVENTO": "Proyección especial \nPesca con futuro",
+    "EVENTO": "Proyección especial Pesca con futuro",
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "Sábado 13 Dic"
+    "Dia": "sábado 13 de dic"
   },
   {
     "HORA DE INICIO": "17:45",
@@ -262,25 +262,25 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "Sábado 13 Dic"
+    "Dia": "sábado 13 de dic"
   },
   {
     "HORA DE INICIO": "18:30",
     "HORA DE FIN": "20:30",
-    "EVENTO": "Proyección Especial en Homenaje a Eugenio Caballero\nUn monstruo viene a verme",
+    "EVENTO": "Proyección Especial en Homenaje a Eugenio Caballero Un monstruo viene a verme",
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
     "COLOR": "#e67050",
-    "Dia": "Sábado 13 Dic"
+    "Dia": "sábado 13 de dic"
   },
   {
     "HORA DE INICIO": "20:30",
     "HORA DE FIN": "00:00",
-    "EVENTO": "Space Xmas\nEvento aliado",
+    "EVENTO": "Space Xmas Evento aliado",
     "SEDE": "Crania Cate",
     "CATEGORÍA": "Music Sessions FICLosCabos",
     "COLOR": "#6688c5",
-    "Dia": "Sábado 13 Dic"
+    "Dia": "sábado 13 de dic"
   },
   {
     "HORA DE INICIO": "12:00",
@@ -289,7 +289,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Cinemex San José",
     "CATEGORÍA": "Programa de cine",
     "COLOR": "#3a3a08",
-    "Dia": "Domingo 14 Dic"
+    "Dia": "domingo 14 de dic"
   },
   {
     "HORA DE INICIO": "17:30",
@@ -298,7 +298,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Jetty",
     "CATEGORÍA": "Programa de cine",
     "COLOR": "#3a3a08",
-    "Dia": "Domingo 14 Dic"
+    "Dia": "domingo 14 de dic"
   },
   {
     "HORA DE INICIO": "18:30",
@@ -307,7 +307,7 @@ export const agendaData: AgendaEvent[] = [
     "SEDE": "Jetty",
     "CATEGORÍA": "Programa de cine",
     "COLOR": "#3a3a09",
-    "Dia": "Domingo 14 Dic"
+    "Dia": "domingo 14 de dic"
   }
 ];
 
