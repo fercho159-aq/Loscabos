@@ -114,7 +114,7 @@ export const agendaData: AgendaEvent[] = [
   {
     "HORA DE INICIO": "11:15",
     "HORA DE FIN": "12:00",
-    "EVENTO": "Conversación de industria por confirmar",
+    "EVENTO": "Conversación de industria (por confirmar)",
     "SEDE": "Hotel El Ganzo Rooftop",
     "CATEGORÍA": "Industria",
     "COLOR": "#051723",
@@ -347,4 +347,5 @@ function generateDetailedTimeSlots() {
 export const detailedTimeSlots = generateDetailedTimeSlots();
 
 
+    
     
