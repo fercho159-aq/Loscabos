@@ -141,7 +141,7 @@ export default function AgendaPage() {
                 Explora el programa completo de proyecciones, paneles, eventos especiales y más.
               </p>
               <div className="mt-8">
-                <Button asChild>
+                <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
                   <Link href="https://drive.google.com/file/d/1nVyY_Wmfq87PgfALftAZeQPN98VvW7ws/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                     <Download className="mr-2 h-4 w-4" />
                     Descargar Agenda
