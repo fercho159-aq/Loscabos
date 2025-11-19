@@ -138,11 +138,7 @@ export default function ProgramaCinePage() {
 
                 {section.id === 'cortometrajes' && (
                    <div className="mt-12 text-center">
-                    <Button asChild>
-                      <Link href="/participantes">
-                        Conoce a los cineastas <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
+                    
                   </div>
                 )}
               </div>
