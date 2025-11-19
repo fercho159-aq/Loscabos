@@ -72,8 +72,8 @@ export default function ProgramaCinePage() {
             
             {sections.map(section => (
               <div key={section.id} className="p-8 rounded-lg">
-                <h2 className="font-headline text-4xl font-bold text-foreground mb-4">{section.title}</h2>
-                <p className="text-lg text-muted-foreground mb-12">{section.description}</p>
+                <h2 className="font-headline text-4xl font-bold text-accent text-center mb-4">{section.title}</h2>
+                <p className="text-lg text-muted-foreground mb-12 text-center">{section.description}</p>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                   {filmsBySection[section.id as keyof typeof filmsBySection].map(film => (
