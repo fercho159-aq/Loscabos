@@ -10,7 +10,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
         <iframe
           className="absolute top-1/2 left-1/2 w-full h-full min-w-[200%] min-h-[120%] object-cover -translate-x-1/2 -translate-y-1/2"
-          src="https://www.youtube.com/embed/5SY9U-M9G2w?autoplay=1&mute=1&loop=1&playlist=5SY9U-M9G2w&controls=0&showinfo=0&autohide=1&modestbranding=1"
+          src="https://www.youtube.com/embed/5SY9U-M9G2w?autoplay=1&mute=1&loop=1&playlist=5SY9U-M9G2w&controls=0&showinfo=0&autohide=1&modestbranding=1&start=0&end=50"
           frameBorder="0"
           allow="autoplay; encrypted-media"
           allowFullScreen
