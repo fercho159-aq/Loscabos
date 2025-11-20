@@ -7,15 +7,15 @@ import { HandHeart } from 'lucide-react';
 export default function HeroSection() {
   return (
     <section className="relative h-screen w-full flex items-center justify-center text-center text-white overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/Images/Main/Banner inicial.jpg"
-          alt="Paisaje de Puerto Los Cabos"
-          data-ai-hint="puerto los cabos landscape"
-          fill
-          className="object-cover"
-          priority
-        />
+      <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
+        <iframe
+          className="absolute top-1/2 left-1/2 w-full h-full min-w-[200%] min-h-[120%] object-cover -translate-x-1/2 -translate-y-1/2"
+          src="https://www.youtube.com/embed/5SY9U-M9G2w?autoplay=1&mute=1&loop=1&playlist=5SY9U-M9G2w&controls=0&showinfo=0&autohide=1&modestbranding=1"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          title="background video"
+        ></iframe>
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
      
