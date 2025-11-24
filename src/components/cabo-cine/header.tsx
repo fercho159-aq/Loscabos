@@ -34,8 +34,8 @@ export default function Header() {
       isDropdown: true,
       sublinks: [
         { href: '/programacion', label: 'Eventos y Proyecciones' },
-        { href: '/programa-cine', label: 'Programa de Cine' },
-        { href: '/agenda', label: 'Agenda' },
+        { href: '/agenda-cine', label: 'Programa de Cine' },
+        { href: '/agenda', label: 'Agenda General' },
       ]
     },
     { href: '/campus', label: 'Campus FICLosCabos' },

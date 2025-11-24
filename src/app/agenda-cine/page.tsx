@@ -49,9 +49,7 @@ const DayTab = ({ day }: { day: string }) => {
   const occupiedCells = new Set<string>();
   const venuesWithRooms = venues.reduce((acc, venue) => {
     const rooms = getUniqueValues(cinemaScheduleData.filter(e => e.SEDE === venue), 'SALA').sort();
-    if(rooms.length > 0) {
-      acc[venue] = rooms;
-    }
+    acc[venue] = rooms;
     return acc;
   }, {} as Record<string, string[]>);
 
@@ -138,17 +136,17 @@ const DayTab = ({ day }: { day: string }) => {
 };
 
 
-export default function ProgramaCinePage() {
+export default function AgendaCinePage() {
   
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
       <main className="flex-grow pt-20">
-        <section className="relative py-20 sm:py-24 bg-primary text-primary-foreground text-center">
+        <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground text-center">
             <div className="absolute inset-0 z-0">
                 <Image
                 src="/Images/Programacion/FICC_Banner_Programacion.png"
-                alt="Banner de la sección de programa de cine"
+                alt="Banner de la sección Sobre el FICLosCabos"
                 data-ai-hint="graphic composition"
                 fill
                 className="object-cover"
@@ -157,14 +155,22 @@ export default function ProgramaCinePage() {
             </div>
             <div className="container mx-auto px-4 relative z-10">
               <h1 className="font-headline text-5xl md:text-6xl font-bold text-background">
-                Programa de Cine
+                Agenda de Cine
               </h1>
               <p className="mt-4 text-lg text-background/90 max-w-3xl mx-auto">
                 Explora el programa completo de proyecciones del FICLosCabos 2025.
               </p>
+              <div className="mt-8">
+                <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline px-9 h-14 py-3 text-lg">
+                  <Link href="https://drive.google.com/file/d/1nVyY_Wmfq87PgfALftAZeQPN98VvW7ws/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                    <Download className="mr-2 h-4 w-4" />
+                    Descargar Agenda
+                  </Link>
+                </Button>
+              </div>
             </div>
         </section>
-        
+
         <section className="py-12 sm:py-16">
           <div className="container mx-auto px-4">
             <Tabs defaultValue={sortedDays[0]} className="w-full">
