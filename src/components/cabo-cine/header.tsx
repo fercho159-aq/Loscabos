@@ -36,7 +36,6 @@ export default function Header() {
         { href: '/programacion', label: 'Eventos y Proyecciones' },
         { href: '/programa-cine', label: 'Programa de Cine' },
         { href: '/agenda', label: 'Agenda General' },
-        { href: '/agenda-cine', label: 'Agenda de Cine' },
       ]
     },
     { href: '/campus', label: 'Campus FICLosCabos' },
