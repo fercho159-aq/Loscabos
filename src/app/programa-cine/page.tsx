@@ -6,192 +6,89 @@ import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
-import { cinemaScheduleData, type CinemaScheduleEvent } from '@/lib/cinema-schedule-data';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-import { Download } from 'lucide-react';
-import Link from 'next/link';
-
-// Helper to get unique values
-const getUniqueValues = (data: CinemaScheduleEvent[], key: keyof CinemaScheduleEvent) => {
-  return [...new Set(data.map(item => item[key]))] as string[];
-};
-
-const days = getUniqueValues(cinemaScheduleData, 'DIA');
-const venues = getUniqueValues(cinemaScheduleData, 'SEDE');
-const sortedDays = ["10 de diciembre", "11 de diciembre", "12 de diciembre", "13 de diciembre", "14 de diciembre"].filter(d => days.includes(d));
-
-const timeSlots = Array.from({ length: (22 - 15) * 4 + 1 }, (_, i) => {
-  const hour = 15 + Math.floor(i / 4);
-  const minute = (i % 4) * 15;
-  return `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
-});
-
-function getEvent(day: string, time: string, venue: string, room: string): CinemaScheduleEvent | undefined {
-  return cinemaScheduleData.find(e => e.DIA === day && e['HORA DE INICIO'] === time && e.SEDE === venue && e.SALA === room);
-}
-
-function getEventDurationInMinutes(event: CinemaScheduleEvent): number {
-    const [startHour, startMinute] = event['HORA DE INICIO'].split(':').map(Number);
-    let [endHour, endMinute] = event['HORA DE FIN'].split(':').map(Number);
-    
-    if (endHour < startHour) endHour += 24;
-
-    const startTimeInMinutes = startHour * 60 + startMinute;
-    const endTimeInMinutes = endHour * 60 + endMinute;
-    
-    return endTimeInMinutes - startTimeInMinutes;
-}
-
-
-const DayTab = ({ day }: { day: string }) => {
-  const occupiedCells = new Set<string>();
-  const venuesWithRooms = venues.reduce((acc, venue) => {
-    const rooms = getUniqueValues(cinemaScheduleData.filter(e => e.SEDE === venue), 'SALA').sort();
-    if(rooms.length > 0) {
-      acc[venue] = rooms;
-    }
-    return acc;
-  }, {} as Record<string, string[]>);
-
-  cinemaScheduleData.forEach(event => {
-    if (event.DIA === day) {
-      const durationInMinutes = getEventDurationInMinutes(event);
-      if (durationInMinutes > 15) {
-        const rowSpan = Math.ceil(durationInMinutes / 15);
-        const [startHour, startMinute] = event['HORA DE INICIO'].split(':').map(Number);
-
-        for (let i = 1; i < rowSpan; i++) {
-          const nextSlotTime = new Date();
-          nextSlotTime.setHours(startHour, startMinute + i * 15, 0, 0);
-          const occupiedTime = `${nextSlotTime.getHours().toString().padStart(2, '0')}:${nextSlotTime.getMinutes().toString().padStart(2, '0')}`;
-          occupiedCells.add(`${occupiedTime}-${event.SEDE}-${event.SALA}`);
-        }
-      }
-    }
-  });
-    
-  return (
-    <div className="overflow-x-auto border-t border-b border-border">
-      <table className="w-full border-collapse">
-        <thead className='bg-muted'>
-          <tr>
-            <th className="sticky left-0 z-20 bg-muted p-3 text-center font-semibold whitespace-nowrap border-r border-border">Hora</th>
-            {Object.entries(venuesWithRooms).map(([venue, rooms]) => (
-               <th key={venue} colSpan={rooms.length} className="p-3 text-center font-semibold whitespace-nowrap min-w-[200px] border-l">{venue}</th>
-            ))}
-          </tr>
-          <tr>
-            <th className="sticky left-0 z-20 bg-muted p-3 text-center font-semibold whitespace-nowrap border-r border-border"></th>
-            {Object.entries(venuesWithRooms).flatMap(([venue, rooms]) => 
-                rooms.map(room => <th key={`${venue}-${room}`} className='p-2 text-center font-medium bg-muted/50 whitespace-nowrap border-l'>{room}</th>)
-            )}
-          </tr>
-        </thead>
-        <tbody>
-          {timeSlots.map(time => (
-            <tr key={time} className='border-t border-border'>
-              {time.endsWith(':00') ? (
-                <td rowSpan={4} className="sticky left-0 z-10 bg-card p-3 text-center font-semibold whitespace-nowrap border-r border-border align-top h-16">{time}</td>
-              ) : null}
-
-              {Object.entries(venuesWithRooms).flatMap(([venue, rooms]) => rooms.map(room => {
-                 if (occupiedCells.has(`${time}-${venue}-${room}`)) {
-                    return null;
-                 }
-                 const event = getEvent(day, time, venue, room);
-                 
-                 if(event) {
-                    const durationInMinutes = getEventDurationInMinutes(event);
-                    const rowSpan = Math.ceil(durationInMinutes / 15);
-
-                    return (
-                      <td
-                        key={`${event.PELÍCULA}-${time}-${venue}-${room}`}
-                        rowSpan={rowSpan}
-                        className="p-3 text-white align-top"
-                        style={{ backgroundColor: event.COLOR || '#18323A', minHeight: `${rowSpan * 1}rem` }}
-                      >
-                         <div className="flex flex-col justify-between h-full">
-                           <p className="font-semibold text-sm whitespace-pre-line mb-2">{event.PELÍCULA}</p>
-                           <p className="text-xs text-white/80">{event['HORA DE INICIO']} - {event['HORA DE FIN']}</p>
-                           <Badge 
-                            variant="secondary"
-                            className="mt-auto text-xs bg-white/20 text-white border-none w-fit"
-                            >
-                            {event['CATEGORÍA']}
-                          </Badge>
-                         </div>
-                      </td>
-                    );
-                 }
-                 
-                 return <td key={`${time}-${venue}-${room}`} className="bg-card min-h-[1rem] border-l border-border h-4"></td>
-              }))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-};
-
+import { filmData } from '@/lib/cinema-program-data';
+import { Card, CardContent } from '@/components/ui/card';
 
 export default function ProgramaCinePage() {
+  
+  const sections = filmData.reduce((acc, film) => {
+    const section = acc.find(s => s.name === film['Sección']);
+    if (section) {
+      section.films.push(film);
+    } else {
+      acc.push({ name: film['Sección'], films: [film] });
+    }
+    return acc;
+  }, [] as { name: string; films: typeof filmData }[]);
   
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
       <main className="flex-grow pt-20">
-        <section className="relative py-20 sm:py-24 bg-primary text-primary-foreground text-center">
-            <div className="absolute inset-0 z-0">
-                <Image
-                src="/Images/Programacion/FICC_Banner_Programacion.png"
-                alt="Banner de la sección de programa de cine"
-                data-ai-hint="graphic composition"
-                fill
-                className="object-cover"
-                />
-                <div className="absolute inset-0 bg-black/10"></div>
-            </div>
-            <div className="container mx-auto px-4 relative z-10">
-              <h1 className="font-headline text-5xl md:text-6xl font-bold text-background">
-                Programa de Cine
-              </h1>
-              <p className="mt-4 text-lg text-background/90 max-w-3xl mx-auto">
-                Explora el programa completo de proyecciones del FICLosCabos 2025.
-              </p>
-            </div>
-        </section>
         
-        <section className="py-12 sm:py-16">
-          <div className="container mx-auto px-4">
-            <Tabs defaultValue={sortedDays[0]} className="w-full">
-              <div className="flex justify-center pb-4">
-                <div className="overflow-x-auto">
-                    <TabsList className="flex-nowrap w-max bg-transparent p-0 gap-2">
-                    {sortedDays.map(day => (
-                        <TabsTrigger 
-                        key={day} 
-                        value={day} 
-                        className="whitespace-nowrap rounded-full px-8 py-3 text-lg data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=inactive]:bg-card data-[state=inactive]:hover:bg-accent/20 data-[state=inactive]:hover:text-accent transition-colors duration-200 capitalize"
-                        >
-                        {day}
-                        </TabsTrigger>
+        {sections.map((section, sectionIndex) => (
+            <div key={sectionIndex}>
+                <section className="relative py-16 sm:py-20 bg-primary text-primary-foreground text-center">
+                    <div className="absolute inset-0 z-0">
+                        <Image
+                            src={
+                                section.name.includes("Marejada") ? "/Images/Programacion/FICC_Banner_Programacion.png" : 
+                                section.name.includes("Competencia") ? "/Images/FF/Banner_FICC_FondoFilmico.png" :
+                                "/Images/Animacion/FICC_Banner12.png"
+                            }
+                            alt={`Banner de la sección ${section.name}`}
+                            data-ai-hint="graphic composition"
+                            fill
+                            className="object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black/50"></div>
+                    </div>
+                    <div className="container mx-auto px-4 relative z-10">
+                    <h1 className="font-headline text-4xl md:text-5xl font-bold text-background">
+                        {section.name.split(':')[0]}
+                    </h1>
+                    <h2 className="mt-2 text-2xl md:text-3xl font-semibold text-background/90">
+                        {section.name.split(': ')[1]}
+                    </h2>
+                     {section.name.includes("Marejada") && (
+                        <p className="mt-4 text-lg text-background/90 max-w-3xl mx-auto">
+                            Marejada, la muestra internacional del 13º Festival de Cine de Los Cabos, nace desde la idea de reinvención: una sección que convierte los límites en oportunidad y abre nuestras costas al cine que se está creando en el mundo. Esta selección reúne voces consolidadas y nuevas miradas que, desde geografías y lenguajes diversos, trazan un mapa vibrante del presente cinematográfico.
+                        </p>
+                    )}
+                     {section.name.includes("Competencia") && (
+                         <p className="mt-4 text-lg text-accent font-semibold max-w-3xl mx-auto">
+                            Nominados
+                        </p>
+                    )}
+                    </div>
+                </section>
+                <section className="py-12 sm:py-16 bg-background">
+                <div className="container mx-auto px-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    {section.films.map((film, filmIndex) => (
+                        <Card key={`${sectionIndex}-${filmIndex}`} className="overflow-hidden group bg-card border-border/20 shadow-lg">
+                            <div className="relative aspect-[2/3] w-full">
+                                <Image
+                                    src={film.imagen || '/Images/Main/FICC_BannerAnimacion.jpg'}
+                                    alt={film['Título']}
+                                    data-ai-hint="movie poster"
+                                    fill
+                                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                />
+                            </div>
+                            <CardContent className="p-4">
+                                <h3 className="text-lg font-bold font-headline text-foreground">{film['Título']}</h3>
+                                <p className="text-sm text-muted-foreground mt-1">{film['Director(a)']}</p>
+                                <p className="text-xs text-muted-foreground mt-1">{film['País / Año']}</p>
+                                <p className="text-sm text-foreground/80 mt-3 line-clamp-4">{film['Sinopsis / Notas']}</p>
+                            </CardContent>
+                        </Card>
                     ))}
-                    </TabsList>
+                    </div>
                 </div>
-              </div>
-              {sortedDays.map(day => (
-                <TabsContent key={day} value={day} className="mt-8">
-                  <DayTab day={day} />
-                </TabsContent>
-              ))}
-            </Tabs>
-          </div>
-        </section>
-
+                </section>
+            </div>
+        ))}
       </main>
       <Footer />
     </div>
