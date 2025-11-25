@@ -35,8 +35,8 @@ export default function Header() {
       sublinks: [
         { href: '/programacion', label: 'Eventos y Proyecciones' },
         { href: '/programa-cine', label: 'Programa de Cine' },
-        { href: '/agenda', label: 'Agenda General' },
-        { href: '/agenda-cine', label: 'Agenda de Cine' },
+        { href: '/agenda', label: 'Agenda #BeyondTheScreen' },
+        { href: '/agenda-cine', label: 'Agenda Cinemex' },
       ]
     },
     { href: '/campus', label: 'Campus FICLosCabos' },
