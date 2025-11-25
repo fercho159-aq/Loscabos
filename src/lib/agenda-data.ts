@@ -12,15 +12,7 @@ export type AgendaEvent = {
 export type Event = AgendaEvent;
 
 export const agendaData: AgendaEvent[] = [
-  {
-    "HORA DE INICIO": "12:00",
-    "HORA DE FIN": "00:00",
-    "EVENTO": "Programación fílmica FICLosCabos",
-    "SEDE": "Cinemex San José",
-    "CATEGORÍA": "Programa de cine",
-    "COLOR": "#3a3a08",
-    "Dia": "jueves 11 dic"
-  },
+ 
   {
     "HORA DE INICIO": "11:00",
     "HORA DE FIN": "12:00",
@@ -102,15 +94,7 @@ export const agendaData: AgendaEvent[] = [
     "COLOR": "#6688c5",
     "Dia": "jueves 11 dic"
   },
-  {
-    "HORA DE INICIO": "12:00",
-    "HORA DE FIN": "00:00",
-    "EVENTO": "Programación fílmica FICLosCabos",
-    "SEDE": "Cinemex San José",
-    "CATEGORÍA": "Programa de cine",
-    "COLOR": "#3a3a08",
-    "Dia": "viernes 12 de dic"
-  },
+ 
   {
     "HORA DE INICIO": "11:15",
     "HORA DE FIN": "12:00",
@@ -192,15 +176,7 @@ export const agendaData: AgendaEvent[] = [
     "COLOR": "#6688c5",
     "Dia": "viernes 12 de dic"
   },
-  {
-    "HORA DE INICIO": "12:00",
-    "HORA DE FIN": "00:00",
-    "EVENTO": "Programación fílmica FICLosCabos",
-    "SEDE": "Cinemex San José",
-    "CATEGORÍA": "Programa de cine",
-    "COLOR": "#3a3a08",
-    "Dia": "sábado 13 de dic"
-  },
+  
   {
     "HORA DE INICIO": "11:15",
     "HORA DE FIN": "12:00",
@@ -282,15 +258,7 @@ export const agendaData: AgendaEvent[] = [
     "COLOR": "#6688c5",
     "Dia": "sábado 13 de dic"
   },
-  {
-    "HORA DE INICIO": "12:00",
-    "HORA DE FIN": "00:00",
-    "EVENTO": "Programación fílmica FICLosCabos",
-    "SEDE": "Cinemex San José",
-    "CATEGORÍA": "Programa de cine",
-    "COLOR": "#3a3a08",
-    "Dia": "domingo 14 de dic"
-  },
+ 
   {
     "HORA DE INICIO": "17:30",
     "HORA DE FIN": "18:30",
@@ -323,7 +291,7 @@ export const groupedAgenda = agendaData.reduce((acc, event) => {
 
 const allVenues = [...new Set(agendaData.map(e => e['SEDE']))];
 export const venues = allVenues.sort((a,b) => {
-    const order = ["Hotel El Ganzo Rooftop", "Hotel El Ganzo Galería", "Crania", "Crania Cate", "Cinemex San José", "Jetty"];
+    const order = ["Hotel El Ganzo Rooftop", "Hotel El Ganzo Galería", "Crania", "Crania Cate", "Jetty"];
     return order.indexOf(a) - order.indexOf(b);
 });
 
