@@ -1,5 +1,5 @@
 
-'use client';
+      'use client';
 
 import React from 'react';
 import Header from '@/components/cabo-cine/header';
@@ -135,7 +135,7 @@ export default function AgendaPage() {
             </div>
             <div className="container mx-auto px-4 relative z-10">
               <h1 className="font-headline text-5xl md:text-6xl font-bold text-background">
-                Agenda FICLosCabos 2025
+                Agenda #BeyondTheScreen 2025
               </h1>
               <p className="mt-4 text-lg text-background/90 max-w-3xl mx-auto">
                 Explora el programa completo de proyecciones, paneles, eventos especiales y más.
@@ -183,3 +183,4 @@ export default function AgendaPage() {
     </div>
   );
 }
+    
