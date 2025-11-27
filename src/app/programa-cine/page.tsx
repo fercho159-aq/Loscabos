@@ -13,14 +13,33 @@ import Link from 'next/link';
 export default function ProgramaCinePage() {
   
   const sections = filmData.reduce((acc, film) => {
-    const section = acc.find(s => s.name === film['Sección']);
+    const sectionName = film['Sección'] || 'Proyecciones especiales';
+    const section = acc.find(s => s.name === sectionName);
     if (section) {
       section.films.push(film);
     } else {
-      acc.push({ name: film['Sección'], films: [film] });
+      acc.push({ name: sectionName, films: [film] });
     }
     return acc;
   }, [] as { name: string; films: typeof filmData }[]);
+
+  const orderedSections = [
+    "Marejada: Panorama de largometrajes internacionales",
+    "Competencia FICLosCabos (Largometrajes mexicanos)",
+    "Cortometrajes de cineastas emergentes",
+    "La Baja Inspira",
+    "Proyecciones especiales",
+    "Homenaje a Eugenio Caballero"
+  ];
+
+  const sortedSections = sections.sort((a, b) => {
+    const aIndex = orderedSections.indexOf(a.name);
+    const bIndex = orderedSections.indexOf(b.name);
+    if (aIndex === -1 && bIndex === -1) return 0;
+    if (aIndex === -1) return 1;
+    if (bIndex === -1) return -1;
+    return aIndex - bIndex;
+  });
 
   const generateSlug = (text: string) => {
     return text.toString().toLowerCase()
@@ -31,7 +50,7 @@ export default function ProgramaCinePage() {
       .replace(/-+$/, '');            // Trim - from end of text
   };
   
-  const navigationButtons = sections.map(section => ({
+  const navigationButtons = sortedSections.map(section => ({
     label: section.name,
     href: `#${generateSlug(section.name)}`
   }));
@@ -50,7 +69,7 @@ export default function ProgramaCinePage() {
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               {navigationButtons.map(button => (
-                <Button key={button.label} asChild variant="outline">
+                <Button key={button.label} asChild variant="outline" className="rounded-none">
                   <Link href={button.href}>{button.label.split(':')[0]}</Link>
                 </Button>
               ))}
@@ -58,71 +77,83 @@ export default function ProgramaCinePage() {
           </div>
         </section>
 
-        {sections.map((section, sectionIndex) => (
-            <div key={sectionIndex} id={generateSlug(section.name)}>
-                <section className="relative py-16 sm:py-20 bg-primary text-primary-foreground text-center">
-                    <div className="absolute inset-0 z-0">
-                        <Image
-                            src={
-                                section.name.includes("Marejada") ? "/Images/Programacion/FICC_Banner_Programacion.png" : 
-                                section.name.includes("Competencia") ? "/Images/FF/Banner_FICC_FondoFilmico.png" :
-                                "/Images/Animacion/FICC_Banner12.png"
-                            }
-                            alt={`Banner de la sección ${section.name}`}
-                            data-ai-hint="graphic composition"
-                            fill
-                            className="object-cover"
-                        />
-                        <div className="absolute inset-0 bg-black/50"></div>
+        {sortedSections.map((section, sectionIndex) => {
+            let bannerImage = "/Images/Main/FICC_BannerAnimacion.jpg";
+            let bannerHint = "abstract animation";
+            let bannerTitle = section.name.split(':')[0];
+            let bannerSubtitle = section.name.split(': ')[1] || '';
+            let bannerDescription = '';
+
+            if (section.name.includes("Marejada")) {
+                bannerImage = "/Images/Programacion/FICC_Banner_Programacion.png";
+                bannerHint = "graphic composition";
+                bannerDescription = "Marejada, la muestra internacional del 13º Festival de Cine de Los Cabos, nace desde la idea de reinvención: una sección que convierte los límites en oportunidad y abre nuestras costas al cine que se está creando en el mundo. Esta selección reúne voces consolidadas y nuevas miradas que, desde geografías y lenguajes diversos, trazan un mapa vibrante del presente cinematográfico.";
+            } else if (section.name.includes("Competencia")) {
+                bannerImage = "/Images/FF/Banner_FICC_FondoFilmico.png";
+                bannerHint = "film award";
+                bannerSubtitle = "Nominados";
+            } else if (section.name.includes("Homenaje")) {
+                 bannerImage = "/Images/Eugenio Caballero/EugenioCaballero.png";
+                 bannerHint = "film set design";
+            }
+
+            return (
+                <div key={sectionIndex} id={generateSlug(section.name)}>
+                    <section className="relative py-16 sm:py-20 bg-primary text-primary-foreground text-center">
+                        <div className="absolute inset-0 z-0">
+                            <Image
+                                src={bannerImage}
+                                alt={`Banner de la sección ${section.name}`}
+                                data-ai-hint={bannerHint}
+                                fill
+                                className="object-cover"
+                            />
+                            <div className="absolute inset-0 bg-black/50"></div>
+                        </div>
+                        <div className="container mx-auto px-4 relative z-10">
+                        <h2 className="font-headline text-4xl md:text-5xl font-bold text-background">
+                            {bannerTitle}
+                        </h2>
+                         {bannerSubtitle && (
+                            <p className={`mt-2 text-2xl md:text-3xl font-semibold ${section.name.includes("Competencia") ? 'text-accent' : 'text-background/90'}`}>
+                                {bannerSubtitle}
+                            </p>
+                         )}
+                         {bannerDescription && (
+                            <p className="mt-4 text-lg text-background/90 max-w-3xl mx-auto">
+                                {bannerDescription}
+                            </p>
+                        )}
+                        </div>
+                    </section>
+                    <section className="py-12 sm:py-16 bg-background">
+                    <div className="container mx-auto px-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                        {section.films.map((film, filmIndex) => (
+                            <Card key={`${sectionIndex}-${filmIndex}`} className="overflow-hidden group bg-card border-border/20 shadow-lg">
+                                <div className="relative aspect-[2/3] w-full">
+                                    <Image
+                                        src={film.imagen || '/Images/Main/FICC_BannerAnimacion.jpg'}
+                                        alt={film['Título']}
+                                        data-ai-hint="movie poster"
+                                        fill
+                                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                    />
+                                </div>
+                                <CardContent className="p-4">
+                                    <h3 className="text-lg font-bold font-headline text-foreground">{film['Título']}</h3>
+                                    <p className="text-sm text-muted-foreground mt-1">{film['Director(a)']}</p>
+                                    <p className="text-xs text-muted-foreground mt-1">{film['País / Año']}</p>
+                                    <p className="text-sm text-foreground/80 mt-3 line-clamp-4">{film['Sinopsis / Notas']}</p>
+                                </CardContent>
+                            </Card>
+                        ))}
+                        </div>
                     </div>
-                    <div className="container mx-auto px-4 relative z-10">
-                    <h2 className="font-headline text-4xl md:text-5xl font-bold text-background">
-                        {section.name.split(':')[0]}
-                    </h2>
-                     {section.name.split(': ')[1] && (
-                        <h3 className="mt-2 text-2xl md:text-3xl font-semibold text-background/90">
-                            {section.name.split(': ')[1]}
-                        </h3>
-                     )}
-                     {section.name.includes("Marejada") && (
-                        <p className="mt-4 text-lg text-background/90 max-w-3xl mx-auto">
-                            Marejada, la muestra internacional del 13º Festival de Cine de Los Cabos, nace desde la idea de reinvención: una sección que convierte los límites en oportunidad y abre nuestras costas al cine que se está creando en el mundo. Esta selección reúne voces consolidadas y nuevas miradas que, desde geografías y lenguajes diversos, trazan un mapa vibrante del presente cinematográfico.
-                        </p>
-                    )}
-                     {section.name.includes("Competencia") && (
-                         <p className="mt-4 text-lg text-accent font-semibold max-w-3xl mx-auto">
-                            Nominados
-                        </p>
-                    )}
-                    </div>
-                </section>
-                <section className="py-12 sm:py-16 bg-background">
-                <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                    {section.films.map((film, filmIndex) => (
-                        <Card key={`${sectionIndex}-${filmIndex}`} className="overflow-hidden group bg-card border-border/20 shadow-lg">
-                            <div className="relative aspect-[2/3] w-full">
-                                <Image
-                                    src={film.imagen || '/Images/Main/FICC_BannerAnimacion.jpg'}
-                                    alt={film['Título']}
-                                    data-ai-hint="movie poster"
-                                    fill
-                                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                                />
-                            </div>
-                            <CardContent className="p-4">
-                                <h3 className="text-lg font-bold font-headline text-foreground">{film['Título']}</h3>
-                                <p className="text-sm text-muted-foreground mt-1">{film['Director(a)']}</p>
-                                <p className="text-xs text-muted-foreground mt-1">{film['País / Año']}</p>
-                                <p className="text-sm text-foreground/80 mt-3 line-clamp-4">{film['Sinopsis / Notas']}</p>
-                            </CardContent>
-                        </Card>
-                    ))}
-                    </div>
+                    </section>
                 </div>
-                </section>
-            </div>
-        ))}
+            );
+        })}
       </main>
       <Footer />
     </div>
