@@ -153,7 +153,7 @@ export default function ProgramaCinePage() {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                         {section.films.map((film, filmIndex) => (
                             <Card key={`${sectionIndex}-${filmIndex}`} className="overflow-hidden group bg-card border-border/20 shadow-lg">
-                                <div className="relative aspect-[2/3] w-full">
+                                <div className="relative aspect-video w-full">
                                     <Image
                                         src={film.imagen || '/Images/Main/FICC_BannerAnimacion.jpg'}
                                         alt={film['Título']}
