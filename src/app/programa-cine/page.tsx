@@ -113,7 +113,7 @@ export default function ProgramaCinePage() {
             } else if (section.name.includes("Competencia")) {
                 bannerImage = "/Images/FF/Banner_FICC_FondoFilmico_2.png";
                 bannerHint = "film award";
-                bannerSubtitle = "Nominados";
+                bannerSubtitle = "";
                 bannerDescription = "En Los Cabos, donde el desierto se encuentra con el mar, el cine también encuentra su punto de convergencia. De esa intersección nace la nueva competencia mexicana de largometrajes del FICLosCabos 2025: un espacio donde las voces independientes del país dialogan con el territorio, la comunidad y las nuevas formas de narrar el mundo. La competencia mexicana de largometrajes del Festival Internacional de Cine de Los Cabos 2025 es concebida como una plataforma de visibilidad y apoyo para cineastas independientes. Su objetivo es impulsar la circulación, el diálogo y la proyección internacional de nuevas narrativas cinematográficas mexicanas.";
             } else if (section.name.includes("Homenaje")) {
                  bannerImage = "/Images/Eugenio Caballero/EugenioCaballero.png";
@@ -151,6 +151,13 @@ export default function ProgramaCinePage() {
                     </section>
                     <section className="py-12 sm:py-16 bg-background">
                     <div className="container mx-auto px-4">
+                         {section.name.includes("Competencia") && (
+                          <div className="text-center mb-12">
+                            <h3 className="font-headline text-4xl font-bold text-accent">
+                              Nominados
+                            </h3>
+                          </div>
+                        )}
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {section.films.map((film, filmIndex) => (
                             <Card key={`${sectionIndex}-${filmIndex}`} className="overflow-hidden group bg-card border-border/20 shadow-lg">
