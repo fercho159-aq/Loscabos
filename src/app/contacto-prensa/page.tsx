@@ -25,7 +25,7 @@ export default function ContactoPrensaPage() {
                     </a>
                 </div>
                  <div className="mt-8">
-                    <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
+                    <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline px-9 h-14 py-3 text-lg">
                     <Link href="https://forms.gle/f2PVJBGvyTdvZNgSA" target="_blank" rel="noopener noreferrer">
                         Acreditación para prensa
                     </Link>
