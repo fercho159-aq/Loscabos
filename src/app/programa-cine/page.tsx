@@ -50,10 +50,32 @@ export default function ProgramaCinePage() {
       .replace(/-+$/, '');            // Trim - from end of text
   };
   
-  const navigationButtons = sortedSections.map(section => ({
-    label: section.name,
-    href: `#${generateSlug(section.name)}`
-  }));
+  const navigationButtons = [
+    {
+      label: "Marejada: Panorama de Largometrajes Internacionales",
+      href: `#${generateSlug("Marejada: Panorama de largometrajes internacionales")}`
+    },
+    {
+        label: "Competencia FICLosCabos (Largometrajes mexicanos)",
+        href: `#${generateSlug("Competencia FICLosCabos (Largometrajes mexicanos)")}`
+    },
+    {
+        label: "Muestra de cortometrajes de cineastas emergentes",
+        href: `#${generateSlug("Cortometrajes de cineastas emergentes")}`
+    },
+    {
+        label: "La Baja Inspira",
+        href: `#${generateSlug("La Baja Inspira")}`
+    },
+    {
+        label: "Proyecciones especiales",
+        href: `#${generateSlug("Proyecciones especiales")}`
+    },
+    {
+        label: "Homenaje a Eugenio Caballero",
+        href: `#${generateSlug("Homenaje a Eugenio Caballero")}`
+    }
+  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
