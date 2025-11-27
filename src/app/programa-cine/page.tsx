@@ -122,8 +122,8 @@ export default function ProgramaCinePage() {
                     <>
                     El Festival Internacional de Cine de Los Cabos se consolida como un punto de encuentro entre múltiples generaciones de creadores. En su 13ª edición, el Festival amplía su mirada hacia las nuevas voces del cine reuniendo a una selección de jóvenes directores con reconocimiento nacional e internacional que están redefiniendo los lenguajes cinematográficos con una fuerza creativa única. Como parte de la programación oficial, el FICLosCabos proyectará los cortometrajes de los invitados al{' '}
                     <Link href="https://www.ficloscabos.org/participantes" className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">
-                      Panel de cineastas emergentes: Nuevas caras del cine
-                    </Link>.
+                        Panel de cineastas emergentes.
+                    </Link>
                   </>
                 );
             } else if (section.name.includes("Homenaje")) {
