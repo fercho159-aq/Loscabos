@@ -34,6 +34,7 @@ const sponsors = [
   { name: "Sponsor 28", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-28.png", hint: "company logo" },
   { name: "Sponsor 29", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-29.png", hint: "company logo" },
   { name: "Sponsor 30", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-30.png", hint: "company logo" },
+  { name: "Sponsor 41", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados_Krystal-41.png", hint: "company logo" }
   { name: "Sponsor 31", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-31.png", hint: "company logo" },
   { name: "Sponsor 32", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-32.png", hint: "company logo" },
   { name: "Sponsor 33", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-33.png", hint: "company logo" },
@@ -43,7 +44,6 @@ const sponsors = [
   { name: "Sponsor 37", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-37.png", hint: "company logo" },
   { name: "Sponsor 39", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-39.png", hint: "company logo" },
   { name: "Sponsor 40", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-40.png", hint: "company logo" },
-  { name: "Sponsor 41", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados_Krystal-41.png", hint: "company logo" }
 
 
 ];
