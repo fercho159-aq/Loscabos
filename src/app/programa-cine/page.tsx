@@ -52,7 +52,7 @@ export default function ProgramaCinePage() {
   
   const navigationButtons = [
     {
-      label: "Marejada",
+      label: "Marejada: Panorama de Largometrajes Internacionales",
       href: `#${generateSlug("Marejada: Panorama de largometrajes internacionales")}`
     },
     {
@@ -113,7 +113,7 @@ export default function ProgramaCinePage() {
             } else if (section.name.includes("Competencia")) {
                 bannerImage = "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/LARESERVA.png";
                 bannerHint = "film award";
-                bannerTitle = "Competencia FICLosCabos";
+                bannerTitle = "Competencia FICLosCabos de largometrajes mexicanos";
                 bannerSubtitle = "";
                 bannerDescription = "En Los Cabos, donde el desierto se encuentra con el mar, el cine también encuentra su punto de convergencia. De esa intersección nace la nueva competencia mexicana de largometrajes del FICLosCabos 2025: un espacio donde las voces independientes del país dialogan con el territorio, la comunidad y las nuevas formas de narrar el mundo. La competencia mexicana de largometrajes del Festival Internacional de Cine de Los Cabos 2025 es concebida como una plataforma de visibilidad y apoyo para cineastas independientes. Su objetivo es impulsar la circulación, el diálogo y la proyección internacional de nuevas narrativas cinematográficas mexicanas.";
             } else if (section.name.includes("Cortometrajes")) {
