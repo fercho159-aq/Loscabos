@@ -208,7 +208,7 @@ export default function ConfirmacionPRPage() {
                 Por favor, confirma tu asistencia al FICLosCabos 2025.
               </p>
               <div className="mt-8">
-                <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
+                <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
                   <Link href="https://forms.gle/f2PVJBGvyTdvZNgSA" target="_blank" rel="noopener noreferrer">
                     Acreditación para prensa
                   </Link>
