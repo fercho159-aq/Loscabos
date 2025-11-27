@@ -52,7 +52,7 @@ export default function ProgramaCinePage() {
   
   const navigationButtons = [
     {
-      label: "Marejada: Panorama de Largometrajes Internacionales",
+      label: "Marejada",
       href: `#${generateSlug("Marejada: Panorama de largometrajes internacionales")}`
     },
     {
@@ -92,7 +92,7 @@ export default function ProgramaCinePage() {
             <div className="flex flex-wrap justify-center gap-4">
               {navigationButtons.map(button => (
                 <Button key={button.label} asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
-                  <Link href={button.href}>{button.label.split(':')[0]}</Link>
+                  <Link href={button.href}>{button.label}</Link>
                 </Button>
               ))}
             </div>
