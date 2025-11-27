@@ -2,6 +2,8 @@
 import Header from "@/components/cabo-cine/header";
 import Footer from "@/components/cabo-cine/footer";
 import Image from 'next/image';
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function ContactoPrensaPage() {
   return (
@@ -21,6 +23,13 @@ export default function ContactoPrensaPage() {
                     <a href="mailto:cynthia@comunicacionlateral.com" className="text-accent hover:underline">
                         cynthia@comunicacionlateral.com
                     </a>
+                </div>
+                 <div className="mt-8">
+                    <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
+                    <Link href="https://forms.gle/f2PVJBGvyTdvZNgSA" target="_blank" rel="noopener noreferrer">
+                        Acreditación para prensa
+                    </Link>
+                    </Button>
                 </div>
               </div>
               <div>
