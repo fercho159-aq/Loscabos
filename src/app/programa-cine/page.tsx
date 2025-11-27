@@ -9,6 +9,7 @@ import { filmData } from '@/lib/cinema-program-data';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { Download } from 'lucide-react';
 
 export default function ProgramaCinePage() {
   
@@ -88,6 +89,14 @@ export default function ProgramaCinePage() {
               <h1 className="font-headline text-5xl md:text-6xl font-bold text-foreground">
                 Programa de cine FICLosCabos 2025
               </h1>
+                <div className="mt-8">
+                <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline px-9 h-14 py-3 text-lg">
+                  <Link href="https://drive.google.com/file/d/1YTz1uu0VwCs0gZA3nAZaSiVsHpPYoCYN/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                    <Download className="mr-2 h-4 w-4" />
+                    Descarga el programa de cine
+                  </Link>
+                </Button>
+              </div>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               {navigationButtons.map(button => (
@@ -117,7 +126,7 @@ export default function ProgramaCinePage() {
                 bannerSubtitle = "";
                 bannerDescription = "En Los Cabos, donde el desierto se encuentra con el mar, el cine también encuentra su punto de convergencia. De esa intersección nace la nueva competencia mexicana de largometrajes del FICLosCabos 2025: un espacio donde las voces independientes del país dialogan con el territorio, la comunidad y las nuevas formas de narrar el mundo. La competencia mexicana de largometrajes del Festival Internacional de Cine de Los Cabos 2025 es concebida como una plataforma de visibilidad y apoyo para cineastas independientes. Su objetivo es impulsar la circulación, el diálogo y la proyección internacional de nuevas narrativas cinematográficas mexicanas.";
             } else if (section.name.includes("Cortometrajes")) {
-                bannerImage = "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/El Sarape1.jpg";
+                bannerImage = "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/Banner-Cortos.png";
                 bannerHint = "emerging filmmakers desert";
                 bannerTitle = "Muestra de cortometrajes de cineastas emergentes";
                 bannerDescription = (
