@@ -104,7 +104,7 @@ export default function ProgramaCinePage() {
             let bannerHint = "abstract animation";
             let bannerTitle = section.name.split(':')[0];
             let bannerSubtitle = section.name.split(': ')[1] || '';
-            let bannerDescription = '';
+            let bannerDescription: React.ReactNode = '';
 
             if (section.name.includes("Marejada")) {
                 bannerImage = "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/SNA-13.jpg";
@@ -118,7 +118,14 @@ export default function ProgramaCinePage() {
             } else if (section.name.includes("Cortometrajes")) {
                 bannerImage = "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/Banner-Cortos.png";
                 bannerHint = "emerging filmmakers desert";
-                bannerDescription = "El Festival Internacional de Cine de Los Cabos se consolida como un punto de encuentro entre múltiples generaciones de creadores. En su 13ª edición, el Festival amplía su mirada hacia las nuevas voces del cine reuniendo a una selección de jóvenes directores con reconocimiento nacional e internacional que están redefiniendo los lenguajes cinematográficos con una fuerza creativa única. Como parte de la programación oficial, el FICLosCabos proyectará los cortometrajes de los invitados al Panel de cineastas emergentes: Nuevas caras del cine:";
+                bannerDescription = (
+                    <>
+                    El Festival Internacional de Cine de Los Cabos se consolida como un punto de encuentro entre múltiples generaciones de creadores. En su 13ª edición, el Festival amplía su mirada hacia las nuevas voces del cine reuniendo a una selección de jóvenes directores con reconocimiento nacional e internacional que están redefiniendo los lenguajes cinematográficos con una fuerza creativa única. Como parte de la programación oficial, el FICLosCabos proyectará los cortometrajes de los invitados al{' '}
+                    <Link href="https://www.ficloscabos.org/participantes" className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">
+                      Panel de cineastas emergentes: Nuevas caras del cine
+                    </Link>.
+                  </>
+                );
             } else if (section.name.includes("Homenaje")) {
                  bannerImage = "/Images/Eugenio Caballero/EugenioCaballero.png";
                  bannerHint = "film set design";
@@ -159,6 +166,15 @@ export default function ProgramaCinePage() {
                           <div className="text-center mb-12">
                             <h3 className="font-headline text-4xl font-bold text-accent">
                               Nominados
+                            </h3>
+                          </div>
+                        )}
+                        {section.name.includes("Cortometrajes") && (
+                          <div className="text-center mb-12">
+                            <h3 className="font-headline text-4xl font-bold text-accent hover:underline">
+                                <Link href="https://www.ficloscabos.org/participantes" target="_blank" rel="noopener noreferrer">
+                                    Nuevas caras del cine
+                                </Link>
                             </h3>
                           </div>
                         )}
