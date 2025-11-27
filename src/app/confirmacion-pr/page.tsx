@@ -31,11 +31,9 @@ import { programData } from '@/lib/program-data';
 const programEvents = programData.flatMap(day => day.events);
 
 const festivalDays = [
-    { id: 'day1', label: '10 de diciembre' },
     { id: 'day2', label: '11 de diciembre' },
     { id: 'day3', label: '12 de diciembre' },
     { id: 'day4', label: '13 de diciembre' },
-    { id: 'day5', label: '14 de diciembre' },
 ];
 
 function SubmitButton() {
