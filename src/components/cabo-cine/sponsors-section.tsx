@@ -42,7 +42,8 @@ const sponsors = [
   { name: "Sponsor 36", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-36.png", hint: "company logo" },
   { name: "Sponsor 37", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-37.png", hint: "company logo" },
   { name: "Sponsor 39", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-39.png", hint: "company logo" },
-  { name: "Sponsor 40", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-40.png", hint: "company logo" }
+  { name: "Sponsor 40", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-40.png", hint: "company logo" },
+  { name: "Sponsor 41", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados_Krystal-41.png", hint: "company logo" }
 
 
 ];
