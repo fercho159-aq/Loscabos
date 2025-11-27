@@ -117,7 +117,7 @@ export default function ProgramaCinePage() {
                 bannerSubtitle = "";
                 bannerDescription = "En Los Cabos, donde el desierto se encuentra con el mar, el cine también encuentra su punto de convergencia. De esa intersección nace la nueva competencia mexicana de largometrajes del FICLosCabos 2025: un espacio donde las voces independientes del país dialogan con el territorio, la comunidad y las nuevas formas de narrar el mundo. La competencia mexicana de largometrajes del Festival Internacional de Cine de Los Cabos 2025 es concebida como una plataforma de visibilidad y apoyo para cineastas independientes. Su objetivo es impulsar la circulación, el diálogo y la proyección internacional de nuevas narrativas cinematográficas mexicanas.";
             } else if (section.name.includes("Cortometrajes")) {
-                bannerImage = "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/Banner-Cortos.png";
+                bannerImage = "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/El Sarape1.jpg";
                 bannerHint = "emerging filmmakers desert";
                 bannerTitle = "Muestra de cortometrajes de cineastas emergentes";
                 bannerDescription = (
@@ -129,15 +129,15 @@ export default function ProgramaCinePage() {
                   </>
                 );
             } else if (section.name.includes("La Baja Inspira")) {
-              bannerImage = "/Images/BajaInspira/FICC_Banner9.png";
+              bannerImage = "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/ESQ_Still1.jpg";
               bannerHint = "baja california desert ocean";
               bannerDescription = "En el corazón del Festival Internacional de Cine de Los Cabos, La Baja Inspira es la sección competitiva dedicada a celebrar las historias que nacen del territorio. Este programa reconoce y visibiliza a los cineastas que retratan la esencia de la península de Baja California, desde sus paisajes hasta sus comunidades, ofreciendo a la audiencia local la posibilidad de verse reflejada en la pantalla.";
             } else if (section.name.includes("Proyecciones especiales")) {
-              bannerImage = "/Images/Programacion/FICC_Banner_Programacion.png";
+              bannerImage = "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/sn6.jpeg";
               bannerHint = "graphic composition";
               bannerDescription = "En el espíritu de #BeyondTheScreen, el Festival Internacional de Cine de Los Cabos presenta una selección de Proyecciones Especiales que celebra la fuerza creativa del cine mexicano: El Pulmo, Àvia, Lalo y Luquín van a la Baja, la versión restaurada de Amores Perros, y dos experiencias inmersivas donde cine y música convergen —Depeche Mode: M de Fernando Frías y el álbum visual La nube en el jardín de Ed Maverick. Una invitación a explorar nuevas formas de mirar, escuchar y sentir el territorio.";
             } else if (section.name.includes("Homenaje")) {
-                 bannerImage = "/Images/Eugenio Caballero/EugenioCaballero.png";
+                 bannerImage = "/Images/Programa de cine FICLosCabos 2025/Homenaje a Eugenio Caballero/58adf8420b1fcc3c1aad21203.jpg";
                  bannerHint = "film set design";
                  bannerDescription = "Nuestro Homenaje a Eugenio Caballero por su amplia labor como director de arte en los títulos más emblemáticos del cine mexicano de los últimos 25 años será acompañado por la proyección de la película Un Monstruo Viene A Verme, dirigida por el autor español Juan Antonio Bayona, producción con la que fue acreedor del Premio Goya a Mejor Dirección Artística.";
             }

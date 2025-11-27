@@ -250,7 +250,7 @@ export const filmData = [
     "Director(a)": "Ximena Lamadrid, Julian Lamadrid",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Ambientada en Cancún, México, una joven mexicana enfrenta las emociones y desafíos de estar a punto de convertirse en madre a principios de los años 2000, mientras intenta mantener a su hermano menor bajo control.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/Still 3.TIFF"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/Still 2.png"
   },
   {
     "Sección": "La Baja Inspira",
@@ -258,7 +258,7 @@ export const filmData = [
     "Director(a)": "Ricardo Benet",
     "País / Año": "México 2024",
     "Sinopsis / Notas": "Una bióloga marina protectora de especies y navegante de alta mar, un buzo fotógrafo apneísta y una astrofotógrafa vigilante del cosmos se encuentran en Baja California Sur, para compartir sus visiones de las inmensidades del universo y nuestro planeta.",
-    "imagen": "/Images/programa-de-cine/baja-inspira-1.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/IMG_7294.JPG"
   },
   {
     "Sección": "La Baja Inspira",
@@ -266,7 +266,7 @@ export const filmData = [
     "Director(a)": "Augusto Reyes",
     "País / Año": "México 2023",
     "Sinopsis / Notas": "Pedro, un migrante indígena, regresa a su pueblo para asistir al funeral de su madre. Sus vínculos familiares están destruídos y se dispone a marcharse. Al enterarse del grave problema en el que se encuentra envuelto su hermano Ismael, Pedro decide quedarse y enfrentar las consecuencias de su ausencia.",
-    "imagen": "/Images/programa-de-cine/baja-inspira-2.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/03_EBDLL_still_baja.png"
   },
   {
     "Sección": "La Baja Inspira",
@@ -274,7 +274,7 @@ export const filmData = [
     "Director(a)": "Diego Hernández",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Antes de mudarse de Tijuana, Annya y Cecilia le imparten a Graciela un peculiar taller de actuación. Al finalizar una de las clases, Annya encuentra un extraño objeto que, al soplarlo, provoca un efecto misterioso dentro de ella.",
-    "imagen": "/Images/programa-de-cine/baja-inspira-3.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/0.5.00_15_28_10.Still037.png"
   },
   {
     "Sección": "La Baja Inspira",
@@ -282,7 +282,7 @@ export const filmData = [
     "Director(a)": "Camila Pardo Cerezo",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Aguasal retrata la historia de dos hermanos nadadores, Reyes y Luis Baños, quienes viven en Corralero, un aislado pueblo afromexicano. A través de su competencia anual en natación, se revelan los valores universales de la rivalidad y el amor fraternal. En un lugar donde el agua lo es todo, esta competencia no es solo física, sino también emocional, siendo un reflejo de la lucha, la resiliencia y la profunda conexión con su tierra.",
-    "imagen": "/Images/programa-de-cine/baja-inspira-4.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/CORRA_STILL_4_20250315_00095260.png"
   },
   {
     "Sección": "La Baja Inspira",
@@ -290,7 +290,7 @@ export const filmData = [
     "Director(a)": "Diana de Ayer",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Un video ensayo que narra la conexión de la directora con los paisajes la Baja California Sur, donde nació y creció, y las formas en las que el tiempo ha transformado su relación con el paisaje.",
-    "imagen": "/Images/programa-de-cine/baja-inspira-5.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/Como procurar un jardin.00_05_25_40.Still019.png"
   },
   {
     "Sección": "La Baja Inspira",
@@ -298,7 +298,7 @@ export const filmData = [
     "Director(a)": "Pau Ortiz Rosell",
     "País / Año": "México 2024",
     "Sinopsis / Notas": "Realidad e inteligencia artificial se entrelazan en una advertencia sobre las consecuencias de la masculinidad tradicional a través de la paternidad. Juan Manuel, un pescador de la bahía de La Paz, se enfrenta al legado de su padre ausente y a la ira y el sufrimiento que este ha generado en él, al mismo tiempo que reflexiona sobre sus propios errores como padre. Un relato que profundiza en los ciclos de abandono y la búsqueda de redención.",
-    "imagen": "/Images/programa-de-cine/baja-inspira-6.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/Fotograma 2121.png"
   },
   {
     "Sección": "La Baja Inspira",
@@ -306,7 +306,7 @@ export const filmData = [
     "Director(a)": "Marinthia Gutiérrez",
     "País / Año": "México 2024",
     "Sinopsis / Notas": "En Tijuana, Laura es aceptada en un programa de maestría de danza en el extranjero y tiene que tomar una decisión rápidamente. En la noche, sale con su amiga Ana, quien supone que no aceptará porque sigue clavada con su ex, José. A lo largo de la noche, en el centro de la ciudad, Laura se da cuenta de que varias chicas la observan atentamente. Distraída y ansiosa, no puede divertirse cómo sus amigos y se molesta por las cosas que asumen de ella. Después de un encuentro con José más tarde, Laura lleva su cuerpo a una secta de bailarinas vampiras– las chicas que la observaban durante toda la noche– la inician al grupo.",
-    "imagen": "/Images/programa-de-cine/baja-inspira-7.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/ESQ_Still3.jpg"
   },
   {
     "Sección": "La Baja Inspira",
@@ -314,7 +314,7 @@ export const filmData = [
     "Director(a)": "José Paredes",
     "País / Año": "México 2023",
     "Sinopsis / Notas": "Rodrigo y Diana son dos mejores amigos que viven en Tijuana, y comparten el sueño de prevalecer como actores. Para lograrlo, Diana decide viajar a la Ciudad de México en busca de mejores oportunidades, mientras que Rodrigo se ve forzado a quedarse atrás por causas mayores, ocultándole sus sentimientos verdaderos hacia a ella que van más allá de una simple amistad. Ambos mantienen su relación amistosa a distancia, con la esperanza de que ella regrese y Rodrigo tenga la oportunidad de confesar sus verdaderos sentimientos.",
-    "imagen": "/Images/programa-de-cine/baja-inspira-8.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/IMG-20230203-WA0005.jpg"
   },
   {
     "Sección": "La Baja Inspira",
@@ -322,7 +322,7 @@ export const filmData = [
     "Director(a)": "Sebastián del Callejo",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Rodrigo, un padre viudo que vive en Tijuana con su madre y su hijo, trabaja sin documentos en un hotel de San Diego, California. Sin embargo, tras la llegada de la pandemia de COVID-19 se cierra el cruce fronterizo desencadenando una serie de eventos desafortunados. La familia deberá enfrentarse a la dura realidad de vivir separados por la frontera más transitada del mundo, lidiando con la distancia física y emocional que esta situación impone en sus vidas.",
-    "imagen": "/Images/programa-de-cine/baja-inspira-9.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/7 (1).png"
   },
   {
     "Sección": "Proyecciones especiales",
@@ -330,7 +330,7 @@ export const filmData = [
     "Director(a)": "Mark Kronemeyer, Begoña Félix",
     "País / Año": "México 2024",
     "Sinopsis / Notas": "Mario Castro es un pescador comercial retirado, cuyos inalcanzables esfuerzos han posicionado a Cabo Pulmo México, como un ejemplo de esperanza para la conservación marina a nivel mundial. Sin embargo, su mundo ideal se ve amenazado por las impertinencias de la actualidad, tales como: los nuevos desarrollos turísticos, la incapacidad de control por parte de las autoridades y las consecuencias del crecimiento desmedido. Conoce esta inspiradora historia y viaja a través del tiempo para entender el arraigo de Mario a esta tierra y su gran compromiso por protegerla.",
-    "imagen": "/Images/Programacion/elpulmo/ELPULMOPOSTER (1)Fest.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/unnamed-3.jpg"
   },
   {
     "Sección": "Proyecciones especiales",
@@ -338,7 +338,7 @@ export const filmData = [
     "Director(a)": "Fernando Frías",
     "País / Año": "Estados Unidos, México 2025",
     "Sinopsis / Notas": "DEPECHE MODE: M es un viaje cinematográfico al corazón de la relación de la cultura mexicana con la muerte, enmarcado por las icónicas actuaciones de Depeche Mode durante su gira Memento Mori de 2023. Concebido y dirigido por el galardonado cineasta mexicano Fernando Frías, captura los tres conciertos con entradas agotadas de la banda en la Ciudad de México, mezclando imágenes del concierto con interludios interpretativos y material de archivo.",
-    "imagen": "/Images/Programacion/Depeche Mode M/DSC_3850_Credit Toni François_rt.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/DSC_3850_Credit Toni François_rt.jpg"
   },
   {
     "Sección": "Proyecciones especiales",
@@ -346,7 +346,7 @@ export const filmData = [
     "Director(a)": "Olmo Guerra",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "La Nube En El Jardín En Vivo desde La Sala Nezahualcóyotl es una inmersión profunda en el alma de uno de los artistas más auténticos de su generación. Este documental captura la noche en que Eduardo Hernández Saucedo (Ed Maverick) transformó la prestigiosa Sala Nezahualcóyotl en un santuario de vulnerabilidad y conexión. Desde un revelador ataque de pánico antes de pisar el escenario, hasta la ovación y rendición total de su público, el filme acompaña al cantautor chihuahuense en un viaje de sinceridad brutal y redención colectiva. Con solo su guitarra, su voz cruda y el delicado acompañamiento de un cuarteto de cuerdas, Ed Maverick navega por su último álbum de principio a fin para finalizar la noche con una sección de complacencias a elección del público.",
-    "imagen": "/Images/Programacion/la nube/Ed maverick foto 2.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/sn5.jpeg"
   },
   {
     "Sección": "Proyecciones especiales",
@@ -354,7 +354,7 @@ export const filmData = [
     "Director(a)": "Alejandro González Iñárritu",
     "País / Año": "México 2000",
     "Sinopsis / Notas": "Ciudad de México. Un accidente automovilístico fatal. Tres vidas se cruzan. Un adolescente lo arriesga todo para huir con la esposa de su hermano. Una modelo lo pierde todo tras mudarse con su amante. Un hombre sin hogar desentierra los fantasmas de su pasado. A medida que sus historias se desarrollan, el caos, la crueldad y la ternura humanos salen a la luz, revelando que están más conectados de lo que parece. Después de 25 años, el legendario debut de Alejandro González Iñárritu regresa a la pantalla grande en una impresionante restauración.",
-    "imagen": "/Images/programa-de-cine/proyecciones-4.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/Copy of 00167AP.jpg"
   },
   {
     "Sección": "Proyecciones especiales",
@@ -362,7 +362,7 @@ export const filmData = [
     "Director(a)": "Rodrigo Ímaz",
     "País / Año": "México, España 2025",
     "Sinopsis / Notas": "Àvia, retrata a Montserrat Gispert Cruells, quien a los siete años llegó a México tras exiliarse de la Guerra Civil Española. A los 83 años, retirada tras más de cinco décadas como etnobotánica, recurre a su nieto, el director, para retratar el final de sus días y contar su historia. A través de recuerdos, archivos y conversaciones, la película reflexiona sobre el exilio, el legado familiar y el derecho a una muerte digna.",
-    "imagen": "/Images/programa-de-cine/proyecciones-5.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/AV_STILL-29.jpg"
   },
   {
     "Sección": "Proyecciones especiales",
@@ -370,7 +370,7 @@ export const filmData = [
     "Director(a)": "Jorge Curioca",
     "País / Año": "México 2024",
     "Sinopsis / Notas": "Dos amigos, antiguos estudiantes de cine y ahora poetas adultos con alma de adolescentes en la frontera entre la genialidad y la locura, Lalo Padilla y Alvaro Luquı́n, emprenden, cargados con una cámara, un muy peculiar y divertido viaje por La Baja para crear un guión del que sólo tienen la premisa siguiendo la ruta que Lalo hacía de niño con su mamá vendiendo mapas para gringos. En esta particular travesía por desiertos, oasis, playas desiertas, volcanes, dunas y mares con leones marinos pondrán a prueba su amistad, sus miedos, obsesiones y trastornos mentales y descubrirán nuevos personajes no menos delirantes que ellos.",
-    "imagen": "/Images/programa-de-cine/proyecciones-6.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/IMG_0303.PNG"
   },
   {
     "Sección": "Proyecciones especiales",
@@ -378,7 +378,7 @@ export const filmData = [
     "Director(a)": "Armando Figaredo",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "En el corazón de Baja California Sur, el Rancho Tres Cruces ha sido testigo y protagonista de la historia ganadera de la región. Este documental conmemora 75 años de tradición, esfuerzo y resiliencia, narrando la historia de la familia Figaredo y su profundo vínculo con la tierra. Desde sus humildes comienzos hasta su consolidación como un referente de la ganadería sudcaliforniana, la película explora la evolución de las prácticas ganaderas, los desafíos del clima y la importancia de preservar un legado cultural en un entorno en constante cambio. A través de testimonios íntimos, imágenes de archivo y la majestuosidad del paisaje, la película es un homenaje a la identidad ranchera y a una forma de vida que se resiste a desaparecer.",
-    "imagen": "/Images/programa-de-cine/proyecciones-7.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/"
   },
   {
     "Sección": "Homenaje a Eugenio Caballero",
@@ -386,6 +386,6 @@ export const filmData = [
     "Director(a)": "Juan Antonio Bayona",
     "País / Año": "España, EEUU 2016",
     "Sinopsis / Notas": "Esta es la historia de Connor, un niño de 12 años que lidia con la enfermedad de su madre y el acoso escolar, y para ello, escapa a un mundo fantástico de monstruos y hadas que exploran el coraje, la pérdida y la fe.",
-    "imagen": "/Images/programa-de-cine/homenaje-1.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Homenaje a Eugenio Caballero/58adf8420a259f3dd5b687b6a.jpg"
   }
 ]
