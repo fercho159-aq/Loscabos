@@ -56,14 +56,14 @@ export default function ProgramaCinePage() {
       href: `#${generateSlug("Marejada: Panorama de largometrajes internacionales")}`
     },
     {
-        label: "Competencia FICLosCabos (Largometrajes mexicanos)",
+        label: "Competencia FICLosCabos de largometrajes mexicanos",
         href: `#${generateSlug("Competencia FICLosCabos (Largometrajes mexicanos)")}`
     },
     {
         label: "Muestra de cortometrajes de cineastas emergentes",
         href: `#${generateSlug("Cortometrajes de cineastas emergentes")}`
     },
-    {
+     {
         label: "La Baja Inspira",
         href: `#${generateSlug("La Baja Inspira")}`
     },
@@ -107,13 +107,14 @@ export default function ProgramaCinePage() {
             let bannerDescription = '';
 
             if (section.name.includes("Marejada")) {
-                bannerImage = "/Images/Programacion/FICC_Banner_Programacion.png";
+                bannerImage = "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/SNA-13.jpg";
                 bannerHint = "graphic composition";
                 bannerDescription = "Marejada, la muestra internacional del 13º Festival de Cine de Los Cabos, nace desde la idea de reinvención: una sección que convierte los límites en oportunidad y abre nuestras costas al cine que se está creando en el mundo. Esta selección reúne voces consolidadas y nuevas miradas que, desde geografías y lenguajes diversos, trazan un mapa vibrante del presente cinematográfico.";
             } else if (section.name.includes("Competencia")) {
-                bannerImage = "/Images/FF/Banner_FICC_FondoFilmico.png";
+                bannerImage = "/Images/FF/Banner_FICC_FondoFilmico_2.png";
                 bannerHint = "film award";
                 bannerSubtitle = "Nominados";
+                bannerDescription = "En Los Cabos, donde el desierto se encuentra con el mar, el cine también encuentra su punto de convergencia. De esa intersección nace la nueva competencia mexicana de largometrajes del FICLosCabos 2025: un espacio donde las voces independientes del país dialogan con el territorio, la comunidad y las nuevas formas de narrar el mundo. La competencia mexicana de largometrajes del Festival Internacional de Cine de Los Cabos 2025 es concebida como una plataforma de visibilidad y apoyo para cineastas independientes. Su objetivo es impulsar la circulación, el diálogo y la proyección internacional de nuevas narrativas cinematográficas mexicanas.";
             } else if (section.name.includes("Homenaje")) {
                  bannerImage = "/Images/Eugenio Caballero/EugenioCaballero.png";
                  bannerHint = "film set design";
