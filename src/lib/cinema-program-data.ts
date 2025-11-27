@@ -160,7 +160,7 @@ export const filmData = [
     "Director(a)": "Pablo Pérez Lombardini",
     "País / Año": "México, Catar 2025",
     "Sinopsis / Notas": "Mientras la mayoría de los habitantes de Monte Virgen se ocupa de la cosecha del café, la guardabosque Julia descubrirá que la Reserva está siendo deforestada por talamontes ilegales. Decidida a detenerlos, buscará la ayuda de una comunidad temerosa e indiferente que no tardará en darle la espalda. Sola en su enfrentamiento, la guardabosque recibirá amenazas de muerte y gradualmente perderá todo lo que ama excepto una cosa: su dignidad.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/LARESERVA_1.138.2.tif"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/LARESERVA.png"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",

@@ -111,13 +111,15 @@ export default function ProgramaCinePage() {
                 bannerHint = "graphic composition";
                 bannerDescription = "Marejada, la muestra internacional del 13º Festival de Cine de Los Cabos, nace desde la idea de reinvención: una sección que convierte los límites en oportunidad y abre nuestras costas al cine que se está creando en el mundo. Esta selección reúne voces consolidadas y nuevas miradas que, desde geografías y lenguajes diversos, trazan un mapa vibrante del presente cinematográfico.";
             } else if (section.name.includes("Competencia")) {
-                bannerImage = "/Images/FF/Banner_FICC_FondoFilmico_2.png";
+                bannerImage = "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/LARESERVA.png";
                 bannerHint = "film award";
+                bannerTitle = "Competencia FICLosCabos";
                 bannerSubtitle = "";
                 bannerDescription = "En Los Cabos, donde el desierto se encuentra con el mar, el cine también encuentra su punto de convergencia. De esa intersección nace la nueva competencia mexicana de largometrajes del FICLosCabos 2025: un espacio donde las voces independientes del país dialogan con el territorio, la comunidad y las nuevas formas de narrar el mundo. La competencia mexicana de largometrajes del Festival Internacional de Cine de Los Cabos 2025 es concebida como una plataforma de visibilidad y apoyo para cineastas independientes. Su objetivo es impulsar la circulación, el diálogo y la proyección internacional de nuevas narrativas cinematográficas mexicanas.";
             } else if (section.name.includes("Cortometrajes")) {
                 bannerImage = "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/Banner-Cortos.png";
                 bannerHint = "emerging filmmakers desert";
+                bannerTitle = "Muestra de cortometrajes de cineastas emergentes";
                 bannerDescription = (
                     <>
                     El Festival Internacional de Cine de Los Cabos se consolida como un punto de encuentro entre múltiples generaciones de creadores. En su 13ª edición, el Festival amplía su mirada hacia las nuevas voces del cine reuniendo a una selección de jóvenes directores con reconocimiento nacional e internacional que están redefiniendo los lenguajes cinematográficos con una fuerza creativa única. Como parte de la programación oficial, el FICLosCabos proyectará los cortometrajes de los invitados al{' '}
