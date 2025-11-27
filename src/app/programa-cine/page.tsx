@@ -69,7 +69,7 @@ export default function ProgramaCinePage() {
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               {navigationButtons.map(button => (
-                <Button key={button.label} asChild variant="outline" className="rounded-none">
+                <Button key={button.label} asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
                   <Link href={button.href}>{button.label.split(':')[0]}</Link>
                 </Button>
               ))}
