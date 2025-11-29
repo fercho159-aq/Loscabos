@@ -13,6 +13,15 @@ export type Event = AgendaEvent;
 
 export const agendaData: AgendaEvent[] = [
     {
+      "HORA DE INICIO": "20:30",
+      "HORA DE FIN": "0:00",
+      "EVENTO": "Cena de Gala Suelo Sur\nPremiación Fondo Fílmico Gabriel Figueroa y La Baja Inspira \n*Evento solo invitación/RSVP",
+      "SEDE": "Suelo Sur",
+      "CATEGORÍA": "Evento solo por invitación",
+      "COLOR": "#3a3a08",
+      "Dia": "miércoles 10 dic"
+    },
+    {
       "HORA DE INICIO": "11:00",
       "HORA DE FIN": "12:00",
       "EVENTO": "Panel de cineastas emergentes:\nNuevas caras en el cine",
@@ -32,35 +41,17 @@ export const agendaData: AgendaEvent[] = [
     },
     {
       "HORA DE INICIO": "12:30",
-      "HORA DE FIN": "13:15",
-      "EVENTO": "Brunch & Learn \nFondo Fïlmico Gabriel Figueroa + Anuncio convocatoria 2026",
+      "HORA DE FIN": "13:30",
+      "EVENTO": "Panel \nFondo Fïlmico Gabriel Figueroa por ESCINE",
       "SEDE": "Hotel El Ganzo Rooftop",
       "CATEGORÍA": "Industria",
       "COLOR": "#051723",
       "Dia": "jueves 11 dic"
     },
     {
-      "HORA DE INICIO": "16:00",
-      "HORA DE FIN": "18:00",
-      "EVENTO": "Happy Hour",
-      "SEDE": "Crania",
-      "CATEGORÍA": "Programa #BeyondTheScreen",
-      "COLOR": "#e67050",
-      "Dia": "jueves 11 dic"
-    },
-    {
-      "HORA DE INICIO": "18:15",
-      "HORA DE FIN": "18:40",
-      "EVENTO": "Inauguración oficial\nMaestro de ceremonia: José María Yazpik",
-      "SEDE": "Crania",
-      "CATEGORÍA": "Programa #BeyondTheScreen",
-      "COLOR": "#e67050",
-      "Dia": "jueves 11 dic"
-    },
-    {
-      "HORA DE INICIO": "18:40",
-      "HORA DE FIN": "18:55",
-      "EVENTO": "Live Cinema Performance \nPersonas Haciendo Cosas con Tania Reza",
+      "HORA DE INICIO": "18:30",
+      "HORA DE FIN": "19:00",
+      "EVENTO": "Inauguración oficial\nMaestro de ceremonia: José María Yazpik + Live Cinema Performance \nPersonas Haciendo Cosas con Tania Reza",
       "SEDE": "Crania",
       "CATEGORÍA": "Programa #BeyondTheScreen",
       "COLOR": "#e67050",
@@ -69,7 +60,7 @@ export const agendaData: AgendaEvent[] = [
     {
       "HORA DE INICIO": "19:00",
       "HORA DE FIN": "20:55",
-      "EVENTO": "Proyección especial\nLos domingos | Dir. Alauda Ruiz de Azua | España | 115 min.",
+      "EVENTO": "Proyección Inaugural\nIf I had legs I'd kick you | Dir. Mary Bronstein | EEUU | 113 min",
       "SEDE": "Crania",
       "CATEGORÍA": "Programa #BeyondTheScreen",
       "COLOR": "#e67050",
@@ -77,30 +68,12 @@ export const agendaData: AgendaEvent[] = [
     },
     {
       "HORA DE INICIO": "21:00",
-      "HORA DE FIN": "21:45",
-      "EVENTO": "Live Show\nShamans",
+      "HORA DE FIN": "0:00",
+      "EVENTO": "Fiesta Inaugural\nDJ Set\nMandrake",
       "SEDE": "Crania",
       "CATEGORÍA": "Music Sessions FICLosCabos",
       "COLOR": "#6688c5",
       "Dia": "jueves 11 dic"
-    },
-    {
-      "HORA DE INICIO": "21:45",
-      "HORA DE FIN": "0:00",
-      "EVENTO": "Fiesta Inaugural\nDJ Set\nMandrake",
-      "SEDE": "Crania Cate",
-      "CATEGORÍA": "Music Sessions FICLosCabos",
-      "COLOR": "#6688c5",
-      "Dia": "jueves 11 dic"
-    },
-    {
-      "HORA DE INICIO": "11:15",
-      "HORA DE FIN": "12:00",
-      "EVENTO": "Conversación de industria (por confirmar)",
-      "SEDE": "Hotel El Ganzo Rooftop",
-      "CATEGORÍA": "Industria",
-      "COLOR": "#051723",
-      "Dia": "viernes 12 de dic"
     },
     {
       "HORA DE INICIO": "12:00",
@@ -113,20 +86,11 @@ export const agendaData: AgendaEvent[] = [
     },
     {
       "HORA DE INICIO": "12:30",
-      "HORA DE FIN": "13:15",
-      "EVENTO": "Brunch & Learn \nLa Baja Inspira + Anuncio convocatoria 2026",
+      "HORA DE FIN": "13:30",
+      "EVENTO": "Panel\nLa Baja Inspira",
       "SEDE": "Hotel El Ganzo Rooftop",
       "CATEGORÍA": "Industria",
       "COLOR": "#051723",
-      "Dia": "viernes 12 de dic"
-    },
-    {
-      "HORA DE INICIO": "16:00",
-      "HORA DE FIN": "18:00",
-      "EVENTO": "Happy Hour",
-      "SEDE": "Crania",
-      "CATEGORÍA": "Programa #BeyondTheScreen",
-      "COLOR": "#e67050",
       "Dia": "viernes 12 de dic"
     },
     {
@@ -139,9 +103,18 @@ export const agendaData: AgendaEvent[] = [
       "Dia": "viernes 12 de dic"
     },
     {
+      "HORA DE INICIO": "17:00",
+      "HORA DE FIN": "17:20",
+      "EVENTO": "Proyección especial\nRancho Las Tres Cruces | México | 20 min",
+      "SEDE": "Crania",
+      "CATEGORÍA": "Programa #BeyondTheScreen",
+      "COLOR": "#e67050",
+      "Dia": "sábado 13 de dic"
+    },
+    {
       "HORA DE INICIO": "18:10",
       "HORA DE FIN": "18:40",
-      "EVENTO": "Proyección especial \nEl Pulmo | Dir. Mark Kronemeyer y Begoña Félix | México | 30 min.",
+      "EVENTO": "Proyección especial \nEl Pulmo | Dir. Mark Kronemeyer y Begoña Félix | México | 30 min",
       "SEDE": "Crania",
       "CATEGORÍA": "Programa #BeyondTheScreen",
       "COLOR": "#e67050",
@@ -150,7 +123,7 @@ export const agendaData: AgendaEvent[] = [
     {
       "HORA DE INICIO": "19:00",
       "HORA DE FIN": "21:00",
-      "EVENTO": "Proyección Especial\nDepeche Mode: M | Dir. Fernando Frías | EEUU, México | 95 min.\nQ&A",
+      "EVENTO": "Proyección especial\nDepeche Mode: M | Dir. Fernando Frías | EEUU, México | 95 min.\nQ&A",
       "SEDE": "Crania",
       "CATEGORÍA": "Programa #BeyondTheScreen",
       "COLOR": "#e67050",
@@ -159,7 +132,7 @@ export const agendaData: AgendaEvent[] = [
     {
       "HORA DE INICIO": "21:00",
       "HORA DE FIN": "23:05",
-      "EVENTO": "Proyección Especial\nLa Nube En El Jardín En Vivo desde La Sala Nezahualcóyotl | Dir. Olmo Guerra | México | 99 min.\nQ&A",
+      "EVENTO": "Proyección Especial\nLa Nube En El Jardín En Vivo desde La Sala Nezahualcóyotl | Dir. Olmo Guerra | México | 99 min\nQ&A",
       "SEDE": "Crania",
       "CATEGORÍA": "Programa #BeyondTheScreen",
       "COLOR": "#e67050",
@@ -168,8 +141,8 @@ export const agendaData: AgendaEvent[] = [
     {
       "HORA DE INICIO": "23:05",
       "HORA DE FIN": "1:00",
-      "EVENTO": "DJ Set",
-      "SEDE": "Crania Cate",
+      "EVENTO": "Fiesta \nDJ Set",
+      "SEDE": "Crania",
       "CATEGORÍA": "Music Sessions FICLosCabos",
       "COLOR": "#6688c5",
       "Dia": "viernes 12 de dic"
@@ -194,8 +167,8 @@ export const agendaData: AgendaEvent[] = [
     },
     {
       "HORA DE INICIO": "12:30",
-      "HORA DE FIN": "13:15",
-      "EVENTO": "Brunch & Learn \nIncentivos IMCINE",
+      "HORA DE FIN": "13:30",
+      "EVENTO": "Panel\nIncentivos IMCINE",
       "SEDE": "Hotel El Ganzo Rooftop",
       "CATEGORÍA": "Industria",
       "COLOR": "#051723",
@@ -220,15 +193,6 @@ export const agendaData: AgendaEvent[] = [
       "Dia": "sábado 13 de dic"
     },
     {
-      "HORA DE INICIO": "17:30",
-      "HORA DE FIN": "17:45",
-      "EVENTO": "Proyección especial \nPesca con futuro",
-      "SEDE": "Crania",
-      "CATEGORÍA": "Programa #BeyondTheScreen",
-      "COLOR": "#e67050",
-      "Dia": "sábado 13 de dic"
-    },
-    {
       "HORA DE INICIO": "18:00",
       "HORA DE FIN": "18:30",
       "EVENTO": "Homenaje a Eugenio Caballero",
@@ -238,9 +202,18 @@ export const agendaData: AgendaEvent[] = [
       "Dia": "sábado 13 de dic"
     },
     {
+      "HORA DE INICIO": "17:30",
+      "HORA DE FIN": "18:30",
+      "EVENTO": "Proyección de cortometrajes animados en alianza con Cutout Fest",
+      "SEDE": "Crania",
+      "CATEGORÍA": "Programa #BeyondTheScreen",
+      "COLOR": "",
+      "Dia": "domingo 14 de dic"
+    },
+    {
       "HORA DE INICIO": "18:30",
       "HORA DE FIN": "20:18",
-      "EVENTO": "Proyección Especial en Homenaje a Eugenio Caballero\nUn monstruo viene a verme | Dir. Juan Antonio Bayona | España, EEUU | 108 min.",
+      "EVENTO": "Homenaje a Eugenio Caballero y proyección especial en su honor:\nUn monstruo viene a verme | Dir. Juan Antonio Bayona | España, EEUU | 108 min",
       "SEDE": "Crania",
       "CATEGORÍA": "Programa #BeyondTheScreen",
       "COLOR": "#e67050",
@@ -248,7 +221,7 @@ export const agendaData: AgendaEvent[] = [
     },
     {
       "HORA DE INICIO": "20:20",
-      "HORA DE FIN": "20:40",
+      "HORA DE FIN": "21:00",
       "EVENTO": "Premiación\nCompetencia FICLosCabos de largometrajes mexicanos + Palabras de clausura",
       "SEDE": "Crania",
       "CATEGORÍA": "Programa #BeyondTheScreen",
@@ -256,7 +229,7 @@ export const agendaData: AgendaEvent[] = [
       "Dia": "sábado 13 de dic"
     },
     {
-      "HORA DE INICIO": "20:40",
+      "HORA DE INICIO": "21:30",
       "HORA DE FIN": "0:00",
       "EVENTO": "Space Xmas\nEvento aliado",
       "SEDE": "Crania Cate",
@@ -265,24 +238,32 @@ export const agendaData: AgendaEvent[] = [
       "Dia": "sábado 13 de dic"
     },
     {
-      "HORA DE INICIO": "16:30",
-      "HORA DE FIN": "18:20",
-      "EVENTO": "Proyección especial\nLalo y Luquín van a la baja | Dir. Jorge Curioca | México | 110 min\n\n*Abierto al público | Acceso gratuito*",
+      "HORA DE INICIO": "21:00",
+      "HORA DE FIN": "0:00",
+      "EVENTO": "Cóctel de clausura Casa Ballena \n*Evento solo invitación/RSVP",
+      "SEDE": "Casa Ballena",
+      "CATEGORÍA": "Evento solo por invitación",
+      "COLOR": "#3a3a08",
+      "Dia": "sábado 13 de dic"
+    },
+    {
+      "HORA DE INICIO": "17:00",
+      "HORA DE FIN": "19:34",
+      "EVENTO": "Proyección especial\nLos Domingos | Dir. Alauda Ruiz de Azua | España | 115 min\n\n*Abierto al público | Acceso gratuito",
       "SEDE": "Jetty",
       "CATEGORÍA": "Programa #BeyondTheScreen",
       "COLOR": "#e67050",
       "Dia": "domingo 14 de dic"
     },
     {
-      "HORA DE INICIO": "18:30",
-      "HORA DE FIN": "21:04",
-      "EVENTO": "Proyección especial\nAmores Perros | Alejandro González Iñárritu | México | 154 min.\n\nAbierto al público con acceso gratuito",
+      "HORA DE INICIO": "19:40",
+      "HORA DE FIN": "21:30",
+      "EVENTO": "Proyección especial\nAmores Perros | Dir. Alejandro González Iñárritu | México | 154 min.\n\n*Abierto al público | Acceso gratuito",
       "SEDE": "Jetty",
       "CATEGORÍA": "Programa #BeyondTheScreen",
       "COLOR": "#e67050",
       "Dia": "domingo 14 de dic"
     }
-  
 ];
 
 export const groupedAgenda = agendaData.reduce((acc, event) => {

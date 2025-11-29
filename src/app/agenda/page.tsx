@@ -116,7 +116,7 @@ const DayTab = ({ day }: { day: string }) => {
 
 export default function AgendaPage() {
   const agendaDays = [...new Set(agendaData.map(e => e.Dia.toLowerCase()))];
-  const sortedDays = ["jueves 11 dic", "viernes 12 de dic", "sábado 13 de dic", "domingo 14 de dic"].filter(d => agendaDays.includes(d));
+  const sortedDays = ["miércoles 10 dic", "jueves 11 dic", "viernes 12 de dic", "sábado 13 de dic", "domingo 14 de dic"].filter(d => agendaDays.includes(d));
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
