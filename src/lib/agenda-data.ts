@@ -109,7 +109,7 @@ export const agendaData: AgendaEvent[] = [
       "SEDE": "Crania",
       "CATEGORÍA": "Programa #BeyondTheScreen",
       "COLOR": "#e67050",
-      "Dia": "sábado 13 de dic"
+      "Dia": "viernes 12 de dic"
     },
     {
       "HORA DE INICIO": "18:10",
@@ -175,28 +175,10 @@ export const agendaData: AgendaEvent[] = [
       "Dia": "sábado 13 de dic"
     },
     {
-      "HORA DE INICIO": "16:00",
-      "HORA DE FIN": "18:00",
-      "EVENTO": "Happy Hour",
-      "SEDE": "Crania",
-      "CATEGORÍA": "Programa #BeyondTheScreen",
-      "COLOR": "#e67050",
-      "Dia": "sábado 13 de dic"
-    },
-    {
       "HORA DE INICIO": "17:00",
       "HORA DE FIN": "19:00",
       "EVENTO": "Sesión de poesía performática\nSomos como los ríos\ncon Luisa Reyes Retana y Mercedes Reynosa\n(Seguido por diálogos en torno al territorio y sus cuerpos de agua)",
       "SEDE": "Hotel El Ganzo Rooftop",
-      "CATEGORÍA": "Programa #BeyondTheScreen",
-      "COLOR": "#e67050",
-      "Dia": "sábado 13 de dic"
-    },
-    {
-      "HORA DE INICIO": "18:00",
-      "HORA DE FIN": "18:30",
-      "EVENTO": "Homenaje a Eugenio Caballero",
-      "SEDE": "Crania",
       "CATEGORÍA": "Programa #BeyondTheScreen",
       "COLOR": "#e67050",
       "Dia": "sábado 13 de dic"
@@ -208,7 +190,7 @@ export const agendaData: AgendaEvent[] = [
       "SEDE": "Crania",
       "CATEGORÍA": "Programa #BeyondTheScreen",
       "COLOR": "",
-      "Dia": "domingo 14 de dic"
+      "Dia": "sábado 13 de dic"
     },
     {
       "HORA DE INICIO": "18:30",
