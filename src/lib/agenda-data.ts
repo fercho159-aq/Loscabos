@@ -260,7 +260,7 @@ export const groupedAgenda = agendaData.reduce((acc, event) => {
 
 const allVenues = [...new Set(agendaData.map(e => e['SEDE']))];
 export const venues = allVenues.sort((a,b) => {
-    const order = ["Hotel El Ganzo Rooftop", "Hotel El Ganzo Galería", "Crania", "Crania Cate", "Jetty"];
+    const order = ["Hotel El Ganzo Rooftop", "Hotel El Ganzo Galería", "Crania", "Crania Cate", "Suelo Sur", "Casa Ballena", "Jetty"];
     return order.indexOf(a) - order.indexOf(b);
 });
 
