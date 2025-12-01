@@ -215,7 +215,7 @@ export const cinemaScheduleData: CinemaScheduleEvent[] = [
       "DIA": "11 de diciembre",
       "HORA DE INICIO": "19:00",
       "HORA DE FIN": "20:55",
-      "PELÍCULA": "Los domingos | Dir. Alauda Ruiz de Azua | España | 115 min",
+      "PELÍCULA": "If I had legs I'd kick you | Dir. Mary Bronstein | EEUU | 113 min",
       "SEDE": "Crania",
       "SALA": "Escenario principal",
       "CATEGORÍA": "Proyecciones especiales",
@@ -449,7 +449,7 @@ export const cinemaScheduleData: CinemaScheduleEvent[] = [
       "SEDE": "Cinemex San Lucas, Puerto Paraíso",
       "SALA": "Sala 2",
       "CATEGORÍA": "La Baja Inspira",
-      "COLOR": ""
+      "COLOR": "#e67050"
     },
     {
       "DIA": "13 de diciembre",
@@ -460,6 +460,16 @@ export const cinemaScheduleData: CinemaScheduleEvent[] = [
       "SALA": "Sala 2",
       "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
       "COLOR": "#051723"
+    },
+    {
+      "DIA": "",
+      "HORA DE INICIO": "",
+      "HORA DE FIN": "",
+      "PELÍCULA": "",
+      "SEDE": "",
+      "SALA": "",
+      "CATEGORÍA": "",
+      "COLOR": ""
     },
     {
       "DIA": "13 de diciembre",
