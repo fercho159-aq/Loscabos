@@ -48,6 +48,12 @@ const hotels = [
         imgSrc: "/Images/Hoteles/Marriott.jpg",
         imgHint: "resort spa beach",
         link: "https://www.marriott.com/en-us/hotels/sjdjw-jw-marriott-los-cabos-beach-resort-and-spa/overview/"
+    },
+    {
+        name: "Krystal Grand Los Cabos",
+        imgSrc: "https://picsum.photos/seed/krystal-grand/800/600",
+        imgHint: "luxury hotel resort",
+        link: "http://es.krystalgrand-loscabos.com/ofertas/"
     }
 ];
 
