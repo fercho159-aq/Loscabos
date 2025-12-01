@@ -14,8 +14,22 @@ import { Download } from 'lucide-react';
 import Link from 'next/link';
 
 function getEvent(day: string, time: string, venue: string): Event | undefined {
-  return agendaData.find(e => e.Dia.toLowerCase() === day.toLowerCase() && e['HORA DE INICIO'] === time && e['SEDE'] === venue);
+  const [slotHour, slotMinute] = time.split(':').map(Number);
+  const slotStartTime = slotHour * 60 + slotMinute;
+  const slotEndTime = slotStartTime + 15;
+
+  return agendaData.find(e => {
+    if (e.Dia.toLowerCase() !== day.toLowerCase() || e.SEDE !== venue) {
+      return false;
+    }
+    const [eventHour, eventMinute] = e['HORA DE INICIO'].split(':').map(Number);
+    const eventTime = eventHour * 60 + eventMinute;
+    
+    // Check if the event starts within the 15-minute slot
+    return eventTime >= slotStartTime && eventTime < slotEndTime;
+  });
 }
+
 
 function getEventDurationInMinutes(event: Event): number {
     if (!event['HORA DE INICIO'] || !event['HORA DE FIN']) return 15;
@@ -43,10 +57,13 @@ const DayTab = ({ day }: { day: string }) => {
       if (durationInMinutes > 15) {
         const rowSpan = Math.ceil(durationInMinutes / 15);
         const [startHour, startMinute] = event['HORA DE INICIO'].split(':').map(Number);
-
+        
+        const startSlotMinute = Math.floor(startMinute / 15) * 15;
+        const baseTime = new Date();
+        baseTime.setHours(startHour, startSlotMinute, 0, 0);
+        
         for (let i = 1; i < rowSpan; i++) {
-          const nextSlotTime = new Date();
-          nextSlotTime.setHours(startHour, startMinute + i * 15, 0, 0);
+          const nextSlotTime = new Date(baseTime.getTime() + (i * 15 * 60000));
           const occupiedTime = `${nextSlotTime.getHours().toString().padStart(2, '0')}:${nextSlotTime.getMinutes().toString().padStart(2, '0')}`;
           occupiedCells.add(`${occupiedTime}-${event.SEDE}`);
         }
