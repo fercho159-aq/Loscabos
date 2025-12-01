@@ -51,7 +51,7 @@ const hotels = [
     },
     {
         name: "Krystal Grand Los Cabos",
-        imgSrc: "https://picsum.photos/seed/krystal-grand/800/600",
+        imgSrc: "/Images/Hoteles/1. Aerial View_KGLC.png",
         imgHint: "luxury hotel resort",
         link: "http://es.krystalgrand-loscabos.com/ofertas/"
     }
