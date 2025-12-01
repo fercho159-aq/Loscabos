@@ -55,10 +55,10 @@ export default function HomenajePage() {
         <section className="py-16 sm:py-24 bg-card">
             <div className="container mx-auto px-4 max-w-4xl space-y-12">
                 
-                {/* Day 2: December 11 */}
+                {/* Day 2: December 13 */}
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                     <div className="md:order-2 space-y-4">
-                        <h3 className="font-headline text-3xl text-foreground"><span className="text-accent">11 de diciembre:</span> Masterclass y Celebración</h3>
+                        <h3 className="font-headline text-3xl text-foreground"><span className="text-accent">13 de diciembre:</span> Masterclass y Celebración</h3>
                         <p className="text-muted-foreground">El homenaje continúa con una Masterclass exclusiva de Eugenio Caballero, donde compartirá su proceso creativo. Posteriormente, se celebrará un cóctel privado en Casa Ballena, un espacio exclusivo donde la comunidad cinematográfica se reunirá para una velada de arte y conversación.</p>
                         <ul className="text-muted-foreground list-disc pl-5 space-y-2">
                             <li><strong>Masterclass:</strong> Una oportunidad para aprender del maestro del diseño de producción.</li>

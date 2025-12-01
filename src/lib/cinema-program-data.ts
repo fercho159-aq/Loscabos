@@ -294,7 +294,7 @@ export const filmData = [
   },
   {
     "Sección": "La Baja Inspira",
-    "Título": "El desvelo",
+    "Título": "El Desvelo",
     "Director(a)": "Pau Ortiz Rosell",
     "País / Año": "México 2024",
     "Sinopsis / Notas": "Realidad e inteligencia artificial se entrelazan en una advertencia sobre las consecuencias de la masculinidad tradicional a través de la paternidad. Juan Manuel, un pescador de la bahía de La Paz, se enfrenta al legado de su padre ausente y a la ira y el sufrimiento que este ha generado en él, al mismo tiempo que reflexiona sobre sus propios errores como padre. Un relato que profundiza en los ciclos de abandono y la búsqueda de redención.",
