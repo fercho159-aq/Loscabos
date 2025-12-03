@@ -378,7 +378,7 @@ export const filmData = [
     "Director(a)": "Armando Figaredo",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Crónica sobre el Génesis del turismo en Baja California Sur. El propio fundador y visionario, Abelardo Rodríguez Montijo, narra cómo, en 1946, piloteando su propio avión, descubrió este lugar conocido como Las Cruces, donde se cree que Hernán Cortés desembarcó en 1535, a poco menos de una hora, de lo que hoy es la ciudad de La Paz, capital del estado. Después de iniciar la construcción de una pista de aterrizaje, algunas cabañas, y otras instalaciones para recibir visitantes, comienza a promover este lugar privilegiado por su clima, vegetación y, sobre todo, por su abundante pesca, lo que generó un gran interés de los ricos y famosos de California, Estados Unidos de principios de los años 50´s. Posteriormente, en 1956, y más hacia el sur, descubre Palmilla, donde construye el primer hotel de lo que hoy es Los Cabos iniciando lo que actualmente es uno de los más exclusivos y espectaculares desarrollos turísticos del mundo. Un par de años más tarde y cerca de Cabo San Lucas, construye el Hotel Hacienda para concretar el origen de la era turística de Los Cabos.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/Captura de pantalla 2025-12-01 a las 6.06.04 p. m."
   },
   {
     "Sección": "Homenaje a Eugenio Caballero",
