@@ -8,597 +8,648 @@ export type CinemaScheduleEvent = {
   "SALA": string;
   "CATEGORÍA": string;
   "COLOR": string;
+  "video": string;
 };
 
 export const cinemaScheduleData: CinemaScheduleEvent[] = [
-    {
-      "DIA": "10 de diciembre",
-      "HORA DE INICIO": "18:00",
-      "HORA DE FIN": "19:50",
-      "PELÍCULA": "Isleño | Dir. César Talamantes | México | 110 min\nQ&A",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 1",
-      "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
-      "COLOR": "#051723"
-    },
-    {
-      "DIA": "10 de diciembre",
-      "HORA DE INICIO": "18:30",
-      "HORA DE FIN": "20:00",
-      "PELÍCULA": "Un techo sin cielo | Dir. Diego Hernández | México | 90 min\nQ&A",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 2",
-      "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
-      "COLOR": "#051723"
-    },
-    {
-      "DIA": "10 de diciembre",
-      "HORA DE INICIO": "17:00",
-      "HORA DE FIN": "18:50",
-      "PELÍCULA": "Lalo y Luquín van a la baja | Dir. Jorge Curioca | México | 110 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 3",
-      "CATEGORÍA": "Proyecciones especiales",
-      "COLOR": "#3a3a08"
-    },
-    {
-      "DIA": "10 de diciembre",
-      "HORA DE INICIO": "19:00",
-      "HORA DE FIN": "20:55",
-      "PELÍCULA": "Sotto le nuvole | Dir. Gianfranco Rosi | Italia | 115 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 3",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "10 de diciembre",
-      "HORA DE INICIO": "18:30",
-      "HORA DE FIN": "20:42",
-      "PELÍCULA": "Orphan | Dir. Lászlo Nemes | Hungría | 132 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 4",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "10 de diciembre",
-      "HORA DE INICIO": "19:00",
-      "HORA DE FIN": "20:30",
-      "PELÍCULA": "Si no ardemos, cómo iluminar la noche | Dir. Kim Torres | Costa Rica, México | 90 min",
-      "SEDE": "Cinemex San Lucas, Puerto Paraíso",
-      "SALA": "Sala 1",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "10 de diciembre",
-      "HORA DE INICIO": "19:30",
-      "HORA DE FIN": "20:58",
-      "PELÍCULA": "Àvia, el jardín de la memoria | Dir. Rodrigo Imaz | México | 88 min",
-      "SEDE": "Cinemex San Lucas, Puerto Paraíso",
-      "SALA": "Sala 2",
-      "CATEGORÍA": "Proyecciones especiales",
-      "COLOR": "#3a3a08"
-    },
-    {
-      "DIA": "11 de diciembre",
-      "HORA DE INICIO": "15:00",
-      "HORA DE FIN": "16:30",
-      "PELÍCULA": "Si no ardemos, cómo iluminar la noche | Dir. Kim Torres | Costa Rica, México | 95 min\nQ&A",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 1",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "11 de diciembre",
-      "HORA DE INICIO": "17:15",
-      "HORA DE FIN": "18:59",
-      "PELÍCULA": "Say goodbye | Dir. Paloma López Carrillo | México | 104 min\nQ&A",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 1",
-      "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
-      "COLOR": "#051723"
-    },
-    {
-      "DIA": "11 de diciembre",
-      "HORA DE INICIO": "19:30",
-      "HORA DE FIN": "21:06",
-      "PELÍCULA": "Late fame | Dir. Kent Jones | EEUU | 96 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 1",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "11 de diciembre",
-      "HORA DE INICIO": "15:00",
-      "HORA DE FIN": "16:57",
-      "PELÍCULA": "MACDO | Dir. Racornelia | México | 117 min\nQ&A",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 2",
-      "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
-      "COLOR": "#051723"
-    },
-    {
-      "DIA": "11 de diciembre",
-      "HORA DE INICIO": "17:45",
-      "HORA DE FIN": "19:09",
-      "PELÍCULA": "Los amantes se despiden con la mirada | Dir. Rigoberto Perezcano | México | 84 min\nQ&A",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 2",
-      "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
-      "COLOR": "#051723"
-    },
-    {
-      "DIA": "11 de diciembre",
-      "HORA DE INICIO": "20:00",
-      "HORA DE FIN": "21:54",
-      "PELÍCULA": "Rose of Nevada | Dir. Mark Jenkin | Reino Unido | 114 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 2",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "11 de diciembre",
-      "HORA DE INICIO": "15:00",
-      "HORA DE FIN": "16:53",
-      "PELÍCULA": "Muestra de cortometrajes de cineastas emergentes: Spiritum, Viaje de Negocios, Mata Gatos, Casa chica, El Sarape, Marea | 113 min \nQ&A",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 3",
-      "CATEGORÍA": "Muestra de cortometrajes de cineastas emergentes",
-      "COLOR": "#18333a"
-    },
-    {
-      "DIA": "11 de diciembre",
-      "HORA DE INICIO": "17:15",
-      "HORA DE FIN": "19:42",
-      "PELÍCULA": "Silent Friend | Dir. Ildiko Enyedi | Alemania, Francia, Hungría | 147 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 3",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "11 de diciembre",
-      "HORA DE INICIO": "20:15",
-      "HORA DE FIN": "22:01",
-      "PELÍCULA": "Pillion | Dir. Harry Lighton | Reino Unido | 106 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 3",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "11 de diciembre",
-      "HORA DE INICIO": "17:30",
-      "HORA DE FIN": "18:58",
-      "PELÍCULA": "Àvia, el jardín de la memoria | Dir. Rodrigo Imaz | México | 88 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 4",
-      "CATEGORÍA": "Proyecciones especiales",
-      "COLOR": "#3a3a08"
-    },
-    {
-      "DIA": "11 de diciembre",
-      "HORA DE INICIO": "19:30",
-      "HORA DE FIN": "21:23",
-      "PELÍCULA": "If I had legs I'd kick you | Dir. Mary Bronstein | EEUU | 113 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 4",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "11 de diciembre",
-      "HORA DE INICIO": "19:00",
-      "HORA DE FIN": "20:55",
-      "PELÍCULA": "Los domingos | Dir. Alauda Ruiz de Azua | España | 115 min",
-      "SEDE": "Cinemex San Lucas, Puerto Paraíso",
-      "SALA": "Sala 1",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "11 de diciembre",
-      "HORA DE INICIO": "19:00",
-      "HORA DE FIN": "20:53",
-      "PELÍCULA": "La Baja Inspira Cortometrajes: Inmensidades, El brillo de la luciérnaga, Solía buscar la luz allá afuera, Aguasal, El desvelo, Ella se queda | 113 min",
-      "SEDE": "Cinemex San Lucas, Puerto Paraíso",
-      "SALA": "Sala 2",
-      "CATEGORÍA": "La Baja Inspira: Cortometrajes",
-      "COLOR": "#e67050"
-    },
-    {
-      "DIA": "11 de diciembre",
-      "HORA DE INICIO": "19:00",
-      "HORA DE FIN": "20:55",
-      "PELÍCULA": "If I had legs I'd kick you | Dir. Mary Bronstein | EEUU | 113 min",
-      "SEDE": "Crania",
-      "SALA": "Escenario principal",
-      "CATEGORÍA": "Proyecciones especiales",
-      "COLOR": "#3a3a08"
-    },
-    {
-      "DIA": "12 de diciembre",
-      "HORA DE INICIO": "15:00",
-      "HORA DE FIN": "16:35",
-      "PELÍCULA": "Entre actores | Dir. José Paredes | México | 95 min\nQ&A",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 1",
-      "CATEGORÍA": "La Baja Inspira",
-      "COLOR": "#e67050"
-    },
-    {
-      "DIA": "12 de diciembre",
-      "HORA DE INICIO": "17:15",
-      "HORA DE FIN": "18:55",
-      "PELÍCULA": "El guardián | Dir. Nuria Ibáñez | México | 102 min\nQ&A",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 1",
-      "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
-      "COLOR": "#051723"
-    },
-    {
-      "DIA": "12 de diciembre",
-      "HORA DE INICIO": "19:45",
-      "HORA DE FIN": "21:24",
-      "PELÍCULA": "Urchin | Dir. Harris Dickinson | Reino Unido | 99 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 1",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "12 de diciembre",
-      "HORA DE INICIO": "15:00",
-      "HORA DE FIN": "16:28",
-      "PELÍCULA": "Entre dos tierras | Dir. Sebastián del Callejo | México | 88 min\nQ&A",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 2",
-      "CATEGORÍA": "La Baja Inspira",
-      "COLOR": "#e67050"
-    },
-    {
-      "DIA": "12 de diciembre",
-      "HORA DE INICIO": "17:15",
-      "HORA DE FIN": "18:58",
-      "PELÍCULA": "Frío metal | Dir. Clemente Castor | México | 100 min\nQ&A",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 2",
-      "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
-      "COLOR": "#051723"
-    },
-    {
-      "DIA": "12 de diciembre",
-      "HORA DE INICIO": "19:45",
-      "HORA DE FIN": "21:24",
-      "PELÍCULA": "Mistress dispeller | Dir. Elizabeth Lo | China, EEUU | 94 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 2",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "12 de diciembre",
-      "HORA DE INICIO": "19:15",
-      "HORA DE FIN": "20:56",
-      "PELÍCULA": "Mad bills to pay (or Destiny, dile que no soy malo) | Dir. Joel Alfonso Vargas | EEUU | 109 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 3",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "12 de diciembre",
-      "HORA DE INICIO": "19:00",
-      "HORA DE FIN": "20:46",
-      "PELÍCULA": "Pillion | Dir. Harry Lighton | Reino Unido | 106 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 4",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "12 de diciembre",
-      "HORA DE INICIO": "18:00",
-      "HORA DE FIN": "19:57",
-      "PELÍCULA": "MACDO | Dir. Racornelia | México | 117 min",
-      "SEDE": "Cinemex San Lucas, Puerto Paraíso",
-      "SALA": "Sala 1",
-      "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
-      "COLOR": "#051723"
-    },
-    {
-      "DIA": "12 de diciembre",
-      "HORA DE INICIO": "20:00",
-      "HORA DE FIN": "21:33",
-      "PELÍCULA": "La reserva | Dir. Pablo Perez Lombardini |México | 90 min",
-      "SEDE": "Cinemex San Lucas, Puerto Paraíso",
-      "SALA": "Sala 1",
-      "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
-      "COLOR": "#051723"
-    },
-    {
-      "DIA": "12 de diciembre",
-      "HORA DE INICIO": "19:00",
-      "HORA DE FIN": "20:35",
-      "PELÍCULA": "El cerro de polvo y sus veinte alrededores | Dir. Grupo Cinema Biocultural | México | 95 min",
-      "SEDE": "Cinemex San Lucas, Puerto Paraíso",
-      "SALA": "Sala 2",
-      "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
-      "COLOR": "#051723"
-    },
-    {
-      "DIA": "12 de diciembre",
-      "HORA DE INICIO": "18:10",
-      "HORA DE FIN": "18:40",
-      "PELÍCULA": "El Pulmo | Dir. Mark Kronemeyer y Begoña Félix | México | 30 min",
-      "SEDE": "Crania",
-      "SALA": "Escenario principal",
-      "CATEGORÍA": "Proyecciones especiales",
-      "COLOR": "#3a3a08"
-    },
-    {
-      "DIA": "12 de diciembre",
-      "HORA DE INICIO": "19:00",
-      "HORA DE FIN": "20:35",
-      "PELÍCULA": "Depeche Mode: M | Dir. Fernando Frías | EEUU, México | 95 min\nQ&A",
-      "SEDE": "Crania",
-      "SALA": "Escenario principal",
-      "CATEGORÍA": "Proyecciones especiales",
-      "COLOR": "#3a3a08"
-    },
-    {
-      "DIA": "12 de diciembre",
-      "HORA DE INICIO": "21:00",
-      "HORA DE FIN": "22:39",
-      "PELÍCULA": "La Nube En El Jardín En Vivo desde La Sala Nezahualcóyotl | Dir. Olmo Guerra | México | 99 min\nQ&A",
-      "SEDE": "Crania",
-      "SALA": "Escenario principal",
-      "CATEGORÍA": "Proyecciones especiales",
-      "COLOR": "#3a3a08"
-    },
-    {
-      "DIA": "13 de diciembre",
-      "HORA DE INICIO": "16:15",
-      "HORA DE FIN": "17:45",
-      "PELÍCULA": "La reserva | Dir. Pablo Perez Lombardini |México | 90 min\nQ&A",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 1",
-      "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
-      "COLOR": "#051723"
-    },
-    {
-      "DIA": "13 de diciembre",
-      "HORA DE INICIO": "19:00",
-      "HORA DE FIN": "20:53",
-      "PELÍCULA": "If I had legs I'd kick you | Dir. Mary Bronstein | EEUU | 113 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 1",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "13 de diciembre",
-      "HORA DE INICIO": "16:00",
-      "HORA DE FIN": "17:35",
-      "PELÍCULA": "El cerro de polvo y sus veinte alrededores | Dir. Grupo Cinema Biocultural | México | 95 min\nQ&A",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 2",
-      "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
-      "COLOR": "#051723"
-    },
-    {
-      "DIA": "13 de diciembre",
-      "HORA DE INICIO": "19:15",
-      "HORA DE FIN": "20:54",
-      "PELÍCULA": "Urchin | Dir. Harris Dickinson | Reino Unido | 99 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 2",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "13 de diciembre",
-      "HORA DE INICIO": "18:45",
-      "HORA DE FIN": "20:36",
-      "PELÍCULA": "Mad bills to pay (or Destiny, dile que no soy malo) | Dir. Joel Alfonso Vargas | EEUU | 101 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 3",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "13 de diciembre",
-      "HORA DE INICIO": "19:30",
-      "HORA DE FIN": "21:04",
-      "PELÍCULA": "Mistress dispeller | Dir. Elizabeth Lo | China, EEUU | 94 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 4",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "13 de diciembre",
-      "HORA DE INICIO": "18:00",
-      "HORA DE FIN": "19:44",
-      "PELÍCULA": "Say goodbye | Dir. Paloma López Carrillo | México | 104 min",
-      "SEDE": "Cinemex San Lucas, Puerto Paraíso",
-      "SALA": "Sala 1",
-      "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
-      "COLOR": "#051723"
-    },
-    {
-      "DIA": "13 de diciembre",
-      "HORA DE INICIO": "20:00",
-      "HORA DE FIN": "21:34",
-      "PELÍCULA": "Los amantes se despiden con la mirada | Dir. Rigoberto Perezcano | México | 84 min",
-      "SEDE": "Cinemex San Lucas, Puerto Paraíso",
-      "SALA": "Sala 1",
-      "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
-      "COLOR": "#051723"
-    },
-    {
-      "DIA": "13 de diciembre",
-      "HORA DE INICIO": "17:00",
-      "HORA DE FIN": "18:35",
-      "PELÍCULA": "Entre actores | Dir. José Paredes | México | 95 min",
-      "SEDE": "Cinemex San Lucas, Puerto Paraíso",
-      "SALA": "Sala 2",
-      "CATEGORÍA": "La Baja Inspira",
-      "COLOR": "#e67050"
-    },
-    {
-      "DIA": "13 de diciembre",
-      "HORA DE INICIO": "19:00",
-      "HORA DE FIN": "20:40",
-      "PELÍCULA": "El guardián | Dir. Nuria Ibáñez | México | 100 min",
-      "SEDE": "Cinemex San Lucas, Puerto Paraíso",
-      "SALA": "Sala 2",
-      "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
-      "COLOR": "#051723"
-    },
-    {
-      "DIA": "",
-      "HORA DE INICIO": "",
-      "HORA DE FIN": "",
-      "PELÍCULA": "",
-      "SEDE": "",
-      "SALA": "",
-      "CATEGORÍA": "",
-      "COLOR": ""
-    },
-    {
-      "DIA": "13 de diciembre",
-      "HORA DE INICIO": "18:30",
-      "HORA DE FIN": "20:18",
-      "PELÍCULA": "Un monstruo viene a verme | Dir. Juan Antonio Bayona | España, EEUU | 108 min",
-      "SEDE": "Crania",
-      "SALA": "Escenario principal",
-      "CATEGORÍA": "Homenaje a Eugenio Caballero",
-      "COLOR": "#e8c368"
-    },
-    {
-      "DIA": "14 de diciembre",
-      "HORA DE INICIO": "16:30",
-      "HORA DE FIN": "18:25",
-      "PELÍCULA": "Sotto le nuvole | Dir. Gianfranco Rosi | Italia | 115 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 1",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "14 de diciembre",
-      "HORA DE INICIO": "19:00",
-      "HORA DE FIN": "20:47",
-      "PELÍCULA": "The Fence | Dir. Claire Denis | Italia | 107 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 1",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "14 de diciembre",
-      "HORA DE INICIO": "17:00",
-      "HORA DE FIN": "19:12",
-      "PELÍCULA": "Orphan | Dir. Lászlo Nemes | Hungría | 132 min.",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 2",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "14 de diciembre",
-      "HORA DE INICIO": "18:00",
-      "HORA DE FIN": "20:27",
-      "PELÍCULA": "Silent Friend | Dir. Ildiko Enyedi | Alemania, Francia, Hungría | 147 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 3",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "14 de diciembre",
-      "HORA DE INICIO": "17:00",
-      "HORA DE FIN": "18:54",
-      "PELÍCULA": "Rose of Nevada | Dir. Mark Jenkin | Reino Unido | 114 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 4",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "14 de diciembre",
-      "HORA DE INICIO": "19:30",
-      "HORA DE FIN": "21:06",
-      "PELÍCULA": "Late fame | Dir. Kent Jones | EEUU | 96 min",
-      "SEDE": "Cinemex San José",
-      "SALA": "Sala 4",
-      "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
-      "COLOR": "#6688c5"
-    },
-    {
-      "DIA": "14 de diciembre",
-      "HORA DE INICIO": "18:00",
-      "HORA DE FIN": "19:50",
-      "PELÍCULA": "Isleño | Dir. César Talamantes | México | 110 min",
-      "SEDE": "Cinemex San Lucas, Puerto Paraíso",
-      "SALA": "Sala 1",
-      "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
-      "COLOR": "#051723"
-    },
-    {
-      "DIA": "14 de diciembre",
-      "HORA DE INICIO": "20:15",
-      "HORA DE FIN": "21:45",
-      "PELÍCULA": "Un techo sin cielo | Dir. Diego Hernández | México | 90 min",
-      "SEDE": "Cinemex San Lucas, Puerto Paraíso",
-      "SALA": "Sala 1",
-      "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
-      "COLOR": "#051723"
-    },
-    {
-      "DIA": "14 de diciembre",
-      "HORA DE INICIO": "17:00",
-      "HORA DE FIN": "18:28",
-      "PELÍCULA": "Entre dos tierras | Dir. Sebastián del Callejo | México | 88 min",
-      "SEDE": "Cinemex San Lucas, Puerto Paraíso",
-      "SALA": "Sala 2",
-      "CATEGORÍA": "La Baja Inspira",
-      "COLOR": ""
-    },
-    {
-      "DIA": "14 de diciembre",
-      "HORA DE INICIO": "19:00",
-      "HORA DE FIN": "20:43",
-      "PELÍCULA": "Frío metal | Dir. Clemente Castor | México | 103 min",
-      "SEDE": "Cinemex San Lucas, Puerto Paraíso",
-      "SALA": "Sala 2",
-      "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
-      "COLOR": "#051723"
-    },
-    {
-      "DIA": "14 de diciembre",
-      "HORA DE INICIO": "16:30",
-      "HORA DE FIN": "18:20",
-      "PELÍCULA": "Lalo y Luquín van a la baja | Dir. Jorge Curioca | México | 110 min",
-      "SEDE": "El Jetty",
-      "SALA": "Proyección gratuita",
-      "CATEGORÍA": "Proyecciones especiales",
-      "COLOR": "#3a3a08"
-    },
-    {
-      "DIA": "14 de diciembre",
-      "HORA DE INICIO": "18:30",
-      "HORA DE FIN": "21:04",
-      "PELÍCULA": "Amores Perros | Dir. Alejandro González Iñárritu | México | 154 min",
-      "SEDE": "El Jetty",
-      "SALA": "Proyección gratuita",
-      "CATEGORÍA": "Proyecciones especiales",
-      "COLOR": "#3a3a08"
-    }
-];
+  {
+    "DIA": "14 de diciembre",
+    "HORA DE INICIO": "18:30",
+    "HORA DE FIN": "21:04",
+    "PELÍCULA": "Amores Perros | Dir. Alejandro González Iñárritu | México | 154 min",
+    "SEDE": "El Jetty",
+    "SALA": "Proyección gratuita",
+    "CATEGORÍA": "Proyecciones especiales",
+    "video": "https://youtu.be/_P29GF_NbDc?si=Fu0myOTylLzAsrUw",
+    "COLOR": "#3a3a08"
+  },
+  {
+    "DIA": "10 de diciembre",
+    "HORA DE INICIO": "19:30",
+    "HORA DE FIN": "20:58",
+    "PELÍCULA": "Àvia, el jardín de la memoria | Dir. Rodrigo Imaz | México | 88 min",
+    "SEDE": "Cinemex San Lucas, Puerto Paraíso",
+    "SALA": "Sala 2",
+    "CATEGORÍA": "Proyecciones especiales",
+    "video": "video/Trailers/AVIA TRAILER.mp4",
+    "COLOR": "#3a3a08"
+  },
+  {
+    "DIA": "11 de diciembre",
+    "HORA DE INICIO": "17:30",
+    "HORA DE FIN": "18:58",
+    "PELÍCULA": "Àvia, el jardín de la memoria | Dir. Rodrigo Imaz | México | 88 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 4",
+    "CATEGORÍA": "Proyecciones especiales",
+    "video": "video/Trailers/AVIA TRAILER.mp5",
+    "COLOR": "#3a3a08"
+  },
+  {
+    "DIA": "13 de diciembre",
+    "HORA DE INICIO": "18:00",
+    "HORA DE FIN": "19:44",
+    "PELÍCULA": "Say goodbye | Dir. Paloma López Carrillo | México | 104 min",
+    "SEDE": "Cinemex San Lucas, Puerto Paraíso",
+    "SALA": "Sala 1",
+    "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
+    "video": "https://www.youtube.com/watch?v=aAghbAy-FN8",
+    "COLOR": "#051723"
+  },
+  {
+    "DIA": "12 de diciembre",
+    "HORA DE INICIO": "19:00",
+    "HORA DE FIN": "20:35",
+    "PELÍCULA": "El cerro de polvo y sus veinte alrededores | Dir. Grupo Cinema Biocultural | México | 95 min",
+    "SEDE": "Cinemex San Lucas, Puerto Paraíso",
+    "SALA": "Sala 2",
+    "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
+    "video": "https://youtu.be/lRSzn1uWc8s",
+    "COLOR": "#051723"
+  },
+  {
+    "DIA": "13 de diciembre",
+    "HORA DE INICIO": "16:00",
+    "HORA DE FIN": "17:35",
+    "PELÍCULA": "El cerro de polvo y sus veinte alrededores | Dir. Grupo Cinema Biocultural | México | 95 min\nQ&A",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 2",
+    "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
+    "video": "https://youtu.be/lRSzn1uWc8s",
+    "COLOR": "#051723"
+  },
+  {
+    "DIA": "11 de diciembre",
+    "HORA DE INICIO": "17:15",
+    "HORA DE FIN": "18:59",
+    "PELÍCULA": "Say goodbye | Dir. Paloma López Carrillo | México | 104 min\nQ&A",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 1",
+    "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
+    "video": "https://www.youtube.com/watch?v=aAghbAy-FN8",
+    "COLOR": "#051723"
+  },
+  {
+    "DIA": "11 de diciembre",
+    "HORA DE INICIO": "19:00",
+    "HORA DE FIN": "20:53",
+    "PELÍCULA": "La Baja Inspira Cortometrajes: Inmensidades, El brillo de la luciérnaga, Solía buscar la luz allá afuera, Aguasal, El desvelo, Ella se queda | 113 min",
+    "SEDE": "Cinemex San Lucas, Puerto Paraíso",
+    "SALA": "Sala 2",
+    "CATEGORÍA": "La Baja Inspira: Cortometrajes",
+    "video": "Estos son 6 cortometrajes cada uno con sus propios trailers",
+    "COLOR": "#e67050"
+  },
+  {
+    "DIA": "11 de diciembre",
+    "HORA DE INICIO": "15:00",
+    "HORA DE FIN": "16:53",
+    "PELÍCULA": "Muestra de cortometrajes de cineastas emergentes: Spiritum, Viaje de Negocios, Mata Gatos, Casa chica, El Sarape, Marea | 113 min \nQ&A",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 3",
+    "CATEGORÍA": "Muestra de cortometrajes de cineastas emergentes",
+    "video": "Estos son 6 cortometrajes cada uno con sus propios trailers",
+    "COLOR": "#18333a"
+  },
+  {
+    "DIA": "13 de diciembre",
+    "HORA DE INICIO": "17:00",
+    "HORA DE FIN": "18:35",
+    "PELÍCULA": "Entre actores | Dir. José Paredes | México | 95 min",
+    "SEDE": "Cinemex San Lucas, Puerto Paraíso",
+    "SALA": "Sala 2",
+    "CATEGORÍA": "La Baja Inspira",
+    "video": "https://vimeo.com/928964825?fl=pl&fe=vl",
+    "COLOR": "#e67050"
+  },
+  {
+    "DIA": "12 de diciembre",
+    "HORA DE INICIO": "15:00",
+    "HORA DE FIN": "16:35",
+    "PELÍCULA": "Entre actores | Dir. José Paredes | México | 95 min\nQ&A",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 1",
+    "CATEGORÍA": "La Baja Inspira",
+    "video": "https://vimeo.com/928964825?fl=pl&fe=vl",
+    "COLOR": "#e67050"
+  },
+  {
+    "DIA": "14 de diciembre",
+    "HORA DE INICIO": "17:00",
+    "HORA DE FIN": "18:28",
+    "PELÍCULA": "Entre dos tierras | Dir. Sebastián del Callejo | México | 88 min",
+    "SEDE": "Cinemex San Lucas, Puerto Paraíso",
+    "SALA": "Sala 2",
+    "CATEGORÍA": "La Baja Inspira",
+    "video": "https://vimeo.com/1097741070?share=copy&fl=sv&fe=ci",
+    "COLOR": "#e67050"
+  },
+  {
+    "DIA": "12 de diciembre",
+    "HORA DE INICIO": "15:00",
+    "HORA DE FIN": "16:28",
+    "PELÍCULA": "Entre dos tierras | Dir. Sebastián del Callejo | México | 88 min\nQ&A",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 2",
+    "CATEGORÍA": "La Baja Inspira",
+    "video": "https://vimeo.com/1097741070?share=copy&fl=sv&fe=ci",
+    "COLOR": "#e67050"
+  },
+  {
+    "DIA": "12 de diciembre",
+    "HORA DE INICIO": "17:15",
+    "HORA DE FIN": "18:58",
+    "PELÍCULA": "Frío metal | Dir. Clemente Castor | México | 100 min\nQ&A",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 2",
+    "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
+    "video": "https://www.youtube.com/watch?v=Oqgr8_nI1og",
+    "COLOR": "#051723"
+  },
+  {
+    "DIA": "14 de diciembre",
+    "HORA DE INICIO": "19:00",
+    "HORA DE FIN": "20:43",
+    "PELÍCULA": "Frío metal | Dir. Clemente Castor | México | 103 min",
+    "SEDE": "Cinemex San Lucas, Puerto Paraíso",
+    "SALA": "Sala 2",
+    "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
+    "video": "https://www.youtube.com/watch?v=Oqgr8_nI1og",
+    "COLOR": "#051723"
+  },
+  {
+    "DIA": "11 de diciembre",
+    "HORA DE INICIO": "19:30",
+    "HORA DE FIN": "21:23",
+    "PELÍCULA": "If I had legs I'd kick you | Dir. Mary Bronstein | EEUU | 113 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 4",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "https://youtu.be/ywFDoT7LBbQ?si=c5JMpFXWqPBog1_B",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "11 de diciembre",
+    "HORA DE INICIO": "19:00",
+    "HORA DE FIN": "20:55",
+    "PELÍCULA": "If I had legs I'd kick you | Dir. Mary Bronstein | EEUU | 113 min",
+    "SEDE": "Crania",
+    "SALA": "Escenario principal",
+    "CATEGORÍA": "Proyecciones especiales",
+    "video": "https://youtu.be/ywFDoT7LBbQ?si=c5JMpFXWqPBog1_B",
+    "COLOR": "#3a3a08"
+  },
+  {
+    "DIA": "13 de diciembre",
+    "HORA DE INICIO": "19:00",
+    "HORA DE FIN": "20:53",
+    "PELÍCULA": "If I had legs I'd kick you | Dir. Mary Bronstein | EEUU | 113 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 1",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "https://youtu.be/ywFDoT7LBbQ?si=c5JMpFXWqPBog1_B",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "14 de diciembre",
+    "HORA DE INICIO": "18:00",
+    "HORA DE FIN": "19:50",
+    "PELÍCULA": "Isleño | Dir. César Talamantes | México | 110 min",
+    "SEDE": "Cinemex San Lucas, Puerto Paraíso",
+    "SALA": "Sala 1",
+    "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
+    "video": "video/Trailers/5 ISLENO_Trailer_Oficial_Subt_ENG_Los_Cabos.mp4",
+    "COLOR": "#051723"
+  },
+  {
+    "DIA": "10 de diciembre",
+    "HORA DE INICIO": "18:00",
+    "HORA DE FIN": "19:50",
+    "PELÍCULA": "Isleño | Dir. César Talamantes | México | 110 min\nQ&A",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 1",
+    "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
+    "video": "video/Trailers/5 ISLENO_Trailer_Oficial_ESP_Sin_Subt_Los_Cabos.mp4",
+    "COLOR": "#051723"
+  },
+  {
+    "DIA": "12 de diciembre",
+    "HORA DE INICIO": "18:10",
+    "HORA DE FIN": "18:40",
+    "PELÍCULA": "El Pulmo | Dir. Mark Kronemeyer y Begoña Félix | México | 30 min",
+    "SEDE": "Crania",
+    "SALA": "Escenario principal",
+    "CATEGORÍA": "Proyecciones especiales",
+    "video": "https://www.youtube.com/watch?v=gFyoxS7fZKQ",
+    "COLOR": "#3a3a08"
+  },
+  {
+    "DIA": "11 de diciembre",
+    "HORA DE INICIO": "20:15",
+    "HORA DE FIN": "22:01",
+    "PELÍCULA": "Pillion | Dir. Harry Lighton | Reino Unido | 106 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 3",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "https://www.youtube.com/watch?v=iC9xlgRBOdI",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "12 de diciembre",
+    "HORA DE INICIO": "20:00",
+    "HORA DE FIN": "21:33",
+    "PELÍCULA": "La reserva | Dir. Pablo Perez Lombardini |México | 90 min",
+    "SEDE": "Cinemex San Lucas, Puerto Paraíso",
+    "SALA": "Sala 1",
+    "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
+    "video": "https://youtu.be/XgiwSXRGp6w",
+    "COLOR": "#051723"
+  },
+  {
+    "DIA": "13 de diciembre",
+    "HORA DE INICIO": "16:15",
+    "HORA DE FIN": "17:45",
+    "PELÍCULA": "La reserva | Dir. Pablo Perez Lombardini |México | 90 min\nQ&A",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 1",
+    "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
+    "video": "https://youtu.be/XgiwSXRGp6w",
+    "COLOR": "#051723"
+  },
+  {
+    "DIA": "10 de diciembre",
+    "HORA DE INICIO": "17:00",
+    "HORA DE FIN": "18:50",
+    "PELÍCULA": "Lalo y Luquín van a la baja | Dir. Jorge Curioca | México | 110 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 3",
+    "CATEGORÍA": "Proyecciones especiales",
+    "video": "https://vimeo.com/1002086492/c0aa9c63b7",
+    "COLOR": "#3a3a08"
+  },
+  {
+    "DIA": "14 de diciembre",
+    "HORA DE INICIO": "16:30",
+    "HORA DE FIN": "18:20",
+    "PELÍCULA": "Lalo y Luquín van a la baja | Dir. Jorge Curioca | México | 110 min",
+    "SEDE": "El Jetty",
+    "SALA": "Proyección gratuita",
+    "CATEGORÍA": "Proyecciones especiales",
+    "video": "https://vimeo.com/1002086492/c0aa9c63b7",
+    "COLOR": "#3a3a08"
+  },
+  {
+    "DIA": "11 de diciembre",
+    "HORA DE INICIO": "19:30",
+    "HORA DE FIN": "21:06",
+    "PELÍCULA": "Late fame | Dir. Kent Jones | EEUU | 96 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 1",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "https://www.youtube.com/watch?v=gmMXGu19YAg",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "14 de diciembre",
+    "HORA DE INICIO": "19:30",
+    "HORA DE FIN": "21:06",
+    "PELÍCULA": "Late fame | Dir. Kent Jones | EEUU | 96 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 4",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "https://www.youtube.com/watch?v=gmMXGu19YAg",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "12 de diciembre",
+    "HORA DE INICIO": "19:00",
+    "HORA DE FIN": "20:46",
+    "PELÍCULA": "Pillion | Dir. Harry Lighton | Reino Unido | 106 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 4",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "https://www.youtube.com/watch?v=iC9xlgRBOdI",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "12 de diciembre",
+    "HORA DE INICIO": "19:00",
+    "HORA DE FIN": "20:35",
+    "PELÍCULA": "Depeche Mode: M | Dir. Fernando Frías | EEUU, México | 95 min\nQ&A",
+    "SEDE": "Crania",
+    "SALA": "Escenario principal",
+    "CATEGORÍA": "Proyecciones especiales",
+    "video": "https://www.youtube.com/watch?v=Ju9IRHOQTkM",
+    "COLOR": "#3a3a08"
+  },
+  {
+    "DIA": "11 de diciembre",
+    "HORA DE INICIO": "19:00",
+    "HORA DE FIN": "20:55",
+    "PELÍCULA": "Los domingos | Dir. Alauda Ruiz de Azua | España | 115 min",
+    "SEDE": "Cinemex San Lucas, Puerto Paraíso",
+    "SALA": "Sala 1",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "https://youtu.be/Wk57pYX-YT4?si=WUyFumFvHkNAufHZ",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "12 de diciembre",
+    "HORA DE INICIO": "18:00",
+    "HORA DE FIN": "19:57",
+    "PELÍCULA": "MACDO | Dir. Racornelia | México | 117 min",
+    "SEDE": "Cinemex San Lucas, Puerto Paraíso",
+    "SALA": "Sala 1",
+    "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
+    "video": "https://enantiodromia.studio/MACDO-Trailer",
+    "COLOR": "#051723"
+  },
+  {
+    "DIA": "11 de diciembre",
+    "HORA DE INICIO": "15:00",
+    "HORA DE FIN": "16:57",
+    "PELÍCULA": "MACDO | Dir. Racornelia | México | 117 min\nQ&A",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 2",
+    "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
+    "video": "https://enantiodromia.studio/MACDO-Trailer",
+    "COLOR": "#051723"
+  },
+  {
+    "DIA": "13 de diciembre",
+    "HORA DE INICIO": "18:45",
+    "HORA DE FIN": "20:36",
+    "PELÍCULA": "Mad bills to pay (or Destiny, dile que no soy malo) | Dir. Joel Alfonso Vargas | EEUU | 101 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 3",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "video/Trailers/MAD BILLS TO PAY_CLIP 02_Full English subs.mov",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "12 de diciembre",
+    "HORA DE INICIO": "19:15",
+    "HORA DE FIN": "20:56",
+    "PELÍCULA": "Mad bills to pay (or Destiny, dile que no soy malo) | Dir. Joel Alfonso Vargas | EEUU | 109 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 3",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "video/Trailers/MAD BILLS TO PAY_CLIP 02_Full English subs.mov",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "12 de diciembre",
+    "HORA DE INICIO": "19:45",
+    "HORA DE FIN": "21:24",
+    "PELÍCULA": "Mistress dispeller | Dir. Elizabeth Lo | China, EEUU | 94 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 2",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "https://www.youtube.com/watch?v=KeQ5zIc381I",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "13 de diciembre",
+    "HORA DE INICIO": "19:30",
+    "HORA DE FIN": "21:04",
+    "PELÍCULA": "Mistress dispeller | Dir. Elizabeth Lo | China, EEUU | 94 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 4",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "https://www.youtube.com/watch?v=KeQ5zIc381I",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "13 de diciembre",
+    "HORA DE INICIO": "19:00",
+    "HORA DE FIN": "20:40",
+    "PELÍCULA": "El guardián | Dir. Nuria Ibáñez | México | 100 min",
+    "SEDE": "Cinemex San Lucas, Puerto Paraíso",
+    "SALA": "Sala 2",
+    "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
+    "video": "N/A",
+    "COLOR": "#051723"
+  },
+  {
+    "DIA": "10 de diciembre",
+    "HORA DE INICIO": "18:30",
+    "HORA DE FIN": "20:42",
+    "PELÍCULA": "Orphan | Dir. Lászlo Nemes | Hungría | 132 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 4",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "https://youtu.be/ttF-uKy81ZE",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "14 de diciembre",
+    "HORA DE INICIO": "17:00",
+    "HORA DE FIN": "19:12",
+    "PELÍCULA": "Orphan | Dir. Lászlo Nemes | Hungría | 132 min.",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 2",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "https://youtu.be/ttF-uKy81ZE",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "12 de diciembre",
+    "HORA DE INICIO": "17:15",
+    "HORA DE FIN": "18:55",
+    "PELÍCULA": "El guardián | Dir. Nuria Ibáñez | México | 102 min\nQ&A",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 1",
+    "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
+    "video": "N/A",
+    "COLOR": "#051723"
+  },
+  {
+    "DIA": "12 de diciembre",
+    "HORA DE INICIO": "21:00",
+    "HORA DE FIN": "22:39",
+    "PELÍCULA": "La Nube En El Jardín En Vivo desde La Sala Nezahualcóyotl | Dir. Olmo Guerra | México | 99 min\nQ&A",
+    "SEDE": "Crania",
+    "SALA": "Escenario principal",
+    "CATEGORÍA": "Proyecciones especiales",
+    "video": "N/A",
+    "COLOR": "#3a3a08"
+  },
+  {
+    "DIA": "13 de diciembre",
+    "HORA DE INICIO": "20:00",
+    "HORA DE FIN": "21:34",
+    "PELÍCULA": "Los amantes se despiden con la mirada | Dir. Rigoberto Perezcano | México | 84 min",
+    "SEDE": "Cinemex San Lucas, Puerto Paraíso",
+    "SALA": "Sala 1",
+    "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
+    "video": "N/A",
+    "COLOR": "#051723"
+  },
+  {
+    "DIA": "11 de diciembre",
+    "HORA DE INICIO": "17:45",
+    "HORA DE FIN": "19:09",
+    "PELÍCULA": "Los amantes se despiden con la mirada | Dir. Rigoberto Perezcano | México | 84 min\nQ&A",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 2",
+    "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
+    "video": "N/A",
+    "COLOR": "#051723"
+  },
+  {
+    "DIA": "11 de diciembre",
+    "HORA DE INICIO": "20:00",
+    "HORA DE FIN": "21:54",
+    "PELÍCULA": "Rose of Nevada | Dir. Mark Jenkin | Reino Unido | 114 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 2",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "N/A",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "14 de diciembre",
+    "HORA DE INICIO": "17:00",
+    "HORA DE FIN": "18:54",
+    "PELÍCULA": "Rose of Nevada | Dir. Mark Jenkin | Reino Unido | 114 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 4",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "N/A",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "10 de diciembre",
+    "HORA DE INICIO": "19:00",
+    "HORA DE FIN": "20:30",
+    "PELÍCULA": "Si no ardemos, cómo iluminar la noche | Dir. Kim Torres | Costa Rica, México | 90 min",
+    "SEDE": "Cinemex San Lucas, Puerto Paraíso",
+    "SALA": "Sala 1",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "https://youtu.be/ljeQP37i_I0?si=zv5JlaEqDYcueS_F",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "11 de diciembre",
+    "HORA DE INICIO": "15:00",
+    "HORA DE FIN": "16:30",
+    "PELÍCULA": "Si no ardemos, cómo iluminar la noche | Dir. Kim Torres | Costa Rica, México | 95 min\nQ&A",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 1",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "https://youtu.be/ljeQP37i_I0?si=zv5JlaEqDYcueS_F",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "11 de diciembre",
+    "HORA DE INICIO": "17:15",
+    "HORA DE FIN": "19:42",
+    "PELÍCULA": "Silent Friend | Dir. Ildiko Enyedi | Alemania, Francia, Hungría | 147 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 3",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "video/Trailers/250901- SILENT FRIEND - FA V7B_VO_GER_MIXST_H264.mp4",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "14 de diciembre",
+    "HORA DE INICIO": "18:00",
+    "HORA DE FIN": "20:27",
+    "PELÍCULA": "Silent Friend | Dir. Ildiko Enyedi | Alemania, Francia, Hungría | 147 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 3",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "video/Trailers/250901- SILENT FRIEND - FA V7B_VO_GER_MIXST_H264.mp4",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "10 de diciembre",
+    "HORA DE INICIO": "19:00",
+    "HORA DE FIN": "20:55",
+    "PELÍCULA": "Sotto le nuvole | Dir. Gianfranco Rosi | Italia | 115 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 3",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "https://www.youtube.com/watch?v=tJB0ez7ja_Y",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "14 de diciembre",
+    "HORA DE INICIO": "16:30",
+    "HORA DE FIN": "18:25",
+    "PELÍCULA": "Sotto le nuvole | Dir. Gianfranco Rosi | Italia | 115 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 1",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "https://www.youtube.com/watch?v=tJB0ez7ja_Y",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "14 de diciembre",
+    "HORA DE INICIO": "19:00",
+    "HORA DE FIN": "20:47",
+    "PELÍCULA": "The Fence | Dir. Claire Denis | Italia | 107 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 1",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "N/A",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "13 de diciembre",
+    "HORA DE INICIO": "18:30",
+    "HORA DE FIN": "20:18",
+    "PELÍCULA": "Un monstruo viene a verme | Dir. Juan Antonio Bayona | España, EEUU | 108 min",
+    "SEDE": "Crania",
+    "SALA": "Escenario principal",
+    "CATEGORÍA": "Homenaje a Eugenio Caballero",
+    "video": "https://youtu.be/VsRy8nchQBQ",
+    "COLOR": "#e8c368"
+  },
+  {
+    "DIA": "14 de diciembre",
+    "HORA DE INICIO": "20:15",
+    "HORA DE FIN": "21:45",
+    "PELÍCULA": "Un techo sin cielo | Dir. Diego Hernández | México | 90 min",
+    "SEDE": "Cinemex San Lucas, Puerto Paraíso",
+    "SALA": "Sala 1",
+    "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
+    "video": "https://www.youtube.com/watch?v=jWvURL8Bulc",
+    "COLOR": "#051723"
+  },
+  {
+    "DIA": "10 de diciembre",
+    "HORA DE INICIO": "18:30",
+    "HORA DE FIN": "20:00",
+    "PELÍCULA": "Un techo sin cielo | Dir. Diego Hernández | México | 90 min\nQ&A",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 2",
+    "CATEGORÍA": "Competencia FICLosCabos de largometrajes mexicanos",
+    "video": "https://www.youtube.com/watch?v=jWvURL8Bulc",
+    "COLOR": "#051723"
+  },
+  {
+    "DIA": "12 de diciembre",
+    "HORA DE INICIO": "19:45",
+    "HORA DE FIN": "21:24",
+    "PELÍCULA": "Urchin | Dir. Harris Dickinson | Reino Unido | 99 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 1",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "https://youtu.be/5d33PFs-ZiI",
+    "COLOR": "#6688c5"
+  },
+  {
+    "DIA": "13 de diciembre",
+    "HORA DE INICIO": "19:15",
+    "HORA DE FIN": "20:54",
+    "PELÍCULA": "Urchin | Dir. Harris Dickinson | Reino Unido | 99 min",
+    "SEDE": "Cinemex San José",
+    "SALA": "Sala 2",
+    "CATEGORÍA": "Marejada: Muestra de largometrajes internacionales",
+    "video": "https://youtu.be/5d33PFs-ZiI",
+    "COLOR": "#6688c5"
+  }
+]
+
+    

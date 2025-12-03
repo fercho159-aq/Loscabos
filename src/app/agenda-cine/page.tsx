@@ -1,7 +1,7 @@
 
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Badge } from '@/components/ui/badge';
@@ -10,8 +10,9 @@ import { cinemaScheduleData, type CinemaScheduleEvent } from '@/lib/cinema-sched
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { Download } from 'lucide-react';
+import { Download, PlayCircle } from 'lucide-react';
 import Link from 'next/link';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 
 // Helper to get unique values
 const getUniqueValues = (data: CinemaScheduleEvent[], key: keyof CinemaScheduleEvent) => {
@@ -44,8 +45,7 @@ function getEventDurationInMinutes(event: CinemaScheduleEvent): number {
     return endTimeInMinutes - startTimeInMinutes;
 }
 
-
-const DayTab = ({ day }: { day: string }) => {
+const DayTab = ({ day, onPlayTrailer }: { day: string, onPlayTrailer: (videoUrl: string) => void }) => {
   const occupiedCells = new Set<string>();
   const venuesWithRooms = venues.reduce((acc, venue) => {
     const rooms = getUniqueValues(cinemaScheduleData.filter(e => e.SEDE === venue), 'SALA').sort();
@@ -103,23 +103,38 @@ const DayTab = ({ day }: { day: string }) => {
                  if(event) {
                     const durationInMinutes = getEventDurationInMinutes(event);
                     const rowSpan = Math.ceil(durationInMinutes / 15);
+                    const canPlayTrailer = event.video && event.video !== 'N/A' && !event.video.includes('Estos son');
 
                     return (
                       <td
                         key={`${event.PELÍCULA}-${time}-${venue}-${room}`}
                         rowSpan={rowSpan}
-                        className="p-3 text-white align-top"
+                        className="p-3 text-white align-top overflow-hidden rounded"
                         style={{ backgroundColor: event.COLOR || '#18323A', minHeight: `${rowSpan * 1}rem` }}
                       >
                          <div className="flex flex-col justify-between h-full">
-                           <p className="font-semibold text-sm whitespace-pre-line mb-2">{event.PELÍCULA}</p>
-                           <p className="text-xs text-white/80">{event['HORA DE INICIO']} - {event['HORA DE FIN']}</p>
-                           <Badge 
-                            variant="secondary"
-                            className="mt-auto text-xs bg-white/20 text-white border-none w-fit"
-                            >
-                            {event['CATEGORÍA']}
-                          </Badge>
+                           <div>
+                            <p className="font-semibold text-sm whitespace-pre-line mb-2">{event.PELÍCULA}</p>
+                            <p className="text-xs text-white/80">{event['HORA DE INICIO']} - {event['HORA DE FIN']}</p>
+                           </div>
+                           <div className="flex justify-between items-end mt-2">
+                             <Badge 
+                              variant="secondary"
+                              className="mt-auto text-xs bg-white/20 text-white border-none w-fit"
+                              >
+                              {event['CATEGORÍA']}
+                            </Badge>
+                            {canPlayTrailer && (
+                                <Button
+                                    variant="ghost"
+                                    size="icon"
+                                    className="h-8 w-8 text-white/80 hover:text-white hover:bg-white/20"
+                                    onClick={() => onPlayTrailer(event.video)}
+                                >
+                                    <PlayCircle className="h-5 w-5" />
+                                </Button>
+                            )}
+                           </div>
                          </div>
                       </td>
                     );
@@ -137,6 +152,28 @@ const DayTab = ({ day }: { day: string }) => {
 
 
 export default function AgendaCinePage() {
+  const [trailerUrl, setTrailerUrl] = useState<string | null>(null);
+  const [isTrailerOpen, setIsTrailerOpen] = useState(false);
+
+  const handlePlayTrailer = (videoUrl: string) => {
+    let embedUrl = '';
+    if (videoUrl.includes('youtu.be') || videoUrl.includes('youtube.com')) {
+      const videoId = videoUrl.split('v=')[1]?.split('&')[0] || videoUrl.split('/').pop()?.split('?')[0];
+      embedUrl = `https://www.youtube.com/embed/${videoId}`;
+    } else if (videoUrl.includes('vimeo.com')) {
+      const videoId = videoUrl.split('/').pop();
+      embedUrl = `https://player.vimeo.com/video/${videoId}`;
+    } else if (videoUrl.startsWith('video/')) {
+        embedUrl = `/${videoUrl}`;
+    }
+    
+    if (embedUrl) {
+      setTrailerUrl(embedUrl);
+      setIsTrailerOpen(true);
+    }
+  };
+
+  const isLocalVideo = trailerUrl?.startsWith('/');
   
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -191,7 +228,7 @@ export default function AgendaCinePage() {
               </div>
               {sortedDays.map(day => (
                 <TabsContent key={day} value={day} className="mt-8">
-                  <DayTab day={day} />
+                  <DayTab day={day} onPlayTrailer={handlePlayTrailer} />
                 </TabsContent>
               ))}
             </Tabs>
@@ -199,7 +236,37 @@ export default function AgendaCinePage() {
         </section>
 
       </main>
+
+       <Dialog open={isTrailerOpen} onOpenChange={setIsTrailerOpen}>
+        <DialogContent className="sm:max-w-3xl bg-black border-0 p-0">
+          <DialogHeader>
+            <DialogTitle className="sr-only">Trailer</DialogTitle>
+          </DialogHeader>
+          <div className="aspect-video">
+            {trailerUrl && (
+                isLocalVideo ? (
+                    <video controls autoPlay className="w-full h-full">
+                        <source src={trailerUrl} type="video/mp4" />
+                        Tu navegador no soporta el tag de video.
+                    </video>
+                ) : (
+                    <iframe
+                        src={trailerUrl}
+                        title="Trailer"
+                        className="w-full h-full"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
+                )
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
+
       <Footer />
     </div>
   );
 }
+
+    

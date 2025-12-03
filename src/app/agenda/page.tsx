@@ -16,8 +16,7 @@ import Link from 'next/link';
 function getEvent(day: string, time: string, venue: string): Event | undefined {
   const [slotHour, slotMinute] = time.split(':').map(Number);
   const slotStartTime = slotHour * 60 + slotMinute;
-  const slotEndTime = slotStartTime + 15;
-
+  
   return agendaData.find(e => {
     if (e.Dia.toLowerCase() !== day.toLowerCase() || e.SEDE !== venue) {
       return false;
@@ -26,6 +25,7 @@ function getEvent(day: string, time: string, venue: string): Event | undefined {
     const eventTime = eventHour * 60 + eventMinute;
     
     // Check if the event starts within the 15-minute slot
+    const slotEndTime = slotStartTime + 15;
     return eventTime >= slotStartTime && eventTime < slotEndTime;
   });
 }
@@ -103,7 +103,7 @@ const DayTab = ({ day }: { day: string }) => {
                       <td
                         key={`${event.EVENTO}-${time}-${venue}`}
                         rowSpan={rowSpan}
-                        className="p-3 text-white align-top"
+                        className="p-3 text-white align-top overflow-hidden rounded"
                         style={{ backgroundColor: event.COLOR, minHeight: `${rowSpan * 1}rem` }}
                       >
                          <div className="flex flex-col justify-between h-full">
