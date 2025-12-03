@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '@/components/cabo-cine/header';
 import Footer from '@/components/cabo-cine/footer';
 import { Badge } from '@/components/ui/badge';
@@ -9,10 +9,38 @@ import { filmData } from '@/lib/cinema-program-data';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Download } from 'lucide-react';
+import { Download, PlayCircle } from 'lucide-react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 
 export default function ProgramaCinePage() {
-  
+  const [trailerUrl, setTrailerUrl] = useState<string | null>(null);
+  const [isTrailerOpen, setIsTrailerOpen] = useState(false);
+
+  const handlePlayTrailer = (videoUrl: string | undefined) => {
+    if (!videoUrl || videoUrl === 'N/A') return;
+    let embedUrl = '';
+    if (videoUrl.includes('youtu.be') || videoUrl.includes('youtube.com')) {
+      const videoId = videoUrl.split('v=')[1]?.split('&')[0] || videoUrl.split('/').pop()?.split('?')[0];
+      if (videoId) {
+        embedUrl = `https://www.youtube.com/embed/${videoId}`;
+      }
+    } else if (videoUrl.includes('vimeo.com')) {
+      const videoId = videoUrl.split('/').pop()?.split('?')[0];
+      if (videoId) {
+        embedUrl = `https://player.vimeo.com/video/${videoId}`;
+      }
+    } else if (videoUrl.startsWith('video/')) {
+        embedUrl = `/${videoUrl}`;
+    }
+    
+    if (embedUrl) {
+      setTrailerUrl(embedUrl);
+      setIsTrailerOpen(true);
+    }
+  };
+
+  const isLocalVideo = trailerUrl?.startsWith('/');
+
   const sections = filmData.reduce((acc, film) => {
     const sectionName = film['Sección'] || 'Proyecciones especiales';
     const section = acc.find(s => s.name === sectionName);
@@ -199,7 +227,9 @@ export default function ProgramaCinePage() {
                           </div>
                         )}
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {section.films.map((film, filmIndex) => (
+                        {section.films.map((film, filmIndex) => {
+                          const canPlayTrailer = film.trailer && film.trailer !== 'N/A' && film.trailer !== 'na' && film.trailer !== 'trailer' && film.trailer !== 'teaser' && film.trailer !== 'clip';
+                          return (
                             <Card key={`${sectionIndex}-${filmIndex}`} className="overflow-hidden group bg-card border-border/20 shadow-lg">
                                 <div className="relative aspect-video w-full">
                                     <Image
@@ -211,13 +241,26 @@ export default function ProgramaCinePage() {
                                     />
                                 </div>
                                 <CardContent className="p-4">
-                                    <h3 className="text-lg font-bold font-headline text-foreground">{film['Título']}</h3>
+                                  <div className="flex justify-between items-start">
+                                      <h3 className="text-lg font-bold font-headline text-foreground">{film['Título']}</h3>
+                                      {canPlayTrailer && (
+                                          <Button
+                                              variant="ghost"
+                                              size="icon"
+                                              className="h-8 w-8 text-muted-foreground hover:text-accent hover:bg-accent/10 -mt-1 -mr-2"
+                                              onClick={() => handlePlayTrailer(film.trailer)}
+                                          >
+                                              <PlayCircle className="h-5 w-5" />
+                                          </Button>
+                                      )}
+                                  </div>
                                     <p className="text-sm text-muted-foreground mt-1">{film['Director(a)']}</p>
                                     <p className="text-xs text-muted-foreground mt-1">{film['País / Año']}</p>
                                     <p className="text-sm text-foreground/80 mt-3 line-clamp-4">{film['Sinopsis / Notas']}</p>
                                 </CardContent>
                             </Card>
-                        ))}
+                          )
+                        })}
                         </div>
                     </div>
                     </section>
@@ -225,6 +268,34 @@ export default function ProgramaCinePage() {
             );
         })}
       </main>
+      
+      <Dialog open={isTrailerOpen} onOpenChange={setIsTrailerOpen}>
+        <DialogContent className="sm:max-w-3xl bg-black border-0 p-0">
+          <DialogHeader>
+            <DialogTitle className="sr-only">Trailer</DialogTitle>
+          </DialogHeader>
+          <div className="aspect-video">
+            {trailerUrl && (
+                isLocalVideo ? (
+                    <video controls autoPlay className="w-full h-full">
+                        <source src={trailerUrl} type="video/mp4" />
+                        Tu navegador no soporta el tag de video.
+                    </video>
+                ) : (
+                    <iframe
+                        src={trailerUrl}
+                        title="Trailer"
+                        className="w-full h-full"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
+                )
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
+
       <Footer />
     </div>
   );

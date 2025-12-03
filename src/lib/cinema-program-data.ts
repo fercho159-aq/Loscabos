@@ -1,5 +1,14 @@
-
 export const filmData = [
+  {
+    "Sección": "Marejada: Panorama de largometrajes internacionales",
+    "Código": 1.13,
+    "Título": "Los Domingos",
+    "Director(a)": "Alauda Ruiz de Azua",
+    "País / Año": "España, Francia 2025",
+    "Sinopsis / Notas": "Los domingos cuenta la historia de Ainara, una joven idealista y brillante de 17 años que ha de decidir qué carrera universitaria estudiará. O, al menos, eso espera su familia que haga. Sin embargo, la joven manifiesta que se siente cada vez más cerca de Dios y que se plantea abrazar la vida de monja de clausura. La noticia pilla por sorpresa a toda la familia provocando un abismo y una prueba de fuego para todos.",
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/LOS_DOMINGOS_STILL_29523.JPG",
+    "trailer": "https://youtu.be/Wk57pYX-YT4?si=WUyFumFvHkNAufHZ"
+  },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
     "Código": 1.1,
@@ -7,7 +16,8 @@ export const filmData = [
     "Director(a)": "Gianfranco Rosi",
     "País / Año": "Italia, 2025",
     "Sinopsis / Notas": "El aclamado documentalista italiano Gianfranco Rosi presenta Sotto le nuvole, una obra monumental que captura, con precisión puntillista y una belleza inquietante, la vida de una comunidad napolitana que habita bajo la sombra del Vesubio y sobre la caldera volcánica de los Campos Flégreos. Una mirada hipnótica sobre la fragilidad y la resiliencia humana frente a la inminencia de la naturaleza.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/3-SOTTO LE NUVOLE_©GIANFRANCO_ROSI.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/3-SOTTO LE NUVOLE_©GIANFRANCO_ROSI.jpg",
+    "trailer": "https://www.youtube.com/watch?v=tJB0ez7ja_Y"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -16,7 +26,8 @@ export const filmData = [
     "Director(a)": "Harris Dickinson",
     "País / Año": "Reino Unido 2025",
     "Sinopsis / Notas": "Mike es un hombre sin hogar en Londres atrapado en un ciclo de autodestrucción mientras intenta reconstruir su vida. Cruda y absurda, esta película revela los extraños patrones que nos arrastran una y otra vez al mismo lugar, explorando con honestidad la fragilidad y la persistencia humanas.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/Urchin_Cannes_Image_1.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/Urchin_Cannes_Image_1.jpg",
+    "trailer": "https://youtu.be/5d33PFs-ZiI"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -25,7 +36,8 @@ export const filmData = [
     "Director(a)": "László Nemes",
     "País / Año": "Hungría, Reino Unido, Alemania, Francia 2025",
     "Sinopsis / Notas": "Ambientada tras la revolución húngara de 1956, Orphan narra la historia de un niño criado por su madre bajo el mito de un padre idealizado que murió por la causa. Su mundo se desmorona cuando un hombre violento aparece afirmando ser su verdadero padre. Una poderosa reflexión sobre la memoria, la identidad y las heridas que deja la historia.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/ORPHAN_Still_1.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/ORPHAN_Still_1.jpg",
+    "trailer": "https://youtu.be/ttF-uKy81ZE"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -34,7 +46,8 @@ export const filmData = [
     "Director(a)": "Kim Torres",
     "País / Año": "Costa Rica, México, Francia 2025",
     "Sinopsis / Notas": "A los trece años, Laura intenta adaptarse a su nueva familia y a la vida entre bosques y plantaciones de palma. Justo cuando empieza a sentirse parte de ese entorno, descubre que el pueblo oculta un secreto siniestro que pone en peligro a las mujeres que ama. Un relato hipnótico sobre la inocencia, el miedo y la resistencia femenina.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/SNA-15.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/SNA-15.jpg",
+    "trailer": "https://youtu.be/ljeQP37i_I0?si=zv5JlaEqDYcueS_F"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -43,7 +56,8 @@ export const filmData = [
     "Director(a)": "Joel Alfonso Vargas",
     "País / Año": "Estados Unidos 2025",
     "Sinopsis / Notas": "Rico pasa el verano entre coqueteos, fiestas y vendiendo cocteles caseros en una hielera en Orchard Beach, Bronx. Pero cuando Destiny, su novia adolescente, se muda temporalmente con él y su familia, la despreocupación da paso al caos. Una historia vibrante y nostálgica sobre juventud, deseo y las consecuencias inevitables de crecer.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/MAD BILLS TO PAY_STILL 04_LQ.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/MAD BILLS TO PAY_STILL 04_LQ.jpg",
+    "trailer": "N/A"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -52,7 +66,8 @@ export const filmData = [
     "Director(a)": "Elizabeth Lo",
     "País / Año": "China, Estados Unidos 2024",
     "Sinopsis / Notas": "En China, ha surgido una nueva industria dedicada a salvar matrimonios amenazados por la infidelidad. Wang Zhenxi es una “dispersora de amantes”, contratada para mantener unidas a las parejas —y separar a los amantes— por cualquier medio necesario. Con un acceso íntimo a un caso real, la película sigue a Wang mientras intenta rescatar una relación al borde del colapso, revelando cómo emociones, normas culturales y pragmatismo se entrelazan en las complejas dinámicas del amor contemporáneo.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/Teacher Wang in office.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/Teacher Wang in office.jpg",
+    "trailer": "trailer"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -61,7 +76,8 @@ export const filmData = [
     "Director(a)": "Mark Jenkin",
     "País / Año": "Reino Unido 2025",
     "Sinopsis / Notas": "En un olvidado pueblo pesquero, un barco perdido en el mar hace 30 años reaparece misteriosamente en el puerto: The Rose of Nevada. Para los pocos que recuerdan su historia, es una señal. Nick, decidido a mantener a su joven familia, se une a la tripulación junto a Liam, un recién llegado que busca huir de su pasado. Pero tras un exitoso viaje, al regresar descubren algo inquietante: el tiempo se ha distorsionado, y los aldeanos los reciben como si fueran la tripulación original. Una fábula hipnótica sobre memoria, destino y redención.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/RON-Production-038_Steve Tanner.JPG"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/RON-Production-038_Steve Tanner.JPG",
+    "trailer": "na"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -70,7 +86,8 @@ export const filmData = [
     "Director(a)": "Mary Bronstein",
     "País / Año": "Estados Unidos 2025",
     "Sinopsis / Notas": "Linda ve su vida desmoronarse: la misteriosa enfermedad de su hijo, un marido ausente, una persona desaparecida y una relación cada vez más tensa con su terapeuta la empujan al límite. Con intensidad psicológica y tono visceral, la película explora los bordes de la desesperación y la frágil red de afectos que intenta sostener a una madre en crisis.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/still3.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/still3.jpg",
+    "trailer": "https://youtu.be/ywFDoT7LBbQ?si=c5JMpFXWqPBog1_B"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -79,7 +96,8 @@ export const filmData = [
     "Director(a)": "Kent Jones",
     "País / Año": "Estados Unidos 2025",
     "Sinopsis / Notas": "Willem Dafoe interpreta a Ed Saxberger, un poeta olvidado de Nueva York que trabaja en una oficina de correos. Su vida cambia cuando un joven admirador lo presenta ante un grupo de artistas veinteañeros que lo proclaman como un genio redescubierto. Embriagado por la atención —y por la enigmática Gloria, musa del grupo— Saxberger deberá confrontar la autenticidad de su nueva fama.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/Late Fame  (c) Late Fame LLC.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/Late Fame  (c) Late Fame LLC.jpg",
+    "trailer": "https://www.youtube.com/watch?v=gmMXGu19YAg"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -88,7 +106,8 @@ export const filmData = [
     "Director(a)": "Harry Lighton",
     "País / Año": "Reino Unido 2025",
     "Sinopsis / Notas": "Colin, un joven tímido que trabaja en la calle asignando multas, es abordado por Ray, un motociclista enigmático y dominante. Acepta la invitación de Ray y entra en una relación de sumisión BDSM que transforma su vida, llevándolo a cuestionar identidad, deseo y límites.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/still2.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/still2.jpg",
+    "trailer": "na"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -97,7 +116,8 @@ export const filmData = [
     "Director(a)": "Ildikó Enyedi",
     "País / Año": "Alemania, Hungría, Francia 2025",
     "Sinopsis / Notas": "En el corazón de un jardín botánico de una ciudad universitaria alemana, un majestuoso árbol de ginkgo ha sido testigo silencioso de más de un siglo de transformaciones humanas. A través de tres tiempos —1908, 1972 y 2020—, seguimos a una pionera de la fotografía, a un joven estudiante y a una neurocientífica de Hong Kong, cuyas vidas se entrelazan en torno al poder misterioso de las plantas. Silent Friend es una meditación poética sobre la conexión entre ciencia, arte y naturaleza, y sobre la eterna búsqueda humana de pertenencia.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/SILENT FRIEND still (4).jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/SILENT FRIEND still (4).jpg",
+    "trailer": "trailer"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -106,16 +126,8 @@ export const filmData = [
     "Director(a)": "Claire Denis",
     "País / Año": "Francia 2025",
     "Sinopsis / Notas": "Un gran proyecto de obras públicas en África Occidental. Horn, el jefe de obra, y Cal, un joven ingeniero, comparten alojamiento tras la doble puerta de sus instalaciones. Leone, la nueva esposa de Horn, llega para reunirse con ellos la misma noche en que un hombre aparece junto a la valla. Su nombre es Alboury. Como un espectro en la oscuridad, exige el cuerpo de su hermano, que murió ese mismo día en la obra. Acosará a los dos hombres durante toda la noche hasta que se lo entreguen, mientras Leone observa cómo el desastre crece ante sus ojos.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/Main Still.jpg"
-  },
-  {
-    "Sección": "Marejada: Panorama de largometrajes internacionales",
-    "Código": 1.13,
-    "Título": "Los Domingos",
-    "Director(a)": "Alauda Ruiz de Azua",
-    "País / Año": "España, Francia 2025",
-    "Sinopsis / Notas": "Los domingos cuenta la historia de Ainara, una joven idealista y brillante de 17 años que ha de decidir qué carrera universitaria estudiará. O, al menos, eso espera su familia que haga. Sin embargo, la joven manifiesta que se siente cada vez más cerca de Dios y que se plantea abrazar la vida de monja de clausura. La noticia pilla por sorpresa a toda la familia provocando un abismo y una prueba de fuego para todos.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/LOS_DOMINGOS_STILL_29523.JPG"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/Main Still.jpg",
+    "trailer": "na"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -124,7 +136,8 @@ export const filmData = [
     "Director(a)": "Clemente Castor",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Dos hermanos viven al oriente de la Ciudad de México. Mario despierta sin recuerdos de su vida anterior. A la deriva, conoce a Lázaro, quien le enseña cómo entrar en los cuerpos de otras personas a través de agujeros dentro de la tierra. En la oscuridad sus recuerdos como sueños llenan su memoria. La historia de la tierra atraviesa su corporalidad. El espacio que transita se distorsiona y su piel comienza a quebrarse junto al paisaje.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/FM4.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/FM4.png",
+    "trailer": "https://www.youtube.com/watch?v=Oqgr8_nI1og"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -133,7 +146,8 @@ export const filmData = [
     "Director(a)": "César Talamantes",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "En el marco de un impresionante patrimonio natural y paisajístico, transcurre la peculiar vida familiar isleña, espejo de dificultades y posibilidades donde cualquiera puede mirarse. Retrato documental de la vida en las islas habitadas de Baja California Sur y exploración profunda en una cultura marginal forjada por el aislamiento geográfico y la escasez de recursos.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/5.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/5.jpg",
+    "trailer": "trailer"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -142,7 +156,8 @@ export const filmData = [
     "Director(a)": "Diego Hernández",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Después de abrir una caja de zapatos, Diego comienza a sentir un severo cansancio que le impide realizar actividades cotidianas y lo deja en cama. Al mismo tiempo, su amiga Liz padece de un insomnio misterioso mientras desarrolla una puesta en escena.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/29.1.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/29.1.png",
+    "trailer": "https://www.youtube.com/watch?v=jWvURL8Bulc"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -151,7 +166,8 @@ export const filmData = [
     "Director(a)": "Nuria Ibáñez",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Basilio es contratado para cuidar una playa desierta en Bahía de los Ángeles, Baja California. En este paraíso, en el que parece que no pasa nada, ocurren muchas cosas y algunas de ellas ilegales. Basilio, que es un hombre de normas morales férreas, busca hacer lo correcto. Sin embargo, lo que él cree que es hacer lo correcto le puede jugar en contra en una comunidad que apenas conoce.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/EG_STILLS_FLORES__1.1.18.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/EG_STILLS_FLORES__1.1.18.png",
+    "trailer": "na"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -160,7 +176,8 @@ export const filmData = [
     "Director(a)": "Pablo Pérez Lombardini",
     "País / Año": "México, Catar 2025",
     "Sinopsis / Notas": "Mientras la mayoría de los habitantes de Monte Virgen se ocupa de la cosecha del café, la guardabosque Julia descubrirá que la Reserva está siendo deforestada por talamontes ilegales. Decidida a detenerlos, buscará la ayuda de una comunidad temerosa e indiferente que no tardará en darle la espalda. Sola en su enfrentamiento, la guardabosque recibirá amenazas de muerte y gradualmente perderá todo lo que ama excepto una cosa: su dignidad.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/LARESERVA.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/LARESERVA.png",
+    "trailer": "https://youtu.be/XgiwSXRGp6w"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -169,7 +186,8 @@ export const filmData = [
     "Director(a)": "Racornelia",
     "País / Año": "México, Grecia 2025",
     "Sinopsis / Notas": "Inspirada en la estética de las telenovelas y las películas caseras, MACDO ofrece una incisiva exploración de las dinámicas de poder familiar y los mecanismos de dominación dentro del hogar. Ambientada en una Nochebuena del México de los años noventa, la película desentraña las tensiones ocultas bajo una reunión aparentemente afectuosa, revelando cómo el cariño y la cercanía pueden ser también formas de control.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/HD Still Alicia + Estelle.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/HD Still Alicia + Estelle.png",
+    "trailer": "https://enantiodromia.studio/MACDO-Trailer"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -178,7 +196,8 @@ export const filmData = [
     "Director(a)": "Rigoberto Perezcano",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Elida, una joven de 16 años, es forzada por usos y costumbres a un matrimonio arreglado con Damián, hombre mayor y altivo. Sin embargo, ella no piensa seguir con estas viejas usanzas debido al amor que le profesa a Olivo, joven que no deja de invocar a su padre fallecido.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/Foto 4.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/Foto 4.png",
+    "trailer": "na"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -187,7 +206,8 @@ export const filmData = [
     "Director(a)": "Paloma López Carrillo",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Bajo las montañas cubiertas de nieve, una familia enfrenta el vacío que deja la desaparición. Say Goodbye acompaña a Rosa, Sol y Javier en un viaje íntimo donde el silencio, la memoria y el amor se entrelazan para dar forma al duelo. Una historia sobre la ausencia que nunca se va del todo.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/SAYGOODBYE STILLS09.tif"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/SAYGOODBYE STILLS09.tif",
+    "trailer": "trailer"
   },
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -196,7 +216,8 @@ export const filmData = [
     "Director(a)": "Grupo Cinema Biocultural",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "El cerro de polvo y sus veinte alrededores” documenta el proceso tradicional de la producción de amaranto a lo largo de un año en el sur de la Ciudad de México. Observamos los cambios estacionales, algunas fiestas tradicionales e indagamos sobre la presencia del pasado prehispánico incrustada en la geomorfología de la zona. Las olas de calor y la ausencia de lluvias interfieren con el crecimiento de la planta, pero los restos arqueológicos parecen tener una solución. La vida continua a pesar de la catástrofe.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/Cerro_still_6.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/Cerro_still_6.jpg",
+    "trailer": "https://www.youtube.com/watch?v=lRSzn1uWc8s"
   },
   {
     "Sección": "Cortometrajes de cineastas emergentes",
@@ -205,7 +226,8 @@ export const filmData = [
     "Director(a)": "Adolfo Margulis",
     "País / Año": "México 2024",
     "Sinopsis / Notas": "Ramiro es un joven adicto internado en un centro de rehabilitación. Al principio no logra encajar, pero poco a poco las vivencias en esa clínica y las palabras de los demás internos lo harán ver su realidad.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/05_SPIRITUM_STILL_BAJA.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/05_SPIRITUM_STILL_BAJA.jpg",
+    "trailer": "trailer"
   },
   {
     "Sección": "Cortometrajes de cineastas emergentes",
@@ -214,7 +236,8 @@ export const filmData = [
     "Director(a)": "Gerardo Coello Escalante",
     "País / Año": "México 2024",
     "Sinopsis / Notas": "Daniel, un niño de diez años, llega un lunes por la mañana a la escuela con un par de tenis nuevos que su padre le trajo de un viaje de negocios a los Estados Unidos. Cuando ve que otro niño trae los mismos tenis, comienza a sospechar que sus zapatos son la clave de un terrible secreto.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/Daniel Walking.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/Daniel Walking.png",
+    "trailer": "https://vimeo.com/886927639"
   },
   {
     "Sección": "Cortometrajes de cineastas emergentes",
@@ -223,7 +246,8 @@ export const filmData = [
     "Director(a)": "Isabel Vaca, Arturo Mendicuti Barroeta",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Oso y su vecino Iván están atrapados en una tensa relación. Cuando la gata de Iván, Gretel, es atacada, Oso la salva y forma un inesperado vínculo con ella. Este acto de compasión desata un conflicto aún mayor entre ambos, empujando su enemistad a niveles peligrosos.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/Matagatos_1.94.1.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/Matagatos_1.94.1.jpg",
+    "trailer": "https://vimeo.com/1089830207"
   },
   {
     "Sección": "Cortometrajes de cineastas emergentes",
@@ -232,7 +256,8 @@ export const filmData = [
     "Director(a)": "Lau Charles",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Valentina, de 5 años, y su hermano Quique, de 11, conocen a la otra familia de su papá y sus vidas dan un vuelco al descubrir que su media hermana tiene la misma edad que Valentina. A través de dos miradas construidas desde la infancia, la película reconstruye las memorias fragmentadas de la directora, culminando con una reveladora imagen: su familia real 25 años después.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/cc38baja 2.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/cc38baja 2.png",
+    "trailer": "https://www.youtube.com/watch?v=0skGZ6I2VrU"
   },
   {
     "Sección": "Cortometrajes de cineastas emergentes",
@@ -241,7 +266,8 @@ export const filmData = [
     "Director(a)": "María Fernanda Prieto",
     "País / Año": "México 2024",
     "Sinopsis / Notas": "Durante una calurosa tarde en Boyle Heights, una niña navega entre la inocencia de la infancia y las complejidades de crecer mientras recorre el vibrante patio del restaurante de su familia. A medida que el día se convierte en noche, presencia situaciones que quizá no comprende del todo, pero el apoyo inquebrantable de sus padres trabajadores y su hermana mayor le brinda un refugio donde se siente segura y amada.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/El Sarape4.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/El Sarape4.jpg",
+    "trailer": "trailer"
   },
   {
     "Sección": "Cortometrajes de cineastas emergentes",
@@ -250,7 +276,8 @@ export const filmData = [
     "Director(a)": "Ximena Lamadrid, Julian Lamadrid",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Ambientada en Cancún, México, una joven mexicana enfrenta las emociones y desafíos de estar a punto de convertirse en madre a principios de los años 2000, mientras intenta mantener a su hermano menor bajo control.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/Still 2.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/Still 2.png",
+    "trailer": "https://vimeo.com/1044760156?fl=tl&fe=ec"
   },
   {
     "Sección": "La Baja Inspira",
@@ -258,7 +285,8 @@ export const filmData = [
     "Director(a)": "Ricardo Benet",
     "País / Año": "México 2024",
     "Sinopsis / Notas": "Una bióloga marina protectora de especies y navegante de alta mar, un buzo fotógrafo apneísta y una astrofotógrafa vigilante del cosmos se encuentran en Baja California Sur, para compartir sus visiones de las inmensidades del universo y nuestro planeta.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/IMG_7294.JPG"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/IMG_7294.JPG",
+    "trailer": "na"
   },
   {
     "Sección": "La Baja Inspira",
@@ -266,7 +294,8 @@ export const filmData = [
     "Director(a)": "Augusto Reyes",
     "País / Año": "México 2023",
     "Sinopsis / Notas": "Pedro, un migrante indígena, regresa a su pueblo para asistir al funeral de su madre. Sus vínculos familiares están destruídos y se dispone a marcharse. Al enterarse del grave problema en el que se encuentra envuelto su hermano Ismael, Pedro decide quedarse y enfrentar las consecuencias de su ausencia.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/03_EBDLL_still_baja.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/03_EBDLL_still_baja.png",
+    "trailer": "trailer"
   },
   {
     "Sección": "La Baja Inspira",
@@ -274,7 +303,8 @@ export const filmData = [
     "Director(a)": "Diego Hernández",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Antes de mudarse de Tijuana, Annya y Cecilia le imparten a Graciela un peculiar taller de actuación. Al finalizar una de las clases, Annya encuentra un extraño objeto que, al soplarlo, provoca un efecto misterioso dentro de ella.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/0.5.00_15_28_10.Still037.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/0.5.00_15_28_10.Still037.png",
+    "trailer": "https://www.youtube.com/watch?v=ld8Mi4d_24g"
   },
   {
     "Sección": "La Baja Inspira",
@@ -282,7 +312,8 @@ export const filmData = [
     "Director(a)": "Camila Pardo Cerezo",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Aguasal retrata la historia de dos hermanos nadadores, Reyes y Luis Baños, quienes viven en Corralero, un aislado pueblo afromexicano. A través de su competencia anual en natación, se revelan los valores universales de la rivalidad y el amor fraternal. En un lugar donde el agua lo es todo, esta competencia no es solo física, sino también emocional, siendo un reflejo de la lucha, la resiliencia y la profunda conexión con su tierra.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/CORRA_STILL_4_20250315_00095260.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/CORRA_STILL_4_20250315_00095260.png",
+    "trailer": "https://vimeo.com/1088534529?share=copy&fl=sv&fe=ci"
   },
   {
     "Sección": "La Baja Inspira",
@@ -290,7 +321,8 @@ export const filmData = [
     "Director(a)": "Diana de Ayer",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Un video ensayo que narra la conexión de la directora con los paisajes la Baja California Sur, donde nació y creció, y las formas en las que el tiempo ha transformado su relación con el paisaje.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/Como procurar un jardin.00_05_25_40.Still019.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/Como procurar un jardin.00_05_25_40.Still019.png",
+    "trailer": "https://youtu.be/a9zORKgMXDE?si=4GN9Lg8nQl6xzAiV"
   },
   {
     "Sección": "La Baja Inspira",
@@ -298,7 +330,8 @@ export const filmData = [
     "Director(a)": "Pau Ortiz Rosell",
     "País / Año": "México 2024",
     "Sinopsis / Notas": "Realidad e inteligencia artificial se entrelazan en una advertencia sobre las consecuencias de la masculinidad tradicional a través de la paternidad. Juan Manuel, un pescador de la bahía de La Paz, se enfrenta al legado de su padre ausente y a la ira y el sufrimiento que este ha generado en él, al mismo tiempo que reflexiona sobre sus propios errores como padre. Un relato que profundiza en los ciclos de abandono y la búsqueda de redención.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/Fotograma 2121.png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/Fotograma 2121.png",
+    "trailer": "https://vimeo.com/manage/videos/1040197259"
   },
   {
     "Sección": "La Baja Inspira",
@@ -306,7 +339,8 @@ export const filmData = [
     "Director(a)": "Marinthia Gutiérrez",
     "País / Año": "México 2024",
     "Sinopsis / Notas": "En Tijuana, Laura es aceptada en un programa de maestría de danza en el extranjero y tiene que tomar una decisión rápidamente. En la noche, sale con su amiga Ana, quien supone que no aceptará porque sigue clavada con su ex, José. A lo largo de la noche, en el centro de la ciudad, Laura se da cuenta de que varias chicas la observan atentamente. Distraída y ansiosa, no puede divertirse cómo sus amigos y se molesta por las cosas que asumen de ella. Después de un encuentro con José más tarde, Laura lleva su cuerpo a una secta de bailarinas vampiras– las chicas que la observaban durante toda la noche– la inician al grupo.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/ESQ_Still3.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/ESQ_Still3.jpg",
+    "trailer": "https://www.youtube.com/watch?v=FjI1E87Z-rI"
   },
   {
     "Sección": "La Baja Inspira",
@@ -314,7 +348,8 @@ export const filmData = [
     "Director(a)": "José Paredes",
     "País / Año": "México 2023",
     "Sinopsis / Notas": "Rodrigo y Diana son dos mejores amigos que viven en Tijuana, y comparten el sueño de prevalecer como actores. Para lograrlo, Diana decide viajar a la Ciudad de México en busca de mejores oportunidades, mientras que Rodrigo se ve forzado a quedarse atrás por causas mayores, ocultándole sus sentimientos verdaderos hacia a ella que van más allá de una simple amistad. Ambos mantienen su relación amistosa a distancia, con la esperanza de que ella regrese y Rodrigo tenga la oportunidad de confesar sus verdaderos sentimientos.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/IMG-20230203-WA0005.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/IMG-20230203-WA0005.jpg",
+    "trailer": "https://vimeo.com/928964825?fl=pl&fe=vl"
   },
   {
     "Sección": "La Baja Inspira",
@@ -322,7 +357,8 @@ export const filmData = [
     "Director(a)": "Sebastián del Callejo",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "Rodrigo, un padre viudo que vive en Tijuana con su madre y su hijo, trabaja sin documentos en un hotel de San Diego, California. Sin embargo, tras la llegada de la pandemia de COVID-19 se cierra el cruce fronterizo desencadenando una serie de eventos desafortunados. La familia deberá enfrentarse a la dura realidad de vivir separados por la frontera más transitada del mundo, lidiando con la distancia física y emocional que esta situación impone en sus vidas.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/7 (1).png"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/7 (1).png",
+    "trailer": "https://vimeo.com/1097741070?share=copy&fl=sv&fe=ci"
   },
   {
     "Sección": "Proyecciones especiales",
@@ -330,7 +366,8 @@ export const filmData = [
     "Director(a)": "Mark Kronemeyer, Begoña Félix",
     "País / Año": "México 2024",
     "Sinopsis / Notas": "Mario Castro es un pescador comercial retirado, cuyos inalcanzables esfuerzos han posicionado a Cabo Pulmo México, como un ejemplo de esperanza para la conservación marina a nivel mundial. Sin embargo, su mundo ideal se ve amenazado por las impertinencias de la actualidad, tales como: los nuevos desarrollos turísticos, la incapacidad de control por parte de las autoridades y las consecuencias del crecimiento desmedido. Conoce esta inspiradora historia y viaja a través del tiempo para entender el arraigo de Mario a esta tierra y su gran compromiso por protegerla.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/unnamed-3.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/unnamed-3.jpg",
+    "trailer": "trailer"
   },
   {
     "Sección": "Proyecciones especiales",
@@ -338,7 +375,8 @@ export const filmData = [
     "Director(a)": "Fernando Frías",
     "País / Año": "Estados Unidos, México 2025",
     "Sinopsis / Notas": "DEPECHE MODE: M es un viaje cinematográfico al corazón de la relación de la cultura mexicana con la muerte, enmarcado por las icónicas actuaciones de Depeche Mode durante su gira Memento Mori de 2023. Concebido y dirigido por el galardonado cineasta mexicano Fernando Frías, captura los tres conciertos con entradas agotadas de la banda en la Ciudad de México, mezclando imágenes del concierto con interludios interpretativos y material de archivo.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/DSC_3850_Credit Toni François_rt.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/DSC_3850_Credit Toni François_rt.jpg",
+    "trailer": "trailer"
   },
   {
     "Sección": "Proyecciones especiales",
@@ -346,7 +384,8 @@ export const filmData = [
     "Director(a)": "Olmo Guerra",
     "País / Año": "México 2025",
     "Sinopsis / Notas": "La Nube En El Jardín En Vivo desde La Sala Nezahualcóyotl es una inmersión profunda en el alma de uno de los artistas más auténticos de su generación. Este documental captura la noche en que Eduardo Hernández Saucedo (Ed Maverick) transformó la prestigiosa Sala Nezahualcóyotl en un santuario de vulnerabilidad y conexión. Desde un revelador ataque de pánico antes de pisar el escenario, hasta la ovación y rendición total de su público, el filme acompaña al cantautor chihuahuense en un viaje de sinceridad brutal y redención colectiva. Con solo su guitarra, su voz cruda y el delicado acompañamiento de un cuarteto de cuerdas, Ed Maverick navega por su último álbum de principio a fin para finalizar la noche con una sección de complacencias a elección del público.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/sn5.jpeg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/sn5.jpeg",
+    "trailer": "na"
   },
   {
     "Sección": "Proyecciones especiales",
@@ -354,7 +393,8 @@ export const filmData = [
     "Director(a)": "Alejandro González Iñárritu",
     "País / Año": "México 2000",
     "Sinopsis / Notas": "Ciudad de México. Un accidente automovilístico fatal. Tres vidas se cruzan. Un adolescente lo arriesga todo para huir con la esposa de su hermano. Una modelo lo pierde todo tras mudarse con su amante. Un hombre sin hogar desentierra los fantasmas de su pasado. A medida que sus historias se desarrollan, el caos, la crueldad y la ternura humanos salen a la luz, revelando que están más conectados de lo que parece. Después de 25 años, el legendario debut de Alejandro González Iñárritu regresa a la pantalla grande en una impresionante restauración.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/Copy of 00167AP.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/Copy of 00167AP.jpg",
+    "trailer": "https://youtu.be/_P29GF_NbDc?si=Fu0myOTylLzAsrUw"
   },
   {
     "Sección": "Proyecciones especiales",
@@ -362,7 +402,8 @@ export const filmData = [
     "Director(a)": "Rodrigo Ímaz",
     "País / Año": "México, España 2025",
     "Sinopsis / Notas": "Àvia, retrata a Montserrat Gispert Cruells, quien a los siete años llegó a México tras exiliarse de la Guerra Civil Española. A los 83 años, retirada tras más de cinco décadas como etnobotánica, recurre a su nieto, el director, para retratar el final de sus días y contar su historia. A través de recuerdos, archivos y conversaciones, la película reflexiona sobre el exilio, el legado familiar y el derecho a una muerte digna.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/AV_STILL-29.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/AV_STILL-29.jpg",
+    "trailer": "trailer"
   },
   {
     "Sección": "Proyecciones especiales",
@@ -370,15 +411,17 @@ export const filmData = [
     "Director(a)": "Jorge Curioca",
     "País / Año": "México 2024",
     "Sinopsis / Notas": "Dos amigos, antiguos estudiantes de cine y ahora poetas adultos con alma de adolescentes en la frontera entre la genialidad y la locura, Lalo Padilla y Alvaro Luquı́n, emprenden, cargados con una cámara, un muy peculiar y divertido viaje por La Baja para crear un guión del que sólo tienen la premisa siguiendo la ruta que Lalo hacía de niño con su mamá vendiendo mapas para gringos. En esta particular travesía por desiertos, oasis, playas desiertas, volcanes, dunas y mares con leones marinos pondrán a prueba su amistad, sus miedos, obsesiones y trastornos mentales y descubrirán nuevos personajes no menos delirantes que ellos.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/IMG_0303.PNG"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/IMG_0303.PNG",
+    "trailer": "https://vimeo.com/1002086492/c0aa9c63b7"
   },
   {
     "Sección": "Proyecciones especiales",
     "Título": "Toda una vida, 75 años de las Cruces",
     "Director(a)": "Armando Figaredo",
     "País / Año": "México 2025",
-    "Sinopsis / Notas": "Crónica sobre el Génesis del turismo en Baja California Sur. El propio fundador y visionario, Abelardo Rodríguez Montijo, narra cómo, en 1946, piloteando su propio avión, descubrió este lugar conocido como Las Cruces, donde se cree que Hernán Cortés desembarcó en 1535, a poco menos de una hora, de lo que hoy es la ciudad de La Paz, capital del estado. Después de iniciar la construcción de una pista de aterrizaje, algunas cabañas, y otras instalaciones para recibir visitantes, comienza a promover este lugar privilegiado por su clima, vegetación y, sobre todo, por su abundante pesca, lo que generó un gran interés de los ricos y famosos de California, Estados Unidos de principios de los años 50´s. Posteriormente, en 1956, y más hacia el sur, descubre Palmilla, donde construye el primer hotel de lo que hoy es Los Cabos iniciando lo que actualmente es uno de los más exclusivos y espectaculares desarrollos turísticos del mundo. Un par de años más tarde y cerca de Cabo San Lucas, construye el Hotel Hacienda para concretar el origen de la era turística de Los Cabos.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/Captura de pantalla 2025-12-01 a las 6.06.04 p. m."
+    "Sinopsis / Notas": "Crónica sobre el Génesis del turismo en Baja California Sur. El propio fundador y visionario, Abelardo Rodríguez Montijo, narra cómo, en 1946, piloteando su propio avión, descubrió este lugar conocido como Las Cruces, donde se cree que Hernán Cortés desembarcó en 1535, a poco menos de una hora, de lo que hoy es la ciudad de La Paz, capital del estado. Después de iniciar la construcción de una pista de aterrizaje, algunas cabañas, y otras instalaciones para recibir visitantes, comienza a promover este lugar privilegiado por su clima, vegetación y, sobre todo, por su abundante pesca, lo que generó un gran interés de los ricos y famosos de California, Estados Unidos de principios de los años 50´s. Posteriormente, en 1956, y más hacia el sur, descubre Palmilla, donde construye el primer hotel de lo que hoy es Los Cabos iniciando lo que actualmente es uno de los más exclusivos y espectaculares desarrollos turísticos del mundo. Un par de años más tarde y cerca de Cabo San Lucas, construye el Hotel Hacienda  para concretar el origen de la era turística de Los Cabos.",
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/Captura de pantalla 2025-12-01 a las 6.06.04 p. m.",
+    "trailer": "https://youtu.be/sv1eVdWKBjM"
   },
   {
     "Sección": "Homenaje a Eugenio Caballero",
@@ -386,6 +429,7 @@ export const filmData = [
     "Director(a)": "Juan Antonio Bayona",
     "País / Año": "España, EEUU 2016",
     "Sinopsis / Notas": "Esta es la historia de Connor, un niño de 12 años que lidia con la enfermedad de su madre y el acoso escolar, y para ello, escapa a un mundo fantástico de monstruos y hadas que exploran el coraje, la pérdida y la fe.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Homenaje a Eugenio Caballero/58adf8420b1fcc3c1aad21203.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Homenaje a Eugenio Caballero/58adf8420b1fcc3c1aad21203.jpg",
+    "trailer": "https://youtu.be/VsRy8nchQBQ"
   }
 ]
