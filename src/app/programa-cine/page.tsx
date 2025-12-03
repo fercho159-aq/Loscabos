@@ -10,14 +10,14 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Download, PlayCircle } from 'lucide-react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 
 export default function ProgramaCinePage() {
   const [trailerUrl, setTrailerUrl] = useState<string | null>(null);
   const [isTrailerOpen, setIsTrailerOpen] = useState(false);
 
   const handlePlayTrailer = (videoUrl: string | undefined) => {
-    if (!videoUrl || videoUrl === 'N/A') return;
+    if (!videoUrl || videoUrl === 'N/A' || videoUrl === 'na' || videoUrl === 'trailer' || videoUrl === 'clip') return;
     let embedUrl = '';
     if (videoUrl.includes('youtu.be') || videoUrl.includes('youtube.com')) {
       const videoId = videoUrl.split('v=')[1]?.split('&')[0] || videoUrl.split('/').pop()?.split('?')[0];
@@ -228,37 +228,60 @@ export default function ProgramaCinePage() {
                         )}
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {section.films.map((film, filmIndex) => {
-                          const canPlayTrailer = film.trailer && film.trailer !== 'N/A' && film.trailer !== 'na' && film.trailer !== 'trailer' && film.trailer !== 'teaser' && film.trailer !== 'clip';
+                          const canPlayTrailer = film.trailer && film.trailer !== 'N/A' && film.trailer !== 'na' && film.trailer !== 'trailer' && film.trailer !== 'clip';
                           return (
-                            <Card key={`${sectionIndex}-${filmIndex}`} className="overflow-hidden group bg-card border-border/20 shadow-lg">
-                                <div className="relative aspect-video w-full">
-                                    <Image
-                                        src={film.imagen || '/Images/Main/FICC_BannerAnimacion.jpg'}
-                                        alt={film['Título']}
-                                        data-ai-hint="movie poster"
-                                        fill
-                                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                                    />
-                                </div>
-                                <CardContent className="p-4">
-                                  <div className="flex justify-between items-start">
+                            <Dialog key={`${sectionIndex}-${filmIndex}`}>
+                              <DialogTrigger asChild>
+                                <Card className="overflow-hidden group bg-card border-border/20 shadow-lg cursor-pointer">
+                                    <div className="relative aspect-video w-full">
+                                        <Image
+                                            src={film.imagen || '/Images/Main/FICC_BannerAnimacion.jpg'}
+                                            alt={film['Título']}
+                                            data-ai-hint="movie poster"
+                                            fill
+                                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                        />
+                                    </div>
+                                    <CardContent className="p-4">
                                       <h3 className="text-lg font-bold font-headline text-foreground">{film['Título']}</h3>
-                                      {canPlayTrailer && (
-                                          <Button
-                                              variant="ghost"
-                                              size="icon"
-                                              className="h-8 w-8 text-muted-foreground hover:text-accent hover:bg-accent/10 -mt-1 -mr-2"
-                                              onClick={() => handlePlayTrailer(film.trailer)}
-                                          >
-                                              <PlayCircle className="h-5 w-5" />
-                                          </Button>
-                                      )}
-                                  </div>
-                                    <p className="text-sm text-muted-foreground mt-1">{film['Director(a)']}</p>
-                                    <p className="text-xs text-muted-foreground mt-1">{film['País / Año']}</p>
-                                    <p className="text-sm text-foreground/80 mt-3 line-clamp-4">{film['Sinopsis / Notas']}</p>
-                                </CardContent>
-                            </Card>
+                                        <p className="text-sm text-muted-foreground mt-1">{film['Director(a)']}</p>
+                                        <p className="text-xs text-muted-foreground mt-1">{film['País / Año']}</p>
+                                    </CardContent>
+                                </Card>
+                              </DialogTrigger>
+                              <DialogContent className="sm:max-w-xl bg-card">
+                                <DialogHeader>
+                                    <DialogTitle className="text-2xl font-headline text-foreground">{film['Título']}</DialogTitle>
+                                </DialogHeader>
+                                <div className="py-4 space-y-4">
+                                    <div className="relative aspect-video w-full">
+                                        <Image
+                                            src={film.imagen || '/Images/Main/FICC_BannerAnimacion.jpg'}
+                                            alt={film['Título']}
+                                            data-ai-hint="movie poster"
+                                            fill
+                                            className="object-cover rounded-md"
+                                        />
+                                    </div>
+                                    <p className="text-sm text-muted-foreground">{film['Director(a)']}</p>
+                                    <p className="text-xs text-muted-foreground -mt-3">{film['País / Año']}</p>
+                                    <p className="text-foreground/80 pt-2">{film['Sinopsis / Notas']}</p>
+                                    {canPlayTrailer && (
+                                      <Button
+                                          variant="secondary"
+                                          className="w-full"
+                                          onClick={(e) => {
+                                            e.stopPropagation();
+                                            handlePlayTrailer(film.trailer);
+                                          }}
+                                      >
+                                          <PlayCircle className="mr-2 h-4 w-4" />
+                                          Ver Trailer
+                                      </Button>
+                                  )}
+                                </div>
+                              </DialogContent>
+                            </Dialog>
                           )
                         })}
                         </div>
