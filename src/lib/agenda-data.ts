@@ -42,7 +42,7 @@ export const agendaData: AgendaEvent[] = [
     {
       "HORA DE INICIO": "12:30",
       "HORA DE FIN": "13:30",
-      "EVENTO": "Panel La Baja Inspira 2025\nModerado por Cristina Velasco y Nicolasa Ruíz\nPresentado por ESCINE",
+      "EVENTO": "Panel Fondo Fílmico Gabriel Figueroa 2025 \nModerado por Ximena Urrutia y Michel Lipkes \npresentado por ESCINE",
       "SEDE": "Hotel El Ganzo Rooftop",
       "CATEGORÍA": "Industria",
       "COLOR": "#051723",
@@ -85,9 +85,9 @@ export const agendaData: AgendaEvent[] = [
       "Dia": "viernes 12 de dic"
     },
     {
-      "HORA DE INICIO": "13:00",
-      "HORA DE FIN": "13:45",
-      "EVENTO": "Panel Fondo Fïlmico Gabriel Figueroa 2025 \nModerado por Ximena Urrutia y Michel Lipkes \npresentado por ESCINE",
+      "HORA DE INICIO": "12:30",
+      "HORA DE FIN": "13:30",
+      "EVENTO": "Panel La Baja Inspira 2025\nModerado por Cristina Velasco y Nicolasa Ruíz\nPresentado por ESCINE",
       "SEDE": "Hotel El Ganzo Rooftop",
       "CATEGORÍA": "Industria",
       "COLOR": "#051723",
@@ -105,15 +105,15 @@ export const agendaData: AgendaEvent[] = [
     {
       "HORA DE INICIO": "17:00",
       "HORA DE FIN": "17:30",
-      "EVENTO": "Proyección especial\nToda una vida 75 años de las Cruces | México | 20 min",
+      "EVENTO": "Proyección especial\nToda una vida 75 años de las Cruces | Dir. Armando Figaredo | México | 20 min",
       "SEDE": "Crania",
       "CATEGORÍA": "Programa #BeyondTheScreen",
       "COLOR": "#e67050",
       "Dia": "viernes 12 de dic"
     },
     {
-      "HORA DE INICIO": "17:30",
-      "HORA DE FIN": "18:00",
+      "HORA DE INICIO": "18:10",
+      "HORA DE FIN": "18:40",
       "EVENTO": "Proyección especial \nEl Pulmo | Dir. Mark Kronemeyer y Begoña Félix | México | 30 min",
       "SEDE": "Crania",
       "CATEGORÍA": "Programa #BeyondTheScreen",
@@ -121,8 +121,8 @@ export const agendaData: AgendaEvent[] = [
       "Dia": "viernes 12 de dic"
     },
     {
-      "HORA DE INICIO": "18:00",
-      "HORA DE FIN": "20:00",
+      "HORA DE INICIO": "19:00",
+      "HORA DE FIN": "21:00",
       "EVENTO": "Proyección especial\nDepeche Mode: M | Dir. Fernando Frías | EEUU, México | 95 min.\nQ&A",
       "SEDE": "Crania",
       "CATEGORÍA": "Programa #BeyondTheScreen",
@@ -130,8 +130,8 @@ export const agendaData: AgendaEvent[] = [
       "Dia": "viernes 12 de dic"
     },
     {
-      "HORA DE INICIO": "20:00",
-      "HORA DE FIN": "22:00",
+      "HORA DE INICIO": "21:00",
+      "HORA DE FIN": "23:05",
       "EVENTO": "Proyección Especial\nLa Nube En El Jardín En Vivo desde La Sala Nezahualcóyotl | Dir. Olmo Guerra | México | 99 min\nQ&A",
       "SEDE": "Crania",
       "CATEGORÍA": "Programa #BeyondTheScreen",
@@ -139,7 +139,7 @@ export const agendaData: AgendaEvent[] = [
       "Dia": "viernes 12 de dic"
     },
     {
-      "HORA DE INICIO": "22:00",
+      "HORA DE INICIO": "23:05",
       "HORA DE FIN": "1:00",
       "EVENTO": "Fiesta \nDJ Set Tatiana Serur",
       "SEDE": "Crania",
@@ -203,8 +203,8 @@ export const agendaData: AgendaEvent[] = [
     },
     {
       "HORA DE INICIO": "20:20",
-      "HORA DE FIN": "21:30",
-      "EVENTO": "Premiación\nEntrega de premios Fondo Fílmico Gabriel Figueroa,\nCompetencia FICLosCabos de largometrajes mexicanos, \nPalabras de clausura",
+      "HORA DE FIN": "21:00",
+      "EVENTO": "Premiación\nCompetencia FICLosCabos de largometrajes mexicanos + Palabras de clausura",
       "SEDE": "Crania",
       "CATEGORÍA": "Programa #BeyondTheScreen",
       "COLOR": "#e67050",

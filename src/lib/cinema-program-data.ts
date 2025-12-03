@@ -374,10 +374,10 @@ export const filmData = [
   },
   {
     "Sección": "Proyecciones especiales",
-    "Título": "Rancho tres cruces 75 años",
+    "Título": "Toda una vida, 75 años de las Cruces",
     "Director(a)": "Armando Figaredo",
     "País / Año": "México 2025",
-    "Sinopsis / Notas": "En el corazón de Baja California Sur, el Rancho Tres Cruces ha sido testigo y protagonista de la historia ganadera de la región. Este documental conmemora 75 años de tradición, esfuerzo y resiliencia, narrando la historia de la familia Figaredo y su profundo vínculo con la tierra. Desde sus humildes comienzos hasta su consolidación como un referente de la ganadería sudcaliforniana, la película explora la evolución de las prácticas ganaderas, los desafíos del clima y la importancia de preservar un legado cultural en un entorno en constante cambio. A través de testimonios íntimos, imágenes de archivo y la majestuosidad del paisaje, la película es un homenaje a la identidad ranchera y a una forma de vida que se resiste a desaparecer.",
+    "Sinopsis / Notas": "Crónica sobre el Génesis del turismo en Baja California Sur. El propio fundador y visionario, Abelardo Rodríguez Montijo, narra cómo, en 1946, piloteando su propio avión, descubrió este lugar conocido como Las Cruces, donde se cree que Hernán Cortés desembarcó en 1535, a poco menos de una hora, de lo que hoy es la ciudad de La Paz, capital del estado. Después de iniciar la construcción de una pista de aterrizaje, algunas cabañas, y otras instalaciones para recibir visitantes, comienza a promover este lugar privilegiado por su clima, vegetación y, sobre todo, por su abundante pesca, lo que generó un gran interés de los ricos y famosos de California, Estados Unidos de principios de los años 50´s. Posteriormente, en 1956, y más hacia el sur, descubre Palmilla, donde construye el primer hotel de lo que hoy es Los Cabos iniciando lo que actualmente es uno de los más exclusivos y espectaculares desarrollos turísticos del mundo. Un par de años más tarde y cerca de Cabo San Lucas, construye el Hotel Hacienda para concretar el origen de la era turística de Los Cabos.",
     "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/"
   },
   {
@@ -386,6 +386,6 @@ export const filmData = [
     "Director(a)": "Juan Antonio Bayona",
     "País / Año": "España, EEUU 2016",
     "Sinopsis / Notas": "Esta es la historia de Connor, un niño de 12 años que lidia con la enfermedad de su madre y el acoso escolar, y para ello, escapa a un mundo fantástico de monstruos y hadas que exploran el coraje, la pérdida y la fe.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Homenaje a Eugenio Caballero/58adf8420a259f3dd5b687b6a.jpg"
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Homenaje a Eugenio Caballero/58adf8420b1fcc3c1aad21203.jpg"
   }
 ]
