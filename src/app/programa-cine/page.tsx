@@ -60,11 +60,10 @@ export default function ProgramaCinePage() {
     "Proyecciones especiales",
     "Homenaje a Eugenio Caballero"
   ];
-
+  
   const sortedSections = sections.sort((a, b) => {
     const aIndex = orderedSections.indexOf(a.name);
     const bIndex = orderedSections.indexOf(b.name);
-    if (aIndex === -1 && bIndex === -1) return 0;
     if (aIndex === -1) return 1;
     if (bIndex === -1) return -1;
     return aIndex - bIndex;

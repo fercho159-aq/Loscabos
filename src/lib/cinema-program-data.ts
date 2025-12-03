@@ -1,14 +1,5 @@
 export const filmData = [
-  {
-    "Sección": "Marejada: Panorama de largometrajes internacionales",
-    "Código": 1.13,
-    "Título": "Los Domingos",
-    "Director(a)": "Alauda Ruiz de Azua",
-    "País / Año": "España, Francia 2025",
-    "Sinopsis / Notas": "Los domingos cuenta la historia de Ainara, una joven idealista y brillante de 17 años que ha de decidir qué carrera universitaria estudiará. O, al menos, eso espera su familia que haga. Sin embargo, la joven manifiesta que se siente cada vez más cerca de Dios y que se plantea abrazar la vida de monja de clausura. La noticia pilla por sorpresa a toda la familia provocando un abismo y una prueba de fuego para todos.",
-    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/LOS_DOMINGOS_STILL_29523.JPG",
-    "trailer": "https://youtu.be/Wk57pYX-YT4?si=WUyFumFvHkNAufHZ"
-  },
+  // Marejada
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
     "Código": 1.1,
@@ -57,7 +48,7 @@ export const filmData = [
     "País / Año": "Estados Unidos 2025",
     "Sinopsis / Notas": "Rico pasa el verano entre coqueteos, fiestas y vendiendo cocteles caseros en una hielera en Orchard Beach, Bronx. Pero cuando Destiny, su novia adolescente, se muda temporalmente con él y su familia, la despreocupación da paso al caos. Una historia vibrante y nostálgica sobre juventud, deseo y las consecuencias inevitables de crecer.",
     "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/MAD BILLS TO PAY_STILL 04_LQ.jpg",
-    "trailer": "N/A"
+    "trailer": "clip"
   },
   {
     "Sección": "Marejada: Panorama de largometrajes internacionales",
@@ -129,6 +120,18 @@ export const filmData = [
     "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/Main Still.jpg",
     "trailer": "na"
   },
+  {
+    "Sección": "Marejada: Panorama de largometrajes internacionales",
+    "Código": 1.13,
+    "Título": "Los Domingos",
+    "Director(a)": "Alauda Ruiz de Azua",
+    "País / Año": "España, Francia 2025",
+    "Sinopsis / Notas": "Los domingos cuenta la historia de Ainara, una joven idealista y brillante de 17 años que ha de decidir qué carrera universitaria estudiará. O, al menos, eso espera su familia que haga. Sin embargo, la joven manifiesta que se siente cada vez más cerca de Dios y que se plantea abrazar la vida de monja de clausura. La noticia pilla por sorpresa a toda la familia provocando un abismo y una prueba de fuego para todos.",
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/LOS_DOMINGOS_STILL_29523.JPG",
+    "trailer": "https://youtu.be/Wk57pYX-YT4?si=WUyFumFvHkNAufHZ"
+  },
+  
+  // Competencia FICLosCabos
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
     "Código": 2.1,
@@ -219,6 +222,8 @@ export const filmData = [
     "imagen": "/Images/Programa de cine FICLosCabos 2025/Competencia FICLosCabos (Largometrajes mexicanos)/Cerro_still_6.jpg",
     "trailer": "https://www.youtube.com/watch?v=lRSzn1uWc8s"
   },
+
+  // Cortometrajes
   {
     "Sección": "Cortometrajes de cineastas emergentes",
     "Código": 3.1,
@@ -279,6 +284,8 @@ export const filmData = [
     "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/Still 2.png",
     "trailer": "https://vimeo.com/1044760156?fl=tl&fe=ec"
   },
+  
+  // La Baja Inspira
   {
     "Sección": "La Baja Inspira",
     "Título": "Inmensidades",
@@ -360,6 +367,8 @@ export const filmData = [
     "imagen": "/Images/Programa de cine FICLosCabos 2025/La Baja Inspira/7 (1).png",
     "trailer": "https://vimeo.com/1097741070?share=copy&fl=sv&fe=ci"
   },
+
+  // Proyecciones Especiales
   {
     "Sección": "Proyecciones especiales",
     "Título": "El Pulmo",
@@ -423,6 +432,8 @@ export const filmData = [
     "imagen": "/Images/Programa de cine FICLosCabos 2025/Proyecciones especiales/Captura de pantalla 2025-12-01 a las 6.06.04 p. m.",
     "trailer": "https://youtu.be/sv1eVdWKBjM"
   },
+
+  // Homenaje
   {
     "Sección": "Homenaje a Eugenio Caballero",
     "Título": "Un monstruo viene a verme",
