@@ -44,8 +44,13 @@ const sponsors = [
   { name: "Sponsor 37", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-37.png", hint: "company logo" },
   { name: "Sponsor 39", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-39.png", hint: "company logo" },
   { name: "Sponsor 40", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-40.png", hint: "company logo" },
-
-
+  { name: "Sponsor 42", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-42.png", hint: "company logo" },
+  { name: "Sponsor 43", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-43.png", hint: "company logo" },
+  { name: "Sponsor 44", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-44.png", hint: "company logo" },
+  { name: "Sponsor 45", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-45.png", hint: "company logo" },
+  { name: "Sponsor 46", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-46.png", hint: "company logo" },
+  { name: "Sponsor 47", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-47.png", hint: "company logo" },
+  { name: "Sponsor 49", logo: "/Images/Aliados y Patrocinadores/FICC_Logos_Aliados-49.png", hint: "company logo" }
 ];
 
 const extendedSponsors = [...sponsors, ...sponsors]; // Duplicate for seamless loop
