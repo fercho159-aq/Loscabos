@@ -103,14 +103,14 @@ const DayTab = ({ day, onPlayTrailer }: { day: string, onPlayTrailer: (videoUrl:
                 if (event) {
                   const durationInMinutes = getEventDurationInMinutes(event);
                   const rowSpan = Math.ceil(durationInMinutes / 15);
-                  const canPlayTrailer = event.Video && event.Video !== 'N/A' && !event.Video.includes('Estos son');
+                  const canPlayTrailer = event.video && event.video !== 'N/A' && !event.video.includes('Estos son');
 
                   return (
                     <td
                       key={`${event.PELÍCULA}-${time}-${venue}-${room}`}
                       rowSpan={rowSpan}
                       className="p-3 text-white align-top overflow-hidden rounded"
-                      style={{ backgroundColor: event.Trailer || '#18323A', minHeight: `${rowSpan * 1}rem` }}
+                      style={{ backgroundColor: event.COLOR || '#18323A', minHeight: `${rowSpan * 1}rem` }}
                     >
                       <div className="flex flex-col justify-between h-full">
                         <div>
@@ -129,7 +129,7 @@ const DayTab = ({ day, onPlayTrailer }: { day: string, onPlayTrailer: (videoUrl:
                               variant="ghost"
                               size="icon"
                               className="h-8 w-8 text-white/80 hover:text-white hover:bg-white/20"
-                              onClick={() => onPlayTrailer(event.Video)}
+                              onClick={() => onPlayTrailer(event.video)}
                             >
                               <PlayCircle className="h-5 w-5" />
                             </Button>
