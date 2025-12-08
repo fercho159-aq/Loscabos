@@ -34,15 +34,15 @@ function getEvent(day: string, time: string, venue: string, room: string): Cinem
 }
 
 function getEventDurationInMinutes(event: CinemaScheduleEvent): number {
-    const [startHour, startMinute] = event['HORA DE INICIO'].split(':').map(Number);
-    let [endHour, endMinute] = event['HORA DE FIN'].split(':').map(Number);
-    
-    if (endHour < startHour) endHour += 24;
+  const [startHour, startMinute] = event['HORA DE INICIO'].split(':').map(Number);
+  let [endHour, endMinute] = event['HORA DE FIN'].split(':').map(Number);
 
-    const startTimeInMinutes = startHour * 60 + startMinute;
-    const endTimeInMinutes = endHour * 60 + endMinute;
-    
-    return endTimeInMinutes - startTimeInMinutes;
+  if (endHour < startHour) endHour += 24;
+
+  const startTimeInMinutes = startHour * 60 + startMinute;
+  const endTimeInMinutes = endHour * 60 + endMinute;
+
+  return endTimeInMinutes - startTimeInMinutes;
 }
 
 const DayTab = ({ day, onPlayTrailer }: { day: string, onPlayTrailer: (videoUrl: string) => void }) => {
@@ -69,7 +69,7 @@ const DayTab = ({ day, onPlayTrailer }: { day: string, onPlayTrailer: (videoUrl:
       }
     }
   });
-    
+
   return (
     <div className="overflow-x-auto border-t border-b border-border">
       <table className="w-full border-collapse">
@@ -77,13 +77,13 @@ const DayTab = ({ day, onPlayTrailer }: { day: string, onPlayTrailer: (videoUrl:
           <tr>
             <th className="sticky left-0 z-20 bg-muted p-3 text-center font-semibold whitespace-nowrap border-r border-border">Hora</th>
             {Object.entries(venuesWithRooms).map(([venue, rooms]) => (
-               <th key={venue} colSpan={rooms.length} className="p-3 text-center font-semibold whitespace-nowrap min-w-[200px] border-l">{venue}</th>
+              <th key={venue} colSpan={rooms.length} className="p-3 text-center font-semibold whitespace-nowrap min-w-[200px] border-l">{venue}</th>
             ))}
           </tr>
           <tr>
             <th className="sticky left-0 z-20 bg-muted p-3 text-center font-semibold whitespace-nowrap border-r border-border"></th>
-            {Object.entries(venuesWithRooms).flatMap(([venue, rooms]) => 
-                rooms.map(room => <th key={`${venue}-${room}`} className='p-2 text-center font-medium bg-muted/50 whitespace-nowrap border-l'>{room}</th>)
+            {Object.entries(venuesWithRooms).flatMap(([venue, rooms]) =>
+              rooms.map(room => <th key={`${venue}-${room}`} className='p-2 text-center font-medium bg-muted/50 whitespace-nowrap border-l'>{room}</th>)
             )}
           </tr>
         </thead>
@@ -95,52 +95,52 @@ const DayTab = ({ day, onPlayTrailer }: { day: string, onPlayTrailer: (videoUrl:
               ) : null}
 
               {Object.entries(venuesWithRooms).flatMap(([venue, rooms]) => rooms.map(room => {
-                 if (occupiedCells.has(`${time}-${venue}-${room}`)) {
-                    return null;
-                 }
-                 const event = getEvent(day, time, venue, room);
-                 
-                 if(event) {
-                    const durationInMinutes = getEventDurationInMinutes(event);
-                    const rowSpan = Math.ceil(durationInMinutes / 15);
-                    const canPlayTrailer = event.video && event.video !== 'N/A' && !event.video.includes('Estos son');
+                if (occupiedCells.has(`${time}-${venue}-${room}`)) {
+                  return null;
+                }
+                const event = getEvent(day, time, venue, room);
 
-                    return (
-                      <td
-                        key={`${event.PELÍCULA}-${time}-${venue}-${room}`}
-                        rowSpan={rowSpan}
-                        className="p-3 text-white align-top overflow-hidden rounded"
-                        style={{ backgroundColor: event.COLOR || '#18323A', minHeight: `${rowSpan * 1}rem` }}
-                      >
-                         <div className="flex flex-col justify-between h-full">
-                           <div>
-                            <p className="font-semibold text-sm whitespace-pre-line mb-2">{event.PELÍCULA}</p>
-                            <p className="text-xs text-white/80">{event['HORA DE INICIO']} - {event['HORA DE FIN']}</p>
-                           </div>
-                           <div className="flex justify-between items-end mt-2">
-                             <Badge 
-                              variant="secondary"
-                              className="mt-auto text-xs bg-white/20 text-white border-none w-fit"
-                              >
-                              {event['CATEGORÍA']}
-                            </Badge>
-                            {canPlayTrailer && (
-                                <Button
-                                    variant="ghost"
-                                    size="icon"
-                                    className="h-8 w-8 text-white/80 hover:text-white hover:bg-white/20"
-                                    onClick={() => onPlayTrailer(event.video)}
-                                >
-                                    <PlayCircle className="h-5 w-5" />
-                                </Button>
-                            )}
-                           </div>
-                         </div>
-                      </td>
-                    );
-                 }
-                 
-                 return <td key={`${time}-${venue}-${room}`} className="bg-card min-h-[1rem] border-l border-border h-4"></td>
+                if (event) {
+                  const durationInMinutes = getEventDurationInMinutes(event);
+                  const rowSpan = Math.ceil(durationInMinutes / 15);
+                  const canPlayTrailer = event.Video && event.Video !== 'N/A' && !event.Video.includes('Estos son');
+
+                  return (
+                    <td
+                      key={`${event.PELÍCULA}-${time}-${venue}-${room}`}
+                      rowSpan={rowSpan}
+                      className="p-3 text-white align-top overflow-hidden rounded"
+                      style={{ backgroundColor: event.Trailer || '#18323A', minHeight: `${rowSpan * 1}rem` }}
+                    >
+                      <div className="flex flex-col justify-between h-full">
+                        <div>
+                          <p className="font-semibold text-sm whitespace-pre-line mb-2">{event.PELÍCULA}</p>
+                          <p className="text-xs text-white/80">{event['HORA DE INICIO']} - {event['HORA DE FIN']}</p>
+                        </div>
+                        <div className="flex justify-between items-end mt-2">
+                          <Badge
+                            variant="secondary"
+                            className="mt-auto text-xs bg-white/20 text-white border-none w-fit"
+                          >
+                            {event['CATEGORÍA']}
+                          </Badge>
+                          {canPlayTrailer && (
+                            <Button
+                              variant="ghost"
+                              size="icon"
+                              className="h-8 w-8 text-white/80 hover:text-white hover:bg-white/20"
+                              onClick={() => onPlayTrailer(event.Video)}
+                            >
+                              <PlayCircle className="h-5 w-5" />
+                            </Button>
+                          )}
+                        </div>
+                      </div>
+                    </td>
+                  );
+                }
+
+                return <td key={`${time}-${venue}-${room}`} className="bg-card min-h-[1rem] border-l border-border h-4"></td>
               }))}
             </tr>
           ))}
@@ -164,9 +164,9 @@ export default function AgendaCinePage() {
       const videoId = videoUrl.split('/').pop();
       embedUrl = `https://player.vimeo.com/video/${videoId}`;
     } else if (videoUrl.startsWith('video/')) {
-        embedUrl = `/${videoUrl}`;
+      embedUrl = `/${videoUrl}`;
     }
-    
+
     if (embedUrl) {
       setTrailerUrl(embedUrl);
       setIsTrailerOpen(true);
@@ -174,38 +174,38 @@ export default function AgendaCinePage() {
   };
 
   const isLocalVideo = trailerUrl?.startsWith('/');
-  
+
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
       <main className="flex-grow pt-20">
         <section className="relative py-20 sm:py-32 bg-primary text-primary-foreground text-center">
-            <div className="absolute inset-0 z-0">
-                <Image
-                src="/Images/Programacion/FICC_Banner_Programacion.png"
-                alt="Banner de la sección Sobre el FICLosCabos"
-                data-ai-hint="graphic composition"
-                fill
-                className="object-cover"
-                />
-                <div className="absolute inset-0 bg-black/10"></div>
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/Images/Programacion/FICC_Banner_Programacion.png"
+              alt="Banner de la sección Sobre el FICLosCabos"
+              data-ai-hint="graphic composition"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-black/10"></div>
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
+            <h1 className="font-headline text-5xl md:text-6xl font-bold text-background">
+              Agenda de Cine
+            </h1>
+            <p className="mt-4 text-lg text-background/90 max-w-3xl mx-auto">
+              Explora el programa completo de proyecciones del FICLosCabos 2025.
+            </p>
+            <div className="mt-8">
+              <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline px-9 h-14 py-3 text-lg">
+                <Link href="https://drive.google.com/file/d/1YTz1uu0VwCs0gZA3nAZaSiVsHpPYoCYN/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                  <Download className="mr-2 h-4 w-4" />
+                  Descargar Agenda
+                </Link>
+              </Button>
             </div>
-            <div className="container mx-auto px-4 relative z-10">
-              <h1 className="font-headline text-5xl md:text-6xl font-bold text-background">
-                Agenda de Cine
-              </h1>
-              <p className="mt-4 text-lg text-background/90 max-w-3xl mx-auto">
-                Explora el programa completo de proyecciones del FICLosCabos 2025.
-              </p>
-              <div className="mt-8">
-                <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline px-9 h-14 py-3 text-lg">
-                  <Link href="https://drive.google.com/file/d/1YTz1uu0VwCs0gZA3nAZaSiVsHpPYoCYN/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-                    <Download className="mr-2 h-4 w-4" />
-                    Descargar Agenda
-                  </Link>
-                </Button>
-              </div>
-            </div>
+          </div>
         </section>
 
         <section className="py-12 sm:py-16">
@@ -213,17 +213,17 @@ export default function AgendaCinePage() {
             <Tabs defaultValue={sortedDays[0]} className="w-full">
               <div className="flex justify-center pb-4">
                 <div className="overflow-x-auto">
-                    <TabsList className="flex-nowrap w-max bg-transparent p-0 gap-2">
+                  <TabsList className="flex-nowrap w-max bg-transparent p-0 gap-2">
                     {sortedDays.map(day => (
-                        <TabsTrigger 
-                        key={day} 
-                        value={day} 
+                      <TabsTrigger
+                        key={day}
+                        value={day}
                         className="whitespace-nowrap rounded-full px-8 py-3 text-lg data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=inactive]:bg-card data-[state=inactive]:hover:bg-accent/20 data-[state=inactive]:hover:text-accent transition-colors duration-200 capitalize"
-                        >
+                      >
                         {day}
-                        </TabsTrigger>
+                      </TabsTrigger>
                     ))}
-                    </TabsList>
+                  </TabsList>
                 </div>
               </div>
               {sortedDays.map(day => (
@@ -237,28 +237,28 @@ export default function AgendaCinePage() {
 
       </main>
 
-       <Dialog open={isTrailerOpen} onOpenChange={setIsTrailerOpen}>
+      <Dialog open={isTrailerOpen} onOpenChange={setIsTrailerOpen}>
         <DialogContent className="sm:max-w-3xl bg-black border-0 p-0">
           <DialogHeader>
             <DialogTitle className="sr-only">Trailer</DialogTitle>
           </DialogHeader>
           <div className="aspect-video">
             {trailerUrl && (
-                isLocalVideo ? (
-                    <video controls autoPlay className="w-full h-full">
-                        <source src={trailerUrl} type="video/mp4" />
-                        Tu navegador no soporta el tag de video.
-                    </video>
-                ) : (
-                    <iframe
-                        src={trailerUrl}
-                        title="Trailer"
-                        className="w-full h-full"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    ></iframe>
-                )
+              isLocalVideo ? (
+                <video controls autoPlay className="w-full h-full">
+                  <source src={trailerUrl} type="video/mp4" />
+                  Tu navegador no soporta el tag de video.
+                </video>
+              ) : (
+                <iframe
+                  src={trailerUrl}
+                  title="Trailer"
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              )
             )}
           </div>
         </DialogContent>
@@ -269,4 +269,4 @@ export default function AgendaCinePage() {
   );
 }
 
-    
+

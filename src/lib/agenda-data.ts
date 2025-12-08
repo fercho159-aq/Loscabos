@@ -99,7 +99,7 @@ export const agendaData: AgendaEvent[] = [
     "EVENTO": "Asesorías 1 a 1 \nFondo Fílmico Gabriel Figueroa",
     "SEDE": "Hotel El Ganzo Galería",
     "CATEGORÍA": "Industria",
-    "COLOR": "",
+    "COLOR": "#051723",
     "Dia": "viernes 12 de dic"
   },
   {
