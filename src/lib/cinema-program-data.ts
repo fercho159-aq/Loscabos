@@ -130,7 +130,7 @@ export const filmData = [
     "imagen": "/Images/Programa de cine FICLosCabos 2025/Marejada Panorama de largometrajes internacionales/LOS_DOMINGOS_STILL_29523.JPG",
     "trailer": "https://youtu.be/Wk57pYX-YT4?si=WUyFumFvHkNAufHZ"
   },
-  
+
   // Competencia FICLosCabos
   {
     "Sección": "Competencia FICLosCabos (Largometrajes mexicanos)",
@@ -284,7 +284,7 @@ export const filmData = [
     "imagen": "/Images/Programa de cine FICLosCabos 2025/Cortometrajes de cineastas emergentes/Still 2.png",
     "trailer": "https://vimeo.com/1044760156?fl=tl&fe=ec"
   },
-  
+
   // La Baja Inspira
   {
     "Sección": "La Baja Inspira",
@@ -442,5 +442,88 @@ export const filmData = [
     "Sinopsis / Notas": "Esta es la historia de Connor, un niño de 12 años que lidia con la enfermedad de su madre y el acoso escolar, y para ello, escapa a un mundo fantástico de monstruos y hadas que exploran el coraje, la pérdida y la fe.",
     "imagen": "/Images/Programa de cine FICLosCabos 2025/Homenaje a Eugenio Caballero/58adf8420b1fcc3c1aad21203.jpg",
     "trailer": "https://youtu.be/VsRy8nchQBQ"
+  },
+
+  // Selección de cortometrajes Cut Out Fest
+  {
+    "Sección": "Selección de cortometrajes Cut Out Fest",
+    "Código": 7.1,
+    "Título": "Free Water",
+    "Director(a)": "Si Yi Shen",
+    "País / Año": "Australia, 2025",
+    "Sinopsis / Notas": "Free Water es una exploración de la intrincada relación entre la humanidad y la mercantilización de los recursos naturales, particularmente de la fluidez y dualidades que encarna el agua. En esta obra, el agua emerge como símbolo tanto del orden como del caos, de la transparencia y la opacidad, de la funcionalidad y la estética. A partir de mi archivo digital de objetos inorgánicos encontrados a lo largo del paseo marítimo de Geelong y sus alrededores —desde recipientes de agua hasta señalizaciones, infraestructuras y restos descartados— Free Water ofrece una representación lúdica del lugar y la percepción del tiempo contemporáneo, y al mismo tiempo abre una ventana hacia un futuro especulativo. Mediante el examen de hitos icónicos como monumentos, fuentes de agua potable, las cataratas Buckley, los baños marinos de Eastern Beach y estructuras industriales, este collage en movimiento aborda las políticas de regulación, acceso y distribución del agua en los espacios públicos, reflejando la naturaleza temporal de los marcos sociales. La obra anima a los espectadores a imaginar narrativas y posibilidades alternativas, fomentando la curiosidad y la exploración sobre la posible evolución de nuestra relación con el agua y el paisaje urbano.",
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cut Out Fest/Free Water.jpg",
+    "trailer": "na"
+  },
+  {
+    "Sección": "Selección de cortometrajes Cut Out Fest",
+    "Código": 7.2,
+    "Título": "Freak of Nature",
+    "Director(a)": "Alexandra Lermer",
+    "País / Año": "Alemania, 2024",
+    "Sinopsis / Notas": "Una criatura tímida y solitaria tiene demasiado miedo para salir de la antigua jaula del circo en la que estuvo atrapada hasta que encuentra un pequeño brote al que cuidar. Una historia sobre el crecimiento personal y el proceso de superar el miedo.",
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cut Out Fest/Photo 2 Freak_of_Nature_Still.jpg",
+    "trailer": "na"
+  },
+  {
+    "Sección": "Selección de cortometrajes Cut Out Fest",
+    "Código": 7.3,
+    "Título": "No soy tuyo",
+    "Director(a)": "Cristina Sitja Rubio",
+    "País / Año": "Chile, Alemania, 2025",
+    "Sinopsis / Notas": "Cuchuplum vive solo en las montañas. Un día, un pájaro herido entra por su ventana. Cuchuplum lo sana, lo cuida y se siente feliz con su nuevo amigo, hasta que un día el pequeño decide volar para reunirse con su familia. Pasan los días y la tristeza empuja a Cuchuplum a adentrarse en el bosque en busca de su amigo.",
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cut Out Fest/Photo 3 NST_3.jpg",
+    "trailer": "na"
+  },
+  {
+    "Sección": "Selección de cortometrajes Cut Out Fest",
+    "Código": 7.4,
+    "Título": "Whereabouts",
+    "Director(a)": "Suejee Lee",
+    "País / Año": "Estados Unidos, 2025",
+    "Sinopsis / Notas": "Whereabouts es un cortometraje animado impreso en risografía que sigue el viaje de una mujer por Nueva York, desarrollándose a través de pequeños y íntimos momentos. Una observación sobre la presencia, la conexión y la magia silenciosa de simplemente moverse por el mundo.",
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cut Out Fest/Photo 1 Whereabouts_suejeeLee_3.jpg",
+    "trailer": "na"
+  },
+  {
+    "Sección": "Selección de cortometrajes Cut Out Fest",
+    "Código": 7.5,
+    "Título": "Busy Bodies",
+    "Director(a)": "Kate Renshaw-Lewis",
+    "País / Año": "Estados Unidos, 2024",
+    "Sinopsis / Notas": "Busy Bodies es una animación dibujada a mano que combina impresión por inyección de tinta y serigrafía. Inspirada en las máquinas de Rube Goldberg, la película explora el proceso oculto de producción de los objetos fácilmente desechables. Las imágenes del filme se repiten y deterioran, visualizando la repetición, la velocidad y la naturaleza destructiva de la cadena de producción industrial.",
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cut Out Fest/Busy Bodies .jpg",
+    "trailer": "na"
+  },
+  {
+    "Sección": "Selección de cortometrajes Cut Out Fest",
+    "Código": 7.6,
+    "Título": "My Gut Friend",
+    "Director(a)": "José Manuel \"Becho\", Lo Bianco, Mariano, Andrés Bergara",
+    "País / Año": "Argentina, México, 2025",
+    "Sinopsis / Notas": "Jim, un hombre solitario atrapado en la rutina, recuerda cuando era niño y su intuición estaba viva. A pesar de los esfuerzos de sus padres y del médico, Jim decidió escuchar su intuición, lo que despertó una enorme curiosidad con una simple palabra: escalar. Tras días de treparlo todo, Jim descubre algo que lo fascina... una montaña más allá del horizonte.",
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cut Out Fest/Photo 1 Screenshot_2025-02-05_at_1.22.27_PM.jpg",
+    "trailer": "na"
+  },
+  {
+    "Sección": "Selección de cortometrajes Cut Out Fest",
+    "Código": 7.7,
+    "Título": "Fly Train",
+    "Director(a)": "Ria Riwen Zhang",
+    "País / Año": "Hong Kong, 2025",
+    "Sinopsis / Notas": "Fly Train utiliza juegos de sombras y visuales experimentales para explorar el tiempo y la memoria. Durante un viaje cotidiano, los pensamientos derivan entre el paisaje y recuerdos fragmentados, atrapados en sueños. Las siluetas diarias se transforman en lo surreal, sumergiéndose en una corriente poética de conciencia.",
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cut Out Fest/Fly Train.jpg",
+    "trailer": "na"
+  },
+  {
+    "Sección": "Selección de cortometrajes Cut Out Fest",
+    "Código": 7.8,
+    "Título": "LARVAL",
+    "Director(a)": "Alice Bloomfield",
+    "País / Año": "Reino Unido, 2024",
+    "Sinopsis / Notas": "Viviendo una vida solitaria de aislamiento, una niña sueña con lujo y belleza. Fantasea con tener la apariencia de su ídolo famoso y conquistar el corazón de su amor no correspondido, un trabajador indiferente de su local de comida rápida. En un giro surrealista y onírico, con un espíritu parecido a una polilla, descubre que quizás debería haber tenido más cuidado con lo que deseaba.",
+    "imagen": "/Images/Programa de cine FICLosCabos 2025/Cut Out Fest/Photo 1 larval_3.jpg",
+    "trailer": "na"
   }
 ]
+
