@@ -292,12 +292,12 @@ export const venues = allVenues.sort((a, b) => {
 });
 
 export const timeSlots = [
-  "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"
+  "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"
 ];
 
 function generateDetailedTimeSlots() {
   const slots: string[] = [];
-  const startHour = 11;
+  const startHour = 9;
   const endHour = 23;
   for (let hour = startHour; hour <= endHour; hour++) {
     slots.push(`${hour.toString().padStart(2, '0')}:00`);
