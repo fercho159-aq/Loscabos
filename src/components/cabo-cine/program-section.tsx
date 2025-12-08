@@ -49,11 +49,26 @@ export default function ProgramSection() {
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             Descubre el universo #BeyondTheScreen del Festival de Cine de los Cabos
           </p>
-           <div className="mt-8">
-             <Button asChild>
-                <Link href="/programacion">
-                    Descubre más <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
+              <Link href="/programacion">
+                Eventos y Proyecciones <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
+              <Link href="/programa-cine">
+                Programa de cine <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
+              <Link href="/agenda">
+                Agenda #BeyondTheScreen <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-headline">
+              <Link href="/agenda-cine">
+                Agenda Cinemex <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
           </div>
         </div>
