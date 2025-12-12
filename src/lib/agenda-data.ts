@@ -157,8 +157,8 @@ export const agendaData: AgendaEvent[] = [
     "Dia": "viernes 12 de dic"
   },
   {
-    "HORA DE INICIO": "20:00",
-    "HORA DE FIN": "22:00",
+    "HORA DE INICIO": "18:00",
+    "HORA DE FIN": "20:00",
     "EVENTO": "Proyección Especial\nLa Nube En El Jardín En Vivo desde La Sala Nezahualcóyotl | Dir. Olmo Guerra | México | 99 min\nQ&A",
     "SEDE": "Crania",
     "CATEGORÍA": "Programa #BeyondTheScreen",
