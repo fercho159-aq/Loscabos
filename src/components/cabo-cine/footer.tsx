@@ -120,9 +120,17 @@ export default function Footer() {
               data-ai-hint="logo white"
             />
           </div>
-          <p className="text-xs text-accent-foreground/80 text-center mt-[100px]">
-            &copy; {new Date().getFullYear()} Cabocine. todos los derechos reservados.
-          </p>
+          <div className="flex flex-col items-center gap-2 mt-[100px]">
+            <Link
+              href="/politica-de-privacidad"
+              className="text-xs text-accent-foreground/80 hover:text-accent-foreground transition-colors underline"
+            >
+              Política de Privacidad
+            </Link>
+            <p className="text-xs text-accent-foreground/80 text-center">
+              &copy; {new Date().getFullYear()} Cabocine. todos los derechos reservados.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
