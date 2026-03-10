@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { FloatingParticles, GradientBlobs } from "@/components/three";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
           />
           <div className="hero-overlay" />
         </div>
+        <FloatingParticles count={100} color="#C8D42C" size={2.5} speed={0.06} />
         <div className="hero-content">
           <p className="hero-location">Puerto Los Cabos, B.C.S.</p>
           <h1 className="hero-title">
@@ -29,7 +31,7 @@ export default function Home() {
             y Creatividad<br />
             de Los Cabos
           </h1>
-          <p className="hero-dates">2 — 5 Diciembre</p>
+          <p className="hero-dates">9 — 13 Diciembre</p>
           <div className="hero-logo-wrapper">
             <Image
               src="/images/logo-light.png"
@@ -51,8 +53,12 @@ export default function Home() {
 
       {/* ── VIDEO SECTION ── */}
       <section className="video-section">
-        <div className="blob b1" />
-        <div className="blob b2" />
+        <GradientBlobs
+          color1="#0D1520"
+          color2="#162840"
+          color3="#4A7FBF"
+          speed={0.12}
+        />
         <div className="video-wrapper">
           <iframe
             src="https://www.youtube.com/embed/DjSLAT8RJr0"

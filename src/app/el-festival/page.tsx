@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { GradientBlobs } from "@/components/three";
 
 export default function ElFestival() {
   return (
@@ -21,8 +22,14 @@ export default function ElFestival() {
       </section>
 
       {/* El Festival text */}
-      <section className="festival-text">
-        <div className="festival-text-container">
+      <section className="festival-text" style={{ position: "relative", overflow: "hidden" }}>
+        <GradientBlobs
+          color1="#0D1520"
+          color2="#1a2a40"
+          color3="#2a3a55"
+          speed={0.1}
+        />
+        <div className="festival-text-container" style={{ position: "relative", zIndex: 2 }}>
           <h1 className="festival-text-title">El Festival</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -85,8 +92,14 @@ export default function ElFestival() {
         />
         <div className="location-content">
           <h2 className="location-title">Puerto Los Cabos,<br />B.C.S</h2>
-          <div className="location-band">
-            <div className="location-band-container">
+          <div className="location-band" style={{ position: "relative", overflow: "hidden" }}>
+            <GradientBlobs
+              color1="#0D1520"
+              color2="#162840"
+              color3="#1a3050"
+              speed={0.08}
+            />
+            <div className="location-band-container" style={{ position: "relative", zIndex: 2 }}>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
