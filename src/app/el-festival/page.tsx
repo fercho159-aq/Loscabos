@@ -1,127 +1,98 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { GradientBlobs } from "@/components/three";
 
 export default function ElFestival() {
   return (
     <>
       <Navbar />
 
-      {/* Banner with image */}
-      <section className="festival-banner">
-        <div className="festival-banner-img">
+      <section className="page-hero" style={{ minHeight: "50vh" }}>
+        <div className="page-hero-bg">
           <Image
-            src="/images/webpdf/img-120.png"
-            alt="Festival de Cine Los Cabos"
+            src="/images/plataforma-cultural/aerial.jpg"
+            alt="Los Cabos aerial"
             fill
             style={{ objectFit: "cover" }}
             priority
           />
+          <div className="page-hero-overlay" />
+        </div>
+        <div className="page-hero-content">
+          <h1 className="page-hero-title">El Festival</h1>
         </div>
       </section>
 
-      {/* El Festival text */}
-      <section className="festival-text" style={{ position: "relative", overflow: "hidden" }}>
-        <GradientBlobs
-          color1="#0D1520"
-          color2="#1a2a40"
-          color3="#2a3a55"
-          speed={0.1}
-        />
-        <div className="festival-text-container" style={{ position: "relative", zIndex: 2 }}>
-          <h1 className="festival-text-title">El Festival</h1>
+      {/* Intro */}
+      <section className="section-text">
+        <div className="section-text-inner">
+          <h2 className="section-heading">#BeyondTheScreen: El Pulso de la Creatividad en Los Cabos</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-            ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-            accumsan lacus vel facilisis.
+            Tras la expansi&oacute;n de nuestra visi&oacute;n en 2025, el Festival evoluciona. En nuestra 14&ordf; edici&oacute;n
+            &mdash;del 9 al 13 de diciembre de 2026&mdash; nos consolidamos como la plataforma de vinculaci&oacute;n
+            para la industria audiovisual en M&eacute;xico.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-            ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-            accumsan lacus vel facilisis.
+            Somos el punto de encuentro donde el cine converge con la m&uacute;sica, el arte digital y la
+            animaci&oacute;n. Desde Los Cabos, conectamos el talento mexicano con el circuito internacional.
           </p>
-        </div>
-      </section>
-
-      {/* Four colored cells */}
-      <section className="quad-grid">
-        <div className="quad-cell cell-blue">
-          <h3>Plataforma Cultural<br />Anclada en<br />Puerto Los Cabos</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-            ipsum suspendisse ultrices gravida.
-          </p>
-        </div>
-        <div className="quad-cell cell-lime">
-          <h3>Plataformas de Impulso<br />a la Industria<br />del Cine</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-            ipsum suspendisse ultrices gravida.
-          </p>
-        </div>
-        <div className="quad-cell cell-peach">
-          <h3>Programaci&oacute;n<br />Con Pulso<br />Global</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-            ipsum suspendisse ultrices gravida.
-          </p>
-        </div>
-        <div className="quad-cell cell-blush">
-          <h3>Comunidad Creativa y<br />Ecosistema de<br />Influencia</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-            ipsum suspendisse ultrices gravida.
+            A trav&eacute;s de un modelo multisede que integra naturaleza, hospitalidad y pensamiento
+            creativo, generamos un entorno propicio para la circulaci&oacute;n de obras, el encuentro
+            profesional y la construcci&oacute;n de redes internacionales.
           </p>
         </div>
       </section>
 
-      {/* Location hero with navy band */}
-      <section className="location-section">
+      {/* Image break */}
+      <section style={{ position: "relative", height: "40vh", overflow: "hidden" }}>
         <Image
-          src="/images/hero.png"
-          alt="Puerto Los Cabos"
+          src="/images/plataforma-cultural/ocean.jpg"
+          alt="Oc&eacute;ano Pac&iacute;fico"
           fill
           style={{ objectFit: "cover" }}
         />
-        <div className="location-content">
-          <h2 className="location-title">Puerto Los Cabos,<br />B.C.S</h2>
-          <div className="location-band" style={{ position: "relative", overflow: "hidden" }}>
-            <GradientBlobs
-              color1="#0D1520"
-              color2="#162840"
-              color3="#1a3050"
-              speed={0.08}
-            />
-            <div className="location-band-container" style={{ position: "relative", zIndex: 2 }}>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-                ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-                accumsan lacus vel facilisis.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-                ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-                accumsan lacus vel facilisis.
-              </p>
-            </div>
-          </div>
+      </section>
+
+      {/* 4 Ejes */}
+      <section className="quad-grid">
+        <div className="quad-cell cell-blue">
+          <h3>Plataforma Creativa<br />Anclada en<br />Los Cabos</h3>
+          <p>
+            El entorno especial de Los Cabos es el origen de todo. Producto de la energ&iacute;a que emana del Golfo de
+            California, surge este festival que, mediante alianzas estrat&eacute;gicas, fusiona la hospitalidad de Baja California
+            Sur con un circuito creativo internacional sin precedentes.
+          </p>
+        </div>
+        <div className="quad-cell cell-lime">
+          <h3>Impulso<br />a la<br />Industria</h3>
+          <p>
+            Nuestras plataformas reducen la brecha entre creaci&oacute;n, industria y audiencias. A trav&eacute;s de La Baja Inspira,
+            el Fondo Gabriel Figueroa y Frequencies of Now, actuamos como un motor de formaci&oacute;n, financiamiento y exhibici&oacute;n.
+          </p>
+        </div>
+        <div className="quad-cell cell-peach">
+          <h3>Programaci&oacute;n<br />con Pulso<br />Global</h3>
+          <p>
+            Nuestra curadur&iacute;a descubre y posiciona las voces que definen el futuro del cine. Desde la Competencia
+            Mexicana hasta la consolidaci&oacute;n de la Animaci&oacute;n, el Festival dialoga permanentemente con el circuito
+            de festivales internacional.
+          </p>
+        </div>
+        <div className="quad-cell cell-blush">
+          <h3>Comunidad<br />e<br />Influencia</h3>
+          <p>
+            Creamos un ecosistema que trasciende el evento. Activamos una red global de creadores, medios y
+            plataformas para construir un ecosistema que se expande y empodera proyectos los 365 d&iacute;as del a&ntilde;o.
+          </p>
         </div>
       </section>
 
-      {/* Desert landscape */}
-      <section className="desert-section">
+      {/* Landscape */}
+      <section style={{ position: "relative", height: "50vh", overflow: "hidden" }}>
         <Image
-          src="/images/webpdf/img-089.png"
-          alt="Paisaje desertico de Baja California Sur"
+          src="/images/plataforma-cultural/nature.jpg"
+          alt="Naturaleza de Baja California Sur"
           fill
           style={{ objectFit: "cover" }}
         />

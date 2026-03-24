@@ -1,24 +1,11 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Barlow_Condensed, Barlow } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { FilmGrain } from "@/components/three";
 
-const bebasNeue = Bebas_Neue({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-bebas",
-});
-
-const barlowCondensed = Barlow_Condensed({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-barlow-condensed",
-});
-
-const barlow = Barlow({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-barlow",
+const inter = localFont({
+  src: "../../public/fonts/Inter-VariableFont_opsz,wght.ttf",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -35,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body suppressHydrationWarning
-        className={`${bebasNeue.variable} ${barlowCondensed.variable} ${barlow.variable} antialiased`}
+        className={`${inter.variable} antialiased`}
       >
         {children}
         <FilmGrain />

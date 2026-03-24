@@ -1,7 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { FloatingParticles, GradientBlobs } from "@/components/three";
 
 export default function Home() {
   return (
@@ -10,62 +10,80 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="hero">
-        {/* Background image */}
         <div className="hero-bg">
           <Image
-            src="/images/hero.png"
-            alt=""
+            src="/images/hero.jpg"
+            alt="Los Cabos at sunset"
             fill
             style={{ objectFit: "cover" }}
             priority
           />
           <div className="hero-overlay" />
         </div>
-        <FloatingParticles count={100} color="#C8D42C" size={2.5} speed={0.06} />
         <div className="hero-content">
-          <p className="hero-location">Puerto Los Cabos, B.C.S.</p>
-          <h1 className="hero-title">
-            Festival<br />
-            Internacional<br />
-            de Cine<br />
-            y Creatividad<br />
-            de Los Cabos
-          </h1>
-          <p className="hero-dates">9 — 13 Diciembre</p>
           <div className="hero-logo-wrapper">
             <Image
               src="/images/logo-light.png"
-              alt="FICC Los Cabos 14° Edición"
-              width={240}
-              height={86}
+              alt="FICC Los Cabos"
+              width={460}
+              height={165}
               className="hero-logo-img"
-              style={{ width: "auto", height: "auto", maxWidth: 240 }}
             />
           </div>
-          <div className="hero-year">2026</div>
+          <p className="hero-edition">14&ordf; Edici&oacute;n &nbsp;&bull;&nbsp; 9 al 13 de diciembre, 2026</p>
+          <h2 className="hero-hashtag">#BEYONDTHESCREEN</h2>
+          <p className="hero-tagline">
+            El cine como punto de encuentro entre la m&uacute;sica, el arte digital y la comunidad.
+          </p>
         </div>
-        {/* Acid band inside hero, overlapping 2026 */}
-        <div className="hashtag-band-overlap">
-          <h2>#BeyondTheScreen</h2>
-          <p>Cine, creatividad y experiencias culturales con proyección global.</p>
+        {/* Large year overlapping into the band */}
+        <div className="hero-year-overlap">
+          <span className="hero-year-number">2026</span>
         </div>
       </section>
 
-      {/* ── VIDEO SECTION ── */}
-      <section className="video-section">
-        <GradientBlobs
-          color1="#0D1520"
-          color2="#162840"
-          color3="#4A7FBF"
-          speed={0.12}
-        />
-        <div className="video-wrapper">
-          <iframe
-            src="https://www.youtube.com/embed/DjSLAT8RJr0"
-            title="#BeyondTheScreen: Cine, Mundo Digital Más Allá de la Pantalla"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          />
+      {/* ── CTA PREVENTA ── */}
+      <section className="cta-section">
+        <p className="cta-text">
+          Accede a la preventa de boletos y descubre la programaci&oacute;n antes que nadie.
+        </p>
+        <Link href="/comunidad" className="cta-button">
+          S&eacute; el primero en la fila
+        </Link>
+      </section>
+
+      {/* ── IMPULSO A LA INDUSTRIA ── */}
+      <section className="impulso-section">
+        <h2 className="impulso-title">Impulso a la Industria</h2>
+        <p className="impulso-subtitle">
+          Conoce nuestras plataformas de apoyo a la Industria
+        </p>
+        <div className="impulso-grid">
+          <div className="impulso-card">
+            <h3>La Baja Inspira</h3>
+            <p>
+              Plataforma de proyecci&oacute;n internacional para el cine documental que aborda
+              la biodiversidad, la memoria hist&oacute;rica y el desarrollo sostenible del
+              Golfo de California.
+            </p>
+            <Link href="/la-baja-inspira" className="impulso-link">Explorar</Link>
+          </div>
+          <div className="impulso-card">
+            <h3>Fondo F&iacute;lmico Gabriel Figueroa</h3>
+            <p>
+              Fortalece la industria audiovisual mexicana al generar una vinculaci&oacute;n
+              efectiva entre cineastas y empresas estrat&eacute;gicas del sector.
+            </p>
+            <Link href="/ffgf" className="impulso-link">Explorar</Link>
+          </div>
+          <div className="impulso-card">
+            <h3>Frequencies of Now</h3>
+            <p>
+              Laboratorio creativo donde el cine, la m&uacute;sica y la moda convergen
+              para impulsar nuevas narrativas audiovisuales.
+            </p>
+            <Link href="/fon" className="impulso-link">Explorar</Link>
+          </div>
         </div>
       </section>
 
