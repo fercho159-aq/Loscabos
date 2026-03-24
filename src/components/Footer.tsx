@@ -1,19 +1,22 @@
 "use client";
 
+export function Newsletter() {
+  return (
+    <div className="newsletter">
+      <label htmlFor="email-input">Suscríbete a nuestro Newsletter:</label>
+      <input
+        id="email-input"
+        type="email"
+        placeholder="tucorreo@ejemplo.com"
+      />
+      <button type="button">Suscribirse</button>
+    </div>
+  );
+}
+
 export default function Footer() {
   return (
     <footer>
-      {/* Newsletter */}
-      <div className="newsletter">
-        <label htmlFor="email-input">Suscríbete a nuestro Newsletter:</label>
-        <input
-          id="email-input"
-          type="email"
-          placeholder="tucorreo@ejemplo.com"
-        />
-        <button type="button">Suscribirse</button>
-      </div>
-
       {/* Social & Bottom */}
       <div className="site-footer">
         <nav className="social-links" aria-label="Redes sociales">

@@ -1,7 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Footer, { Newsletter } from "@/components/Footer";
+
+const aliados = [
+  { name: "Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-01.png" },
+  { name: "IMCINE", logo: "/images/aliados/FICC_Logos_Aliados_2026-02.png" },
+  { name: "Grupo Questro", logo: "/images/aliados/FICC_Logos_Aliados_2026-03.png" },
+  { name: "Puerto Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-04.png" },
+  { name: "ESCINE", logo: "/images/aliados/FICC_Logos_Aliados_2026-05.png" },
+  { name: "Hotel El Ganzo", logo: "/images/aliados/FICC_Logos_Aliados_2026-06.png" },
+  { name: "Tropicana", logo: "/images/aliados/FICC_Logos_Aliados_2026-07.png" },
+  { name: "Suelo Sur", logo: "/images/aliados/FICC_Logos_Aliados_2026-08.png" },
+  { name: "National Car Rental", logo: "/images/aliados/FICC_Logos_Aliados_2026-09.png" },
+  { name: "Dobel", logo: "/images/aliados/FICC_Logos_Aliados_2026-10.png" },
+];
+const aliadosTrack = [...aliados, ...aliados];
 
 export default function Home() {
   return (
@@ -87,6 +101,21 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="aliados-plaque">
+        <h3 className="aliados-plaque-title">Nuestros Aliados</h3>
+        <div className="aliados-carousel">
+          <div className="aliados-track">
+            {aliadosTrack.map((a, i) => (
+              <div key={`${a.name}-${i}`} className="aliado-slide">
+                <Image src={a.logo} alt={a.name} width={240} height={120}
+                  style={{ width: "auto", height: 120, objectFit: "contain" }} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Newsletter />
       <Footer />
     </>
   );

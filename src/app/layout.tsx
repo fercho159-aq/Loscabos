@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 import { FilmGrain } from "@/components/three";
 
 const inter = localFont({
   src: "../../public/fonts/Inter-VariableFont_opsz,wght.ttf",
   variable: "--font-inter",
+});
+
+const printf = localFont({
+  src: "../../public/fonts/PRINTF-Regular.ttf",
+  variable: "--font-printf",
 });
 
 export const metadata: Metadata = {
@@ -22,10 +28,15 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body suppressHydrationWarning
-        className={`${inter.variable} antialiased`}
+        className={`${inter.variable} ${printf.variable} antialiased`}
       >
         {children}
         <FilmGrain />
+        <Script
+          id="mcjs"
+          strategy="afterInteractive"
+          src="https://chimpstatic.com/mcjs-connected/js/users/24bf46409995ffe6e8ad030da/420621f0164c4fb39533f61a1.js"
+        />
       </body>
     </html>
   );

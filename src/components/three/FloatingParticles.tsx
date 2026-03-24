@@ -11,7 +11,7 @@ interface ParticlesProps {
   speed?: number;
 }
 
-function Particles({ count = 80, color = "#C8D42C", size = 2.5, speed = 0.08 }: ParticlesProps) {
+function Particles({ count = 80, color = "#BDC957", size = 2.5, speed = 0.08 }: ParticlesProps) {
   const ref = useRef<THREE.Points>(null);
 
   const [positions, velocities, opacities] = useMemo(() => {
@@ -118,7 +118,7 @@ interface FloatingParticlesProps {
 
 export default function FloatingParticles({
   count = 80,
-  color = "#C8D42C",
+  color = "#BDC957",
   size = 2.5,
   speed = 0.08,
   className = "",

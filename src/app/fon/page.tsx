@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 
 export default function FON() {
   return (
-    <>
+    <div className="fon-page">
       <Navbar />
 
       <section className="page-hero" style={{ minHeight: "50vh" }}>
@@ -21,9 +21,6 @@ export default function FON() {
         </div>
         <div className="page-hero-content">
           <h1 className="page-hero-title">Frequencies of Now</h1>
-          <p className="page-hero-subtitle">
-            Laboratorio creativo de narrativas audiovisuales
-          </p>
         </div>
       </section>
 
@@ -47,6 +44,6 @@ export default function FON() {
       </section>
 
       <Footer />
-    </>
+    </div>
   );
 }

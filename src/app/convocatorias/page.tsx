@@ -110,7 +110,7 @@ export default function Convocatorias() {
       {/* Archive link */}
       <section className="conv-archive" style={{ position: "relative", overflow: "hidden" }}>
         <GradientBlobs
-          color1="#0D1520"
+          color1="#081722"
           color2="#162840"
           color3="#1a3050"
           speed={0.08}

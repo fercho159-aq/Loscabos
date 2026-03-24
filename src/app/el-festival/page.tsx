@@ -56,7 +56,7 @@ export default function ElFestival() {
 
       {/* 4 Ejes */}
       <section className="quad-grid">
-        <div className="quad-cell cell-blue">
+        <div className="quad-cell cell-green">
           <h3>Plataforma Creativa<br />Anclada en<br />Los Cabos</h3>
           <p>
             El entorno especial de Los Cabos es el origen de todo. Producto de la energ&iacute;a que emana del Golfo de
@@ -64,22 +64,28 @@ export default function ElFestival() {
             Sur con un circuito creativo internacional sin precedentes.
           </p>
         </div>
-        <div className="quad-cell cell-lime">
+        <div className="quad-cell cell-brown">
           <h3>Impulso<br />a la<br />Industria</h3>
           <p>
             Nuestras plataformas reducen la brecha entre creaci&oacute;n, industria y audiencias. A trav&eacute;s de La Baja Inspira,
             el Fondo Gabriel Figueroa y Frequencies of Now, actuamos como un motor de formaci&oacute;n, financiamiento y exhibici&oacute;n.
+            Dise&ntilde;adas para generar convergencia, estas plataformas fortalecen trayectorias creativas y construyen puentes
+            reales entre el talento mexicano y el mercado internacional.
           </p>
         </div>
-        <div className="quad-cell cell-peach">
+        <div className="quad-cell cell-navy">
           <h3>Programaci&oacute;n<br />con Pulso<br />Global</h3>
           <p>
             Nuestra curadur&iacute;a descubre y posiciona las voces que definen el futuro del cine. Desde la Competencia
-            Mexicana hasta la consolidaci&oacute;n de la Animaci&oacute;n, el Festival dialoga permanentemente con el circuito
-            de festivales internacional.
+            Mexicana y su apuesta por el riesgo narrativo, hasta la consolidaci&oacute;n de la Animaci&oacute;n como un lenguaje
+            cinematogr&aacute;fico mayor y Marejada, nuestra muestra Internacional como nuestra vitrina de los grandes
+            circuitos y festivales, el Festival dialoga permanentemente con el circuito de festivales internacional.
+            #BeyondTheScreen es una plataforma de innovaci&oacute;n cultural. Integramos cine, m&uacute;sica y arte digital para
+            responder a la transformaci&oacute;n de las industrias creativas, proyectando desde Los Cabos nuevas formas de
+            crear y experimentar el cine.
           </p>
         </div>
-        <div className="quad-cell cell-blush">
+        <div className="quad-cell cell-wine">
           <h3>Comunidad<br />e<br />Influencia</h3>
           <p>
             Creamos un ecosistema que trasciende el evento. Activamos una red global de creadores, medios y

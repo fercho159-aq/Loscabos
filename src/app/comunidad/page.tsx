@@ -76,7 +76,7 @@ export default function Comunidad() {
       {/* Intro */}
       <section className="festival-text" style={{ position: "relative", overflow: "hidden" }}>
         <GradientBlobs
-          color1="#0D1520"
+          color1="#081722"
           color2="#1a2a40"
           color3="#2a3a55"
           speed={0.1}
@@ -130,7 +130,7 @@ export default function Comunidad() {
       {/* Join band */}
       <section className="comunidad-join" style={{ position: "relative", overflow: "hidden" }}>
         <GradientBlobs
-          color1="#0D1520"
+          color1="#081722"
           color2="#162840"
           color3="#4A7FBF"
           speed={0.08}

@@ -19,16 +19,10 @@ export default function Programacion() {
           <div className="page-hero-overlay" />
         </div>
         <div className="page-hero-content">
-          <p className="page-hero-label">FICC Los Cabos 2026</p>
           <h1 className="page-hero-title">Programaci&oacute;n</h1>
-          <p className="page-hero-subtitle">
+          <p className="page-hero-subtitle" style={{ fontSize: "clamp(1.5rem, 4vw, 2.5rem)", fontWeight: 800, letterSpacing: ".08em", textTransform: "uppercase", marginTop: "1rem" }}>
             Pr&oacute;ximamente
           </p>
-          <div className="prog-dates-badge" style={{ marginTop: "2.5rem" }}>
-            <span className="prog-dates-label">Diciembre</span>
-            <span className="prog-dates-numbers">9 &mdash; 13</span>
-            <span className="prog-dates-label">2026</span>
-          </div>
         </div>
       </section>
 

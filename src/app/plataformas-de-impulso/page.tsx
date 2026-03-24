@@ -78,7 +78,7 @@ export default function PlataformasDeImpulso() {
           />
           <div className="page-hero-overlay" />
         </div>
-        <FloatingParticles count={70} color="#C8D42C" size={2} speed={0.05} />
+        <FloatingParticles count={70} color="#BDC957" size={2} speed={0.05} />
         <div className="page-hero-content">
           <p className="page-hero-label">FICC Los Cabos</p>
           <h1 className="page-hero-title">
@@ -93,7 +93,7 @@ export default function PlataformasDeImpulso() {
       {/* Intro text */}
       <section className="festival-text" style={{ position: "relative", overflow: "hidden" }}>
         <GradientBlobs
-          color1="#0D1520"
+          color1="#081722"
           color2="#1a2a40"
           color3="#2a3a55"
           speed={0.1}

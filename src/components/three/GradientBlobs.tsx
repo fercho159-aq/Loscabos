@@ -124,7 +124,7 @@ interface GradientBlobsProps {
 }
 
 export default function GradientBlobs({
-  color1 = "#0D1520",
+  color1 = "#081722",
   color2 = "#1a2a40",
   color3 = "#4A7FBF",
   speed = 0.15,
