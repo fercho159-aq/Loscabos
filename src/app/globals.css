@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body {
+  margin: 0 !important;
+}
+
 @theme {
   --color-cream: #F6EDDB;
   --color-navy: #081722;
@@ -1810,9 +1814,6 @@
 .profile-card {
   width: 100%;
   padding: 1.5rem;
-  background: var(--color-white);
-  border: 1px solid rgba(8,23,34,.08);
-  border-radius: 8px;
 }
 .profile-avatar {
   width: 100px; height: 100px;
@@ -1852,7 +1853,7 @@
 .ffgf-legado-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(246, 237, 219, .92);
+  background: rgba(0, 0, 0, .3);
   z-index: 1;
 }
 .ffgf-legado-inner {
@@ -1901,15 +1902,15 @@
 
 .ffgf-film-card {
   position: relative;
-  padding: 1.75rem 1.5rem 1.5rem;
+  padding: 0;
   background: var(--color-white);
-  border: 1px solid rgba(8, 23, 34, .08);
+  border: none;
   border-radius: 8px;
-  transition: transform .3s ease, background .3s ease, border-color .3s ease;
+  overflow: hidden;
+  transition: transform .3s ease;
 }
 .ffgf-film-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(189, 201, 87, .5);
 }
 .ffgf-film-number {
   font-family: var(--font-inter);
@@ -1970,6 +1971,10 @@
 .lbi-page .section-heading {
   color: var(--color-orange);
 }
+.lbi-page .section-text-inner,
+.lbi-page .section-highlight-inner {
+  max-width: 1200px;
+}
 .lbi-page .section-text-inner p,
 .lbi-page .section-highlight-inner p {
   font-weight: 300;
@@ -1983,8 +1988,14 @@
   color: var(--color-navy);
 }
 .lbi-page .profile-card {
-  border-left: 3px solid var(--color-orange);
+  border-left: none;
+  background: transparent;
+  border: none;
   text-align: center;
+}
+.lbi-page .profile-avatar {
+  width: 160px;
+  height: 160px;
 }
 
 /* Legado flip cards */
@@ -2042,7 +2053,36 @@
 }
 
 /* ── FFGF ── */
-.ffgf-page .page-hero-title,
+.ffgf-page {
+  filter: grayscale(100%);
+  background: #fff;
+  position: relative;
+  z-index: 0;
+}
+.ffgf-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: -1;
+}
+.ffgf-page .page-hero {
+  margin-top: 0;
+}
+.ffgf-page .section-text,
+.ffgf-page .section-highlight {
+  background: #fff;
+}
+.ffgf-page .site-nav {
+  background: #fff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.ffgf-page .page-hero-title {
+  font-family: var(--font-inter);
+  font-weight: 900;
+  text-transform: uppercase;
+}
 .ffgf-page .section-heading,
 .ffgf-page .ffgf-legado-title {
   font-family: var(--font-printf);
@@ -2075,7 +2115,11 @@
 }
 
 /* ── FON ── */
-.fon-page .page-hero-title,
+.fon-page .page-hero-title {
+  font-family: var(--font-inter);
+  font-weight: 900;
+  text-transform: uppercase;
+}
 .fon-page .section-heading {
   font-family: var(--font-printf);
   text-transform: uppercase;
@@ -2173,7 +2217,7 @@
    PRENSA — INFINITE CAROUSEL
    ══════════════════════════════════════════ */
 .prensa-quotes-section {
-  background: var(--color-navy);
+  background: var(--color-cream);
   padding: 5rem 0 5rem;
   position: relative;
   overflow: hidden;
@@ -2219,7 +2263,7 @@
   font-weight: 600;
   letter-spacing: .2em;
   text-transform: uppercase;
-  color: var(--color-acid);
+  color: var(--color-navy);
   margin-bottom: .75rem;
 }
 
@@ -2227,7 +2271,7 @@
   font-family: var(--font-inter);
   font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 800;
-  color: var(--color-cream);
+  color: var(--color-navy);
   letter-spacing: .02em;
   margin-bottom: 1rem;
 }
@@ -2235,7 +2279,7 @@
 .prensa-quotes-subtitle {
   font-family: var(--font-inter);
   font-size: .92rem;
-  color: rgba(246,237,219,.45);
+  color: rgba(8,23,34,.55);
   max-width: 560px;
   margin: 0 auto 3rem;
   line-height: 1.7;
@@ -2312,8 +2356,8 @@
 
 /* Card accent variants */
 .prensa-quote-card--accent-teal {
-  background: rgba(13,115,119,.12);
-  border: 1px solid rgba(13,115,119,.15);
+  background: #fff;
+  border: 1px solid rgba(8,23,34,.08);
 }
 .prensa-quote-card--accent-teal::before {
   background: var(--color-teal);
@@ -2323,8 +2367,8 @@
 }
 
 .prensa-quote-card--accent-acid {
-  background: rgba(189,201,87,.08);
-  border: 1px solid rgba(189,201,87,.12);
+  background: #fff;
+  border: 1px solid rgba(8,23,34,.08);
 }
 .prensa-quote-card--accent-acid::before {
   background: var(--color-acid);
@@ -2334,14 +2378,21 @@
 }
 
 .prensa-quote-card--accent-wine {
-  background: rgba(150,9,66,.10);
-  border: 1px solid rgba(150,9,66,.15);
+  background: #fff;
+  border: 1px solid rgba(8,23,34,.08);
 }
 .prensa-quote-card--accent-wine::before {
   background: var(--color-wine);
 }
 .prensa-quote-card--accent-wine .prensa-quote-icon {
   color: var(--color-rose);
+}
+
+.prensa-quote-logo {
+  margin-bottom: 1.25rem;
+  height: 48px;
+  display: flex;
+  align-items: center;
 }
 
 .prensa-quote-icon {
@@ -2361,7 +2412,7 @@
   font-size: .88rem;
   font-weight: 300;
   line-height: 1.8;
-  color: rgba(246,237,219,.75);
+  color: rgba(8,23,34,.75);
   margin: 0 0 1.5rem;
   font-style: italic;
   flex: 1;
@@ -2372,7 +2423,7 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 1rem;
-  border-top: 1px solid rgba(246,237,219,.08);
+  border-top: 1px solid rgba(8,23,34,.1);
 }
 
 .prensa-quote-source {
@@ -2385,7 +2436,7 @@
   display: block;
   width: 18px;
   height: 2px;
-  background: var(--color-acid);
+  background: var(--color-navy);
   border-radius: 2px;
 }
 
@@ -2393,7 +2444,7 @@
   font-family: var(--font-inter);
   font-size: .78rem;
   font-weight: 700;
-  color: var(--color-cream);
+  color: var(--color-navy);
   letter-spacing: .04em;
 }
 
@@ -2404,7 +2455,7 @@
   letter-spacing: .08em;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--color-acid);
+  color: var(--color-navy);
   display: inline-flex;
   align-items: center;
   gap: .4rem;

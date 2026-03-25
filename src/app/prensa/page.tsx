@@ -6,13 +6,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const quotes = [
-  { medio: "El Universal", quote: "El Festival de Cine de Los Cabos vuelve en 2025 para recordarle al mundo que el cine mexicano sigue vivo, evoluciona y tiene mucho que contar.", url: "https://www.eluniversal.com.mx/espectaculos/el-festival-de-cine-de-los-cabos-vuelve-en-2025-el-cine-mexicano-sigue-vivo-y-evoluciona/" },
-  { medio: "El Financiero", quote: "El cine trasciende la pantalla y convierte a Puerto Los Cabos en un escenario donde cine, música, arte y naturaleza se entrelazan... transformando un destino en un referente cultural de alcance internacional.", url: "https://www.elfinanciero.com.mx/mundo-empresa/2025/11/17/ficloscabos-2025-el-cine-trasciende-la-pantalla-y-convierte-a-puerto-los-cabos-en-un-ecosistema-creativo/" },
-  { medio: "Quién", quote: "No es solo un evento, es el lugar donde las historias se desbordan, se viven, se celebran y se convierten en magia... una propuesta donde la pantalla no es el límite, sino el punto de partida.", url: "https://www.quien.com/cultura/2025/12/08/ficloscabos-2025-el-festival-que-llega-mas-alla-de-la-pantalla" },
-  { medio: "The Walk", quote: "El festival vuelve a recordarnos que el cine también puede ser eso: una pausa elegante, una conversación bien dicha, una historia que se ve mejor con el sonido del mar de fondo.", url: "https://thewalkpaper.com/noticias/463/FIC_los_cabos_2025" },
-  { medio: "Time Out México", quote: "Una propuesta que apuesta por ser distinta... convirtiendo al FIC Los Cabos en un campus cultural donde el cine dialogue con el desierto, el mar y la creatividad local.", url: "https://www.timeoutmexico.mx/ciudad-de-mexico/cine/festival-internacional-de-cine-de-los-cabos-2025-fechas-y-temas" },
-  { medio: "Chilango", quote: "La 13a edición demostró que el séptimo arte sigue buscando espacios para diversificarse. La producción cinematográfica fuera de la CDMX existe y sigue levantando la mano para mostrar el talento que hace falta visibilizar.", url: "https://www.chilango.com/cine-y-tv/peliculas/ganadores-de-fic-los-cabos-2025/" },
-  { medio: "Travel + Leisure", quote: "Más que un escaparate de estrenos, es un espacio donde el cine se piensa, se acompaña y, en muchos casos, se termina de construir.", url: "https://travelandleisure-es.com/destinos/festival-internacional-de-cine-de-los-cabos-2025-cine-emergente-musica-y-nuevas-narrativas/" },
+  { medio: "El Universal", logo: "/images/prensa/Logos Medios/ElUniversal.png", quote: "El Festival de Cine de Los Cabos vuelve en 2025 para recordarle al mundo que el cine mexicano sigue vivo, evoluciona y tiene mucho que contar.", url: "https://www.eluniversal.com.mx/espectaculos/el-festival-de-cine-de-los-cabos-vuelve-en-2025-el-cine-mexicano-sigue-vivo-y-evoluciona/" },
+  { medio: "El Financiero", logo: "/images/prensa/Logos Medios/ElFinanciero.png", quote: "El cine trasciende la pantalla y convierte a Puerto Los Cabos en un escenario donde cine, música, arte y naturaleza se entrelazan... transformando un destino en un referente cultural de alcance internacional.", url: "https://www.elfinanciero.com.mx/mundo-empresa/2025/11/17/ficloscabos-2025-el-cine-trasciende-la-pantalla-y-convierte-a-puerto-los-cabos-en-un-ecosistema-creativo/" },
+  { medio: "Quién", logo: "/images/prensa/Logos Medios/Quien.png", quote: "No es solo un evento, es el lugar donde las historias se desbordan, se viven, se celebran y se convierten en magia... una propuesta donde la pantalla no es el límite, sino el punto de partida.", url: "https://www.quien.com/cultura/2025/12/08/ficloscabos-2025-el-festival-que-llega-mas-alla-de-la-pantalla" },
+  { medio: "The Walk", logo: "/images/prensa/Logos Medios/TheWalk.png", quote: "El festival vuelve a recordarnos que el cine también puede ser eso: una pausa elegante, una conversación bien dicha, una historia que se ve mejor con el sonido del mar de fondo.", url: "https://thewalkpaper.com/noticias/463/FIC_los_cabos_2025" },
+  { medio: "Time Out México", logo: "/images/prensa/Logos Medios/TimeOut.png", quote: "Una propuesta que apuesta por ser distinta... convirtiendo al FIC Los Cabos en un campus cultural donde el cine dialogue con el desierto, el mar y la creatividad local.", url: "https://www.timeoutmexico.mx/ciudad-de-mexico/cine/festival-internacional-de-cine-de-los-cabos-2025-fechas-y-temas" },
+  { medio: "Chilango", logo: "/images/prensa/Logos Medios/Chilango.png", quote: "La 13a edición demostró que el séptimo arte sigue buscando espacios para diversificarse. La producción cinematográfica fuera de la CDMX existe y sigue levantando la mano para mostrar el talento que hace falta visibilizar.", url: "https://www.chilango.com/cine-y-tv/peliculas/ganadores-de-fic-los-cabos-2025/" },
+  { medio: "Travel + Leisure", logo: "/images/prensa/Logos Medios/TravelLeisure.png", quote: "Más que un escaparate de estrenos, es un espacio donde el cine se piensa, se acompaña y, en muchos casos, se termina de construir.", url: "https://travelandleisure-es.com/destinos/festival-internacional-de-cine-de-los-cabos-2025-cine-emergente-musica-y-nuevas-narrativas/" },
 ];
 
 // Build pairs for the carousel (2 cards per slide)
@@ -27,9 +27,9 @@ const accentClass = (idx: number) =>
 function QuoteCard({ q, globalIndex }: { q: (typeof quotes)[number]; globalIndex: number }) {
   return (
     <article className={`prensa-quote-card prensa-quote-card--${accentClass(globalIndex)}`}>
-      <svg className="prensa-quote-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M11 7.5H7.5C5.57 7.5 4 9.07 4 11V17H10V11H6.5C6.5 9.34 7.84 8 9.5 8H11V7.5ZM20 7.5H16.5C14.57 7.5 13 9.07 13 11V17H19V11H15.5C15.5 9.34 16.84 8 18.5 8H20V7.5Z" fill="currentColor"/>
-      </svg>
+      <div className="prensa-quote-logo">
+        <Image src={q.logo} alt={q.medio} width={200} height={60} style={{ objectFit: "contain", height: 48, width: "auto" }} />
+      </div>
       <blockquote className="prensa-quote-text">
         {q.quote}
       </blockquote>
@@ -80,9 +80,9 @@ export default function Prensa() {
             Accede a nuestro kit de prensa con informaci&oacute;n actualizada del festival,
             logos, im&aacute;genes en alta resoluci&oacute;n y datos clave de la 14&ordf; edici&oacute;n.
           </p>
-          <Link href="#" className="cta-button" style={{ marginTop: "1.5rem" }}>
+          <a href="/FICCLosCabos_DECK2026.pdf" download className="cta-button" style={{ marginTop: "1.5rem" }}>
             Descargar Kit de Prensa
-          </Link>
+          </a>
         </div>
       </section>
 

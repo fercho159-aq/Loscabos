@@ -61,7 +61,7 @@ export default function LaBajaInspira() {
       <section className="page-hero" style={{ minHeight: "50vh" }}>
         <div className="page-hero-bg">
           <Image
-            src="/images/plataformas-impulso/underwater.jpg"
+            src="/images/lbi-hero-whale.jpg"
             alt="Golfo de California"
             fill
             style={{ objectFit: "cover" }}
@@ -111,7 +111,7 @@ export default function LaBajaInspira() {
       {/* Banner desierto — full width */}
       <section style={{ position: "relative", width: "100%", height: "40vh", minHeight: 300 }}>
         <Image
-          src="/images/plataformas-impulso/desert.jpg"
+          src="/images/lbi-banner-sunset.jpg"
           alt="Desierto de Baja California"
           fill
           style={{ objectFit: "cover" }}

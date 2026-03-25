@@ -10,8 +10,8 @@ export default function Programacion() {
       <section className="page-hero" style={{ minHeight: "60vh" }}>
         <div className="page-hero-bg">
           <Image
-            src="/images/plataforma-cultural/cabos-sunset.jpg"
-            alt="Los Cabos"
+            src="/images/programacion-hero.jpg"
+            alt="Programación"
             fill
             style={{ objectFit: "cover" }}
             priority

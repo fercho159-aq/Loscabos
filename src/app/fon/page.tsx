@@ -11,8 +11,8 @@ export default function FON() {
       <section className="page-hero" style={{ minHeight: "50vh" }}>
         <div className="page-hero-bg">
           <Image
-            src="/images/plataformas-impulso/production.jpg"
-            alt="Production"
+            src="/images/fon-hero.jpg"
+            alt="Frequencies of Now"
             fill
             style={{ objectFit: "cover" }}
             priority
