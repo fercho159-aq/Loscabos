@@ -250,7 +250,7 @@ body {
 
   .hero-location {
     font-family: var(--font-inter);
-    font-size: clamp(.75rem, 1.2vw, 1rem);
+    font-size: clamp(1rem, 1.8vw, 1.4rem);
     letter-spacing: .35em;
     font-weight: 500;
     color: var(--color-acid);
@@ -276,7 +276,7 @@ body {
 
   .hero-date {
     font-family: var(--font-inter);
-    font-size: clamp(.8rem, 1.5vw, 1.15rem);
+    font-size: clamp(1.1rem, 2.2vw, 1.6rem);
     letter-spacing: .3em;
     font-weight: 600;
     color: var(--color-acid);
@@ -327,7 +327,7 @@ body {
      CTA BAND — Bold Acid Strip
      ══════════════════════════════════════════ */
   .cta-section {
-    background: var(--color-teal);
+    background: var(--color-acid);
     padding: 3rem 2rem;
     text-align: center;
     position: relative;
@@ -340,7 +340,7 @@ body {
     font-family: var(--font-inter);
     font-size: clamp(.92rem, 1.3vw, 1.08rem);
     font-weight: 400;
-    color: var(--color-cream);
+    color: var(--color-dark);
     max-width: 520px;
     margin: 0 auto 1.8rem;
     line-height: 1.7;
@@ -453,7 +453,6 @@ body {
     font-size: clamp(.9rem, 1.2vw, 1.05rem);
     color: var(--color-navy);
     line-height: 1.7;
-    opacity: .75;
     margin: 0 0 1.5rem;
   }
 
@@ -496,7 +495,7 @@ body {
     font-family: var(--font-inter);
     font-size: .9rem;
     font-weight: 300;
-    color: rgba(8,23,34,.5);
+    color: #081722;
     letter-spacing: .03em;
     margin-bottom: 3.5rem;
   }
@@ -550,10 +549,11 @@ body {
   .impulso-card h3 {
     font-family: var(--font-inter);
     font-size: 1.15rem;
-    font-weight: 700;
+    font-weight: 900;
     color: #000;
     margin-bottom: .75rem;
-    letter-spacing: .01em;
+    letter-spacing: .02em;
+    text-transform: uppercase;
   }
 
   .impulso-card p {
@@ -701,12 +701,14 @@ body {
      FOOTER
      ══════════════════════════════════════════ */
   .site-footer {
-    background: var(--color-cream);
-    padding: 2.5rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2rem;
+    background: #081722 !important;
+    color: #F6EDDB !important;
+  }
+
+  .footer-social-bar {
+    display: flex !important;
+    justify-content: center !important;
+    padding: 2.5rem 2rem 1.5rem !important;
   }
 
   .social-links {
@@ -715,27 +717,117 @@ body {
   }
 
   .social-links a {
-    color: rgba(8, 23, 34, .4);
+    color: #F6EDDB;
     text-decoration: none;
-    transition: color .25s, transform .25s;
+    transition: opacity .25s, transform .25s;
   }
 
   .social-links a:hover {
-    color: var(--color-acid);
+    opacity: .7;
     transform: translateY(-2px);
   }
 
   .social-links svg {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     fill: currentColor;
+  }
+
+  .footer-columns {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 2rem !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 3rem 2rem 4rem !important;
+  }
+
+  .footer-col h4 {
+    font-family: var(--font-inter) !important;
+    font-size: .8rem !important;
+    font-weight: 700 !important;
+    letter-spacing: .12em !important;
+    text-transform: uppercase !important;
+    color: #F6EDDB !important;
+    margin-bottom: 1.2rem !important;
+  }
+
+  .footer-col ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: .65rem !important;
+  }
+
+  .footer-col a {
+    font-family: var(--font-inter) !important;
+    font-size: .85rem !important;
+    color: rgba(246, 237, 219, .8) !important;
+    text-decoration: none !important;
+    transition: color .2s !important;
+  }
+
+  .footer-col a:hover {
+    color: #fff !important;
+  }
+
+  .footer-logo-section {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 2rem 2rem 3rem !important;
+    gap: 1rem !important;
+  }
+
+  .footer-edition {
+    font-family: var(--font-inter) !important;
+    font-size: 1.1rem !important;
+    font-style: italic !important;
+    color: #F6EDDB !important;
+    opacity: .9 !important;
+  }
+
+  .footer-bottom {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: .5rem !important;
+    padding: 2rem 2rem 2.5rem !important;
+    border-top: 1px solid rgba(246, 237, 219, .15) !important;
+  }
+
+  .footer-privacy {
+    font-family: var(--font-inter) !important;
+    font-size: .8rem !important;
+    color: rgba(246, 237, 219, .8) !important;
+    text-decoration: underline !important;
+    transition: color .2s !important;
+  }
+
+  .footer-privacy:hover {
+    color: #fff;
   }
 
   .footer-copy {
     font-family: var(--font-inter);
     font-size: .72rem;
-    color: rgba(8, 23, 34, .35);
+    color: rgba(246, 237, 219, .6);
     letter-spacing: .06em;
+  }
+
+  @media (max-width: 768px) {
+    .footer-columns {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem 2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-columns {
+      grid-template-columns: 1fr;
+    }
   }
 
   /* ══════════════════════════════════════════
@@ -1736,7 +1828,7 @@ body {
 .section-text-inner p {
   font-family: var(--font-inter);
   font-size: .92rem; line-height: 1.8;
-  color: rgba(8,23,34,.7);
+  color: #081722;
   margin-bottom: 1rem;
 }
 .section-heading {
@@ -1754,7 +1846,7 @@ body {
 .section-list li {
   font-family: var(--font-inter);
   font-size: .9rem; line-height: 1.7;
-  color: rgba(8,23,34,.7);
+  color: #081722;
   padding: .4rem 0 .4rem 1.2rem;
   position: relative;
 }
@@ -1786,11 +1878,11 @@ body {
 .section-highlight-inner > p {
   font-family: var(--font-inter);
   font-size: .92rem; line-height: 1.8;
-  color: rgba(8,23,34,.7);
+  color: #081722;
   margin-bottom: 1rem;
 }
 .section-highlight .section-list li {
-  color: rgba(8,23,34,.7);
+  color: #081722;
 }
 .section-highlight .section-dates p {
   color: var(--color-navy);
@@ -1830,7 +1922,7 @@ body {
 .profile-card p {
   font-family: var(--font-inter);
   font-size: .8rem; line-height: 1.6;
-  color: rgba(8,23,34,.6);
+  color: #081722;
 }
 .profile-director {
   font-weight: 500;
@@ -1957,6 +2049,9 @@ body {
 }
 
 /* ── LA BAJA INSPIRA ── */
+.lbi-page {
+  background: var(--color-cream);
+}
 .lbi-page .page-hero-title {
   font-family: var(--font-inter);
   font-weight: 900;
@@ -2033,8 +2128,8 @@ body {
 }
 .flip-card-back {
   transform: rotateY(180deg);
-  background: var(--color-navy);
-  color: #fff;
+  background: #FA6935 !important;
+  color: #F6EDDB !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2045,11 +2140,11 @@ body {
   font-size: .9rem;
   font-weight: 700;
   margin-bottom: .5rem;
-  color: var(--color-orange);
+  color: #F6EDDB !important;
 }
 .flip-card-back p {
   font-family: var(--font-inter);
-  color: rgba(255,255,255,.85);
+  color: rgba(246,237,219,.85) !important;
 }
 
 /* ── FFGF ── */
@@ -2279,7 +2374,7 @@ body {
 .prensa-quotes-subtitle {
   font-family: var(--font-inter);
   font-size: .92rem;
-  color: rgba(8,23,34,.55);
+  color: #081722;
   max-width: 560px;
   margin: 0 auto 3rem;
   line-height: 1.7;
@@ -2356,7 +2451,7 @@ body {
 
 /* Card accent variants */
 .prensa-quote-card--accent-teal {
-  background: #fff;
+  background: var(--color-cream);
   border: 1px solid rgba(8,23,34,.08);
 }
 .prensa-quote-card--accent-teal::before {
@@ -2367,7 +2462,7 @@ body {
 }
 
 .prensa-quote-card--accent-acid {
-  background: #fff;
+  background: var(--color-cream);
   border: 1px solid rgba(8,23,34,.08);
 }
 .prensa-quote-card--accent-acid::before {
@@ -2378,7 +2473,7 @@ body {
 }
 
 .prensa-quote-card--accent-wine {
-  background: #fff;
+  background: var(--color-cream);
   border: 1px solid rgba(8,23,34,.08);
 }
 .prensa-quote-card--accent-wine::before {
@@ -2390,7 +2485,7 @@ body {
 
 .prensa-quote-logo {
   margin-bottom: 1.25rem;
-  height: 48px;
+  height: 72px;
   display: flex;
   align-items: center;
 }
@@ -2412,7 +2507,7 @@ body {
   font-size: .88rem;
   font-weight: 300;
   line-height: 1.8;
-  color: rgba(8,23,34,.75);
+  color: #081722;
   margin: 0 0 1.5rem;
   font-style: italic;
   flex: 1;

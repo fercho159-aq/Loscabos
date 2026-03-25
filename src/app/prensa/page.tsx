@@ -28,7 +28,7 @@ function QuoteCard({ q, globalIndex }: { q: (typeof quotes)[number]; globalIndex
   return (
     <article className={`prensa-quote-card prensa-quote-card--${accentClass(globalIndex)}`}>
       <div className="prensa-quote-logo">
-        <Image src={q.logo} alt={q.medio} width={200} height={60} style={{ objectFit: "contain", height: 48, width: "auto" }} />
+        <Image src={q.logo} alt={q.medio} width={240} height={72} style={{ objectFit: "contain", height: 72, width: "auto" }} />
       </div>
       <blockquote className="prensa-quote-text">
         {q.quote}
@@ -75,13 +75,8 @@ export default function Prensa() {
 
       <section className="section-text">
         <div className="section-text-inner">
-          <h2 className="section-heading">Descarga el Deck</h2>
-          <p>
-            Accede a nuestro kit de prensa con informaci&oacute;n actualizada del festival,
-            logos, im&aacute;genes en alta resoluci&oacute;n y datos clave de la 14&ordf; edici&oacute;n.
-          </p>
-          <a href="/FICCLosCabos_DECK2026.pdf" download className="cta-button" style={{ marginTop: "1.5rem" }}>
-            Descargar Kit de Prensa
+          <a href="/FICCLosCabos_DECK2026.pdf" download className="cta-button">
+            Descarga el Deck
           </a>
         </div>
       </section>

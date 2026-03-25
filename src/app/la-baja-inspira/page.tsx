@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -61,8 +61,8 @@ export default function LaBajaInspira() {
       <section className="page-hero" style={{ minHeight: "50vh" }}>
         <div className="page-hero-bg">
           <Image
-            src="/images/lbi-hero-whale.jpg"
-            alt="Golfo de California"
+            src="/images/la-baja-inspira-hero.jpg"
+            alt="Baja California Sur"
             fill
             style={{ objectFit: "cover" }}
             priority
@@ -81,16 +81,16 @@ export default function LaBajaInspira() {
             <Image src="/images/lbi-logo.png" alt="La Baja Inspira" width={400} height={500} style={{ objectFit: "contain", width: "100%", maxWidth: 400, height: "auto" }} />
           </div>
           <div>
-            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, opacity: .75, marginBottom: "1.2rem" }}>
+            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, marginBottom: "1.2rem" }}>
               La Baja Inspira es la plataforma del Festival Internacional de Cine de Los Cabos dise&ntilde;ada para impulsar el cine
               de no ficci&oacute;n que explora la biodiversidad, la memoria y el desarrollo de la regi&oacute;n. Posicionamos al destino
               como un referente global, vinculando la potencia del lenguaje cinematogr&aacute;fico con la investigaci&oacute;n cient&iacute;fica y
               la conciencia p&uacute;blica.
             </p>
-            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, opacity: .75, marginBottom: "1rem" }}>
+            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, marginBottom: "1rem" }}>
               Los proyectos seleccionados deber&aacute;n articular el lenguaje cinematogr&aacute;fico con al menos una de las siguientes &aacute;reas de conocimiento:
             </p>
-            <ul style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, opacity: .75, paddingLeft: 0, listStyle: "none" }}>
+            <ul style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, paddingLeft: 0, listStyle: "none" }}>
               <li style={{ marginBottom: "1.2rem", display: "flex", gap: ".75rem", alignItems: "flex-start" }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BDC957" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 4 }}><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg>
                 <span><strong>Ciencias Naturales:</strong> Biolog&iacute;a Golfo de California, ecolog&iacute;a, cambio clim&aacute;tico y biodiversidad del desierto.</span>
@@ -135,9 +135,9 @@ export default function LaBajaInspira() {
               <p><strong>Cierre:</strong> 30 de junio, 2026</p>
               <p><strong>Selecci&oacute;n:</strong> 8 t&iacute;tulos que definen el pulso de la regi&oacute;n</p>
             </div>
-            <Link href="/comunidad" className="cta-button" style={{ marginTop: "1.5rem" }}>
+            <a href="https://festivaldecinedeloscabos.us15.list-manage.com/subscribe?u=24bf46409995ffe6e8ad030da&id=12e1ce1334" target="_blank" rel="noopener noreferrer" className="cta-button" style={{ marginTop: "1.5rem" }}>
               S&eacute; el primero en recibir informaci&oacute;n
-            </Link>
+            </a>
           </div>
           <div style={{ position: "relative", width: "100%", height: "100%", minHeight: 500, borderRadius: 12, overflow: "hidden" }}>
             <Image
@@ -176,15 +176,15 @@ export default function LaBajaInspira() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", maxWidth: 1200, margin: "0 auto", padding: "5rem 2rem", alignItems: "center" }}>
           <div>
             <h2 className="section-heading" style={{ color: "#1B3A2D" }}>Circuito Peninsular</h2>
-            <p style={{ color: "rgba(27,58,45,0.8)" }}>
+            <p style={{ color: "#F6EDDB" }}>
               Un circuito anual de circulaci&oacute;n cultural que lleva las pel&iacute;culas seleccionadas a distintas ciudades de Baja California
               y Baja California Sur. Del 6 de noviembre al 15 de diciembre.
             </p>
-            <p style={{ marginTop: "1.5rem", fontWeight: 600, color: "#1B3A2D", marginBottom: "0.75rem" }}>Ruta de Exhibici&oacute;n:</p>
+            <p style={{ marginTop: "1.5rem", fontWeight: 600, color: "#F6EDDB", marginBottom: "0.75rem" }}>Ruta de Exhibici&oacute;n:</p>
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.5rem" }}>
               {ruta.map((city) => (
-                <li key={city} style={{ display: "flex", alignItems: "center", gap: "0.6rem", color: "rgba(27,58,45,0.9)", fontFamily: "var(--font-inter)", fontSize: "0.95rem" }}>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1B3A2D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <li key={city} style={{ display: "flex", alignItems: "center", gap: "0.6rem", color: "#F6EDDB", fontFamily: "var(--font-inter)", fontSize: "0.95rem" }}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F6EDDB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                   {city}
                 </li>
               ))}

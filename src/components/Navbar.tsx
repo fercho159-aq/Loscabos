@@ -61,9 +61,9 @@ export default function Navbar() {
       </ul>
 
       {/* CTA */}
-      <Link href="/comunidad" className="nav-cta hidden lg:inline-flex">
+      <a href="https://festivaldecinedeloscabos.us15.list-manage.com/subscribe?u=24bf46409995ffe6e8ad030da&id=12e1ce1334" target="_blank" rel="noopener noreferrer" className="nav-cta hidden lg:inline-flex">
         Únete a la comunidad
-      </Link>
+      </a>
 
       {/* Mobile hamburger */}
       <button
@@ -161,8 +161,10 @@ export default function Navbar() {
               </Link>
             )
           )}
-          <Link
-            href="/comunidad"
+          <a
+            href="https://festivaldecinedeloscabos.us15.list-manage.com/subscribe?u=24bf46409995ffe6e8ad030da&id=12e1ce1334"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMobileOpen(false)}
             style={{
               display: "block", marginTop: "1rem", padding: "0.75rem 1.5rem",
@@ -172,7 +174,7 @@ export default function Navbar() {
             }}
           >
             Únete a la comunidad
-          </Link>
+          </a>
         </div>
       )}
     </nav>
