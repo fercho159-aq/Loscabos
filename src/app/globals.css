@@ -2442,7 +2442,7 @@ body {
 
 .prensa-quote-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  box-shadow: none;
 }
 
 .prensa-quote-card:hover::before {
@@ -2452,7 +2452,8 @@ body {
 /* Card accent variants */
 .prensa-quote-card--accent-teal {
   background: var(--color-cream);
-  border: 1px solid rgba(8,23,34,.08);
+  border: none;
+  box-shadow: none;
 }
 .prensa-quote-card--accent-teal::before {
   background: var(--color-teal);
@@ -2463,7 +2464,8 @@ body {
 
 .prensa-quote-card--accent-acid {
   background: var(--color-cream);
-  border: 1px solid rgba(8,23,34,.08);
+  border: none;
+  box-shadow: none;
 }
 .prensa-quote-card--accent-acid::before {
   background: var(--color-acid);
@@ -2474,7 +2476,8 @@ body {
 
 .prensa-quote-card--accent-wine {
   background: var(--color-cream);
-  border: 1px solid rgba(8,23,34,.08);
+  border: none;
+  box-shadow: none;
 }
 .prensa-quote-card--accent-wine::before {
   background: var(--color-wine);
