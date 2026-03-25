@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
@@ -5,15 +7,52 @@ import Footer from "@/components/Footer";
 
 const quotes = [
   { medio: "El Universal", quote: "El Festival de Cine de Los Cabos vuelve en 2025 para recordarle al mundo que el cine mexicano sigue vivo, evoluciona y tiene mucho que contar.", url: "https://www.eluniversal.com.mx/espectaculos/el-festival-de-cine-de-los-cabos-vuelve-en-2025-el-cine-mexicano-sigue-vivo-y-evoluciona/" },
-  { medio: "El Financiero", quote: "El cine trasciende la pantalla y convierte a Puerto Los Cabos en un escenario donde cine, m\u00fasica, arte y naturaleza se entrelazan... transformando un destino en un referente cultural de alcance internacional.", url: "https://www.elfinanciero.com.mx/mundo-empresa/2025/11/17/ficloscabos-2025-el-cine-trasciende-la-pantalla-y-convierte-a-puerto-los-cabos-en-un-ecosistema-creativo/" },
-  { medio: "Qui\u00e9n", quote: "No es solo un evento, es el lugar donde las historias se desbordan, se viven, se celebran y se convierten en magia... una propuesta donde la pantalla no es el l\u00edmite, sino el punto de partida.", url: "https://www.quien.com/cultura/2025/12/08/ficloscabos-2025-el-festival-que-llega-mas-alla-de-la-pantalla" },
-  { medio: "The Walk", quote: "El festival vuelve a recordarnos que el cine tambi\u00e9n puede ser eso: una pausa elegante, una conversaci\u00f3n bien dicha, una historia que se ve mejor con el sonido del mar de fondo.", url: "https://thewalkpaper.com/noticias/463/FIC_los_cabos_2025" },
-  { medio: "Time Out M\u00e9xico", quote: "Una propuesta que apuesta por ser distinta... convirtiendo al FIC Los Cabos en un campus cultural donde el cine dialogue con el desierto, el mar y la creatividad local.", url: "https://www.timeoutmexico.mx/ciudad-de-mexico/cine/festival-internacional-de-cine-de-los-cabos-2025-fechas-y-temas" },
-  { medio: "Chilango", quote: "La 13a edici\u00f3n demostr\u00f3 que el s\u00e9ptimo arte sigue buscando espacios para diversificarse. La producci\u00f3n cinematogr\u00e1fica fuera de la CDMX existe y sigue levantando la mano para mostrar el talento que hace falta visibilizar.", url: "https://www.chilango.com/cine-y-tv/peliculas/ganadores-de-fic-los-cabos-2025/" },
-  { medio: "Travel + Leisure", quote: "M\u00e1s que un escaparate de estrenos, es un espacio donde el cine se piensa, se acompa\u00f1a y, en muchos casos, se termina de construir.", url: "https://travelandleisure-es.com/destinos/festival-internacional-de-cine-de-los-cabos-2025-cine-emergente-musica-y-nuevas-narrativas/" },
+  { medio: "El Financiero", quote: "El cine trasciende la pantalla y convierte a Puerto Los Cabos en un escenario donde cine, música, arte y naturaleza se entrelazan... transformando un destino en un referente cultural de alcance internacional.", url: "https://www.elfinanciero.com.mx/mundo-empresa/2025/11/17/ficloscabos-2025-el-cine-trasciende-la-pantalla-y-convierte-a-puerto-los-cabos-en-un-ecosistema-creativo/" },
+  { medio: "Quién", quote: "No es solo un evento, es el lugar donde las historias se desbordan, se viven, se celebran y se convierten en magia... una propuesta donde la pantalla no es el límite, sino el punto de partida.", url: "https://www.quien.com/cultura/2025/12/08/ficloscabos-2025-el-festival-que-llega-mas-alla-de-la-pantalla" },
+  { medio: "The Walk", quote: "El festival vuelve a recordarnos que el cine también puede ser eso: una pausa elegante, una conversación bien dicha, una historia que se ve mejor con el sonido del mar de fondo.", url: "https://thewalkpaper.com/noticias/463/FIC_los_cabos_2025" },
+  { medio: "Time Out México", quote: "Una propuesta que apuesta por ser distinta... convirtiendo al FIC Los Cabos en un campus cultural donde el cine dialogue con el desierto, el mar y la creatividad local.", url: "https://www.timeoutmexico.mx/ciudad-de-mexico/cine/festival-internacional-de-cine-de-los-cabos-2025-fechas-y-temas" },
+  { medio: "Chilango", quote: "La 13a edición demostró que el séptimo arte sigue buscando espacios para diversificarse. La producción cinematográfica fuera de la CDMX existe y sigue levantando la mano para mostrar el talento que hace falta visibilizar.", url: "https://www.chilango.com/cine-y-tv/peliculas/ganadores-de-fic-los-cabos-2025/" },
+  { medio: "Travel + Leisure", quote: "Más que un escaparate de estrenos, es un espacio donde el cine se piensa, se acompaña y, en muchos casos, se termina de construir.", url: "https://travelandleisure-es.com/destinos/festival-internacional-de-cine-de-los-cabos-2025-cine-emergente-musica-y-nuevas-narrativas/" },
 ];
 
+// Build pairs for the carousel (2 cards per slide)
+const pairs: (typeof quotes)[] = [];
+for (let i = 0; i < quotes.length; i += 2) {
+  pairs.push(quotes.slice(i, i + 2));
+}
+
+const accentClass = (idx: number) =>
+  idx % 3 === 0 ? "accent-teal" : idx % 3 === 1 ? "accent-acid" : "accent-wine";
+
+function QuoteCard({ q, globalIndex }: { q: (typeof quotes)[number]; globalIndex: number }) {
+  return (
+    <article className={`prensa-quote-card prensa-quote-card--${accentClass(globalIndex)}`}>
+      <svg className="prensa-quote-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 7.5H7.5C5.57 7.5 4 9.07 4 11V17H10V11H6.5C6.5 9.34 7.84 8 9.5 8H11V7.5ZM20 7.5H16.5C14.57 7.5 13 9.07 13 11V17H19V11H15.5C15.5 9.34 16.84 8 18.5 8H20V7.5Z" fill="currentColor"/>
+      </svg>
+      <blockquote className="prensa-quote-text">
+        {q.quote}
+      </blockquote>
+      <div className="prensa-quote-footer">
+        <div className="prensa-quote-source">
+          <span className="prensa-quote-dash"></span>
+          <span className="prensa-quote-medio">{q.medio}</span>
+        </div>
+        <a href={q.url} target="_blank" rel="noopener noreferrer" className="prensa-quote-link">
+          Leer nota
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M7 17L17 7" /><path d="M7 7h10v10" />
+          </svg>
+        </a>
+      </div>
+    </article>
+  );
+}
+
 export default function Prensa() {
+  // Repeat pairs 3x for seamless infinite loop
+  const repeatedPairs = [...pairs, ...pairs, ...pairs];
+
   return (
     <div className="prensa-page">
       <Navbar />
@@ -47,17 +86,26 @@ export default function Prensa() {
         </div>
       </section>
 
-      <section className="section-highlight">
-        <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
-          <h2 className="section-heading">Lo que dicen de nosotros</h2>
-          <div className="profiles-grid" style={{ marginTop: "2rem" }}>
-            {quotes.map((q) => (
-              <div key={q.medio} className="profile-card" style={{ textAlign: "center" }}>
-                <p style={{ fontStyle: "italic", marginBottom: "1rem" }}>&ldquo;{q.quote}&rdquo;</p>
-                <p style={{ fontWeight: 700, marginBottom: "0.5rem", color: "var(--color-navy)" }}>&mdash; {q.medio}</p>
-                <a href={q.url} target="_blank" rel="noopener noreferrer" style={{ color: "var(--color-acid)", fontSize: ".8rem", textDecoration: "underline" }}>
-                  Ver nota
-                </a>
+      <section className="prensa-quotes-section">
+        <div className="prensa-quotes-header">
+          <p className="prensa-quotes-label">Prensa</p>
+          <h2 className="prensa-quotes-title">Lo que dicen de nosotros</h2>
+          <p className="prensa-quotes-subtitle">
+            La prensa nacional e internacional reconoce al FIC Los Cabos como uno de los festivales de cine más relevantes de Latinoamérica.
+          </p>
+        </div>
+
+        <div className="prensa-carousel-wrapper">
+          <div className="prensa-carousel-track">
+            {repeatedPairs.map((pair, pairIdx) => (
+              <div className="prensa-carousel-slide" key={pairIdx}>
+                {pair.map((q, cardIdx) => (
+                  <QuoteCard
+                    key={`${pairIdx}-${cardIdx}`}
+                    q={q}
+                    globalIndex={pairIdx * 2 + cardIdx}
+                  />
+                ))}
               </div>
             ))}
           </div>
