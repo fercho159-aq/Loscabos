@@ -68,7 +68,7 @@ export default function Navbar() {
 
       {/* CTA */}
       <Link href="/comunidad" className="nav-cta hidden lg:inline-flex">
-        \u00danete a la comunidad
+        Únete a la comunidad
       </Link>
 
       {/* Mobile hamburger */}
@@ -177,7 +177,7 @@ export default function Navbar() {
               letterSpacing: "0.05em", textDecoration: "none",
             }}
           >
-            \u00danete a la comunidad
+            Únete a la comunidad
           </Link>
         </div>
       )}
