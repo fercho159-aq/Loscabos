@@ -213,12 +213,11 @@
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse 80% 60% at 50% 35%, rgba(13, 21, 32, .35) 0%, transparent 70%),
       linear-gradient(180deg,
-        rgba(13, 21, 32, .2) 0%,
-        rgba(13, 21, 32, .25) 30%,
-        rgba(13, 21, 32, .35) 60%,
-        rgba(13, 21, 32, .6) 100%);
+        rgba(13, 21, 32, .15) 0%,
+        rgba(13, 21, 32, .1) 40%,
+        rgba(13, 21, 32, .25) 70%,
+        rgba(13, 21, 32, .45) 100%);
     z-index: 1;
   }
 
@@ -237,66 +236,68 @@
   .hero-content {
     position: relative;
     z-index: 3;
-    padding: 6rem 2rem 0;
+    padding: 7rem 2rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .hero-location {
+    font-family: var(--font-inter);
+    font-size: clamp(.75rem, 1.2vw, 1rem);
+    letter-spacing: .35em;
+    font-weight: 500;
+    color: var(--color-acid);
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    opacity: 0;
+    animation: fadeUp .6s .3s forwards;
+  }
+
+  .hero-title {
+    font-family: var(--font-inter);
+    font-size: clamp(2.8rem, 8vw, 7rem);
+    font-weight: 900;
+    letter-spacing: -.01em;
+    color: var(--color-acid);
+    text-transform: uppercase;
+    text-align: center;
+    line-height: .9;
+    margin: 0 0 2rem;
+    opacity: 0;
+    animation: fadeUp .8s .5s forwards;
+  }
+
+  .hero-date {
+    font-family: var(--font-inter);
+    font-size: clamp(.8rem, 1.5vw, 1.15rem);
+    letter-spacing: .3em;
+    font-weight: 600;
+    color: var(--color-acid);
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    animation: fadeUp .6s .7s forwards;
   }
 
   .hero-logo-wrapper {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
     opacity: 0;
-    animation: fadeUp .8s .3s forwards;
+    animation: fadeUp .8s .9s forwards;
   }
 
   .hero-logo-img {
     filter: brightness(0) saturate(100%) invert(83%) sepia(45%) saturate(500%) hue-rotate(22deg) brightness(102%) contrast(92%);
-    width: clamp(280px, 35vw, 460px) !important;
+    width: clamp(160px, 20vw, 260px) !important;
     height: auto !important;
-  }
-
-  .hero-edition {
-    font-family: var(--font-inter);
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
-    letter-spacing: .25em;
-    font-weight: 600;
-    color: var(--color-acid);
-    text-transform: uppercase;
-    text-shadow: 0 1px 8px rgba(0, 0, 0, .4);
-    opacity: 0;
-    animation: fadeUp .6s .6s forwards;
-  }
-
-  .hero-hashtag {
-    font-family: var(--font-inter);
-    font-size: clamp(2rem, 5vw, 3.8rem);
-    font-weight: 800;
-    letter-spacing: .03em;
-    color: var(--color-acid);
-    margin: 1.8rem 0 .8rem;
-    line-height: .95;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, .3);
-    opacity: 0;
-    animation: fadeUp .7s .75s forwards;
-  }
-
-  .hero-tagline {
-    font-family: var(--font-inter);
-    font-size: clamp(.85rem, 1.3vw, 1.05rem);
-    font-weight: 400;
-    color: var(--color-acid);
-    max-width: 560px;
-    line-height: 1.7;
-    letter-spacing: .02em;
-    text-shadow: 0 1px 8px rgba(0, 0, 0, .4);
-    opacity: 0;
-    animation: fadeUp .6s .95s forwards;
   }
 
   /* Year overlap — bridges hero into band */
   .hero-year-overlap {
     position: relative;
-    z-index: 4;
+    z-index: 0;
     width: 100%;
     text-align: center;
     margin-top: auto;
@@ -312,7 +313,7 @@
     letter-spacing: .04em;
     line-height: .75;
     display: block;
-    margin-bottom: -36px;
+    margin-bottom: -46px;
     opacity: 0;
     animation: fadeUp .8s .8s forwards;
   }
@@ -322,31 +323,20 @@
      CTA BAND — Bold Acid Strip
      ══════════════════════════════════════════ */
   .cta-section {
-    background: var(--color-acid);
+    background: var(--color-teal);
     padding: 3rem 2rem;
     text-align: center;
     position: relative;
     overflow: hidden;
   }
 
-  /* Diagonal texture */
-  .cta-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(-45deg,
-        transparent,
-        transparent 20px,
-        rgba(13, 21, 32, .02) 20px,
-        rgba(13, 21, 32, .02) 21px);
-    pointer-events: none;
-  }
+  /* Diagonal texture removed */
 
   .cta-text {
     font-family: var(--font-inter);
     font-size: clamp(.92rem, 1.3vw, 1.08rem);
     font-weight: 400;
-    color: var(--color-navy);
+    color: var(--color-cream);
     max-width: 520px;
     margin: 0 auto 1.8rem;
     line-height: 1.7;
@@ -356,7 +346,7 @@
   .cta-button {
     display: inline-block;
     padding: .85rem 2.5rem;
-    background: var(--color-teal);
+    background: var(--color-navy);
     color: var(--color-cream);
     font-family: var(--font-inter);
     font-weight: 600;
@@ -369,10 +359,113 @@
   }
 
   .cta-button:hover {
-    background: var(--color-white);
-    color: var(--color-navy);
+    background: var(--color-cream);
+    color: var(--color-teal);
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(13, 21, 32, .15);
+  }
+
+  /* ══════════════════════════════════════════
+     EL FESTIVAL — Alternating rows
+     ══════════════════════════════════════════ */
+  .festival-section {
+    padding: 6rem 2rem 4rem;
+    background: var(--color-cream);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .festival-heading {
+    font-family: var(--font-inter);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--color-navy);
+    text-align: center;
+    letter-spacing: -.01em;
+    margin: 0 0 1.5rem;
+  }
+
+  .festival-intro {
+    font-family: var(--font-inter);
+    font-size: clamp(.95rem, 1.3vw, 1.1rem);
+    color: var(--color-navy);
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 4rem;
+    line-height: 1.7;
+    opacity: .8;
+  }
+
+  .festival-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 5rem;
+  }
+
+  .festival-row--reverse {
+    direction: rtl;
+  }
+
+  .festival-row--reverse > * {
+    direction: ltr;
+  }
+
+  .festival-row-img {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .festival-row-text {
+    padding: 1rem 0;
+  }
+
+  .festival-row-icon {
+    margin-bottom: 1rem;
+  }
+
+  .festival-row-icon img {
+    width: 60px !important;
+    height: 60px !important;
+    object-fit: contain;
+  }
+
+  .festival-row-title {
+    font-family: var(--font-inter);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--color-navy);
+    letter-spacing: .02em;
+    margin: 0 0 1rem;
+  }
+
+  .festival-row-text p {
+    font-family: var(--font-inter);
+    font-size: clamp(.9rem, 1.2vw, 1.05rem);
+    color: var(--color-navy);
+    line-height: 1.7;
+    opacity: .75;
+    margin: 0 0 1.5rem;
+  }
+
+  .festival-row-link {
+    font-family: var(--font-inter);
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--color-navy);
+    text-decoration: none;
+    transition: color .2s;
+  }
+
+  .festival-row-link:hover {
+    color: var(--color-teal);
   }
 
   /* ══════════════════════════════════════════
@@ -411,7 +504,6 @@
     max-width: 1100px;
     margin: 0 auto;
     text-align: left;
-    counter-reset: impulso-counter;
   }
 
   .impulso-card {
@@ -419,7 +511,6 @@
     padding: 2.5rem 2.5rem 2rem;
     position: relative;
     transition: background .4s;
-    counter-increment: impulso-counter;
     border-left: 1px solid rgba(8,23,34,.08);
   }
 
@@ -427,15 +518,12 @@
     border-left: none;
   }
 
-  .impulso-card::before {
-    content: counter(impulso-counter, decimal-leading-zero);
-    font-family: var(--font-inter);
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: rgba(58, 24, 1, .25);
-    line-height: 1;
-    display: block;
-    margin-bottom: .75rem;
+  .impulso-card--teal { background: var(--color-teal); }
+  .impulso-card--brown { background: var(--color-brown-light); }
+  .impulso-card--navy { background: var(--color-navy); }
+
+  .impulso-icon {
+    margin-bottom: 1.2rem;
   }
 
   .impulso-card::after {
@@ -455,15 +543,11 @@
     transform: scaleX(1);
   }
 
-  .impulso-card:hover {
-    background: rgba(189,201,87,.06);
-  }
-
   .impulso-card h3 {
     font-family: var(--font-inter);
     font-size: 1.15rem;
     font-weight: 700;
-    color: var(--color-navy);
+    color: #000;
     margin-bottom: .75rem;
     letter-spacing: .01em;
   }
@@ -472,7 +556,7 @@
     font-family: var(--font-inter);
     font-size: .84rem;
     line-height: 1.7;
-    color: rgba(8,23,34,.5);
+    color: #000;
     font-weight: 300;
     margin-bottom: 1.5rem;
   }
@@ -483,7 +567,7 @@
     font-size: .72rem;
     letter-spacing: .14em;
     text-transform: uppercase;
-    color: var(--color-brown);
+    color: #000;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -498,7 +582,6 @@
 
   .impulso-link:hover {
     gap: .8rem;
-    color: var(--color-cream);
   }
 
   .impulso-link:hover::after {
@@ -894,7 +977,7 @@
   .page-hero-title {
     font-family: var(--font-inter);
     font-size: clamp(3rem, 9vw, 6.5rem);
-    font-weight: 800;
+    font-weight: 900;
     line-height: .92;
     color: var(--color-cream);
     letter-spacing: .02em;
@@ -1719,25 +1802,23 @@
 
 /* Profiles grid */
 .profiles-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-top: 2rem;
 }
 .profile-card {
-  width: calc(33.333% - 1rem);
-  min-width: 220px;
+  width: 100%;
   padding: 1.5rem;
   background: var(--color-white);
   border: 1px solid rgba(8,23,34,.08);
   border-radius: 8px;
 }
 .profile-avatar {
-  width: 48px; height: 48px;
+  width: 100px; height: 100px;
   background: rgba(189,201,87,.25);
   border-radius: 50%;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem;
 }
 .profile-card h4 {
   font-family: var(--font-inter);
@@ -1875,9 +1956,15 @@
 }
 
 /* ── LA BAJA INSPIRA ── */
-.lbi-page .page-hero-title,
+.lbi-page .page-hero-title {
+  font-family: var(--font-inter);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--color-orange);
+}
 .lbi-page .section-heading {
-  font-family: var(--font-printf);
+  font-family: var(--font-inter);
+  font-weight: 900;
   text-transform: uppercase;
 }
 .lbi-page .section-heading {
@@ -1897,6 +1984,61 @@
 }
 .lbi-page .profile-card {
   border-left: 3px solid var(--color-orange);
+  text-align: center;
+}
+
+/* Legado flip cards */
+.legado-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.flip-card {
+  perspective: 1000px;
+  aspect-ratio: 2/3;
+  cursor: pointer;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 8px;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.flip-card-front {
+  z-index: 2;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+  background: var(--color-navy);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.2rem;
+}
+.flip-card-back h4 {
+  font-family: var(--font-inter);
+  font-size: .9rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+  color: var(--color-orange);
+}
+.flip-card-back p {
+  font-family: var(--font-inter);
+  color: rgba(255,255,255,.85);
 }
 
 /* ── FFGF ── */
@@ -1998,12 +2140,9 @@
   height: 160px;
 }
 .aliado-slide img {
-  filter: grayscale(100%);
-  opacity: .6;
-  transition: filter .3s, opacity .3s;
+  opacity: 1;
 }
 .aliado-slide:hover img {
-  filter: grayscale(0%);
   opacity: 1;
 }
 
@@ -2343,6 +2482,13 @@
 @media (max-width: 1024px) {
   .impulso-grid {
     grid-template-columns: 1fr !important;
+  }
+  .festival-row {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  .festival-row--reverse {
+    direction: ltr !important;
   }
   .ffgf-legado-grid {
     grid-template-columns: repeat(2, 1fr) !important;

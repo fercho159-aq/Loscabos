@@ -12,15 +12,9 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   { label: "El Festival", href: "/el-festival" },
-  {
-    label: "Plataformas de Impulso",
-    href: "/plataformas-de-impulso",
-    children: [
-      { label: "La Baja Inspira", href: "/la-baja-inspira" },
-      { label: "Fondo F\u00edlmico Gabriel Figueroa", href: "/ffgf" },
-      { label: "Frequencies of Now", href: "/fon" },
-    ],
-  },
+  { label: "La Baja Inspira", href: "/la-baja-inspira" },
+  { label: "Fondo F\u00edlmico Gabriel Figueroa", href: "/ffgf" },
+  { label: "Frequencies of Now", href: "/fon" },
   { label: "Programaci\u00f3n", href: "/programacion" },
   { label: "Prensa", href: "/prensa" },
 ];

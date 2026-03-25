@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Footer, { Newsletter } from "@/components/Footer";
 
 export default function ElFestival() {
   return (
@@ -23,75 +23,102 @@ export default function ElFestival() {
         </div>
       </section>
 
-      {/* Intro */}
-      <section className="section-text">
-        <div className="section-text-inner">
-          <h2 className="section-heading">#BeyondTheScreen: El Pulso de la Creatividad en Los Cabos</h2>
-          <p>
-            Tras la expansi&oacute;n de nuestra visi&oacute;n en 2025, el Festival evoluciona. En nuestra 14&ordf; edici&oacute;n
-            &mdash;del 9 al 13 de diciembre de 2026&mdash; nos consolidamos como la plataforma de vinculaci&oacute;n
-            para la industria audiovisual en M&eacute;xico.
-          </p>
-          <p>
-            Somos el punto de encuentro donde el cine converge con la m&uacute;sica, el arte digital y la
-            animaci&oacute;n. Desde Los Cabos, conectamos el talento mexicano con el circuito internacional.
-          </p>
-          <p>
-            A trav&eacute;s de un modelo multisede que integra naturaleza, hospitalidad y pensamiento
-            creativo, generamos un entorno propicio para la circulaci&oacute;n de obras, el encuentro
-            profesional y la construcci&oacute;n de redes internacionales.
-          </p>
+      {/* Intro — Text left, image right */}
+      <section style={{ padding: "5rem 2rem", maxWidth: 1200, margin: "0 auto" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center" }}>
+          <div>
+            <h2 style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 900, textTransform: "uppercase" as const, color: "#081722", lineHeight: 1.1, marginBottom: "2rem" }}>
+              #BeyondTheScreen: El Pulso de la Creatividad en Los Cabos
+            </h2>
+            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, opacity: .75, marginBottom: "1rem" }}>
+              Tras la expansi&oacute;n de nuestra visi&oacute;n en 2025, el Festival evoluciona. En nuestra 14&ordf; edici&oacute;n
+              &mdash;del 9 al 13 de diciembre de 2026&mdash; nos consolidamos como la plataforma de vinculaci&oacute;n
+              para la industria audiovisual en M&eacute;xico.
+            </p>
+            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, opacity: .75, marginBottom: "1rem" }}>
+              Somos el punto de encuentro donde el cine converge con la m&uacute;sica, el arte digital y la
+              animaci&oacute;n. Desde Los Cabos, conectamos el talento mexicano con el circuito internacional.
+            </p>
+            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, opacity: .75 }}>
+              A trav&eacute;s de un modelo multisede que integra naturaleza, hospitalidad y pensamiento
+              creativo, generamos un entorno propicio para la circulaci&oacute;n de obras, el encuentro
+              profesional y la construcci&oacute;n de redes internacionales.
+            </p>
+          </div>
+          <div style={{ position: "relative", aspectRatio: "3/4", borderRadius: 8, overflow: "hidden" }}>
+            <Image src="/images/plataforma-cultural/ocean.jpg" alt="Los Cabos" fill style={{ objectFit: "cover" }} />
+          </div>
         </div>
       </section>
 
-      {/* Image break */}
-      <section style={{ position: "relative", height: "40vh", overflow: "hidden" }}>
-        <Image
-          src="/images/plataforma-cultural/ocean.jpg"
-          alt="Oc&eacute;ano Pac&iacute;fico"
-          fill
-          style={{ objectFit: "cover" }}
-        />
-      </section>
+      {/* 4 Ejes — Alternating layout */}
+      <section style={{ padding: "4rem 2rem", maxWidth: 1200, margin: "0 auto" }}>
 
-      {/* 4 Ejes */}
-      <section className="quad-grid">
-        <div className="quad-cell cell-green">
-          <h3>Plataforma Creativa<br />Anclada en<br />Los Cabos</h3>
-          <p>
-            El entorno especial de Los Cabos es el origen de todo. Producto de la energ&iacute;a que emana del Golfo de
-            California, surge este festival que, mediante alianzas estrat&eacute;gicas, fusiona la hospitalidad de Baja California
-            Sur con un circuito creativo internacional sin precedentes.
-          </p>
+        {/* Eje 1 — Text left, icon right */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center", marginBottom: "5rem" }}>
+          <div>
+            <h3 style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)", fontWeight: 900, textTransform: "uppercase" as const, color: "#BDC957", marginBottom: "1rem" }}>PLATAFORMA CREATIVA ANCLADA EN LOS CABOS</h3>
+            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, opacity: .75 }}>
+              El entorno especial de Los Cabos es el origen de todo. Producto de la energ&iacute;a que emana del Golfo de
+              California, surge este festival que, mediante alianzas estrat&eacute;gicas, fusiona la hospitalidad de Baja California
+              Sur con un circuito creativo internacional sin precedentes.
+            </p>
+          </div>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <Image src="/images/ejes/eje1-color.png" alt="Eje Plataforma Creativa" width={260} height={260} style={{ objectFit: "contain" }} />
+          </div>
         </div>
-        <div className="quad-cell cell-brown">
-          <h3>Impulso<br />a la<br />Industria</h3>
-          <p>
-            Nuestras plataformas reducen la brecha entre creaci&oacute;n, industria y audiencias. A trav&eacute;s de La Baja Inspira,
-            el Fondo Gabriel Figueroa y Frequencies of Now, actuamos como un motor de formaci&oacute;n, financiamiento y exhibici&oacute;n.
-            Dise&ntilde;adas para generar convergencia, estas plataformas fortalecen trayectorias creativas y construyen puentes
-            reales entre el talento mexicano y el mercado internacional.
-          </p>
+
+        {/* Eje 2 — Icon left, text right */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center", marginBottom: "5rem" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <Image src="/images/ejes/eje2-color.png" alt="Eje Industria" width={260} height={260} style={{ objectFit: "contain" }} />
+          </div>
+          <div>
+            <h3 style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)", fontWeight: 900, textTransform: "uppercase" as const, color: "#C47A3D", marginBottom: "1rem" }}>IMPULSO A LA INDUSTRIA</h3>
+            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, opacity: .75 }}>
+              Nuestras plataformas reducen la brecha entre creaci&oacute;n, industria y audiencias. A trav&eacute;s de La Baja Inspira,
+              el Fondo Gabriel Figueroa y Frequencies of Now, actuamos como un motor de formaci&oacute;n, financiamiento y exhibici&oacute;n.
+              Dise&ntilde;adas para generar convergencia, estas plataformas fortalecen trayectorias creativas y construyen puentes
+              reales entre el talento mexicano y el mercado internacional.
+            </p>
+          </div>
         </div>
-        <div className="quad-cell cell-navy">
-          <h3>Programaci&oacute;n<br />con Pulso<br />Global</h3>
-          <p>
-            Nuestra curadur&iacute;a descubre y posiciona las voces que definen el futuro del cine. Desde la Competencia
-            Mexicana y su apuesta por el riesgo narrativo, hasta la consolidaci&oacute;n de la Animaci&oacute;n como un lenguaje
-            cinematogr&aacute;fico mayor y Marejada, nuestra muestra Internacional como nuestra vitrina de los grandes
-            circuitos y festivales, el Festival dialoga permanentemente con el circuito de festivales internacional.
-            #BeyondTheScreen es una plataforma de innovaci&oacute;n cultural. Integramos cine, m&uacute;sica y arte digital para
-            responder a la transformaci&oacute;n de las industrias creativas, proyectando desde Los Cabos nuevas formas de
-            crear y experimentar el cine.
-          </p>
+
+        {/* Eje 3 — Text left, icon right */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center", marginBottom: "5rem" }}>
+          <div>
+            <h3 style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)", fontWeight: 900, textTransform: "uppercase" as const, color: "#7B8FBF", marginBottom: "1rem" }}>PROGRAMACI&Oacute;N CON PULSO GLOBAL</h3>
+            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, opacity: .75 }}>
+              Nuestra curadur&iacute;a descubre y posiciona las voces que definen el futuro del cine. Desde la Competencia
+              Mexicana y su apuesta por el riesgo narrativo, hasta la consolidaci&oacute;n de la Animaci&oacute;n como un lenguaje
+              cinematogr&aacute;fico mayor, el Festival dialoga permanentemente con el circuito internacional.
+            </p>
+            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, opacity: .75, marginTop: "1rem" }}>
+              #BeyondTheScreen es una plataforma de innovaci&oacute;n cultural. Integramos cine, m&uacute;sica y arte digital para
+              responder a la transformaci&oacute;n de las industrias creativas, proyectando desde Los Cabos nuevas formas de
+              crear y experimentar el cine.
+            </p>
+          </div>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <Image src="/images/ejes/eje3-color.png" alt="Eje Programación" width={260} height={260} style={{ objectFit: "contain" }} />
+          </div>
         </div>
-        <div className="quad-cell cell-wine">
-          <h3>Comunidad<br />e<br />Influencia</h3>
-          <p>
-            Creamos un ecosistema que trasciende el evento. Activamos una red global de creadores, medios y
-            plataformas para construir un ecosistema que se expande y empodera proyectos los 365 d&iacute;as del a&ntilde;o.
-          </p>
+
+        {/* Eje 4 — Icon left, text right */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center", marginBottom: "3rem" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <Image src="/images/ejes/eje4-color.png" alt="Eje Comunidad" width={260} height={260} style={{ objectFit: "contain" }} />
+          </div>
+          <div>
+            <h3 style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)", fontWeight: 900, textTransform: "uppercase" as const, color: "#E9B0BD", marginBottom: "1rem" }}>COMUNIDAD E INFLUENCIA</h3>
+            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, opacity: .75 }}>
+              Creamos un ecosistema que trasciende el evento. Activamos una red global de creadores, medios y
+              plataformas para construir un ecosistema que se expande y empodera proyectos los 365 d&iacute;as del a&ntilde;o.
+            </p>
+          </div>
         </div>
+
       </section>
 
       {/* Landscape */}
@@ -104,6 +131,7 @@ export default function ElFestival() {
         />
       </section>
 
+      <Newsletter />
       <Footer />
     </>
   );
