@@ -18,6 +18,7 @@
   --color-blue-mid: #6687C3;
   --color-brown-light: #C47A3D;
   --color-gray: #9D9D9C;
+  --color-teal: #0D7377;
   --font-inter: "Inter", sans-serif;
 }
 
@@ -355,7 +356,7 @@
   .cta-button {
     display: inline-block;
     padding: .85rem 2.5rem;
-    background: var(--color-navy);
+    background: var(--color-teal);
     color: var(--color-cream);
     font-family: var(--font-inter);
     font-weight: 600;
@@ -390,7 +391,7 @@
     font-weight: 800;
     letter-spacing: .06em;
     text-transform: uppercase;
-    color: var(--color-acid);
+    color: var(--color-brown);
     margin-bottom: .6rem;
   }
 
@@ -431,7 +432,7 @@
     font-family: var(--font-inter);
     font-size: 3.5rem;
     font-weight: 800;
-    color: rgba(189,201,87,.4);
+    color: rgba(58, 24, 1, .25);
     line-height: 1;
     display: block;
     margin-bottom: .75rem;
@@ -444,7 +445,7 @@
     left: 2.5rem;
     right: 2.5rem;
     height: 2px;
-    background: var(--color-acid);
+    background: var(--color-brown);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform .4s cubic-bezier(.4, 0, .2, 1);
@@ -482,7 +483,7 @@
     font-size: .72rem;
     letter-spacing: .14em;
     text-transform: uppercase;
-    color: var(--color-acid);
+    color: var(--color-brown);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -508,7 +509,7 @@
      NEWSLETTER
      ══════════════════════════════════════════ */
   .newsletter {
-    background: var(--color-brown);
+    background: var(--color-teal);
     padding: 2.5rem 2rem;
     display: flex;
     align-items: center;
@@ -613,7 +614,7 @@
      FOOTER
      ══════════════════════════════════════════ */
   .site-footer {
-    background: var(--color-navy);
+    background: var(--color-cream);
     padding: 2.5rem 1rem;
     display: flex;
     flex-direction: column;
@@ -627,7 +628,7 @@
   }
 
   .social-links a {
-    color: rgba(255, 255, 255, .5);
+    color: rgba(8, 23, 34, .4);
     text-decoration: none;
     transition: color .25s, transform .25s;
   }
@@ -646,7 +647,7 @@
   .footer-copy {
     font-family: var(--font-inter);
     font-size: .72rem;
-    color: rgba(255, 255, 255, .25);
+    color: rgba(8, 23, 34, .35);
     letter-spacing: .06em;
   }
 
@@ -891,8 +892,9 @@
   }
 
   .page-hero-title {
-    font-family: var(--font-printf);
+    font-family: var(--font-inter);
     font-size: clamp(3rem, 9vw, 6.5rem);
+    font-weight: 800;
     line-height: .92;
     color: var(--color-cream);
     letter-spacing: .02em;
@@ -1656,6 +1658,7 @@
   font-weight: 800; color: var(--color-navy);
   margin-bottom: 1.5rem;
   letter-spacing: .02em;
+  text-transform: uppercase;
 }
 .section-list {
   list-style: none; padding: 0;
@@ -1905,7 +1908,7 @@
 }
 .ffgf-page .section-text-inner p {
   font-weight: 300;
-  color: var(--color-gray);
+  color: #000000;
 }
 .ffgf-page .section-heading {
   color: #000000;
