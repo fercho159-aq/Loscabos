@@ -550,7 +550,7 @@ body {
     font-family: var(--font-inter);
     font-size: 1.15rem;
     font-weight: 900;
-    color: #000;
+    color: var(--color-brown);
     margin-bottom: .75rem;
     letter-spacing: .02em;
     text-transform: uppercase;
@@ -596,7 +596,7 @@ body {
      NEWSLETTER
      ══════════════════════════════════════════ */
   .newsletter {
-    background: var(--color-teal);
+    background: var(--color-acid);
     padding: 2.5rem 2rem;
     display: flex;
     align-items: center;
@@ -611,7 +611,7 @@ body {
     font-weight: 600;
     letter-spacing: .15em;
     text-transform: uppercase;
-    color: var(--color-cream);
+    color: var(--color-navy);
     white-space: nowrap;
   }
 
@@ -621,8 +621,8 @@ body {
     max-width: 480px;
     height: 44px;
     border: 2px solid transparent;
-    background: rgba(0,0,0,.3);
-    color: var(--color-white);
+    background: rgba(0,0,0,.15);
+    color: var(--color-navy);
     padding: 0 1rem;
     font-family: var(--font-inter);
     font-size: .9rem;
@@ -631,7 +631,7 @@ body {
   }
 
   .newsletter input::placeholder {
-    color: rgba(255, 255, 255, .3);
+    color: rgba(0, 0, 0, .4);
   }
 
   .newsletter input:focus {
@@ -701,8 +701,38 @@ body {
      FOOTER
      ══════════════════════════════════════════ */
   .site-footer {
-    background: #081722 !important;
+    background: #0D3B2E !important;
     color: #F6EDDB !important;
+    padding: 3rem 2rem 2rem !important;
+    text-align: center !important;
+  }
+
+  .footer-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 2rem 1rem;
+    list-style: none;
+  }
+
+  .footer-menu a {
+    font-family: var(--font-inter);
+    font-size: .85rem;
+    color: rgba(246, 237, 219, .8);
+    text-decoration: none;
+    transition: color .2s;
+    padding: .4rem 1.2rem;
+    border-right: 1px solid rgba(246, 237, 219, .25);
+  }
+
+  .footer-menu a:last-child {
+    border-right: none;
+  }
+
+  .footer-menu a:hover {
+    color: #fff;
   }
 
   .footer-social-bar {
@@ -2437,6 +2467,7 @@ body {
   left: 0;
   width: 3px;
   height: 100%;
+  background: #0D3B2E;
   transition: width .4s cubic-bezier(.4,0,.2,1);
 }
 
@@ -2456,7 +2487,7 @@ body {
   box-shadow: none;
 }
 .prensa-quote-card--accent-teal::before {
-  background: var(--color-teal);
+  background: #0D3B2E;
 }
 .prensa-quote-card--accent-teal .prensa-quote-icon {
   color: var(--color-teal);
@@ -2468,7 +2499,7 @@ body {
   box-shadow: none;
 }
 .prensa-quote-card--accent-acid::before {
-  background: var(--color-acid);
+  background: #0D3B2E;
 }
 .prensa-quote-card--accent-acid .prensa-quote-icon {
   color: var(--color-acid);
@@ -2480,7 +2511,7 @@ body {
   box-shadow: none;
 }
 .prensa-quote-card--accent-wine::before {
-  background: var(--color-wine);
+  background: #0D3B2E;
 }
 .prensa-quote-card--accent-wine .prensa-quote-icon {
   color: var(--color-rose);

@@ -70,7 +70,7 @@ export default function LaBajaInspira() {
           <div className="page-hero-overlay" />
         </div>
         <div className="page-hero-content">
-          <h1 className="page-hero-title"><span style={{ color: "var(--color-cream)" }}>La Baja </span><span style={{ color: "var(--color-orange)" }}>Inspira</span></h1>
+          <h1 className="page-hero-title" style={{ color: "var(--color-cream)" }}>La Baja Inspira</h1>
         </div>
       </section>
 
@@ -184,7 +184,7 @@ export default function LaBajaInspira() {
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.5rem" }}>
               {ruta.map((city) => (
                 <li key={city} style={{ display: "flex", alignItems: "center", gap: "0.6rem", color: "#F6EDDB", fontFamily: "var(--font-inter)", fontSize: "0.95rem" }}>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F6EDDB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D3B2E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                   {city}
                 </li>
               ))}

@@ -75,7 +75,7 @@ export default function Prensa() {
 
       <section className="section-text">
         <div className="section-text-inner">
-          <a href="/FICCLosCabos_DECK2026.pdf" download className="cta-button">
+          <a href="https://docs.google.com/presentation/d/1qnT4VA-xC-m5qbDqfqvglFofSO7rpNDPWIlTkg68O2o/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="cta-button" style={{ background: "#0D3B2E" }}>
             Descarga el Deck
           </a>
         </div>
@@ -84,7 +84,7 @@ export default function Prensa() {
       <section className="prensa-quotes-section">
         <div className="prensa-quotes-header">
           <p className="prensa-quotes-label">Prensa</p>
-          <h2 className="prensa-quotes-title">Lo que dicen de nosotros</h2>
+          <h2 className="prensa-quotes-title" style={{ textTransform: "uppercase" }}>Lo que dicen de nosotros</h2>
           <p className="prensa-quotes-subtitle">
             La prensa nacional e internacional reconoce al FIC Los Cabos como uno de los festivales de cine más relevantes de Latinoamérica.
           </p>
