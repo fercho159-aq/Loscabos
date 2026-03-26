@@ -16,7 +16,7 @@ const plataformas = [
     bg: "bg-lime",
     cta: "Inscríbete",
     image: "/images/webpdf/img-025.png",
-    accent: "#C5D44A",
+    accent: "#BDC957",
   },
   {
     title: "Fondo Fílmico Gabriel Figueroa",
@@ -26,7 +26,7 @@ const plataformas = [
     bg: "bg-lavender",
     cta: "Inscríbete",
     image: "/images/webpdf/img-010.png",
-    accent: "#7B8FBF",
+    accent: "#6687C3",
   },
   {
     title: "Frequencies of Now",
@@ -36,7 +36,7 @@ const plataformas = [
     bg: "bg-peach",
     cta: "Inscríbete",
     image: "/images/webpdf/img-040.png",
-    accent: "#E8A070",
+    accent: "#C47A3D",
   },
   {
     title: "Semillas del Desierto",
@@ -47,7 +47,7 @@ const plataformas = [
     bg: "bg-blush",
     cta: "Conoce más",
     image: "/images/webpdf/img-005.png",
-    accent: "#EBB0C4",
+    accent: "#E9B0BD",
   },
   {
     title: "Miradas al Sur",
@@ -57,7 +57,7 @@ const plataformas = [
     bg: "bg-lavender",
     cta: "Conoce más",
     image: "/images/webpdf/img-089.png",
-    accent: "#7B8FBF",
+    accent: "#6687C3",
   },
 ];
 
@@ -94,8 +94,8 @@ export default function PlataformasDeImpulso() {
       <section className="festival-text" style={{ position: "relative", overflow: "hidden" }}>
         <GradientBlobs
           color1="#081722"
-          color2="#1a2a40"
-          color3="#2a3a55"
+          color2="#081722"
+          color3="#6687C3"
           speed={0.1}
         />
         <div className="festival-text-container" style={{ position: "relative", zIndex: 2 }}>

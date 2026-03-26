@@ -18,7 +18,7 @@ const convocatorias = [
     cta: "Inscríbete ahora",
     bg: "bg-lime",
     image: "/images/webpdf/img-025.png",
-    accent: "#C5D44A",
+    accent: "#BDC957",
   },
   {
     status: "Abierta",
@@ -30,7 +30,7 @@ const convocatorias = [
     cta: "Postula tu proyecto",
     bg: "bg-lavender",
     image: "/images/webpdf/img-055.png",
-    accent: "#7B8FBF",
+    accent: "#6687C3",
   },
   {
     status: "Abierta",
@@ -42,7 +42,7 @@ const convocatorias = [
     cta: "Envía tu propuesta",
     bg: "bg-peach",
     image: "/images/webpdf/img-040.png",
-    accent: "#E8A070",
+    accent: "#C47A3D",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function Convocatorias() {
           />
           <div className="page-hero-overlay" />
         </div>
-        <FloatingParticles count={50} color="#C5D44A" size={2} speed={0.05} />
+        <FloatingParticles count={50} color="#BDC957" size={2} speed={0.05} />
         <div className="page-hero-content">
           <p className="page-hero-label">FICC Los Cabos 2026</p>
           <h1 className="page-hero-title">Convocatorias</h1>
@@ -111,8 +111,8 @@ export default function Convocatorias() {
       <section className="conv-archive" style={{ position: "relative", overflow: "hidden" }}>
         <GradientBlobs
           color1="#081722"
-          color2="#162840"
-          color3="#1a3050"
+          color2="#081722"
+          color3="#6687C3"
           speed={0.08}
         />
         <div className="conv-archive-inner" style={{ position: "relative", zIndex: 2 }}>

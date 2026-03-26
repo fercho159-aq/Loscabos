@@ -71,7 +71,7 @@ export default function Home() {
       </section>
 
       {/* ── VIDEO SECTION ── */}
-      <section className="video-section" style={{ position: "relative", background: "#0D7377", padding: "5rem 2rem 6rem", textAlign: "center", overflow: "hidden" }}>
+      <section className="video-section" style={{ position: "relative", background: "#006666", padding: "5rem 2rem 6rem", textAlign: "center", overflow: "hidden" }}>
         <div style={{ position: "relative", zIndex: 1, marginBottom: "3rem" }}>
           <h2 style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(2rem, 4.5vw, 3.5rem)", fontWeight: 900, color: "#BDC957", letterSpacing: ".02em", textTransform: "uppercase" as const, margin: "0 0 .8rem" }}>#BEYONDTHESCREEN</h2>
           <p style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(.9rem, 1.3vw, 1.1rem)", fontWeight: 400, color: "#F6EDDB", opacity: .9, maxWidth: 520, margin: "0 auto", lineHeight: 1.6 }}>

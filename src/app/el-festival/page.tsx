@@ -56,7 +56,7 @@ export default function ElFestival() {
 
         {/* Eje 1 — Text left, icon right */}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center", marginBottom: "5rem" }}>
-          <div style={{ background: "#3A4A1A", borderRadius: 12, padding: "2.5rem" }}>
+          <div style={{ background: "#006666", borderRadius: 12, padding: "2.5rem" }}>
             <h3 style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)", fontWeight: 900, textTransform: "uppercase" as const, color: "#BDC957", marginBottom: "1rem" }}>PLATAFORMA CREATIVA ANCLADA EN LOS CABOS</h3>
             <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#F6EDDB", lineHeight: 1.8, opacity: .85 }}>
               El entorno especial de Los Cabos es el origen de todo. Producto de la energ&iacute;a que emana del Golfo de
@@ -74,7 +74,7 @@ export default function ElFestival() {
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
             <Image src="/images/ejes/eje2-color.png" alt="Eje Industria" width={260} height={260} style={{ objectFit: "contain" }} />
           </div>
-          <div style={{ background: "#3A2510", borderRadius: 12, padding: "2.5rem" }}>
+          <div style={{ background: "#3A1801", borderRadius: 12, padding: "2.5rem" }}>
             <h3 style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)", fontWeight: 900, textTransform: "uppercase" as const, color: "#C47A3D", marginBottom: "1rem" }}>IMPULSO A LA INDUSTRIA</h3>
             <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#F6EDDB", lineHeight: 1.8, opacity: .85 }}>
               Nuestras plataformas reducen la brecha entre creaci&oacute;n, industria y audiencias. A trav&eacute;s de La Baja Inspira,
@@ -87,8 +87,8 @@ export default function ElFestival() {
 
         {/* Eje 3 — Text left, icon right */}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center", marginBottom: "5rem" }}>
-          <div style={{ background: "#1A2540", borderRadius: 12, padding: "2.5rem" }}>
-            <h3 style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)", fontWeight: 900, textTransform: "uppercase" as const, color: "#7B8FBF", marginBottom: "1rem" }}>PROGRAMACI&Oacute;N CON PULSO GLOBAL</h3>
+          <div style={{ background: "#081722", borderRadius: 12, padding: "2.5rem" }}>
+            <h3 style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)", fontWeight: 900, textTransform: "uppercase" as const, color: "#6687C3", marginBottom: "1rem" }}>PROGRAMACI&Oacute;N CON PULSO GLOBAL</h3>
             <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#F6EDDB", lineHeight: 1.8, opacity: .85 }}>
               Nuestra curadur&iacute;a descubre y posiciona las voces que definen el futuro del cine. Desde la Competencia
               Mexicana y su apuesta por el riesgo narrativo, hasta la consolidaci&oacute;n de la Animaci&oacute;n como un lenguaje
@@ -110,7 +110,7 @@ export default function ElFestival() {
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
             <Image src="/images/ejes/eje4-color.png" alt="Eje Comunidad" width={260} height={260} style={{ objectFit: "contain" }} />
           </div>
-          <div style={{ background: "#3A1525", borderRadius: 12, padding: "2.5rem" }}>
+          <div style={{ background: "#960942", borderRadius: 12, padding: "2.5rem" }}>
             <h3 style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)", fontWeight: 900, textTransform: "uppercase" as const, color: "#E9B0BD", marginBottom: "1rem" }}>COMUNIDAD E INFLUENCIA</h3>
             <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#F6EDDB", lineHeight: 1.8, opacity: .85 }}>
               Creamos un ecosistema que trasciende el evento. Activamos una red global de creadores, medios y

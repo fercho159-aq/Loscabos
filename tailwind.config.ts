@@ -9,16 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: "#F4EFE3",
-        navy: "#0D1520",
-        acid: "#C8D42C",
-        blue: "#4A7FBF",
-        forest: "#173119",
-        coral: "#E8523D",
+        cream: "#F6EDDB",
+        teal: "#006666",
+        navy: "#081722",
+        acid: "#BDC957",
+        blue: "#6687C3",
+        brown: "#3A1801",
+        orange: "#C47A3D",
         blush: "#E9B0BD",
         periwinkle: "#6687C3",
         lime: "#BDC957",
-        tangerine: "#F4A061",
+        rose: "#E9B0BD",
         magenta: "#960942",
       },
       fontFamily: {
