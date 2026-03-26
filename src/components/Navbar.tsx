@@ -14,7 +14,7 @@ const navItems: NavItem[] = [
   { label: "El Festival", href: "/el-festival" },
   { label: "La Baja Inspira", href: "/la-baja-inspira" },
   { label: "Fondo F\u00edlmico Gabriel Figueroa", href: "/ffgf" },
-  { label: "Frequencies of Now", href: "/fon" },
+  // { label: "Frequencies of Now", href: "/fon" },
   { label: "Programaci\u00f3n", href: "/programacion" },
   { label: "Prensa", href: "/prensa" },
 ];

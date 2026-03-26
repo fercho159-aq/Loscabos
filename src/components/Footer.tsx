@@ -35,7 +35,7 @@ export default function Footer() {
         <a href="/el-festival">El Festival</a>
         <a href="/la-baja-inspira">La Baja Inspira</a>
         <a href="/ffgf">Fondo F&iacute;lmico Gabriel Figueroa</a>
-        <a href="/fon">Frequencies of Now</a>
+        {/* <a href="/fon">Frequencies of Now</a> */}
         <a href="/programacion">Programaci&oacute;n</a>
         <a href="/prensa">Prensa</a>
         <a href="/comunidad">&Uacute;nete a la comunidad</a>

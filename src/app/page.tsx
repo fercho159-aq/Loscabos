@@ -134,14 +134,14 @@ export default function Home() {
             </p>
             <Link href="/ffgf" className="impulso-link">Explorar</Link>
           </div>
-          <div className="impulso-card">
+          {/* <div className="impulso-card">
             <h3>Frequencies of Now</h3>
             <p>
-              Laboratorio creativo donde el cine, la m&uacute;sica y la moda convergen
+              Laboratorio creativo donde el cine, la música y la moda convergen
               para impulsar nuevas narrativas audiovisuales.
             </p>
             <Link href="/fon" className="impulso-link">Explorar</Link>
-          </div>
+          </div> */}
         </div>
       </section>
 
