@@ -2297,7 +2297,7 @@ body {
   display: flex;
   gap: 3.5rem;
   width: max-content;
-  animation: carouselScroll 30s linear infinite;
+  animation: carouselScroll 90s linear infinite;
 }
 .aliado-slide {
   flex-shrink: 0;
