@@ -10,7 +10,7 @@ const quotes = [
   { medio: "El Financiero", logo: "/images/prensa/Logos Medios/ElFinanciero.png", quote: "El cine trasciende la pantalla y convierte a Puerto Los Cabos en un escenario donde cine, música, arte y naturaleza se entrelazan... transformando un destino en un referente cultural de alcance internacional.", url: "https://www.elfinanciero.com.mx/mundo-empresa/2025/11/17/ficloscabos-2025-el-cine-trasciende-la-pantalla-y-convierte-a-puerto-los-cabos-en-un-ecosistema-creativo/" },
   { medio: "Quién", logo: "/images/prensa/Logos Medios/Quien.png", quote: "No es solo un evento, es el lugar donde las historias se desbordan, se viven, se celebran y se convierten en magia... una propuesta donde la pantalla no es el límite, sino el punto de partida.", url: "https://www.quien.com/cultura/2025/12/08/ficloscabos-2025-el-festival-que-llega-mas-alla-de-la-pantalla" },
   { medio: "The Walk", logo: "/images/prensa/Logos Medios/TheWalk.png", quote: "El festival vuelve a recordarnos que el cine también puede ser eso: una pausa elegante, una conversación bien dicha, una historia que se ve mejor con el sonido del mar de fondo.", url: "https://thewalkpaper.com/noticias/463/FIC_los_cabos_2025" },
-  { medio: "Time Out México", logo: "/images/prensa/Logos Medios/TimeOut.png", quote: "Una propuesta que apuesta por ser distinta... convirtiendo al FIC Los Cabos en un campus cultural donde el cine dialogue con el desierto, el mar y la creatividad local.", url: "https://www.timeoutmexico.mx/ciudad-de-mexico/cine/festival-internacional-de-cine-de-los-cabos-2025-fechas-y-temas" },
+  { medio: "Time Out México", logo: "/images/prensa/Logos Medios/TimeOut.png", quote: "Una propuesta que apuesta por ser distinta... convirtiendo al FICCLosCabos en un campus cultural donde el cine dialogue con el desierto, el mar y la creatividad local.", url: "https://www.timeoutmexico.mx/ciudad-de-mexico/cine/festival-internacional-de-cine-de-los-cabos-2025-fechas-y-temas" },
   { medio: "Chilango", logo: "/images/prensa/Logos Medios/Chilango.png", quote: "La 13a edición demostró que el séptimo arte sigue buscando espacios para diversificarse. La producción cinematográfica fuera de la CDMX existe y sigue levantando la mano para mostrar el talento que hace falta visibilizar.", url: "https://www.chilango.com/cine-y-tv/peliculas/ganadores-de-fic-los-cabos-2025/" },
   { medio: "Travel + Leisure", logo: "/images/prensa/Logos Medios/TravelLeisure.png", quote: "Más que un escaparate de estrenos, es un espacio donde el cine se piensa, se acompaña y, en muchos casos, se termina de construir.", url: "https://travelandleisure-es.com/destinos/festival-internacional-de-cine-de-los-cabos-2025-cine-emergente-musica-y-nuevas-narrativas/" },
 ];
@@ -86,7 +86,7 @@ export default function Prensa() {
           <p className="prensa-quotes-label">Prensa</p>
           <h2 className="prensa-quotes-title" style={{ textTransform: "uppercase" }}>Lo que dicen de nosotros</h2>
           <p className="prensa-quotes-subtitle">
-            La prensa nacional e internacional reconoce al FIC Los Cabos como uno de los festivales de cine más relevantes de Latinoamérica.
+            La prensa nacional e internacional reconoce al FICCLosCabos como uno de los festivales de cine más relevantes de Latinoamérica.
           </p>
         </div>
 

@@ -92,15 +92,15 @@ export default function LaBajaInspira() {
             </p>
             <ul style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, paddingLeft: 0, listStyle: "none" }}>
               <li style={{ marginBottom: "1.2rem", display: "flex", gap: ".75rem", alignItems: "flex-start" }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BDC957" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 4 }}><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BDC957" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 4 }}><path d="M7 20h10" /><path d="M10 20c5.5-2.5.8-6.4 3-10" /><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z" /><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z" /></svg>
                 <span><strong>Ciencias Naturales:</strong> Biolog&iacute;a Golfo de California, ecolog&iacute;a, cambio clim&aacute;tico y biodiversidad del desierto.</span>
               </li>
               <li style={{ marginBottom: "1.2rem", display: "flex", gap: ".75rem", alignItems: "flex-start" }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F4A061" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 4 }}><path d="M2 12h1"/><path d="M6 8v8"/><path d="M10 2v20"/><path d="M14 4v16"/><path d="M18 6v12"/><path d="M22 12h-1"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F4A061" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 4 }}><path d="M2 12h1" /><path d="M6 8v8" /><path d="M10 2v20" /><path d="M14 4v16" /><path d="M18 6v12" /><path d="M22 12h-1" /></svg>
                 <span><strong>Historia y Sociedad:</strong> Antropolog&iacute;a, patrimonio cultural y la reconstrucci&oacute;n de la memoria hist&oacute;rica.</span>
               </li>
               <li style={{ display: "flex", gap: ".75rem", alignItems: "flex-start" }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0088C5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 4 }}><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0088C5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 4 }}><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" /><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" /><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" /></svg>
                 <span><strong>Desarrollo del Destino:</strong> Econom&iacute;a azul, pesca responsable y turismo sostenible.</span>
               </li>
             </ul>
@@ -184,7 +184,7 @@ export default function LaBajaInspira() {
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.5rem" }}>
               {ruta.map((city) => (
                 <li key={city} style={{ display: "flex", alignItems: "center", gap: "0.6rem", color: "#F6EDDB", fontFamily: "var(--font-inter)", fontSize: "0.95rem" }}>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#081722" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#081722" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
                   {city}
                 </li>
               ))}
@@ -230,7 +230,7 @@ export default function LaBajaInspira() {
 
       {/* Aliados */}
       <section className="aliados-plaque">
-        <h3 className="aliados-plaque-title">Aliados</h3>
+        <h3 className="aliados-plaque-title">Aliados de la Baja Inspira</h3>
         <div className="aliados-carousel">
           <div className="aliados-track">
             {aliadosLBITrack.map((a, i) => (

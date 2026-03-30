@@ -3,6 +3,16 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+const aliadosFFGF = [
+  { name: "Aliado FFGF 1", logo: "/images/aliados-ffgf/aliado-ffgf-13.png" },
+  { name: "Aliado FFGF 2", logo: "/images/aliados-ffgf/aliado-ffgf-14.png" },
+  { name: "Aliado FFGF 3", logo: "/images/aliados-ffgf/aliado-ffgf-15.png" },
+  { name: "Aliado FFGF 4", logo: "/images/aliados-ffgf/aliado-ffgf-16.png" },
+  { name: "Aliado FFGF 5", logo: "/images/aliados-ffgf/aliado-ffgf-17.png" },
+  { name: "Aliado FFGF 6", logo: "/images/aliados-ffgf/aliado-ffgf-18.png" },
+];
+const aliadosFFGFTrack = [...aliadosFFGF, ...aliadosFFGF];
+
 const perfiles = [
   { title: "Africa Express (2025)", director: "Emilio Guerrero", desc: "El registro de la colisión entre Damon Albarn (Blur/Gorillaz) y México. Un puente entre el britpop y los ritmos africanos en suelo azteca.", tag: "Selección Oficial", still: "/images/stills/africa-express.png" },
   { title: "El sinaloense (2025)", director: "Luis Kles", desc: "Más allá del folclore, una exploración de la identidad y el mito. Una búsqueda por desmitificar el estigma para encontrar la esencia del norte.", tag: "Selección Oficial", still: "/images/stills/el-sinaloense.png" },
@@ -74,7 +84,7 @@ export default function FFGF() {
         <div className="ffgf-legado-inner">
           <div className="ffgf-legado-header">
             <span className="ffgf-legado-eyebrow" style={{ color: "#fff" }}>Historias que trascienden</span>
-            <h2 className="ffgf-legado-title" style={{ color: "#fff" }}>Legado FFGF</h2>
+            <h2 className="ffgf-legado-title" style={{ color: "#fff" }}>GANADORES DE EDICIONES ANTERIORES</h2>
             <p className="ffgf-legado-desc" style={{ color: "rgba(255,255,255,0.85)" }}>
               Conoce algunas de las obras y ganadores que han proyectado el cine mexicano hacia el mercado global con el respaldo de FICCLosCabos.
             </p>
@@ -93,6 +103,21 @@ export default function FFGF() {
                     <p style={{ fontSize: "0.85rem", lineHeight: 1.6 }}>{p.desc}</p>
                   </div>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Aliados FFGF */}
+      <section className="aliados-plaque">
+        <h3 className="aliados-plaque-title">Aliados Fondo Filmico Gabriel Figueroa</h3>
+        <div className="aliados-carousel">
+          <div className="aliados-track">
+            {aliadosFFGFTrack.map((a, i) => (
+              <div key={`${a.name}-${i}`} className="aliado-slide">
+                <Image src={a.logo} alt={a.name} width={240} height={120}
+                  style={{ width: "auto", height: 120, objectFit: "contain" }} />
               </div>
             ))}
           </div>
