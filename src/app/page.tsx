@@ -116,31 +116,31 @@ export default function Home() {
           Conoce nuestras plataformas de apoyo a la Industria
         </p>
         <div className="impulso-grid">
-          <div className="impulso-card">
-            <h3>La Baja Inspira</h3>
-            <p>
-              Plataforma de proyecci&oacute;n internacional para el cine documental que aborda
-              la biodiversidad, la memoria hist&oacute;rica y el desarrollo sostenible del
-              Golfo de California.
-            </p>
-            <Link href="/la-baja-inspira" className="impulso-link">Explorar</Link>
+          <div className="impulso-card" style={{ display: "grid", gridTemplateColumns: "160px 1fr", gap: "2rem", alignItems: "center", padding: "2.5rem" }}>
+            <Link href="/la-baja-inspira" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <Image src="/images/lbi-logo.png" alt="La Baja Inspira" width={160} height={200} style={{ objectFit: "contain", width: "100%", height: "auto" }} />
+            </Link>
+            <div>
+              <p>
+                Plataforma de proyecci&oacute;n internacional para el cine documental que aborda
+                la biodiversidad, la memoria hist&oacute;rica y el desarrollo sostenible del
+                Golfo de California.
+              </p>
+              <Link href="/la-baja-inspira" className="impulso-link">Explorar</Link>
+            </div>
           </div>
-          <div className="impulso-card">
-            <h3>Fondo F&iacute;lmico Gabriel Figueroa</h3>
-            <p>
-              Fortalece la industria audiovisual mexicana al generar una vinculaci&oacute;n
-              efectiva entre cineastas y empresas estrat&eacute;gicas del sector.
-            </p>
-            <Link href="/ffgf" className="impulso-link">Explorar</Link>
+          <div className="impulso-card" style={{ display: "grid", gridTemplateColumns: "160px 1fr", gap: "2rem", alignItems: "center", padding: "2.5rem" }}>
+            <Link href="/ffgf" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <Image src="/images/ffgf-logo.png" alt="Fondo Fílmico Gabriel Figueroa" width={160} height={128} style={{ objectFit: "contain", width: "100%", height: "auto" }} />
+            </Link>
+            <div>
+              <p>
+                Fortalece la industria audiovisual mexicana al generar una vinculaci&oacute;n
+                efectiva entre cineastas y empresas estrat&eacute;gicas del sector.
+              </p>
+              <Link href="/ffgf" className="impulso-link">Explorar</Link>
+            </div>
           </div>
-          {/* <div className="impulso-card">
-            <h3>Frequencies of Now</h3>
-            <p>
-              Laboratorio creativo donde el cine, la música y la moda convergen
-              para impulsar nuevas narrativas audiovisuales.
-            </p>
-            <Link href="/fon" className="impulso-link">Explorar</Link>
-          </div> */}
         </div>
       </section>
 
