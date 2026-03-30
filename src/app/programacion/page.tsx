@@ -10,7 +10,7 @@ export default function Programacion() {
       <section className="page-hero" style={{ minHeight: "60vh" }}>
         <div className="page-hero-bg">
           <Image
-            src="/images/programacion-hero.jpg"
+            src="/images/programacion-hero.png"
             alt="Programación"
             fill
             style={{ objectFit: "cover" }}
