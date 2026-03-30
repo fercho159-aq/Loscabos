@@ -96,11 +96,11 @@ export default function LaBajaInspira() {
                 <span><strong>Ciencias Naturales:</strong> Biolog&iacute;a Golfo de California, ecolog&iacute;a, cambio clim&aacute;tico y biodiversidad del desierto.</span>
               </li>
               <li style={{ marginBottom: "1.2rem", display: "flex", gap: ".75rem", alignItems: "flex-start" }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C47A3D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 4 }}><path d="M2 12h1"/><path d="M6 8v8"/><path d="M10 2v20"/><path d="M14 4v16"/><path d="M18 6v12"/><path d="M22 12h-1"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F4A061" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 4 }}><path d="M2 12h1"/><path d="M6 8v8"/><path d="M10 2v20"/><path d="M14 4v16"/><path d="M18 6v12"/><path d="M22 12h-1"/></svg>
                 <span><strong>Historia y Sociedad:</strong> Antropolog&iacute;a, patrimonio cultural y la reconstrucci&oacute;n de la memoria hist&oacute;rica.</span>
               </li>
               <li style={{ display: "flex", gap: ".75rem", alignItems: "flex-start" }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6687C3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 4 }}><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0088C5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 4 }}><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>
                 <span><strong>Desarrollo del Destino:</strong> Econom&iacute;a azul, pesca responsable y turismo sostenible.</span>
               </li>
             </ul>

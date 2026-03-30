@@ -15,8 +15,8 @@ body {
   --color-peach: #C47A3D;
   --color-blush: #E9B0BD;
   --color-brown: #3A1801;
-  --color-orange: #C47A3D;
-  --color-orange-light: #C47A3D;
+  --color-orange: #FA6935;
+  --color-orange-light: #F4A061;
   --color-wine: #960942;
   --color-rose: #E9B0BD;
   --color-blue-mid: #6687C3;
@@ -1943,6 +1943,9 @@ body {
   border-radius: 50%;
   margin: 0 auto 1rem;
 }
+.profile-avatar img {
+  filter: grayscale(100%);
+}
 .profile-card h4 {
   font-family: var(--font-inter);
   font-size: .95rem; font-weight: 700;
@@ -2158,7 +2161,7 @@ body {
 }
 .flip-card-back {
   transform: rotateY(180deg);
-  background: #C47A3D !important;
+  background: #FA6935 !important;
   color: #F6EDDB !important;
   display: flex;
   flex-direction: column;
@@ -2234,6 +2237,44 @@ body {
 .ffgf-page .ffgf-film-tag {
   background: rgba(0, 0, 0, .08);
   color: #000000;
+}
+.ffgf-page .legado-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+.ffgf-flip {
+  aspect-ratio: 3/2;
+}
+.ffgf-flip .flip-card-front img {
+  filter: grayscale(100%);
+}
+.ffgf-flip .flip-card-back {
+  background: #000 !important;
+  color: #fff !important;
+  padding: 1rem !important;
+}
+.ffgf-flip .flip-card-back h4 {
+  color: #fff !important;
+  font-size: .85rem;
+  margin-bottom: .3rem;
+}
+.ffgf-flip .flip-card-back p {
+  color: rgba(255,255,255,.85) !important;
+  font-size: .75rem !important;
+  line-height: 1.5 !important;
+}
+.ffgf-flip .ffgf-film-tag {
+  background: rgba(255, 255, 255, .15);
+  color: #fff;
+  display: inline-block;
+  font-family: var(--font-inter);
+  font-size: .6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  padding: .25rem .5rem;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 4px;
+  margin-bottom: .5rem;
 }
 .ffgf-page .ffgf-film-number {
   color: rgba(0, 0, 0, .08);

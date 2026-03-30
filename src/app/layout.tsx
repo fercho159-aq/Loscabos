@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
 import { FilmGrain } from "@/components/three";
+import GlobalScrollReveal from "@/components/GlobalScrollReveal";
 
 const inter = localFont({
   src: "../../public/fonts/Inter-VariableFont_opsz,wght.ttf",
@@ -31,6 +32,7 @@ export default function RootLayout({
         className={`${inter.variable} ${printf.variable} antialiased`}
       >
         {children}
+        <GlobalScrollReveal />
         <FilmGrain />
         <Script
           id="mcjs"

@@ -79,17 +79,19 @@ export default function FFGF() {
               Conoce algunas de las obras y ganadores que han proyectado el cine mexicano hacia el mercado global con el respaldo de FICCLosCabos.
             </p>
           </div>
-          <div className="ffgf-legado-grid">
+          <div className="legado-grid">
             {perfiles.map((p) => (
-              <div key={p.title} className="ffgf-film-card">
-                <div style={{ position: "relative", width: "100%", aspectRatio: "16/9" }}>
-                  <Image src={p.still} alt={p.title} fill style={{ objectFit: "cover" }} />
-                </div>
-                <div style={{ padding: "1.25rem 1.5rem 1.5rem" }}>
-                  <span className="ffgf-film-tag">{p.tag}</span>
-                  <h4 className="ffgf-film-title">{p.title}</h4>
-                  <p className="ffgf-film-director">{p.director}</p>
-                  <p className="ffgf-film-desc">{p.desc}</p>
+              <div key={p.title} className="flip-card ffgf-flip">
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
+                    <Image src={p.still} alt={p.title} fill style={{ objectFit: "cover" }} />
+                  </div>
+                  <div className="flip-card-back">
+                    <span className="ffgf-film-tag">{p.tag}</span>
+                    <h4>{p.title}</h4>
+                    {p.director && <p style={{ fontWeight: 600, marginBottom: "0.5rem" }}>{p.director}</p>}
+                    <p style={{ fontSize: "0.85rem", lineHeight: 1.6 }}>{p.desc}</p>
+                  </div>
                 </div>
               </div>
             ))}
