@@ -94,11 +94,6 @@ export default function ElFestival() {
               Mexicana y su apuesta por el riesgo narrativo, hasta la consolidaci&oacute;n de la Animaci&oacute;n como un lenguaje
               cinematogr&aacute;fico mayor, el Festival dialoga permanentemente con el circuito internacional.
             </p>
-            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#F6EDDB", lineHeight: 1.8, opacity: .85, marginTop: "1rem" }}>
-              #BeyondTheScreen es una plataforma de innovaci&oacute;n cultural. Integramos cine, m&uacute;sica y arte digital para
-              responder a la transformaci&oacute;n de las industrias creativas, proyectando desde Los Cabos nuevas formas de
-              crear y experimentar el cine.
-            </p>
           </div>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
             <Image src="/images/ejes/eje3-color.png" alt="Eje Programación" width={260} height={260} style={{ objectFit: "contain" }} />
@@ -119,6 +114,24 @@ export default function ElFestival() {
           </div>
         </div>
 
+      </section>
+
+      {/* Pleca #BeyondTheScreen */}
+      <section style={{ position: "relative", width: "100%", minHeight: 350, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+        <Image
+          src="/images/beyond-the-screen-bg.jpg"
+          alt="Desierto de Baja California al atardecer"
+          fill
+          style={{ objectFit: "cover" }}
+        />
+        <div style={{ position: "absolute", inset: 0, background: "rgba(8,23,34,.6)" }} />
+        <div style={{ position: "relative", zIndex: 1, maxWidth: 800, padding: "4rem 2rem", textAlign: "center" }}>
+          <p style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1rem, 1.5vw, 1.15rem)", color: "#F6EDDB", lineHeight: 1.8 }}>
+            <strong style={{ color: "#BDC957" }}>#BeyondTheScreen</strong> es una plataforma de innovaci&oacute;n cultural.
+            Integramos cine, m&uacute;sica y arte digital para responder a la transformaci&oacute;n de las industrias creativas,
+            proyectando desde Los Cabos nuevas formas de crear y experimentar el cine.
+          </p>
+        </div>
       </section>
 
       <Newsletter />
