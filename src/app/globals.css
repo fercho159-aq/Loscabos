@@ -483,7 +483,7 @@ body {
 
   .impulso-title {
     font-family: var(--font-inter);
-    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-size: clamp(1.725rem, 3.5vw, 2.525rem);
     font-weight: 800;
     letter-spacing: .06em;
     text-transform: uppercase;
@@ -493,7 +493,7 @@ body {
 
   .impulso-subtitle {
     font-family: var(--font-inter);
-    font-size: .9rem;
+    font-size: 1.025rem;
     font-weight: 300;
     color: #081722;
     letter-spacing: .03em;
@@ -549,7 +549,7 @@ body {
 
   .impulso-card h3 {
     font-family: var(--font-inter);
-    font-size: 1.15rem;
+    font-size: 1.275rem;
     font-weight: 900;
     color: var(--color-brown);
     margin-bottom: .75rem;
@@ -559,7 +559,7 @@ body {
 
   .impulso-card p {
     font-family: var(--font-inter);
-    font-size: .84rem;
+    font-size: .965rem;
     line-height: 1.7;
     color: #000;
     font-weight: 300;
@@ -569,7 +569,7 @@ body {
   .impulso-link {
     font-family: var(--font-inter);
     font-weight: 600;
-    font-size: .72rem;
+    font-size: .845rem;
     letter-spacing: .14em;
     text-transform: uppercase;
     color: #000;
@@ -2337,17 +2337,17 @@ body {
 }
 .aliados-track {
   display: flex;
-  gap: 3.5rem;
+  gap: 1.5rem;
   width: max-content;
-  animation: carouselScroll 90s linear infinite;
+  animation: carouselScroll 30s linear infinite;
 }
 .aliado-slide {
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem 3rem;
-  min-width: 300px;
+  padding: 1rem 1.5rem;
+  min-width: 200px;
   height: 160px;
 }
 .aliado-slide img {

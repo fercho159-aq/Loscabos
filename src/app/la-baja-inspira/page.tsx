@@ -35,9 +35,6 @@ const aliadosLBI = [
 ];
 const aliadosLBITrack = [...aliadosLBI, ...aliadosLBI];
 
-const ruta = [
-  "Tijuana", "Ensenada", "La Paz", "La Ventana", "Todos Santos", "Cabo San Lucas", "San Jos\u00e9 del Cabo",
-];
 
 const perfilesLBI = [
   { title: "Ella se queda (2025)", director: "Marinthia Gutiérrez", desc: "Tras su paso por Cannes, se posiciona como el nuevo referente del cine de género en México. Una propuesta de estética neón que hipnotiza con su visión de la frontera.", poster: "/images/posters/ella-se-queda.jpeg" },
@@ -171,36 +168,6 @@ export default function LaBajaInspira() {
         </div>
       </section>
 
-      {/* Circuito Peninsular */}
-      <section style={{ background: "var(--color-acid)", color: "#081722" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", maxWidth: 1200, margin: "0 auto", padding: "5rem 2rem", alignItems: "center" }}>
-          <div>
-            <h2 className="section-heading" style={{ color: "#081722" }}>Circuito Peninsular</h2>
-            <p style={{ color: "#F6EDDB" }}>
-              Un circuito anual de circulaci&oacute;n cultural que lleva las pel&iacute;culas seleccionadas a distintas ciudades de Baja California
-              y Baja California Sur. Del 6 de noviembre al 15 de diciembre.
-            </p>
-            <p style={{ marginTop: "1.5rem", fontWeight: 600, color: "#F6EDDB", marginBottom: "0.75rem" }}>Ruta de Exhibici&oacute;n:</p>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-              {ruta.map((city) => (
-                <li key={city} style={{ display: "flex", alignItems: "center", gap: "0.6rem", color: "#F6EDDB", fontFamily: "var(--font-inter)", fontSize: "0.95rem" }}>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#081722" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
-                  {city}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <Image
-              src="/images/lbi-mapa-sedes.png"
-              alt="Mapa Circuito Peninsular - Sedes"
-              width={500}
-              height={600}
-              style={{ objectFit: "contain", width: "100%", maxWidth: 500, height: "auto" }}
-            />
-          </div>
-        </div>
-      </section>
 
       {/* Legado La Baja Inspira */}
       <section className="section-highlight">
