@@ -2,8 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import GSAPAnimations from "@/components/GSAPAnimations";
-import TextureStrip from "@/components/TextureStrip";
+import HeroCanvasClient from "@/components/HeroCanvas";
+import HeroAnimations from "@/components/HeroAnimations";
+import CTAParallax from "@/components/CTAParallax";
+import AliadosMarquee from "@/components/AliadosMarquee";
+import LogoReveal from "@/components/LogoReveal";
 
 const aliados = [
   { name: "Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-01.png" },
@@ -36,71 +39,114 @@ const aliados = [
   { name: "Grupo Aeroportuario del Pacífico", logo: "/images/aliados/FICC_Logos_Aliados_2026-28.png" },
   { name: "Aeromexico", logo: "/images/aliados/FICC_Logos_Aliados_2026-29.png" },
 ];
-const aliadosTrack = [...aliados, ...aliados];
 
-export default function Home() {
+export default function DemoPage() {
   return (
     <>
+      {/* Demo banner */}
+      <div
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 60,
+          background: 'rgba(10, 10, 10, 0.85)',
+          backdropFilter: 'blur(8px)',
+          padding: '0.4rem 1rem',
+          textAlign: 'center',
+          fontSize: '0.75rem',
+          fontWeight: 600,
+          letterSpacing: '0.08em',
+          color: '#006666',
+          textTransform: 'uppercase',
+        }}
+      >
+        Vista de demostración · FICC Los Cabos 2026
+      </div>
+
+      {/* Sticky section index */}
+      <nav
+        style={{
+          position: 'fixed',
+          top: '3.5rem',
+          right: '1rem',
+          zIndex: 50,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '0.4rem',
+        }}
+      >
+        {[
+          { label: 'Hero', href: '#hero' },
+          { label: 'CTA', href: '#cta' },
+          { label: 'Plataformas', href: '#plataformas' },
+          { label: 'Aliados', href: '#aliados' },
+        ].map((item) => (
+          <a
+            key={item.href}
+            href={item.href}
+            style={{
+              background: '#006666',
+              color: '#ffffff',
+              fontSize: '0.65rem',
+              fontWeight: 600,
+              letterSpacing: '0.06em',
+              textTransform: 'uppercase',
+              padding: '0.3rem 0.6rem',
+              borderRadius: '4px',
+              textDecoration: 'none',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+
       <Navbar />
 
       {/* ── HERO ── */}
-      <section id="hero-section" className="relative flex flex-col bg-[#0A1E23] overflow-x-clip min-h-screen">
+      <section id="hero" className="relative flex flex-col bg-[#0a0a0a] overflow-x-clip min-h-screen py-24">
+        <div className="absolute inset-0 z-0">
+          <HeroCanvasClient />
+        </div>
+
         <div className="relative z-[1] px-8 pt-[8rem] pb-[9rem] flex flex-col items-center flex-1 justify-center gap-0">
-          {/* Brand lockup — logo image only */}
           <div className="flex justify-center mb-[1.2rem]">
-            {/* Two-layer logo: cream base + teal overlay (painted on scroll) */}
-            <div id="hero-logo-wrap" style={{ position: "relative", width: 511, maxWidth: "90vw" }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                id="hero-logo"
-                src="/images/logo-light.svg"
-                alt="Festival Internacional de Cine y Creatividad Los Cabos"
-                style={{ width: "100%", height: "auto", display: "block" }}
-              />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                id="hero-logo-blue"
-                src="/images/logo-blue.svg"
-                alt=""
-                aria-hidden="true"
-                style={{
-                  width: "100%", height: "auto",
-                  position: "absolute", top: 0, left: 0,
-                  clipPath: "inset(0 100% 0 0)",
-                  pointerEvents: "none",
-                }}
-              />
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              id="hero-logo"
+              src="/images/logo-light.svg"
+              alt="Festival Internacional de Cine y Creatividad Los Cabos"
+              style={{ width: 511, maxWidth: "90vw", height: "auto" }}
+            />
           </div>
 
-          {/* Edition + Date — right-aligned to logo's right edge */}
           <div className="flex flex-col items-end" style={{ width: 511, maxWidth: "90vw" }}>
             <p
-              data-anim="hero-edition"
               className="font-semibold italic text-[#EDE6DC] tracking-[.04em] mb-1"
               style={{ fontSize: "clamp(.85rem, 1.1vw, .98rem)" }}
             >
               14ª&nbsp;Edición
             </p>
             <p
-              data-anim="hero-date"
               className="text-[#EDE6DC]/60 tracking-[.08em]"
               style={{ fontSize: "clamp(.7rem, .9vw, .82rem)" }}
             >
-              9–13 de diciembre de 2026
+              <span id="hero-date-text">9–13 de diciembre de 2026</span>
             </p>
           </div>
 
-          {/* #BEYONDTHESCREEN strip — centered, matching logo width */}
           <div
             className="flex items-center justify-between mt-12 gap-8"
             style={{ width: 511, maxWidth: "90vw" }}
           >
             <div className="flex flex-col gap-[.55rem] text-left">
-              <p data-anim="hero-hashtag" className="text-[.78rem] font-bold tracking-[.14em] uppercase text-[#A3CDD8] m-0">
-                #BEYONDTHESCREEN
+              <p className="text-[.78rem] font-bold tracking-[.14em] uppercase text-[#A3CDD8] m-0">
+                <span id="hero-hashtag-text">#BEYONDTHESCREEN</span>
               </p>
-              <p data-anim="hero-desc" className="text-[.72rem] font-normal text-[#A3CDD8] leading-[1.65] m-0 opacity-75 max-w-[260px]">
+              <p className="text-[.72rem] font-normal text-[#A3CDD8] leading-[1.65] m-0 opacity-75 max-w-[260px]">
                 El cine como punto de <br />encuentro entre la música,<br />
                 el arte digital y la comunidad.
               </p>
@@ -115,28 +161,35 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Texture strip — inline SVG with GSAP animations */}
         <div
           className="absolute left-0 right-0 z-50 pointer-events-none"
-          style={{ bottom: -55, height: 122 }}
+          style={{
+            bottom: -110,
+            height: 206,
+            backgroundImage: "url('/images/texture-pattern.svg')",
+            backgroundRepeat: "repeat-x",
+            backgroundSize: "auto 121px",
+            backgroundPosition: "center",
+          }}
         >
-          <TextureStrip style={{ display: "block" }} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/texture-pattern.svg" alt="" role="presentation" className="hidden" />
         </div>
       </section>
 
       {/* ── CTA PREVENTA ── */}
-      <section className="relative text-center bg-[#0A1E23]">
-        {/* Photo block */}
-        <div className="relative h-[560px] flex items-center justify-center px-16 py-[110px]">
+      <section id="cta" className="relative text-center bg-[#0A1E23] py-24">
+        <div id="cta-section" className="relative h-[560px] flex items-center justify-center px-16 py-[110px]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
+            id="cta-image"
             src="/images/cta-cactus.jpg"
             alt="Paisaje de cactus de Los Cabos"
             className="absolute inset-0 object-cover w-full h-full"
+            style={{ scale: '1.2' }}
           />
           <div className="relative z-20 flex flex-row max-md:flex-col items-center max-md:items-start justify-between w-full max-w-[1100px] gap-12 max-md:gap-8 text-left">
             <p
-              data-anim="cta-text"
               className="font-normal text-white max-w-[440px] leading-[1.65] m-0"
               style={{ fontSize: "clamp(1rem, 1.6vw, 1.25rem)" }}
             >
@@ -145,7 +198,6 @@ export default function Home() {
               antes que nadie.
             </p>
             <a
-              data-anim="cta-btn"
               href="https://festivaldecinedeloscabos.us15.list-manage.com/subscribe?u=24bf46409995ffe6e8ad030da&id=12e1ce1334"
               target="_blank"
               rel="noopener noreferrer"
@@ -156,22 +208,29 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Bottom texture */}
         <div
           className="absolute left-0 right-0 z-50 pointer-events-none"
-          style={{ bottom: -55, height: 122 }}
+          style={{
+            bottom: -110,
+            height: 220,
+            backgroundImage: "url('/images/texture-pattern.svg')",
+            backgroundRepeat: "repeat-x",
+            backgroundSize: "auto 121px",
+            backgroundPosition: "center",
+          }}
         >
-          <TextureStrip style={{ display: "block" }} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/texture-pattern.svg" alt="" role="presentation" className="hidden" />
         </div>
       </section>
 
       {/* ── IMPULSO A LA INDUSTRIA ── */}
-      <section className="relative w-full bg-[#0A1E23] flex flex-col overflow-hidden">
+      <section id="plataformas" className="relative w-full bg-[#0A1E23] flex flex-col overflow-hidden py-24">
         <div className="shrink-0 flex flex-col justify-start pt-[7rem] pr-16 pb-[15rem] pl-[15rem]">
-          <span data-anim="impulso-tag" className="text-[14px] font-medium tracking-[.05em] leading-none text-white/40 mb-4 block">
+          <span className="text-[14px] font-medium tracking-[.05em] leading-none text-white/40 mb-4 block">
             Apoya a la Industria
           </span>
-          <h2 data-anim="impulso-title" className="text-[32px] font-medium text-white leading-none max-w-[260px]">
+          <h2 className="text-[32px] font-medium text-white leading-none max-w-[260px]">
             Conoce <br />Nuestras<br />
             Plataformas<br /> de Impulso<br />
             a la Industria<br /> del Cine
@@ -190,8 +249,7 @@ export default function Home() {
           >
             {/* La Baja Inspira */}
             <div
-              data-anim="impulso-card"
-              className="relative overflow-hidden cursor-pointer bg-[#EDE6DC] border-2 border-[#A3CDD8] shrink-0 mr-[10px] ml-[100px]"
+              className="relative overflow-hidden cursor-pointer bg-[#EDE6DC] border-2 border-[#A3CDD8] shrink-0 mr-[10px] ml-[100px] impulso-card-anim"
               style={{
                 width: 587,
                 height: 251,
@@ -212,10 +270,7 @@ export default function Home() {
                 >
                   La Baja<br />Inspira
                 </h3>
-                <Link
-                  href="/la-baja-inspira"
-                  className="impulso-link"
-                >
+                <Link href="/la-baja-inspira" className="impulso-link">
                   Explorar
                 </Link>
               </div>
@@ -223,8 +278,7 @@ export default function Home() {
 
             {/* Fondo Fílmico Gabriel Figueroa */}
             <div
-              data-anim="impulso-card"
-              className="relative overflow-hidden cursor-pointer bg-[#EDE6DC] border-2 border-[#A3CDD8] shrink-0 mr-[10px] ml-[100px]"
+              className="relative overflow-hidden cursor-pointer bg-[#EDE6DC] border-2 border-[#A3CDD8] shrink-0 mr-[10px] ml-[100px] impulso-card-anim"
               style={{
                 width: 587,
                 height: 362,
@@ -245,10 +299,7 @@ export default function Home() {
                 >
                   Fondo <br />Fílmico<br />Gabriel<br />Fiegueroa
                 </h3>
-                <Link
-                  href="/ffgf"
-                  className="impulso-link"
-                >
+                <Link href="/ffgf" className="impulso-link">
                   Explorar
                 </Link>
               </div>
@@ -259,26 +310,21 @@ export default function Home() {
       </section>
 
       {/* ── ALIADOS ── */}
-      <section data-anim="aliados-marquee" className="aliados-plaque">
-        <span data-anim="aliados-tag" className="aliados-plaque-tag">Nuestros aliados y patrocinadores</span>
-        <p data-anim="aliados-quote" className="aliados-plaque-quote">
+      <section id="aliados" className="aliados-plaque py-24">
+        <span className="aliados-plaque-tag">Nuestros aliados y patrocinadores</span>
+        <p className="aliados-plaque-quote">
           Un espacio donde el cine se expande como experiencia,<br />
           conectando territorio, comunidad y una visión global.
         </p>
-        <div className="aliados-carousel">
-          <div className="aliados-track">
-            {aliadosTrack.map((a, i) => (
-              <div key={`${a.name}-${i}`} className="aliado-slide">
-                <Image src={a.logo} alt={a.name} width={240} height={120}
-                  style={{ width: "auto", height: 120, objectFit: "contain" }} />
-              </div>
-            ))}
-          </div>
-        </div>
+        <AliadosMarquee logos={aliados} />
       </section>
 
       <Footer />
-      <GSAPAnimations />
+
+      {/* Animation components */}
+      <HeroAnimations />
+      <CTAParallax />
+      <LogoReveal />
     </>
   );
 }
