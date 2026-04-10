@@ -42,57 +42,90 @@ export default function Home() {
       <Navbar />
 
       {/* ── HERO ── */}
-      <section className="hero">
-        <div className="hero-content">
+      <section className="relative flex flex-col bg-[#0A1E23] overflow-x-clip min-h-screen">
+        <div className="relative z-[1] px-8 pt-[8rem] pb-[9rem] flex flex-col items-center flex-1 justify-center gap-0">
           {/* Brand lockup — logo image only */}
-          <div className="hero-brand-lockup">
+          <div className="flex justify-center mb-[1.2rem]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/logo-light.svg"
               alt="Festival Internacional de Cine y Creatividad Los Cabos"
-              className="hero-logo-img"
+              style={{ width: 511, maxWidth: "90vw", height: "auto" }}
             />
           </div>
 
           {/* Edition + Date — right-aligned to logo's right edge */}
-          <div className="hero-edition-block">
-            <p className="hero-edition-label">14ª&nbsp;Edición</p>
-            <p className="hero-date">9–13 de diciembre de 2026</p>
+          <div className="flex flex-col items-end" style={{ width: 511, maxWidth: "90vw" }}>
+            <p
+              className="font-semibold italic text-[#EDE6DC] tracking-[.04em] mb-1"
+              style={{ fontSize: "clamp(.85rem, 1.1vw, .98rem)" }}
+            >
+              14ª&nbsp;Edición
+            </p>
+            <p
+              className="text-[#EDE6DC]/60 tracking-[.08em]"
+              style={{ fontSize: "clamp(.7rem, .9vw, .82rem)" }}
+            >
+              9–13 de diciembre de 2026
+            </p>
           </div>
 
           {/* #BEYONDTHESCREEN strip — centered, matching logo width */}
-          <div className="hero-beyond-strip">
-            <div className="hero-beyond-left">
-              <p className="hero-hashtag">#BEYONDTHESCREEN</p>
-              <p className="hero-description">
+          <div
+            className="flex items-center justify-between mt-12 gap-8"
+            style={{ width: 511, maxWidth: "90vw" }}
+          >
+            <div className="flex flex-col gap-[.55rem] text-left">
+              <p className="text-[.78rem] font-bold tracking-[.14em] uppercase text-[#A3CDD8] m-0">
+                #BEYONDTHESCREEN
+              </p>
+              <p className="text-[.72rem] font-normal text-[#A3CDD8] leading-[1.65] m-0 opacity-75 max-w-[260px]">
                 El cine como punto de <br />encuentro entre la música,<br />
                 el arte digital y la comunidad.
               </p>
             </div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/play.svg" alt="Ver video" className="hero-play-icon" />
+            <img
+              src="/images/play.svg"
+              alt="Ver video"
+              className="shrink-0 cursor-pointer transition-[opacity,transform] duration-[250ms] hover:opacity-80 hover:scale-[1.06]"
+              style={{ width: 58, height: 58 }}
+            />
           </div>
         </div>
 
-        {/* Texture strip */}
-        <div className="hero-texture-strip">
+        {/* Texture strip — background-image kept via style; img hidden */}
+        <div
+          className="absolute left-0 right-0 z-50 pointer-events-none"
+          style={{
+            bottom: -110,
+            height: 206,
+            backgroundImage: "url('/images/texture-pattern.svg')",
+            backgroundRepeat: "repeat-x",
+            backgroundSize: "auto 121px",
+            backgroundPosition: "center",
+          }}
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/texture-pattern.svg" alt="" role="presentation" />
+          <img src="/images/texture-pattern.svg" alt="" role="presentation" className="hidden" />
         </div>
       </section>
 
       {/* ── CTA PREVENTA ── */}
-      <section className="cta-section">
+      <section className="relative text-center bg-[#0A1E23]">
         {/* Photo block */}
-        <div className="cta-photo-block">
+        <div className="relative h-[560px] flex items-center justify-center px-16 py-[110px]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/cta-cactus.jpg"
             alt="Paisaje de cactus de Los Cabos"
-            className="cta-bg-img"
+            className="absolute inset-0 object-cover w-full h-full"
           />
-          <div className="cta-photo-content">
-            <p className="cta-text">
+          <div className="relative z-20 flex flex-row max-md:flex-col items-center max-md:items-start justify-between w-full max-w-[1100px] gap-12 max-md:gap-8 text-left">
+            <p
+              className="font-normal text-white max-w-[440px] leading-[1.65] m-0"
+              style={{ fontSize: "clamp(1rem, 1.6vw, 1.25rem)" }}
+            >
               Accede a la preventa de boletos<br />
               y descubre la programación<br />
               antes que nadie.
@@ -109,50 +142,110 @@ export default function Home() {
         </div>
 
         {/* Bottom texture */}
-        <div className="cta-texture">
+        <div
+          className="absolute left-0 right-0 z-50 pointer-events-none"
+          style={{
+            bottom: -110,
+            height: 220,
+            backgroundImage: "url('/images/texture-pattern.svg')",
+            backgroundRepeat: "repeat-x",
+            backgroundSize: "auto 121px",
+            backgroundPosition: "center",
+          }}
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/texture-pattern.svg" alt="" role="presentation" />
+          <img src="/images/texture-pattern.svg" alt="" role="presentation" className="hidden" />
         </div>
       </section>
 
       {/* ── IMPULSO A LA INDUSTRIA ── */}
-      <section className="impulso-section">
-        <div className="impulso-header">
-          <span className="impulso-tag">Apoya a la Industria</span>
-          <h2 className="impulso-title">
+      <section className="relative w-full bg-[#0A1E23] flex flex-col overflow-hidden">
+        <div className="shrink-0 flex flex-col justify-start pt-[7rem] pr-16 pb-[15rem] pl-[15rem]">
+          <span className="text-[14px] font-medium tracking-[.05em] leading-none text-white/40 mb-4 block">
+            Apoya a la Industria
+          </span>
+          <h2 className="text-[32px] font-medium text-white leading-none max-w-[260px]">
             Conoce <br />Nuestras<br />
             Plataformas<br /> de Impulso<br />
             a la Industria<br /> del Cine
           </h2>
         </div>
 
-        <div className="impulso-right">
-          <div className="impulso-grid">
+        <div>
+          <div
+            className="w-full flex flex-row items-end justify-center gap-4 min-h-[471px]"
+            style={{
+              backgroundImage: "url('/images/water-bg.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
             {/* La Baja Inspira */}
-            <div className="impulso-card">
-              <svg className="impulso-card-x" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <div
+              className="relative overflow-hidden cursor-pointer bg-[#EDE6DC] border-2 border-[#A3CDD8] shrink-0 mr-[10px] ml-[100px]"
+              style={{
+                width: 587,
+                height: 251,
+                backgroundImage: "url('/images/card-x-lbi.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                transform: "translateY(-350px)",
+              }}
+            >
+              <svg className="hidden" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
                 <line x1="0" y1="0" x2="100" y2="100" stroke="#A3CDD8" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
                 <line x1="100" y1="0" x2="0" y2="100" stroke="#A3CDD8" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
               </svg>
-              <div className="impulso-card-content">
-                <h3>La Baja<br />Inspira</h3>
-                <Link href="/la-baja-inspira" className="impulso-link">Explorar</Link>
+              <div className="relative z-[2] p-6 pt-6 pb-8 px-8">
+                <h3
+                  className="font-black text-[#0A1E23] tracking-[-0.03em] leading-[.93] mb-4"
+                  style={{ fontSize: "clamp(2.2rem, 4vw, 4.5rem)" }}
+                >
+                  La Baja<br />Inspira
+                </h3>
+                <Link
+                  href="/la-baja-inspira"
+                  className="impulso-link"
+                >
+                  Explorar
+                </Link>
               </div>
             </div>
 
             {/* Fondo Fílmico Gabriel Figueroa */}
-            <div className="impulso-card">
-              <svg className="impulso-card-x" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <div
+              className="relative overflow-hidden cursor-pointer bg-[#EDE6DC] border-2 border-[#A3CDD8] shrink-0 mr-[10px] ml-[100px]"
+              style={{
+                width: 587,
+                height: 362,
+                backgroundImage: "url('/images/card-x-ffgf.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                transform: "translateY(-350px)",
+              }}
+            >
+              <svg className="hidden" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
                 <line x1="0" y1="0" x2="100" y2="100" stroke="#A3CDD8" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
                 <line x1="100" y1="0" x2="0" y2="100" stroke="#A3CDD8" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
               </svg>
-              <div className="impulso-card-content">
-                <h3>Fondo <br />Fílmico<br />Gabriel<br />Fiegueroa</h3>
-                <Link href="/ffgf" className="impulso-link">Explorar</Link>
+              <div className="relative z-[2] p-6 pt-6 pb-8 px-8">
+                <h3
+                  className="font-black text-[#0A1E23] tracking-[-0.03em] leading-[.93] mb-4"
+                  style={{ fontSize: "clamp(2.2rem, 4vw, 4.5rem)" }}
+                >
+                  Fondo <br />Fílmico<br />Gabriel<br />Fiegueroa
+                </h3>
+                <Link
+                  href="/ffgf"
+                  className="impulso-link"
+                >
+                  Explorar
+                </Link>
               </div>
             </div>
           </div>
-          <div className="impulso-water-strip"></div>
+          <div></div>
         </div>
       </section>
 

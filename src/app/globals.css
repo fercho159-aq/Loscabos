@@ -193,223 +193,41 @@ body {
   }
 
   /* ══════════════════════════════════════════
-     HERO — Dark Brand Hero
+     IMPULSO LINK
      ══════════════════════════════════════════ */
-  .hero {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background: #0A1E23;
-    overflow-x: clip;
-    min-height: 100vh;
-  }
-
-  .hero-bg {
-    display: none;
-  }
-
-  .hero-overlay {
-    display: none;
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 1;
-    padding: 8rem 2rem 9rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-    justify-content: center;
-    gap: 0;
-  }
-
-  /* Brand lockup — logo image only, centered */
-  .hero-brand-lockup {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.2rem;
-  }
-
-  .hero-logo-img {
-    width: 511px !important;
-    max-width: 90vw !important;
-    height: auto !important;
-  }
-
-  /* Edition + Date block — right-aligned to match logo's right edge */
-  .hero-edition-block {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 511px;
-    max-width: 90vw;
-  }
-
-  .hero-edition-label {
+  .impulso-link {
     font-family: var(--font-inter);
-    font-size: clamp(.85rem, 1.1vw, .98rem);
     font-weight: 600;
-    font-style: italic;
-    color: #EDE6DC;
-    letter-spacing: .04em;
-    margin-bottom: .25rem;
-  }
-
-  /* Date */
-  .hero-date {
-    font-family: var(--font-inter);
-    font-size: clamp(.7rem, .9vw, .82rem);
-    color: rgba(237, 230, 220, .6);
-    letter-spacing: .08em;
-  }
-
-  /* ── #BEYONDTHESCREEN strip — centered, width of logo ── */
-  .hero-beyond-strip {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 511px;
-    max-width: 90vw;
-    padding: 0;
-    margin-top: 3rem;
-    gap: 2rem;
-  }
-
-  .hero-beyond-left {
-    display: flex;
-    flex-direction: column;
-    gap: .55rem;
-    text-align: left;
-  }
-
-  .hero-hashtag {
-    font-family: var(--font-inter);
-    font-size: .78rem;
-    font-weight: 700;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: #A3CDD8;
-    margin: 0;
-  }
-
-  /* Description */
-  .hero-description {
-    font-family: var(--font-inter);
     font-size: .72rem;
-    font-weight: 400;
-    color: #A3CDD8;
-    line-height: 1.65;
-    margin: 0;
-    opacity: .75;
-    max-width: 260px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: rgba(10, 30, 35, .5);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    transition: gap .3s, color .3s;
+    border-bottom: 1px solid rgba(10, 30, 35, .2);
+    padding-bottom: .25rem;
   }
 
-  .hero-play-icon {
-    width: 58px;
-    height: 58px;
-    flex-shrink: 0;
-    cursor: pointer;
-    transition: opacity .25s, transform .25s;
+  .impulso-link::after {
+    content: '\2192';
+    transition: transform .3s;
   }
 
-  .hero-play-icon:hover {
-    opacity: .8;
-    transform: scale(1.06);
+  .impulso-link:hover {
+    gap: .8rem;
+    color: #0A1E23;
   }
 
-  /* Texture strip */
-  .hero-texture-strip {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -110px;
-    height: 206px;
-    background-image: url('/images/texture-pattern.svg');
-    background-repeat: repeat-x;
-    background-size: auto 121px;
-    background-position: center;
-    z-index: 50;
-    pointer-events: none;
-  }
-
-  .hero-texture-strip img {
-    display: none;
-  }
-
-  /* Year overlap — hidden in new design */
-  .hero-year-overlap {
-    display: none;
+  .impulso-link:hover::after {
+    transform: translateX(2px);
   }
 
   /* ══════════════════════════════════════════
      CTA BAND — Photo Background
      ══════════════════════════════════════════ */
-  .cta-section {
-    position: relative;
-    text-align: center;
-    background: #0A1E23;
-  }
-
-  .cta-texture {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -110px;
-    height: 220px;
-    background-image: url('/images/texture-pattern.svg');
-    background-repeat: repeat-x;
-    background-size: auto 121px;
-    background-position: center;
-    z-index: 50;
-    pointer-events: none;
-  }
-
-  .cta-texture img {
-    display: none;
-  }
-
-  .cta-photo-block {
-    position: relative;
-    height: 560px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 110px 4rem;
-  }
-
-  .cta-photo-block .cta-bg-img {
-    position: absolute;
-    inset: 0;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-
-
-  .cta-photo-content {
-    position: relative;
-    z-index: 20;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1100px;
-    gap: 3rem;
-    text-align: left;
-  }
-
-  .cta-text {
-    font-family: var(--font-inter);
-    font-size: clamp(1rem, 1.6vw, 1.25rem);
-    font-weight: 400;
-    color: #ffffff;
-    max-width: 440px;
-    line-height: 1.65;
-    margin: 0;
-  }
-
   .cta-button {
     display: inline-block;
     padding: 1rem 2.4rem;
@@ -430,14 +248,6 @@ body {
     background: #D97A5B;
     color: #ffffff;
     transform: translateY(-2px);
-  }
-
-  @media (max-width: 768px) {
-    .cta-photo-content {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 2rem;
-    }
   }
 
   /* ══════════════════════════════════════════
@@ -540,163 +350,6 @@ body {
 
   .festival-row-link:hover {
     color: var(--color-teal);
-  }
-
-  /* ══════════════════════════════════════════
-     IMPULSO A LA INDUSTRIA
-     ══════════════════════════════════════════ */
-  .impulso-section {
-    position: relative;
-    width: 100%;
-    height: auto;
-    background: #0A1E23;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-
-  .impulso-header {
-    flex: 0 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 7rem 4rem 15rem 15rem;
-  }
-
-  .impulso-tag {
-    font-family: "neue-haas-grotesk-display", var(--font-inter), sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    line-height: 1;
-    text-transform: none;
-    color: rgba(255, 255, 255, .4);
-    margin-bottom: 1rem;
-    display: block;
-  }
-
-  .impulso-title {
-    font-family: "neue-haas-grotesk-display", var(--font-inter), sans-serif;
-    font-size: 32px;
-    font-weight: 500;
-    color: #ffffff;
-    line-height: 1;
-    letter-spacing: 0;
-    max-width: 260px;
-  }
-
-  .impulso-subtitle {
-    display: none;
-  }
-
-  /* Cards row — flexbox, different widths, water behind */
-  .impulso-grid {
-    width: 100%;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 1rem;
-    min-height: 471px;
-    background: url('/images/water-bg.jpg') center/cover no-repeat;
-  }
-
-  .impulso-card {
-    margin-right: 10px;
-    margin-left: 100px;
-  }
-
-  /* Cream card — content-driven height */
-  .impulso-card {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    background: #EDE6DC;
-    border: 2px solid #A3CDD8;
-    transform: translateY(-350px);
-  }
-
-
-
-  /* La Baja Inspira */
-  .impulso-card:first-child {
-    width: 587px;
-    height: 251px;
-    flex-shrink: 0;
-    background-image: url('/images/card-x-lbi.png');
-    background-size: cover;
-    background-position: center;
-  }
-
-  /* Fondo Fílmico Gabriel Fiegueroa */
-  .impulso-card:last-child {
-    width: 587px;
-    height: 362px;
-    flex-shrink: 0;
-    background-image: url('/images/card-x-ffgf.png');
-    background-size: cover;
-    background-position: center;
-  }
-
-  .impulso-card-bg {
-    display: none;
-  }
-
-  .impulso-card-overlay {
-    display: none;
-  }
-
-  /* SVG X — oculto, se usan imágenes de fondo */
-  .impulso-card-x {
-    display: none;
-  }
-
-  .impulso-card-content {
-    position: relative;
-    z-index: 2;
-    padding: 1.5rem 2rem 2rem;
-  }
-
-  .impulso-card h3 {
-    font-family: var(--font-inter);
-    font-size: clamp(2.2rem, 4vw, 4.5rem);
-    font-weight: 900;
-    color: #0A1E23;
-    letter-spacing: -.03em;
-    line-height: .93;
-    margin-bottom: 1rem;
-    text-transform: none;
-  }
-
-  .impulso-link {
-    font-family: var(--font-inter);
-    font-weight: 600;
-    font-size: .72rem;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    color: rgba(10, 30, 35, .5);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: .5rem;
-    transition: gap .3s, color .3s;
-    border-bottom: 1px solid rgba(10, 30, 35, .2);
-    padding-bottom: .25rem;
-  }
-
-  .impulso-link::after {
-    content: '\2192';
-    transition: transform .3s;
-  }
-
-  .impulso-link:hover {
-    gap: .8rem;
-    color: #0A1E23;
-  }
-
-  .impulso-link:hover::after {
-    transform: translateX(2px);
   }
 
   /* ══════════════════════════════════════════
@@ -2974,10 +2627,6 @@ body {
    RESPONSIVE
    ══════════════════════════════════════════ */
 @media (max-width: 1024px) {
-  .impulso-grid {
-    grid-template-columns: 1fr !important;
-  }
-
   .festival-row {
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
@@ -3005,20 +2654,12 @@ body {
     padding: 0 1.25rem !important;
   }
 
-  .hero {
-    min-height: 100svh;
-  }
-
   .ffgf-legado-grid {
     grid-template-columns: 1fr !important;
   }
 
   .ffgf-legado {
     padding: 4rem 1.25rem !important;
-  }
-
-  .hero-content {
-    padding: 5rem 1.5rem 3rem !important;
   }
 
   .plat-floating-panel {

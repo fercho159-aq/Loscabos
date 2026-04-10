@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "FICC Los Cabos 2026 | Festival Internacional de Cine y Creatividad",
   description:
     "14° Edición del Festival Internacional de Cine y Creatividad de Los Cabos. 9 — 13 Diciembre 2026. #BeyondTheScreen",
+  other: {
+    "adobe-fonts": "",
+  },
 };
 
 export default function RootLayout({
@@ -28,6 +31,8 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <head>
+        {/* Adobe Fonts — Neue Haas Grotesk */}
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link rel="stylesheet" href="https://use.typekit.net/euv2emd.css" />
       </head>
       <body suppressHydrationWarning
