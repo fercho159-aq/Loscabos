@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GSAPAnimations from "@/components/GSAPAnimations";
 import TextureStrip from "@/components/TextureStrip";
+import ZoomLink from "@/components/ZoomLink";
 
 const aliados = [
   { name: "Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-01.png" },
@@ -212,12 +213,9 @@ export default function Home() {
                 >
                   La Baja<br />Inspira
                 </h3>
-                <Link
-                  href="/la-baja-inspira"
-                  className="impulso-link"
-                >
+                <ZoomLink href="/la-baja-inspira" className="impulso-link">
                   Explorar
-                </Link>
+                </ZoomLink>
               </div>
             </div>
 
@@ -245,12 +243,9 @@ export default function Home() {
                 >
                   Fondo <br />Fílmico<br />Gabriel<br />Fiegueroa
                 </h3>
-                <Link
-                  href="/ffgf"
-                  className="impulso-link"
-                >
+                <ZoomLink href="/ffgf" className="impulso-link">
                   Explorar
-                </Link>
+                </ZoomLink>
               </div>
             </div>
           </div>
