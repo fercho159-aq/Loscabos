@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
-import Footer, { Newsletter } from "@/components/Footer";
+import Footer from "@/components/Footer";
 
 const aliados = [
   { name: "Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-01.png" },
@@ -43,109 +43,126 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="hero">
-        <div className="hero-bg">
-          <Image
-            src="/images/hero-bg.jpg"
-            alt="Los Cabos landscape through sunglasses"
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-          />
-          <div className="hero-overlay" />
-        </div>
         <div className="hero-content">
-          <p className="hero-location">Los Cabos, Baja California Sur</p>
-          <h1 className="hero-title">
-            Festival<br />
-            Internacional<br />
-            de Cine<br />
-            y Creatividad<br />
-            de Los Cabos
-          </h1>
-          <p className="hero-date">9 &mdash; 13 &nbsp;Diciembre</p>
-          <div className="hero-logo-wrapper">
-            <Image
-              src="/images/logo-light.png"
-              alt="FICC Los Cabos 14ª Edición"
-              width={280}
-              height={100}
+          {/* Brand lockup — logo image only */}
+          <div className="hero-brand-lockup">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/logo-light.svg"
+              alt="Festival Internacional de Cine y Creatividad Los Cabos"
               className="hero-logo-img"
             />
           </div>
+
+          {/* Edition + Date — right-aligned to logo's right edge */}
+          <div className="hero-edition-block">
+            <p className="hero-edition-label">14ª&nbsp;Edición</p>
+            <p className="hero-date">9–13 de diciembre de 2026</p>
+          </div>
+
+          {/* #BEYONDTHESCREEN strip — centered, matching logo width */}
+          <div className="hero-beyond-strip">
+            <div className="hero-beyond-left">
+              <p className="hero-hashtag">#BEYONDTHESCREEN</p>
+              <p className="hero-description">
+                El cine como punto de <br />encuentro entre la música,<br />
+                el arte digital y la comunidad.
+              </p>
+            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/play.svg" alt="Ver video" className="hero-play-icon" />
+          </div>
         </div>
-        {/* Large year overlapping into the band */}
-        <div className="hero-year-overlap">
-          <span className="hero-year-number">2026</span>
+
+        {/* Texture strip */}
+        <div className="hero-texture-strip">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/texture-pattern.svg" alt="" role="presentation" />
         </div>
       </section>
 
       {/* ── CTA PREVENTA ── */}
       <section className="cta-section">
-        <p className="cta-text">
-          Accede a la preventa de boletos y descubre la programaci&oacute;n antes que nadie.
-        </p>
-        <a href="https://festivaldecinedeloscabos.us15.list-manage.com/subscribe?u=24bf46409995ffe6e8ad030da&id=12e1ce1334" target="_blank" rel="noopener noreferrer" className="cta-button">
-          S&eacute; el primero en la fila
-        </a>
-      </section>
-
-      {/* ── VIDEO SECTION ── */}
-      <section className="video-section" style={{ position: "relative", background: "#006666", padding: "5rem 2rem 6rem", textAlign: "center", overflow: "hidden" }}>
-        <div style={{ position: "relative", zIndex: 1, marginBottom: "3rem" }}>
-          <h2 style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(2rem, 4.5vw, 3.5rem)", fontWeight: 900, color: "#BDC957", letterSpacing: ".02em", textTransform: "uppercase" as const, margin: "0 0 .8rem" }}>#BEYONDTHESCREEN</h2>
-          <p style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(.9rem, 1.3vw, 1.1rem)", fontWeight: 400, color: "#F6EDDB", opacity: .9, maxWidth: 520, margin: "0 auto", lineHeight: 1.6 }}>
-            Cine, creatividad y experiencias culturales con proyecci&oacute;n global.
-          </p>
+        {/* Photo block */}
+        <div className="cta-photo-block">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/cta-cactus.jpg"
+            alt="Paisaje de cactus de Los Cabos"
+            className="cta-bg-img"
+          />
+          <div className="cta-photo-content">
+            <p className="cta-text">
+              Accede a la preventa de boletos<br />
+              y descubre la programación<br />
+              antes que nadie.
+            </p>
+            <a
+              href="https://festivaldecinedeloscabos.us15.list-manage.com/subscribe?u=24bf46409995ffe6e8ad030da&id=12e1ce1334"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-button"
+            >
+              Preventa de Boletos
+            </a>
+          </div>
         </div>
 
-        <div style={{ position: "relative", zIndex: 1, maxWidth: 860, margin: "0 auto", aspectRatio: "16/9", borderRadius: 4, overflow: "hidden", boxShadow: "0 12px 48px rgba(0,0,0,.35)" }}>
-          <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID"
-            title="FICC Los Cabos - Beyond The Screen"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }}
-          />
+        {/* Bottom texture */}
+        <div className="cta-texture">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/texture-pattern.svg" alt="" role="presentation" />
         </div>
       </section>
 
       {/* ── IMPULSO A LA INDUSTRIA ── */}
       <section className="impulso-section">
-        <h2 className="impulso-title">Impulso a la Industria</h2>
-        <p className="impulso-subtitle">
-          Conoce nuestras plataformas de apoyo a la Industria
-        </p>
-        <div className="impulso-grid">
-          <div className="impulso-card" style={{ display: "grid", gridTemplateColumns: "160px 1fr", gap: "2rem", alignItems: "center", padding: "2.5rem" }}>
-            <Link href="/la-baja-inspira" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <Image src="/images/lbi-logo.png" alt="La Baja Inspira" width={160} height={200} style={{ objectFit: "contain", width: "100%", height: "auto" }} />
-            </Link>
-            <div>
-              <p>
-                Plataforma de proyecci&oacute;n internacional para el cine documental que aborda
-                la biodiversidad, la memoria hist&oacute;rica y el desarrollo sostenible del
-                Golfo de California.
-              </p>
-              <Link href="/la-baja-inspira" className="impulso-link">Explorar</Link>
+        <div className="impulso-header">
+          <span className="impulso-tag">Apoya a la Industria</span>
+          <h2 className="impulso-title">
+            Conoce <br />Nuestras<br />
+            Plataformas<br /> de Impulso<br />
+            a la Industria<br /> del Cine
+          </h2>
+        </div>
+
+        <div className="impulso-right">
+          <div className="impulso-grid">
+            {/* La Baja Inspira */}
+            <div className="impulso-card">
+              <svg className="impulso-card-x" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="0" y1="0" x2="100" y2="100" stroke="#A3CDD8" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
+                <line x1="100" y1="0" x2="0" y2="100" stroke="#A3CDD8" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
+              </svg>
+              <div className="impulso-card-content">
+                <h3>La Baja<br />Inspira</h3>
+                <Link href="/la-baja-inspira" className="impulso-link">Explorar</Link>
+              </div>
+            </div>
+
+            {/* Fondo Fílmico Gabriel Figueroa */}
+            <div className="impulso-card">
+              <svg className="impulso-card-x" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="0" y1="0" x2="100" y2="100" stroke="#A3CDD8" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
+                <line x1="100" y1="0" x2="0" y2="100" stroke="#A3CDD8" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
+              </svg>
+              <div className="impulso-card-content">
+                <h3>Fondo <br />Fílmico<br />Gabriel<br />Fiegueroa</h3>
+                <Link href="/ffgf" className="impulso-link">Explorar</Link>
+              </div>
             </div>
           </div>
-          <div className="impulso-card" style={{ display: "grid", gridTemplateColumns: "160px 1fr", gap: "2rem", alignItems: "center", padding: "2.5rem" }}>
-            <Link href="/ffgf" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <Image src="/images/ffgf-logo.png" alt="Fondo Fílmico Gabriel Figueroa" width={160} height={128} style={{ objectFit: "contain", width: "100%", height: "auto" }} />
-            </Link>
-            <div>
-              <p>
-                Fortalece la industria audiovisual mexicana al generar una vinculaci&oacute;n
-                efectiva entre cineastas y empresas estrat&eacute;gicas del sector.
-              </p>
-              <Link href="/ffgf" className="impulso-link">Explorar</Link>
-            </div>
-          </div>
+          <div className="impulso-water-strip"></div>
         </div>
       </section>
 
+      {/* ── ALIADOS ── */}
       <section className="aliados-plaque">
-        <h3 className="aliados-plaque-title">Nuestros Aliados</h3>
+        <span className="aliados-plaque-tag">Nuestros aliados y patrocinadores</span>
+        <p className="aliados-plaque-quote">
+          Un espacio donde el cine se expande como experiencia,<br />
+          conectando territorio, comunidad y una visión global.
+        </p>
         <div className="aliados-carousel">
           <div className="aliados-track">
             {aliadosTrack.map((a, i) => (
@@ -158,7 +175,6 @@ export default function Home() {
         </div>
       </section>
 
-      <Newsletter />
       <Footer />
     </>
   );

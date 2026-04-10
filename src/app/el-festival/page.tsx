@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
-import Footer, { Newsletter } from "@/components/Footer";
+import Footer from "@/components/Footer";
 
 export default function ElFestival() {
   return (
@@ -134,7 +134,6 @@ export default function ElFestival() {
         </div>
       </section>
 
-      <Newsletter />
       <Footer />
     </>
   );
