@@ -13,7 +13,7 @@ export default function LogoReveal() {
       )
     })
 
-    return () => ctx.revert()
+    return () => ctx.kill()
   }, [])
 
   return null

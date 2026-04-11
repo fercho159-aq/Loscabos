@@ -1,28 +1,14 @@
 import Image from "next/image";
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 
 export default function FON() {
   return (
     <div className="fon-page">
       <Navbar />
 
-      <section className="page-hero" style={{ minHeight: "50vh" }}>
-        <div className="page-hero-bg">
-          <Image
-            src="/images/fon-hero.jpg"
-            alt="Frequencies of Now"
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-          />
-          <div className="page-hero-overlay" />
-        </div>
-        <div className="page-hero-content">
-          <h1 className="page-hero-title">Frequencies of Now</h1>
-        </div>
-      </section>
+      <PageHero lines={["Frequencies", "of Now"]} />
 
       <section style={{ padding: "5rem 2rem", maxWidth: 1200, margin: "0 auto" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center" }}>

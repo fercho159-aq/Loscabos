@@ -21,7 +21,7 @@ export default function CTAParallax() {
       })
     })
 
-    return () => ctx.revert()
+    return () => ctx.kill()
   }, [])
 
   return null

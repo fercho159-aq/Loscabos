@@ -34,8 +34,7 @@ const aliados = [
   { name: "Aeromexico",                                 logo: "/images/aliados/FICC_Logos_Aliados_2026-29.png" },
 ];
 const aliadosTrack = [...aliados, ...aliados];
-import TextureStrip from "@/components/TextureStrip";
-import HeroTitle from "@/components/HeroTitle";
+import PageHero from "@/components/PageHero";
 import ElFestivalIntroScroll from "@/components/ElFestivalIntroScroll";
 import ElFestivalPlataformaCreativa from "@/components/ElFestivalPlataformaCreativa";
 import ElFestivalImpulsoIndustria from "@/components/ElFestivalImpulsoIndustria";
@@ -48,15 +47,7 @@ export default function ElFestival() {
       <Navbar />
 
       {/* ── HERO ── */}
-      <section className="relative h-screen bg-[#0A1E23] overflow-hidden">
-        {/* Title — Figma: top 266px, left 77px, w 453px, h 108px */}
-        <HeroTitle />
-
-        {/* Texture strip */}
-        <div className="absolute top-[630px] left-0 right-0 z-50 pointer-events-none h-[122px]">
-          <TextureStrip style={{ display: "block" }} />
-        </div>
-      </section>
+      <PageHero lines={["El Festival"]} />
 
       {/* ── INTRO: #BeyondTheScreen ── */}
       <ElFestivalIntroScroll />

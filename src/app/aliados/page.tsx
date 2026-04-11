@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 
 const aliados = [
   { name: "Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-01.png" },
@@ -23,21 +24,7 @@ export default function Aliados() {
     <>
       <Navbar />
 
-      <section className="page-hero" style={{ minHeight: "40vh" }}>
-        <div className="page-hero-bg">
-          <Image
-            src="/images/plataforma-cultural/ocean.jpg"
-            alt="Los Cabos"
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-          />
-          <div className="page-hero-overlay" />
-        </div>
-        <div className="page-hero-content">
-          <h1 className="page-hero-title">Aliados</h1>
-        </div>
-      </section>
+      <PageHero lines={["Aliados"]} />
 
       <section className="section-text">
         <div className="section-text-inner">

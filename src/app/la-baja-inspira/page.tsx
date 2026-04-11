@@ -1,7 +1,7 @@
 import Image from "next/image";
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 
 const comite = [
   {
@@ -55,21 +55,7 @@ export default function LaBajaInspira() {
     <div className="lbi-page">
       <Navbar />
 
-      <section className="page-hero" style={{ minHeight: "50vh" }}>
-        <div className="page-hero-bg">
-          <Image
-            src="/images/la-baja-inspira-hero.jpg"
-            alt="Baja California Sur"
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-          />
-          <div className="page-hero-overlay" />
-        </div>
-        <div className="page-hero-content">
-          <h1 className="page-hero-title" style={{ color: "var(--color-cream)" }}>La Baja Inspira</h1>
-        </div>
-      </section>
+      <PageHero lines={["La Baja", "Inspira"]} />
 
       {/* Descripción — Image left, text right */}
       <section style={{ padding: "5rem 2rem", maxWidth: 1200, margin: "0 auto" }}>

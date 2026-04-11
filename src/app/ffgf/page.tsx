@@ -1,7 +1,7 @@
 import Image from "next/image";
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 
 const aliadosFFGF = [
   { name: "Aliado FFGF 1", logo: "/images/aliados-ffgf/aliado-ffgf-13.png" },
@@ -29,21 +29,7 @@ export default function FFGF() {
       <style>{`html, body { background: #fff !important; }`}</style>
       <Navbar />
 
-      <section className="page-hero" style={{ minHeight: "50vh" }}>
-        <div className="page-hero-bg">
-          <Image
-            src="/images/plataformas-impulso/cinema-01.jpg"
-            alt="Cinema"
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-          />
-          <div className="page-hero-overlay" />
-        </div>
-        <div className="page-hero-content">
-          <h1 className="page-hero-title">Fondo F&iacute;lmico<br />Gabriel Figueroa</h1>
-        </div>
-      </section>
+      <PageHero lines={["Fondo Fílmico", "Gabriel Figueroa"]} />
 
       <section style={{ padding: "3rem 2rem", maxWidth: 1200, margin: "0 auto", background: "#fff" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center" }}>

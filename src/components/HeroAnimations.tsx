@@ -76,7 +76,7 @@ export default function HeroAnimations() {
       }
     })
 
-    return () => ctx.revert()
+    return () => ctx.kill()
   }, [isMobile])
 
   return null

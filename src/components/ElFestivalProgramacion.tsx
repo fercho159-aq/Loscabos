@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useLayoutEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -14,6 +14,12 @@ export default function ElFestivalProgramacion() {
   const bgSvgRef   = useRef<HTMLImageElement>(null);
   const iconRef    = useRef<HTMLImageElement>(null);
   const textRef    = useRef<HTMLDivElement>(null);
+  const ctxRef     = useRef<gsap.Context | null>(null);
+
+  // Cleanup runs synchronously before React removes DOM nodes (pin spacer must still exist)
+  useLayoutEffect(() => {
+    return () => { try { ctxRef.current?.revert(); } catch (_) {} };
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -52,9 +58,9 @@ export default function ElFestivalProgramacion() {
       if (words.length) {
         tl.from(words, { opacity: 0, stagger: { amount: 0.5, from: "start" }, ease: "none" }, 0.6);
       }
-    }, sectionRef);
+    });
 
-    return () => ctx.revert();
+    ctxRef.current = ctx;
   }, []);
 
   return (
@@ -93,6 +99,7 @@ export default function ElFestivalProgramacion() {
               src="/images/cta-cactus.jpg"
               alt="Programación con Pulso Global"
               fill
+              sizes="50vw"
               className="object-cover"
             />
           </div>

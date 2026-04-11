@@ -605,7 +605,7 @@ export default function GSAPAnimations() {
 
     });
 
-    return () => ctx.revert();
+    return () => ctx.kill();
   }, []);
 
   return null;

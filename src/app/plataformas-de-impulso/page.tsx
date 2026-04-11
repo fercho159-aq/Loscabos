@@ -4,8 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { FloatingParticles, GradientBlobs } from "@/components/three";
+import { GradientBlobs } from "@/components/three";
 import { ScrollContainer } from "@/components/ScrollAnimations";
+import PageHero from "@/components/PageHero";
 
 const plataformas = [
   {
@@ -67,28 +68,7 @@ export default function PlataformasDeImpulso() {
       <Navbar />
 
       {/* Hero banner */}
-      <section className="page-hero">
-        <div className="page-hero-bg">
-          <Image
-            src="/images/webpdf/img-030.png"
-            alt="Plataformas de impulso"
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-          />
-          <div className="page-hero-overlay" />
-        </div>
-        <FloatingParticles count={70} color="#BDC957" size={2} speed={0.05} />
-        <div className="page-hero-content">
-          <p className="page-hero-label">FICC Los Cabos</p>
-          <h1 className="page-hero-title">
-            Plataformas<br />de Impulso
-          </h1>
-          <p className="page-hero-subtitle">
-            Programas que impulsan el talento cinematográfico y creativo de Latinoamérica
-          </p>
-        </div>
-      </section>
+      <PageHero lines={["Plataformas", "de Impulso"]} />
 
       {/* Intro text */}
       <section className="festival-text" style={{ position: "relative", overflow: "hidden" }}>

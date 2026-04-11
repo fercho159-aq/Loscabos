@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 
 const quotes = [
   { medio: "El Universal", logo: "/images/prensa/Logos Medios/ElUniversal.png", quote: "El Festival de Cine de Los Cabos vuelve en 2025 para recordarle al mundo que el cine mexicano sigue vivo, evoluciona y tiene mucho que contar.", url: "https://www.eluniversal.com.mx/espectaculos/el-festival-de-cine-de-los-cabos-vuelve-en-2025-el-cine-mexicano-sigue-vivo-y-evoluciona/" },
@@ -57,21 +58,7 @@ export default function Prensa() {
     <div className="prensa-page">
       <Navbar />
 
-      <section className="page-hero" style={{ minHeight: "40vh" }}>
-        <div className="page-hero-bg">
-          <Image
-            src="/images/plataforma-cultural/landscape.jpg"
-            alt="Los Cabos"
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-          />
-          <div className="page-hero-overlay" />
-        </div>
-        <div className="page-hero-content">
-          <h1 className="page-hero-title">Prensa</h1>
-        </div>
-      </section>
+      <PageHero lines={["Prensa"]} />
 
       <section className="section-text">
         <div className="section-text-inner">

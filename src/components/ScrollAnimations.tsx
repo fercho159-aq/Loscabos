@@ -171,7 +171,7 @@ export function useScrollReveal() {
       });
     }, containerRef);
 
-    return () => ctx.revert();
+    return () => ctx.kill();
   }, []);
 
   return containerRef;

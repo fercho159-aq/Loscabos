@@ -3,7 +3,11 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 
-export default function HeroTitle() {
+interface Props {
+  lines?: string[];
+}
+
+export default function HeroTitle({ lines = ["El Festival"] }: Props) {
   const ref = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
@@ -27,11 +31,15 @@ export default function HeroTitle() {
   return (
     <h1
       ref={ref}
-      className="absolute top-[266px] left-[77px] w-[453px] font-black text-cream text-[90px] tracking-tight overflow-hidden leading-none"
+      className="absolute top-[266px] left-[77px] w-[700px] font-black text-cream text-[90px] tracking-tight overflow-hidden leading-none"
     >
-      {"El Festival".split("").map((char, i) => (
-        <span key={i} className="title-char inline-block">
-          {char === " " ? "\u00A0" : char}
+      {lines.map((line, li) => (
+        <span key={li} className="block overflow-hidden">
+          {line.split("").map((char, ci) => (
+            <span key={ci} className="title-char inline-block">
+              {char === " " ? "\u00A0" : char}
+            </span>
+          ))}
         </span>
       ))}
     </h1>

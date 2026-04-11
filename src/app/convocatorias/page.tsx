@@ -4,8 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { FloatingParticles, GradientBlobs } from "@/components/three";
+import { GradientBlobs } from "@/components/three";
 import { ScrollContainer } from "@/components/ScrollAnimations";
+import PageHero from "@/components/PageHero";
 
 const convocatorias = [
   {
@@ -52,26 +53,7 @@ export default function Convocatorias() {
       <Navbar />
 
       {/* Hero */}
-      <section className="page-hero">
-        <div className="page-hero-bg">
-          <Image
-            src="/images/webpdf/img-005.png"
-            alt="Convocatorias FICC Los Cabos"
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-          />
-          <div className="page-hero-overlay" />
-        </div>
-        <FloatingParticles count={50} color="#BDC957" size={2} speed={0.05} />
-        <div className="page-hero-content">
-          <p className="page-hero-label">FICC Los Cabos 2026</p>
-          <h1 className="page-hero-title">Convocatorias</h1>
-          <p className="page-hero-subtitle">
-            Inscribe tu proyecto y forma parte de la 14&ordf; edición del festival
-          </p>
-        </div>
-      </section>
+      <PageHero lines={["Convocatorias"]} />
 
       {/* Timeline layout — unique to this page */}
       <section className="conv-timeline">

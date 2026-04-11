@@ -129,7 +129,7 @@ export default function GlobalScrollReveal() {
         });
       });
 
-      return () => ctx.revert();
+      return () => ctx.kill();
     }, 100);
 
     return () => clearTimeout(timer);
