@@ -76,6 +76,108 @@ export default function GSAPAnimations() {
         });
       }
 
+      // ── HERO EXIT on scroll (scrub — bidireccional, izq/der) ──
+      // immediateRender: false evita capturar estado mientras la entrada corre
+
+      const heroWrapExit = document.querySelector<HTMLElement>("#hero-logo-wrap");
+      if (heroWrapExit) {
+        gsap.to(heroWrapExit, {
+          x: -260,
+          opacity: 0,
+          scale: 0.85,
+          ease: "none",
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: "#hero-section",
+            start: "25% top",
+            end: "85% top",
+            scrub: 1.5,
+          },
+        });
+      }
+
+      const heroEditionExit = document.querySelector<HTMLElement>('[data-anim="hero-edition"]');
+      if (heroEditionExit) {
+        gsap.to(heroEditionExit, {
+          x: 200,
+          opacity: 0,
+          ease: "none",
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: "#hero-section",
+            start: "25% top",
+            end: "75% top",
+            scrub: 1,
+          },
+        });
+      }
+
+      const heroDateExit = document.querySelector<HTMLElement>('[data-anim="hero-date"]');
+      if (heroDateExit) {
+        gsap.to(heroDateExit, {
+          x: 240,
+          opacity: 0,
+          ease: "none",
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: "#hero-section",
+            start: "30% top",
+            end: "80% top",
+            scrub: 1,
+          },
+        });
+      }
+
+      const hashtagCharsExit = gsap.utils.toArray<HTMLElement>('[data-anim="hero-hashtag-char"]');
+      if (hashtagCharsExit.length > 0) {
+        gsap.to(hashtagCharsExit, {
+          x: 300,
+          opacity: 0,
+          stagger: 0.012,
+          ease: "none",
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: "#hero-section",
+            start: "30% top",
+            end: "80% top",
+            scrub: 1,
+          },
+        });
+      }
+
+      const heroDescExit = document.querySelector<HTMLElement>('[data-anim="hero-desc"]');
+      if (heroDescExit) {
+        gsap.to(heroDescExit, {
+          x: -220,
+          opacity: 0,
+          ease: "none",
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: "#hero-section",
+            start: "30% top",
+            end: "78% top",
+            scrub: 1,
+          },
+        });
+      }
+
+      const heroPlayExit = document.querySelector<HTMLElement>('[data-anim="hero-play"]');
+      if (heroPlayExit) {
+        gsap.to(heroPlayExit, {
+          x: 180,
+          opacity: 0,
+          rotation: 180,
+          ease: "none",
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: "#hero-section",
+            start: "28% top",
+            end: "75% top",
+            scrub: 1,
+          },
+        });
+      }
+
       // Teal paint — scroll-driven clip-path reveal (left → right)
       const heroBlueLogo = document.querySelector<HTMLElement>("#hero-logo-blue");
       if (heroBlueLogo) {
@@ -115,15 +217,18 @@ export default function GSAPAnimations() {
         });
       }
 
-      // #BEYONDTHESCREEN
-      const heroHashtag = document.querySelector<HTMLElement>('[data-anim="hero-hashtag"]');
-      if (heroHashtag) {
-        gsap.from(heroHashtag, {
+      // #BEYONDTHESCREEN — staggered character animation
+      const hashtagChars = gsap.utils.toArray<HTMLElement>('[data-anim="hero-hashtag-char"]');
+      if (hashtagChars.length > 0) {
+        gsap.from(hashtagChars, {
           opacity: 0,
-          x: -20,
-          duration: 0.7,
-          delay: 1.1,
-          ease: "power3.out",
+          y: -60,
+          rotateX: 90,
+          transformOrigin: "50% 0% -10px",
+          duration: 0.65,
+          delay: 1.0,
+          stagger: 0.04,
+          ease: "back.out(2.5)",
           force3D: true,
         });
       }
@@ -139,18 +244,69 @@ export default function GSAPAnimations() {
         });
       }
 
-      // ── CTA SECTION ──
-      const ctaText = document.querySelector<HTMLElement>('[data-anim="cta-text"]');
-      if (ctaText) {
-        gsap.from(ctaText, {
+      // Play button — entrada + pulso continuo + hover
+      const heroPlay = document.querySelector<HTMLElement>('[data-anim="hero-play"]');
+      if (heroPlay) {
+        // Entrada: escala desde 0 con rebote
+        gsap.from(heroPlay, {
+          scale: 0,
           opacity: 0,
-          y: 40,
-          duration: 0.8,
-          ease: "power3.out",
+          rotation: -45,
+          duration: 0.7,
+          delay: 1.5,
+          ease: "back.out(2)",
+          force3D: true,
+        });
+
+        // Pulso continuo después de la entrada
+        gsap.to(heroPlay, {
+          scale: 1.1,
+          duration: 1.4,
+          delay: 2.2,
+          ease: "sine.inOut",
+          yoyo: true,
+          repeat: -1,
+          force3D: true,
+        });
+
+        // Hover
+        heroPlay.addEventListener("mouseenter", () => {
+          gsap.to(heroPlay, {
+            scale: 1.2,
+            rotation: 15,
+            duration: 0.3,
+            ease: "power2.out",
+            overwrite: "auto",
+            force3D: true,
+          });
+        });
+        heroPlay.addEventListener("mouseleave", () => {
+          gsap.to(heroPlay, {
+            scale: 1,
+            rotation: 0,
+            duration: 0.5,
+            ease: "elastic.out(1, 0.5)",
+            overwrite: "auto",
+            force3D: true,
+          });
+        });
+      }
+
+      // ── CTA SECTION ──
+      const ctaChars = gsap.utils.toArray<HTMLElement>('[data-anim="cta-text-char"]');
+      if (ctaChars.length > 0) {
+        gsap.from(ctaChars, {
+          opacity: 0,
+          y: -50,
+          rotateX: 90,
+          transformOrigin: "50% 0% -10px",
+          duration: 0.55,
+          stagger: 0.018,
+          ease: "back.out(2.5)",
           force3D: true,
           scrollTrigger: {
-            trigger: ctaText,
-            start: "top 75%",
+            trigger: '[data-anim="cta-text"]',
+            start: "top 80%",
             once: true,
           },
         });
@@ -158,17 +314,54 @@ export default function GSAPAnimations() {
 
       const ctaBtn = document.querySelector<HTMLElement>('[data-anim="cta-btn"]');
       if (ctaBtn) {
-        gsap.from(ctaBtn, {
-          opacity: 0,
-          y: 20,
-          duration: 0.6,
-          delay: 0.2,
-          ease: "power3.out",
-          force3D: true,
-          scrollTrigger: {
-            trigger: ctaBtn,
-            start: "top 75%",
-            once: true,
+        // Inyectar SVG de borde
+        const svgNS = "http://www.w3.org/2000/svg";
+        const svg = document.createElementNS(svgNS, "svg");
+        svg.setAttribute("class", "cta-button-border-svg");
+        svg.setAttribute("aria-hidden", "true");
+        const rect = document.createElementNS(svgNS, "rect");
+        rect.setAttribute("x", "2.5");
+        rect.setAttribute("y", "2.5");
+        rect.setAttribute("width", "calc(100% - 5px)");
+        rect.setAttribute("rx", "0");
+        svg.appendChild(rect);
+        ctaBtn.prepend(svg);
+
+        // Calcular perimeter tras render
+        ScrollTrigger.create({
+          trigger: ctaBtn,
+          start: "top 80%",
+          once: true,
+          onEnter: () => {
+            const w = ctaBtn.offsetWidth;
+            const h = ctaBtn.offsetHeight;
+            const perimeter = 2 * (w + h);
+            rect.setAttribute("width", String(w - 5));
+            rect.setAttribute("height", String(h - 5));
+            rect.style.strokeDasharray = String(perimeter);
+            rect.style.strokeDashoffset = String(perimeter);
+
+            // Dibuja el borde y lo repite cada 3s
+            const drawBorder = () => {
+              rect.style.strokeDashoffset = String(perimeter);
+              gsap.to(rect, {
+                strokeDashoffset: 0,
+                duration: 1.2,
+                ease: "power2.inOut",
+              });
+            };
+
+            drawBorder();
+            setInterval(drawBorder, 3000);
+
+            // Entrada botón
+            gsap.from(ctaBtn, {
+              opacity: 0,
+              y: 20,
+              duration: 0.6,
+              ease: "power3.out",
+              force3D: true,
+            });
           },
         });
       }
@@ -190,51 +383,55 @@ export default function GSAPAnimations() {
         });
       }
 
-      const impulsoTitle = document.querySelector<HTMLElement>('[data-anim="impulso-title"]');
-      if (impulsoTitle) {
-        gsap.from(impulsoTitle, {
+      const impulsoWords = gsap.utils.toArray<HTMLElement>('[data-anim="impulso-word"]');
+      if (impulsoWords.length > 0) {
+        gsap.from(impulsoWords, {
           opacity: 0,
-          y: 30,
-          duration: 0.8,
-          delay: 0.15,
-          ease: "power3.out",
+          y: -60,
+          rotateX: 90,
+          transformOrigin: "50% 0% -10px",
+          duration: 0.6,
+          stagger: 0.07,
+          ease: "back.out(2)",
           force3D: true,
           scrollTrigger: {
-            trigger: impulsoTitle,
-            start: "top 75%",
+            trigger: '[data-anim="impulso-title"]',
+            start: "top 80%",
             once: true,
           },
         });
       }
 
       const impulsoCards = gsap.utils.toArray<HTMLElement>('[data-anim="impulso-card"]');
+      const isMobile = window.innerWidth < 768;
+
       if (impulsoCards.length >= 1) {
-        // Left card slides in from the left
         gsap.from(impulsoCards[0], {
-          x: "-110vw",
+          x: isMobile ? 0 : "-110vw",
+          y: isMobile ? 40 : 0,
           opacity: 0,
-          duration: 1.1,
-          ease: "power4.out",
+          duration: isMobile ? 0.7 : 1.1,
+          ease: isMobile ? "power3.out" : "power4.out",
           force3D: true,
           scrollTrigger: {
             trigger: impulsoCards[0],
-            start: "top 85%",
+            start: "top 90%",
             once: true,
           },
         });
       }
       if (impulsoCards.length >= 2) {
-        // Right card slides in from the right
         gsap.from(impulsoCards[1], {
-          x: "110vw",
+          x: isMobile ? 0 : "110vw",
+          y: isMobile ? 40 : 0,
           opacity: 0,
-          duration: 1.1,
+          duration: isMobile ? 0.7 : 1.1,
           delay: 0.1,
-          ease: "power4.out",
+          ease: isMobile ? "power3.out" : "power4.out",
           force3D: true,
           scrollTrigger: {
             trigger: impulsoCards[1],
-            start: "top 85%",
+            start: "top 90%",
             once: true,
           },
         });
@@ -288,6 +485,72 @@ export default function GSAPAnimations() {
           },
         });
       }
+
+
+      // ── CTA EXIT — wipe izquierda → derecha con clip-path ──
+      gsap.to('[data-anim="cta-text"]', {
+        clipPath: "inset(0 0 0 100%)",
+        ease: "none",
+        immediateRender: false,
+        scrollTrigger: {
+          trigger: "#cta-section",
+          start: "top top",
+          end: "75% top",
+          scrub: 1,
+        },
+      });
+
+      gsap.to('[data-anim="cta-btn"]', {
+        clipPath: "inset(0 0 0 100%)",
+        ease: "none",
+        immediateRender: false,
+        scrollTrigger: {
+          trigger: "#cta-section",
+          start: "15% top",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+
+      // Float continuo + hover en logos aliados
+      const aliadoImgs = gsap.utils.toArray<HTMLElement>(".aliado-slide img");
+      aliadoImgs.forEach((img, i) => {
+        // Float suave — cada logo con fase y duración distintas
+        gsap.to(img, {
+          y: -8,
+          duration: 2.2 + (i % 7) * 0.18,
+          ease: "sine.inOut",
+          yoyo: true,
+          repeat: -1,
+          delay: (i % 11) * 0.22,
+          force3D: true,
+        });
+
+        const slide = img.closest<HTMLElement>(".aliado-slide");
+        if (!slide) return;
+
+        slide.addEventListener("mouseenter", () => {
+          gsap.to(img, {
+            scale: 1.18,
+            y: -14,
+            duration: 0.35,
+            ease: "power3.out",
+            overwrite: "auto",
+            force3D: true,
+          });
+        });
+
+        slide.addEventListener("mouseleave", () => {
+          gsap.to(img, {
+            scale: 1,
+            y: -8,
+            duration: 0.45,
+            ease: "elastic.out(1, 0.5)",
+            overwrite: "auto",
+            force3D: true,
+          });
+        });
+      });
 
       // ── FOOTER ──
       const footerLogoSection = document.querySelector<HTMLElement>(".footer-logo-section");

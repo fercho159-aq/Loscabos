@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 export function Newsletter() {
   return (
     <form
@@ -33,12 +31,11 @@ export default function Footer() {
 
       {/* Logo */}
       <div className="footer-logo-section">
-        <Image
-          src="/images/logo-light.png"
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/logo-light.svg"
           alt="Festival Internacional de Cine y Creatividad de Los Cabos - 14a Edición"
-          width={280}
-          height={100}
-          style={{ objectFit: "contain", height: "auto" }}
+          style={{ width: 280, height: "auto", objectFit: "contain" }}
         />
       </div>
 
