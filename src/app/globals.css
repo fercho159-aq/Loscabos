@@ -2935,4 +2935,10 @@ body {
   .footer-bottom {
     padding: 1.5rem 1.25rem 2rem !important;
   }
+
+  /* Hero texture strip — reposicionar en móvil al bottom */
+  .page-hero-strip {
+    top: auto !important;
+    bottom: 0 !important;
+  }
 }

@@ -4,6 +4,7 @@ import { useRef, useEffect, useLayoutEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,6 +16,7 @@ export default function ElFestivalComunidad() {
   const iconRef    = useRef<HTMLImageElement>(null);
   const textRef    = useRef<HTMLDivElement>(null);
   const ctxRef     = useRef<gsap.Context | null>(null);
+  const isMobile   = useIsMobile();
 
   // Cleanup runs synchronously before React removes DOM nodes (pin spacer must still exist)
   useLayoutEffect(() => {
@@ -22,7 +24,12 @@ export default function ElFestivalComunidad() {
   }, []);
 
   useEffect(() => {
+    // Revert previous context when isMobile changes
+    try { ctxRef.current?.revert(); ctxRef.current = null; } catch (_) {}
+
     const ctx = gsap.context(() => {
+      if (isMobile) return; // Sin animaciones de pin en móvil
+
       const section = sectionRef.current;
       const row1    = row1Ref.current;
       const row2    = row2Ref.current;
@@ -61,17 +68,17 @@ export default function ElFestivalComunidad() {
     });
 
     ctxRef.current = ctx;
-  }, []);
+  }, [isMobile]);
 
   return (
-    <section ref={sectionRef} className="h-screen overflow-hidden bg-[#0A1E23]">
+    <section ref={sectionRef} className="min-h-screen md:h-screen overflow-visible md:overflow-hidden bg-[#0A1E23]">
       <div className="h-full flex flex-col">
 
-        {/* ── Row 1 ── */}
-        <div ref={row1Ref} className="flex flex-none h-[31vh] overflow-hidden will-change-transform">
+        {/* ── Row 1 — apilado en móvil ── */}
+        <div ref={row1Ref} className="flex flex-col md:flex-row flex-none h-auto md:h-[31vh] overflow-hidden will-change-transform">
 
           {/* Panel A — fondo + título */}
-          <div className="relative w-1/3 h-full overflow-hidden flex items-end pb-10 px-14">
+          <div className="relative w-full md:w-1/3 h-[45vw] md:h-full overflow-hidden flex items-end pb-6 px-5 md:pb-10 md:px-14">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               ref={bgSvgRef}
@@ -80,7 +87,7 @@ export default function ElFestivalComunidad() {
               aria-hidden="true"
               className="absolute inset-0 w-full h-full object-cover pointer-events-none will-change-transform"
             />
-            <h2 className="relative z-10 text-navy font-bold text-[88px] leading-[1.1] tracking-[-0.01em]">
+            <h2 className="relative z-10 text-navy font-bold text-[clamp(2rem,8vw,88px)] leading-[1.1] tracking-[-0.01em]">
               {["Comunidad", "e Influencia"].map((line, li) => (
                 <span key={li} className="block overflow-hidden">
                   {line.split("").map((char, ci) => (
@@ -94,35 +101,36 @@ export default function ElFestivalComunidad() {
           </div>
 
           {/* Panel B — imagen */}
-          <div className="relative w-2/3 h-full overflow-hidden">
+          <div className="relative w-full md:w-2/3 h-[40vw] md:h-full overflow-hidden">
             <Image
               src="/images/el-festival/Rectangle.png"
               alt="Comunidad e Influencia"
               fill
+              sizes="(max-width: 768px) 100vw, 66vw"
               className="object-cover"
             />
           </div>
 
         </div>
 
-        {/* ── Row 2 ── */}
-        <div ref={row2Ref} className="flex flex-1 bg-[#0A1E23] will-change-transform">
+        {/* ── Row 2 — apilado en móvil ── */}
+        <div ref={row2Ref} className="flex flex-col md:flex-row flex-1 bg-[#0A1E23] will-change-transform">
 
           {/* Panel C — ícono top-left */}
-          <div className="w-1/2 h-full flex items-start justify-start p-10">
+          <div className="w-full md:w-1/2 h-auto md:h-full flex items-start justify-start p-5 md:p-10">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               ref={iconRef}
               src="/images/el-festival/Group 66 (1).svg"
               alt=""
               aria-hidden="true"
-              className="w-[128px] h-[127px] will-change-transform"
+              className="w-16 h-16 md:w-[128px] md:h-[127px] will-change-transform"
             />
           </div>
 
           {/* Panel D — cuerpo de texto */}
-          <div className="w-1/2 h-full flex items-center py-8 pr-16 pl-4">
-            <div ref={textRef} className="text-cream font-medium text-[32px] leading-snug tracking-normal w-[600px] text-justify">
+          <div className="w-full md:w-1/2 h-auto md:h-full flex items-center py-6 px-5 md:py-8 md:pr-16 md:pl-4">
+            <div ref={textRef} className="text-cream font-medium text-[clamp(1rem,4vw,32px)] leading-snug tracking-normal w-full md:w-[600px] text-justify">
               <p>
                 {"Creamos un ecosistema que trasciende el evento. Activamos una red global de creadores, medios y plataformas para construir un ecosistema que se expande y empodera proyectos los 365 días del año.".split(" ").map((word, i) => (
                   <span key={i} className="body-word">{word}{" "}</span>

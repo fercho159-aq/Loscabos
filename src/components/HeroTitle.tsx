@@ -31,7 +31,7 @@ export default function HeroTitle({ lines = ["El Festival"] }: Props) {
   return (
     <h1
       ref={ref}
-      className="absolute top-[266px] left-[77px] w-[700px] font-black text-cream text-[90px] tracking-tight overflow-hidden leading-none"
+      className="absolute top-[30vh] md:top-[266px] left-4 md:left-[77px] w-[calc(100%-2rem)] md:w-[700px] font-black text-cream text-[clamp(2.2rem,9vw,90px)] tracking-tight overflow-hidden leading-none"
     >
       {lines.map((line, li) => (
         <span key={li} className="block overflow-hidden">
