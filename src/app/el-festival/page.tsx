@@ -2,135 +2,101 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+const aliados = [
+  { name: "Los Cabos",                                  logo: "/images/aliados/FICC_Logos_Aliados_2026-01.png" },
+  { name: "IMCINE",                                     logo: "/images/aliados/FICC_Logos_Aliados_2026-02.png" },
+  { name: "Grupo Questro",                              logo: "/images/aliados/FICC_Logos_Aliados_2026-03.png" },
+  { name: "Puerto Los Cabos",                           logo: "/images/aliados/FICC_Logos_Aliados_2026-04.png" },
+  { name: "ESCINE",                                     logo: "/images/aliados/FICC_Logos_Aliados_2026-05.png" },
+  { name: "Art Kingdom",                                logo: "/images/aliados/FICC_Logos_Aliados_2026-06.png" },
+  { name: "CTT Exp & Rentals",                          logo: "/images/aliados/FICC_Logos_Aliados_2026-07.png" },
+  { name: "Shalala",                                    logo: "/images/aliados/FICC_Logos_Aliados_2026-08.png" },
+  { name: "Artegios",                                   logo: "/images/aliados/FICC_Logos_Aliados_2026-09.png" },
+  { name: "Chemistry",                                  logo: "/images/aliados/FICC_Logos_Aliados_2026-10.png" },
+  { name: "CineNet",                                    logo: "/images/aliados/FICC_Logos_Aliados_2026-11.png" },
+  { name: "Ánima Village",                              logo: "/images/aliados/FICC_Logos_Aliados_2026-12.png" },
+  { name: "Arte Abierto",                               logo: "/images/aliados/FICC_Logos_Aliados_2026-13.png" },
+  { name: "Cine de Verano",                             logo: "/images/aliados/FICC_Logos_Aliados_2026-14.png" },
+  { name: "Pólvora",                                    logo: "/images/aliados/FICC_Logos_Aliados_2026-15.png" },
+  { name: "Instituto de la Cultura y las Artes",        logo: "/images/aliados/FICC_Logos_Aliados_2026-16.png" },
+  { name: "Hotel El Ganzo",                             logo: "/images/aliados/FICC_Logos_Aliados_2026-17.png" },
+  { name: "Secrets Puerto Los Cabos",                   logo: "/images/aliados/FICC_Logos_Aliados_2026-18.png" },
+  { name: "Tropicana",                                  logo: "/images/aliados/FICC_Logos_Aliados_2026-19.png" },
+  { name: "Krystal Grand Los Cabos",                    logo: "/images/aliados/FICC_Logos_Aliados_2026-20.png" },
+  { name: "Veleros Beach Club",                         logo: "/images/aliados/FICC_Logos_Aliados_2026-21.png" },
+  { name: "Crania",                                     logo: "/images/aliados/FICC_Logos_Aliados_2026-22.png" },
+  { name: "Casa Ballena",                               logo: "/images/aliados/FICC_Logos_Aliados_2026-23.png" },
+  { name: "Suelo Sur",                                  logo: "/images/aliados/FICC_Logos_Aliados_2026-24.png" },
+  { name: "Sage",                                       logo: "/images/aliados/FICC_Logos_Aliados_2026-25.png" },
+  { name: "Baja Republic",                              logo: "/images/aliados/FICC_Logos_Aliados_2026-26.png" },
+  { name: "Dobel 50",                                   logo: "/images/aliados/FICC_Logos_Aliados_2026-27.png" },
+  { name: "Grupo Aeroportuario del Pacífico",           logo: "/images/aliados/FICC_Logos_Aliados_2026-28.png" },
+  { name: "Aeromexico",                                 logo: "/images/aliados/FICC_Logos_Aliados_2026-29.png" },
+];
+const aliadosTrack = [...aliados, ...aliados];
+import TextureStrip from "@/components/TextureStrip";
+import HeroTitle from "@/components/HeroTitle";
+import ElFestivalIntroScroll from "@/components/ElFestivalIntroScroll";
+import ElFestivalPlataformaCreativa from "@/components/ElFestivalPlataformaCreativa";
+import ElFestivalImpulsoIndustria from "@/components/ElFestivalImpulsoIndustria";
+import ElFestivalProgramacion from "@/components/ElFestivalProgramacion";
+import ElFestivalComunidad from "@/components/ElFestivalComunidad";
+
 export default function ElFestival() {
   return (
     <>
       <Navbar />
 
-      <section className="page-hero" style={{ minHeight: "50vh" }}>
-        <div className="page-hero-bg">
-          <Image
-            src="/images/plataforma-cultural/aerial.jpg"
-            alt="Los Cabos aerial"
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-          />
-          <div className="page-hero-overlay" />
-        </div>
-        <div className="page-hero-content">
-          <h1 className="page-hero-title">El Festival</h1>
+      {/* ── HERO ── */}
+      <section className="relative h-screen bg-[#0A1E23] overflow-hidden">
+        {/* Title — Figma: top 266px, left 77px, w 453px, h 108px */}
+        <HeroTitle />
+
+        {/* Texture strip */}
+        <div className="absolute top-[630px] left-0 right-0 z-50 pointer-events-none h-[122px]">
+          <TextureStrip style={{ display: "block" }} />
         </div>
       </section>
 
-      {/* Intro — Text left, image right */}
-      <section style={{ padding: "5rem 2rem", maxWidth: 1200, margin: "0 auto" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center" }}>
-          <div>
-            <h2 style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 900, textTransform: "uppercase" as const, color: "#081722", lineHeight: 1.1, marginBottom: "2rem" }}>
-              #BeyondTheScreen: El Pulso de la Creatividad en Los Cabos
-            </h2>
-            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, marginBottom: "1rem" }}>
-              Tras la expansi&oacute;n de nuestra visi&oacute;n en 2025, el Festival evoluciona. En nuestra 14&ordf; edici&oacute;n
-              &mdash;del 9 al 13 de diciembre de 2026&mdash; nos consolidamos como la plataforma de vinculaci&oacute;n
-              para la industria audiovisual en M&eacute;xico.
-            </p>
-            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, marginBottom: "1rem" }}>
-              Somos el punto de encuentro donde el cine converge con la m&uacute;sica, el arte digital y la
-              animaci&oacute;n. Desde Los Cabos, conectamos el talento mexicano con el circuito internacional.
-            </p>
-            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8 }}>
-              A trav&eacute;s de un modelo multisede que integra naturaleza, hospitalidad y pensamiento
-              creativo, generamos un entorno propicio para la circulaci&oacute;n de obras, el encuentro
-              profesional y la construcci&oacute;n de redes internacionales.
-            </p>
-          </div>
-          <div style={{ position: "relative", aspectRatio: "3/4", borderRadius: 8, overflow: "hidden" }}>
-            <Image src="/images/plataforma-cultural/ocean.jpg" alt="Los Cabos" fill style={{ objectFit: "cover" }} />
-          </div>
-        </div>
-      </section>
+      {/* ── INTRO: #BeyondTheScreen ── */}
+      <ElFestivalIntroScroll />
 
-      {/* 4 Ejes — Alternating layout */}
-      <section style={{ padding: "4rem 2rem", maxWidth: 1200, margin: "0 auto" }}>
+      {/* ── EJE 1: Plataforma Creativa Anclada en Los Cabos ── */}
+      <ElFestivalPlataformaCreativa />
 
-        {/* Eje 1 — Text left, icon right */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center", marginBottom: "5rem" }}>
-          <div style={{ background: "#006666", borderRadius: 12, padding: "2.5rem" }}>
-            <h3 style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)", fontWeight: 900, textTransform: "uppercase" as const, color: "#BDC957", marginBottom: "1rem" }}>PLATAFORMA CREATIVA ANCLADA EN LOS CABOS</h3>
-            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#F6EDDB", lineHeight: 1.8, opacity: .85 }}>
-              El entorno especial de Los Cabos es el origen de todo. Producto de la energ&iacute;a que emana del Golfo de
-              California, surge este festival que, mediante alianzas estrat&eacute;gicas, fusiona la hospitalidad de Baja California
-              Sur con un circuito creativo internacional sin precedentes.
-            </p>
-          </div>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <Image src="/images/ejes/eje1-color.png" alt="Eje Plataforma Creativa" width={260} height={260} style={{ objectFit: "contain" }} />
-          </div>
-        </div>
+      {/* ── EJE 2: Impulso a la Industria ── */}
+      <ElFestivalImpulsoIndustria />
 
-        {/* Eje 2 — Icon left, text right */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center", marginBottom: "5rem" }}>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <Image src="/images/ejes/eje2-color.png" alt="Eje Industria" width={260} height={260} style={{ objectFit: "contain" }} />
-          </div>
-          <div style={{ background: "#3A1801", borderRadius: 12, padding: "2.5rem" }}>
-            <h3 style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)", fontWeight: 900, textTransform: "uppercase" as const, color: "#C47A3D", marginBottom: "1rem" }}>IMPULSO A LA INDUSTRIA</h3>
-            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#F6EDDB", lineHeight: 1.8, opacity: .85 }}>
-              Nuestras plataformas reducen la brecha entre creaci&oacute;n, industria y audiencias. A trav&eacute;s de La Baja Inspira,
-              el Fondo Gabriel Figueroa y Frequencies of Now, actuamos como un motor de formaci&oacute;n, financiamiento y exhibici&oacute;n.
-              Dise&ntilde;adas para generar convergencia, estas plataformas fortalecen trayectorias creativas y construyen puentes
-              reales entre el talento mexicano y el mercado internacional.
-            </p>
-          </div>
-        </div>
+      {/* ── EJE 3: Programación con Pulso Global ── */}
+      <ElFestivalProgramacion />
 
-        {/* Eje 3 — Text left, icon right */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center", marginBottom: "5rem" }}>
-          <div style={{ background: "#081722", borderRadius: 12, padding: "2.5rem" }}>
-            <h3 style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)", fontWeight: 900, textTransform: "uppercase" as const, color: "#6687C3", marginBottom: "1rem" }}>PROGRAMACI&Oacute;N CON PULSO GLOBAL</h3>
-            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#F6EDDB", lineHeight: 1.8, opacity: .85 }}>
-              Nuestra curadur&iacute;a descubre y posiciona las voces que definen el futuro del cine. Desde la Competencia
-              Mexicana y su apuesta por el riesgo narrativo, hasta la consolidaci&oacute;n de la Animaci&oacute;n como un lenguaje
-              cinematogr&aacute;fico mayor, el Festival dialoga permanentemente con el circuito internacional.
-            </p>
-          </div>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <Image src="/images/ejes/eje3-color.png" alt="Eje Programación" width={260} height={260} style={{ objectFit: "contain" }} />
-          </div>
-        </div>
+      {/* ── EJE 4: Comunidad e Influencia ── */}
+      <ElFestivalComunidad />
 
-        {/* Eje 4 — Icon left, text right */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center", marginBottom: "3rem" }}>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <Image src="/images/ejes/eje4-color.png" alt="Eje Comunidad" width={260} height={260} style={{ objectFit: "contain" }} />
-          </div>
-          <div style={{ background: "#960942", borderRadius: 12, padding: "2.5rem" }}>
-            <h3 style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)", fontWeight: 900, textTransform: "uppercase" as const, color: "#E9B0BD", marginBottom: "1rem" }}>COMUNIDAD E INFLUENCIA</h3>
-            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#F6EDDB", lineHeight: 1.8, opacity: .85 }}>
-              Creamos un ecosistema que trasciende el evento. Activamos una red global de creadores, medios y
-              plataformas para construir un ecosistema que se expande y empodera proyectos los 365 d&iacute;as del a&ntilde;o.
-            </p>
-          </div>
-        </div>
 
-      </section>
 
-      {/* Pleca #BeyondTheScreen */}
-      <section style={{ position: "relative", width: "100%", minHeight: 350, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
-        <Image
-          src="/images/beyond-the-screen-bg.jpg"
-          alt="Desierto de Baja California al atardecer"
-          fill
-          style={{ objectFit: "cover" }}
-        />
-        <div style={{ position: "absolute", inset: 0, background: "rgba(8,23,34,.6)" }} />
-        <div style={{ position: "relative", zIndex: 1, maxWidth: 800, padding: "4rem 2rem", textAlign: "center" }}>
-          <p style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1rem, 1.5vw, 1.15rem)", color: "#F6EDDB", lineHeight: 1.8 }}>
-            <strong style={{ color: "#BDC957" }}>#BeyondTheScreen</strong> es una plataforma de innovaci&oacute;n cultural.
-            Integramos cine, m&uacute;sica y arte digital para responder a la transformaci&oacute;n de las industrias creativas,
-            proyectando desde Los Cabos nuevas formas de crear y experimentar el cine.
-          </p>
+
+      {/* ── ALIADOS ── */}
+      <section id="aliados-section" data-anim="aliados-marquee" className="aliados-plaque">
+        <span data-anim="aliados-tag" className="aliados-plaque-tag">Nuestros aliados y patrocinadores</span>
+        <p data-anim="aliados-quote" className="aliados-plaque-quote">
+          En 2026, FICCLosCabos se consolida como el hub creativo definitivo del destino a través de una red de más de 90 aliados locales e internacionales.<br />
+          Juntos, proyectamos a la región dentro del circuito global de las industrias creativas, transformando a Los Cabos en el epicentro de la conversación audiovisual en México.
+        </p>
+        <div className="aliados-carousel">
+          <div className="aliados-track">
+            {aliadosTrack.map((a, i) => (
+              <div key={`${a.name}-${i}`} className="aliado-slide">
+                <Image
+                  src={a.logo}
+                  alt={a.name}
+                  width={240}
+                  height={120}
+                  style={{ width: "auto", height: 120, objectFit: "contain" }}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
