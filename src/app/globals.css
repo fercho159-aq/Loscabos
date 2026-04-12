@@ -2291,6 +2291,12 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 
+@media (max-width: 768px) {
+  .ffgf-page .legado-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
 .ffgf-flip {
   aspect-ratio: 3/2;
 }
