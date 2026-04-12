@@ -70,8 +70,8 @@ export default function LaBajaInspira() {
       </section>
 
       {/* Descripción — Image left, text right */}
-      <section id="lbi-desc-section" style={{ minHeight: "70vh", display: "flex", alignItems: "center", padding: "0rem", maxWidth: 1200, margin: "0 auto", marginBottom: "3rem" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center", width: "100%" }}>
+      <section id="lbi-desc-section" style={{ minHeight: "70vh", display: "flex", alignItems: "center", padding: "2rem", maxWidth: 1200, margin: "0 auto", marginBottom: "3rem" }}>
+        <div className="lbi-desc-grid">
           <div data-anim="lbi-image" style={{ display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
             <Image src="/images/lbi-logo.png" alt="La Baja Inspira" width={400} height={500} style={{ objectFit: "contain", width: "100%", maxWidth: 400, height: "auto" }} />
           </div>
@@ -199,7 +199,7 @@ export default function LaBajaInspira() {
       </section>
 
       {/* Comité de selección */}
-      <section className="section-text" id="lbi-comite-section">
+      <section className="section-text overflow-x-clip" id="lbi-comite-section">
         <div className="section-text-inner">
           <h2 data-anim="lbi-comite-heading" className="section-heading">
             {"Comité de Selección".split(" ").map((word, wi) => (
@@ -213,9 +213,24 @@ export default function LaBajaInspira() {
           <p data-anim="lbi-comite-desc">
             Nuestra selecci&oacute;n es validada por un comit&eacute; de expertos en alianza con ESCINE y el periodismo cient&iacute;fico de alto nivel.
           </p>
-          <div className="profiles-grid">
-            {comite.map((p, i) => (
+          {/* Desktop grid */}
+          <div className="profiles-grid lbi-comite-desktop">
+            {comite.map((p) => (
               <div key={p.name} data-anim="lbi-comite-card" className="profile-card">
+                <div className="profile-avatar" style={{ position: "relative", overflow: "hidden" }}>
+                  <Image src={p.img} alt={p.name} fill style={{ objectFit: "cover" }} />
+                </div>
+                <h4>{p.name}</h4>
+                <p>{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* Mobile carousel */}
+        <div className="comite-carousel lbi-comite-mobile">
+          <div className="comite-track">
+            {[...comite, ...comite].map((p, i) => (
+              <div key={`${p.name}-${i}`} className="comite-slide">
                 <div className="profile-avatar" style={{ position: "relative", overflow: "hidden" }}>
                   <Image src={p.img} alt={p.name} fill style={{ objectFit: "cover" }} />
                 </div>
