@@ -2120,6 +2120,10 @@ body {
   .lbi-comite-mobile {
     display: block !important;
   }
+
+  .lbi-page .legado-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
 
 .lbi-page .section-text-inner p,
