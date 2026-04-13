@@ -10,32 +10,32 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function ElFestivalIntroScroll() {
   const sectionRef = useRef<HTMLElement>(null);
-  const row1Ref    = useRef<HTMLDivElement>(null);
-  const row2Ref    = useRef<HTMLDivElement>(null);
-  const bgSvgRef   = useRef<HTMLImageElement>(null);
-  const iconRef    = useRef<HTMLImageElement>(null);
-  const textRef    = useRef<HTMLDivElement>(null);
-  const ctxRef     = useRef<gsap.Context | null>(null);
-  const isMobile   = useIsMobile();
+  const row1Ref = useRef<HTMLDivElement>(null);
+  const row2Ref = useRef<HTMLDivElement>(null);
+  const bgSvgRef = useRef<HTMLImageElement>(null);
+  const iconRef = useRef<HTMLImageElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
+  const ctxRef = useRef<gsap.Context | null>(null);
+  const isMobile = useIsMobile();
 
   // Cleanup runs synchronously before React removes DOM nodes (pin spacer must still exist)
   useLayoutEffect(() => {
-    return () => { try { ctxRef.current?.revert(); } catch (_) {} };
+    return () => { try { ctxRef.current?.revert(); } catch (_) { } };
   }, []);
 
   useEffect(() => {
     // Revert previous context when isMobile changes
-    try { ctxRef.current?.revert(); ctxRef.current = null; } catch (_) {}
+    try { ctxRef.current?.revert(); ctxRef.current = null; } catch (_) { }
 
     const ctx = gsap.context(() => {
       if (isMobile) return; // Sin animaciones de pin en móvil
 
       const section = sectionRef.current;
-      const row1    = row1Ref.current;
-      const row2    = row2Ref.current;
-      const bgSvg   = bgSvgRef.current;
-      const icon    = iconRef.current;
-      const textEl  = textRef.current;
+      const row1 = row1Ref.current;
+      const row2 = row2Ref.current;
+      const bgSvg = bgSvgRef.current;
+      const icon = iconRef.current;
+      const textEl = textRef.current;
       if (!section || !row1 || !row2 || !bgSvg || !icon || !textEl) return;
 
       const tl = gsap.timeline({
@@ -53,10 +53,10 @@ export default function ElFestivalIntroScroll() {
       const chars = Array.from(section.querySelectorAll(".title-char"));
 
       // Rows slide in from opposite sides
-      tl.from(row1,  { x: "55vw",  ease: "none" }, 0)
-        .from(row2,  { x: "-55vw", ease: "none" }, 0)
+      tl.from(row1, { x: "55vw", ease: "none" }, 0)
+        .from(row2, { x: "-55vw", ease: "none" }, 0)
         .from(bgSvg, { scale: 1.05, opacity: 0, ease: "none" }, 0)
-        .from(icon,  { scale: 0, opacity: 0, y: 20, ease: "power2.out" }, 0.45);
+        .from(icon, { scale: 0, opacity: 0, y: 20, ease: "power2.out" }, 0.45);
 
       if (chars.length) {
         tl.from(chars, { y: -120, opacity: 0, stagger: { amount: 0.4, from: "start" }, ease: "power4.out" }, 0.2);
@@ -131,7 +131,7 @@ export default function ElFestivalIntroScroll() {
 
           {/* Panel D: 1/2 — body text */}
           <div className="w-full md:w-1/2 h-auto md:h-full flex items-center py-6 px-5 md:py-8 md:pr-16 md:pl-4">
-            <div ref={textRef} className="text-cream font-medium text-[clamp(1rem,4vw,32px)] leading-snug tracking-normal w-full md:w-[600px] text-justify">
+            <div ref={textRef} className="text-cream font-medium text-[clamp(1rem,3vw,28px)] leading-snug tracking-normal w-full md:w-[600px] text-justify">
               <p>
                 {"#BeyondTheScreen: El Pulso de la Creatividad en Los Cabos".split(" ").map((word, i) => (
                   <span key={`a${i}`} className="body-word">{word}{" "}</span>
