@@ -55,7 +55,7 @@ export default function Home() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 id="hero-logo"
-                src="/images/logo-light.svg"
+                src="/images/FICCLosCabos_2026_Logo_Claro.svg"
                 alt="Festival Internacional de Cine y Creatividad Los Cabos"
                 style={{ width: "100%", height: "auto", display: "block" }}
               />
@@ -75,24 +75,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Edition + Date — right-aligned to logo's right edge */}
-          <div className="flex flex-col items-end" style={{ width: 511, maxWidth: "90vw" }}>
-            <p
-              data-anim="hero-edition"
-              className="font-semibold italic text-[#EDE6DC] tracking-[.04em] mb-1"
-              style={{ fontSize: "clamp(.85rem, 1.1vw, .98rem)" }}
-            >
-              14ª&nbsp;Edición
-            </p>
-            <p
-              data-anim="hero-date"
-              className="text-[#EDE6DC]/60 tracking-[.08em]"
-              style={{ fontSize: "clamp(.7rem, .9vw, .82rem)" }}
-            >
-              9–13 de diciembre de 2026
-            </p>
-          </div>
-
           {/* #BEYONDTHESCREEN strip — centered, matching logo width */}
           <div
             className="flex items-center justify-between mt-8 md:mt-12 gap-6 md:gap-8"
@@ -104,7 +86,7 @@ export default function Home() {
                   <span key={i} data-anim="hero-hashtag-char" style={{ display: "inline-block" }}>{char}</span>
                 ))}
               </p>
-              <p data-anim="hero-desc" className="text-[.92rem] font-semibold text-[#EDE6DC] leading-[1.65] m-0 opacity-75 max-w-[260px]">
+              <p data-anim="hero-desc" className="text-[.92rem] font-semibold text-[#EDE6DC] leading-[1.65] m-0 opacity-75 max-w-[260px]" style={{ fontFamily: "var(--font-garamond)" }}>
                 El cine como punto de <br />encuentro entre la música,<br />
                 el arte digital y la comunidad.
               </p>

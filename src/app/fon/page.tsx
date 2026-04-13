@@ -13,13 +13,13 @@ export default function FON() {
       <section style={{ padding: "5rem 2rem", maxWidth: 1200, margin: "0 auto" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center" }}>
           <div>
-            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, marginBottom: "1.2rem" }}>
+            <p style={{ fontFamily: "var(--font-garamond)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, marginBottom: "1.2rem" }}>
               Laboratorio creativo donde el cine, la m&uacute;sica y la moda convergen para impulsar nuevas narrativas audiovisuales.
               A trav&eacute;s de procesos colaborativos y experiencias en vivo, el programa funciona como una radiograf&iacute;a de la
               sociedad mexicana, identificando a los protagonistas que explican el porqu&eacute; de lo que sucede hoy en nuestro
               entorno y el panorama musical de M&eacute;xico.
             </p>
-            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, marginBottom: "1.2rem" }}>
+            <p style={{ fontFamily: "var(--font-garamond)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, marginBottom: "1.2rem" }}>
               Al observar las tendencias y c&oacute;mo estas trascienden, el programa se consolida como un espacio estrat&eacute;gico
               para entender la actualidad de estas industrias, fortaleciendo el rol del FICCLosCabos como una plataforma
               activa de producci&oacute;n audiovisual.

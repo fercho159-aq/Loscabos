@@ -7,7 +7,7 @@ export default function Programacion() {
     <>
       <Navbar />
 
-      <PageHero lines={["Programación"]} />
+      <PageHero lines={["Programación"]} subtitle="Próximamente" />
 
       <Footer />
     </>

@@ -76,24 +76,24 @@ export default function LaBajaInspira() {
             <Image src="/images/lbi-logo.png" alt="La Baja Inspira" width={400} height={500} style={{ objectFit: "contain", width: "100%", maxWidth: 400, height: "auto" }} />
           </div>
           <div>
-            <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-inter)", fontSize: "1.5rem", color: "#081722", lineHeight: 1, marginBottom: "1rem", fontWeight: 900 }}>
+            <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#081722", lineHeight: 1, marginBottom: "1rem", fontWeight: 500 }}>
               La Baja Inspira es la plataforma del Festival Internacional de Cine de Los Cabos diseñada para impulsar el cine de no ficción que explora la biodiversidad, la memoria y el desarrollo de la región. Posicionamos al destino como un referente global, vinculando la potencia del lenguaje cinematográfico con la investigación científica y la conciencia pública.
             </p>
-            <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-inter)", fontSize: "1.5rem", color: "#081722", lineHeight: 1, marginBottom: "1rem", fontWeight: 900 }}>
+            <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#081722", lineHeight: 1, marginBottom: "1rem", fontWeight: 500 }}>
               Los proyectos seleccionados deberán articular el lenguaje cinematográfico con al menos una de las siguientes áreas de conocimiento:
             </p>
-            <ul style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, paddingLeft: 0, listStyle: "none" }}>
+            <ul style={{ fontFamily: "var(--font-garamond)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, paddingLeft: 0, listStyle: "none" }}>
               <li data-anim="lbi-list-item" style={{ marginBottom: "1.2rem", display: "flex", gap: ".75rem", alignItems: "flex-start" }}>
                 <svg data-anim="lbi-svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BDC957" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 4 }}><path d="M7 20h10" /><path d="M10 20c5.5-2.5.8-6.4 3-10" /><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z" /><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z" /></svg>
-                <span data-anim="lbi-stagger-text" style={{ fontWeight: 900 }}><strong>Ciencias Naturales:</strong> Biología Golfo de California, ecología, cambio climático y biodiversidad del desierto.</span>
+                <span data-anim="lbi-stagger-text" style={{ fontWeight: 500 }}><strong>Ciencias Naturales:</strong> Biología Golfo de California, ecología, cambio climático y biodiversidad del desierto.</span>
               </li>
               <li data-anim="lbi-list-item" style={{ marginBottom: "1.2rem", display: "flex", gap: ".75rem", alignItems: "flex-start" }}>
                 <svg data-anim="lbi-svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F4A061" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 4 }}><path d="M2 12h1" /><path d="M6 8v8" /><path d="M10 2v20" /><path d="M14 4v16" /><path d="M18 6v12" /><path d="M22 12h-1" /></svg>
-                <span data-anim="lbi-stagger-text" style={{ fontWeight: 900 }}><strong>Historia y Sociedad:</strong> Antropología, patrimonio cultural y la reconstrucción de la memoria histórica.</span>
+                <span data-anim="lbi-stagger-text" style={{ fontWeight: 500 }}><strong>Historia y Sociedad:</strong> Antropología, patrimonio cultural y la reconstrucción de la memoria histórica.</span>
               </li>
               <li data-anim="lbi-list-item" style={{ display: "flex", gap: ".75rem", alignItems: "flex-start" }}>
                 <svg data-anim="lbi-svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0088C5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 4 }}><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" /><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" /><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" /></svg>
-                <span data-anim="lbi-stagger-text" style={{ fontWeight: 900 }}><strong>Desarrollo del Destino:</strong> Economía azul, pesca responsable y turismo sostenible.</span>
+                <span data-anim="lbi-stagger-text" style={{ fontWeight: 500 }}><strong>Desarrollo del Destino:</strong> Economía azul, pesca responsable y turismo sostenible.</span>
               </li>
             </ul>
           </div>

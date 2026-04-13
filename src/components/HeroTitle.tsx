@@ -5,9 +5,10 @@ import gsap from "gsap";
 
 interface Props {
   lines?: string[];
+  subtitle?: string;
 }
 
-export default function HeroTitle({ lines = ["El Festival"] }: Props) {
+export default function HeroTitle({ lines = ["El Festival"], subtitle }: Props) {
   const ref = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
@@ -31,7 +32,7 @@ export default function HeroTitle({ lines = ["El Festival"] }: Props) {
   return (
     <h1
       ref={ref}
-      className="absolute top-[30vh] md:top-[266px] left-4 md:left-[77px] w-[calc(100%-2rem)] md:w-[700px] font-black text-cream text-[clamp(2.2rem,9vw,90px)] tracking-tight overflow-hidden leading-none"
+      className="absolute top-[30vh] md:top-[266px] left-4 md:left-[77px] w-[calc(100%-2rem)] md:w-[700px] font-black text-cream text-[clamp(2.2rem,9vw,90px)] tracking-tight overflow-hidden leading-[1.1]"
     >
       {lines.map((line, li) => (
         <span key={li} className="block overflow-hidden">
@@ -42,6 +43,11 @@ export default function HeroTitle({ lines = ["El Festival"] }: Props) {
           ))}
         </span>
       ))}
+      {subtitle && (
+        <span className="block mt-4 text-cream/60 text-[clamp(1rem,3vw,1.5rem)] font-medium tracking-wide">
+          {subtitle}
+        </span>
+      )}
     </h1>
   );
 }

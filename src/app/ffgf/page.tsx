@@ -40,12 +40,12 @@ export default function FFGF() {
             <Image src="/images/ffgf-logo.png" alt="Fondo Fílmico Gabriel Figueroa" width={500} height={400} style={{ objectFit: "contain", width: "100%", maxWidth: 500, height: "auto" }} />
           </div>
           <div>
-            <p data-anim="ffgf-typewriter" style={{ fontFamily: "var(--font-inter)", fontSize: "1.5rem", color: "#000", lineHeight: 1, marginBottom: "1rem", fontWeight: 900 }}>
+            <p data-anim="ffgf-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#000", lineHeight: 1, marginBottom: "1rem", fontWeight: 900 }}>
               Fortalece la industria audiovisual mexicana al generar una vinculaci&oacute;n efectiva entre cineastas y empresas
               estrat&eacute;gicas del sector. Mediante apoyos especializados, mentor&iacute;as y redes internacionales de colaboraci&oacute;n,
               el programa impulsa la finalizaci&oacute;n y circulaci&oacute;n global de nuevas obras.
             </p>
-            <p data-anim="ffgf-typewriter" style={{ fontFamily: "var(--font-inter)", fontSize: "1.5rem", color: "#000", lineHeight: 1, marginBottom: "1rem", fontWeight: 900 }}>
+            <p data-anim="ffgf-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#000", lineHeight: 1, marginBottom: "1rem", fontWeight: 900 }}>
               Esta iniciativa posiciona al FICCLosCabos como una plataforma activa de empoderamiento cinematogr&aacute;fico
               y conexi&oacute;n profesional entre M&eacute;xico y el mundo, proyectando el talento de M&eacute;xico a la escena internacional.
             </p>
