@@ -178,7 +178,6 @@ export default function Home() {
       <section id="impulso-section" className="relative w-full bg-[#0A1E23] flex flex-col overflow-hidden">
         <div className="shrink-0 flex flex-col justify-start pt-10 pr-5 pb-10 pl-5 md:pt-[7rem] md:pr-16 md:pb-[15rem] md:pl-[15rem]">
           <span data-anim="impulso-tag" className="text-[13px] md:text-[14px] font-medium tracking-[.05em] leading-none text-white/40 mb-4 block">
-            Apoya a la Industria
           </span>
           <h2 data-anim="impulso-title" className="text-[42px] md:text-[58px] font-black text-white leading-[1.0] max-w-[420px]">
             {"Conoce Nuestras Plataformas de Impulso a la Industria del Cine".split(" ").map((word, i) => (

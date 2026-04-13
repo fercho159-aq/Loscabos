@@ -621,8 +621,8 @@ body {
   }
 
   .footer-col a {
-    font-family: var(--font-inter) !important;
-    font-size: .85rem !important;
+    font-family: 'EB Garamond', 'Garamond', 'Georgia', serif !important;
+    font-size: .95rem !important;
     color: rgba(246, 237, 219, .8) !important;
     text-decoration: none !important;
     transition: color .2s !important;

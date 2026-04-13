@@ -131,7 +131,7 @@ export default function ElFestivalIntroScroll() {
 
           {/* Panel D: 1/2 — body text */}
           <div className="w-full md:w-1/2 h-auto md:h-full flex items-center py-6 px-5 md:py-8 md:pr-16 md:pl-4">
-            <div ref={textRef} className="text-cream font-medium text-[clamp(1rem,3vw,28px)] leading-snug tracking-normal w-full md:w-[600px] text-justify">
+            <div ref={textRef} className="text-cream font-medium text-[clamp(1rem,3vw,28px)] leading-snug tracking-normal w-full md:w-[600px] text-left" style={{ fontFamily: "'EB Garamond', 'Garamond', 'Georgia', serif" }}>
               <p>
                 {"#BeyondTheScreen: El Pulso de la Creatividad en Los Cabos".split(" ").map((word, i) => (
                   <span key={`a${i}`} className="body-word">{word}{" "}</span>

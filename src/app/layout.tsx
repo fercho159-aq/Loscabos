@@ -34,6 +34,9 @@ export default function RootLayout({
         {/* Adobe Fonts — Neue Haas Grotesk */}
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link rel="stylesheet" href="https://use.typekit.net/euv2emd.css" />
+        {/* Google Fonts — EB Garamond for footer */}
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" />
       </head>
       <body suppressHydrationWarning
         className={`${inter.variable} ${printf.variable} antialiased`}
