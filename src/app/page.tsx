@@ -81,7 +81,7 @@ export default function Home() {
             style={{ width: 511, maxWidth: "90vw" }}
           >
             <div className="flex flex-col gap-[.55rem] text-left">
-              <p data-anim="hero-hashtag" className="text-[1.25rem] font-black tracking-[.14em] uppercase text-[#A3CDD8] m-0" style={{ overflow: "hidden" }}>
+              <p data-anim="hero-hashtag" className="text-[1.25rem] font-black tracking-[.14em] uppercase text-[#A3CDD8] m-0" style={{ overflow: "hidden", fontFamily: "var(--font-inter)" }}>
                 {"#BEYONDTHESCREEN".split("").map((char, i) => (
                   <span key={i} data-anim="hero-hashtag-char" style={{ display: "inline-block" }}>{char}</span>
                 ))}
