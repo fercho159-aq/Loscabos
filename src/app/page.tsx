@@ -250,7 +250,7 @@ export default function Home() {
                     className="font-black text-[#0A1E23] tracking-[-0.03em] leading-[.93] mb-4"
                     style={{ fontSize: "clamp(1.8rem, 4vw, 4.5rem)" }}
                   >
-                    Fondo <br />Fílmico<br />Gabriel<br />Fiegueroa
+                    Fondo <br />Fílmico<br />Gabriel<br />Figueroa
                   </h3>
                   <ZoomLink href="/ffgf" className="impulso-link">
                     Explorar

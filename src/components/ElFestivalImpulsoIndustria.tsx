@@ -132,7 +132,7 @@ export default function ElFestivalImpulsoIndustria() {
           <div className="w-full md:w-1/2 h-auto md:h-full flex items-center py-6 px-5 md:py-8 md:pr-16 md:pl-4">
             <div ref={textRef} className="text-cream font-medium text-[clamp(1rem,4vw,32px)] leading-snug tracking-normal w-full md:w-[600px] text-justify">
               <p>
-                {"Nuestras plataformas reducen la brecha entre creación, industria y audiencias. A través de La Baja Inspira, el Fondo Gabriel Figueroa y Frequencies of Now, actuamos como un motor de formación, financiamiento y exhibición.".split(" ").map((word, i) => (
+                {"Nuestras plataformas reducen la brecha entre creación, industria y audiencias. A través de La Baja Inspira, el Fondo Fílmico Gabriel Figueroa y Frequencies of Now, actuamos como un motor de formación, financiamiento y exhibición.".split(" ").map((word, i) => (
                   <span key={i} className="body-word">{word}{" "}</span>
                 ))}
                 <br />
