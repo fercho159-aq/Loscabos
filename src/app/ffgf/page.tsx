@@ -40,17 +40,17 @@ export default function FFGF() {
             <Image src="/images/ffgf-logo.png" alt="Fondo Fílmico Gabriel Figueroa" width={500} height={400} style={{ objectFit: "contain", width: "100%", maxWidth: 500, height: "auto" }} />
           </div>
           <div>
-            <p data-anim="ffgf-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#000", lineHeight: 1, marginBottom: "1rem", fontWeight: 900 }}>
+            <p data-anim="ffgf-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#000", lineHeight: 1.3, marginBottom: "1rem", fontWeight: 400 }}>
               Fortalece la industria audiovisual mexicana al generar una vinculaci&oacute;n efectiva entre cineastas y empresas
               estrat&eacute;gicas del sector. Mediante apoyos especializados, mentor&iacute;as y redes internacionales de colaboraci&oacute;n,
               el programa impulsa la finalizaci&oacute;n y circulaci&oacute;n global de nuevas obras.
             </p>
-            <p data-anim="ffgf-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#000", lineHeight: 1, marginBottom: "1rem", fontWeight: 900 }}>
+            <p data-anim="ffgf-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#000", lineHeight: 1.3, marginBottom: "1rem", fontWeight: 400 }}>
               Esta iniciativa posiciona al FICCLosCabos como una plataforma activa de empoderamiento cinematogr&aacute;fico
               y conexi&oacute;n profesional entre M&eacute;xico y el mundo, proyectando el talento de M&eacute;xico a la escena internacional.
             </p>
             <div data-anim="ffgf-dates" className="section-dates">
-              <p><strong>Apertura de convocatoria:</strong> Agosto 2026</p>
+              <p style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#000", lineHeight: 1.3, fontWeight: 400, marginBottom: "1rem" }}>Apertura de convocatoria: Agosto 2026</p>
             </div>
             <a data-anim="ffgf-cta" href="https://festivaldecinedeloscabos.us15.list-manage.com/subscribe?u=24bf46409995ffe6e8ad030da&id=12e1ce1334" target="_blank" rel="noopener noreferrer" className="cta-button" style={{ marginTop: "1.5rem" }}>
               S&eacute; el primero en recibir la informaci&oacute;n de la convocatoria
@@ -78,7 +78,7 @@ export default function FFGF() {
         </div>
 
         <div className="relative z-10 shrink-0 flex flex-col justify-start pt-10 pr-5 pb-10 pl-5 md:pt-[7rem] md:pr-16 md:pb-[10rem] md:pl-[15rem]">
-          <span data-anim="ffgf-legado-eyebrow" className="text-[13px] md:text-[14px] font-medium tracking-[.05em] leading-none text-white/40 mb-4 block">
+          <span data-anim="ffgf-legado-eyebrow" className="text-[20px] md:text-[26px] font-medium tracking-[.05em] leading-tight text-white/60 mb-6 block">
             Historias que trascienden
           </span>
           <h2 className="text-[42px] md:text-[58px] font-black text-white leading-[1.0] max-w-[520px] mb-6">

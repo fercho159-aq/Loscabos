@@ -4,11 +4,6 @@ import Script from "next/script";
 import "./globals.css";
 import { FilmGrain } from "@/components/three";
 
-const inter = localFont({
-  src: "../../public/fonts/Inter-VariableFont_opsz,wght.ttf",
-  variable: "--font-inter",
-});
-
 const printf = localFont({
   src: "../../public/fonts/PRINTF-Regular.ttf",
   variable: "--font-printf",
@@ -39,7 +34,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" />
       </head>
       <body suppressHydrationWarning
-        className={`${inter.variable} ${printf.variable} antialiased`}
+        className={`${printf.variable} antialiased`}
       >
         {children}
         <FilmGrain />

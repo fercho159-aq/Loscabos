@@ -124,7 +124,7 @@ export default function Home() {
           <div className="relative z-20 flex flex-row max-md:flex-col items-center max-md:items-start justify-between w-full max-w-[1100px] gap-8 md:gap-12 text-left">
             <p
               data-anim="cta-text"
-              className="font-black max-w-[440px] leading-[1.3] m-0 uppercase"
+              className="font-black max-w-[440px] leading-[1.3] m-0"
               style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", color: "var(--color-cream)", fontFamily: "var(--font-inter)" }}
             >
               {"Accede a la preventa de boletos y descubre la programación antes que nadie.".split(" ").map((word, wi) => (
