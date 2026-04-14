@@ -82,7 +82,6 @@ body {
   .aliados-plaque-title,
   .aliados-plaque-quote,
   .prensa-quotes-title,
-  .prensa-quotes-label,
   .ffgf-legado-eyebrow,
   .ffgf-legado-title,
   .ffgf-film-title,
@@ -506,7 +505,7 @@ body {
 
   .aliados-plaque-tag {
     font-family: var(--font-garamond);
-    font-size: .75rem;
+    font-size: 1rem;
     font-weight: 600;
     letter-spacing: .03em;
     text-transform: none;
@@ -2574,12 +2573,13 @@ body {
 }
 
 .prensa-quotes-title {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 800;
   color: var(--color-navy);
   letter-spacing: .02em;
   margin-bottom: 1rem;
+  text-transform: none;
 }
 
 .prensa-quotes-subtitle {
@@ -2725,9 +2725,9 @@ body {
 
 .prensa-quote-text {
   font-family: var(--font-garamond);
-  font-size: .88rem;
-  font-weight: 300;
-  line-height: 1.8;
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.6;
   color: #081722;
   margin: 0 0 1.5rem;
   font-style: italic;
@@ -2758,7 +2758,7 @@ body {
 
 .prensa-quote-medio {
   font-family: var(--font-garamond);
-  font-size: .78rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--color-navy);
   letter-spacing: .04em;
@@ -2766,7 +2766,7 @@ body {
 
 .prensa-quote-link {
   font-family: var(--font-garamond);
-  font-size: .72rem;
+  font-size: .9rem;
   font-weight: 600;
   letter-spacing: .08em;
   text-transform: uppercase;

@@ -159,7 +159,7 @@ export default function LaBajaInspira() {
                   <h3 className="tracking-[-0.03em] leading-[.93] mb-6 text-[#0A1E21]" style={{ fontSize: "clamp(1.4rem, 3vw, 2.2rem)", fontWeight: 900 }}>
                     La convocatoria 2026 acepta exclusivamente:
                   </h3>
-                  <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: "clamp(0.85rem, 1.2vw, 1rem)", lineHeight: 1.8, color: "#0A1E21", fontWeight: 900 }}>
+                  <ul style={{ listStyle: "none", padding: 0, margin: 0, fontFamily: "var(--font-garamond)", fontSize: "clamp(1.1rem, 1.6vw, 1.35rem)", lineHeight: 1.6, color: "#0A1E21", fontWeight: 600 }}>
                     <li style={{ marginBottom: "0.4rem" }}>— Largometrajes documentales terminados</li>
                     <li style={{ marginBottom: "0.4rem" }}>— Cortometrajes documentales terminados</li>
                     <li style={{ marginBottom: "0.4rem" }}>— Ensayos cinematográficos de no ficción finalizados</li>
@@ -187,21 +187,22 @@ export default function LaBajaInspira() {
                   <h3 className="tracking-[-0.03em] leading-[.93] mb-6 text-[#0A1E21]" style={{ fontSize: "clamp(1.4rem, 3vw, 2.2rem)", fontWeight: 900 }}>
                     Fechas Clave
                   </h3>
-                  <div style={{ fontSize: "clamp(0.85rem, 1.2vw, 1rem)", lineHeight: 2, color: "#0A1E21", fontWeight: 900 }}>
+                  <div style={{ fontFamily: "var(--font-garamond)", fontSize: "clamp(1.1rem, 1.6vw, 1.35rem)", lineHeight: 1.8, color: "#0A1E21", fontWeight: 600 }}>
                     <p><strong>Apertura:</strong> 05 de mayo, 2026</p>
                     <p><strong>Cierre:</strong> 30 de junio, 2026</p>
-                    <p style={{ marginBottom: "1.5rem" }}><strong>Selección:</strong> 8 títulos que definen el pulso de la región</p>
+                    <p><strong>Selección:</strong> 8 títulos que definen el pulso de la región</p>
                   </div>
-                  <a
-                    href="https://festivaldecinedeloscabos.us15.list-manage.com/subscribe?u=24bf46409995ffe6e8ad030da&id=12e1ce1334"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="cta-button"
-                  >
-                    Sé el primero en recibir información
-                  </a>
                 </div>
               </div>
+              <a
+                href="https://festivaldecinedeloscabos.us15.list-manage.com/subscribe?u=24bf46409995ffe6e8ad030da&id=12e1ce1334"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta-button"
+                style={{ marginTop: "1.5rem", display: "inline-block" }}
+              >
+                Sé el primero en recibir información
+              </a>
             </div>
           </div>
         </div>

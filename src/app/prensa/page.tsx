@@ -71,7 +71,7 @@ export default function Prensa() {
       <section className="prensa-quotes-section">
         <div className="prensa-quotes-header">
           <p className="prensa-quotes-label">Prensa</p>
-          <h2 className="prensa-quotes-title" style={{ textTransform: "uppercase" }}>Lo que dicen de nosotros</h2>
+          <h2 className="prensa-quotes-title">Lo que dicen de nosotros</h2>
           <p className="prensa-quotes-subtitle">
             La prensa nacional e internacional reconoce al FICCLosCabos como uno de los festivales de cine más relevantes de Latinoamérica.
           </p>
