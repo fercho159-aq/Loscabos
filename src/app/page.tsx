@@ -256,7 +256,7 @@ export default function Home() {
       {/* ── ALIADOS ── */}
       <section id="aliados-section" data-anim="aliados-marquee" className="aliados-plaque">
         <span data-anim="aliados-tag" className="aliados-plaque-tag">Nuestros aliados y patrocinadores</span>
-        <p data-anim="aliados-quote" className="aliados-plaque-quote">
+        <p data-anim="aliados-quote" className="aliados-plaque-quote" style={{ fontSize: "clamp(1.2rem, 2vw, 1.6rem)", fontWeight: 700 }}>
           Juntos, proyectamos al Festival Internacional de Cine y Creatividad de Los Cabos a nivel internacional.
         </p>
         <div className="aliados-carousel">

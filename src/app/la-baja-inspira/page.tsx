@@ -299,8 +299,8 @@ export default function LaBajaInspira() {
       {/* Aliados */}
       <section className="aliados-plaque">
         <span className="aliados-plaque-tag">Nuestros aliados y patrocinadores</span>
-        <p className="aliados-plaque-quote">
-          Juntos, proyectamos al Festival Internacional de Cine y Creatividad de Los Cabos a nivel internacional.
+        <p className="aliados-plaque-quote" style={{ fontSize: "clamp(1.2rem, 2vw, 1.6rem)", fontWeight: 700 }}>
+          Gracias a nuestros patrocinadores y aliados, que hacen posible hacer de La Baja Inspira un motor de exhibición del cine documental.
         </p>
         <div className="aliados-carousel">
           <div className="aliados-track">

@@ -90,7 +90,7 @@ export default function FFGF() {
               </span>
             ))}
           </h2>
-          <p data-anim="ffgf-legado-desc" className="text-white/70 max-w-[600px] leading-[1.7]" style={{ fontSize: "clamp(0.9rem, 1.2vw, 1.05rem)" }}>
+          <p data-anim="ffgf-legado-desc" className="text-white/80 max-w-[820px] leading-[1.5]" style={{ fontSize: "clamp(1.3rem, 1.8vw, 1.75rem)", fontFamily: "var(--font-garamond)" }}>
             Conoce algunas de las obras y ganadores que han proyectado el cine mexicano hacia el mercado global con el respaldo de FICCLosCabos.
           </p>
         </div>
@@ -119,8 +119,8 @@ export default function FFGF() {
       {/* Aliados FFGF */}
       <section data-anim="ffgf-aliados" className="aliados-plaque">
         <span data-anim="ffgf-aliados-tag" className="aliados-plaque-tag">Nuestros aliados y patrocinadores</span>
-        <p data-anim="ffgf-aliados-quote" className="aliados-plaque-quote">
-          Aliados del Fondo Fílmico Gabriel Figueroa: la red de colaboradores que impulsa el cine mexicano hacia el escenario global.
+        <p data-anim="ffgf-aliados-quote" className="aliados-plaque-quote" style={{ fontSize: "clamp(1.2rem, 2vw, 1.6rem)", fontWeight: 700 }}>
+          Gracias a nuestros patrocinadores y aliados, que hacen posible hacer del Fondo Gabriel Figueroa un motor de formación y financiamiento del cine mexicano.
         </p>
         <div className="aliados-carousel">
           <div className="aliados-track">
