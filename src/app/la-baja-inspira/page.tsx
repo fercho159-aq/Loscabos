@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import TextureStrip from "@/components/TextureStrip";
-import LBIAnimations from "@/components/LBIAnimations";
+import LBIAnimations from "@/components/LBIAnimationsLazy";
 
 export const metadata: Metadata = {
   title: "La Baja Inspira | Plataforma de la Industria Cinematográfica",

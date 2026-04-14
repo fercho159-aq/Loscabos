@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import TextureStrip from "@/components/TextureStrip";
-import FFGFAnimations from "@/components/FFGFAnimations";
+import FFGFAnimations from "@/components/FFGFAnimationsLazy";
 
 export const metadata: Metadata = {
   title: "Fondo Fílmico Gabriel Figueroa | Financiamiento Cinematográfico",

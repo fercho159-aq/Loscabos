@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import GSAPAnimations from "@/components/GSAPAnimations";
+import GSAPAnimations from "@/components/GSAPAnimationsLazy";
 import TextureStrip from "@/components/TextureStrip";
 import ZoomLink from "@/components/ZoomLink";
 import Card3D from "@/components/Card3D";
@@ -43,6 +43,7 @@ const aliadosTrack = [...aliados, ...aliados];
 export default function Home() {
   return (
     <>
+      <link rel="preload" as="image" href="/images/FICCLosCabos_2026_Logo_Claro.svg" fetchPriority="high" />
       <Navbar />
 
       {/* ── HERO ── */}
