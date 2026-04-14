@@ -305,8 +305,7 @@ export default function LaBajaInspira() {
       <section className="aliados-plaque">
         <span className="aliados-plaque-tag">Nuestros aliados y patrocinadores</span>
         <p className="aliados-plaque-quote">
-          En 2026, FICCLosCabos se consolida como el hub creativo definitivo del destino a través de una red de más de 90 aliados locales e internacionales.<br />
-          Juntos, proyectamos a la región dentro del circuito global de las industrias creativas, transformando a Los Cabos en el epicentro de la conversación audiovisual en México.
+          Juntos, proyectamos al Festival Internacional de Cine y Creatividad de Los Cabos a nivel internacional.
         </p>
         <div className="aliados-carousel">
           <div className="aliados-track">

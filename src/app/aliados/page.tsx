@@ -30,10 +30,7 @@ export default function Aliados() {
         <div className="section-text-inner">
           <h2 className="section-heading">Nuestros Aliados y Partners de Destino</h2>
           <p>
-            En 2026, FICCLosCabos se consolida como el hub creativo definitivo del destino a trav&eacute;s de una red de m&aacute;s de 90 aliados locales e internacionales.
-          </p>
-          <p>
-            Juntos, proyectamos a la regi&oacute;n dentro del circuito global de las industrias creativas, transformando a Los Cabos en el epicentro de la conversaci&oacute;n audiovisual en M&eacute;xico.
+            Juntos, proyectamos al Festival Internacional de Cine y Creatividad de Los Cabos a nivel internacional.
           </p>
         </div>
         <div className="aliados-carousel">

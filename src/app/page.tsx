@@ -257,16 +257,14 @@ export default function Home() {
       <section id="aliados-section" data-anim="aliados-marquee" className="aliados-plaque">
         <span data-anim="aliados-tag" className="aliados-plaque-tag">Nuestros aliados y patrocinadores</span>
         <p data-anim="aliados-quote" className="aliados-plaque-quote">
-          En 2026, FICCLosCabos se consolida como el hub creativo definitivo del destino a través de una red de más de 90 aliados locales e internacionales.<br />
-          Juntos, proyectamos a la región dentro del circuito global de las industrias creativas, transformando a Los Cabos en el epicentro de la conversación audiovisual en México.
-
+          Juntos, proyectamos al Festival Internacional de Cine y Creatividad de Los Cabos a nivel internacional.
         </p>
         <div className="aliados-carousel">
           <div className="aliados-track">
             {aliadosTrack.map((a, i) => (
               <div key={`${a.name}-${i}`} className="aliado-slide">
-                <Image src={a.logo} alt={a.name} width={240} height={120}
-                  style={{ width: "auto", height: 120, objectFit: "contain" }} />
+                <Image src={a.logo} alt={a.name} width={320} height={170}
+                  style={{ width: "auto", height: 170, objectFit: "contain" }} />
               </div>
             ))}
           </div>

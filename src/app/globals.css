@@ -501,28 +501,32 @@ body {
   .aliados-plaque {
     background: #E0DBD0;
     padding: 5rem 8rem 0;
-    text-align: left;
+    text-align: center;
   }
 
   .aliados-plaque-tag {
     font-family: var(--font-garamond);
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: .03em;
+    font-size: clamp(2.4rem, 4vw, 3.4rem);
+    font-weight: 400;
+    letter-spacing: .02em;
     text-transform: none;
     color: var(--color-navy);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     display: block;
+    text-align: center;
   }
 
   .aliados-plaque-quote {
     font-family: var(--font-garamond);
-    font-size: clamp(1.1rem, 2.4vw, 2.2rem);
+    font-size: clamp(1.6rem, 3.2vw, 2.8rem);
     font-weight: 700;
     color: var(--color-navy);
-    max-width: 680px;
-    margin: 0 0 4rem;
-    line-height: 1;
+    max-width: 900px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 4rem;
+    line-height: 1.15;
+    text-align: center !important;
   }
 
   .aliados-plaque-title {
@@ -2472,14 +2476,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem;
-  height: 130px;
+  padding: 1rem .75rem;
+  height: 180px;
 }
 
 .aliado-slide img {
   opacity: 1;
   filter: none;
-  max-height: 130px;
+  max-height: 180px;
   width: auto;
   will-change: transform;
 }

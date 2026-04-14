@@ -126,8 +126,8 @@ export default function FFGF() {
           <div className="aliados-track">
             {aliadosFFGFTrack.map((a, i) => (
               <div key={`${a.name}-${i}`} className="aliado-slide">
-                <Image src={a.logo} alt={a.name} width={240} height={120}
-                  style={{ width: "auto", height: 120, objectFit: "contain" }} />
+                <Image src={a.logo} alt={a.name} width={320} height={170}
+                  style={{ width: "auto", height: 170, objectFit: "contain" }} />
               </div>
             ))}
           </div>
