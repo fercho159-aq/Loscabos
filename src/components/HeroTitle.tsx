@@ -44,7 +44,10 @@ export default function HeroTitle({ lines = ["El Festival"], subtitle }: Props) 
         </span>
       ))}
       {subtitle && (
-        <span className="block mt-4 text-cream/60 text-[clamp(1rem,3vw,1.5rem)] font-medium tracking-wide">
+        <span
+          className="block mt-4 text-cream/60 text-[clamp(1rem,3vw,1.5rem)] font-normal tracking-wide"
+          style={{ fontFamily: "'EB Garamond', 'Garamond', 'Georgia', serif" }}
+        >
           {subtitle}
         </span>
       )}

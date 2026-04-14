@@ -73,7 +73,7 @@ export default function LaBajaInspira() {
       <section id="lbi-desc-section" style={{ minHeight: "70vh", display: "flex", alignItems: "center", padding: "2rem", maxWidth: 1200, margin: "0 auto", marginBottom: "3rem" }}>
         <div className="lbi-desc-grid">
           <div data-anim="lbi-image" style={{ display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
-            <Image src="/images/lbi-logo.png" alt="La Baja Inspira" width={400} height={500} style={{ objectFit: "contain", width: "100%", maxWidth: 400, height: "auto" }} />
+            <Image src="/images/lbi-logo.png" alt="La Baja Inspira" width={280} height={350} style={{ objectFit: "contain", width: "100%", maxWidth: 280, height: "auto" }} />
           </div>
           <div>
             <h2 data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "2rem", color: "#081722", lineHeight: 1.1, marginBottom: "1.25rem", fontWeight: 700 }}>

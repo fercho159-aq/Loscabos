@@ -130,7 +130,7 @@ export default function ElFestivalProgramacion() {
 
           {/* Panel D — cuerpo de texto */}
           <div className="w-full md:w-1/2 h-auto md:h-full flex items-center py-6 px-5 md:py-8 md:pr-16 md:pl-4">
-            <div ref={textRef} className="text-cream font-medium text-[clamp(1rem,4vw,23px)] leading-snug tracking-normal w-full md:w-[600px] text-justify">
+            <div ref={textRef} className="text-cream font-normal text-[clamp(1rem,2.4vw,24px)] leading-snug tracking-normal w-full md:w-[680px] text-left">
               <p>
                 {"Nuestra curaduría descubre y posiciona las voces que definen el futuro del cine. Desde la Competencia Mexicana y su apuesta por el riesgo narrativo, hasta la consolidación de la Animación como un lenguaje cinematográfico mayor y Marejada, nuestra muestra Internacional  como nuestra vitrina de los grandes circuitos y festivales, el Festival dialoga permanentemente con el circuito de festivales internacional. #BeyondTheScreen es una plataforma de innovación cultural. Integramos cine, música y arte digital para responder a la transformación de las industrias creativas, proyectando desde Los Cabos nuevas formas de crear y experimentar el cine.".split(" ").map((word, i) => (
                   <span key={i} className="body-word">{word}{" "}</span>

@@ -130,7 +130,7 @@ export default function ElFestivalComunidad() {
 
           {/* Panel D — cuerpo de texto */}
           <div className="w-full md:w-1/2 h-auto md:h-full flex items-center py-6 px-5 md:py-8 md:pr-16 md:pl-4">
-            <div ref={textRef} className="text-cream font-medium text-[clamp(1rem,4vw,32px)] leading-snug tracking-normal w-full md:w-[600px] text-justify">
+            <div ref={textRef} className="text-cream font-normal text-[clamp(1rem,2.4vw,24px)] leading-snug tracking-normal w-full md:w-[520px] text-left">
               <p>
                 {"Creamos un ecosistema que trasciende el evento. Activamos una red global de creadores, medios y plataformas para construir un ecosistema que se expande y empodera proyectos los 365 días del año.".split(" ").map((word, i) => (
                   <span key={i} className="body-word">{word}{" "}</span>
