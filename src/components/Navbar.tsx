@@ -29,6 +29,9 @@ export default function Navbar() {
         <img
           src="/images/logo-nav.svg"
           alt="FICC Los Cabos — Festival Internacional de Cine y Creatividad"
+          width={152}
+          height={72}
+          decoding="async"
           style={{ height: 72, width: "auto" }}
         />
       </Link>

@@ -35,6 +35,10 @@ export default function Footer() {
         <img
           src="/images/logo-light.svg"
           alt="Festival Internacional de Cine y Creatividad de Los Cabos - 14a Edición"
+          width={280}
+          height={132}
+          loading="lazy"
+          decoding="async"
           style={{ width: 280, height: "auto", objectFit: "contain" }}
         />
       </div>

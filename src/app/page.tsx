@@ -60,6 +60,8 @@ export default function Home() {
                 src="/images/FICCLosCabos_2026_Logo_Claro.svg"
                 alt=""
                 aria-hidden="true"
+                width={720}
+                height={340}
                 fetchPriority="high"
                 decoding="async"
                 style={{ width: "100%", height: "auto", display: "block" }}
@@ -70,6 +72,9 @@ export default function Home() {
                 src="/images/logo-blue.svg"
                 alt=""
                 aria-hidden="true"
+                width={720}
+                height={340}
+                decoding="async"
                 style={{
                   width: "100%", height: "auto",
                   position: "absolute", top: 0, left: 0,
@@ -129,11 +134,12 @@ export default function Home() {
       <section id="cta-section" className="relative text-center bg-[#0A1E23]">
         {/* Photo block */}
         <div className="relative min-h-[320px] md:h-[560px] flex items-center justify-center px-5 py-12 md:px-16 md:py-[110px]">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/images/cta-cactus.jpg"
             alt="Paisaje de cactus de Los Cabos"
-            className="absolute inset-0 object-cover w-full h-full"
+            fill
+            sizes="100vw"
+            className="object-cover"
           />
           <div className="relative z-20 flex flex-row max-md:flex-col items-center max-md:items-start justify-between w-full max-w-[1100px] gap-8 md:gap-12 text-left">
             <p
@@ -183,15 +189,15 @@ export default function Home() {
         </div>
 
         <div>
-          <div
-            className="w-full flex max-md:flex-col items-end max-md:items-center justify-center gap-4 max-md:gap-6 min-h-[471px] max-md:min-h-0 max-md:py-10"
-            style={{
-              backgroundImage: "url('/images/water-bg.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-          >
+          <div className="relative w-full flex max-md:flex-col items-end max-md:items-center justify-center gap-4 max-md:gap-6 min-h-[471px] max-md:min-h-0 max-md:py-10">
+            <Image
+              src="/images/water-bg.jpg"
+              alt=""
+              aria-hidden="true"
+              fill
+              sizes="100vw"
+              className="object-cover -z-10"
+            />
             {/* La Baja Inspira — wrapper owns the desktop translateY */}
             <div className="impulso-card-outer">
               <div
