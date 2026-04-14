@@ -88,7 +88,7 @@ export default function LaBajaInspira() {
             <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#081722", lineHeight: 1.25, marginBottom: "1rem", fontWeight: 600 }}>
               Apertura de convocatoria: 19 de mayo de 2026
             </p>
-            <ul style={{ fontFamily: "var(--font-garamond)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, paddingLeft: 0, listStyle: "none" }}>
+            <ul style={{ fontFamily: "var(--font-garamond)", fontSize: "1.35rem", color: "#081722", lineHeight: 1.5, paddingLeft: 0, listStyle: "none" }}>
               <li data-anim="lbi-list-item" style={{ marginBottom: "1.2rem", display: "flex", gap: ".75rem", alignItems: "flex-start" }}>
                 <svg data-anim="lbi-svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BDC957" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 4 }}><path d="M7 20h10" /><path d="M10 20c5.5-2.5.8-6.4 3-10" /><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z" /><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z" /></svg>
                 <span data-anim="lbi-stagger-text" style={{ fontWeight: 500 }}><strong>Ciencias Naturales:</strong> Biología Golfo de California, ecología, cambio climático y biodiversidad del desierto.</span>
@@ -102,7 +102,7 @@ export default function LaBajaInspira() {
                 <span data-anim="lbi-stagger-text" style={{ fontWeight: 500 }}><strong>Desarrollo del Destino:</strong> Economía azul, pesca responsable y turismo sostenible.</span>
               </li>
             </ul>
-            <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.25rem", color: "#081722", lineHeight: 1.35, marginTop: "1.5rem", fontWeight: 400 }}>
+            <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#081722", lineHeight: 1.4, marginTop: "1.5rem", fontWeight: 400 }}>
               El rigor cinematográfico es nuestra base. Buscamos obras donde la calidad narrativa y la investigación profunda se encuentran para definir el futuro de la región.
             </p>
           </div>
@@ -144,15 +144,14 @@ export default function LaBajaInspira() {
             {/* Card izquierda — info convocatoria */}
             <div className="impulso-card-outer">
               <div
-                data-anim="lbi-conv-card"
                 className="relative overflow-hidden bg-[#EDE6DC]"
                 style={{
                   width: 587,
                   maxWidth: "90vw",
                   backgroundImage: "url('/images/el-festival/Group 113.svg')",
-                  backgroundSize: "100%",
+                  backgroundSize: "cover",
                   backgroundPosition: "center",
-                  backgroundRepeat: "repeat",
+                  backgroundRepeat: "no-repeat",
                 }}
               >
                 <div className="relative z-[2] p-6 pt-6 pb-8 px-8">
@@ -170,17 +169,16 @@ export default function LaBajaInspira() {
             </div>
 
             {/* Card derecha — fechas + CTA */}
-            <div className="impulso-card-outer">
+            <div className="impulso-card-outer" style={{ textAlign: "center" }}>
               <div
-                data-anim="lbi-conv-card"
                 className="relative overflow-hidden bg-[#EDE6DC]"
                 style={{
                   width: 587,
                   maxWidth: "90vw",
                   backgroundImage: "url('/images/el-festival/Group 115.svg')",
-                  backgroundSize: "100%",
+                  backgroundSize: "cover",
                   backgroundPosition: "center",
-                  backgroundRepeat: "repeat",
+                  backgroundRepeat: "no-repeat",
                 }}
               >
                 <div className="relative z-[2] p-6 pt-6 pb-8 px-8">
@@ -265,9 +263,6 @@ export default function LaBajaInspira() {
           />
         </div>
         <div className="relative z-10 shrink-0 flex flex-col justify-start pt-10 pr-5 pb-10 pl-5 md:pt-[7rem] md:pr-16 md:pb-[10rem] md:pl-[15rem]">
-          <span className="text-[13px] md:text-[14px] font-medium tracking-[.05em] leading-none text-white/40 mb-4 block">
-            Legado
-          </span>
           <h2 className="text-[42px] md:text-[58px] font-black text-white leading-[1.0] max-w-[520px] mb-6">
             {"Legado La Baja Inspira".split(" ").map((word, wi) => (
               <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.25em" }}>
@@ -277,7 +272,7 @@ export default function LaBajaInspira() {
               </span>
             ))}
           </h2>
-          <p className="text-white/70 max-w-[600px] leading-[1.7]" style={{ fontSize: "clamp(0.9rem, 1.2vw, 1.05rem)" }}>
+          <p className="text-white/80 max-w-[820px] leading-[1.5]" style={{ fontSize: "clamp(1.3rem, 1.8vw, 1.75rem)", fontFamily: "var(--font-garamond)" }}>
             Un registro de las obras y autores que, a través de nuestras convocatorias anteriores, han transformado la riqueza del Pacífico Sudcaliforniano en lenguaje cinematográfico con impacto global.
           </p>
         </div>
@@ -311,8 +306,8 @@ export default function LaBajaInspira() {
           <div className="aliados-track">
             {aliadosLBITrack.map((a, i) => (
               <div key={`${a.name}-${i}`} className="aliado-slide">
-                <Image src={a.logo} alt={a.name} width={240} height={120}
-                  style={{ width: "auto", height: 120, objectFit: "contain" }} />
+                <Image src={a.logo} alt={a.name} width={320} height={170}
+                  style={{ width: "auto", height: 170, objectFit: "contain" }} />
               </div>
             ))}
           </div>

@@ -288,13 +288,13 @@ body {
   .cta-button {
     display: inline-block;
     position: relative;
-    padding: 1rem 2.4rem;
+    padding: 1.1rem 2.6rem;
     background: transparent;
     border: none;
     color: #ffffff;
     font-family: var(--font-garamond);
     font-weight: 600;
-    font-size: .82rem;
+    font-size: .95rem;
     letter-spacing: .12em;
     text-transform: uppercase;
     text-decoration: none;
@@ -582,7 +582,7 @@ body {
   }
 
   .footer-menu a {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .85rem;
     color: rgba(246, 237, 219, .8);
     text-decoration: none;
@@ -652,7 +652,7 @@ body {
   }
 
   .footer-col h4 {
-    font-family: var(--font-garamond) !important;
+    font-family: var(--font-inter) !important;
     font-size: .8rem !important;
     font-weight: 700 !important;
     letter-spacing: .12em !important;
@@ -674,7 +674,7 @@ body {
   }
 
   .footer-col a {
-    font-family: 'EB Garamond', 'Garamond', 'Georgia', serif !important;
+    font-family: var(--font-inter) !important;
     font-size: .95rem !important;
     color: rgba(246, 237, 219, .8) !important;
     text-decoration: none !important;
@@ -694,7 +694,7 @@ body {
   }
 
   .footer-edition {
-    font-family: var(--font-garamond) !important;
+    font-family: var(--font-inter) !important;
     font-size: 1.1rem !important;
     font-style: italic !important;
     color: #F6EDDB !important;
@@ -711,7 +711,7 @@ body {
   }
 
   .footer-privacy {
-    font-family: var(--font-garamond) !important;
+    font-family: var(--font-inter) !important;
     font-size: .8rem !important;
     color: rgba(246, 237, 219, .8) !important;
     text-decoration: underline !important;
@@ -723,7 +723,7 @@ body {
   }
 
   .footer-copy {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .72rem;
     color: rgba(246, 237, 219, .6);
     letter-spacing: .06em;

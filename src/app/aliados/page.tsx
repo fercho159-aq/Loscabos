@@ -40,9 +40,9 @@ export default function Aliados() {
                 <Image
                   src={a.logo}
                   alt={a.name}
-                  width={240}
-                  height={120}
-                  style={{ width: "auto", height: 120, objectFit: "contain" }}
+                  width={320}
+                  height={170}
+                  style={{ width: "auto", height: 170, objectFit: "contain" }}
                 />
               </div>
             ))}
