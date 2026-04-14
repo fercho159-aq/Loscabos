@@ -51,7 +51,7 @@ export default function Home() {
           {/* Brand lockup — logo image only */}
           <div className="flex justify-center mb-[1.2rem]">
             {/* Two-layer logo: cream base + teal overlay (painted on scroll) */}
-            <div id="hero-logo-wrap" style={{ position: "relative", width: 511, maxWidth: "90vw" }}>
+            <div id="hero-logo-wrap" style={{ position: "relative", width: 720, maxWidth: "92vw" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 id="hero-logo"
@@ -74,6 +74,15 @@ export default function Home() {
               />
             </div>
           </div>
+
+          {/* Fecha del festival */}
+          <p
+            data-anim="hero-date"
+            className="text-center m-0 mb-6 text-[#EDE6DC]"
+            style={{ fontFamily: "var(--font-garamond)", fontSize: "clamp(1.4rem, 2.4vw, 2.1rem)", letterSpacing: ".04em", fontWeight: 500 }}
+          >
+            9 — 13 de Diciembre 2026
+          </p>
 
           {/* #BeyondTheScreen strip — centered, matching logo width */}
           <div
