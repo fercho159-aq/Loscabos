@@ -62,7 +62,7 @@ export default function Prensa() {
 
       <section className="section-text">
         <div className="section-text-inner">
-          <a href="https://docs.google.com/presentation/d/1qnT4VA-xC-m5qbDqfqvglFofSO7rpNDPWIlTkg68O2o/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="cta-button" style={{ background: "#006666" }}>
+          <a href="https://docs.google.com/presentation/d/1qnT4VA-xC-m5qbDqfqvglFofSO7rpNDPWIlTkg68O2o/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="cta-button">
             Descarga el Deck
           </a>
         </div>

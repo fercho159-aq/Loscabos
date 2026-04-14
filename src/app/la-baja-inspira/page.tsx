@@ -76,11 +76,17 @@ export default function LaBajaInspira() {
             <Image src="/images/lbi-logo.png" alt="La Baja Inspira" width={400} height={500} style={{ objectFit: "contain", width: "100%", maxWidth: 400, height: "auto" }} />
           </div>
           <div>
-            <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#081722", lineHeight: 1, marginBottom: "1rem", fontWeight: 500 }}>
-              La Baja Inspira es la plataforma del Festival Internacional de Cine de Los Cabos diseñada para impulsar el cine de no ficción que explora la biodiversidad, la memoria y el desarrollo de la región. Posicionamos al destino como un referente global, vinculando la potencia del lenguaje cinematográfico con la investigación científica y la conciencia pública.
+            <h2 data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "2rem", color: "#081722", lineHeight: 1.1, marginBottom: "1.25rem", fontWeight: 700 }}>
+              La Baja Inspira
+            </h2>
+            <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#081722", lineHeight: 1.25, marginBottom: "1rem", fontWeight: 500 }}>
+              La Baja Inspira es un espacio estratégico de exhibición, proyección e incidencia cultural que articula el lenguaje cinematográfico con la investigación científica, las ciencias sociales y los estudios sobre desarrollo territorial.
             </p>
-            <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#081722", lineHeight: 1, marginBottom: "1rem", fontWeight: 500 }}>
-              Los proyectos seleccionados deberán articular el lenguaje cinematográfico con al menos una de las siguientes áreas de conocimiento:
+            <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#081722", lineHeight: 1.25, marginBottom: "1rem", fontWeight: 500 }}>
+              Su propósito es posicionar a la región como un referente internacional en documental ambiental y territorial, integrando industria audiovisual, conocimiento y conservación con una visión de futuro sostenible.
+            </p>
+            <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#081722", lineHeight: 1.25, marginBottom: "1rem", fontWeight: 600 }}>
+              Apertura de convocatoria: 19 de mayo de 2026
             </p>
             <ul style={{ fontFamily: "var(--font-garamond)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, paddingLeft: 0, listStyle: "none" }}>
               <li data-anim="lbi-list-item" style={{ marginBottom: "1.2rem", display: "flex", gap: ".75rem", alignItems: "flex-start" }}>

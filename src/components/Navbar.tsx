@@ -29,7 +29,7 @@ export default function Navbar() {
         <img
           src="/images/logo-nav.svg"
           alt="FICC Los Cabos"
-          style={{ height: 50, width: "auto" }}
+          style={{ height: 72, width: "auto" }}
         />
       </Link>
 

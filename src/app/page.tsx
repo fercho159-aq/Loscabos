@@ -75,14 +75,14 @@ export default function Home() {
             </div>
           </div>
 
-          {/* #BEYONDTHESCREEN strip — centered, matching logo width */}
+          {/* #BeyondTheScreen strip — centered, matching logo width */}
           <div
             className="flex items-center justify-between mt-8 md:mt-12 gap-6 md:gap-8"
             style={{ width: 511, maxWidth: "90vw" }}
           >
             <div className="flex flex-col gap-[.55rem] text-left">
-              <p data-anim="hero-hashtag" className="text-[1.25rem] font-black tracking-[.14em] uppercase text-[#A3CDD8] m-0" style={{ overflow: "hidden", fontFamily: "var(--font-inter)" }}>
-                {"#BEYONDTHESCREEN".split("").map((char, i) => (
+              <p data-anim="hero-hashtag" className="text-[1.25rem] font-black tracking-[.14em] text-[#A3CDD8] m-0" style={{ overflow: "hidden", fontFamily: "var(--font-inter)" }}>
+                {"#BeyondTheScreen".split("").map((char, i) => (
                   <span key={i} data-anim="hero-hashtag-char" style={{ display: "inline-block" }}>{char}</span>
                 ))}
               </p>

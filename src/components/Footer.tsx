@@ -39,39 +39,14 @@ export default function Footer() {
         />
       </div>
 
-      {/* 4-column nav */}
+      {/* Menu links */}
       <div className="footer-columns">
         <div className="footer-col">
-          <h4>Festival</h4>
           <ul>
             <li><a href="/el-festival">El Festival</a></li>
-            <li><a href="/programacion">Programaci&oacute;n</a></li>
-            <li><a href="/prensa">Prensa</a></li>
-          </ul>
-        </div>
-
-        <div className="footer-col">
-          <h4>Plataformas de Impulso</h4>
-          <ul>
             <li><a href="/la-baja-inspira">La Baja Inspira</a></li>
             <li><a href="/ffgf">Fondo F&iacute;lmico Gabriel Figueroa</a></li>
-            <li><a href="/fon">Frequencies of Now</a></li>
-          </ul>
-        </div>
-
-        <div className="footer-col">
-          <h4>Programaci&oacute;n 2026</h4>
-          <ul>
             <li><a href="/programacion">Programaci&oacute;n</a></li>
-            <li><a href="https://festivaldecinedeloscabos.us15.list-manage.com/subscribe?u=24bf46409995ffe6e8ad030da&id=12e1ce1334" target="_blank" rel="noopener noreferrer">Preventa de Boletos</a></li>
-            <li><a href="/convocatorias">Convocatorias</a></li>
-          </ul>
-        </div>
-
-        <div className="footer-col">
-          <h4>Ecosistema FICC</h4>
-          <ul>
-            <li><a href="/aliados">Aliados y Patrocinadores</a></li>
             <li><a href="/prensa">Prensa</a></li>
             <li><a href="https://festivaldecinedeloscabos.us15.list-manage.com/subscribe?u=24bf46409995ffe6e8ad030da&id=12e1ce1334" target="_blank" rel="noopener noreferrer">&Uacute;nete a la comunidad</a></li>
           </ul>
