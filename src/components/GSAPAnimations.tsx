@@ -1,10 +1,11 @@
 "use client";
 
-import { useLayoutEffect, useEffect } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.config({ ignoreMobileResize: true });
 
 export default function GSAPAnimations() {
   // ── Cursor follower ──────────────────────────────────────────────────────
@@ -46,8 +47,14 @@ export default function GSAPAnimations() {
   }, []);
 
   // ── GSAP scroll + mount animations ──────────────────────────────────────
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
+  useEffect(() => {
+    let ctx: gsap.Context | null = null;
+    const w = window as unknown as { requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number; cancelIdleCallback?: (h: number) => void };
+    const handle: number = w.requestIdleCallback
+      ? w.requestIdleCallback(() => run(), { timeout: 500 })
+      : (setTimeout(() => run(), 1) as unknown as number);
+    function run() {
+    ctx = gsap.context(() => {
 
       // ── NAVBAR ──
       gsap.from(".site-nav", {
@@ -604,8 +611,13 @@ export default function GSAPAnimations() {
       }
 
     });
+    }
 
-    return () => ctx.kill();
+    return () => {
+      if (w.cancelIdleCallback) w.cancelIdleCallback(handle);
+      else clearTimeout(handle);
+      ctx?.kill();
+    };
   }, []);
 
   return null;
