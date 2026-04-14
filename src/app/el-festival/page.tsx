@@ -1,6 +1,20 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "El Festival | Historia y Misión",
+  description:
+    "Conoce la historia, misión y visión del Festival Internacional de Cine y Creatividad de Los Cabos. 14 años impulsando el cine iberoamericano.",
+  alternates: { canonical: "/el-festival" },
+  openGraph: {
+    title: "El Festival | Historia y Misión",
+    description:
+      "Conoce la historia, misión y visión del Festival Internacional de Cine y Creatividad de Los Cabos. 14 años impulsando el cine iberoamericano.",
+    url: "/el-festival",
+  },
+};
 
 const aliados = [
   { name: "Los Cabos",                                  logo: "/images/aliados/FICC_Logos_Aliados_2026-01.png" },
@@ -79,9 +93,11 @@ export default function ElFestival() {
               <div key={`${a.name}-${i}`} className="aliado-slide">
                 <Image
                   src={a.logo}
-                  alt={a.name}
+                  alt={`Logo de ${a.name}, aliado del FICC Los Cabos`}
                   width={320}
                   height={170}
+                  sizes="320px"
+                  loading="lazy"
                   style={{ width: "auto", height: 170, objectFit: "contain" }}
                 />
               </div>

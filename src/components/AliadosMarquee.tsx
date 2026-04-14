@@ -71,7 +71,7 @@ export default function AliadosMarquee({ logos }: AliadosMarqueeProps) {
           >
             <Image
               src={a.logo}
-              alt={a.name}
+              alt={`Logo de ${a.name}, aliado del FICC Los Cabos`}
               width={240}
               height={80}
               style={{ height: 80, width: 'auto', objectFit: 'contain' }}

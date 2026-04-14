@@ -49,14 +49,16 @@ export default function Home() {
       <section id="hero-section" className="relative flex flex-col bg-[#0A1E23] overflow-x-clip min-h-screen">
         <div className="relative z-[1] px-6 pt-[5rem] pb-[5rem] md:px-8 md:pt-[8rem] md:pb-[9rem] flex flex-col items-center flex-1 justify-center gap-0">
           {/* Brand lockup — logo image only */}
-          <div className="flex justify-center mb-[1.2rem]">
+          <h1 className="flex justify-center mb-[1.2rem] m-0" style={{ fontSize: 0, lineHeight: 0 }}>
+            <span className="sr-only" style={{ position: "absolute", width: 1, height: 1, padding: 0, margin: -1, overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap", border: 0 }}>Festival Internacional de Cine y Creatividad Los Cabos 2026</span>
             {/* Two-layer logo: cream base + teal overlay (painted on scroll) */}
-            <div id="hero-logo-wrap" style={{ position: "relative", width: 720, maxWidth: "92vw" }}>
+            <span id="hero-logo-wrap" style={{ position: "relative", width: 720, maxWidth: "92vw", display: "block" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 id="hero-logo"
                 src="/images/FICCLosCabos_2026_Logo_Claro.svg"
-                alt="Festival Internacional de Cine y Creatividad Los Cabos"
+                alt=""
+                aria-hidden="true"
                 style={{ width: "100%", height: "auto", display: "block" }}
               />
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -72,8 +74,8 @@ export default function Home() {
                   pointerEvents: "none",
                 }}
               />
-            </div>
-          </div>
+            </span>
+          </h1>
 
           {/* Fecha del festival */}
           <p
@@ -263,7 +265,7 @@ export default function Home() {
           <div className="aliados-track">
             {aliadosTrack.map((a, i) => (
               <div key={`${a.name}-${i}`} className="aliado-slide">
-                <Image src={a.logo} alt={a.name} width={320} height={170}
+                <Image src={a.logo} alt={`Logo de ${a.name}, aliado del FICC Los Cabos`} width={320} height={170} sizes="320px" loading="lazy"
                   style={{ width: "auto", height: 170, objectFit: "contain" }} />
               </div>
             ))}

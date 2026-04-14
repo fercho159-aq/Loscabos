@@ -18,7 +18,7 @@ const convocatorias = [
     href: "/convocatorias/la-baja-inspira",
     cta: "Inscríbete ahora",
     bg: "bg-lime",
-    image: "/images/webpdf/img-025.png",
+    image: "/images/webpdf/img-025.jpg",
     accent: "#BDC957",
   },
   {
@@ -30,7 +30,7 @@ const convocatorias = [
     href: "/convocatorias/abiertas",
     cta: "Postula tu proyecto",
     bg: "bg-lavender",
-    image: "/images/webpdf/img-055.png",
+    image: "/images/webpdf/img-055.jpg",
     accent: "#6687C3",
   },
   {
@@ -42,7 +42,7 @@ const convocatorias = [
     href: "/convocatorias/abiertas",
     cta: "Envía tu propuesta",
     bg: "bg-peach",
-    image: "/images/webpdf/img-040.png",
+    image: "/images/webpdf/img-040.jpg",
     accent: "#C47A3D",
   },
 ];
@@ -67,8 +67,9 @@ export default function Convocatorias() {
             <div className={`conv-timeline-img gsap-clip-reveal`}>
               <Image
                 src={c.image}
-                alt={c.title}
+                alt={`${c.title} — convocatoria FICC Los Cabos`}
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 style={{ objectFit: "cover" }}
               />
             </div>

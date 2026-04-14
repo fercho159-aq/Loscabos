@@ -1,9 +1,23 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import TextureStrip from "@/components/TextureStrip";
 import FFGFAnimations from "@/components/FFGFAnimations";
+
+export const metadata: Metadata = {
+  title: "Fondo Fílmico Gabriel Figueroa | Financiamiento Cinematográfico",
+  description:
+    "El Fondo Fílmico Gabriel Figueroa apoya proyectos cinematográficos de la región de Baja California Sur. Financia tu próxima película en México.",
+  alternates: { canonical: "/ffgf" },
+  openGraph: {
+    title: "Fondo Fílmico Gabriel Figueroa | Financiamiento Cinematográfico",
+    description:
+      "El Fondo Fílmico Gabriel Figueroa apoya proyectos cinematográficos de la región de Baja California Sur. Financia tu próxima película en México.",
+    url: "/ffgf",
+  },
+};
 
 const aliadosFFGF = [
   { name: "Aliado FFGF 1", logo: "/images/aliados-ffgf/aliado-ffgf-13.png" },
@@ -16,13 +30,13 @@ const aliadosFFGF = [
 const aliadosFFGFTrack = [...aliadosFFGF, ...aliadosFFGF];
 
 const perfiles = [
-  { title: "Africa Express (2025)", director: "Emilio Guerrero", desc: "El registro de la colisión entre Damon Albarn (Blur/Gorillaz) y México. Un puente entre el britpop y los ritmos africanos en suelo azteca.", tag: "Selección Oficial", still: "/images/stills/africa-express.png" },
-  { title: "El sinaloense (2025)", director: "Luis Kles", desc: "Más allá del folclore, una exploración de la identidad y el mito. Una búsqueda por desmitificar el estigma para encontrar la esencia del norte.", tag: "Selección Oficial", still: "/images/stills/el-sinaloense.png" },
-  { title: "Casa de guerreras (2025)", director: "Alejandro Paredes", desc: "Un retrato de resiliencia femenina. Se aleja del drama convencional para enfocarse en la fuerza colectiva y el legado de lucha.", tag: "Selección Oficial", still: "/images/stills/casa-de-guerreras.png" },
-  { title: "Al interior del fuego (2025)", director: "TaGolfo de California a Acuña", desc: "Cine de sensaciones. La dualidad entre destrucción y creación, usando el fuego como metáfora visual de la transformación personal.", tag: "Selección Oficial", still: "/images/stills/al-interior-del-fuego.png" },
-  { title: "Un lugar para volver (2025)", director: "Amanda Pérez Contreras", desc: "Una búsqueda sobre el desarraigo y el paisaje irreconocible al volver a casa. Un tema universal tratado con una estética muy personal.", tag: "Selección Oficial", still: "/images/stills/un-lugar-para-volver.png" },
+  { title: "Africa Express (2025)", director: "Emilio Guerrero", desc: "El registro de la colisión entre Damon Albarn (Blur/Gorillaz) y México. Un puente entre el britpop y los ritmos africanos en suelo azteca.", tag: "Selección Oficial", still: "/images/stills/africa-express.jpg" },
+  { title: "El sinaloense (2025)", director: "Luis Kles", desc: "Más allá del folclore, una exploración de la identidad y el mito. Una búsqueda por desmitificar el estigma para encontrar la esencia del norte.", tag: "Selección Oficial", still: "/images/stills/el-sinaloense.jpg" },
+  { title: "Casa de guerreras (2025)", director: "Alejandro Paredes", desc: "Un retrato de resiliencia femenina. Se aleja del drama convencional para enfocarse en la fuerza colectiva y el legado de lucha.", tag: "Selección Oficial", still: "/images/stills/casa-de-guerreras.jpg" },
+  { title: "Al interior del fuego (2025)", director: "TaGolfo de California a Acuña", desc: "Cine de sensaciones. La dualidad entre destrucción y creación, usando el fuego como metáfora visual de la transformación personal.", tag: "Selección Oficial", still: "/images/stills/al-interior-del-fuego.jpg" },
+  { title: "Un lugar para volver (2025)", director: "Amanda Pérez Contreras", desc: "Una búsqueda sobre el desarraigo y el paisaje irreconocible al volver a casa. Un tema universal tratado con una estética muy personal.", tag: "Selección Oficial", still: "/images/stills/un-lugar-para-volver.jpg" },
   { title: "La Camarista (2017)", director: "Lila Avilés", desc: "Ganadora del Fondo Fílmico Gabriel Figueroa. Representante de México en los Premios Oscar y Premios Goya.", tag: "Ganadora FFGF", still: "/images/stills/la-camarista.jpg" },
-  { title: "Tempestad (2015)", director: "Tatiana Huezo", desc: "Impulsada en etapa de Work in Progress. Mención Especial en la Berlinale y ganadora de 3 Premios Ariel.", tag: "Ganadora FFGF", still: "/images/stills/tempestad.png" },
+  { title: "Tempestad (2015)", director: "Tatiana Huezo", desc: "Impulsada en etapa de Work in Progress. Mención Especial en la Berlinale y ganadora de 3 Premios Ariel.", tag: "Ganadora FFGF", still: "/images/stills/tempestad.jpg" },
 ];
 
 export default function FFGF() {
@@ -37,7 +51,7 @@ export default function FFGF() {
       <section id="ffgf-desc-section" style={{ minHeight: "70vh", display: "flex", alignItems: "center", padding: "2rem", maxWidth: 1200, margin: "0 auto", marginBottom: "3rem" }}>
         <div className="lbi-desc-grid">
           <div data-anim="ffgf-image" style={{ display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
-            <Image src="/images/ffgf-logo.png" alt="Fondo Fílmico Gabriel Figueroa" width={500} height={400} style={{ objectFit: "contain", width: "100%", maxWidth: 500, height: "auto" }} />
+            <Image src="/images/ffgf-logo.png" alt="Logo del Fondo Fílmico Gabriel Figueroa — FICC Los Cabos" width={500} height={400} priority sizes="(max-width: 768px) 90vw, 500px" style={{ objectFit: "contain", width: "100%", maxWidth: 500, height: "auto" }} />
           </div>
           <div>
             <p data-anim="ffgf-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#000", lineHeight: 1.3, marginBottom: "1rem", fontWeight: 400 }}>
@@ -72,6 +86,7 @@ export default function FFGF() {
             src="/images/plataformas-impulso/ffgf-bg.jpg"
             alt="Cine mexicano"
             fill
+            sizes="100vw"
             style={{ objectFit: "cover" }}
           />
           <div className="absolute inset-0" style={{ background: "rgba(0, 0, 0, .5)" }} />
@@ -101,7 +116,7 @@ export default function FFGF() {
               <div key={p.title} data-anim="ffgf-legado-card" className="flip-card ffgf-flip">
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
-                    <Image src={p.still} alt={p.title} fill style={{ objectFit: "cover" }} />
+                    <Image src={p.still} alt={`Still de ${p.title} — Fondo Fílmico Gabriel Figueroa, FICC Los Cabos`} fill sizes="(max-width: 768px) 50vw, 300px" style={{ objectFit: "cover" }} />
                   </div>
                   <div className="flip-card-back">
                     <span className="ffgf-film-tag">{p.tag}</span>
@@ -125,7 +140,7 @@ export default function FFGF() {
           <div className="aliados-track">
             {aliadosFFGFTrack.map((a, i) => (
               <div key={`${a.name}-${i}`} className="aliado-slide">
-                <Image src={a.logo} alt={a.name} width={320} height={170}
+                <Image src={a.logo} alt={`Logo de ${a.name}, aliado del FICC Los Cabos`} width={320} height={170} sizes="320px" loading="lazy"
                   style={{ width: "auto", height: 170, objectFit: "contain" }} />
               </div>
             ))}

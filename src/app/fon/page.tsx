@@ -31,8 +31,9 @@ export default function FON() {
           <div style={{ position: "relative", width: "100%", minHeight: 400, borderRadius: 12, overflow: "hidden" }}>
             <Image
               src="/images/fon-mixer.jpg"
-              alt="Consola de audio"
+              alt="Consola de audio del programa Frequencies of Now — FICC Los Cabos"
               fill
+              sizes="(max-width: 768px) 100vw, 600px"
               style={{ objectFit: "cover" }}
             />
           </div>

@@ -16,7 +16,7 @@ const plataformas = [
     href: "/plataformas-de-impulso/la-baja-inspira",
     bg: "bg-lime",
     cta: "Inscríbete",
-    image: "/images/webpdf/img-025.png",
+    image: "/images/webpdf/img-025.jpg",
     accent: "#BDC957",
   },
   {
@@ -26,7 +26,7 @@ const plataformas = [
     href: "/plataformas-de-impulso/fondo-filmico-gabriel-figueroa",
     bg: "bg-lavender",
     cta: "Inscríbete",
-    image: "/images/webpdf/img-010.png",
+    image: "/images/webpdf/img-010.jpg",
     accent: "#6687C3",
   },
   {
@@ -36,7 +36,7 @@ const plataformas = [
     href: "/plataformas-de-impulso/frequencies-of-now",
     bg: "bg-peach",
     cta: "Inscríbete",
-    image: "/images/webpdf/img-040.png",
+    image: "/images/webpdf/img-040.jpg",
     accent: "#C47A3D",
   },
   {
@@ -47,7 +47,7 @@ const plataformas = [
     href: "/plataformas-de-impulso/semillas-del-desierto",
     bg: "bg-blush",
     cta: "Conoce más",
-    image: "/images/webpdf/img-005.png",
+    image: "/images/webpdf/img-005.jpg",
     accent: "#E9B0BD",
   },
   {
@@ -57,7 +57,7 @@ const plataformas = [
     href: "/plataformas-de-impulso/miradas-al-sur",
     bg: "bg-lavender",
     cta: "Conoce más",
-    image: "/images/webpdf/img-089.png",
+    image: "/images/webpdf/img-089.jpg",
     accent: "#6687C3",
   },
 ];
@@ -97,8 +97,9 @@ export default function PlataformasDeImpulso() {
             <div className="plat-fullbleed-img">
               <Image
                 src={p.image}
-                alt={p.title}
+                alt={`${p.title} — plataforma de impulso FICC Los Cabos`}
                 fill
+                sizes="100vw"
                 style={{ objectFit: "cover" }}
                 className="gsap-parallax"
                 data-speed="0.5"

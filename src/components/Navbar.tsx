@@ -23,12 +23,12 @@ export default function Navbar() {
   const [mobileDropdown, setMobileDropdown] = useState(false);
 
   return (
-    <nav className="site-nav">
+    <nav className="site-nav" aria-label="Navegación principal">
       <Link href="/" className="nav-logo">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/logo-nav.svg"
-          alt="FICC Los Cabos"
+          alt="FICC Los Cabos — Festival Internacional de Cine y Creatividad"
           style={{ height: 72, width: "auto" }}
         />
       </Link>
@@ -67,7 +67,8 @@ export default function Navbar() {
       <button
         className="lg:hidden flex flex-col gap-1.5 p-2"
         onClick={() => setMobileOpen(!mobileOpen)}
-        aria-label="Toggle menu"
+        aria-label="Abrir menú de navegación"
+        aria-expanded={mobileOpen}
         style={{ background: "none", border: "none", cursor: "pointer" }}
       >
         <span

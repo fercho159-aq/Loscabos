@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -5,11 +6,24 @@ import PageHero from "@/components/PageHero";
 import TextureStrip from "@/components/TextureStrip";
 import LBIAnimations from "@/components/LBIAnimations";
 
+export const metadata: Metadata = {
+  title: "La Baja Inspira | Plataforma de la Industria Cinematográfica",
+  description:
+    "La Baja Inspira es la plataforma de impulso a la industria del cine del FICC Los Cabos. Talleres, pitching, coproducción y desarrollo de proyectos.",
+  alternates: { canonical: "/la-baja-inspira" },
+  openGraph: {
+    title: "La Baja Inspira | Plataforma de la Industria Cinematográfica",
+    description:
+      "La Baja Inspira es la plataforma de impulso a la industria del cine del FICC Los Cabos. Talleres, pitching, coproducción y desarrollo de proyectos.",
+    url: "/la-baja-inspira",
+  },
+};
+
 const comite = [
   {
     name: "ESCINE",
     desc: "Una de las instituciones acad\u00e9micas m\u00e1s importantes de M\u00e9xico dedicada a la profesionalizaci\u00f3n cinematogr\u00e1fica.",
-    img: "/images/comite/escine.png",
+    img: "/images/comite/escine.jpg",
   },
   {
     name: "Juan Patricio Riveroll",
@@ -24,7 +38,7 @@ const comite = [
   {
     name: "Iv\u00e1n Carrillo",
     desc: "Periodista, conductor y productor independiente especializado en ciencia, salud y medio ambiente.",
-    img: "/images/comite/ivan-carrillo.png",
+    img: "/images/comite/ivan-carrillo.jpg",
   },
 ];
 
@@ -63,8 +77,9 @@ export default function LaBajaInspira() {
       <section className="relative w-full" style={{ height: "30vh", minHeight: 200 }}>
         <Image
           src="/images/water-bg.jpg"
-          alt="Agua cristalina de Los Cabos"
+          alt="Agua cristalina del Mar de Cortés en Los Cabos — FICC Los Cabos"
           fill
+          sizes="100vw"
           style={{ objectFit: "cover" }}
         />
       </section>
@@ -73,7 +88,7 @@ export default function LaBajaInspira() {
       <section id="lbi-desc-section" style={{ minHeight: "70vh", display: "flex", alignItems: "center", padding: "2rem", maxWidth: 1200, margin: "0 auto", marginBottom: "3rem" }}>
         <div className="lbi-desc-grid">
           <div data-anim="lbi-image" style={{ display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
-            <Image src="/images/lbi-logo.png" alt="La Baja Inspira" width={280} height={350} style={{ objectFit: "contain", width: "100%", maxWidth: 280, height: "auto" }} />
+            <Image src="/images/lbi-logo.png" alt="Logo de La Baja Inspira — programa de exhibición de cine documental, FICC Los Cabos" width={280} height={350} style={{ objectFit: "contain", width: "100%", maxWidth: 280, height: "auto" }} />
           </div>
           <div>
             <h2 data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "2rem", color: "#081722", lineHeight: 1.1, marginBottom: "1.25rem", fontWeight: 700 }}>
@@ -226,7 +241,7 @@ export default function LaBajaInspira() {
             {comite.map((p) => (
               <div key={p.name} data-anim="lbi-comite-card" className="profile-card">
                 <div className="profile-avatar" style={{ position: "relative", overflow: "hidden" }}>
-                  <Image src={p.img} alt={p.name} fill style={{ objectFit: "cover" }} />
+                  <Image src={p.img} alt={`${p.name}, miembro del comité de selección — La Baja Inspira FICC Los Cabos`} fill sizes="(max-width: 768px) 50vw, 220px" style={{ objectFit: "cover" }} />
                 </div>
                 <h4>{p.name}</h4>
                 <p>{p.desc}</p>
@@ -240,7 +255,7 @@ export default function LaBajaInspira() {
             {[...comite, ...comite].map((p, i) => (
               <div key={`${p.name}-${i}`} className="comite-slide">
                 <div className="profile-avatar" style={{ position: "relative", overflow: "hidden" }}>
-                  <Image src={p.img} alt={p.name} fill style={{ objectFit: "cover" }} />
+                  <Image src={p.img} alt={`${p.name}, miembro del comité de selección — La Baja Inspira FICC Los Cabos`} fill sizes="(max-width: 768px) 60vw, 220px" style={{ objectFit: "cover" }} />
                 </div>
                 <h4>{p.name}</h4>
                 <p>{p.desc}</p>
@@ -257,8 +272,9 @@ export default function LaBajaInspira() {
         <div className="absolute bottom-0 left-0 right-0 h-1/3 -z-0">
           <Image
             src="/images/lbi-hero-whale.jpg"
-            alt="Ballena en Los Cabos"
+            alt="Ballena en el Mar de Cortés — Legado La Baja Inspira, FICC Los Cabos"
             fill
+            sizes="100vw"
             style={{ objectFit: "cover" }}
           />
         </div>
@@ -282,7 +298,7 @@ export default function LaBajaInspira() {
               <div key={p.title} data-anim="lbi-legado-card" className="flip-card">
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
-                    <Image src={p.poster} alt={p.title} fill style={{ objectFit: "cover" }} />
+                    <Image src={p.poster} alt={`Poster de ${p.title} — Legado La Baja Inspira FICC Los Cabos`} fill sizes="(max-width: 768px) 50vw, 300px" style={{ objectFit: "cover" }} />
                   </div>
                   <div className="flip-card-back">
                     <h4>{p.title}</h4>
@@ -305,7 +321,7 @@ export default function LaBajaInspira() {
           <div className="aliados-track">
             {aliadosLBITrack.map((a, i) => (
               <div key={`${a.name}-${i}`} className="aliado-slide">
-                <Image src={a.logo} alt={a.name} width={320} height={170}
+                <Image src={a.logo} alt={`Logo de ${a.name}, aliado del FICC Los Cabos`} width={320} height={170} sizes="320px" loading="lazy"
                   style={{ width: "auto", height: 170, objectFit: "contain" }} />
               </div>
             ))}

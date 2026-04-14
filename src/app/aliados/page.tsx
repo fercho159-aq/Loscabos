@@ -39,9 +39,11 @@ export default function Aliados() {
               <div key={`${a.name}-${i}`} className="aliado-slide">
                 <Image
                   src={a.logo}
-                  alt={a.name}
+                  alt={`Logo de ${a.name}, aliado del FICC Los Cabos`}
                   width={320}
                   height={170}
+                  sizes="320px"
+                  loading="lazy"
                   style={{ width: "auto", height: 170, objectFit: "contain" }}
                 />
               </div>
