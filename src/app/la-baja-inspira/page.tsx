@@ -102,6 +102,9 @@ export default function LaBajaInspira() {
                 <span data-anim="lbi-stagger-text" style={{ fontWeight: 500 }}><strong>Desarrollo del Destino:</strong> Economía azul, pesca responsable y turismo sostenible.</span>
               </li>
             </ul>
+            <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.25rem", color: "#081722", lineHeight: 1.35, marginTop: "1.5rem", fontWeight: 400 }}>
+              El rigor cinematográfico es nuestra base. Buscamos obras donde la calidad narrativa y la investigación profunda se encuentran para definir el futuro de la región.
+            </p>
           </div>
         </div>
       </section>
