@@ -23,7 +23,7 @@ const comite = [
   {
     name: "ESCINE",
     desc: "Una de las instituciones acad\u00e9micas m\u00e1s importantes de M\u00e9xico dedicada a la profesionalizaci\u00f3n cinematogr\u00e1fica.",
-    img: "/images/comite/escine.jpg",
+    img: "/images/comite/escine.png",
   },
   {
     name: "Juan Patricio Riveroll",
