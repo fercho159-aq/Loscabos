@@ -118,8 +118,7 @@ export default function FFGF() {
 
       {/* Aliados FFGF */}
       <section data-anim="ffgf-aliados" className="aliados-plaque">
-        <span data-anim="ffgf-aliados-tag" className="aliados-plaque-tag">Nuestros aliados y patrocinadores</span>
-        <p data-anim="ffgf-aliados-quote" className="aliados-plaque-quote" style={{ fontSize: "clamp(1.2rem, 2vw, 1.6rem)", fontWeight: 700 }}>
+        <p data-anim="ffgf-aliados-quote" className="aliados-plaque-quote" style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 700 }}>
           Gracias a nuestros patrocinadores y aliados, que hacen posible hacer del Fondo Gabriel Figueroa un motor de formación y financiamiento del cine mexicano.
         </p>
         <div className="aliados-carousel">
