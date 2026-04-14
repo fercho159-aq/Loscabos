@@ -59,6 +59,8 @@ export default function Home() {
                 src="/images/FICCLosCabos_2026_Logo_Claro.svg"
                 alt=""
                 aria-hidden="true"
+                fetchPriority="high"
+                decoding="async"
                 style={{ width: "100%", height: "auto", display: "block" }}
               />
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -265,7 +267,7 @@ export default function Home() {
           <div className="aliados-track">
             {aliadosTrack.map((a, i) => (
               <div key={`${a.name}-${i}`} className="aliado-slide">
-                <Image src={a.logo} alt={`Logo de ${a.name}, aliado del FICC Los Cabos`} width={320} height={170} sizes="320px" loading="lazy"
+                <Image src={a.logo} alt={`Logo de ${a.name}, aliado del FICC Los Cabos`} width={200} height={100} sizes="(max-width: 768px) 100px, 200px" loading="lazy"
                   style={{ width: "auto", height: 170, objectFit: "contain" }} />
               </div>
             ))}
