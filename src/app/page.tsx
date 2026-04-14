@@ -81,12 +81,12 @@ export default function Home() {
             style={{ width: 511, maxWidth: "90vw" }}
           >
             <div className="flex flex-col gap-[.55rem] text-left">
-              <p data-anim="hero-hashtag" className="text-[1.25rem] font-black tracking-[.14em] text-[#A3CDD8] m-0" style={{ overflow: "hidden", fontFamily: "var(--font-inter)" }}>
+              <p data-anim="hero-hashtag" className="text-[1.85rem] font-black tracking-[.14em] text-[#A3CDD8] m-0" style={{ overflow: "hidden", fontFamily: "var(--font-inter)" }}>
                 {"#BeyondTheScreen".split("").map((char, i) => (
                   <span key={i} data-anim="hero-hashtag-char" style={{ display: "inline-block" }}>{char}</span>
                 ))}
               </p>
-              <p data-anim="hero-desc" className="text-[.92rem] font-semibold text-[#EDE6DC] leading-[1.65] m-0 opacity-75 max-w-[260px]" style={{ fontFamily: "var(--font-garamond)" }}>
+              <p data-anim="hero-desc" className="text-[1.35rem] font-semibold text-[#EDE6DC] leading-[1.5] m-0 opacity-75 max-w-[360px]" style={{ fontFamily: "var(--font-garamond)" }}>
                 El cine como punto de <br />encuentro entre la música,<br />
                 el arte digital y la comunidad.
               </p>
