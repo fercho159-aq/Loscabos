@@ -50,15 +50,14 @@ const aliados = [
 const aliadosTrack = [...aliados, ...aliados];
 import PageHero from "@/components/PageHero";
 import ElFestivalIntroScroll from "@/components/ElFestivalIntroScroll";
-import ElFestivalPlataformaCreativa from "@/components/ElFestivalPlataformaCreativa";
-import ElFestivalImpulsoIndustria from "@/components/ElFestivalImpulsoIndustria";
-import ElFestivalProgramacion from "@/components/ElFestivalProgramacion";
-import ElFestivalComunidad from "@/components/ElFestivalComunidad";
+import ElFestivalEjeSection from "@/components/ElFestivalEjeSection";
 
 export default function ElFestival() {
   return (
     <>
       <Navbar />
+
+      <div className="ef-page">
 
       {/* ── HERO ── */}
       <PageHero lines={["El Festival"]} />
@@ -66,19 +65,96 @@ export default function ElFestival() {
       {/* ── INTRO: #BeyondTheScreen ── */}
       <ElFestivalIntroScroll />
 
-      {/* ── EJE 1: Plataforma Creativa Anclada en Los Cabos ── */}
-      <ElFestivalPlataformaCreativa />
+      {/* ── EJE 1: Plataforma Cultural Anclada en Los Cabos ── */}
+      <ElFestivalEjeSection
+        ejeNum={1}
+        heroSvg="/images/el-festival/PlataformaCreativa.svg"
+        heroTitleLines={["Plataforma Cultural Anclada en Los Cabos"]}
+        heroImage={{
+          src: "/images/el-festival/Cactus.png",
+          alt: "Plataforma Cultural anclada en Los Cabos",
+        }}
+        iconReveal="wipe-up"
+      >
+        <p data-anim="eje-para">
+          El entorno especial de Los Cabos es el origen de todo. Producto de la energía que emana del Golfo de California, surge este festival que, mediante alianzas estratégicas, fusiona la hospitalidad de Baja California Sur con un circuito creativo internacional sin precedentes.
+        </p>
+      </ElFestivalEjeSection>
 
       {/* ── EJE 2: Impulso a la Industria ── */}
-      <ElFestivalImpulsoIndustria />
+      <ElFestivalEjeSection
+        ejeNum={2}
+        heroSvg="/images/el-festival/PlataformasImpulsoIndustria.svg"
+        heroTitleLines={["Plataformas de", "Impulso a la", "Industria del Cine"]}
+        heroImage={{
+          src: "/images/el-festival/rendy-novantino-lNzyXvBkZXQ-unsplash.jpg",
+          alt: "Plataformas de Impulso a la Industria del Cine",
+        }}
+        entitiesLabel="Plataformas"
+        entities={[
+          { label: "La Baja Inspira" },
+          { label: "Fondo Fílmico Gabriel Figueroa" },
+          { label: "Frequencies of Now" },
+        ]}
+        iconReveal="scale-fade"
+      >
+        <p data-anim="eje-para" className="mb-6 md:mb-7">
+          Nuestras plataformas reducen la brecha entre creación, industria y audiencias. A través de <span className="ef-accent">La Baja Inspira</span>, el <span className="ef-accent">Fondo Fílmico Gabriel Figueroa</span> y <span className="ef-accent">Frequencies of Now</span>, actuamos como un motor de formación, financiamiento y exhibición.
+        </p>
+        <p data-anim="eje-para">
+          Diseñadas para generar convergencia, estas plataformas fortalecen trayectorias creativas y construyen puentes reales entre el talento mexicano y el mercado internacional.
+        </p>
+      </ElFestivalEjeSection>
 
       {/* ── EJE 3: Programación con Pulso Global ── */}
-      <ElFestivalProgramacion />
+      <ElFestivalEjeSection
+        ejeNum={3}
+        heroSvg="/images/el-festival/ProgramaciónconPulsoGlobal.svg"
+        heroTitleLines={["Programación", "con Pulso Global"]}
+        heroImage={{
+          src: "/images/cta-cactus.jpg",
+          alt: "Programación con Pulso Global",
+        }}
+        entitiesLabel="Programación"
+        entities={[
+          { label: "Competencia Mexicana" },
+          { label: "Animación" },
+          { label: "Marejada" },
+          { label: "#BeyondTheScreen" },
+        ]}
+        iconReveal="wipe-right"
+      >
+        <p data-anim="eje-para" className="mb-6 md:mb-7">
+          Nuestra curaduría descubre y posiciona las voces que definen el futuro del cine. Desde la <span className="ef-accent">Competencia Mexicana</span> y su apuesta por el riesgo narrativo, hasta la consolidación de la <span className="ef-accent">Animación</span> como un lenguaje cinematográfico mayor y <span className="ef-accent">Marejada</span>, nuestra muestra Internacional  como nuestra vitrina de los grandes circuitos y festivales, el Festival dialoga permanentemente con el circuito de festivales internacional.
+        </p>
+        {/* TODO(cliente): este párrafo #BeyondTheScreen se repite verbatim en eje 4. Cliente debe decidir si eliminar de aquí, de eje 4, o reescribir uno de los dos. */}
+        <p data-anim="eje-para">
+          <span className="ef-accent">#BeyondTheScreen</span> es una plataforma de innovación cultural. Integramos <span className="ef-kw-cine">cine</span>, <span className="ef-kw-musica">música</span> y <span className="ef-kw-arte-digital">arte digital</span> para responder a la transformación de las industrias creativas, proyectando desde Los Cabos nuevas formas de crear y experimentar el cine.
+        </p>
+      </ElFestivalEjeSection>
 
-      {/* ── EJE 4: Comunidad e Influencia ── */}
-      <ElFestivalComunidad />
+      {/* ── EJE 4: Comunidad Creativa y Ecosistema de Influencia ── */}
+      <ElFestivalEjeSection
+        ejeNum={4}
+        heroSvg="/images/el-festival/ComunidadCreativayEcosistemade Influencia.svg"
+        heroTitleLines={["Comunidad Creativa y Ecosistema de Influencia"]}
+        heroImage={{
+          src: "/images/el-festival/ryan-arnst-JtRXnUNWHt4-unsplash.jpg",
+          alt: "Comunidad Creativa y Ecosistema de Influencia",
+        }}
+        numericAnchor={{ num: "365", label: "Días al año" }}
+        iconReveal="scale-rotate"
+      >
+        <p data-anim="eje-para" className="mb-6 md:mb-7">
+          Creamos un ecosistema que trasciende el evento. Activamos una red global de creadores, medios y plataformas para construir un ecosistema que se expande y empodera proyectos <span className="ef-accent">los 365 días del año</span>.
+        </p>
+        {/* TODO(cliente): este párrafo #BeyondTheScreen se repite verbatim en eje 3. Cliente debe decidir si eliminar de aquí, de eje 3, o reescribir uno de los dos. */}
+        <p data-anim="eje-para">
+          <span className="ef-accent">#BeyondTheScreen</span> es una plataforma de innovación cultural. Integramos <span className="ef-kw-cine">cine</span>, <span className="ef-kw-musica">música</span> y <span className="ef-kw-arte-digital">arte digital</span> para responder a la transformación de las industrias creativas, proyectando desde Los Cabos nuevas formas de crear y experimentar el cine.
+        </p>
+      </ElFestivalEjeSection>
 
-
+      </div>
 
 
       {/* ── ALIADOS ── */}

@@ -110,8 +110,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 3rem;
-    height: 88px;
+    padding: 0 2.4rem;
+    height: 70px;
     background: #0A1E23 !important;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -121,19 +121,19 @@ body {
   }
 
   .nav-logo {
-    height: 52px;
+    height: 42px;
     display: flex;
     align-items: center;
   }
 
   .nav-logo img {
-    height: 52px;
+    height: 42px;
     width: auto;
   }
 
   .nav-links {
     display: flex;
-    gap: 1.6rem;
+    gap: 1.28rem;
     list-style: none;
     position: absolute;
     left: 50%;
@@ -143,7 +143,7 @@ body {
   .nav-links a {
     font-family: var(--font-inter);
     font-weight: 900;
-    font-size: .88rem;
+    font-size: .7rem;
     letter-spacing: .1em;
     text-transform: uppercase;
     text-decoration: none;
@@ -221,13 +221,13 @@ body {
   }
 
   .nav-cta {
-    padding: .75rem 1.7rem;
+    padding: .6rem 1.36rem;
     background: transparent;
     border: 1.5px solid #C47A3D;
     color: #ffffff;
     font-family: var(--font-inter);
     font-weight: 900;
-    font-size: .82rem;
+    font-size: .66rem;
     letter-spacing: .1em;
     text-transform: uppercase;
     text-decoration: none;
@@ -1002,7 +1002,7 @@ body {
     text-align: center;
     overflow: hidden;
     min-height: 60vh;
-    margin-top: 88px;
+    margin-top: 70px;
   }
 
   .page-hero-bg {
@@ -3101,7 +3101,7 @@ body {
    No modifica tokens globales. Migración site-wide
    futura: promover a @theme en PR separado.
    ══════════════════════════════════════════ */
-.ef-intro {
+.ef-page {
   --ef-ink: #0A1E23;
   --ef-cream: #EDE6DC;
   --ef-cream-dim: #D9D4CD;
@@ -3111,6 +3111,12 @@ body {
   --ef-peach: #E3A97C;
   --ef-terracotta: #D97A5B;
 }
+
+/* Per-eje accent scoping: each eje inherits its own --ef-accent */
+.ef-page .ef-eje-1 { --ef-accent: var(--ef-peach); }
+.ef-page .ef-eje-2 { --ef-accent: var(--ef-sky); }
+.ef-page .ef-eje-3 { --ef-accent: var(--ef-terracotta); }
+.ef-page .ef-eje-4 { --ef-accent: var(--ef-sage); }
 
 .ef-intro .ef-rail > .ef-stat {
   border-bottom: 1px solid color-mix(in srgb, var(--ef-cream-dim) 10%, transparent);
@@ -3132,7 +3138,7 @@ body {
   }
 }
 
-.ef-intro .ef-stat-num {
+.ef-page .ef-stat-num {
   font-family: var(--font-inter);
   font-weight: 900;
   color: var(--ef-cream);
@@ -3141,7 +3147,7 @@ body {
   font-size: clamp(2.25rem, 4.2vw, 3.5rem);
 }
 
-.ef-intro .ef-stat-label {
+.ef-page .ef-stat-label {
   font-family: var(--font-inter);
   font-weight: 900;
   letter-spacing: 0.18em;
@@ -3150,10 +3156,290 @@ body {
   font-size: 0.7rem;
 }
 @media (min-width: 768px) {
-  .ef-intro .ef-stat-label { font-size: 0.75rem; }
+  .ef-page .ef-stat-label { font-size: 0.75rem; }
 }
 
-.ef-intro .ef-kw-cine        { color: var(--ef-terracotta); font-weight: 700; }
-.ef-intro .ef-kw-musica      { color: var(--ef-peach);      font-weight: 700; }
-.ef-intro .ef-kw-arte-digital{ color: var(--ef-sky);        font-weight: 700; }
-.ef-intro .ef-kw-animacion   { color: var(--ef-sage);       font-weight: 700; }
+.ef-page .ef-kw-cine        { color: var(--ef-terracotta); font-weight: 700; }
+.ef-page .ef-kw-musica      { color: var(--ef-peach);      font-weight: 700; }
+.ef-page .ef-kw-arte-digital{ color: var(--ef-sky);        font-weight: 700; }
+.ef-page .ef-kw-animacion   { color: var(--ef-sage);       font-weight: 700; }
+
+/* ──────────────────────────────────────────
+   Ejes system: entities list, accent underline,
+   numeric anchor, subtle dividers between ejes.
+   ══════════════════════════════════════════ */
+
+/* Entity list item (left col, desktop vertical list / mobile chips) */
+.ef-page .ef-entity {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--font-inter);
+  font-weight: 700;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  letter-spacing: 0.01em;
+  color: var(--ef-cream);
+  line-height: 1.3;
+}
+.ef-page .ef-entity-dot {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--ef-accent, var(--ef-cream));
+}
+.ef-page .ef-entities-label {
+  font-family: var(--font-inter);
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--ef-cream-dim) 70%, transparent);
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+/* Keyword accent underline (paragraphs col der) */
+.ef-page .ef-accent {
+  color: var(--ef-accent, var(--ef-cream));
+  font-weight: 700;
+  background-image: linear-gradient(
+    to top,
+    color-mix(in srgb, var(--ef-accent, var(--ef-cream)) 30%, transparent) 0,
+    color-mix(in srgb, var(--ef-accent, var(--ef-cream)) 30%, transparent) 2px,
+    transparent 2px
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-bottom: 1px;
+}
+
+/* Numeric anchor (eje 4 exception: 365 días al año) */
+.ef-page .ef-anchor-num {
+  font-family: var(--font-inter);
+  font-weight: 900;
+  color: var(--ef-accent, var(--ef-cream));
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  font-size: clamp(3.5rem, 8vw, 6rem);
+}
+.ef-page .ef-anchor-label {
+  font-family: var(--font-inter);
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--ef-cream-dim) 70%, transparent);
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+/* Subtle dividers between ejes (not after last eje).
+   Fade at viewport edges via mask. */
+.ef-page .ef-eje-1::after,
+.ef-page .ef-eje-2::after,
+.ef-page .ef-eje-3::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: color-mix(in srgb, var(--ef-cream-dim) 14%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 80%, transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 80%, transparent 100%);
+}
+
+/* ══════════════════════════════════════════
+   La Baja Inspira — intro section redesign
+   Paleta scoped: FA6935 / BDC957 / F6EDDB /
+   F4A061 / 0088C5 / 173119.
+   Gradient blob bg via radial + SVG noise,
+   zero-asset.
+   ══════════════════════════════════════════ */
+.lbi-intro {
+  --lbi-orange: #FA6935;
+  --lbi-acid: #BDC957;
+  --lbi-cream: #F6EDDB;
+  --lbi-peach: #F4A061;
+  --lbi-blue: #0088C5;
+  --lbi-ink: #173119;
+
+  position: relative;
+  background-color: var(--lbi-cream);
+  background-image: url("/images/la-baja-inspira-intro-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  padding: 5rem 2rem 6rem;
+}
+
+.lbi-intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: color-mix(in srgb, var(--lbi-cream) 65%, transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.lbi-intro > * { position: relative; z-index: 1; }
+
+.lbi-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .lbi-intro { padding: 3.5rem 1.25rem 4rem; }
+  .lbi-intro-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+.lbi-intro-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lbi-intro-eyebrow {
+  font-family: var(--font-inter);
+  font-weight: 900;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--lbi-orange);
+  margin-bottom: 0.9rem;
+  display: inline-block;
+}
+
+.lbi-intro-title {
+  font-family: var(--font-inter);
+  font-weight: 900;
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--lbi-ink);
+  margin-bottom: 1.75rem;
+}
+.lbi-intro-title .lbi-accent-underline {
+  background-image: linear-gradient(to top, var(--lbi-acid) 0, var(--lbi-acid) 6px, transparent 6px);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-bottom: 0;
+}
+
+.lbi-intro-lead {
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: clamp(1.15rem, 1.5vw, 1.375rem);
+  line-height: 1.5;
+  color: var(--lbi-ink);
+  margin-bottom: 1.25rem;
+  max-width: 52ch;
+}
+.lbi-intro-lead strong { font-weight: 700; }
+
+.lbi-intro-body {
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: clamp(1.05rem, 1.35vw, 1.2rem);
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--lbi-ink) 85%, transparent);
+  margin-bottom: 1.5rem;
+  max-width: 52ch;
+}
+
+.lbi-intro-apertura {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.7rem 1.25rem;
+  background: var(--lbi-orange);
+  color: var(--lbi-cream);
+  font-family: var(--font-inter);
+  font-weight: 900;
+  font-size: clamp(0.7rem, 1vw, 0.8rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2;
+  margin: 0 auto 2rem;
+  width: fit-content;
+  max-width: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+.lbi-intro-apertura-dot {
+  width: 8px; height: 8px; border-radius: 9999px;
+  background: var(--lbi-cream);
+  animation: lbi-pulse 1.8s ease-in-out infinite;
+}
+@keyframes lbi-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.lbi-cat-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.lbi-cat {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  align-items: start;
+  gap: 1rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+.lbi-cat--naturales { --lbi-cat-accent: var(--lbi-acid); }
+.lbi-cat--historia  { --lbi-cat-accent: var(--lbi-peach); }
+.lbi-cat--destino   { --lbi-cat-accent: var(--lbi-blue); }
+
+.lbi-cat-icon {
+  width: 28px; height: 28px;
+  display: grid; place-items: center;
+  background: transparent;
+  color: var(--lbi-cat-accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.lbi-cat-icon svg { width: 24px; height: 24px; }
+
+.lbi-cat-title {
+  display: block;
+  font-family: var(--font-inter);
+  font-weight: 900;
+  font-size: 1.02rem;
+  letter-spacing: 0.01em;
+  color: var(--lbi-cat-accent);
+  margin-bottom: 0.2rem;
+  text-transform: none;
+}
+.lbi-cat-desc {
+  display: block;
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--lbi-ink);
+}
+
+.lbi-intro-closer {
+  font-family: var(--font-inter);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.05rem, 1.35vw, 1.2rem);
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--lbi-ink) 90%, transparent);
+  max-width: 52ch;
+  padding-left: 1rem;
+  border-left: 3px solid var(--lbi-blue);
+}

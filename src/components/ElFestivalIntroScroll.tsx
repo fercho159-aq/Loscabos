@@ -90,7 +90,7 @@ export default function ElFestivalIntroScroll() {
   return (
     <section
       ref={sectionRef}
-      className="ef-intro bg-[color:var(--ef-ink)] pt-[88px] md:h-screen md:overflow-hidden"
+      className="ef-intro bg-[color:var(--ef-ink)] pt-[70px] md:h-screen md:overflow-hidden"
     >
       <div className="flex flex-col md:h-full">
 
