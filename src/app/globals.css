@@ -3113,10 +3113,10 @@ body {
 }
 
 .ef-intro .ef-rail > .ef-stat {
-  border-bottom: 1px solid color-mix(in srgb, var(--ef-cream-dim) 18%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--ef-cream-dim) 10%, transparent);
 }
 .ef-intro .ef-rail > .ef-stat:nth-child(odd) {
-  border-right: 1px solid color-mix(in srgb, var(--ef-cream-dim) 18%, transparent);
+  border-right: 1px solid color-mix(in srgb, var(--ef-cream-dim) 10%, transparent);
 }
 .ef-intro .ef-rail > .ef-stat:nth-last-child(-n+2) {
   border-bottom: none;
@@ -3125,7 +3125,7 @@ body {
 @media (min-width: 768px) {
   .ef-intro .ef-rail > .ef-stat {
     border-right: none;
-    border-bottom: 1px solid color-mix(in srgb, var(--ef-cream-dim) 18%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--ef-cream-dim) 10%, transparent);
   }
   .ef-intro .ef-rail > .ef-stat:last-child {
     border-bottom: none;
@@ -3138,7 +3138,7 @@ body {
   color: var(--ef-cream);
   line-height: 0.95;
   letter-spacing: -0.02em;
-  font-size: clamp(2.75rem, 5.2vw, 4.25rem);
+  font-size: clamp(2.25rem, 4.2vw, 3.5rem);
 }
 
 .ef-intro .ef-stat-label {

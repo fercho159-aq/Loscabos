@@ -8,10 +8,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const STATS = [
-  { num: "14",   label: "Edición"    },
+  { num: "14va", label: "Edición"    },
   { num: "05",   label: "Días"       },
   { num: "04",   label: "Disciplinas" },
-  { num: "9–13", label: "Dic · 2026" },
+  { num: "9–13", label: "Diciembre 2026" },
 ];
 
 export default function ElFestivalIntroScroll() {
@@ -19,6 +19,7 @@ export default function ElFestivalIntroScroll() {
   const bgSvgRef = useRef<HTMLImageElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
   const railRef = useRef<HTMLElement>(null);
+  const iconRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -26,6 +27,7 @@ export default function ElFestivalIntroScroll() {
       const bgSvg = bgSvgRef.current;
       const textEl = textRef.current;
       const railEl = railRef.current;
+      const icon = iconRef.current;
       if (!section || !bgSvg || !textEl || !railEl) return;
 
       const chars = Array.from(section.querySelectorAll<HTMLElement>(".title-char"));
@@ -36,6 +38,7 @@ export default function ElFestivalIntroScroll() {
 
       if (reduce) {
         gsap.set(bgSvg, { opacity: 1, scale: 1 });
+        if (icon) gsap.set(icon, { opacity: 1, scale: 1, rotation: 0 });
         if (chars.length) gsap.set(chars, { opacity: 1, y: 0, rotateX: 0 });
         if (stats.length) gsap.set(stats, { opacity: 1, y: 0 });
         if (paras.length) gsap.set(paras, { opacity: 1, y: 0 });
@@ -71,6 +74,13 @@ export default function ElFestivalIntroScroll() {
           duration: 0.55, stagger: 0.12,
           ease: "power3.out", force3D: true,
         }, 0.6);
+      }
+
+      if (icon) {
+        tl.from(icon, {
+          scale: 0, opacity: 0, rotation: -45,
+          duration: 0.7, ease: "back.out(2)", force3D: true,
+        }, 0.75);
       }
     });
 
@@ -142,16 +152,16 @@ export default function ElFestivalIntroScroll() {
                        w-full md:w-1/3 md:h-full
                        grid grid-cols-2 md:flex md:flex-col md:justify-center
                        gap-0
-                       px-5 py-6 md:px-10 md:py-10
-                       md:border-r md:border-[color-mix(in_srgb,var(--ef-cream-dim)_18%,transparent)]"
+                       px-5 py-6 md:px-10 md:py-8
+                       md:border-r md:border-[color-mix(in_srgb,var(--ef-cream-dim)_10%,transparent)]"
           >
             {STATS.map((s, i) => (
               <div
                 key={i}
                 className="ef-stat
-                           flex flex-col items-start gap-1.5
+                           flex flex-col items-start gap-1
                            px-2 py-5
-                           md:px-0 md:py-6"
+                           md:px-0 md:py-4"
               >
                 <span className="ef-stat-num">{s.num}</span>
                 <span className="ef-stat-label">{s.label}</span>
@@ -159,11 +169,12 @@ export default function ElFestivalIntroScroll() {
             ))}
           </aside>
 
-          {/* Panel D: PÁRRAFOS — copy verbatim, color-pop en P2 */}
-          <div className="w-full md:w-2/3 md:h-full flex items-center py-8 px-5 md:py-10 md:pr-16 md:pl-10">
+          {/* Panel D: PÁRRAFOS — copy verbatim, color-pop en P2 + ícono derecha */}
+          <div className="w-full md:w-2/3 md:h-full flex items-center py-8 px-5 md:py-10 md:pr-10 md:pl-10">
+            <div className="flex items-center justify-between gap-10 w-full">
             <div
               ref={textRef}
-              className="text-[color:var(--ef-cream)] font-normal text-[clamp(1.1rem,1.55vw,1.375rem)] leading-relaxed tracking-normal w-full max-w-[62ch] text-left"
+              className="text-[color:var(--ef-cream)] font-normal text-[clamp(1.1rem,1.55vw,1.375rem)] leading-relaxed tracking-normal w-full max-w-[55ch] text-left"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               <p data-anim="intro-para" className="mb-6 md:mb-7">
@@ -177,6 +188,15 @@ export default function ElFestivalIntroScroll() {
               <p data-anim="intro-para">
                 A través de un modelo multisede que integra naturaleza, hospitalidad y pensamiento creativo, generamos un entorno propicio para la circulación de obras, el encuentro profesional y la construcción de redes internacionales.
               </p>
+            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              ref={iconRef}
+              src="/images/el-festival/icon BTS.svg"
+              alt=""
+              aria-hidden="true"
+              className="hidden md:block shrink-0 w-[96px] h-[96px] lg:w-[128px] lg:h-[128px] will-change-transform"
+            />
             </div>
           </div>
 
