@@ -32,7 +32,7 @@ export default function Navbar() {
           width={152}
           height={72}
           decoding="async"
-          style={{ height: 58, width: "auto" }}
+          style={{ height: "clamp(40px, 12vw, 58px)", width: "auto" }}
         />
       </Link>
 
@@ -102,8 +102,8 @@ export default function Navbar() {
         <div
           className="mobile-menu"
           style={{
-            position: "absolute", top: 48, left: 0, right: 0,
-            background: "#0A1E23", padding: "1rem 1.5rem",
+            position: "absolute", top: 70, left: 0, right: 0,
+            background: "#0A1E23", padding: "1rem clamp(1rem, 3vw, 1.5rem)",
             borderTop: "1px solid rgba(255,255,255,.06)",
             zIndex: 200,
           }}

@@ -252,6 +252,7 @@ export default function DemoPage() {
               className="relative overflow-hidden cursor-pointer bg-[#EDE6DC] border-2 border-[#A3CDD8] shrink-0 mr-[10px] ml-[100px] impulso-card-anim"
               style={{
                 width: 587,
+                maxWidth: "calc(100vw - 2rem)",
                 height: 251,
                 backgroundImage: "url('/images/card-x-lbi.png')",
                 backgroundSize: "cover",
@@ -281,6 +282,7 @@ export default function DemoPage() {
               className="relative overflow-hidden cursor-pointer bg-[#EDE6DC] border-2 border-[#A3CDD8] shrink-0 mr-[10px] ml-[100px] impulso-card-anim"
               style={{
                 width: 587,
+                maxWidth: "calc(100vw - 2rem)",
                 height: 362,
                 backgroundImage: "url('/images/card-x-ffgf.png')",
                 backgroundSize: "cover",

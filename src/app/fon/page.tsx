@@ -10,16 +10,16 @@ export default function FON() {
 
       <PageHero lines={["Frequencies", "of Now"]} />
 
-      <section style={{ padding: "5rem 2rem", maxWidth: 1200, margin: "0 auto" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center" }}>
+      <section className="fon-content-section" style={{ padding: "clamp(2.5rem, 6vw, 5rem) clamp(1.25rem, 3vw, 2rem)", maxWidth: 1200, margin: "0 auto" }}>
+        <div className="lbi-desc-grid" style={{ alignItems: "center" }}>
           <div>
-            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, marginBottom: "1.2rem" }}>
+            <p style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(0.9rem, 1.2vw, 1rem)", color: "#081722", lineHeight: 1.8, marginBottom: "1.2rem" }}>
               Laboratorio creativo donde el cine, la m&uacute;sica y la moda convergen para impulsar nuevas narrativas audiovisuales.
               A trav&eacute;s de procesos colaborativos y experiencias en vivo, el programa funciona como una radiograf&iacute;a de la
               sociedad mexicana, identificando a los protagonistas que explican el porqu&eacute; de lo que sucede hoy en nuestro
               entorno y el panorama musical de M&eacute;xico.
             </p>
-            <p style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "#081722", lineHeight: 1.8, marginBottom: "1.2rem" }}>
+            <p style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(0.9rem, 1.2vw, 1rem)", color: "#081722", lineHeight: 1.8, marginBottom: "1.2rem" }}>
               Al observar las tendencias y c&oacute;mo estas trascienden, el programa se consolida como un espacio estrat&eacute;gico
               para entender la actualidad de estas industrias, fortaleciendo el rol del FICCLosCabos como una plataforma
               activa de producci&oacute;n audiovisual.
@@ -28,7 +28,7 @@ export default function FON() {
               S&eacute; el primero en recibir informaci&oacute;n
             </a>
           </div>
-          <div style={{ position: "relative", width: "100%", minHeight: 400, borderRadius: 12, overflow: "hidden" }}>
+          <div style={{ position: "relative", width: "100%", minHeight: "clamp(250px, 40vw, 400px)", borderRadius: 12, overflow: "hidden" }}>
             <Image
               src="/images/fon-mixer.jpg"
               alt="Consola de audio del programa Frequencies of Now — FICC Los Cabos"

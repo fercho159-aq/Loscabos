@@ -179,7 +179,7 @@ export default function LaBajaInspira() {
                 className="relative overflow-hidden"
                 style={{
                   width: 587,
-                  maxWidth: "90vw",
+                  maxWidth: "calc(100vw - 2rem)",
                   backgroundColor: "#FA6935",
                 }}
               >
@@ -203,7 +203,7 @@ export default function LaBajaInspira() {
                 className="relative overflow-hidden"
                 style={{
                   width: 587,
-                  maxWidth: "90vw",
+                  maxWidth: "calc(100vw - 2rem)",
                   backgroundColor: "#0088C5",
                 }}
               >
@@ -333,7 +333,7 @@ export default function LaBajaInspira() {
             {aliadosLBITrack.map((a, i) => (
               <div key={`${a.name}-${i}`} className="aliado-slide">
                 <Image src={a.logo} alt={`Logo de ${a.name}, aliado del FICC Los Cabos`} width={200} height={100} sizes="(max-width: 768px) 100px, 200px" loading="lazy"
-                  style={{ width: "auto", height: 170, objectFit: "contain" }} />
+                  style={{ width: "auto", maxHeight: 170, height: "auto", objectFit: "contain" }} />
               </div>
             ))}
           </div>

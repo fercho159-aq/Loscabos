@@ -29,7 +29,7 @@ function QuoteCard({ q, globalIndex }: { q: (typeof quotes)[number]; globalIndex
   return (
     <article className={`prensa-quote-card prensa-quote-card--${accentClass(globalIndex)}`}>
       <div className="prensa-quote-logo">
-        <Image src={q.logo} alt={`Logo de ${q.medio} — prensa que cubre el FICC Los Cabos`} width={240} height={72} style={{ objectFit: "contain", height: 72, width: "auto" }} />
+        <Image src={q.logo} alt={`Logo de ${q.medio} — prensa que cubre el FICC Los Cabos`} width={240} height={72} style={{ objectFit: "contain", maxHeight: 72, height: "auto", width: "auto", maxWidth: "100%" }} />
       </div>
       <blockquote className="prensa-quote-text">
         {q.quote}

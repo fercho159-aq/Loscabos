@@ -48,23 +48,23 @@ export default function FFGF() {
       <PageHero lines={["Fondo Fílmico", "Gabriel Figueroa"]} />
 
       {/* Descripción — Image left, text right (matches lbi-desc-grid pattern) */}
-      <section id="ffgf-desc-section" style={{ minHeight: "70vh", display: "flex", alignItems: "center", padding: "2rem", maxWidth: 1200, margin: "0 auto", marginBottom: "3rem" }}>
+      <section id="ffgf-desc-section" style={{ minHeight: "auto", display: "flex", alignItems: "center", padding: "clamp(1.5rem, 3vw, 2rem)", maxWidth: 1200, margin: "0 auto", marginBottom: "clamp(1.5rem, 4vw, 3rem)" }}>
         <div className="lbi-desc-grid">
           <div data-anim="ffgf-image" style={{ display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
             <Image src="/images/ffgf-logo.png" alt="Logo del Fondo Fílmico Gabriel Figueroa — FICC Los Cabos" width={500} height={400} priority sizes="(max-width: 768px) 90vw, 500px" style={{ objectFit: "contain", width: "100%", maxWidth: 500, height: "auto" }} />
           </div>
           <div>
-            <p data-anim="ffgf-typewriter" style={{ fontFamily: "var(--font-inter)", fontSize: "1.5rem", color: "#000", lineHeight: 1.3, marginBottom: "1rem", fontWeight: 400 }}>
+            <p data-anim="ffgf-typewriter" style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.05rem, 1.8vw, 1.5rem)", color: "#000", lineHeight: 1.4, marginBottom: "1rem", fontWeight: 400 }}>
               Fortalece la industria audiovisual mexicana al generar una vinculaci&oacute;n efectiva entre cineastas y empresas
               estrat&eacute;gicas del sector. Mediante apoyos especializados, mentor&iacute;as y redes internacionales de colaboraci&oacute;n,
               el programa impulsa la finalizaci&oacute;n y circulaci&oacute;n global de nuevas obras.
             </p>
-            <p data-anim="ffgf-typewriter" style={{ fontFamily: "var(--font-inter)", fontSize: "1.5rem", color: "#000", lineHeight: 1.3, marginBottom: "1rem", fontWeight: 400 }}>
+            <p data-anim="ffgf-typewriter" style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.05rem, 1.8vw, 1.5rem)", color: "#000", lineHeight: 1.4, marginBottom: "1rem", fontWeight: 400 }}>
               Esta iniciativa posiciona al FICCLosCabos como una plataforma activa de empoderamiento cinematogr&aacute;fico
               y conexi&oacute;n profesional entre M&eacute;xico y el mundo, proyectando el talento de M&eacute;xico a la escena internacional.
             </p>
             <div data-anim="ffgf-dates" className="section-dates">
-              <p style={{ fontFamily: "var(--font-inter)", fontSize: "1.5rem", color: "#000", lineHeight: 1.3, fontWeight: 400, marginBottom: "1rem" }}>Apertura de convocatoria: Agosto 2026</p>
+              <p style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.05rem, 1.8vw, 1.5rem)", color: "#000", lineHeight: 1.4, fontWeight: 400, marginBottom: "1rem" }}>Apertura de convocatoria: Agosto 2026</p>
             </div>
             <a data-anim="ffgf-cta" href="https://festivaldecinedeloscabos.us15.list-manage.com/subscribe?u=24bf46409995ffe6e8ad030da&id=12e1ce1334" target="_blank" rel="noopener noreferrer" className="cta-button" style={{ marginTop: "1.5rem" }}>
               S&eacute; el primero en recibir la informaci&oacute;n de la convocatoria
@@ -141,7 +141,7 @@ export default function FFGF() {
             {aliadosFFGFTrack.map((a, i) => (
               <div key={`${a.name}-${i}`} className="aliado-slide">
                 <Image src={a.logo} alt={`Logo de ${a.name}, aliado del FICC Los Cabos`} width={200} height={100} sizes="(max-width: 768px) 100px, 200px" loading="lazy"
-                  style={{ width: "auto", height: 170, objectFit: "contain" }} />
+                  style={{ width: "auto", maxHeight: 170, height: "auto", objectFit: "contain" }} />
               </div>
             ))}
           </div>

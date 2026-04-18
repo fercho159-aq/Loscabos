@@ -174,7 +174,7 @@ export default function ElFestival() {
                   height={100}
                   sizes="(max-width: 768px) 100px, 200px"
                   loading="lazy"
-                  style={{ width: "auto", height: 170, objectFit: "contain" }}
+                  style={{ width: "auto", maxHeight: 170, height: "auto", objectFit: "contain" }}
                 />
               </div>
             ))}

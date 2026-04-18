@@ -100,12 +100,12 @@ export default function Home() {
             style={{ width: 511, maxWidth: "90vw" }}
           >
             <div className="flex flex-col gap-[.55rem] text-left">
-              <p data-anim="hero-hashtag" className="text-[1.85rem] font-black tracking-[.14em] text-[#A3CDD8] m-0" style={{ overflow: "hidden" }}>
+              <p data-anim="hero-hashtag" className="text-[clamp(1.2rem,4vw,1.85rem)] font-black tracking-[.14em] text-[#A3CDD8] m-0" style={{ overflow: "hidden" }}>
                 {"#BeyondTheScreen".split("").map((char, i) => (
                   <span key={i} data-anim="hero-hashtag-char" style={{ display: "inline-block" }}>{char}</span>
                 ))}
               </p>
-              <p data-anim="hero-desc" className="text-[1.35rem] font-normal text-[#EDE6DC] leading-[1.5] m-0 opacity-75 max-w-[360px]">
+              <p data-anim="hero-desc" className="text-[clamp(0.95rem,2.8vw,1.35rem)] font-normal text-[#EDE6DC] leading-[1.5] m-0 opacity-75 max-w-[360px]">
                 El cine como punto de <br />encuentro entre la música,<br />
                 el arte digital y la comunidad.
               </p>
@@ -116,7 +116,7 @@ export default function Home() {
               src="/images/play.svg"
               alt="Ver video"
               className="shrink-0 cursor-pointer"
-              style={{ width: 58, height: 58 }}
+              style={{ width: "clamp(40px, 8vw, 58px)", height: "clamp(40px, 8vw, 58px)" }}
             />
           </div>
         </div>
@@ -205,6 +205,7 @@ export default function Home() {
                 className="relative overflow-hidden cursor-pointer bg-[#EDE6DC] border-2 border-[#A3CDD8]"
                 style={{
                   width: 587,
+                  maxWidth: "calc(100vw - 2rem)",
                   height: 251,
                   backgroundImage: "url('/images/card-x-lbi.png')",
                   backgroundSize: "cover",
@@ -236,6 +237,7 @@ export default function Home() {
                 className="relative overflow-hidden cursor-pointer bg-[#EDE6DC] border-2 border-[#A3CDD8]"
                 style={{
                   width: 587,
+                  maxWidth: "calc(100vw - 2rem)",
                   height: 362,
                   backgroundImage: "url('/images/card-x-ffgf.png')",
                   backgroundSize: "cover",
@@ -275,7 +277,7 @@ export default function Home() {
             {aliadosTrack.map((a, i) => (
               <div key={`${a.name}-${i}`} className="aliado-slide">
                 <Image src={a.logo} alt={`Logo de ${a.name}, aliado del FICC Los Cabos`} width={200} height={100} sizes="(max-width: 768px) 100px, 200px" loading="lazy"
-                  style={{ width: "auto", height: 170, objectFit: "contain" }} />
+                  style={{ width: "auto", maxHeight: 170, height: "auto", objectFit: "contain" }} />
               </div>
             ))}
           </div>

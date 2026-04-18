@@ -39,7 +39,7 @@ export default function Footer() {
           height={132}
           loading="lazy"
           decoding="async"
-          style={{ width: 280, height: "auto", objectFit: "contain" }}
+          style={{ width: "min(280px, 80vw)", height: "auto", objectFit: "contain" }}
         />
       </div>
 
