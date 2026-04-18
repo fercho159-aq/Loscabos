@@ -12,212 +12,107 @@ interface Props {
 }
 
 export default function TextureStrip({ className = "", style }: Props) {
-  const ref = useRef<SVGSVGElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const svg = ref.current;
-    if (!svg) return;
+    const host = ref.current;
+    if (!host) return;
+    let ctx: gsap.Context | null = null;
+    let cancelled = false;
 
-    const ctx = gsap.context(() => {
-      // ── Stroke draw-on (all line/polygon paths) ─────────────────────────
-      const strokeEls = Array.from(
-        svg.querySelectorAll<SVGGeometryElement>("path[stroke], polygon[stroke]")
-      );
-      strokeEls.forEach((el) => {
-        try {
-          const len = el.getTotalLength();
-          gsap.set(el, { strokeDasharray: len, strokeDashoffset: len });
-        } catch {
-          // fallback for paths without getTotalLength
-          gsap.set(el, { strokeDasharray: 600, strokeDashoffset: 600 });
-        }
-      });
+    fetch("/images/texture-pattern.svg")
+      .then((r) => r.text())
+      .then((svgText) => {
+        if (cancelled || !host) return;
+        host.innerHTML = svgText;
+        const svg = host.querySelector("svg") as SVGSVGElement | null;
+        if (!svg) return;
 
-      gsap.to(strokeEls, {
-        strokeDashoffset: 0,
-        duration: 1.6,
-        stagger: { amount: 1.0, from: "start" },
-        ease: "power2.inOut",
-        scrollTrigger: {
-          trigger: svg,
-          start: "top 98%",
-          once: true,
-        },
-      });
+        svg.setAttribute("width", "100%");
+        svg.setAttribute("height", "100%");
+        svg.setAttribute("preserveAspectRatio", "xMidYMid slice");
+        svg.style.display = "block";
 
-      // ── Large circles (#EDE6DC) — pop in ────────────────────────────────
-      const bigCircles = Array.from(
-        svg.querySelectorAll<SVGPathElement>("path[fill='#EDE6DC']")
-      );
-      gsap.set(bigCircles, { scale: 0.5, opacity: 0, transformOrigin: "50% 50%" });
-      gsap.to(bigCircles, {
-        scale: 1,
-        opacity: 1,
-        duration: 0.8,
-        stagger: 0.14,
-        ease: "back.out(1.8)",
-        scrollTrigger: { trigger: svg, start: "top 98%", once: true },
-      });
+        const pick = (rgb: string) =>
+          Array.from(svg.querySelectorAll<SVGGraphicsElement>(`[style*="${rgb}"]`));
 
-      // ── Stacked rings (#E3A97C) — sequential pop ────────────────────────
-      const rings = Array.from(
-        svg.querySelectorAll<SVGPathElement>("path[fill='#E3A97C']")
-      );
-      gsap.set(rings, { scale: 0.2, opacity: 0, transformOrigin: "50% 50%" });
-      gsap.to(rings, {
-        scale: 1,
-        opacity: 1,
-        duration: 0.45,
-        stagger: 0.055,
-        ease: "back.out(2.2)",
-        scrollTrigger: { trigger: svg, start: "top 98%", once: true },
-      });
+        const bigCircles = pick("rgb(237,230,220)");   // cream large circles
+        const blueCircles = pick("rgb(163,205,216)");  // blue rings
+        const chevrons = pick("rgb(143,167,157)");     // sage chevrons + X
+        const diamonds = pick("rgb(217,122,91)");      // orange diamonds
+        const rings = pick("rgb(227,169,124)");        // peach stacked rings
 
-      // ── Strip entrance ───────────────────────────────────────────────────
-      gsap.from(svg, {
-        opacity: 0,
-        y: 10,
-        duration: 0.6,
-        ease: "power2.out",
-        scrollTrigger: { trigger: svg, start: "top 98%", once: true },
-      });
-    }, ref);
+        gsap.set([...bigCircles, ...blueCircles, ...chevrons, ...diamonds, ...rings], {
+          opacity: 0,
+        });
+        gsap.set(bigCircles, { scale: 0.5, transformOrigin: "50% 50%" });
+        gsap.set(blueCircles, { scale: 0.5, transformOrigin: "50% 50%" });
+        gsap.set(chevrons, { scale: 0.3, transformOrigin: "50% 50%" });
+        gsap.set(diamonds, { scale: 0.3, transformOrigin: "50% 50%" });
+        gsap.set(rings, { scale: 0.2, transformOrigin: "50% 50%" });
 
-    return () => ctx.revert();
+        ctx = gsap.context(() => {
+          const st = { trigger: host, start: "top 98%", once: true };
+
+          gsap.to([...bigCircles, ...blueCircles], {
+            scale: 1,
+            opacity: 1,
+            duration: 0.8,
+            stagger: 0.14,
+            ease: "back.out(1.8)",
+            scrollTrigger: st,
+          });
+
+          gsap.to(chevrons, {
+            scale: 1,
+            opacity: 1,
+            duration: 0.7,
+            stagger: 0.06,
+            ease: "back.out(1.8)",
+            scrollTrigger: st,
+          });
+
+          gsap.to(diamonds, {
+            scale: 1,
+            opacity: 1,
+            duration: 0.6,
+            stagger: 0.08,
+            ease: "back.out(2)",
+            scrollTrigger: st,
+          });
+
+          gsap.to(rings, {
+            scale: 1,
+            opacity: 1,
+            duration: 0.45,
+            stagger: 0.055,
+            ease: "back.out(2.2)",
+            scrollTrigger: st,
+          });
+
+          gsap.from(svg, {
+            opacity: 0,
+            y: 10,
+            duration: 0.6,
+            ease: "power2.out",
+            scrollTrigger: st,
+          });
+        }, host);
+      })
+      .catch(() => {});
+
+    return () => {
+      cancelled = true;
+      ctx?.revert();
+    };
   }, []);
 
   return (
-    <svg
+    <div
       ref={ref}
-      width="100%"
-      viewBox="0 0 1728 122"
-      preserveAspectRatio="xMidYMid meet"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
       className={className}
-      style={style}
-    >
-      {/* mask0: X pattern left-1 */}
-      <mask id="ts-m0" style={{ maskType: "alpha" } as React.CSSProperties} maskUnits="userSpaceOnUse" x="289" y="0" width="65" height="122">
-        <path d="M353.023 0.18042L289.017 0.18042V121.746L353.023 121.746V0.18042Z" fill="black"/>
-      </mask>
-      <g mask="url(#ts-m0)">
-        <path d="M353.014 0.18042L289.017 121.746" stroke="#D97A5B" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <path d="M353.014 121.746L289.017 0.18042" stroke="#D97A5B" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <path d="M353.014 60.9631L289.017 60.9631" stroke="#D97A5B" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <path d="M321.016 0.37854V121.746" stroke="#D97A5B" strokeWidth="8.87122" strokeMiterlimit="10"/>
-      </g>
-
-      {/* mask1: X pattern left-2 */}
-      <mask id="ts-m1" style={{ maskType: "alpha" } as React.CSSProperties} maskUnits="userSpaceOnUse" x="353" y="0" width="65" height="122">
-        <path d="M417.03 0.18042L353.023 0.18042V121.746L417.03 121.746V0.18042Z" fill="black"/>
-      </mask>
-      <g mask="url(#ts-m1)">
-        <path d="M417.021 0.18042L353.023 121.746" stroke="#D97A5B" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <path d="M417.021 121.746L353.023 0.18042" stroke="#D97A5B" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <path d="M417.021 60.9631L353.023 60.9631" stroke="#D97A5B" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <path d="M385.022 0.37854V121.746" stroke="#D97A5B" strokeWidth="8.87122" strokeMiterlimit="10"/>
-      </g>
-
-      {/* mask2: Chevron left */}
-      <mask id="ts-m2" style={{ maskType: "alpha" } as React.CSSProperties} maskUnits="userSpaceOnUse" x="-31" y="0" width="193" height="122">
-        <path d="M161.012 121.755V0.189453L-31 0.189453V121.755L161.012 121.755Z" fill="black"/>
-      </mask>
-      <g mask="url(#ts-m2)">
-        <path d="M-31.2432 121.746L161.021 60.9631L-31.2432 0.189453" stroke="#A3CDD8" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <path d="M161.02 0.189575L-29.127 60.9633L161.02 121.746" stroke="#A3CDD8" strokeWidth="8.87122" strokeMiterlimit="10"/>
-      </g>
-
-      {/* mask3: Diamond chain left */}
-      <mask id="ts-m3" style={{ maskType: "alpha" } as React.CSSProperties} maskUnits="userSpaceOnUse" x="161" y="0" width="129" height="122">
-        <path d="M289.017 0.18042L161.012 0.18042L161.012 121.746L289.017 121.746V0.18042Z" fill="black"/>
-      </mask>
-      <g mask="url(#ts-m3)">
-        <polygon points="193.011,60.9631 225.01,0.189453 257.009,60.9631 225.01,121.746" stroke="#8FA79D" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <polygon points="225.01,60.9631 257.009,0.189453 289.017,60.9631 257.009,121.746" stroke="#8FA79D" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <polygon points="161.012,60.9631 193.011,0.189453 225.01,60.9631 193.011,121.746" stroke="#8FA79D" strokeWidth="8.87122" strokeMiterlimit="10"/>
-      </g>
-
-      {/* Large circle 1 */}
-      <path d="M480.875 9.19551C511.109 9.19551 535.714 32.4224 535.714 60.972C535.714 89.5216 511.118 112.749 480.875 112.749C450.632 112.749 426.036 89.5216 426.036 60.972C426.036 32.4224 450.632 9.19551 480.875 9.19551ZM480.875 0.189331C445.616 0.189331 417.03 27.406 417.03 60.972C417.03 94.538 445.616 121.755 480.875 121.755C516.134 121.755 544.72 94.538 544.72 60.972C544.72 27.406 516.134 0.189331 480.875 0.189331Z" fill="#EDE6DC"/>
-
-      {/* Stacked rings group 1 */}
-      <path d="M575.72 54.5958C588.005 54.5958 597.995 62.6203 597.995 72.482C597.995 82.3438 588.005 90.3683 575.72 90.3683C563.435 90.3683 553.445 82.3438 553.445 72.482C553.445 62.6203 563.435 54.5958 575.72 54.5958ZM575.72 45.5896C558.601 45.5896 544.72 57.6309 544.72 72.482C544.72 87.3332 558.601 99.3745 575.72 99.3745C592.838 99.3745 606.72 87.3332 606.72 72.482C606.72 57.6309 592.838 45.5896 575.72 45.5896Z" fill="#E3A97C"/>
-      <path d="M575.72 9.19551C588.005 9.19551 597.995 17.22 597.995 27.0818C597.995 36.9435 588.005 44.9681 575.72 44.9681C563.435 44.9681 553.445 36.9435 553.445 27.0818C553.445 17.22 563.435 9.19551 575.72 9.19551ZM575.72 0.189331C558.601 0.189331 544.72 12.2306 544.72 27.0818C544.72 41.933 558.601 53.9742 575.72 53.9742C592.838 53.9742 606.72 41.933 606.72 27.0818C606.72 12.2306 592.838 0.189331 575.72 0.189331Z" fill="#E3A97C"/>
-      <path d="M575.72 76.9671C588.005 76.9671 597.995 84.9916 597.995 94.8534C597.995 104.715 588.005 112.74 575.72 112.74C563.435 112.74 553.445 104.715 553.445 94.8534C553.445 84.9916 563.435 76.9671 575.72 76.9671ZM575.72 67.9609C558.601 67.9609 544.72 80.0022 544.72 94.8534C544.72 109.705 558.601 121.746 575.72 121.746C592.838 121.746 606.72 109.705 606.72 94.8534C606.72 80.0022 592.838 67.9609 575.72 67.9609Z" fill="#E3A97C"/>
-      <path d="M575.72 31.6121C588.005 31.6121 597.995 39.6366 597.995 49.4984C597.995 59.3602 588.005 67.3847 575.72 67.3847C563.435 67.3847 553.445 59.3602 553.445 49.4984C553.445 39.6366 563.435 31.6121 575.72 31.6121ZM575.72 22.606C558.601 22.606 544.72 34.6472 544.72 49.4984C544.72 64.3496 558.601 76.3909 575.72 76.3909C592.838 76.3909 606.72 64.3496 606.72 49.4984C606.72 34.6472 592.838 22.606 575.72 22.606Z" fill="#E3A97C"/>
-
-      {/* mask4: Chevron center-left */}
-      <mask id="ts-m4" style={{ maskType: "alpha" } as React.CSSProperties} maskUnits="userSpaceOnUse" x="606" y="0" width="193" height="122">
-        <path d="M798.731 121.755V0.189453L606.72 0.189453V121.755L798.731 121.755Z" fill="black"/>
-      </mask>
-      <g mask="url(#ts-m4)">
-        <path d="M606.477 121.746L798.74 60.9631L606.477 0.189453" stroke="#A3CDD8" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <path d="M798.74 0.189575L608.593 60.9633L798.74 121.746" stroke="#A3CDD8" strokeWidth="8.87122" strokeMiterlimit="10"/>
-      </g>
-
-      {/* mask5: Diamond chain center */}
-      <mask id="ts-m5" style={{ maskType: "alpha" } as React.CSSProperties} maskUnits="userSpaceOnUse" x="798" y="0" width="129" height="122">
-        <path d="M926.736 0.18042L798.731 0.18042V121.746L926.736 121.746V0.18042Z" fill="black"/>
-      </mask>
-      <g mask="url(#ts-m5)">
-        <polygon points="830.73,60.9631 862.729,0.189453 894.728,60.9631 862.729,121.746" stroke="#8FA79D" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <polygon points="862.729,60.9631 894.728,0.189453 926.736,60.9631 894.728,121.746" stroke="#8FA79D" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <polygon points="798.731,60.9631 830.73,0.189453 862.729,60.9631 830.73,121.746" stroke="#8FA79D" strokeWidth="8.87122" strokeMiterlimit="10"/>
-      </g>
-
-      {/* mask6: X pattern center */}
-      <mask id="ts-m6" style={{ maskType: "alpha" } as React.CSSProperties} maskUnits="userSpaceOnUse" x="926" y="0" width="65" height="122">
-        <path d="M990.743 0.18042L926.736 0.18042V121.746L990.743 121.746V0.18042Z" fill="black"/>
-      </mask>
-      <g mask="url(#ts-m6)">
-        <path d="M990.734 0.18042L926.736 121.746" stroke="#D97A5B" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <path d="M990.734 121.746L926.736 0.18042" stroke="#D97A5B" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <path d="M990.734 60.9631L926.736 60.9631" stroke="#D97A5B" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <path d="M958.735 0.37854V121.746" stroke="#D97A5B" strokeWidth="8.87122" strokeMiterlimit="10"/>
-      </g>
-
-      {/* Large circle 2 */}
-      <path d="M1054.59 9.00618C1084.82 9.00618 1109.43 32.2331 1109.43 60.7827C1109.43 89.3323 1084.83 112.559 1054.59 112.559C1024.35 112.559 999.749 89.3323 999.749 60.7827C999.749 32.2331 1024.35 9.00618 1054.59 9.00618ZM1054.59 0C1019.33 0 990.743 27.2167 990.743 60.7827C990.743 94.3487 1019.33 121.565 1054.59 121.565C1089.85 121.565 1118.43 94.3487 1118.43 60.7827C1118.43 27.2167 1089.85 0 1054.59 0Z" fill="#EDE6DC"/>
-
-      {/* Stacked rings group 2 */}
-      <path d="M1182.43 54.5958C1207.79 54.5958 1228.42 62.6203 1228.42 72.482C1228.42 82.3438 1207.79 90.3683 1182.43 90.3683C1157.07 90.3683 1136.45 82.3438 1136.45 72.482C1136.45 62.6203 1157.07 54.5958 1182.43 54.5958ZM1182.43 45.5896C1147.09 45.5896 1118.43 57.6309 1118.43 72.482C1118.43 87.3332 1147.09 99.3745 1182.43 99.3745C1217.77 99.3745 1246.43 87.3332 1246.43 72.482C1246.43 57.6309 1217.77 45.5896 1182.43 45.5896Z" fill="#E3A97C"/>
-      <path d="M1182.43 9.19551C1207.79 9.19551 1228.42 17.22 1228.42 27.0818C1228.42 36.9435 1207.79 44.9681 1182.43 44.9681C1157.07 44.9681 1136.45 36.9435 1136.45 27.0818C1136.45 17.22 1157.07 9.19551 1182.43 9.19551ZM1182.43 0.189331C1147.09 0.189331 1118.43 12.2306 1118.43 27.0818C1118.43 41.933 1147.09 53.9742 1182.43 53.9742C1217.77 53.9742 1246.43 41.933 1246.43 27.0818C1246.43 12.2306 1217.77 0.189331 1182.43 0.189331Z" fill="#E3A97C"/>
-      <path d="M1182.43 76.9671C1207.79 76.9671 1228.42 84.9916 1228.42 94.8534C1228.42 104.715 1207.79 112.74 1182.43 112.74C1157.07 112.74 1136.45 104.715 1136.45 94.8534C1136.45 84.9916 1157.07 76.9671 1182.43 76.9671ZM1182.43 67.9609C1147.09 67.9609 1118.43 80.0022 1118.43 94.8534C1118.43 109.705 1147.09 121.746 1182.43 121.746C1217.77 121.746 1246.43 109.705 1246.43 94.8534C1246.43 80.0022 1217.77 67.9609 1182.43 67.9609Z" fill="#E3A97C"/>
-      <path d="M1182.43 31.6121C1207.79 31.6121 1228.42 39.6366 1228.42 49.4984C1228.42 59.3602 1207.79 67.3847 1182.43 67.3847C1157.07 67.3847 1136.45 59.3602 1136.45 49.4984C1136.45 39.6366 1157.07 31.6121 1182.43 31.6121ZM1182.43 22.606C1147.09 22.606 1118.43 34.6472 1118.43 49.4984C1118.43 64.3496 1147.09 76.3909 1182.43 76.3909C1217.77 76.3909 1246.43 64.3496 1246.43 49.4984C1246.43 34.6472 1217.77 22.606 1182.43 22.606Z" fill="#E3A97C"/>
-
-      {/* Large circle 3 */}
-      <path d="M1310.28 9.00618C1340.51 9.00618 1365.12 32.2331 1365.12 60.7827C1365.12 89.3323 1340.52 112.559 1310.28 112.559C1280.03 112.559 1255.44 89.3323 1255.44 60.7827C1255.44 32.2331 1280.03 9.00618 1310.28 9.00618ZM1310.28 0C1275.02 0 1246.43 27.2167 1246.43 60.7827C1246.43 94.3487 1275.02 121.565 1310.28 121.565C1345.54 121.565 1374.12 94.3487 1374.12 60.7827C1374.12 27.2167 1345.54 0 1310.28 0Z" fill="#EDE6DC"/>
-
-      {/* mask7: X pattern right-1 */}
-      <mask id="ts-m7" style={{ maskType: "alpha" } as React.CSSProperties} maskUnits="userSpaceOnUse" x="1374" y="0" width="65" height="122">
-        <path d="M1438.13 0.18042L1374.12 0.18042V121.746L1438.13 121.746V0.18042Z" fill="black"/>
-      </mask>
-      <g mask="url(#ts-m7)">
-        <path d="M1438.12 0.18042L1374.12 121.746" stroke="#D97A5B" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <path d="M1438.12 121.746L1374.12 0.18042" stroke="#D97A5B" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <path d="M1438.12 60.9631L1374.12 60.9631" stroke="#D97A5B" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <path d="M1406.12 0.37854V121.746" stroke="#D97A5B" strokeWidth="8.87122" strokeMiterlimit="10"/>
-      </g>
-
-      {/* mask8: Diamond chain right */}
-      <mask id="ts-m8" style={{ maskType: "alpha" } as React.CSSProperties} maskUnits="userSpaceOnUse" x="1438" y="0" width="129" height="122">
-        <path d="M1566.13 0.18042L1438.13 0.18042V121.746L1566.13 121.746V0.18042Z" fill="black"/>
-      </mask>
-      <g mask="url(#ts-m8)">
-        <polygon points="1470.13,60.9631 1502.13,0.189453 1534.13,60.9631 1502.13,121.746" stroke="#8FA79D" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <polygon points="1502.13,60.9631 1534.13,0.189453 1566.13,60.9631 1534.13,121.746" stroke="#8FA79D" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <polygon points="1438.13,60.9631 1470.13,0.189453 1502.13,60.9631 1470.13,121.746" stroke="#8FA79D" strokeWidth="8.87122" strokeMiterlimit="10"/>
-      </g>
-
-      {/* mask9: Chevron right */}
-      <mask id="ts-m9" style={{ maskType: "alpha" } as React.CSSProperties} maskUnits="userSpaceOnUse" x="1566" y="0" width="193" height="122">
-        <path d="M1758.15 121.755V0.189453L1566.13 0.189453V121.755L1758.15 121.755Z" fill="black"/>
-      </mask>
-      <g mask="url(#ts-m9)">
-        <path d="M1565.89 121.746L1758.15 60.9631L1565.89 0.189453" stroke="#A3CDD8" strokeWidth="8.87122" strokeMiterlimit="10"/>
-        <path d="M1758.15 0.189575L1568.01 60.9633L1758.15 121.746" stroke="#A3CDD8" strokeWidth="8.87122" strokeMiterlimit="10"/>
-      </g>
-    </svg>
+      style={{ width: "100%", height: "100%", ...style }}
+    />
   );
 }

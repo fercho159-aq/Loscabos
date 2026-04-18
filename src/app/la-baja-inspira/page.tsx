@@ -88,36 +88,36 @@ export default function LaBajaInspira() {
       <section id="lbi-desc-section" style={{ minHeight: "70vh", display: "flex", alignItems: "center", padding: "2rem", maxWidth: 1200, margin: "0 auto", marginBottom: "3rem" }}>
         <div className="lbi-desc-grid">
           <div data-anim="lbi-image" style={{ display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
-            <Image src="/images/lbi-logo.png" alt="Logo de La Baja Inspira — programa de exhibición de cine documental, FICC Los Cabos" width={280} height={350} style={{ objectFit: "contain", width: "100%", maxWidth: 280, height: "auto" }} />
+            <Image src="/images/lbi-logo.png" alt="Logo de La Baja Inspira — programa de exhibición de cine documental, FICC Los Cabos" width={440} height={550} style={{ objectFit: "contain", width: "100%", maxWidth: 440, height: "auto" }} />
           </div>
           <div>
-            <h2 data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "2rem", color: "#081722", lineHeight: 1.1, marginBottom: "1.25rem", fontWeight: 700 }}>
+            <h2 data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-inter)", fontSize: "2rem", color: "#081722", lineHeight: 1.1, marginBottom: "1.25rem", fontWeight: 900 }}>
               La Baja Inspira
             </h2>
-            <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#081722", lineHeight: 1.25, marginBottom: "1rem", fontWeight: 500 }}>
+            <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-inter)", fontSize: "1.5rem", color: "#081722", lineHeight: 1.25, marginBottom: "1rem", fontWeight: 400 }}>
               La Baja Inspira es un espacio estratégico de exhibición, proyección e incidencia cultural que articula el lenguaje cinematográfico con la investigación científica, las ciencias sociales y los estudios sobre desarrollo territorial.
             </p>
-            <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#081722", lineHeight: 1.25, marginBottom: "1rem", fontWeight: 500 }}>
+            <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-inter)", fontSize: "1.5rem", color: "#081722", lineHeight: 1.25, marginBottom: "1rem", fontWeight: 400 }}>
               Su propósito es posicionar a la región como un referente internacional en documental ambiental y territorial, integrando industria audiovisual, conocimiento y conservación con una visión de futuro sostenible.
             </p>
-            <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#081722", lineHeight: 1.25, marginBottom: "1rem", fontWeight: 600 }}>
+            <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-inter)", fontSize: "1.5rem", color: "#081722", lineHeight: 1.25, marginBottom: "1rem", fontWeight: 400 }}>
               Apertura de convocatoria: 19 de mayo de 2026
             </p>
-            <ul style={{ fontFamily: "var(--font-garamond)", fontSize: "1.35rem", color: "#081722", lineHeight: 1.5, paddingLeft: 0, listStyle: "none" }}>
+            <ul style={{ fontFamily: "var(--font-inter)", fontSize: "1.35rem", color: "#081722", lineHeight: 1.5, paddingLeft: 0, listStyle: "none" }}>
               <li data-anim="lbi-list-item" style={{ marginBottom: "1.2rem", display: "flex", gap: ".75rem", alignItems: "flex-start" }}>
                 <svg data-anim="lbi-svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BDC957" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 4 }}><path d="M7 20h10" /><path d="M10 20c5.5-2.5.8-6.4 3-10" /><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z" /><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z" /></svg>
-                <span data-anim="lbi-stagger-text" style={{ fontWeight: 500 }}><strong>Ciencias Naturales:</strong> Biología Golfo de California, ecología, cambio climático y biodiversidad del desierto.</span>
+                <span data-anim="lbi-stagger-text" style={{ fontWeight: 400 }}><strong>Ciencias Naturales:</strong> Biología Golfo de California, ecología, cambio climático y biodiversidad del desierto.</span>
               </li>
               <li data-anim="lbi-list-item" style={{ marginBottom: "1.2rem", display: "flex", gap: ".75rem", alignItems: "flex-start" }}>
                 <svg data-anim="lbi-svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F4A061" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 4 }}><path d="M2 12h1" /><path d="M6 8v8" /><path d="M10 2v20" /><path d="M14 4v16" /><path d="M18 6v12" /><path d="M22 12h-1" /></svg>
-                <span data-anim="lbi-stagger-text" style={{ fontWeight: 500 }}><strong>Historia y Sociedad:</strong> Antropología, patrimonio cultural y la reconstrucción de la memoria histórica.</span>
+                <span data-anim="lbi-stagger-text" style={{ fontWeight: 400 }}><strong>Historia y Sociedad:</strong> Antropología, patrimonio cultural y la reconstrucción de la memoria histórica.</span>
               </li>
               <li data-anim="lbi-list-item" style={{ display: "flex", gap: ".75rem", alignItems: "flex-start" }}>
                 <svg data-anim="lbi-svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0088C5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 4 }}><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" /><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" /><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" /></svg>
-                <span data-anim="lbi-stagger-text" style={{ fontWeight: 500 }}><strong>Desarrollo del Destino:</strong> Economía azul, pesca responsable y turismo sostenible.</span>
+                <span data-anim="lbi-stagger-text" style={{ fontWeight: 400 }}><strong>Desarrollo del Destino:</strong> Economía azul, pesca responsable y turismo sostenible.</span>
               </li>
             </ul>
-            <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-garamond)", fontSize: "1.5rem", color: "#081722", lineHeight: 1.4, marginTop: "1.5rem", fontWeight: 400 }}>
+            <p data-anim="lbi-typewriter" style={{ fontFamily: "var(--font-inter)", fontSize: "1.5rem", color: "#081722", lineHeight: 1.4, marginTop: "1.5rem", fontWeight: 400 }}>
               El rigor cinematográfico es nuestra base. Buscamos obras donde la calidad narrativa y la investigación profunda se encuentran para definir el futuro de la región.
             </p>
           </div>
@@ -132,7 +132,7 @@ export default function LaBajaInspira() {
       {/* Convocatoria 2026 */}
       <section className="relative w-full bg-[#0A1E23] flex flex-col overflow-hidden">
         <div className="shrink-0 flex flex-col justify-start pt-10 pr-5 pb-10 pl-5 md:pt-[7rem] md:pr-16 md:pb-[15rem] md:pl-[15rem]">
-          <span className="text-[13px] md:text-[14px] font-medium tracking-[.05em] leading-none text-white/40 mb-4 block">
+          <span className="text-[13px] md:text-[14px] font-normal tracking-[.05em] leading-none text-white/40 mb-4 block">
             Convocatoria
           </span>
           <h2 className="text-[42px] md:text-[58px] font-black text-white leading-[1.0] max-w-[520px]">
@@ -173,7 +173,7 @@ export default function LaBajaInspira() {
                   <h3 className="tracking-[-0.03em] leading-[.93] mb-6 text-[#0A1E21]" style={{ fontSize: "clamp(1.4rem, 3vw, 2.2rem)", fontWeight: 900 }}>
                     La convocatoria 2026 acepta exclusivamente:
                   </h3>
-                  <ul style={{ listStyle: "none", padding: 0, margin: 0, fontFamily: "var(--font-garamond)", fontSize: "clamp(1.1rem, 1.6vw, 1.35rem)", lineHeight: 1.6, color: "#0A1E21", fontWeight: 600 }}>
+                  <ul style={{ listStyle: "none", padding: 0, margin: 0, fontFamily: "var(--font-inter)", fontSize: "clamp(1.1rem, 1.6vw, 1.35rem)", lineHeight: 1.6, color: "#0A1E21", fontWeight: 400 }}>
                     <li style={{ marginBottom: "0.4rem" }}>— Largometrajes documentales terminados</li>
                     <li style={{ marginBottom: "0.4rem" }}>— Cortometrajes documentales terminados</li>
                     <li style={{ marginBottom: "0.4rem" }}>— Ensayos cinematográficos de no ficción finalizados</li>
@@ -200,7 +200,7 @@ export default function LaBajaInspira() {
                   <h3 className="tracking-[-0.03em] leading-[.93] mb-6 text-[#0A1E21]" style={{ fontSize: "clamp(1.4rem, 3vw, 2.2rem)", fontWeight: 900 }}>
                     Fechas Clave
                   </h3>
-                  <div style={{ fontFamily: "var(--font-garamond)", fontSize: "clamp(1.1rem, 1.6vw, 1.35rem)", lineHeight: 1.8, color: "#0A1E21", fontWeight: 600 }}>
+                  <div style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.1rem, 1.6vw, 1.35rem)", lineHeight: 1.8, color: "#0A1E21", fontWeight: 400 }}>
                     <p><strong>Apertura:</strong> 05 de mayo, 2026</p>
                     <p><strong>Cierre:</strong> 30 de junio, 2026</p>
                     <p><strong>Selección:</strong> 8 títulos que definen el pulso de la región</p>
@@ -288,7 +288,7 @@ export default function LaBajaInspira() {
               </span>
             ))}
           </h2>
-          <p className="text-white/80 max-w-[820px] leading-[1.5]" style={{ fontSize: "clamp(1.3rem, 1.8vw, 1.75rem)", fontFamily: "var(--font-garamond)" }}>
+          <p className="text-white/80 max-w-[820px] leading-[1.5]" style={{ fontSize: "clamp(1.3rem, 1.8vw, 1.75rem)", fontFamily: "var(--font-inter)" }}>
             Un registro de las obras y autores que, a través de nuestras convocatorias anteriores, han transformado la riqueza del Pacífico Sudcaliforniano en lenguaje cinematográfico con impacto global.
           </p>
         </div>
@@ -302,7 +302,7 @@ export default function LaBajaInspira() {
                   </div>
                   <div className="flip-card-back">
                     <h4>{p.title}</h4>
-                    {p.director && <p style={{ fontWeight: 600, marginBottom: "0.5rem" }}>{p.director}</p>}
+                    {p.director && <p style={{ fontWeight: 400, marginBottom: "0.5rem" }}>{p.director}</p>}
                     <p style={{ fontSize: "0.85rem", lineHeight: 1.6 }}>{p.desc}</p>
                   </div>
                 </div>
@@ -314,7 +314,7 @@ export default function LaBajaInspira() {
 
       {/* Aliados */}
       <section className="aliados-plaque">
-        <p className="aliados-plaque-quote" style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 700 }}>
+        <p className="aliados-plaque-quote" style={{ fontSize: "clamp(1.2rem, 2vw, 1.6rem)", fontWeight: 400 }}>
           Gracias a nuestros patrocinadores y aliados, que hacen posible hacer de La Baja Inspira un motor de exhibición del cine documental.
         </p>
         <div className="aliados-carousel">

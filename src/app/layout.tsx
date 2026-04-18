@@ -5,10 +5,11 @@ import "./globals.css";
 import { FestivalJsonLd } from "@/components/seo/JsonLd";
 import FilmGrainLazy from "@/components/three/FilmGrainLazy";
 
-const printf = localFont({
-  src: "../../public/fonts/PRINTF-Regular.ttf",
-  variable: "--font-printf",
+const inter = localFont({
+  src: "../../public/fonts/Inter-VariableFont_opsz,wght.ttf",
+  variable: "--font-inter",
   display: "swap",
+  weight: "100 900",
 });
 
 export const metadata: Metadata = {
@@ -87,26 +88,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://use.typekit.net" crossOrigin="" />
-        <link rel="preconnect" href="https://p.typekit.net" crossOrigin="" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        {/* Adobe Fonts — Neue Haas Grotesk (non-blocking) */}
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-        <link rel="stylesheet" href="https://use.typekit.net/euv2emd.css" media="print" {...({ onLoad: "this.media='all'" } as unknown as Record<string, string>)} />
-        {/* Google Fonts — EB Garamond (non-blocking) */}
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" media="print" {...({ onLoad: "this.media='all'" } as unknown as Record<string, string>)} />
-        <noscript>
-          {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-          <link rel="stylesheet" href="https://use.typekit.net/euv2emd.css" />
-          {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" />
-        </noscript>
-      </head>
       <body suppressHydrationWarning
-        className={`${printf.variable} antialiased`}
+        className={`${inter.variable} antialiased`}
       >
         {children}
         <FestivalJsonLd />

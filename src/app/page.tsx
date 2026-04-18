@@ -89,7 +89,7 @@ export default function Home() {
           <p
             data-anim="hero-date"
             className="text-center m-0 mb-6 text-[#EDE6DC]"
-            style={{ fontFamily: "var(--font-garamond)", fontSize: "clamp(1.4rem, 2.4vw, 2.1rem)", letterSpacing: ".04em", fontWeight: 500 }}
+            style={{ fontSize: "clamp(1.4rem, 2.4vw, 2.1rem)", letterSpacing: ".04em", fontWeight: 400 }}
           >
             9 — 13 de Diciembre 2026
           </p>
@@ -100,12 +100,12 @@ export default function Home() {
             style={{ width: 511, maxWidth: "90vw" }}
           >
             <div className="flex flex-col gap-[.55rem] text-left">
-              <p data-anim="hero-hashtag" className="text-[1.85rem] font-black tracking-[.14em] text-[#A3CDD8] m-0" style={{ overflow: "hidden", fontFamily: "var(--font-inter)" }}>
+              <p data-anim="hero-hashtag" className="text-[1.85rem] font-black tracking-[.14em] text-[#A3CDD8] m-0" style={{ overflow: "hidden" }}>
                 {"#BeyondTheScreen".split("").map((char, i) => (
                   <span key={i} data-anim="hero-hashtag-char" style={{ display: "inline-block" }}>{char}</span>
                 ))}
               </p>
-              <p data-anim="hero-desc" className="text-[1.35rem] font-semibold text-[#EDE6DC] leading-[1.5] m-0 opacity-75 max-w-[360px]" style={{ fontFamily: "var(--font-garamond)" }}>
+              <p data-anim="hero-desc" className="text-[1.35rem] font-normal text-[#EDE6DC] leading-[1.5] m-0 opacity-75 max-w-[360px]">
                 El cine como punto de <br />encuentro entre la música,<br />
                 el arte digital y la comunidad.
               </p>
@@ -145,7 +145,7 @@ export default function Home() {
             <p
               data-anim="cta-text"
               className="font-black max-w-[440px] leading-[1.3] m-0"
-              style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", color: "var(--color-cream)", fontFamily: "var(--font-inter)" }}
+              style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", color: "var(--color-cream)" }}
             >
               {"Accede a la preventa de boletos y descubre la programación antes que nadie.".split(" ").map((word, wi) => (
                 <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.28em" }}>
@@ -179,7 +179,7 @@ export default function Home() {
       {/* ── IMPULSO A LA INDUSTRIA ── */}
       <section id="impulso-section" className="relative w-full bg-[#0A1E23] flex flex-col overflow-hidden">
         <div className="shrink-0 flex flex-col justify-start pt-10 pr-5 pb-10 pl-5 md:pt-[7rem] md:pr-16 md:pb-[15rem] md:pl-[15rem]">
-          <span data-anim="impulso-tag" className="text-[13px] md:text-[14px] font-medium tracking-[.05em] leading-none text-white/40 mb-4 block">
+          <span data-anim="impulso-tag" className="text-[13px] md:text-[14px] font-normal tracking-[.05em] leading-none text-white/40 mb-4 block">
           </span>
           <h2 data-anim="impulso-title" className="text-[42px] md:text-[58px] font-black text-white leading-[1.0] max-w-[420px]">
             {"Conoce Nuestras Plataformas de Impulso a la Industria del Cine".split(" ").map((word, i) => (
@@ -267,7 +267,7 @@ export default function Home() {
       {/* ── ALIADOS ── */}
       <section id="aliados-section" data-anim="aliados-marquee" className="aliados-plaque">
         <span data-anim="aliados-tag" className="aliados-plaque-tag">Nuestros aliados y patrocinadores</span>
-        <p data-anim="aliados-quote" className="aliados-plaque-quote" style={{ fontSize: "clamp(1.2rem, 2vw, 1.6rem)", fontWeight: 700 }}>
+        <p data-anim="aliados-quote" className="aliados-plaque-quote" style={{ fontSize: "clamp(1.2rem, 2vw, 1.6rem)", fontWeight: 400 }}>
           Juntos, proyectamos al Festival Internacional de Cine y Creatividad de Los Cabos a nivel internacional.
         </p>
         <div className="aliados-carousel">

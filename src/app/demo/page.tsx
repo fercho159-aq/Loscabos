@@ -56,7 +56,7 @@ export default function DemoPage() {
           padding: '0.4rem 1rem',
           textAlign: 'center',
           fontSize: '0.75rem',
-          fontWeight: 600,
+          fontWeight: 400,
           letterSpacing: '0.08em',
           color: '#006666',
           textTransform: 'uppercase',
@@ -90,7 +90,7 @@ export default function DemoPage() {
               background: '#006666',
               color: '#ffffff',
               fontSize: '0.65rem',
-              fontWeight: 600,
+              fontWeight: 400,
               letterSpacing: '0.06em',
               textTransform: 'uppercase',
               padding: '0.3rem 0.6rem',
@@ -125,7 +125,7 @@ export default function DemoPage() {
 
           <div className="flex flex-col items-end" style={{ width: 511, maxWidth: "90vw" }}>
             <p
-              className="font-semibold italic text-[#EDE6DC] tracking-[.04em] mb-1"
+              className="font-normal italic text-[#EDE6DC] tracking-[.04em] mb-1"
               style={{ fontSize: "clamp(.85rem, 1.1vw, .98rem)" }}
             >
               14ª&nbsp;Edición
@@ -143,7 +143,7 @@ export default function DemoPage() {
             style={{ width: 511, maxWidth: "90vw" }}
           >
             <div className="flex flex-col gap-[.55rem] text-left">
-              <p className="text-[.78rem] font-bold tracking-[.14em] uppercase text-[#A3CDD8] m-0">
+              <p className="text-[.78rem] font-black tracking-[.14em] uppercase text-[#A3CDD8] m-0">
                 <span id="hero-hashtag-text">#BEYONDTHESCREEN</span>
               </p>
               <p className="text-[.72rem] font-normal text-[#A3CDD8] leading-[1.65] m-0 opacity-75 max-w-[260px]">
@@ -227,10 +227,10 @@ export default function DemoPage() {
       {/* ── IMPULSO A LA INDUSTRIA ── */}
       <section id="plataformas" className="relative w-full bg-[#0A1E23] flex flex-col overflow-hidden py-24">
         <div className="shrink-0 flex flex-col justify-start pt-[7rem] pr-16 pb-[15rem] pl-[15rem]">
-          <span className="text-[14px] font-medium tracking-[.05em] leading-none text-white/40 mb-4 block">
+          <span className="text-[14px] font-normal tracking-[.05em] leading-none text-white/40 mb-4 block">
             Apoya a la Industria
           </span>
-          <h2 className="text-[32px] font-medium text-white leading-none max-w-[260px]">
+          <h2 className="text-[32px] font-black text-white leading-none max-w-[260px]">
             Conoce <br />Nuestras<br />
             Plataformas<br /> de Impulso<br />
             a la Industria<br /> del Cine

@@ -116,7 +116,7 @@ export default function Navbar() {
                   style={{
                     display: "flex", alignItems: "center", justifyContent: "space-between",
                     width: "100%", padding: "0.75rem 0",
-                    fontFamily: "var(--font-inter)", fontWeight: 600,
+                    fontFamily: "var(--font-inter)", fontWeight: 900,
                     fontSize: "0.95rem", textTransform: "uppercase", color: "rgba(255,255,255,.85)",
                     letterSpacing: "0.04em", background: "none", border: "none",
                     borderBottom: "1px solid rgba(255,255,255,.06)", cursor: "pointer",
@@ -136,7 +136,7 @@ export default function Navbar() {
                     onClick={() => setMobileOpen(false)}
                     style={{
                       display: "block", padding: "0.6rem 0 0.6rem 1.25rem",
-                      fontFamily: "var(--font-inter)", fontWeight: 500,
+                      fontFamily: "var(--font-inter)", fontWeight: 900,
                       fontSize: "0.85rem", textTransform: "uppercase", color: "rgba(255,255,255,.7)",
                       letterSpacing: "0.04em", textDecoration: "none",
                       borderBottom: "1px solid rgba(255,255,255,.04)",
@@ -153,7 +153,7 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 style={{
                   display: "block", padding: "0.75rem 0",
-                  fontFamily: "var(--font-inter)", fontWeight: 600,
+                  fontFamily: "var(--font-inter)", fontWeight: 900,
                   fontSize: "0.95rem", textTransform: "uppercase", color: "rgba(255,255,255,.85)",
                   letterSpacing: "0.04em", textDecoration: "none",
                   borderBottom: "1px solid rgba(255,255,255,.06)",
@@ -172,7 +172,7 @@ export default function Navbar() {
               display: "block", marginTop: "1rem", padding: "0.7rem 1.5rem",
               background: "transparent", border: "1.5px solid #C47A3D", color: "#ffffff",
               textAlign: "center",
-              fontSize: "0.82rem", fontWeight: 600, textTransform: "uppercase",
+              fontSize: "0.82rem", fontWeight: 900, textTransform: "uppercase",
               letterSpacing: "0.1em", textDecoration: "none",
             }}
           >

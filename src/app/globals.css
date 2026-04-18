@@ -23,9 +23,7 @@ body {
   --color-brown-light: #C47A3D;
   --color-gray: #9D9D9C;
   --color-teal: #006666;
-  --font-inter: "neue-haas-grotesk-display", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-neue: "neue-haas-grotesk-display", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-garamond: "EB Garamond", "Garamond", "Georgia", serif;
+  --font-sans: var(--font-inter), "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 @layer base {
@@ -43,13 +41,14 @@ body {
   }
 
   body {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
+    font-weight: 400;
     background: var(--color-cream);
     color: var(--color-navy);
     overflow-x: hidden;
   }
 
-  /* Headings, nav, buttons, labels, titles stay in Neue Haas Grotesk */
+  /* Inter everywhere. Binary weights: 900 for titles/nav/buttons, 400 for body, 700 for emphasis. */
   h1, h2, h3, h4, h5, h6,
   nav, nav a,
   button,
@@ -81,7 +80,6 @@ body {
   .conv-archive-title,
   .location-title,
   .aliados-plaque-title,
-  .aliados-plaque-quote,
   .prensa-quotes-title,
   .ffgf-legado-eyebrow,
   .ffgf-legado-title,
@@ -91,8 +89,11 @@ body {
   .impulso-link,
   .cta-button,
   .hashtag-band-overlap h2 {
-    font-family: var(--font-inter) !important;
+    font-family: var(--font-inter);
+    font-weight: 900;
   }
+
+  strong, b { font-weight: 700; }
 }
 
 @layer components {
@@ -140,8 +141,8 @@ body {
   }
 
   .nav-links a {
-    font-family: var(--font-garamond);
-    font-weight: 500;
+    font-family: var(--font-inter);
+    font-weight: 900;
     font-size: .88rem;
     letter-spacing: .1em;
     text-transform: uppercase;
@@ -204,8 +205,8 @@ body {
   .nav-dropdown-link {
     display: block;
     padding: 0.55rem 1.25rem;
-    font-family: var(--font-garamond);
-    font-weight: 500;
+    font-family: var(--font-inter);
+    font-weight: 900;
     font-size: 0.7rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -224,8 +225,8 @@ body {
     background: transparent;
     border: 1.5px solid #C47A3D;
     color: #ffffff;
-    font-family: var(--font-garamond);
-    font-weight: 600;
+    font-family: var(--font-inter);
+    font-weight: 900;
     font-size: .82rem;
     letter-spacing: .1em;
     text-transform: uppercase;
@@ -253,8 +254,8 @@ body {
      IMPULSO LINK
      ══════════════════════════════════════════ */
   .impulso-link {
-    font-family: var(--font-garamond);
-    font-weight: 600;
+    font-family: var(--font-inter);
+    font-weight: 900;
     font-size: .72rem;
     letter-spacing: .16em;
     text-transform: uppercase;
@@ -292,8 +293,8 @@ body {
     background: transparent;
     border: none;
     color: #ffffff;
-    font-family: var(--font-garamond);
-    font-weight: 600;
+    font-family: var(--font-inter);
+    font-weight: 900;
     font-size: .95rem;
     letter-spacing: .12em;
     text-transform: uppercase;
@@ -338,7 +339,7 @@ body {
   }
 
   .festival-heading {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 900;
     text-transform: uppercase;
@@ -349,7 +350,7 @@ body {
   }
 
   .festival-intro {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: clamp(.95rem, 1.3vw, 1.1rem);
     color: var(--color-navy);
     text-align: center;
@@ -397,7 +398,7 @@ body {
   }
 
   .festival-row-title {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: clamp(1.5rem, 3vw, 2.2rem);
     font-weight: 900;
     text-transform: uppercase;
@@ -407,7 +408,7 @@ body {
   }
 
   .festival-row-text p {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: clamp(.9rem, 1.2vw, 1.05rem);
     color: var(--color-navy);
     line-height: 1.7;
@@ -415,9 +416,9 @@ body {
   }
 
   .festival-row-link {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .85rem;
-    font-weight: 700;
+    font-weight: 900;
     letter-spacing: .15em;
     text-transform: uppercase;
     color: var(--color-navy);
@@ -443,9 +444,9 @@ body {
   }
 
   .newsletter label {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .85rem;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: .15em;
     text-transform: uppercase;
     color: var(--color-navy);
@@ -461,7 +462,7 @@ body {
     background: rgba(0, 0, 0, .15);
     color: var(--color-navy);
     padding: 0 1rem;
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .9rem;
     outline: none;
     transition: border-color .2s;
@@ -481,9 +482,9 @@ body {
     background: var(--color-acid);
     border: none;
     cursor: pointer;
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .8rem;
-    font-weight: 700;
+    font-weight: 900;
     letter-spacing: .1em;
     text-transform: uppercase;
     color: var(--color-navy);
@@ -505,9 +506,9 @@ body {
   }
 
   .aliados-plaque-tag {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: clamp(2.4rem, 4vw, 3.4rem);
-    font-weight: 400;
+    font-weight: 900 !important;
     letter-spacing: .02em;
     text-transform: none;
     color: var(--color-navy);
@@ -517,9 +518,9 @@ body {
   }
 
   .aliados-plaque-quote {
-    font-family: var(--font-garamond);
-    font-size: clamp(1.6rem, 3.2vw, 2.8rem);
-    font-weight: 700;
+    font-family: var(--font-inter);
+    font-size: clamp(0.95rem, 1.3vw, 1.15rem) !important;
+    font-weight: 400;
     color: var(--color-navy);
     max-width: 900px;
     margin-left: auto !important;
@@ -530,9 +531,9 @@ body {
   }
 
   .aliados-plaque-title {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .8rem;
-    font-weight: 700;
+    font-weight: 900;
     letter-spacing: .15em;
     text-transform: uppercase;
     color: var(--color-navy);
@@ -546,16 +547,16 @@ body {
   }
 
   .hashtag-band-overlap h2 {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: clamp(1.5rem, 4vw, 2.5rem);
-    font-weight: 800;
+    font-weight: 900;
     color: var(--color-acid);
     letter-spacing: .04em;
     margin-bottom: .5rem;
   }
 
   .hashtag-band-overlap p {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .9rem;
     color: rgba(246, 237, 219, .6);
     letter-spacing: .02em;
@@ -654,7 +655,7 @@ body {
   .footer-col h4 {
     font-family: var(--font-inter) !important;
     font-size: .8rem !important;
-    font-weight: 700 !important;
+    font-weight: 900 !important;
     letter-spacing: .12em !important;
     text-transform: uppercase !important;
     color: #A3CDD8 !important;
@@ -811,7 +812,7 @@ body {
   }
 
   .festival-text-title {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: clamp(3rem, 8vw, 5.5rem);
     color: var(--color-cream);
     letter-spacing: .02em;
@@ -820,7 +821,7 @@ body {
   }
 
   .festival-text p {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .9rem;
     color: rgba(246, 237, 219, .55);
     line-height: 1.75;
@@ -847,7 +848,7 @@ body {
 
   .quad-cell h3 {
     font-weight: 900;
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     letter-spacing: 0.04em;
     text-transform: uppercase;
     font-size: clamp(1.3rem, 8.5vw, 1.7rem);
@@ -855,7 +856,7 @@ body {
   }
 
   .quad-cell p {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .85rem;
     line-height: 1.65;
     max-width: 380px;
@@ -935,7 +936,7 @@ body {
   }
 
   .location-title {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: clamp(3rem, 8vw, 5.5rem);
     color: var(--color-navy);
     letter-spacing: .02em;
@@ -961,7 +962,7 @@ body {
   }
 
   .location-band p {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .9rem;
     color: rgba(246, 237, 219, .45);
     line-height: 1.75;
@@ -980,8 +981,8 @@ body {
   .mobile-menu a {
     display: block;
     padding: 0.75rem 0;
-    font-family: var(--font-garamond);
-    font-weight: 600;
+    font-family: var(--font-inter);
+    font-weight: 900;
     font-size: 0.85rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -1037,17 +1038,17 @@ body {
   }
 
   .page-hero-label {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .8rem;
     letter-spacing: .3em;
-    font-weight: 600;
+    font-weight: 900;
     color: var(--color-acid);
     text-transform: uppercase;
     margin-bottom: 1rem;
   }
 
   .page-hero-title {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: clamp(3rem, 9vw, 6.5rem);
     font-weight: 900;
     line-height: .92;
@@ -1057,7 +1058,7 @@ body {
   }
 
   .page-hero-subtitle {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: 1rem;
     color: rgba(246, 237, 219, .6);
     margin-top: 1.2rem;
@@ -1126,7 +1127,7 @@ body {
   }
 
   .plat-number {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: 3.5rem;
     color: rgba(8, 23, 34, .1);
     line-height: 1;
@@ -1135,7 +1136,7 @@ body {
   }
 
   .plat-title {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: clamp(1.8rem, 4vw, 2.8rem);
     color: var(--color-navy);
     letter-spacing: .02em;
@@ -1144,9 +1145,9 @@ body {
   }
 
   .plat-subtitle {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .85rem;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: .1em;
     text-transform: uppercase;
     color: rgba(8, 23, 34, .45);
@@ -1154,7 +1155,7 @@ body {
   }
 
   .plat-desc {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .9rem;
     color: rgba(8, 23, 34, .6);
     line-height: 1.75;
@@ -1164,9 +1165,9 @@ body {
 
   .plat-cta {
     display: inline-block;
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .85rem;
-    font-weight: 700;
+    font-weight: 900;
     letter-spacing: .1em;
     text-transform: uppercase;
     color: var(--color-navy);
@@ -1231,7 +1232,7 @@ body {
   }
 
   .plat-floating-number {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: 5rem;
     color: rgba(8, 23, 34, .08);
     line-height: .8;
@@ -1273,7 +1274,7 @@ body {
   }
 
   .prog-featured-title {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     color: var(--color-navy);
     letter-spacing: .02em;
@@ -1282,7 +1283,7 @@ body {
   }
 
   .prog-featured-desc {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .9rem;
     color: rgba(8, 23, 34, .6);
     line-height: 1.75;
@@ -1317,9 +1318,9 @@ body {
 
   .prog-tag-brand {
     display: inline-block;
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .7rem;
-    font-weight: 700;
+    font-weight: 900;
     letter-spacing: .15em;
     text-transform: uppercase;
     color: var(--color-white);
@@ -1340,7 +1341,7 @@ body {
   }
 
   .prog-cta-title {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: clamp(2rem, 5vw, 3.5rem);
     color: var(--color-cream);
     letter-spacing: .02em;
@@ -1349,7 +1350,7 @@ body {
   }
 
   .prog-cta-text {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .9rem;
     color: rgba(246, 237, 219, .5);
     line-height: 1.75;
@@ -1366,16 +1367,16 @@ body {
   }
 
   .prog-dates-label {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .75rem;
-    font-weight: 700;
+    font-weight: 900;
     letter-spacing: .2em;
     text-transform: uppercase;
     color: var(--color-acid);
   }
 
   .prog-dates-numbers {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: 3rem;
     color: var(--color-cream);
     letter-spacing: .08em;
@@ -1399,16 +1400,16 @@ body {
   }
 
   .prog-stat-number {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: 3.5rem;
     color: var(--color-acid);
     line-height: 1;
   }
 
   .prog-stat-label {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .75rem;
-    font-weight: 600;
+    font-weight: 900;
     letter-spacing: .15em;
     text-transform: uppercase;
     color: rgba(246, 237, 219, .4);
@@ -1454,7 +1455,7 @@ body {
   }
 
   .comunidad-card-title {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: clamp(1.5rem, 3vw, 2rem);
     color: var(--color-navy);
     letter-spacing: .02em;
@@ -1463,7 +1464,7 @@ body {
   }
 
   .comunidad-card-desc {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .85rem;
     color: rgba(8, 23, 34, .55);
     line-height: 1.7;
@@ -1472,9 +1473,9 @@ body {
   }
 
   .comunidad-card-link {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .8rem;
-    font-weight: 700;
+    font-weight: 900;
     letter-spacing: .1em;
     text-transform: uppercase;
     color: var(--color-navy);
@@ -1501,7 +1502,7 @@ body {
   }
 
   .comunidad-join-title {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: clamp(2rem, 5vw, 3.5rem);
     color: var(--color-acid);
     letter-spacing: .02em;
@@ -1510,7 +1511,7 @@ body {
   }
 
   .comunidad-join-text {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .9rem;
     color: rgba(246, 237, 219, .5);
     line-height: 1.75;
@@ -1576,7 +1577,7 @@ body {
   }
 
   .bento-card-title {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: clamp(1.5rem, 3vw, 2.2rem);
     color: var(--color-navy);
     letter-spacing: .02em;
@@ -1585,7 +1586,7 @@ body {
   }
 
   .bento-card-desc {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .85rem;
     color: rgba(8, 23, 34, .55);
     line-height: 1.7;
@@ -1594,9 +1595,9 @@ body {
   }
 
   .bento-card-link {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .8rem;
-    font-weight: 700;
+    font-weight: 900;
     letter-spacing: .1em;
     text-transform: uppercase;
     color: var(--color-navy);
@@ -1624,7 +1625,7 @@ body {
   }
 
   .marquee-text {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: 1.3rem;
     letter-spacing: .06em;
     color: var(--color-navy);
@@ -1646,9 +1647,9 @@ body {
   }
 
   .conv-color-status {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .7rem;
-    font-weight: 700;
+    font-weight: 900;
     letter-spacing: .12em;
     text-transform: uppercase;
     color: var(--color-white);
@@ -1657,7 +1658,7 @@ body {
   }
 
   .conv-color-deadline {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .8rem;
     color: rgba(8, 23, 34, .5);
   }
@@ -1674,7 +1675,7 @@ body {
   }
 
   .conv-archive-title {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: clamp(1.8rem, 4vw, 2.8rem);
     color: var(--color-cream);
     letter-spacing: .02em;
@@ -1683,7 +1684,7 @@ body {
   }
 
   .conv-archive-text {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .9rem;
     color: rgba(246, 237, 219, .5);
     line-height: 1.75;
@@ -1691,9 +1692,9 @@ body {
   }
 
   .conv-archive-link {
-    font-family: var(--font-garamond);
+    font-family: var(--font-inter);
     font-size: .85rem;
-    font-weight: 700;
+    font-weight: 900;
     letter-spacing: .1em;
     text-transform: uppercase;
     color: var(--color-acid);
@@ -1804,7 +1805,7 @@ body {
 }
 
 .section-text-inner p {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: .92rem;
   line-height: 1.8;
   color: #081722;
@@ -1812,9 +1813,9 @@ body {
 }
 
 .section-heading {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: clamp(1.4rem, 3vw, 2rem);
-  font-weight: 800;
+  font-weight: 900;
   color: var(--color-navy);
   margin-bottom: 1.5rem;
   letter-spacing: .02em;
@@ -1828,7 +1829,7 @@ body {
 }
 
 .section-list li {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: .9rem;
   line-height: 1.7;
   color: #081722;
@@ -1847,7 +1848,7 @@ body {
 }
 
 .section-dates p {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: .9rem;
   color: var(--color-navy);
   margin-bottom: .3rem;
@@ -1870,7 +1871,7 @@ body {
 
 .section-highlight p,
 .section-highlight-inner>p {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: .92rem;
   line-height: 1.8;
   color: #081722;
@@ -1886,9 +1887,9 @@ body {
 }
 
 .ruta-cities {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: .95rem;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--color-acid);
   letter-spacing: .04em;
   margin-top: .5rem;
@@ -1920,22 +1921,22 @@ body {
 }
 
 .profile-card h4 {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: .95rem;
-  font-weight: 700;
+  font-weight: 900;
   color: var(--color-navy);
   margin-bottom: .4rem;
 }
 
 .profile-card p {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: .8rem;
   line-height: 1.6;
   color: #081722;
 }
 
 .profile-director {
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: .3rem;
 }
 
@@ -1975,9 +1976,9 @@ body {
 
 .ffgf-legado-eyebrow {
   display: inline-block;
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 900;
   letter-spacing: .02em;
   text-transform: none;
   color: var(--color-acid);
@@ -1985,9 +1986,9 @@ body {
 }
 
 .ffgf-legado-title {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 800;
+  font-weight: 900;
   color: var(--color-navy);
   letter-spacing: -.02em;
   line-height: 1.1;
@@ -1995,7 +1996,7 @@ body {
 }
 
 .ffgf-legado-desc {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: .95rem;
   line-height: 1.7;
   color: rgba(8, 23, 34, .6);
@@ -2024,9 +2025,9 @@ body {
 }
 
 .ffgf-film-number {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: 2.5rem;
-  font-weight: 800;
+  font-weight: 900;
   color: rgba(189, 201, 87, .3);
   line-height: 1;
   margin-bottom: .75rem;
@@ -2035,9 +2036,9 @@ body {
 
 .ffgf-film-tag {
   display: inline-block;
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: .65rem;
-  font-weight: 600;
+  font-weight: 900;
   letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--color-navy);
@@ -2048,24 +2049,24 @@ body {
 }
 
 .ffgf-film-title {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 900;
   color: var(--color-navy);
   margin-bottom: .35rem;
   line-height: 1.3;
 }
 
 .ffgf-film-director {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: .8rem;
-  font-weight: 500;
+  font-weight: 400;
   color: rgba(8, 23, 34, .6);
   margin-bottom: .6rem;
 }
 
 .ffgf-film-desc {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: .8rem;
   line-height: 1.6;
   color: rgba(8, 23, 34, .5);
@@ -2077,14 +2078,14 @@ body {
 }
 
 .lbi-page .page-hero-title {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-weight: 900;
   text-transform: uppercase;
   color: var(--color-orange);
 }
 
 .lbi-page .section-heading {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -2130,14 +2131,14 @@ body {
 }
 
 .comite-slide h4 {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 900;
   margin-bottom: 0.4rem;
 }
 
 .comite-slide p {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: 0.75rem;
   line-height: 1.5;
   color: #555;
@@ -2181,7 +2182,7 @@ body {
 
 .lbi-page .section-text-inner p,
 .lbi-page .section-highlight-inner p {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .lbi-page .cta-button {
@@ -2257,15 +2258,15 @@ body {
 }
 
 .flip-card-back h4 {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: .9rem;
-  font-weight: 700;
+  font-weight: 900;
   margin-bottom: .5rem;
   color: #F6EDDB !important;
 }
 
 .flip-card-back p {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   color: rgba(246, 237, 219, .85) !important;
 }
 
@@ -2301,19 +2302,19 @@ body {
 }
 
 .ffgf-page .page-hero-title {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .ffgf-page .section-heading,
 .ffgf-page .ffgf-legado-title {
-  font-family: var(--font-printf);
+  font-family: var(--font-inter);
   text-transform: uppercase;
 }
 
 .ffgf-page .section-text-inner p {
-  font-weight: 300;
+  font-weight: 400;
   color: #000000;
 }
 
@@ -2380,9 +2381,9 @@ body {
   background: rgba(255, 255, 255, .15);
   color: #fff;
   display: inline-block;
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: .6rem;
-  font-weight: 700;
+  font-weight: 900;
   text-transform: uppercase;
   letter-spacing: .08em;
   padding: .25rem .5rem;
@@ -2397,23 +2398,23 @@ body {
 
 /* ── FON ── */
 .fon-page .page-hero-title {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .fon-page .section-heading {
-  font-family: var(--font-printf);
+  font-family: var(--font-inter);
   text-transform: uppercase;
 }
 
 .fon-page .section-text-inner p {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* ── PRENSA ── */
 .prensa-page .section-heading {
-  font-weight: 800;
+  font-weight: 900;
   text-transform: uppercase;
 }
 
@@ -2451,9 +2452,9 @@ body {
 }
 
 .aliado-card p {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: .85rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--color-navy);
 }
 
@@ -2517,9 +2518,9 @@ body {
 }
 
 .medio-card p {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: .9rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--color-cream);
 }
 
@@ -2568,9 +2569,9 @@ body {
 }
 
 .prensa-quotes-label {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: .72rem;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: .2em;
   text-transform: uppercase;
   color: var(--color-navy);
@@ -2580,7 +2581,7 @@ body {
 .prensa-quotes-title {
   font-family: var(--font-inter);
   font-size: clamp(1.8rem, 4vw, 3rem);
-  font-weight: 800;
+  font-weight: 900;
   color: var(--color-navy);
   letter-spacing: .02em;
   margin-bottom: 1rem;
@@ -2588,13 +2589,13 @@ body {
 }
 
 .prensa-quotes-subtitle {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: .92rem;
   color: #081722;
   max-width: 560px;
   margin: 0 auto 3rem;
   line-height: 1.7;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* Carousel wrapper with fade edges */
@@ -2729,7 +2730,7 @@ body {
 }
 
 .prensa-quote-text {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: 1.15rem;
   font-weight: 400;
   line-height: 1.6;
@@ -2762,17 +2763,17 @@ body {
 }
 
 .prensa-quote-medio {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--color-navy);
   letter-spacing: .04em;
 }
 
 .prensa-quote-link {
-  font-family: var(--font-garamond);
+  font-family: var(--font-inter);
   font-size: .9rem;
-  font-weight: 600;
+  font-weight: 900;
   letter-spacing: .08em;
   text-transform: uppercase;
   text-decoration: none;
