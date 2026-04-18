@@ -7,58 +7,70 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const STATS = [
+  { num: "14",   label: "Edición"    },
+  { num: "05",   label: "Días"       },
+  { num: "04",   label: "Disciplinas" },
+  { num: "9–13", label: "Dic · 2026" },
+];
+
 export default function ElFestivalIntroScroll() {
   const sectionRef = useRef<HTMLElement>(null);
-  const row1Ref = useRef<HTMLDivElement>(null);
-  const row2Ref = useRef<HTMLDivElement>(null);
   const bgSvgRef = useRef<HTMLImageElement>(null);
-  const iconRef = useRef<HTMLImageElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
+  const railRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       const section = sectionRef.current;
       const bgSvg = bgSvgRef.current;
-      const icon = iconRef.current;
       const textEl = textRef.current;
-      if (!section || !bgSvg || !icon || !textEl) return;
+      const railEl = railRef.current;
+      if (!section || !bgSvg || !textEl || !railEl) return;
+
+      const chars = Array.from(section.querySelectorAll<HTMLElement>(".title-char"));
+      const stats = Array.from(railEl.querySelectorAll<HTMLElement>(".ef-stat"));
+      const paras = Array.from(textEl.querySelectorAll<HTMLElement>("[data-anim='intro-para']"));
+
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (reduce) {
+        gsap.set(bgSvg, { opacity: 1, scale: 1 });
+        if (chars.length) gsap.set(chars, { opacity: 1, y: 0, rotateX: 0 });
+        if (stats.length) gsap.set(stats, { opacity: 1, y: 0 });
+        if (paras.length) gsap.set(paras, { opacity: 1, y: 0 });
+        return;
+      }
 
       const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: section,
-          start: "top 80%",
-          once: true,
-        },
+        scrollTrigger: { trigger: section, start: "top 80%", once: true },
       });
 
-      const chars = Array.from(section.querySelectorAll(".title-char"));
-
-      tl.from(bgSvg, { scale: 1.05, opacity: 0, duration: 0.9, ease: "power3.out" }, 0)
-        .from(icon, { scale: 0, opacity: 0, rotation: -45, duration: 0.7, ease: "back.out(2)", force3D: true }, 0.2);
+      tl.from(bgSvg, { scale: 1.05, opacity: 0, duration: 0.9, ease: "power3.out" }, 0);
 
       if (chars.length) {
         tl.from(chars, {
-          opacity: 0,
-          y: -60,
-          rotateX: 90,
+          opacity: 0, y: -60, rotateX: 90,
           transformOrigin: "50% 0% -10px",
-          duration: 0.65,
-          stagger: 0.03,
-          ease: "back.out(2.5)",
-          force3D: true,
+          duration: 0.65, stagger: 0.03,
+          ease: "back.out(2.5)", force3D: true,
         }, 0.1);
       }
 
-      const words = Array.from(textEl.querySelectorAll(".body-word"));
-      if (words.length) {
-        tl.from(words, {
-          opacity: 0,
-          y: 20,
-          duration: 0.5,
-          stagger: 0.025,
-          ease: "power3.out",
-          force3D: true,
-        }, 0.35);
+      if (stats.length) {
+        tl.from(stats, {
+          opacity: 0, y: 12,
+          duration: 0.5, stagger: 0.08,
+          ease: "power3.out", force3D: true,
+        }, 0.45);
+      }
+
+      if (paras.length) {
+        tl.from(paras, {
+          opacity: 0, y: 14,
+          duration: 0.55, stagger: 0.12,
+          ease: "power3.out", force3D: true,
+        }, 0.6);
       }
     });
 
@@ -66,11 +78,14 @@ export default function ElFestivalIntroScroll() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-[#0A1E23] pt-[88px] md:h-screen md:overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="ef-intro bg-[color:var(--ef-ink)] pt-[88px] md:h-screen md:overflow-hidden"
+    >
       <div className="flex flex-col md:h-full">
 
-        {/* ── Row 1: [2/3 blue+texto | 1/3 water] — apilado en móvil ── */}
-        <div ref={row1Ref} className="flex flex-col md:flex-row flex-none h-auto md:h-[31vh] overflow-hidden">
+        {/* ── Row 1: [2/3 blue+texto | 1/3 water] — intacto ── */}
+        <div className="flex flex-col md:flex-row flex-none h-auto md:h-[31vh] overflow-hidden">
 
           {/* Panel A: 2/3 — blue bg + título */}
           <div className="relative w-full md:w-2/3 h-[45vw] md:h-full overflow-hidden flex items-end pb-6 px-5 md:pb-10 md:px-14">
@@ -116,39 +131,51 @@ export default function ElFestivalIntroScroll() {
 
         </div>
 
-        {/* ── Row 2: [1/2 circle SVG | 1/2 body text] — apilado en móvil ── */}
-        <div ref={row2Ref} className="flex flex-col md:flex-row bg-[#0A1E23] md:flex-1 md:min-h-0">
+        {/* ── Row 2: [rail stats | párrafos] ── */}
+        <div className="flex flex-col md:flex-row bg-[color:var(--ef-ink)] md:flex-1 md:min-h-0">
 
-          {/* Panel C: 1/2 — circle outline top-left */}
-          <div className="w-full md:w-1/3 h-auto md:h-full flex items-start justify-start p-5 md:p-10">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              ref={iconRef}
-              src="/images/el-festival/icon BTS.svg"
-              alt=""
-              aria-hidden="true"
-              className="w-16 h-16 md:w-[128px] md:h-[127px] will-change-transform"
-            />
-          </div>
+          {/* Panel C: STATS RAIL — mobile 2×2 arriba, desktop 1/3 col izq full-height */}
+          <aside
+            ref={railRef}
+            aria-label="Datos clave del festival"
+            className="ef-rail
+                       w-full md:w-1/3 md:h-full
+                       grid grid-cols-2 md:flex md:flex-col md:justify-center
+                       gap-0
+                       px-5 py-6 md:px-10 md:py-10
+                       md:border-r md:border-[color-mix(in_srgb,var(--ef-cream-dim)_18%,transparent)]"
+          >
+            {STATS.map((s, i) => (
+              <div
+                key={i}
+                className="ef-stat
+                           flex flex-col items-start gap-1.5
+                           px-2 py-5
+                           md:px-0 md:py-6"
+              >
+                <span className="ef-stat-num">{s.num}</span>
+                <span className="ef-stat-label">{s.label}</span>
+              </div>
+            ))}
+          </aside>
 
-          {/* Panel D: 1/2 — body text */}
-          <div className="w-full md:w-2/3 h-auto md:h-full flex items-center py-6 px-5 md:py-8 md:pr-16 md:pl-4">
-            <div ref={textRef} className="text-cream font-normal text-[clamp(1.1rem,1.6vw,1.375rem)] leading-relaxed tracking-normal w-full text-left" style={{ fontFamily: "var(--font-inter)" }}>
-
-              <p className="mb-5">
-                {"Tras la expansión de nuestra visión en 2025, el Festival evoluciona. En nuestra 14ª edición —del 9 al 13 de diciembre de 2026— nos consolidamos como la plataforma de vinculación para la industria audiovisual en México.".split(" ").map((word, i) => (
-                  <span key={`b${i}`} className="body-word">{word}{" "}</span>
-                ))}
+          {/* Panel D: PÁRRAFOS — copy verbatim, color-pop en P2 */}
+          <div className="w-full md:w-2/3 md:h-full flex items-center py-8 px-5 md:py-10 md:pr-16 md:pl-10">
+            <div
+              ref={textRef}
+              className="text-[color:var(--ef-cream)] font-normal text-[clamp(1.1rem,1.55vw,1.375rem)] leading-relaxed tracking-normal w-full max-w-[62ch] text-left"
+              style={{ fontFamily: "var(--font-inter)" }}
+            >
+              <p data-anim="intro-para" className="mb-6 md:mb-7">
+                Tras la expansión de nuestra visión en 2025, el Festival evoluciona. En nuestra 14ª edición —del 9 al 13 de diciembre de 2026— nos consolidamos como la plataforma de vinculación para la industria audiovisual en México.
               </p>
-              <p className="mb-5">
-                {"Somos el punto de encuentro donde el cine converge con la música, el arte digital y la animación. Desde Los Cabos, conectamos el talento mexicano con el circuito internacional.".split(" ").map((word, i) => (
-                  <span key={`c${i}`} className="body-word">{word}{" "}</span>
-                ))}
+
+              <p data-anim="intro-para" className="mb-6 md:mb-7">
+                Somos el punto de encuentro donde el <span className="ef-kw-cine">cine</span> converge con la <span className="ef-kw-musica">música</span>, el <span className="ef-kw-arte-digital">arte digital</span> y la <span className="ef-kw-animacion">animación</span>. Desde Los Cabos, conectamos el talento mexicano con el circuito internacional.
               </p>
-              <p>
-                {"A través de un modelo multisede que integra naturaleza, hospitalidad y pensamiento creativo, generamos un entorno propicio para la circulación de obras, el encuentro profesional y la construcción de redes internacionales.".split(" ").map((word, i) => (
-                  <span key={`d${i}`} className="body-word">{word}{" "}</span>
-                ))}
+
+              <p data-anim="intro-para">
+                A través de un modelo multisede que integra naturaleza, hospitalidad y pensamiento creativo, generamos un entorno propicio para la circulación de obras, el encuentro profesional y la construcción de redes internacionales.
               </p>
             </div>
           </div>
