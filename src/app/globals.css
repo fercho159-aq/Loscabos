@@ -738,7 +738,19 @@ body {
     bottom: -55px;
   }
 
+  /* Texture strips — reduce on mobile so they don't cover content */
   @media (max-width: 768px) {
+    .texture-strip-overlay {
+      height: 60px !important;
+      opacity: 0.25 !important;
+      z-index: 5 !important;
+    }
+
+    .texture-strip-divider {
+      height: 60px !important;
+      margin-top: -30px !important;
+    }
+
     .texture-strip-wrap {
       bottom: -28vw !important;
     }

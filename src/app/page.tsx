@@ -123,7 +123,7 @@ export default function Home() {
 
         {/* Texture strip — inline SVG with GSAP animations */}
         <div
-          className="texture-strip-wrap absolute left-0 right-0 z-50 pointer-events-none"
+          className="texture-strip-wrap texture-strip-overlay absolute left-0 right-0 z-50 pointer-events-none"
           style={{ height: 122 }}
         >
           <TextureStrip style={{ display: "block" }} />
@@ -169,7 +169,7 @@ export default function Home() {
 
         {/* Bottom texture */}
         <div
-          className="texture-strip-wrap absolute left-0 right-0 z-50 pointer-events-none"
+          className="texture-strip-wrap texture-strip-overlay absolute left-0 right-0 z-50 pointer-events-none"
           style={{ height: 122 }}
         >
           <TextureStrip style={{ display: "block" }} />

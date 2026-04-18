@@ -74,7 +74,7 @@ export default function FFGF() {
       </section>
 
       {/* Divisor texture strip */}
-      <div className="texture-strip-wrap w-full pointer-events-none relative z-10" style={{ height: 122, marginBottom: "-1rem", marginTop: -61 }}>
+      <div className="texture-strip-wrap texture-strip-divider w-full pointer-events-none relative z-10" style={{ height: 122, marginBottom: "-1rem", marginTop: -61 }}>
         <TextureStrip style={{ display: "block" }} />
       </div>
 
