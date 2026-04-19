@@ -170,9 +170,9 @@ export default function ElFestival() {
                 <Image
                   src={a.logo}
                   alt={`Logo de ${a.name}, aliado del FICC Los Cabos`}
-                  width={200}
-                  height={100}
-                  sizes="(max-width: 768px) 100px, 200px"
+                  width={320}
+                  height={220}
+                  sizes="(max-width: 768px) 320px, 240px"
                   loading="lazy"
                   style={{ width: "auto", maxHeight: 170, height: "auto", objectFit: "contain" }}
                 />

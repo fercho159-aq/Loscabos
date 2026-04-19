@@ -741,16 +741,16 @@ body {
   /* Texture strips — reposition on mobile to stay as border strips */
   @media (max-width: 768px) {
     .texture-strip-overlay {
-      height: 80px !important;
+      height: 60px !important;
     }
 
     .texture-strip-divider {
-      height: 80px !important;
-      margin-top: -40px !important;
+      height: 60px !important;
+      margin-top: 0 !important;
     }
 
     .texture-strip-wrap {
-      bottom: -28vw !important;
+      bottom: 0 !important;
     }
 
     .site-footer {
@@ -3170,9 +3170,18 @@ body {
     margin-bottom: 2rem !important;
   }
 
+  .aliado-slide {
+    padding: 1rem 1.5rem !important;
+    height: 240px !important;
+  }
+
   .aliado-slide img {
-    max-height: 150px !important;
+    max-height: 220px !important;
     height: auto !important;
+    width: auto !important;
+    min-width: 260px !important;
+    max-width: 320px !important;
+    object-fit: contain !important;
   }
 
   /* Footer */
