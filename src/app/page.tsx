@@ -6,6 +6,7 @@ import GSAPAnimations from "@/components/GSAPAnimationsLazy";
 import TextureStrip from "@/components/TextureStrip";
 import ZoomLink from "@/components/ZoomLink";
 import Card3D from "@/components/Card3D";
+import SubscribeCTA from "@/components/SubscribeCTA";
 
 const aliados = [
   { name: "Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-01.png" },
@@ -155,15 +156,14 @@ export default function Home() {
                 </span>
               ))}
             </p>
-            <a
-              data-anim="cta-btn"
-              href="https://festivaldecinedeloscabos.us15.list-manage.com/subscribe?u=24bf46409995ffe6e8ad030da&id=12e1ce1334"
-              target="_blank"
-              rel="noopener noreferrer"
+            <SubscribeCTA
+              source="preventa"
+              label="Preventa de Boletos"
+              title="Preventa de Boletos"
+              description="Déjanos tus datos y recibe la información de la preventa antes que nadie."
               className="cta-button"
-            >
-              Preventa de Boletos
-            </a>
+              dataAnim="cta-btn"
+            />
           </div>
         </div>
 

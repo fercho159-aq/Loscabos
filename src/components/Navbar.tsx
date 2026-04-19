@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import SubscribeCTA from "./SubscribeCTA";
 
 type NavItem = {
   label: string;
@@ -62,9 +63,13 @@ export default function Navbar() {
       </ul>
 
       {/* CTA */}
-      <a href="https://festivaldecinedeloscabos.us15.list-manage.com/subscribe?u=24bf46409995ffe6e8ad030da&id=12e1ce1334" target="_blank" rel="noopener noreferrer" className="nav-cta hidden lg:inline-flex">
-        Únete a la comunidad
-      </a>
+      <SubscribeCTA
+        source="comunidad"
+        label="Únete a la comunidad"
+        title="Únete a la comunidad"
+        description="Recibe noticias, programación y novedades del FICC Los Cabos."
+        className="nav-cta hidden lg:inline-flex"
+      />
 
       {/* Mobile hamburger */}
       <button
@@ -163,21 +168,21 @@ export default function Navbar() {
               </Link>
             )
           )}
-          <a
-            href="https://festivaldecinedeloscabos.us15.list-manage.com/subscribe?u=24bf46409995ffe6e8ad030da&id=12e1ce1334"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setMobileOpen(false)}
+          <SubscribeCTA
+            source="comunidad"
+            label="Únete a la comunidad"
+            title="Únete a la comunidad"
+            description="Recibe noticias, programación y novedades del FICC Los Cabos."
+            onOpen={() => setMobileOpen(false)}
             style={{
               display: "block", marginTop: "1rem", padding: "0.7rem 1.5rem",
               background: "transparent", border: "1.5px solid #C47A3D", color: "#ffffff",
-              textAlign: "center",
+              textAlign: "center", width: "100%",
               fontSize: "0.82rem", fontWeight: 900, textTransform: "uppercase",
-              letterSpacing: "0.1em", textDecoration: "none",
+              letterSpacing: "0.1em", cursor: "pointer",
+              fontFamily: "var(--font-inter)",
             }}
-          >
-            Únete a la comunidad
-          </a>
+          />
         </div>
       )}
     </nav>

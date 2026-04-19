@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import TextureStrip from "@/components/TextureStrip";
 import LBIAnimations from "@/components/LBIAnimationsLazy";
+import SubscribeCTA from "@/components/SubscribeCTA";
 
 export const metadata: Metadata = {
   title: "La Baja Inspira | Plataforma de la Industria Cinematográfica",
@@ -102,8 +103,11 @@ export default function LaBajaInspira() {
               Su propósito es posicionar a la región como un referente internacional en documental ambiental y territorial, integrando industria audiovisual, conocimiento y conservación con una visión de futuro sostenible.
             </p>
             <div data-anim="lbi-typewriter" className="lbi-intro-apertura" aria-label="Apertura de convocatoria: 19 de mayo de 2026">
-              <span className="lbi-intro-apertura-dot" aria-hidden="true" />
-              Apertura de convocatoria · 19 de mayo de 2026
+              <span className="lbi-intro-apertura-line">
+                <span className="lbi-intro-apertura-dot" aria-hidden="true" style={{ display: "inline-block", verticalAlign: "middle", marginRight: "0.5rem" }} />
+                Apertura de convocatoria
+              </span>
+              <span className="lbi-intro-apertura-line"> - 19 de mayo de 2026</span>
             </div>
             <ul className="lbi-cat-list">
               <li data-anim="lbi-list-item" className="lbi-cat lbi-cat--naturales">
@@ -218,15 +222,14 @@ export default function LaBajaInspira() {
                   </div>
                 </div>
               </div>
-              <a
-                href="https://festivaldecinedeloscabos.us15.list-manage.com/subscribe?u=24bf46409995ffe6e8ad030da&id=12e1ce1334"
-                target="_blank"
-                rel="noopener noreferrer"
+              <SubscribeCTA
+                source="la-baja-inspira"
+                label="Sé el primero en recibir información"
+                title="La Baja Inspira · Convocatoria 2026"
+                description="Déjanos tus datos y recibe la información de la convocatoria en cuanto abra."
                 className="cta-button"
                 style={{ marginTop: "1.5rem", display: "inline-block" }}
-              >
-                Sé el primero en recibir información
-              </a>
+              />
             </div>
           </div>
         </div>
