@@ -133,7 +133,7 @@ export default function Home() {
       {/* ── CTA PREVENTA ── */}
       <section id="cta-section" className="relative text-center bg-[#0A1E23]">
         {/* Photo block */}
-        <div className="relative min-h-[320px] md:h-[560px] flex items-center justify-center px-5 py-12 md:px-16 md:py-[110px]">
+        <div className="relative min-h-[420px] md:h-[560px] flex items-center justify-center px-5 py-[5.5rem] md:px-16 md:py-[110px]">
           <Image
             src="/images/cta-cactus.jpg"
             alt="Paisaje de cactus de Los Cabos"
@@ -178,7 +178,7 @@ export default function Home() {
 
       {/* ── IMPULSO A LA INDUSTRIA ── */}
       <section id="impulso-section" className="relative w-full bg-[#0A1E23] flex flex-col overflow-hidden">
-        <div className="shrink-0 flex flex-col justify-start pt-10 pr-5 pb-10 pl-5 md:pt-[7rem] md:pr-16 md:pb-[15rem] md:pl-[15rem]">
+        <div className="shrink-0 flex flex-col justify-start pt-[5rem] pr-5 pb-10 pl-5 md:pt-[7rem] md:pr-16 md:pb-[15rem] md:pl-[15rem]">
           <span data-anim="impulso-tag" className="text-[13px] md:text-[14px] font-normal tracking-[.05em] leading-none text-white/40 mb-4 block">
           </span>
           <h2 data-anim="impulso-title" className="text-[42px] md:text-[58px] font-black text-white leading-[1.0] max-w-[420px]">

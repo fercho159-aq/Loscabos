@@ -738,17 +738,15 @@ body {
     bottom: -55px;
   }
 
-  /* Texture strips — reduce on mobile so they don't cover content */
+  /* Texture strips — reposition on mobile to stay as border strips */
   @media (max-width: 768px) {
     .texture-strip-overlay {
-      height: 60px !important;
-      opacity: 0.25 !important;
-      z-index: 5 !important;
+      height: 80px !important;
     }
 
     .texture-strip-divider {
-      height: 60px !important;
-      margin-top: -30px !important;
+      height: 80px !important;
+      margin-top: -40px !important;
     }
 
     .texture-strip-wrap {
@@ -3173,7 +3171,7 @@ body {
   }
 
   .aliado-slide img {
-    max-height: 100px !important;
+    max-height: 150px !important;
     height: auto !important;
   }
 
