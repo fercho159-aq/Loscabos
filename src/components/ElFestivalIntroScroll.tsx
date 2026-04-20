@@ -37,6 +37,37 @@ export default function ElFestivalIntroScroll() {
       const paras = Array.from(textEl.querySelectorAll<HTMLElement>("[data-anim='intro-para']"));
       const accents = Array.from(textEl.querySelectorAll<HTMLElement>(".ef-kw-cine, .ef-kw-musica, .ef-kw-arte-digital, .ef-kw-animacion"));
 
+      const words: HTMLElement[] = [];
+      const splitWords = (el: Element) => {
+        const kids = Array.from(el.childNodes);
+        kids.forEach((node) => {
+          if (node.nodeType === Node.TEXT_NODE) {
+            const text = node.textContent || "";
+            if (!text.trim()) return;
+            const tokens = text.split(/(\s+)/);
+            const frag = document.createDocumentFragment();
+            tokens.forEach((tok) => {
+              if (!tok) return;
+              if (/^\s+$/.test(tok)) {
+                frag.appendChild(document.createTextNode(tok));
+              } else {
+                const w = document.createElement("span");
+                w.className = "ef-word";
+                w.style.display = "inline-block";
+                w.style.willChange = "transform, opacity";
+                w.textContent = tok;
+                words.push(w);
+                frag.appendChild(w);
+              }
+            });
+            el.replaceChild(frag, node);
+          } else if (node.nodeType === Node.ELEMENT_NODE) {
+            splitWords(node as Element);
+          }
+        });
+      };
+      paras.forEach((p) => splitWords(p));
+
       const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
       if (reduce) {
@@ -44,7 +75,7 @@ export default function ElFestivalIntroScroll() {
         if (icon) gsap.set(icon, { opacity: 1, scale: 1, rotation: 0 });
         if (chars.length) gsap.set(chars, { opacity: 1, y: 0, rotateX: 0 });
         if (stats.length) gsap.set(stats, { opacity: 1, y: 0 });
-        if (paras.length) gsap.set(paras, { opacity: 1, y: 0 });
+        if (words.length) gsap.set(words, { opacity: 1, y: 0, rotateX: 0 });
         return;
       }
 
@@ -130,12 +161,13 @@ export default function ElFestivalIntroScroll() {
         }, 0.5);
       }
 
-      if (paras.length) {
-        tl.from(paras, {
-          opacity: 0, y: 14,
-          duration: 0.55, stagger: 0.12,
-          ease: "power3.out", force3D: true,
-        }, 0.6);
+      if (words.length) {
+        tl.from(words, {
+          opacity: 0, y: -40, rotateX: 60,
+          transformOrigin: "50% 0% -8px",
+          duration: 0.55, stagger: 0.012,
+          ease: "back.out(2)", force3D: true,
+        }, 0.55);
       }
 
       if (accents.length) {
