@@ -245,9 +245,13 @@ body {
      ══════════════════════════════════════════ */
   .impulso-card-outer {
     flex-shrink: 0;
-    transform: translateY(-350px);
+    transform: translateY(-200px);
     margin-left: 100px;
     margin-right: 10px;
+  }
+
+  .lbi-card-outer {
+    transform: translateY(0);
   }
 
   /* ══════════════════════════════════════════

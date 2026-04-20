@@ -152,9 +152,17 @@ export default function Home() {
         <div className="shrink-0 flex flex-col justify-start pt-[5rem] pr-5 pb-10 pl-5 md:pt-[7rem] md:pr-16 md:pb-[15rem] md:pl-[15rem]">
           <span data-anim="impulso-tag" className="text-[13px] md:text-[14px] font-normal tracking-[.05em] leading-none text-white/40 mb-4 block">
           </span>
-          <h2 data-anim="impulso-title" className="text-[42px] md:text-[58px] font-black text-white leading-[1.0] max-w-[420px]">
-            {"Conoce Nuestras Plataformas de Impulso a la Industria del Cine".split(" ").map((word, i) => (
-              <span key={i} data-anim="impulso-word" style={{ display: "inline-block", marginRight: "0.25em" }}>{word}</span>
+          <h2 data-anim="impulso-title" className="text-[42px] md:text-[58px] font-black text-white leading-[1.0]">
+            {[
+              "Conoce Nuestras",
+              "Plataformas de Impulso",
+              "a la Industria del Cine",
+            ].map((line, li) => (
+              <span key={li} style={{ display: "block" }}>
+                {line.split(" ").map((word, i) => (
+                  <span key={i} data-anim="impulso-word" style={{ display: "inline-block", marginRight: "0.25em" }}>{word}</span>
+                ))}
+              </span>
             ))}
           </h2>
         </div>
@@ -170,81 +178,71 @@ export default function Home() {
               className="object-cover -z-10"
             />
             {/* La Baja Inspira — wrapper owns the desktop translateY */}
-            <div className="impulso-card-outer">
-              <div
+            <div className="impulso-card-outer lbi-card-outer">
+              <Link
+                href="/la-baja-inspira"
                 data-anim="impulso-card"
-                className="relative overflow-hidden cursor-pointer"
+                className="relative overflow-hidden cursor-pointer block"
                 style={{
                   width: 587,
                   maxWidth: "calc(100vw - 2rem)",
-                  height: 251,
+                  height: 460,
                   backgroundColor: "#0086C4",
                 }}
               >
-                <div className="relative z-[2] h-full flex items-stretch">
-                  <div className="relative h-full aspect-square shrink-0 max-md:hidden">
-                    <Image
-                      src="/images/lbi-logo.png"
-                      alt="La Baja Inspira"
-                      fill
-                      sizes="251px"
-                      className="object-contain p-3"
-                      priority
-                    />
-                  </div>
-                  <div className="flex-1 min-w-0 flex flex-col justify-between p-6 pt-6 pb-8 pr-8 pl-8 md:pl-2">
-                    <h3
-                      className="font-black tracking-[-0.03em] leading-[.93]"
-                      style={{ fontSize: "clamp(1.8rem, 8vw, 4.5rem)", color: "var(--color-cream)" }}
-                    >
-                      La Baja<br />Inspira
-                    </h3>
-                    <ZoomLink
-                      href="/la-baja-inspira"
-                      className="impulso-link impulso-link-cream self-end"
-                    >
-                      Explorar
-                    </ZoomLink>
-                  </div>
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                  <iframe
+                    src="https://videopress.com/embed/dCWJUwu4?at=8&loop=1&autoPlay=1&muted=1&controls=0&preloadContent=metadata"
+                    title="La Baja Inspira"
+                    allow="clipboard-write; autoplay"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full aspect-video border-0"
+                  />
                 </div>
-              </div>
+                <div className="absolute inset-0 pointer-events-none z-[1]" style={{ backgroundColor: "rgba(246, 237, 219, 0.15)" }} />
+                <div className="relative z-[2] h-full w-full">
+                  <Image
+                    src="/images/lbi-logo.png"
+                    alt="La Baja Inspira"
+                    fill
+                    sizes="587px"
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+              </Link>
             </div>
 
             {/* Fondo Fílmico Gabriel Figueroa — wrapper owns the desktop translateY */}
             <div className="impulso-card-outer">
-              <div
+              <Link
+                href="/ffgf"
                 data-anim="impulso-card"
-                className="relative overflow-hidden cursor-pointer"
+                className="relative overflow-hidden cursor-pointer block"
                 style={{
                   width: 587,
                   maxWidth: "calc(100vw - 2rem)",
-                  height: 362,
+                  height: 460,
                   backgroundColor: "#ffffff",
                 }}
               >
-                <div className="relative z-[2] h-full flex items-stretch">
-                  <div className="flex-1 min-w-0 flex flex-col justify-between p-6 pt-6 pb-8 pl-8 pr-8 md:pr-2">
-                    <h3
-                      className="font-black text-[#0A1E23] tracking-[-0.03em] leading-[.93]"
-                      style={{ fontSize: "clamp(1.6rem, 4vw, 4.5rem)" }}
-                    >
-                      Fondo <br />Fílmico<br />Gabriel<br />Figueroa
-                    </h3>
-                    <ZoomLink href="/ffgf" className="impulso-link">
-                      Explorar
-                    </ZoomLink>
-                  </div>
-                  <div className="relative h-full w-[240px] shrink-0 pr-4 max-md:hidden">
-                    <Image
-                      src="/images/ffgf-logo.png"
-                      alt="Fondo Fílmico Gabriel Figueroa"
-                      fill
-                      sizes="240px"
-                      className="object-contain object-right"
-                    />
-                  </div>
+                <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ filter: "grayscale(1)" }}>
+                  <iframe
+                    src="https://player.vimeo.com/video/286013330?h=44c9737e98&autoplay=1&muted=1&loop=1&background=1&controls=0"
+                    title="Fondo Fílmico Gabriel Figueroa"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full aspect-video border-0"
+                  />
                 </div>
-              </div>
+                <div className="relative z-[2] h-full w-full">
+                  <Image
+                    src="/images/ffgf-logo.png"
+                    alt="Fondo Fílmico Gabriel Figueroa"
+                    fill
+                    sizes="587px"
+                    className="object-contain"
+                  />
+                </div>
+              </Link>
             </div>
           </div>
           <div></div>
