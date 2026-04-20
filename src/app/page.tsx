@@ -7,6 +7,7 @@ import TextureStrip from "@/components/TextureStrip";
 import ZoomLink from "@/components/ZoomLink";
 import Card3D from "@/components/Card3D";
 import SubscribeCTA from "@/components/SubscribeCTA";
+import BrandbookHero from "@/components/BrandbookHero";
 
 const aliados = [
   { name: "Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-01.png" },
@@ -44,7 +45,7 @@ const aliadosTrack = [...aliados, ...aliados];
 export default function Home() {
   return (
     <>
-      <link rel="preload" as="image" href="/images/FICCLosCabos_2026_Logo_Claro.svg" fetchPriority="high" />
+      <link rel="preload" as="image" href="/images/FICCLosCabos_2026_Brandbook.svg" fetchPriority="high" />
       <Navbar />
 
       {/* ── HERO ── */}
@@ -53,37 +54,7 @@ export default function Home() {
           {/* Brand lockup — logo image only */}
           <h1 className="flex justify-center mb-[1.2rem] m-0" style={{ fontSize: 0, lineHeight: 0 }}>
             <span className="sr-only" style={{ position: "absolute", width: 1, height: 1, padding: 0, margin: -1, overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap", border: 0 }}>Festival Internacional de Cine y Creatividad Los Cabos 2026</span>
-            {/* Two-layer logo: cream base + teal overlay (painted on scroll) */}
-            <span id="hero-logo-wrap" style={{ position: "relative", width: 720, maxWidth: "92vw", display: "block" }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                id="hero-logo"
-                src="/images/FICCLosCabos_2026_Logo_Claro.svg"
-                alt=""
-                aria-hidden="true"
-                width={720}
-                height={340}
-                fetchPriority="high"
-                decoding="async"
-                style={{ width: "100%", height: "auto", display: "block" }}
-              />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                id="hero-logo-blue"
-                src="/images/logo-blue.svg"
-                alt=""
-                aria-hidden="true"
-                width={720}
-                height={340}
-                decoding="async"
-                style={{
-                  width: "100%", height: "auto",
-                  position: "absolute", top: 0, left: 0,
-                  clipPath: "inset(0 100% 0 0)",
-                  pointerEvents: "none",
-                }}
-              />
-            </span>
+            <BrandbookHero />
           </h1>
 
           {/* Fecha del festival */}
