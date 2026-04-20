@@ -202,30 +202,39 @@ export default function Home() {
             <div className="impulso-card-outer">
               <div
                 data-anim="impulso-card"
-                className="relative overflow-hidden cursor-pointer bg-[#EDE6DC] border-2 border-[#A3CDD8]"
+                className="relative overflow-hidden cursor-pointer"
                 style={{
                   width: 587,
                   maxWidth: "calc(100vw - 2rem)",
                   height: 251,
-                  backgroundImage: "url('/images/card-x-lbi.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
+                  backgroundColor: "#0086C4",
                 }}
               >
-                <svg className="hidden" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                  <line x1="0" y1="0" x2="100" y2="100" stroke="#A3CDD8" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
-                  <line x1="100" y1="0" x2="0" y2="100" stroke="#A3CDD8" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
-                </svg>
-                <div className="relative z-[2] p-6 pt-6 pb-8 px-8">
-                  <h3
-                    className="font-black text-[#0A1E23] tracking-[-0.03em] leading-[.93] mb-4"
-                    style={{ fontSize: "clamp(1.8rem, 4vw, 4.5rem)" }}
-                  >
-                    La Baja<br />Inspira
-                  </h3>
-                  <ZoomLink href="/la-baja-inspira" className="impulso-link">
-                    Explorar
-                  </ZoomLink>
+                <div className="relative z-[2] h-full flex items-stretch">
+                  <div className="relative h-full aspect-square shrink-0 max-md:hidden">
+                    <Image
+                      src="/images/lbi-logo.png"
+                      alt="La Baja Inspira"
+                      fill
+                      sizes="251px"
+                      className="object-contain p-3"
+                      priority
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0 flex flex-col justify-between p-6 pt-6 pb-8 pr-8 pl-8 md:pl-2">
+                    <h3
+                      className="font-black tracking-[-0.03em] leading-[.93]"
+                      style={{ fontSize: "clamp(1.8rem, 8vw, 4.5rem)", color: "var(--color-cream)" }}
+                    >
+                      La Baja<br />Inspira
+                    </h3>
+                    <ZoomLink
+                      href="/la-baja-inspira"
+                      className="impulso-link impulso-link-cream self-end"
+                    >
+                      Explorar
+                    </ZoomLink>
+                  </div>
                 </div>
               </div>
             </div>
@@ -234,30 +243,35 @@ export default function Home() {
             <div className="impulso-card-outer">
               <div
                 data-anim="impulso-card"
-                className="relative overflow-hidden cursor-pointer bg-[#EDE6DC] border-2 border-[#A3CDD8]"
+                className="relative overflow-hidden cursor-pointer"
                 style={{
                   width: 587,
                   maxWidth: "calc(100vw - 2rem)",
                   height: 362,
-                  backgroundImage: "url('/images/card-x-ffgf.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
+                  backgroundColor: "#ffffff",
                 }}
               >
-                <svg className="hidden" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                  <line x1="0" y1="0" x2="100" y2="100" stroke="#A3CDD8" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
-                  <line x1="100" y1="0" x2="0" y2="100" stroke="#A3CDD8" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
-                </svg>
-                <div className="relative z-[2] p-6 pt-6 pb-8 px-8">
-                  <h3
-                    className="font-black text-[#0A1E23] tracking-[-0.03em] leading-[.93] mb-4"
-                    style={{ fontSize: "clamp(1.8rem, 4vw, 4.5rem)" }}
-                  >
-                    Fondo <br />Fílmico<br />Gabriel<br />Figueroa
-                  </h3>
-                  <ZoomLink href="/ffgf" className="impulso-link">
-                    Explorar
-                  </ZoomLink>
+                <div className="relative z-[2] h-full flex items-stretch">
+                  <div className="flex-1 min-w-0 flex flex-col justify-between p-6 pt-6 pb-8 pl-8 pr-8 md:pr-2">
+                    <h3
+                      className="font-black text-[#0A1E23] tracking-[-0.03em] leading-[.93]"
+                      style={{ fontSize: "clamp(1.6rem, 4vw, 4.5rem)" }}
+                    >
+                      Fondo <br />Fílmico<br />Gabriel<br />Figueroa
+                    </h3>
+                    <ZoomLink href="/ffgf" className="impulso-link">
+                      Explorar
+                    </ZoomLink>
+                  </div>
+                  <div className="relative h-full w-[240px] shrink-0 pr-4 max-md:hidden">
+                    <Image
+                      src="/images/ffgf-logo.png"
+                      alt="Fondo Fílmico Gabriel Figueroa"
+                      fill
+                      sizes="240px"
+                      className="object-contain object-right"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

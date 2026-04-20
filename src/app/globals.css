@@ -283,6 +283,12 @@ body {
     transform: translateX(2px);
   }
 
+  .impulso-link-cream,
+  .impulso-link-cream:hover {
+    color: var(--color-cream);
+    border-bottom-color: rgba(246, 237, 219, .5);
+  }
+
   /* ══════════════════════════════════════════
      CTA BAND — Photo Background
      ══════════════════════════════════════════ */
@@ -3157,7 +3163,8 @@ body {
   }
 
   [data-anim="impulso-card"] h3 {
-    font-size: clamp(4.8rem, 4vw, 4.5rem) !important;
+    font-size: clamp(2.5rem, 10vw, 4rem) !important;
+    margin-bottom: 1.5rem !important;
   }
 
   /* Aliados */
