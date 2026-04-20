@@ -76,8 +76,8 @@ export default function LaBajaInspira() {
       {/* Water banner */}
       <section className="relative w-full" style={{ height: "30vh", minHeight: 200 }}>
         <Image
-          src="/images/water-bg.jpg"
-          alt="Agua cristalina del Mar de Cortés en Los Cabos — FICC Los Cabos"
+          src="/images/cactus-sunset-bg.jpg"
+          alt="Atardecer entre cactus en Baja California Sur — FICC Los Cabos"
           fill
           sizes="100vw"
           style={{ objectFit: "cover" }}
