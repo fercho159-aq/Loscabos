@@ -3,7 +3,6 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
-import TextureStrip from "@/components/TextureStrip";
 import FFGFAnimations from "@/components/FFGFAnimationsLazy";
 
 export const metadata: Metadata = {
@@ -45,7 +44,7 @@ export default function FFGF() {
       <style>{`html, body { background: #fff !important; }`}</style>
       <Navbar />
 
-      <PageHero lines={["Fondo Fílmico", "Gabriel Figueroa"]} />
+      <PageHero lines={["Fondo Fílmico", "Gabriel Figueroa"]} hideStrip />
 
       {/* Descripción — Image left, text right (matches lbi-desc-grid pattern) */}
       <section id="ffgf-desc-section" style={{ minHeight: "auto", display: "flex", alignItems: "center", padding: "clamp(1.5rem, 3vw, 2rem)", maxWidth: 1200, margin: "0 auto", marginBottom: "clamp(1.5rem, 4vw, 3rem)" }}>
@@ -73,10 +72,6 @@ export default function FFGF() {
         </div>
       </section>
 
-      {/* Divisor texture strip */}
-      <div className="texture-strip-wrap texture-strip-divider w-full pointer-events-none relative z-10" style={{ height: 122, marginBottom: "-1rem", marginTop: -61 }}>
-        <TextureStrip style={{ display: "block" }} />
-      </div>
 
       {/* Legado FFGF — dark section pattern (matches la-baja-inspira legado) */}
       <section className="relative w-full flex flex-col overflow-hidden" style={{ background: "#0A1E23" }}>

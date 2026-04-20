@@ -3,7 +3,6 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
-import TextureStrip from "@/components/TextureStrip";
 import LBIAnimations from "@/components/LBIAnimationsLazy";
 import SubscribeCTA from "@/components/SubscribeCTA";
 
@@ -72,7 +71,7 @@ export default function LaBajaInspira() {
     <div className="lbi-page">
       <Navbar />
 
-      <PageHero lines={["La Baja", "Inspira"]} />
+      <PageHero lines={["La Baja", "Inspira"]} hideStrip />
 
       {/* Water banner */}
       <section className="relative w-full" style={{ height: "30vh", minHeight: 200 }}>
@@ -145,10 +144,6 @@ export default function LaBajaInspira() {
         </div>
       </section>
 
-      {/* Divisor texture strip */}
-      <div className="texture-strip-wrap texture-strip-divider w-full pointer-events-none relative z-10" style={{ height: 122, marginBottom: "-1rem", marginTop: -61 }}>
-        <TextureStrip style={{ display: "block" }} />
-      </div>
 
       {/* Convocatoria 2026 */}
       <section className="relative w-full bg-[#0A1E23] flex flex-col overflow-hidden">
