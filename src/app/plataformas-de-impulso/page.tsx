@@ -30,16 +30,6 @@ const plataformas = [
     accent: "#6687C3",
   },
   {
-    title: "Frequencies of Now",
-    description:
-      "Espacio de convergencia entre cine, música y artes digitales que explora las frecuencias creativas del presente a través de experiencias inmersivas y colaboraciones interdisciplinarias.",
-    href: "/plataformas-de-impulso/frequencies-of-now",
-    bg: "bg-peach",
-    cta: "Inscríbete",
-    image: "/images/webpdf/img-040.jpg",
-    accent: "#C47A3D",
-  },
-  {
     title: "Semillas del Desierto",
     subtitle: "Emerging Film Makers",
     description:

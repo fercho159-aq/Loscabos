@@ -69,7 +69,7 @@ export default function ElFestival() {
         <ElFestivalEjeSection
           ejeNum={1}
           heroSvg="/images/el-festival/PlataformaCreativa.svg"
-          heroTitleLines={["Plataforma Cultural Anclada en Los Cabos"]}
+          heroTitleLines={["Plataforma Cultural", "Anclada en Los Cabos"]}
           heroImage={{
             src: "/images/el-festival/Cactus.png",
             alt: "Plataforma Cultural anclada en Los Cabos",
@@ -84,22 +84,22 @@ export default function ElFestival() {
         {/* ── EJE 2: Impulso a la Industria ── */}
         <ElFestivalEjeSection
           ejeNum={2}
-          heroSvg="/images/el-festival/PlataformasImpulsoIndustria.svg"
+          heroSvg="/images/el-festival/FICCLosCabos_2026_Brandbook.svg"
           heroTitleLines={["Plataformas de", "Impulso a la", "Industria del Cine"]}
           heroImage={{
             src: "/images/el-festival/rendy-novantino-lNzyXvBkZXQ-unsplash.jpg",
             alt: "Plataformas de Impulso a la Industria del Cine",
           }}
+          row1Split="1/2"
           entitiesLabel="Plataformas"
           entities={[
             { label: "La Baja Inspira" },
             { label: "Fondo Fílmico Gabriel Figueroa" },
-            { label: "Frequencies of Now" },
           ]}
           iconReveal="scale-fade"
         >
           <p data-anim="eje-para" className="mb-6 md:mb-7">
-            Nuestras plataformas reducen la brecha entre creación, industria y audiencias. A través de <span className="ef-accent">La Baja Inspira</span>, el <span className="ef-accent">Fondo Fílmico Gabriel Figueroa</span> y <span className="ef-accent">Frequencies of Now</span>, actuamos como un motor de formación, financiamiento y exhibición.
+            Nuestras plataformas reducen la brecha entre creación, industria y audiencias. A través de <span className="ef-accent">La Baja Inspira</span> y el <span className="ef-accent">Fondo Fílmico Gabriel Figueroa</span>, actuamos como un motor de formación, financiamiento y exhibición.
           </p>
           <p data-anim="eje-para">
             Diseñadas para generar convergencia, estas plataformas fortalecen trayectorias creativas y construyen puentes reales entre el talento mexicano y el mercado internacional.
@@ -112,7 +112,7 @@ export default function ElFestival() {
           heroSvg="/images/el-festival/ProgramaciónconPulsoGlobal.svg"
           heroTitleLines={["Programación", "con Pulso Global"]}
           heroImage={{
-            src: "/images/cta-cactus.jpg",
+            src: "/images/el-festival/DTS_Daniel_Faro_Travel_Together_001 (1).png",
             alt: "Programación con Pulso Global",
           }}
           entitiesLabel="Programación"

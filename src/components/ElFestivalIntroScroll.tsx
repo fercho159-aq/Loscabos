@@ -8,9 +8,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const STATS = [
-  { num: "14va", label: "Edición"    },
-  { num: "05",   label: "Días"       },
-  { num: "04",   label: "Disciplinas" },
+  { num: "14a", label: "Edición" },
+  { num: "05", label: "Días" },
+  { num: "04", label: "Disciplinas" },
   { num: "9–13", label: "Diciembre 2026" },
 ];
 
@@ -291,31 +291,31 @@ export default function ElFestivalIntroScroll() {
           {/* Panel D: PÁRRAFOS — copy verbatim, color-pop en P2 + ícono derecha */}
           <div className="w-full md:w-2/3 md:h-full flex items-center py-8 px-5 md:py-10 md:pr-10 md:pl-10">
             <div className="flex items-center justify-between gap-10 w-full">
-            <div
-              ref={textRef}
-              className="text-[color:var(--ef-cream)] font-normal text-[clamp(1.1rem,1.55vw,1.375rem)] leading-relaxed tracking-normal w-full max-w-[55ch] text-left"
-              style={{ fontFamily: "var(--font-inter)" }}
-            >
-              <p data-anim="intro-para" className="mb-6 md:mb-7">
-                Tras la expansión de nuestra visión en 2025, el Festival evoluciona. En nuestra 14ª edición —del 9 al 13 de diciembre de 2026— nos consolidamos como la plataforma de vinculación para la industria audiovisual en México.
-              </p>
+              <div
+                ref={textRef}
+                className="text-[color:var(--ef-cream)] font-normal text-[clamp(1.1rem,1.55vw,1.375rem)] leading-relaxed tracking-normal w-full max-w-[55ch] text-left"
+                style={{ fontFamily: "var(--font-inter)" }}
+              >
+                <p data-anim="intro-para" className="mb-6 md:mb-7">
+                  Tras la expansión de nuestra visión en 2025, el Festival evoluciona. En nuestra 14ª edición —del 9 al 13 de diciembre de 2026— nos consolidamos como la plataforma de vinculación para la industria audiovisual en México.
+                </p>
 
-              <p data-anim="intro-para" className="mb-6 md:mb-7">
-                Somos el punto de encuentro donde el <span className="ef-kw-cine">cine</span> converge con la <span className="ef-kw-musica">música</span>, el <span className="ef-kw-arte-digital">arte digital</span> y la <span className="ef-kw-animacion">animación</span>. Desde Los Cabos, conectamos el talento mexicano con el circuito internacional.
-              </p>
+                <p data-anim="intro-para" className="mb-6 md:mb-7">
+                  Somos el punto de encuentro donde el <span className="ef-kw-cine">cine</span> converge con la <span className="ef-kw-musica">música</span>, el <span className="ef-kw-arte-digital">arte digital</span> y la <span className="ef-kw-animacion">animación</span>. Desde Los Cabos, conectamos el talento mexicano con el circuito internacional.
+                </p>
 
-              <p data-anim="intro-para">
-                A través de un modelo multisede que integra naturaleza, hospitalidad y pensamiento creativo, generamos un entorno propicio para la circulación de obras, el encuentro profesional y la construcción de redes internacionales.
-              </p>
-            </div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              ref={iconRef}
-              src="/images/el-festival/icon BTS.svg"
-              alt=""
-              aria-hidden="true"
-              className="hidden md:block shrink-0 w-[96px] h-[96px] lg:w-[128px] lg:h-[128px] will-change-transform"
-            />
+                <p data-anim="intro-para">
+                  A través de un modelo multisede que integra naturaleza, hospitalidad y pensamiento creativo, generamos un entorno propicio para la circulación de obras, el encuentro profesional y la construcción de redes internacionales.
+                </p>
+              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                ref={iconRef}
+                src="/images/el-festival/icon BTS.svg"
+                alt=""
+                aria-hidden="true"
+                className="hidden md:block shrink-0 w-[96px] h-[96px] lg:w-[128px] lg:h-[128px] will-change-transform"
+              />
             </div>
           </div>
 

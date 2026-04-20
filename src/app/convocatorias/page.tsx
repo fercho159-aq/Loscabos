@@ -33,18 +33,6 @@ const convocatorias = [
     image: "/images/webpdf/img-055.jpg",
     accent: "#6687C3",
   },
-  {
-    status: "Abierta",
-    title: "Frequencies of Now",
-    deadline: "Cierre: 30 de agosto, 2026",
-    description:
-      "Buscamos propuestas que fusionen cine, música y arte digital. Si tu proyecto desafía los formatos tradicionales, esta convocatoria es para ti.",
-    href: "/convocatorias/abiertas",
-    cta: "Envía tu propuesta",
-    bg: "bg-peach",
-    image: "/images/webpdf/img-040.jpg",
-    accent: "#C47A3D",
-  },
 ];
 
 export default function Convocatorias() {

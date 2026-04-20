@@ -2434,22 +2434,6 @@ body {
   color: rgba(0, 0, 0, .08);
 }
 
-/* ── FON ── */
-.fon-page .page-hero-title {
-  font-family: var(--font-inter);
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.fon-page .section-heading {
-  font-family: var(--font-inter);
-  text-transform: uppercase;
-}
-
-.fon-page .section-text-inner p {
-  font-weight: 400;
-}
-
 /* ── PRENSA ── */
 .prensa-page .section-heading {
   font-weight: 900;
