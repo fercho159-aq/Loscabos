@@ -148,10 +148,10 @@ export default function LaBajaInspira() {
       {/* Convocatoria 2026 */}
       <section className="relative w-full bg-[#0A1E23] flex flex-col overflow-hidden">
         <div className="shrink-0 flex flex-col justify-start pt-10 pr-5 pb-10 pl-5 md:pt-[7rem] md:pr-16 md:pb-[15rem] md:pl-[15rem]">
-          <span className="text-[13px] md:text-[14px] font-normal tracking-[.05em] leading-none text-white/40 mb-4 block">
+          <span className="text-[13px] md:text-[14px] font-normal tracking-[.05em] leading-none mb-4 block" style={{ color: "var(--color-cream)", opacity: 0.4 }}>
             Convocatoria
           </span>
-          <h2 className="text-[42px] md:text-[58px] font-black text-white leading-[1.0] max-w-[520px]">
+          <h2 className="text-[42px] md:text-[58px] font-black leading-[1.0] max-w-[520px]" style={{ color: "var(--color-cream)" }}>
             {"Convocatoria 2026".split(" ").map((word, wi) => (
               <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.25em" }}>
                 {word.split("").map((char, ci) => (
