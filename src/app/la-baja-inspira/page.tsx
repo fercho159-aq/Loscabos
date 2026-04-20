@@ -148,9 +148,7 @@ export default function LaBajaInspira() {
       {/* Convocatoria 2026 */}
       <section className="relative w-full bg-[#0A1E23] flex flex-col overflow-hidden">
         <div className="shrink-0 flex flex-col justify-start pt-10 pr-5 pb-10 pl-5 md:pt-[7rem] md:pr-16 md:pb-[15rem] md:pl-[15rem]">
-          <span className="text-[13px] md:text-[14px] font-normal tracking-[.05em] leading-none mb-4 block" style={{ color: "var(--color-cream)", opacity: 0.4 }}>
-            Convocatoria
-          </span>
+
           <h2 className="text-[42px] md:text-[58px] font-black leading-[1.0] max-w-[520px]" style={{ color: "var(--color-cream)" }}>
             {"Convocatoria 2026".split(" ").map((word, wi) => (
               <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.25em" }}>
@@ -166,7 +164,7 @@ export default function LaBajaInspira() {
           <div
             className="w-full flex max-md:flex-col items-end max-md:items-center justify-center gap-8 max-md:gap-6 min-h-[471px] max-md:min-h-0 max-md:py-10 px-8"
             style={{
-              backgroundImage: "url('/images/cta-cactus.jpg')",
+              backgroundImage: "url('/images/lbi-convocatoria-bg.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
@@ -179,14 +177,16 @@ export default function LaBajaInspira() {
                 style={{
                   width: 587,
                   maxWidth: "calc(100vw - 2rem)",
-                  backgroundColor: "#FA6935",
+                  backgroundImage: "url('/images/lbi-gradient-warm.jpg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
                 }}
               >
                 <div className="relative z-[2] p-6 pt-6 pb-8 px-8">
-                  <h3 className="tracking-[-0.03em] leading-[.93] mb-6" style={{ fontSize: "clamp(1.4rem, 3vw, 2.2rem)", fontWeight: 900, color: "#F6EDDB" }}>
+                  <h3 className="tracking-[-0.03em] leading-[.93] mb-6" style={{ fontSize: "clamp(1.4rem, 3vw, 2.2rem)", fontWeight: 900, color: "#163218" }}>
                     La convocatoria 2026 acepta exclusivamente:
                   </h3>
-                  <ul style={{ listStyle: "none", padding: 0, margin: 0, fontFamily: "var(--font-inter)", fontSize: "clamp(1.1rem, 1.6vw, 1.35rem)", lineHeight: 1.6, color: "#F6EDDB", fontWeight: 400 }}>
+                  <ul style={{ listStyle: "none", padding: 0, margin: 0, fontFamily: "var(--font-inter)", fontSize: "clamp(1.1rem, 1.6vw, 1.35rem)", lineHeight: 1.6, color: "#163218", fontWeight: 400 }}>
                     <li style={{ marginBottom: "0.4rem" }}>— Largometrajes documentales terminados</li>
                     <li style={{ marginBottom: "0.4rem" }}>— Cortometrajes documentales terminados</li>
                     <li style={{ marginBottom: "0.4rem" }}>— Ensayos cinematográficos de no ficción finalizados</li>
@@ -203,14 +203,16 @@ export default function LaBajaInspira() {
                 style={{
                   width: 587,
                   maxWidth: "calc(100vw - 2rem)",
-                  backgroundColor: "#0088C5",
+                  backgroundImage: "url('/images/lbi-gradient-cool.jpg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
                 }}
               >
                 <div className="relative z-[2] p-6 pt-6 pb-8 px-8">
-                  <h3 className="tracking-[-0.03em] leading-[.93] mb-6" style={{ fontSize: "clamp(1.4rem, 3vw, 2.2rem)", fontWeight: 900, color: "#F6EDDB" }}>
+                  <h3 className="tracking-[-0.03em] leading-[.93] mb-6" style={{ fontSize: "clamp(1.4rem, 3vw, 2.2rem)", fontWeight: 900, color: "#163218" }}>
                     Fechas Clave
                   </h3>
-                  <div style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.1rem, 1.6vw, 1.35rem)", lineHeight: 1.8, color: "#F6EDDB", fontWeight: 400 }}>
+                  <div style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.1rem, 1.6vw, 1.35rem)", lineHeight: 1.8, color: "#163218", fontWeight: 400 }}>
                     <p><strong>Apertura:</strong> 05 de mayo, 2026</p>
                     <p><strong>Cierre:</strong> 30 de junio, 2026</p>
                     <p><strong>Selección:</strong> 8 títulos que definen el pulso de la región</p>
