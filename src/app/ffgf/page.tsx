@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import FFGFAnimations from "@/components/FFGFAnimationsLazy";
+import SubscribeCTA from "@/components/SubscribeCTA";
 
 export const metadata: Metadata = {
   title: "Fondo Fílmico Gabriel Figueroa | Financiamiento Cinematográfico",
@@ -65,9 +66,15 @@ export default function FFGF() {
             <div data-anim="ffgf-dates" className="section-dates">
               <p style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.05rem, 1.8vw, 1.5rem)", color: "#000", lineHeight: 1.4, fontWeight: 400, marginBottom: "1rem" }}>Apertura de convocatoria: Agosto 2026</p>
             </div>
-            <a data-anim="ffgf-cta" href="https://festivaldecinedeloscabos.us15.list-manage.com/subscribe?u=24bf46409995ffe6e8ad030da&id=12e1ce1334" target="_blank" rel="noopener noreferrer" className="cta-button" style={{ marginTop: "1.5rem" }}>
-              S&eacute; el primero en recibir la informaci&oacute;n de la convocatoria
-            </a>
+            <SubscribeCTA
+              source="ffgf"
+              label="Sé el primero en recibir la información de la convocatoria"
+              title="Fondo Fílmico Gabriel Figueroa 2026"
+              description="Déjanos tus datos y recibe la información de la convocatoria FFGF en cuanto se abra."
+              className="cta-button"
+              dataAnim="ffgf-cta"
+              style={{ marginTop: "1.5rem" }}
+            />
           </div>
         </div>
       </section>

@@ -3,7 +3,7 @@ import { sql } from "@/lib/db";
 
 export const runtime = "edge";
 
-const SOURCES = new Set(["preventa", "comunidad", "la-baja-inspira"]);
+const SOURCES = new Set(["preventa", "comunidad", "la-baja-inspira", "ffgf"]);
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 type Body = {

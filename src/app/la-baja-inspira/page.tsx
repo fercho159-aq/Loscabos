@@ -101,12 +101,12 @@ export default function LaBajaInspira() {
             <p data-anim="lbi-typewriter" className="lbi-intro-lead">
               Su propósito es posicionar a la región como un referente internacional en documental ambiental y territorial, integrando industria audiovisual, conocimiento y conservación con una visión de futuro sostenible.
             </p>
-            <div data-anim="lbi-typewriter" className="lbi-intro-apertura" aria-label="Apertura de convocatoria: 19 de mayo de 2026">
+            <div data-anim="lbi-typewriter" className="lbi-intro-apertura" aria-label="Apertura de convocatoria: 21 de mayo de 2026">
               <span className="lbi-intro-apertura-line">
                 <span className="lbi-intro-apertura-dot" aria-hidden="true" style={{ display: "inline-block", verticalAlign: "middle", marginRight: "0.5rem" }} />
                 Apertura de convocatoria
               </span>
-              <span className="lbi-intro-apertura-line"> - 19 de mayo de 2026</span>
+              <span className="lbi-intro-apertura-line"> - 21 de mayo de 2026</span>
             </div>
             <ul className="lbi-cat-list">
               <li data-anim="lbi-list-item" className="lbi-cat lbi-cat--naturales">

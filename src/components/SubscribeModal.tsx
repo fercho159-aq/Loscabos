@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
-export type SubscribeSource = "preventa" | "comunidad" | "la-baja-inspira";
+export type SubscribeSource = "preventa" | "comunidad" | "la-baja-inspira" | "ffgf";
 
 type Props = {
   open: boolean;
@@ -20,6 +20,7 @@ const EYEBROW_BY_SOURCE: Record<SubscribeSource, string> = {
   preventa: "Preventa · FICC 2026",
   comunidad: "Comunidad FICC",
   "la-baja-inspira": "La Baja Inspira · 2026",
+  ffgf: "Fondo Fílmico Gabriel Figueroa · 2026",
 };
 
 export default function SubscribeModal({
