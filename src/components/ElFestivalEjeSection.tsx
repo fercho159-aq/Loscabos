@@ -56,6 +56,7 @@ export default function ElFestivalEjeSection({
   const iconWrapRef = useRef<HTMLDivElement>(null);
   const railRef = useRef<HTMLElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
+  const heroImgWrapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -68,12 +69,19 @@ export default function ElFestivalEjeSection({
 
       const chars = Array.from(section.querySelectorAll<HTMLElement>(".title-char"));
       const paras = Array.from(textEl.querySelectorAll<HTMLElement>("[data-anim='eje-para']"));
+      const accents = Array.from(textEl.querySelectorAll<HTMLElement>(".ef-accent, .ef-kw-cine, .ef-kw-musica, .ef-kw-arte-digital, .ef-kw-animacion"));
       const ents = railEl
         ? Array.from(railEl.querySelectorAll<HTMLElement>("[data-anim='eje-entity']"))
+        : [];
+      const entityDots = railEl
+        ? Array.from(railEl.querySelectorAll<HTMLElement>(".ef-entity-dot"))
         : [];
       const anchorEls = railEl
         ? Array.from(railEl.querySelectorAll<HTMLElement>("[data-anim='eje-anchor']"))
         : [];
+      const anchorNumEl = railEl
+        ? railEl.querySelector<HTMLElement>(".ef-anchor-num")
+        : null;
 
       const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -87,11 +95,62 @@ export default function ElFestivalEjeSection({
         return;
       }
 
-      const tl = gsap.timeline({
-        scrollTrigger: { trigger: section, start: "top 80%", once: true },
-      });
+      gsap.set(bgSvg, { scale: 1.12, transformOrigin: "50% 50%" });
+      gsap.fromTo(
+        bgSvg,
+        { yPercent: 5 },
+        {
+          yPercent: -5,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+          },
+        },
+      );
 
-      tl.from(bgSvg, { scale: 1.05, opacity: 0, duration: 0.9, ease: "power3.out" }, 0);
+      const heroImgWrap = heroImgWrapRef.current;
+      if (heroImgWrap) {
+        const heroImgEl = heroImgWrap.querySelector<HTMLElement>("img");
+        if (heroImgEl) {
+          gsap.set(heroImgEl, { scale: 1.18, transformOrigin: "50% 50%" });
+          gsap.fromTo(
+            heroImgEl,
+            { yPercent: -7 },
+            {
+              yPercent: 7,
+              ease: "none",
+              scrollTrigger: {
+                trigger: section,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: true,
+              },
+            },
+          );
+        }
+      }
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top 60%",
+          once: true,
+        },
+      });
+      tl.timeScale(0.75);
+
+      tl.from(bgSvg, { scale: 1.08, opacity: 0, duration: 1.0, ease: "power3.out" }, 0);
+
+      if (heroImgWrapRef.current) {
+        tl.from(heroImgWrapRef.current, {
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 1.0,
+          ease: "power3.out",
+        }, 0.15);
+      }
 
       if (chars.length) {
         tl.from(chars, {
@@ -104,10 +163,18 @@ export default function ElFestivalEjeSection({
 
       if (ents.length) {
         tl.from(ents, {
-          opacity: 0, y: 12,
+          opacity: 0, x: -16,
           duration: 0.5, stagger: 0.08,
           ease: "power3.out", force3D: true,
         }, 0.45);
+      }
+
+      if (entityDots.length) {
+        tl.from(entityDots, {
+          scale: 0,
+          duration: 0.4, stagger: 0.08,
+          ease: "back.out(3)", transformOrigin: "50% 50%",
+        }, 0.5);
       }
 
       if (anchorEls.length) {
@@ -118,12 +185,37 @@ export default function ElFestivalEjeSection({
         }, 0.45);
       }
 
+      if (anchorNumEl) {
+        const raw = (anchorNumEl.textContent || "").trim();
+        const target = parseInt(raw, 10);
+        if (!isNaN(target) && String(target) === raw) {
+          const counter = { v: 0 };
+          tl.to(counter, {
+            v: target,
+            duration: 1.2,
+            ease: "power2.out",
+            onUpdate: () => {
+              anchorNumEl.textContent = Math.round(counter.v).toString();
+            },
+          }, 0.6);
+        }
+      }
+
       if (paras.length) {
         tl.from(paras, {
           opacity: 0, y: 14,
           duration: 0.55, stagger: 0.12,
           ease: "power3.out", force3D: true,
         }, 0.6);
+      }
+
+      if (accents.length) {
+        tl.from(accents, {
+          backgroundColor: "rgba(255,255,255,0.08)",
+          duration: 0.9,
+          stagger: 0.05,
+          ease: "power1.out",
+        }, 0.9);
       }
 
       if (iconWrap) {
@@ -158,6 +250,22 @@ export default function ElFestivalEjeSection({
             }, 0.75);
             break;
         }
+
+        ScrollTrigger.create({
+          trigger: section,
+          start: "top 40%",
+          once: true,
+          onEnter: () => {
+            gsap.to(iconWrap, {
+              y: -10,
+              rotation: iconReveal === "scale-rotate" ? 3 : 0,
+              duration: 3.2,
+              yoyo: true,
+              repeat: -1,
+              ease: "sine.inOut",
+            });
+          },
+        });
       }
     });
 
@@ -211,13 +319,13 @@ export default function ElFestivalEjeSection({
             </h2>
           </div>
 
-          <div className={`relative w-full ${panelB} h-[40vw] md:h-full overflow-hidden`}>
+          <div ref={heroImgWrapRef} className={`relative w-full ${panelB} h-[40vw] md:h-full overflow-hidden`}>
             <Image
               src={heroImage.src}
               alt={heroImage.alt}
               fill
               sizes={heroImage.sizes ?? sizesB}
-              className="object-cover"
+              className="object-cover will-change-transform"
             />
           </div>
 

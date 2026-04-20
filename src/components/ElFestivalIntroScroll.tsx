@@ -20,6 +20,7 @@ export default function ElFestivalIntroScroll() {
   const textRef = useRef<HTMLDivElement>(null);
   const railRef = useRef<HTMLElement>(null);
   const iconRef = useRef<HTMLImageElement>(null);
+  const heroImgWrapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -32,7 +33,9 @@ export default function ElFestivalIntroScroll() {
 
       const chars = Array.from(section.querySelectorAll<HTMLElement>(".title-char"));
       const stats = Array.from(railEl.querySelectorAll<HTMLElement>(".ef-stat"));
+      const statNums = Array.from(railEl.querySelectorAll<HTMLElement>(".ef-stat-num"));
       const paras = Array.from(textEl.querySelectorAll<HTMLElement>("[data-anim='intro-para']"));
+      const accents = Array.from(textEl.querySelectorAll<HTMLElement>(".ef-kw-cine, .ef-kw-musica, .ef-kw-arte-digital, .ef-kw-animacion"));
 
       const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -45,11 +48,62 @@ export default function ElFestivalIntroScroll() {
         return;
       }
 
-      const tl = gsap.timeline({
-        scrollTrigger: { trigger: section, start: "top 80%", once: true },
-      });
+      gsap.set(bgSvg, { scale: 1.12, transformOrigin: "50% 50%" });
+      gsap.fromTo(
+        bgSvg,
+        { yPercent: 5 },
+        {
+          yPercent: -5,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+          },
+        },
+      );
 
-      tl.from(bgSvg, { scale: 1.05, opacity: 0, duration: 0.9, ease: "power3.out" }, 0);
+      const heroImgWrap = heroImgWrapRef.current;
+      if (heroImgWrap) {
+        const heroImgEl = heroImgWrap.querySelector<HTMLElement>("img");
+        if (heroImgEl) {
+          gsap.set(heroImgEl, { scale: 1.18, transformOrigin: "50% 50%" });
+          gsap.fromTo(
+            heroImgEl,
+            { yPercent: -7 },
+            {
+              yPercent: 7,
+              ease: "none",
+              scrollTrigger: {
+                trigger: section,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: true,
+              },
+            },
+          );
+        }
+      }
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top 60%",
+          once: true,
+        },
+      });
+      tl.timeScale(0.75);
+
+      tl.from(bgSvg, { scale: 1.08, opacity: 0, duration: 1.0, ease: "power3.out" }, 0);
+
+      if (heroImgWrapRef.current) {
+        tl.from(heroImgWrapRef.current, {
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 1.0,
+          ease: "power3.out",
+        }, 0.15);
+      }
 
       if (chars.length) {
         tl.from(chars, {
@@ -68,6 +122,14 @@ export default function ElFestivalIntroScroll() {
         }, 0.45);
       }
 
+      if (statNums.length) {
+        tl.from(statNums, {
+          scale: 0.7,
+          duration: 0.55, stagger: 0.08,
+          ease: "back.out(2)", transformOrigin: "0% 50%",
+        }, 0.5);
+      }
+
       if (paras.length) {
         tl.from(paras, {
           opacity: 0, y: 14,
@@ -76,11 +138,36 @@ export default function ElFestivalIntroScroll() {
         }, 0.6);
       }
 
+      if (accents.length) {
+        tl.from(accents, {
+          backgroundColor: "rgba(255,255,255,0.08)",
+          duration: 0.9,
+          stagger: 0.05,
+          ease: "power1.out",
+        }, 0.9);
+      }
+
       if (icon) {
         tl.from(icon, {
           scale: 0, opacity: 0, rotation: -45,
           duration: 0.7, ease: "back.out(2)", force3D: true,
         }, 0.75);
+
+        ScrollTrigger.create({
+          trigger: section,
+          start: "top 40%",
+          once: true,
+          onEnter: () => {
+            gsap.to(icon, {
+              y: -10,
+              rotation: 5,
+              duration: 3.2,
+              yoyo: true,
+              repeat: -1,
+              ease: "sine.inOut",
+            });
+          },
+        });
       }
     });
 
@@ -129,13 +216,13 @@ export default function ElFestivalIntroScroll() {
           </div>
 
           {/* Panel B: 1/3 — water texture */}
-          <div className="relative w-full md:w-1/3 h-[40vw] md:h-full overflow-hidden">
+          <div ref={heroImgWrapRef} className="relative w-full md:w-1/3 h-[40vw] md:h-full overflow-hidden">
             <Image
               src="/images/el-festival/sinai-r-lozano-cHXjUiDhNs4-unsplash.jpg"
               alt="Textura de agua"
               fill
               sizes="(max-width: 768px) 100vw, 33vw"
-              className="object-cover"
+              className="object-cover will-change-transform"
             />
           </div>
 
