@@ -3163,7 +3163,8 @@ body {
   [data-anim="impulso-card"] {
     width: min(480px, calc(100vw - 2rem)) !important;
     height: auto !important;
-    min-height: 200px !important;
+    min-height: 340px !important;
+    aspect-ratio: 16 / 11;
   }
 
   [data-anim="impulso-card"] h3 {

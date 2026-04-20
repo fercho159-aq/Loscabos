@@ -199,7 +199,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="absolute inset-0 pointer-events-none z-[1]" style={{ backgroundColor: "rgba(246, 237, 219, 0.15)" }} />
-                <div className="relative z-[2] h-full w-full">
+                <div className="absolute inset-0 z-[2] pointer-events-none">
                   <Image
                     src="/images/lbi-logo.png"
                     alt="La Baja Inspira"
@@ -233,7 +233,7 @@ export default function Home() {
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full aspect-video border-0"
                   />
                 </div>
-                <div className="relative z-[2] h-full w-full">
+                <div className="absolute inset-0 z-[2] pointer-events-none">
                   <Image
                     src="/images/ffgf-logo.png"
                     alt="Fondo Fílmico Gabriel Figueroa"
