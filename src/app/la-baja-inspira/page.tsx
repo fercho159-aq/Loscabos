@@ -289,13 +289,20 @@ export default function LaBajaInspira() {
         </div>
         <div className="relative z-10 shrink-0 flex flex-col justify-start pt-10 pr-5 pb-10 pl-5 md:pt-[7rem] md:pr-16 md:pb-[10rem] md:pl-[15rem]">
           <h2 className="text-[42px] md:text-[58px] font-black text-white leading-[1.0] max-w-[520px] mb-6">
-            {"Legado La Baja Inspira".split(" ").map((word, wi) => (
-              <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.25em" }}>
-                {word.split("").map((char, ci) => (
-                  <span key={ci} data-anim="lbi-stagger-char" style={{ display: "inline-block" }}>{char}</span>
-                ))}
-              </span>
-            ))}
+            <span style={{ display: "block" }}>
+              {"Legado".split("").map((char, ci) => (
+                <span key={ci} data-anim="lbi-stagger-char" style={{ display: "inline-block" }}>{char}</span>
+              ))}
+            </span>
+            <span style={{ display: "block", color: "var(--color-cream)" }}>
+              {"La Baja Inspira".split(" ").map((word, wi) => (
+                <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.25em" }}>
+                  {word.split("").map((char, ci) => (
+                    <span key={ci} data-anim="lbi-stagger-char" style={{ display: "inline-block" }}>{char}</span>
+                  ))}
+                </span>
+              ))}
+            </span>
           </h2>
           <p className="text-white/80 max-w-[820px] leading-[1.5]" style={{ fontSize: "clamp(1.3rem, 1.8vw, 1.75rem)", fontFamily: "var(--font-inter)" }}>
             Un registro de las obras y autores que, a través de nuestras convocatorias anteriores, han transformado la riqueza del Pacífico Sudcaliforniano en lenguaje cinematográfico con impacto global.
