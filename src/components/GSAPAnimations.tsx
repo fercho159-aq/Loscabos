@@ -103,71 +103,6 @@ export default function GSAPAnimations() {
         });
       }
 
-      const heroEditionExit = document.querySelector<HTMLElement>('[data-anim="hero-edition"]');
-      if (heroEditionExit) {
-        gsap.to(heroEditionExit, {
-          x: 200,
-          opacity: 0,
-          ease: "none",
-          immediateRender: false,
-          scrollTrigger: {
-            trigger: "#hero-section",
-            start: "25% top",
-            end: "75% top",
-            scrub: 1,
-          },
-        });
-      }
-
-      const heroDateExit = document.querySelector<HTMLElement>('[data-anim="hero-date"]');
-      if (heroDateExit) {
-        gsap.to(heroDateExit, {
-          x: 240,
-          opacity: 0,
-          ease: "none",
-          immediateRender: false,
-          scrollTrigger: {
-            trigger: "#hero-section",
-            start: "30% top",
-            end: "80% top",
-            scrub: 1,
-          },
-        });
-      }
-
-      const hashtagCharsExit = gsap.utils.toArray<HTMLElement>('[data-anim="hero-hashtag-char"]');
-      if (hashtagCharsExit.length > 0) {
-        gsap.to(hashtagCharsExit, {
-          x: 300,
-          opacity: 0,
-          stagger: 0.012,
-          ease: "none",
-          immediateRender: false,
-          scrollTrigger: {
-            trigger: "#hero-section",
-            start: "30% top",
-            end: "80% top",
-            scrub: 1,
-          },
-        });
-      }
-
-      const heroDescExit = document.querySelector<HTMLElement>('[data-anim="hero-desc"]');
-      if (heroDescExit) {
-        gsap.to(heroDescExit, {
-          x: -220,
-          opacity: 0,
-          ease: "none",
-          immediateRender: false,
-          scrollTrigger: {
-            trigger: "#hero-section",
-            start: "30% top",
-            end: "78% top",
-            scrub: 1,
-          },
-        });
-      }
-
       const heroPlayExit = document.querySelector<HTMLElement>('[data-anim="hero-play"]');
       if (heroPlayExit) {
         gsap.to(heroPlayExit, {
@@ -218,24 +153,23 @@ export default function GSAPAnimations() {
       if (heroDate) {
         gsap.from(heroDate, {
           opacity: 0,
+          y: 20,
           duration: 0.8,
           delay: 0.9,
           ease: "power3.out",
+          force3D: true,
         });
       }
 
-      // #BEYONDTHESCREEN — staggered character animation
-      const hashtagChars = gsap.utils.toArray<HTMLElement>('[data-anim="hero-hashtag-char"]');
-      if (hashtagChars.length > 0) {
-        gsap.from(hashtagChars, {
+      // #BEYONDTHESCREEN — simple fade-up
+      const heroHashtag = document.querySelector<HTMLElement>('[data-anim="hero-hashtag"]');
+      if (heroHashtag) {
+        gsap.from(heroHashtag, {
           opacity: 0,
-          y: -60,
-          rotateX: 90,
-          transformOrigin: "50% 0% -10px",
-          duration: 0.65,
+          y: 20,
+          duration: 0.8,
           delay: 1.0,
-          stagger: 0.04,
-          ease: "back.out(2.5)",
+          ease: "power3.out",
           force3D: true,
         });
       }
@@ -245,9 +179,11 @@ export default function GSAPAnimations() {
       if (heroDesc) {
         gsap.from(heroDesc, {
           opacity: 0,
+          y: 20,
           duration: 0.6,
           delay: 1.3,
           ease: "power3.out",
+          force3D: true,
         });
       }
 
@@ -300,19 +236,16 @@ export default function GSAPAnimations() {
       }
 
       // ── CTA SECTION ──
-      const ctaChars = gsap.utils.toArray<HTMLElement>('[data-anim="cta-text-char"]');
-      if (ctaChars.length > 0) {
-        gsap.from(ctaChars, {
+      const ctaText = document.querySelector<HTMLElement>('[data-anim="cta-text"]');
+      if (ctaText) {
+        gsap.from(ctaText, {
           opacity: 0,
-          y: -50,
-          rotateX: 90,
-          transformOrigin: "50% 0% -10px",
-          duration: 0.55,
-          stagger: 0.018,
-          ease: "back.out(2.5)",
+          y: 30,
+          duration: 0.8,
+          ease: "power3.out",
           force3D: true,
           scrollTrigger: {
-            trigger: '[data-anim="cta-text"]',
+            trigger: ctaText,
             start: "top 80%",
             once: true,
           },
@@ -390,19 +323,16 @@ export default function GSAPAnimations() {
         });
       }
 
-      const impulsoWords = gsap.utils.toArray<HTMLElement>('[data-anim="impulso-word"]');
-      if (impulsoWords.length > 0) {
-        gsap.from(impulsoWords, {
+      const impulsoTitle = document.querySelector<HTMLElement>('[data-anim="impulso-title"]');
+      if (impulsoTitle) {
+        gsap.from(impulsoTitle, {
           opacity: 0,
-          y: -60,
-          rotateX: 90,
-          transformOrigin: "50% 0% -10px",
-          duration: 0.6,
-          stagger: 0.07,
-          ease: "back.out(2)",
+          y: 30,
+          duration: 0.8,
+          ease: "power3.out",
           force3D: true,
           scrollTrigger: {
-            trigger: '[data-anim="impulso-title"]',
+            trigger: impulsoTitle,
             start: "top 80%",
             once: true,
           },
@@ -494,19 +424,7 @@ export default function GSAPAnimations() {
       }
 
 
-      // ── CTA EXIT — wipe izquierda → derecha con clip-path ──
-      gsap.to('[data-anim="cta-text"]', {
-        clipPath: "inset(0 0 0 100%)",
-        ease: "none",
-        immediateRender: false,
-        scrollTrigger: {
-          trigger: "#cta-section",
-          start: "top top",
-          end: "75% top",
-          scrub: 1,
-        },
-      });
-
+      // ── CTA EXIT — wipe botón ──
       gsap.to('[data-anim="cta-btn"]', {
         clipPath: "inset(0 0 0 100%)",
         ease: "none",
