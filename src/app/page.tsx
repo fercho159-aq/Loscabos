@@ -150,9 +150,9 @@ export default function Home() {
       {/* ── IMPULSO A LA INDUSTRIA ── */}
       <section id="impulso-section" className="relative w-full bg-[#0A1E23] flex flex-col overflow-hidden">
         <div className="shrink-0 flex flex-col justify-start pt-[5rem] pr-5 pb-10 pl-5 md:pt-[7rem] md:pr-16 md:pb-[15rem] md:pl-[15rem]">
-          <span data-anim="impulso-tag" className="text-[13px] md:text-[14px] font-normal tracking-[.05em] leading-none text-white/40 mb-4 block">
+          <span data-anim="impulso-tag" className="text-[13px] md:text-[14px] font-normal tracking-[.05em] leading-none text-[#F6EDDB]/40 mb-4 block">
           </span>
-          <h2 data-anim="impulso-title" className="text-[42px] md:text-[58px] font-black text-white leading-[1.0]">
+          <h2 data-anim="impulso-title" className="text-[42px] md:text-[58px] font-black text-[#F6EDDB] leading-[1.0]">
             {[
               "Conoce Nuestras",
               "Plataformas de Impulso",

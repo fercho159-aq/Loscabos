@@ -33,7 +33,7 @@ export default function Footer() {
       <div className="footer-logo-section">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/logo-light.svg"
+          src="/images/FICCLosCabos_2026_Brandbook.svg"
           alt="Festival Internacional de Cine y Creatividad de Los Cabos - 14a Edición"
           width={280}
           height={132}
