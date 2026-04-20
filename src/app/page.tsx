@@ -52,7 +52,7 @@ export default function Home() {
       <section id="hero-section" className="relative flex flex-col bg-[#0A1E23] overflow-x-clip min-h-screen">
         <div className="relative z-[1] px-6 pt-[5rem] pb-[5rem] md:px-8 md:pt-[8rem] md:pb-[9rem] flex flex-col items-center flex-1 justify-center gap-0">
           {/* Brand lockup — logo image only */}
-          <h1 className="flex justify-center mb-[1.2rem] m-0" style={{ fontSize: 0, lineHeight: 0 }}>
+          <h1 className="flex justify-center mb-[2.4rem] m-0" style={{ fontSize: 0, lineHeight: 0 }}>
             <span className="sr-only" style={{ position: "absolute", width: 1, height: 1, padding: 0, margin: -1, overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap", border: 0 }}>Festival Internacional de Cine y Creatividad Los Cabos 2026</span>
             <BrandbookHero />
           </h1>
@@ -60,10 +60,10 @@ export default function Home() {
           {/* Fecha del festival */}
           <p
             data-anim="hero-date"
-            className="text-center m-0 mb-6 text-[#EDE6DC]"
+            className="text-center m-0 mb-6 text-[#F6EDDB]"
             style={{ fontSize: "clamp(1.4rem, 2.4vw, 2.1rem)", letterSpacing: ".04em", fontWeight: 400 }}
           >
-            9 — 13 de Diciembre 2026
+            9 – 12 de diciembre 2026
           </p>
 
           {/* #BeyondTheScreen strip — centered, matching logo width */}
@@ -77,7 +77,7 @@ export default function Home() {
                   <span key={i} data-anim="hero-hashtag-char" style={{ display: "inline-block" }}>{char}</span>
                 ))}
               </p>
-              <p data-anim="hero-desc" className="text-[clamp(0.95rem,2.8vw,1.35rem)] font-normal text-[#EDE6DC] leading-[1.5] m-0 opacity-75 max-w-[360px]">
+              <p data-anim="hero-desc" className="text-[clamp(0.95rem,2.8vw,1.35rem)] font-normal text-[#F6EDDB] leading-[1.5] m-0 opacity-75 max-w-[360px]">
                 El cine como punto de <br />encuentro entre la música,<br />
                 el arte digital y la comunidad.
               </p>
@@ -177,8 +177,8 @@ export default function Home() {
               sizes="100vw"
               className="object-cover -z-10"
             />
-            {/* La Baja Inspira — wrapper owns the desktop translateY */}
-            <div className="impulso-card-outer lbi-card-outer">
+            {/* La Baja Inspira */}
+            <div className="impulso-card-outer">
               <Link
                 href="/la-baja-inspira"
                 data-anim="impulso-card"
@@ -201,7 +201,7 @@ export default function Home() {
                 <div className="absolute inset-0 pointer-events-none z-[1]" style={{ backgroundColor: "rgba(246, 237, 219, 0.15)" }} />
                 <div className="absolute inset-0 z-[2] pointer-events-none">
                   <Image
-                    src="/images/lbi-logo.png"
+                    src="/images/lbi-logo-brandbook.svg"
                     alt="La Baja Inspira"
                     fill
                     sizes="587px"
@@ -212,7 +212,7 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Fondo Fílmico Gabriel Figueroa — wrapper owns the desktop translateY */}
+            {/* Fondo Fílmico Gabriel Figueroa */}
             <div className="impulso-card-outer">
               <Link
                 href="/ffgf"
