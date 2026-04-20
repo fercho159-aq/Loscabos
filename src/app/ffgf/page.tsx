@@ -44,7 +44,7 @@ export default function FFGF() {
       <style>{`html, body { background: #fff !important; }`}</style>
       <Navbar />
 
-      <PageHero lines={["Fondo Fílmico", "Gabriel Figueroa"]} hideStrip />
+      <PageHero lines={["Fondo Fílmico", "Gabriel Figueroa"]} hideStrip short />
 
       {/* Descripción — Image left, text right (matches lbi-desc-grid pattern) */}
       <section id="ffgf-desc-section" style={{ minHeight: "auto", display: "flex", alignItems: "center", padding: "clamp(1.5rem, 3vw, 2rem)", maxWidth: 1200, margin: "0 auto", marginBottom: "clamp(1.5rem, 4vw, 3rem)" }}>

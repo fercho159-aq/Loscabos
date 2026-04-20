@@ -137,7 +137,7 @@ export default function ElFestival() {
         <ElFestivalEjeSection
           ejeNum={4}
           heroSvg="/images/el-festival/ComunidadCreativayEcosistemade Influencia.svg"
-          heroTitleLines={["Comunidad Creativa y Ecosistema de Influencia"]}
+          heroTitleLines={["Comunidad Creativa y", "Ecosistema de Influencia"]}
           heroImage={{
             src: "/images/el-festival/IMG_4061.png",
             alt: "Comunidad Creativa y Ecosistema de Influencia",

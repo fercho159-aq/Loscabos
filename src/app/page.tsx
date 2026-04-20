@@ -72,7 +72,7 @@ export default function Home() {
             style={{ width: 511, maxWidth: "90vw" }}
           >
             <div className="flex flex-col gap-[.55rem] text-left">
-              <p data-anim="hero-hashtag" className="text-[clamp(1.2rem,4vw,1.85rem)] font-black tracking-[.14em] text-[#A3CDD8] m-0" style={{ overflow: "hidden" }}>
+              <p data-anim="hero-hashtag" className="text-[clamp(1.2rem,4vw,1.85rem)] font-black tracking-normal text-[#A3CDD8] m-0" style={{ overflow: "hidden" }}>
                 {"#BeyondTheScreen".split("").map((char, i) => (
                   <span key={i} data-anim="hero-hashtag-char" style={{ display: "inline-block" }}>{char}</span>
                 ))}
@@ -154,7 +154,7 @@ export default function Home() {
           </span>
           <h2 data-anim="impulso-title" className="text-[42px] md:text-[58px] font-black text-[#F6EDDB] leading-[1.0]">
             {[
-              "Conoce Nuestras",
+              "Conoce nuestras",
               "Plataformas de Impulso",
               "a la Industria del Cine",
             ].map((line, li) => (
@@ -170,7 +170,7 @@ export default function Home() {
         <div>
           <div className="relative w-full flex max-md:flex-col items-end max-md:items-center justify-center gap-4 max-md:gap-6 min-h-[471px] max-md:min-h-0 max-md:py-10">
             <Image
-              src="/images/water-bg.jpg"
+              src="/images/cactus-sunset-bg.jpg"
               alt=""
               aria-hidden="true"
               fill
@@ -199,15 +199,17 @@ export default function Home() {
                   />
                 </div>
                 <div className="absolute inset-0 pointer-events-none z-[1]" style={{ backgroundColor: "rgba(246, 237, 219, 0.15)" }} />
-                <div className="absolute inset-0 z-[2] pointer-events-none">
-                  <Image
-                    src="/images/lbi-logo-brandbook.svg"
-                    alt="La Baja Inspira"
-                    fill
-                    sizes="587px"
-                    className="object-contain"
-                    priority
-                  />
+                <div className="absolute inset-0 z-[2] pointer-events-none p-10">
+                  <div className="relative w-full h-full">
+                    <Image
+                      src="/images/lbi-logo-brandbook.svg"
+                      alt="La Baja Inspira"
+                      fill
+                      sizes="587px"
+                      className="object-contain"
+                      priority
+                    />
+                  </div>
                 </div>
               </Link>
             </div>
@@ -233,14 +235,17 @@ export default function Home() {
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full aspect-video border-0"
                   />
                 </div>
-                <div className="absolute inset-0 z-[2] pointer-events-none">
-                  <Image
-                    src="/images/ffgf-logo.png"
-                    alt="Fondo Fílmico Gabriel Figueroa"
-                    fill
-                    sizes="587px"
-                    className="object-contain"
-                  />
+                <div className="absolute inset-0 pointer-events-none z-[1]" style={{ backgroundColor: "rgba(0, 0, 0, 0.45)" }} />
+                <div className="absolute inset-0 z-[2] pointer-events-none p-10">
+                  <div className="relative w-full h-full">
+                    <Image
+                      src="/images/ffgf-logo.svg"
+                      alt="Fondo Fílmico Gabriel Figueroa"
+                      fill
+                      sizes="587px"
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
               </Link>
             </div>

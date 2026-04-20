@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const STATS = [
   { num: "14a", label: "Edición" },
-  { num: "05", label: "Días" },
+  { num: "04", label: "Días" },
   { num: "04", label: "Disciplinas" },
   { num: "9–12", label: "Diciembre 2026" },
 ];

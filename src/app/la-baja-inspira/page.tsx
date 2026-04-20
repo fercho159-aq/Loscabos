@@ -71,7 +71,7 @@ export default function LaBajaInspira() {
     <div className="lbi-page">
       <Navbar />
 
-      <PageHero lines={["La Baja", "Inspira"]} hideStrip />
+      <PageHero lines={["La Baja", "Inspira"]} hideStrip short />
 
       {/* Water banner */}
       <section className="relative w-full" style={{ height: "30vh", minHeight: 200 }}>
@@ -98,7 +98,7 @@ export default function LaBajaInspira() {
             <p data-anim="lbi-typewriter" className="lbi-intro-lead">
               La Baja Inspira es un espacio estratégico de exhibición, proyección e incidencia cultural que articula el lenguaje cinematográfico con la investigación científica, las ciencias sociales y los estudios sobre desarrollo territorial.
             </p>
-            <p data-anim="lbi-typewriter" className="lbi-intro-body">
+            <p data-anim="lbi-typewriter" className="lbi-intro-lead">
               Su propósito es posicionar a la región como un referente internacional en documental ambiental y territorial, integrando industria audiovisual, conocimiento y conservación con una visión de futuro sostenible.
             </p>
             <div data-anim="lbi-typewriter" className="lbi-intro-apertura" aria-label="Apertura de convocatoria: 19 de mayo de 2026">
