@@ -11,7 +11,7 @@ const STATS = [
   { num: "14a", label: "Edición" },
   { num: "05", label: "Días" },
   { num: "04", label: "Disciplinas" },
-  { num: "9–13", label: "Diciembre 2026" },
+  { num: "9–12", label: "Diciembre 2026" },
 ];
 
 export default function ElFestivalIntroScroll() {
@@ -296,16 +296,16 @@ export default function ElFestivalIntroScroll() {
                 className="text-[color:var(--ef-cream)] font-normal text-[clamp(1.1rem,1.55vw,1.375rem)] leading-relaxed tracking-normal w-full max-w-[55ch] text-left"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
-                <p data-anim="intro-para" className="mb-6 md:mb-7">
-                  Tras la expansión de nuestra visión en 2025, el Festival evoluciona. En nuestra 14ª edición —del 9 al 13 de diciembre de 2026— nos consolidamos como la plataforma de vinculación para la industria audiovisual en México.
-                </p>
+                <h2 data-anim="intro-para" className="mb-3 md:mb-4 font-black leading-[1.1] text-[clamp(1.6rem,2.6vw,2.2rem)]">
+                  #BeyondTheScreen: El Pulso de la Creatividad en Los Cabos
+                </h2>
 
-                <p data-anim="intro-para" className="mb-6 md:mb-7">
-                  Somos el punto de encuentro donde el <span className="ef-kw-cine">cine</span> converge con la <span className="ef-kw-musica">música</span>, el <span className="ef-kw-arte-digital">arte digital</span> y la <span className="ef-kw-animacion">animación</span>. Desde Los Cabos, conectamos el talento mexicano con el circuito internacional.
+                <p data-anim="intro-para" className="mb-6 md:mb-7 opacity-75">
+                  del 9 al 12 de diciembre de 2026
                 </p>
 
                 <p data-anim="intro-para">
-                  A través de un modelo multisede que integra naturaleza, hospitalidad y pensamiento creativo, generamos un entorno propicio para la circulación de obras, el encuentro profesional y la construcción de redes internacionales.
+                  Somos el punto de encuentro donde el <span className="ef-kw-cine">cine</span> converge con la <span className="ef-kw-musica">música</span>, el <span className="ef-kw-arte-digital">arte digital</span> y la <span className="ef-kw-animacion">animación</span>. Desde Los Cabos, conectamos el talento mexicano con el circuito internacional.
                 </p>
               </div>
               {/* eslint-disable-next-line @next/next/no-img-element */}
