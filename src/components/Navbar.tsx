@@ -119,10 +119,10 @@ export default function Navbar() {
                   onClick={() => setMobileDropdown(!mobileDropdown)}
                   style={{
                     display: "flex", alignItems: "center", justifyContent: "space-between",
-                    width: "100%", padding: "0.75rem 0",
+                    width: "100%", padding: "1rem 0",
                     fontFamily: "var(--font-inter)", fontWeight: 900,
-                    fontSize: "0.95rem", textTransform: "uppercase", color: "rgba(255,255,255,.85)",
-                    letterSpacing: "0.04em", background: "none", border: "none",
+                    fontSize: "1.6rem", textTransform: "uppercase", color: "rgba(255,255,255,.85)",
+                    letterSpacing: "0.02em", background: "none", border: "none",
                     borderBottom: "1px solid rgba(255,255,255,.06)", cursor: "pointer",
                   }}
                 >
@@ -139,10 +139,10 @@ export default function Navbar() {
                     href={child.href}
                     onClick={() => setMobileOpen(false)}
                     style={{
-                      display: "block", padding: "0.6rem 0 0.6rem 1.25rem",
+                      display: "block", padding: "0.8rem 0 0.8rem 1.25rem",
                       fontFamily: "var(--font-inter)", fontWeight: 900,
-                      fontSize: "0.85rem", textTransform: "uppercase", color: "rgba(255,255,255,.7)",
-                      letterSpacing: "0.04em", textDecoration: "none",
+                      fontSize: "1.3rem", textTransform: "uppercase", color: "rgba(255,255,255,.7)",
+                      letterSpacing: "0.02em", textDecoration: "none",
                       borderBottom: "1px solid rgba(255,255,255,.04)",
                     }}
                   >
@@ -156,10 +156,10 @@ export default function Navbar() {
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
                 style={{
-                  display: "block", padding: "0.75rem 0",
+                  display: "block", padding: "1rem 0",
                   fontFamily: "var(--font-inter)", fontWeight: 900,
-                  fontSize: "0.95rem", textTransform: "uppercase", color: "rgba(255,255,255,.85)",
-                  letterSpacing: "0.04em", textDecoration: "none",
+                  fontSize: "1.6rem", textTransform: "uppercase", color: "rgba(255,255,255,.85)",
+                  letterSpacing: "0.02em", textDecoration: "none",
                   borderBottom: "1px solid rgba(255,255,255,.06)",
                 }}
               >
@@ -174,11 +174,11 @@ export default function Navbar() {
             description="Recibe noticias, programación y novedades del FICC Los Cabos."
             onOpen={() => setMobileOpen(false)}
             style={{
-              display: "block", marginTop: "1rem", padding: "0.7rem 1.5rem",
+              display: "block", marginTop: "1.25rem", padding: "0.9rem 1.5rem",
               background: "transparent", border: "1.5px solid #C47A3D", color: "#ffffff",
               textAlign: "center", width: "100%",
-              fontSize: "0.82rem", fontWeight: 900, textTransform: "uppercase",
-              letterSpacing: "0.1em", cursor: "pointer",
+              fontSize: "1.2rem", fontWeight: 900, textTransform: "uppercase",
+              letterSpacing: "0.06em", cursor: "pointer",
               fontFamily: "var(--font-inter)",
             }}
           />

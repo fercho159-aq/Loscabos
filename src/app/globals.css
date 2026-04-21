@@ -133,7 +133,7 @@ body {
 
   .nav-links {
     display: flex;
-    gap: 1.28rem;
+    gap: clamp(1rem, 1.5vw, 1.75rem);
     list-style: none;
     position: absolute;
     left: 50%;
@@ -143,13 +143,14 @@ body {
   .nav-links a {
     font-family: var(--font-inter);
     font-weight: 900;
-    font-size: .7rem;
-    letter-spacing: .1em;
+    font-size: clamp(.8rem, .95vw, .95rem);
+    letter-spacing: .08em;
     text-transform: uppercase;
     text-decoration: none;
     color: rgba(255, 255, 255, .82);
     transition: color .25s;
     position: relative;
+    white-space: nowrap;
   }
 
   .nav-links a::after {
@@ -221,15 +222,16 @@ body {
   }
 
   .nav-cta {
-    padding: .6rem 1.36rem;
+    padding: .65rem 1.4rem;
     background: transparent;
     border: 1.5px solid #C47A3D;
     color: #ffffff;
     font-family: var(--font-inter);
     font-weight: 900;
-    font-size: .66rem;
+    font-size: clamp(.75rem, .9vw, .9rem);
     letter-spacing: .1em;
     text-transform: uppercase;
+    white-space: nowrap;
     text-decoration: none;
     transition: all .3s cubic-bezier(.4, 0, .2, 1);
     align-items: center;
