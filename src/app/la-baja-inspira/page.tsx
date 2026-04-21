@@ -88,10 +88,9 @@ export default function LaBajaInspira() {
       <section id="lbi-desc-section" className="lbi-intro">
         <div className="lbi-intro-grid">
           <div data-anim="lbi-image" className="lbi-intro-logo-wrap">
-            <Image src="/images/lbi-logo.png" alt="Logo de La Baja Inspira — programa de exhibición de cine documental, FICC Los Cabos" width={440} height={550} style={{ objectFit: "contain", width: "100%", maxWidth: 440, height: "auto" }} />
+            <Image src="/images/lbi-logo.png" alt="Logo de La Baja Inspira — programa de exhibición de cine documental, FICC Los Cabos" width={700} height={875} style={{ objectFit: "contain", width: "100%", maxWidth: 700, height: "auto" }} />
           </div>
           <div>
-            <span className="lbi-intro-eyebrow">Plataforma · La Baja Inspira</span>
             <h2 data-anim="lbi-typewriter" className="lbi-intro-title">
               <span className="lbi-accent-underline">La Baja Inspira</span>
             </h2>

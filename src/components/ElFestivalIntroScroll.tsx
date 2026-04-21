@@ -7,18 +7,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const STATS = [
-  { num: "14a", label: "Edición" },
-  { num: "04", label: "Días" },
-  { num: "04", label: "Disciplinas" },
-  { num: "9–12", label: "Diciembre 2026" },
-];
-
 export default function ElFestivalIntroScroll() {
   const sectionRef = useRef<HTMLElement>(null);
   const bgSvgRef = useRef<HTMLImageElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
-  const railRef = useRef<HTMLElement>(null);
   const iconRef = useRef<HTMLImageElement>(null);
   const heroImgWrapRef = useRef<HTMLDivElement>(null);
 
@@ -27,13 +19,12 @@ export default function ElFestivalIntroScroll() {
       const section = sectionRef.current;
       const bgSvg = bgSvgRef.current;
       const textEl = textRef.current;
-      const railEl = railRef.current;
       const icon = iconRef.current;
-      if (!section || !bgSvg || !textEl || !railEl) return;
+      if (!section || !bgSvg || !textEl) return;
 
       const chars = Array.from(section.querySelectorAll<HTMLElement>(".title-char"));
-      const stats = Array.from(railEl.querySelectorAll<HTMLElement>(".ef-stat"));
-      const statNums = Array.from(railEl.querySelectorAll<HTMLElement>(".ef-stat-num"));
+      const stats: HTMLElement[] = [];
+      const statNums: HTMLElement[] = [];
       const paras = Array.from(textEl.querySelectorAll<HTMLElement>("[data-anim='intro-para']"));
       const accents = Array.from(textEl.querySelectorAll<HTMLElement>(".ef-kw-cine, .ef-kw-musica, .ef-kw-arte-digital, .ef-kw-animacion"));
 
@@ -260,36 +251,11 @@ export default function ElFestivalIntroScroll() {
 
         </div>
 
-        {/* ── Row 2: [rail stats | párrafos] ── */}
+        {/* ── Row 2: párrafos ── */}
         <div className="flex flex-col md:flex-row bg-[color:var(--ef-ink)] md:flex-1 md:min-h-0">
 
-          {/* Panel C: STATS RAIL — mobile 2×2 arriba, desktop 1/3 col izq full-height */}
-          <aside
-            ref={railRef}
-            aria-label="Datos clave del festival"
-            className="ef-rail
-                       w-full md:w-1/3 md:h-full
-                       grid grid-cols-2 md:flex md:flex-col md:justify-center
-                       gap-0
-                       px-5 py-6 md:px-10 md:py-8
-                       md:border-r md:border-[color-mix(in_srgb,var(--ef-cream-dim)_10%,transparent)]"
-          >
-            {STATS.map((s, i) => (
-              <div
-                key={i}
-                className="ef-stat
-                           flex flex-col items-start gap-1
-                           px-2 py-5
-                           md:px-0 md:py-4"
-              >
-                <span className="ef-stat-num">{s.num}</span>
-                <span className="ef-stat-label">{s.label}</span>
-              </div>
-            ))}
-          </aside>
-
           {/* Panel D: PÁRRAFOS — copy verbatim, color-pop en P2 + ícono derecha */}
-          <div className="w-full md:w-2/3 md:h-full flex items-center py-8 px-5 md:py-10 md:pr-10 md:pl-10">
+          <div className="w-full md:h-full flex items-center py-8 px-5 md:py-10 md:pr-10 md:pl-10">
             <div className="flex items-center justify-between gap-10 w-full">
               <div
                 ref={textRef}
