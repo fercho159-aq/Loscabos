@@ -212,8 +212,8 @@ export default function LaBajaInspira() {
                     Fechas Clave
                   </h3>
                   <div style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.1rem, 1.6vw, 1.35rem)", lineHeight: 1.8, color: "#163218", fontWeight: 400 }}>
-                    <p><strong>Apertura:</strong> 05 de mayo, 2026</p>
-                    <p><strong>Cierre:</strong> 30 de junio, 2026</p>
+                    <p><strong>Apertura:</strong> 21 de mayo, 2026</p>
+                    <p><strong>Cierre:</strong> 14 de julio, 2026</p>
                     <p><strong>Selección:</strong> 8 títulos que definen el pulso de la región</p>
                   </div>
                 </div>

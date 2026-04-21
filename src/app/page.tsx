@@ -198,8 +198,8 @@ export default function Home() {
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full aspect-video border-0"
                   />
                 </div>
-                <div className="absolute inset-0 pointer-events-none z-[1]" style={{ backgroundColor: "rgba(246, 237, 219, 0.15)" }} />
-                <div className="absolute inset-0 z-[2] pointer-events-none p-10">
+                <div className="absolute inset-0 pointer-events-none z-[1]" style={{ backgroundColor: "rgba(0, 130, 194, 0.3)" }} />
+                <div className="absolute inset-0 z-[2] pointer-events-none p-4">
                   <div className="relative w-full h-full">
                     <Image
                       src="/images/lbi-logo-brandbook.svg"
