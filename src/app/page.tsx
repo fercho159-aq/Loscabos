@@ -202,7 +202,7 @@ export default function Home() {
                 <div className="absolute inset-0 z-[2] pointer-events-none p-8">
                   <div className="relative w-full h-full">
                     <Image
-                      src="/images/lbi-logo-brandbook.svg"
+                      src="/images/lbi-logo-normalizado.png"
                       alt="La Baja Inspira"
                       fill
                       sizes="587px"
@@ -239,7 +239,7 @@ export default function Home() {
                 <div className="absolute inset-0 z-[2] pointer-events-none p-8">
                   <div className="relative w-full h-full">
                     <Image
-                      src="/images/ffgf-logo.svg"
+                      src="/images/ffgf-logo-normalizado.png"
                       alt="Fondo Fílmico Gabriel Figueroa"
                       fill
                       sizes="587px"
