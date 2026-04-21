@@ -2443,8 +2443,7 @@ body {
 }
 
 .prensa-page .cta-button {
-  border: 2px solid var(--color-orange);
-  color: var(--color-orange);
+  color: var(--color-cream);
 }
 
 .prensa-page .cta-button:hover {
@@ -3591,6 +3590,7 @@ body {
 .subscribe-modal[data-source="preventa"]        { --sm-accent: #FA6935; }
 .subscribe-modal[data-source="comunidad"]       { --sm-accent: #C47A3D; }
 .subscribe-modal[data-source="la-baja-inspira"] { --sm-accent: #BDC957; }
+.subscribe-modal[data-source="prensa"]          { --sm-accent: #006666; }
 
 .subscribe-modal::before {
   content: "";

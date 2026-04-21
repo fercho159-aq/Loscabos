@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
-export type SubscribeSource = "preventa" | "comunidad" | "la-baja-inspira" | "ffgf";
+export type SubscribeSource = "preventa" | "comunidad" | "la-baja-inspira" | "ffgf" | "prensa";
 
 type Props = {
   open: boolean;
@@ -21,6 +21,7 @@ const EYEBROW_BY_SOURCE: Record<SubscribeSource, string> = {
   comunidad: "Comunidad FICC",
   "la-baja-inspira": "La Baja Inspira · 2026",
   ffgf: "Fondo Fílmico Gabriel Figueroa · 2026",
+  prensa: "Prensa · FICC 2026",
 };
 
 export default function SubscribeModal({
@@ -34,7 +35,10 @@ export default function SubscribeModal({
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [medio, setMedio] = useState("");
+  const [cargo, setCargo] = useState("");
   const [consent, setConsent] = useState(false);
+  const isPrensa = source === "prensa";
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [duplicate, setDuplicate] = useState(false);
@@ -85,6 +89,14 @@ export default function SubscribeModal({
       setErrorMsg("Ingresa tu nombre.");
       return;
     }
+    if (isPrensa && !medio.trim()) {
+      setErrorMsg("Ingresa el medio.");
+      return;
+    }
+    if (isPrensa && !cargo.trim()) {
+      setErrorMsg("Ingresa tu cargo.");
+      return;
+    }
     if (!consent) {
       setErrorMsg("Debes aceptar el aviso de privacidad.");
       return;
@@ -98,7 +110,9 @@ export default function SubscribeModal({
         body: JSON.stringify({
           email: email.trim(),
           name: name.trim(),
-          phone: phone.trim() || undefined,
+          phone: isPrensa ? undefined : phone.trim() || undefined,
+          medio: isPrensa ? medio.trim() : undefined,
+          cargo: isPrensa ? cargo.trim() : undefined,
           source,
           consent,
         }),
@@ -213,19 +227,49 @@ export default function SubscribeModal({
                 />
               </label>
 
-              <label className="subscribe-modal-field">
-                <span>Teléfono (opcional)</span>
-                <input
-                  type="tel"
-                  name="phone"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  autoComplete="tel"
-                  inputMode="tel"
-                  maxLength={40}
-                  placeholder="+52 ..."
-                />
-              </label>
+              {isPrensa ? (
+                <>
+                  <label className="subscribe-modal-field">
+                    <span>Medio</span>
+                    <input
+                      type="text"
+                      name="medio"
+                      value={medio}
+                      onChange={(e) => setMedio(e.target.value)}
+                      required
+                      maxLength={120}
+                      placeholder="Nombre del medio"
+                    />
+                  </label>
+
+                  <label className="subscribe-modal-field">
+                    <span>Cargo</span>
+                    <input
+                      type="text"
+                      name="cargo"
+                      value={cargo}
+                      onChange={(e) => setCargo(e.target.value)}
+                      required
+                      maxLength={120}
+                      placeholder="Tu cargo"
+                    />
+                  </label>
+                </>
+              ) : (
+                <label className="subscribe-modal-field">
+                  <span>Teléfono (opcional)</span>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    autoComplete="tel"
+                    inputMode="tel"
+                    maxLength={40}
+                    placeholder="+52 ..."
+                  />
+                </label>
+              )}
 
               <label className="subscribe-modal-consent">
                 <input
@@ -271,6 +315,10 @@ function friendlyError(code?: string): string {
       return "Ingresa tu nombre.";
     case "invalid_phone":
       return "El teléfono no es válido.";
+    case "invalid_medio":
+      return "Ingresa el medio.";
+    case "invalid_cargo":
+      return "Ingresa tu cargo.";
     case "invalid_source":
       return "Origen inválido. Recarga la página.";
     case "consent_required":

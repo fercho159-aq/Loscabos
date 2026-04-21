@@ -199,7 +199,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="absolute inset-0 pointer-events-none z-[1]" style={{ backgroundColor: "rgba(0, 130, 194, 0.3)" }} />
-                <div className="absolute inset-0 z-[2] pointer-events-none p-4">
+                <div className="absolute inset-0 z-[2] pointer-events-none p-8">
                   <div className="relative w-full h-full">
                     <Image
                       src="/images/lbi-logo-brandbook.svg"
@@ -236,7 +236,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="absolute inset-0 pointer-events-none z-[1]" style={{ backgroundColor: "rgba(0, 0, 0, 0.45)" }} />
-                <div className="absolute inset-0 z-[2] pointer-events-none p-10">
+                <div className="absolute inset-0 z-[2] pointer-events-none p-8">
                   <div className="relative w-full h-full">
                     <Image
                       src="/images/ffgf-logo.svg"
