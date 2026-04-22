@@ -107,40 +107,61 @@ export default function LaBajaInspira() {
               </span>
               <span className="lbi-intro-apertura-line"> - 21 de mayo de 2026</span>
             </div>
-            <ul className="lbi-cat-list">
-              <li data-anim="lbi-list-item" className="lbi-cat lbi-cat--naturales">
-                <span className="lbi-cat-icon" aria-hidden="true">
-                  <svg data-anim="lbi-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 20h10" /><path d="M10 20c5.5-2.5.8-6.4 3-10" /><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z" /><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z" /></svg>
-                </span>
-                <span data-anim="lbi-stagger-text">
-                  <strong className="lbi-cat-title">Ciencias Naturales</strong>
-                  <span className="lbi-cat-desc">Biología Golfo de California, ecología, cambio climático y biodiversidad del desierto.</span>
-                </span>
-              </li>
-              <li data-anim="lbi-list-item" className="lbi-cat lbi-cat--historia">
-                <span className="lbi-cat-icon" aria-hidden="true">
-                  <svg data-anim="lbi-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12h1" /><path d="M6 8v8" /><path d="M10 2v20" /><path d="M14 4v16" /><path d="M18 6v12" /><path d="M22 12h-1" /></svg>
-                </span>
-                <span data-anim="lbi-stagger-text">
-                  <strong className="lbi-cat-title">Historia y Sociedad</strong>
-                  <span className="lbi-cat-desc">Antropología, patrimonio cultural y la reconstrucción de la memoria histórica.</span>
-                </span>
-              </li>
-              <li data-anim="lbi-list-item" className="lbi-cat lbi-cat--destino">
-                <span className="lbi-cat-icon" aria-hidden="true">
-                  <svg data-anim="lbi-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" /><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" /><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" /></svg>
-                </span>
-                <span data-anim="lbi-stagger-text">
-                  <strong className="lbi-cat-title">Desarrollo del Destino</strong>
-                  <span className="lbi-cat-desc">Economía azul, pesca responsable y turismo sostenible.</span>
-                </span>
-              </li>
-            </ul>
             <p data-anim="lbi-typewriter" className="lbi-intro-closer">
               El rigor cinematográfico es nuestra base. Buscamos obras donde la calidad narrativa y la investigación profunda se encuentran para definir el futuro de la región.
             </p>
           </div>
         </div>
+      </section>
+
+      {/* Categorías — 3 columnas con números grandes delineados, full-width */}
+      <section className="lbi-cats">
+          <ol className="lbi-cats-grid" aria-label="Áreas temáticas La Baja Inspira">
+            <li data-anim="lbi-list-item" className="lbi-cat-col">
+              <span className="lbi-cat-num" aria-hidden="true">
+                <Image src="/images/lbi-numbers/01.svg" alt="" width={260} height={260} />
+              </span>
+              <div data-anim="lbi-stagger-text" className="lbi-cat-body">
+                <h3 className="lbi-cat-title">Ciencias naturales<br />y ambientales</h3>
+                <ul className="lbi-cat-items">
+                  <li>Biología marina</li>
+                  <li>Ecología y conservación</li>
+                  <li>Cambio climático</li>
+                  <li>Estudios del desierto y biodiversidad</li>
+                </ul>
+              </div>
+            </li>
+            <li data-anim="lbi-list-item" className="lbi-cat-col">
+              <span className="lbi-cat-num" aria-hidden="true">
+                <Image src="/images/lbi-numbers/02.svg" alt="" width={260} height={260} />
+              </span>
+              <div data-anim="lbi-stagger-text" className="lbi-cat-body">
+                <h3 className="lbi-cat-title">Historia y<br />ciencias sociales</h3>
+                <ul className="lbi-cat-items">
+                  <li>Historia regional</li>
+                  <li>Antropología</li>
+                  <li>Patrimonio cultural</li>
+                  <li>Estudios comunitarios</li>
+                  <li>Memoria histórica</li>
+                </ul>
+              </div>
+            </li>
+            <li data-anim="lbi-list-item" className="lbi-cat-col">
+              <span className="lbi-cat-num" aria-hidden="true">
+                <Image src="/images/lbi-numbers/03.svg" alt="" width={260} height={260} />
+              </span>
+              <div data-anim="lbi-stagger-text" className="lbi-cat-body">
+                <h3 className="lbi-cat-title">Desarrollo<br />y economía territorial</h3>
+                <ul className="lbi-cat-items">
+                  <li>Economía azul</li>
+                  <li>Seguridad alimentaria</li>
+                  <li>Pesca responsable</li>
+                  <li>Turismo sostenible</li>
+                  <li>Planeación y desarrollo territorial</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
       </section>
 
 
