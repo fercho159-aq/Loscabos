@@ -129,8 +129,8 @@ export default function Home() {
             </p>
             <SubscribeCTA
               source="preventa"
-              label="Preventa de Boletos"
-              title="Preventa de Boletos"
+              label=" Regístrate "
+              title=" Regístrate "
               description="Déjanos tus datos y recibe la información de la preventa antes que nadie."
               className="cta-button"
               dataAnim="cta-btn"

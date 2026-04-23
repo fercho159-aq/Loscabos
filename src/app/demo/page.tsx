@@ -203,7 +203,7 @@ export default function DemoPage() {
               rel="noopener noreferrer"
               className="cta-button"
             >
-              Preventa de Boletos
+              Regístrate
             </a>
           </div>
         </div>
