@@ -1,90 +1,99 @@
+"use client";
 
-import Header from '@/components/cabo-cine/header';
-import Footer from '@/components/cabo-cine/footer';
-import { pressData } from '@/lib/press-data';
-import Link from 'next/link';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
-import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import Image from "next/image";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
+import SubscribeCTA from "@/components/SubscribeCTA";
 
-export default function PrensaPage() {
+const quotes = [
+  { medio: "El Universal", logo: "/images/prensa/Logos Medios/ElUniversal.png", quote: "El Festival de Cine de Los Cabos vuelve en 2025 para recordarle al mundo que el cine mexicano sigue vivo, evoluciona y tiene mucho que contar.", url: "https://www.eluniversal.com.mx/espectaculos/el-festival-de-cine-de-los-cabos-vuelve-en-2025-el-cine-mexicano-sigue-vivo-y-evoluciona/" },
+  { medio: "El Financiero", logo: "/images/prensa/Logos Medios/ElFinanciero.png", quote: "El cine trasciende la pantalla y convierte a Puerto Los Cabos en un escenario donde cine, música, arte y naturaleza se entrelazan... transformando un destino en un referente cultural de alcance internacional.", url: "https://www.elfinanciero.com.mx/mundo-empresa/2025/11/17/ficloscabos-2025-el-cine-trasciende-la-pantalla-y-convierte-a-puerto-los-cabos-en-un-ecosistema-creativo/" },
+  { medio: "Quién", logo: "/images/prensa/Logos Medios/Quien.png", quote: "No es solo un evento, es el lugar donde las historias se desbordan, se viven, se celebran y se convierten en magia... una propuesta donde la pantalla no es el límite, sino el punto de partida.", url: "https://www.quien.com/cultura/2025/12/08/ficloscabos-2025-el-festival-que-llega-mas-alla-de-la-pantalla" },
+  { medio: "The Walk", logo: "/images/prensa/Logos Medios/TheWalk.png", quote: "El festival vuelve a recordarnos que el cine también puede ser eso: una pausa elegante, una conversación bien dicha, una historia que se ve mejor con el sonido del mar de fondo.", url: "https://thewalkpaper.com/noticias/463/FIC_los_cabos_2025" },
+  { medio: "Time Out México", logo: "/images/prensa/Logos Medios/TimeOut.png", quote: "Una propuesta que apuesta por ser distinta... convirtiendo al FICCLosCabos en un campus cultural donde el cine dialogue con el desierto, el mar y la creatividad local.", url: "https://www.timeoutmexico.mx/ciudad-de-mexico/cine/festival-internacional-de-cine-de-los-cabos-2025-fechas-y-temas" },
+  { medio: "Chilango", logo: "/images/prensa/Logos Medios/Chilango.png", quote: "La 13a edición demostró que el séptimo arte sigue buscando espacios para diversificarse. La producción cinematográfica fuera de la CDMX existe y sigue levantando la mano para mostrar el talento que hace falta visibilizar.", url: "https://www.chilango.com/cine-y-tv/peliculas/ganadores-de-fic-los-cabos-2025/" },
+  { medio: "Travel + Leisure", logo: "/images/prensa/Logos Medios/TravelLeisure.png", quote: "Más que un escaparate de estrenos, es un espacio donde el cine se piensa, se acompaña y, en muchos casos, se termina de construir.", url: "https://travelandleisure-es.com/destinos/festival-internacional-de-cine-de-los-cabos-2025-cine-emergente-musica-y-nuevas-narrativas/" },
+];
+
+// Build pairs for the carousel (2 cards per slide)
+const pairs: (typeof quotes)[] = [];
+for (let i = 0; i < quotes.length; i += 2) {
+  pairs.push(quotes.slice(i, i + 2));
+}
+
+const accentClass = (idx: number) =>
+  idx % 3 === 0 ? "accent-teal" : idx % 3 === 1 ? "accent-acid" : "accent-wine";
+
+function QuoteCard({ q, globalIndex }: { q: (typeof quotes)[number]; globalIndex: number }) {
   return (
-    <div className="flex flex-col min-h-screen bg-background">
-      <Header />
-      <main className="flex-grow pt-20">
-        <section className="py-16 sm:py-24">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h1 className="font-headline text-5xl md:text-6xl font-bold text-foreground">
-                Sala de Prensa
-              </h1>
-              <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                Encuentra aquí los últimos comunicados, noticias y recursos oficiales del FICLosCabos.
-              </p>
-            </div>
+    <article className={`prensa-quote-card prensa-quote-card--${accentClass(globalIndex)}`}>
+      <div className="prensa-quote-logo">
+        <Image src={q.logo} alt={`Logo de ${q.medio} — prensa que cubre el FICC Los Cabos`} width={240} height={72} style={{ objectFit: "contain", maxHeight: 72, height: "auto", width: "auto", maxWidth: "100%" }} />
+      </div>
+      <blockquote className="prensa-quote-text">
+        {q.quote}
+      </blockquote>
+      <div className="prensa-quote-footer">
+        <div className="prensa-quote-source">
+          <span className="prensa-quote-dash"></span>
+          <span className="prensa-quote-medio">{q.medio}</span>
+        </div>
+        <a href={q.url} target="_blank" rel="noopener noreferrer" className="prensa-quote-link">
+          Leer nota
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M7 17L17 7" /><path d="M7 7h10v10" />
+          </svg>
+        </a>
+      </div>
+    </article>
+  );
+}
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {pressData.map((note) => (
-                <Card key={note.slug} className="flex flex-col bg-card">
-                  <CardHeader>
-                    <div className="relative aspect-video mb-4">
-                       <Image
-                        src={note.imgSrc}
-                        alt={note.title}
-                        data-ai-hint={note.imgHint}
-                        fill
-                        className="rounded-t-lg object-cover"
-                      />
-                    </div>
-                    <p className="text-sm text-muted-foreground">{note.date}</p>
-                    <CardTitle className="text-2xl">{note.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-grow">
-                    <p className="text-muted-foreground">{note.excerpt}</p>
-                  </CardContent>
-                  <CardFooter>
-                    <Button asChild className="w-full">
-                      <Link href={`/prensa/${note.slug}`}>
-                        Leer más <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
+export default function Prensa() {
+  // Repeat pairs 3x for seamless infinite loop
+  const repeatedPairs = [...pairs, ...pairs, ...pairs];
 
-        <section className="py-16 sm:py-24 bg-card">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
-              <div className="text-center md:text-left">
-                <h1 className="font-headline text-4xl md:text-5xl font-bold text-foreground">
-                  Contacto de Prensa
-                </h1>
-                <div className="mt-6 text-lg text-muted-foreground space-y-2">
-                    <p>Para entrevistas, acreditaciones y solicitudes de prensa, escribe a:</p>
-                    <p className="font-semibold text-foreground">Cynthia Huerta</p>
-                    <a href="mailto:cynthia@comunicacionlateral.com" className="text-accent hover:underline">
-                        cynthia@comunicacionlateral.com
-                    </a>
-                </div>
+  return (
+    <div className="prensa-page">
+      <Navbar />
+
+      <PageHero lines={["Prensa"]}>
+        <SubscribeCTA
+          source="prensa"
+          label="Registro de prensa"
+          title="Registro de prensa · FICC 2026"
+          description="Completa tus datos para recibir información oficial del festival."
+          className="cta-button"
+        />
+      </PageHero>
+
+      <section className="prensa-quotes-section">
+        <div className="prensa-quotes-header">
+          <p className="prensa-quotes-label">Prensa</p>
+          <h2 className="prensa-quotes-title">Lo que dicen de nosotros</h2>
+          <p className="prensa-quotes-subtitle">
+            La prensa nacional e internacional reconoce al FICCLosCabos como uno de los festivales de cine más relevantes de Latinoamérica.
+          </p>
+        </div>
+
+        <div className="prensa-carousel-wrapper">
+          <div className="prensa-carousel-track">
+            {repeatedPairs.map((pair, pairIdx) => (
+              <div className="prensa-carousel-slide" key={pairIdx}>
+                {pair.map((q, cardIdx) => (
+                  <QuoteCard
+                    key={`${pairIdx}-${cardIdx}`}
+                    q={q}
+                    globalIndex={pairIdx * 2 + cardIdx}
+                  />
+                ))}
               </div>
-              <div>
-                <Image
-                    src="/Images/Prensa/FICC_Banner_5 (1).png"
-                    alt="Contacto de Prensa"
-                    data-ai-hint="desk phone notebook"
-                    width={800}
-                    height={600}
-                    className="rounded-lg object-cover w-full h-auto"
-                />
-              </div>
-            </div>
+            ))}
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
