@@ -267,7 +267,7 @@ export default function ElFestivalIntroScroll() {
                 </h2>
 
                 <p data-anim="intro-para" className="mb-6 md:mb-7 opacity-75">
-                  del 9 al 12 de diciembre de 2026
+                  del 9 al 13 de diciembre de 2026
                 </p>
 
                 <p data-anim="intro-para">

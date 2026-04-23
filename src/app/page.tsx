@@ -66,7 +66,7 @@ export default function Home() {
             className="text-center m-0 mb-6 text-[#F6EDDB]"
             style={{ fontSize: "clamp(1.4rem, 2.4vw, 2.1rem)", letterSpacing: ".04em", fontWeight: 400 }}
           >
-            9 – 12 de diciembre 2026
+            9 – 13 de diciembre 2026
           </p>
 
           {/* #BeyondTheScreen strip — centered, matching logo width */}

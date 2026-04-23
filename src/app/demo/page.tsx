@@ -137,7 +137,7 @@ export default function DemoPage() {
               className="text-[#EDE6DC]/60 tracking-[.08em]"
               style={{ fontSize: "clamp(.7rem, .9vw, .82rem)" }}
             >
-              <span id="hero-date-text">9–12 de diciembre de 2026</span>
+              <span id="hero-date-text">9–13 de diciembre de 2026</span>
             </p>
           </div>
 

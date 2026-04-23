@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | FICC Los Cabos",
   },
   description:
-    "14° Edición del Festival Internacional de Cine y Creatividad de Los Cabos. 9 – 12 diciembre 2026. #BeyondTheScreen",
+    "14° Edición del Festival Internacional de Cine y Creatividad de Los Cabos. 9 – 13 diciembre 2026. #BeyondTheScreen",
   keywords: [
     "FICC Los Cabos",
     "Festival Internacional de Cine",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: "FICC Los Cabos",
     title: "FICC Los Cabos 2026 | Festival Internacional de Cine y Creatividad",
     description:
-      "14° Edición del Festival Internacional de Cine y Creatividad de Los Cabos. 9 – 12 diciembre 2026. #BeyondTheScreen",
+      "14° Edición del Festival Internacional de Cine y Creatividad de Los Cabos. 9 – 13 diciembre 2026. #BeyondTheScreen",
     images: [
       {
         url: "/og-image.jpg",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "FICC Los Cabos 2026 | Festival Internacional de Cine y Creatividad",
     description:
-      "14° Edición del Festival Internacional de Cine y Creatividad de Los Cabos. 9 – 12 diciembre 2026.",
+      "14° Edición del Festival Internacional de Cine y Creatividad de Los Cabos. 9 – 13 diciembre 2026.",
     images: ["/og-image.jpg"],
     creator: "@ficclcabos",
   },
