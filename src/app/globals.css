@@ -3483,8 +3483,6 @@ body {
   position: relative;
   width: 100%;
   padding: clamp(2.75rem, 5vw, 4.5rem) clamp(1.5rem, 5vw, 5.5rem);
-  border-top: 3px solid #081722;
-  border-bottom: 3px solid #081722;
   margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
   isolation: isolate;
   overflow: hidden;
