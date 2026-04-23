@@ -39,6 +39,9 @@ const aliados = [
   { name: "Dobel 50", logo: "/images/aliados/FICC_Logos_Aliados_2026-27.png" },
   { name: "Grupo Aeroportuario del Pacífico", logo: "/images/aliados/FICC_Logos_Aliados_2026-28.png" },
   { name: "Aeromexico", logo: "/images/aliados/FICC_Logos_Aliados_2026-29.png" },
+  { name: "YAYA Rentals", logo: "/images/aliados/FICC_Logos_Aliados_2026-30.png" },
+  { name: "Zadún, A Ritz-Carlton Reserve", logo: "/images/aliados/FICC_Logos_Aliados_2026-31.png" },
+  { name: "The Cape, A Thompson Hotel", logo: "/images/aliados/FICC_Logos_Aliados_2026-32.png" },
 ];
 const aliadosTrack = [...aliados, ...aliados];
 
