@@ -3488,22 +3488,6 @@ body {
   overflow: hidden;
   background: var(--color-cream);
 }
-.lbi-cats::before {
-  content: "";
-  position: absolute;
-  left: -3rem;
-  bottom: -3rem;
-  width: clamp(240px, 30vw, 460px);
-  height: clamp(280px, 36vw, 540px);
-  background-image: url('/images/lbi-numbers/texture.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.55;
-  z-index: -1;
-  pointer-events: none;
-}
-
 .lbi-cats-grid {
   list-style: none;
   padding: 0;

@@ -1,0 +1,14 @@
+==========================================
+Migración FICC → Loscabos
+Modo  : --test
+Inicio: Thu Apr 23 10:06:53 CST 2026
+Src   : /Users/fernandotrejo/Developer/FICC
+Repo  : https://github.com/fercho159-aq/Loscabos.git
+Work  : /var/folders/41/qq_ywhbn05z5059jt7c8m7nc0000gn/T/loscabos-migration-XXXX.soymcUYhBD
+Log   : /Users/fernandotrejo/Developer/FICC/logs/migracion---test-20260423-100653.log
+==========================================
+>>> Clonando https://github.com/fercho159-aq/Loscabos.git ...
+Cloning into '/var/folders/41/qq_ywhbn05z5059jt7c8m7nc0000gn/T/loscabos-migration-XXXX.soymcUYhBD/Loscabos'...
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+--- Cleanup (exit=128) ---
