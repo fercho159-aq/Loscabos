@@ -84,7 +84,8 @@ export default function Home() {
               </p>
               <p data-anim="hero-desc" className="text-[clamp(0.95rem,2.8vw,1.35rem)] font-normal text-[#F6EDDB] leading-[1.5] m-0 opacity-75 max-w-[360px]">
                 El cine como punto de <br />encuentro entre la música,<br />
-                el arte digital y la comunidad.
+                el arte digital, la animación<br />
+                y la comunidad.
               </p>
             </div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
