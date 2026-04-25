@@ -271,7 +271,7 @@ export default function ElFestivalIntroScroll() {
                 </p>
 
                 <p data-anim="intro-para">
-                  Somos el punto de encuentro donde el <span className="ef-kw-cine">cine</span> converge con la <span className="ef-kw-musica">música</span>, el <span className="ef-kw-arte-digital">arte digital</span> y la <span className="ef-kw-animacion">animación</span>. Desde Los Cabos, conectamos el talento mexicano con el circuito internacional.
+                  Somos el punto de encuentro donde el <span className="ef-kw-cine">cine</span> converge con la <span className="ef-kw-musica">música</span>, el <span className="ef-kw-arte-digital">arte digital</span>, la <span className="ef-kw-animacion">animación</span> y la comunidad. Desde Los Cabos, conectamos el talento mexicano con el circuito internacional.
                 </p>
               </div>
               {/* eslint-disable-next-line @next/next/no-img-element */}
