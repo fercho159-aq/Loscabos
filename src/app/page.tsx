@@ -50,7 +50,6 @@ const aliadosTrack = [...aliados, ...aliados];
 export default function Home() {
   return (
     <>
-      <link rel="preload" as="image" href="/images/FICCLosCabos_2026_Brandbook.svg" fetchPriority="high" />
       <Navbar />
 
       {/* ── HERO ── */}
@@ -191,6 +190,7 @@ export default function Home() {
                     src="https://videopress.com/embed/dCWJUwu4?at=8&loop=1&autoPlay=1&muted=1&controls=0&preloadContent=metadata"
                     title="La Baja Inspira"
                     allow="clipboard-write; autoplay"
+                    loading="lazy"
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full aspect-video border-0"
                   />
                 </div>
@@ -228,6 +228,7 @@ export default function Home() {
                     src="https://player.vimeo.com/video/286013330?h=44c9737e98&autoplay=1&muted=1&loop=1&background=1&controls=0"
                     title="Fondo Fílmico Gabriel Figueroa"
                     allow="autoplay; fullscreen; picture-in-picture"
+                    loading="lazy"
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full aspect-video border-0"
                   />
                 </div>
