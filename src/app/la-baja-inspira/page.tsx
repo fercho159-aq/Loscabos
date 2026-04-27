@@ -158,7 +158,7 @@ export default function LaBajaInspira() {
             <p data-anim="lbi-typewriter" className="lbi-intro-lead">
               Su propósito es posicionar a la región como un referente internacional en documental ambiental y territorial, integrando industria audiovisual, conocimiento y conservación con una visión de futuro sostenible.
             </p>
-            <div data-anim="lbi-typewriter" className="lbi-intro-apertura" aria-label="Apertura de convocatoria: 21 de mayo de 2026">
+            <div data-anim="lbi-typewriter" className="lbi-intro-apertura" role="group" aria-label="Apertura de convocatoria: 21 de mayo de 2026">
               <span className="lbi-intro-apertura-line">
                 <span className="lbi-intro-apertura-dot" aria-hidden="true" style={{ display: "inline-block", verticalAlign: "middle", marginRight: "0.5rem" }} />
                 Apertura de convocatoria
@@ -240,14 +240,16 @@ export default function LaBajaInspira() {
 
         <div>
           <div
-            className="w-full flex max-md:flex-col items-end max-md:items-center justify-center gap-8 max-md:gap-6 min-h-[471px] max-md:min-h-0 max-md:py-10 px-8"
-            style={{
-              backgroundImage: "url('/images/lbi-convocatoria-bg.png')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
+            className="relative w-full flex max-md:flex-col items-end max-md:items-center justify-center gap-8 max-md:gap-6 min-h-[471px] max-md:min-h-0 max-md:py-10 px-8"
           >
+            <Image
+              src="/images/lbi-convocatoria-bg.png"
+              alt=""
+              aria-hidden="true"
+              fill
+              sizes="100vw"
+              className="object-cover -z-10 select-none pointer-events-none"
+            />
             {/* Card izquierda — info convocatoria */}
             <div className="impulso-card-outer">
               <div
@@ -332,7 +334,7 @@ export default function LaBajaInspira() {
                 <div className="profile-avatar" style={{ position: "relative", overflow: "hidden" }}>
                   <Image src={p.img} alt={`${p.name}, miembro del comité de selección — La Baja Inspira FICC Los Cabos`} fill sizes="(max-width: 768px) 50vw, 220px" style={{ objectFit: "cover" }} />
                 </div>
-                <h4>{p.name}</h4>
+                <h3>{p.name}</h3>
                 <p>{p.desc}</p>
               </div>
             ))}
@@ -346,7 +348,7 @@ export default function LaBajaInspira() {
                 <div className="profile-avatar" style={{ position: "relative", overflow: "hidden" }}>
                   <Image src={p.img} alt={`${p.name}, miembro del comité de selección — La Baja Inspira FICC Los Cabos`} fill sizes="(max-width: 768px) 60vw, 220px" style={{ objectFit: "cover" }} />
                 </div>
-                <h4>{p.name}</h4>
+                <h3>{p.name}</h3>
                 <p>{p.desc}</p>
               </div>
             ))}
@@ -397,7 +399,7 @@ export default function LaBajaInspira() {
                     <Image src={p.poster} alt={`Poster de ${p.title} — Legado La Baja Inspira FICC Los Cabos`} fill sizes="(max-width: 768px) 50vw, 300px" style={{ objectFit: "cover" }} />
                   </div>
                   <div className="flip-card-back">
-                    <h4>{p.title}</h4>
+                    <h3>{p.title}</h3>
                     {p.director && <p style={{ fontWeight: 400, marginBottom: "0.5rem" }}>{p.director}</p>}
                     <p style={{ fontSize: "0.85rem", lineHeight: 1.6 }}>{p.desc}</p>
                   </div>

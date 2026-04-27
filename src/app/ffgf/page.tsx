@@ -180,7 +180,7 @@ export default function FFGF() {
                   </div>
                   <div className="flip-card-back">
                     <span className="ffgf-film-tag">{p.tag}</span>
-                    <h4>{p.title}</h4>
+                    <h3>{p.title}</h3>
                     {p.director && <p style={{ fontWeight: 400, marginBottom: "0.5rem" }}>{p.director}</p>}
                     <p style={{ fontSize: "0.85rem", lineHeight: 1.6 }}>{p.desc}</p>
                   </div>
