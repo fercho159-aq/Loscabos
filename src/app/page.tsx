@@ -50,7 +50,6 @@ const aliadosTrack = [...aliados, ...aliados];
 export default function Home() {
   return (
     <>
-      <link rel="preload" as="image" href="/images/FICCLosCabos_2026_Brandbook.svg" fetchPriority="high" />
       <Navbar />
 
       {/* ── HERO ── */}

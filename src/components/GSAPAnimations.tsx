@@ -12,37 +12,57 @@ export default function GSAPAnimations() {
   useEffect(() => {
     if (typeof window === "undefined" || window.innerWidth < 768) return;
 
-    const dot = document.createElement("div");
-    dot.id = "cursor-dot";
-    Object.assign(dot.style, {
-      width: "8px",
-      height: "8px",
-      background: "#A3CDD8",
-      position: "fixed",
-      top: "0",
-      left: "0",
-      borderRadius: "50%",
-      pointerEvents: "none",
-      zIndex: "9999",
-      transform: "translate(-50%, -50%)",
-    });
-    document.body.appendChild(dot);
+    let dot: HTMLDivElement | null = null;
+    let cleanup: (() => void) | null = null;
 
-    const onMouseMove = (e: MouseEvent) => {
-      gsap.to("#cursor-dot", {
-        x: e.clientX,
-        y: e.clientY,
-        duration: 0.15,
-        ease: "power2.out",
-        force3D: true,
+    const init = () => {
+      dot = document.createElement("div");
+      dot.id = "cursor-dot";
+      Object.assign(dot.style, {
+        width: "8px",
+        height: "8px",
+        background: "#A3CDD8",
+        position: "fixed",
+        top: "0",
+        left: "0",
+        borderRadius: "50%",
+        pointerEvents: "none",
+        zIndex: "9999",
+        transform: "translate(-50%, -50%)",
       });
+      document.body.appendChild(dot);
+
+      const onMouseMove = (e: MouseEvent) => {
+        gsap.to("#cursor-dot", {
+          x: e.clientX,
+          y: e.clientY,
+          duration: 0.15,
+          ease: "power2.out",
+          force3D: true,
+        });
+      };
+
+      window.addEventListener("mousemove", onMouseMove);
+      cleanup = () => {
+        window.removeEventListener("mousemove", onMouseMove);
+        dot?.parentNode?.removeChild(dot);
+      };
     };
 
-    window.addEventListener("mousemove", onMouseMove);
+    type IdleWindow = Window & {
+      requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
+    };
+    const w = window as IdleWindow;
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
+    if (typeof w.requestIdleCallback === "function") {
+      w.requestIdleCallback(init, { timeout: 2000 });
+    } else {
+      timeoutId = setTimeout(init, 800);
+    }
 
     return () => {
-      window.removeEventListener("mousemove", onMouseMove);
-      dot.parentNode?.removeChild(dot);
+      if (timeoutId) clearTimeout(timeoutId);
+      cleanup?.();
     };
   }, []);
 
@@ -81,6 +101,20 @@ export default function GSAPAnimations() {
           force3D: true,
           transformOrigin: "center bottom",
         });
+
+        // Inlined SVG paths — random stagger reveal
+        const heroPaths = heroWrap.querySelectorAll<SVGPathElement | SVGRectElement>("path, rect");
+        if (heroPaths.length > 0) {
+          gsap.set(heroPaths, { opacity: 0, y: 14, transformOrigin: "50% 50%" });
+          gsap.to(heroPaths, {
+            opacity: 1,
+            y: 0,
+            duration: 0.9,
+            ease: "power3.out",
+            stagger: { each: 0.012, from: "random" },
+            delay: 0.2,
+          });
+        }
       }
 
       // ── HERO EXIT on scroll (scrub — bidireccional, izq/der) ──
