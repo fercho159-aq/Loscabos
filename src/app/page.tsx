@@ -74,9 +74,9 @@ export default function Home() {
           {/* #BeyondTheScreen strip — centered, matching logo width */}
           <div
             className="mt-8 md:mt-12 flex flex-col gap-[.55rem] text-left"
-            style={{ width: 511, maxWidth: "90vw" }}
+            style={{ width: 600, maxWidth: "90vw" }}
           >
-            <p data-anim="hero-hashtag" className="text-[clamp(1.4rem,7.5vw,3.5rem)] font-black tracking-normal text-[#A3CDD8] m-0 leading-[1.05]" style={{ overflow: "hidden", whiteSpace: "nowrap" }}>
+            <p data-anim="hero-hashtag" className="text-[clamp(1.4rem,7.5vw,3.5rem)] font-black tracking-normal text-[#A3CDD8] m-0 leading-[1.05]" style={{ whiteSpace: "nowrap" }}>
               {"#BeyondTheScreen".split("").map((char, i) => (
                 <span key={i} data-anim="hero-hashtag-char" style={{ display: "inline-block" }}>{char}</span>
               ))}
