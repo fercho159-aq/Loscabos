@@ -76,7 +76,7 @@ export default function Home() {
             className="mt-8 md:mt-12 flex flex-col gap-[.55rem] text-left"
             style={{ width: 511, maxWidth: "90vw" }}
           >
-            <p data-anim="hero-hashtag" className="text-[clamp(1.75rem,9vw,3.5rem)] font-black tracking-normal text-[#A3CDD8] m-0 leading-[1.05]" style={{ overflow: "hidden" }}>
+            <p data-anim="hero-hashtag" className="text-[clamp(1.4rem,7.5vw,3.5rem)] font-black tracking-normal text-[#A3CDD8] m-0 leading-[1.05]" style={{ overflow: "hidden", whiteSpace: "nowrap" }}>
               {"#BeyondTheScreen".split("").map((char, i) => (
                 <span key={i} data-anim="hero-hashtag-char" style={{ display: "inline-block" }}>{char}</span>
               ))}
