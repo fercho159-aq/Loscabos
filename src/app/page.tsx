@@ -73,29 +73,19 @@ export default function Home() {
 
           {/* #BeyondTheScreen strip — centered, matching logo width */}
           <div
-            className="flex items-center justify-between mt-8 md:mt-12 gap-6 md:gap-8"
+            className="mt-8 md:mt-12 flex flex-col gap-[.55rem] text-left"
             style={{ width: 511, maxWidth: "90vw" }}
           >
-            <div className="flex flex-col gap-[.55rem] text-left">
-              <p data-anim="hero-hashtag" className="text-[clamp(1.2rem,4vw,1.85rem)] font-black tracking-normal text-[#A3CDD8] m-0" style={{ overflow: "hidden" }}>
-                {"#BeyondTheScreen".split("").map((char, i) => (
-                  <span key={i} data-anim="hero-hashtag-char" style={{ display: "inline-block" }}>{char}</span>
-                ))}
-              </p>
-              <p data-anim="hero-desc" className="text-[clamp(0.95rem,2.8vw,1.35rem)] font-normal text-[#F6EDDB] leading-[1.5] m-0 opacity-75 max-w-[360px]">
-                El cine como punto de <br />encuentro entre la música,<br />
-                el arte digital, la animación<br />
-                y la comunidad.
-              </p>
-            </div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              data-anim="hero-play"
-              src="/images/play.svg"
-              alt="Ver video"
-              className="shrink-0 cursor-pointer"
-              style={{ width: "clamp(40px, 8vw, 58px)", height: "clamp(40px, 8vw, 58px)" }}
-            />
+            <p data-anim="hero-hashtag" className="text-[clamp(1.75rem,9vw,3.5rem)] font-black tracking-normal text-[#A3CDD8] m-0 leading-[1.05]" style={{ overflow: "hidden" }}>
+              {"#BeyondTheScreen".split("").map((char, i) => (
+                <span key={i} data-anim="hero-hashtag-char" style={{ display: "inline-block" }}>{char}</span>
+              ))}
+            </p>
+            <p data-anim="hero-desc" className="text-[clamp(0.95rem,2.8vw,1.35rem)] font-normal text-[#F6EDDB] leading-[1.5] m-0 opacity-75 max-w-[360px]">
+              El cine como punto de <br />encuentro entre la música,<br />
+              el arte digital, la animación<br />
+              y la comunidad.
+            </p>
           </div>
         </div>
 
