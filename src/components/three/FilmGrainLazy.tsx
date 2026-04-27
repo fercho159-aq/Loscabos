@@ -5,29 +5,41 @@ import { useEffect, useState } from "react";
 
 const FilmGrain = dynamic(() => import("./FilmGrain"), { ssr: false });
 
+function hasWebGL(): boolean {
+  try {
+    const c = document.createElement("canvas");
+    return !!(c.getContext("webgl") || c.getContext("experimental-webgl"));
+  } catch {
+    return false;
+  }
+}
+
 export default function FilmGrainLazy() {
-  const [show, setShow] = useState(false);
+  const [shouldMount, setShouldMount] = useState(false);
 
   useEffect(() => {
-    type IdleWindow = Window & {
-      requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
-    };
-    const w = window as IdleWindow;
-    let timeoutId: ReturnType<typeof setTimeout> | undefined;
-
-    const trigger = () => setShow(true);
-
-    if (typeof w.requestIdleCallback === "function") {
-      w.requestIdleCallback(trigger, { timeout: 4000 });
-    } else {
-      timeoutId = setTimeout(trigger, 2500);
+    if (
+      typeof window === "undefined" ||
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ||
+      !hasWebGL()
+    ) {
+      return;
     }
 
-    return () => {
-      if (timeoutId) clearTimeout(timeoutId);
+    const w = window as Window & {
+      requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
     };
+    const schedule = w.requestIdleCallback ?? ((cb: () => void) => setTimeout(cb, 1));
+    const trigger = () => schedule(() => setShouldMount(true), { timeout: 2500 });
+
+    if (document.readyState === "complete") {
+      trigger();
+      return;
+    }
+    window.addEventListener("load", trigger, { once: true });
+    return () => window.removeEventListener("load", trigger);
   }, []);
 
-  if (!show) return null;
+  if (!shouldMount) return null;
   return <FilmGrain />;
 }

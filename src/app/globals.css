@@ -1951,6 +1951,7 @@ body {
   filter: grayscale(100%);
 }
 
+.profile-card h3,
 .profile-card h4 {
   font-family: var(--font-inter);
   font-size: .95rem;
@@ -2161,6 +2162,7 @@ body {
   margin: 0 auto 0.8rem;
 }
 
+.comite-slide h3,
 .comite-slide h4 {
   font-family: var(--font-inter);
   font-size: 0.9rem;
@@ -2297,6 +2299,7 @@ body {
   padding: 1.2rem;
 }
 
+.flip-card-back h3,
 .flip-card-back h4 {
   font-family: var(--font-inter);
   font-size: .9rem;
@@ -2405,6 +2408,7 @@ body {
   padding: 1rem !important;
 }
 
+.ffgf-flip .flip-card-back h3,
 .ffgf-flip .flip-card-back h4 {
   color: #fff !important;
   font-size: .85rem;
