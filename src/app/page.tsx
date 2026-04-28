@@ -4,8 +4,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GSAPAnimations from "@/components/GSAPAnimationsLazy";
 import TextureStrip from "@/components/TextureStrip";
-import ZoomLink from "@/components/ZoomLink";
-import Card3D from "@/components/Card3D";
 import SubscribeCTA from "@/components/SubscribeCTA";
 import BrandbookHero from "@/components/BrandbookHero";
 
@@ -203,7 +201,6 @@ export default function Home() {
                       fill
                       sizes="(max-width: 768px) calc(100vw - 4rem), 587px"
                       className="object-contain"
-                      priority
                     />
                   </div>
                 </div>

@@ -6,7 +6,7 @@ import { FestivalJsonLd } from "@/components/seo/JsonLd";
 import FilmGrainLazy from "@/components/three/FilmGrainLazy";
 
 const inter = localFont({
-  src: "../../public/fonts/Inter-VariableFont_opsz,wght.ttf",
+  src: "../../public/fonts/Inter-VariableFont_opsz_wght.woff2",
   variable: "--font-inter",
   display: "swap",
   weight: "100 900",
