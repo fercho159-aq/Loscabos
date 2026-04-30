@@ -12,7 +12,7 @@ const convocatorias = [
   {
     status: "Abierta",
     title: "La Baja Inspira",
-    deadline: "Cierre: 15 de junio, 2026",
+    deadline: "Cierre: 28 de junio, 2026",
     description:
       "Convocatoria dirigida a cineastas y creativos de Baja California Sur. Presenta tu proyecto y forma parte de un programa de formación, desarrollo y producción con alcance internacional.",
     href: "/convocatorias/la-baja-inspira",
