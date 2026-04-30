@@ -158,12 +158,12 @@ export default function LaBajaInspira() {
             <p data-anim="lbi-typewriter" className="lbi-intro-lead">
               Su propósito es posicionar a la región como un referente internacional en documental ambiental y territorial, integrando industria audiovisual, conocimiento y conservación con una visión de futuro sostenible.
             </p>
-            <div data-anim="lbi-typewriter" className="lbi-intro-apertura" role="group" aria-label="Apertura de convocatoria: 21 de mayo de 2026">
+            <div data-anim="lbi-typewriter" className="lbi-intro-apertura" role="group" aria-label="Apertura de convocatoria: 28 de mayo de 2026">
               <span className="lbi-intro-apertura-line">
                 <span className="lbi-intro-apertura-dot" aria-hidden="true" style={{ display: "inline-block", verticalAlign: "middle", marginRight: "0.5rem" }} />
                 Apertura de convocatoria
               </span>
-              <span className="lbi-intro-apertura-line"> - 21 de mayo de 2026</span>
+              <span className="lbi-intro-apertura-line"> - 28 de mayo de 2026</span>
             </div>
             <p data-anim="lbi-typewriter" className="lbi-intro-closer">
               El rigor cinematográfico es nuestra base. Buscamos obras donde la calidad narrativa y la investigación profunda se encuentran para definir el futuro de la región.
@@ -293,7 +293,7 @@ export default function LaBajaInspira() {
                     Fechas Clave
                   </h3>
                   <div style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.1rem, 1.6vw, 1.35rem)", lineHeight: 1.8, color: "#163218", fontWeight: 400 }}>
-                    <p><strong>Apertura:</strong> 21 de mayo, 2026</p>
+                    <p><strong>Apertura:</strong> 28 de mayo, 2026</p>
                     <p><strong>Cierre:</strong> 14 de julio, 2026</p>
                     <p><strong>Selección:</strong> 8 títulos que definen el pulso de la región</p>
                   </div>
