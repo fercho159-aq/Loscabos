@@ -52,6 +52,7 @@ export default function Footer() {
             <li><a href="/ffgf">Fondo F&iacute;lmico Gabriel Figueroa</a></li>
             <li><a href="/programacion">Programaci&oacute;n</a></li>
             <li><a href="/prensa">Prensa</a></li>
+            <li><a href="/ediciones-anteriores">Ediciones Anteriores</a></li>
             <li><a href="https://festivaldecinedeloscabos.us15.list-manage.com/subscribe?u=24bf46409995ffe6e8ad030da&id=12e1ce1334" target="_blank" rel="noopener noreferrer">&Uacute;nete a la comunidad</a></li>
           </ul>
         </div>
