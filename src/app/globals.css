@@ -2555,6 +2555,137 @@ body {
   color: rgba(8, 23, 34, .5);
 }
 
+/* ── LBI: Aliados Institucionales ── */
+.lbi-aliados-inst {
+  background: var(--color-cream);
+  padding: 4rem 2rem;
+}
+.lbi-aliados-inst-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.lbi-aliados-inst-tag {
+  display: block;
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--color-orange);
+  margin-bottom: 2rem;
+}
+.lbi-aliados-inst-logos {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.lbi-aliados-inst-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .75rem;
+}
+.lbi-aliados-inst-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(8,23,34,.15);
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+.lbi-aliados-inst-name {
+  font-size: .7rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+/* ── LBI: Jurado ── */
+.lbi-jurado-section {
+  background: #0A1E23;
+}
+.lbi-jurado-header {
+  padding: 5rem 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.lbi-jurado-eyebrow {
+  display: block;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.4);
+  margin-bottom: .5rem;
+}
+.lbi-jurado-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  color: white;
+  margin: 0;
+}
+.lbi-jurado-eje {
+  padding: 3rem 2rem;
+  border-top: 1px solid rgba(255,255,255,.1);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.lbi-jurado-eje-num {
+  display: block;
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--color-orange);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: .25rem;
+}
+.lbi-jurado-eje-titulo {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 800;
+  color: white;
+  margin: 0 0 2rem;
+}
+.lbi-jurado-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+}
+.lbi-jurado-card {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.lbi-jurado-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.lbi-jurado-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+.lbi-jurado-desc {
+  font-size: .82rem;
+  color: rgba(255,255,255,.6);
+  line-height: 1.5;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .lbi-jurado-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .lbi-jurado-eje { padding: 2rem 1.25rem; }
+  .lbi-jurado-header { padding: 3rem 1.25rem 1.5rem; }
+  .lbi-aliados-inst-logos { gap: 1.5rem; }
+}
+
 /* ── LA BAJA INSPIRA ── */
 .lbi-page {
   background: var(--color-cream);

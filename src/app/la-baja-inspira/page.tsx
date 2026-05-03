@@ -77,26 +77,56 @@ export const metadata: Metadata = {
   },
 };
 
+const aliadosInstitucionales = [
+  { name: "ESCINE", logo: "/images/aliados-lbi/escine.png" },
+  { name: "IMCINE / Cultura", logo: "/images/aliados-lbi/imcine.png" },
+  { name: "Puerto Los Cabos", logo: "/images/aliados-lbi/puerto-los-cabos.png" },
+];
+
 const comite = [
-  {
-    name: "ESCINE",
-    desc: "Una de las instituciones acad\u00e9micas m\u00e1s importantes de M\u00e9xico dedicada a la profesionalizaci\u00f3n cinematogr\u00e1fica.",
-    img: "/images/comite/escine.png",
-  },
   {
     name: "Juan Patricio Riveroll",
     desc: "Director, productor y novelista con una destacada trayectoria en la creaci\u00f3n audiovisual y la gesti\u00f3n p\u00fablica.",
     img: "/images/comite/juan-patricio-riveroll.jpg",
   },
   {
-    name: "Alfredo Ruiz",
-    desc: "Director de la Licenciatura en Cinematograf\u00eda en ESCINE. Cuenta con una s\u00f3lida trayectoria en formaci\u00f3n acad\u00e9mica y cr\u00edtica cinematogr\u00e1fica.",
-    img: "/images/comite/alfredo-ruiz.jpeg",
-  },
-  {
     name: "Iv\u00e1n Carrillo",
     desc: "Periodista, conductor y productor independiente especializado en ciencia, salud y medio ambiente.",
     img: "/images/comite/ivan-carrillo.jpg",
+  },
+];
+
+const juradoEjes = [
+  {
+    eje: "01",
+    titulo: "Biodiversidad y Naturaleza",
+    members: [
+      { name: "Alonso Rodr\u00edguez", desc: "Explorador, documentalista y fundador de Mares de M\u00e9xico.", img: "/images/jurado/alonso-rodriguez.jpg" },
+      { name: "Hans Herrmann", desc: "Explorador y desarrollador de proyectos en el Pac\u00edfico mexicano.", img: "/images/jurado/hans-herrmann.jpg" },
+      { name: "Jer\u00f3nimo Prieto", desc: "Fundador de M\u00e9xico Pel\u00e1gico.", img: "/images/jurado/jeronimo-prieto.jpg" },
+      { name: "Octavio Aburto", desc: "Investigador en Scripps Institution of Oceanography.", img: null },
+    ],
+  },
+  {
+    eje: "02",
+    titulo: "Memoria Hist\u00f3rica",
+    members: [
+      { name: "Michelin Cari\u00f1o", desc: "Investigadora y autora especializada en la historia de Baja California.", img: null },
+      { name: "Dolores Heredia", desc: "Actriz y promotora cultural originaria de La Paz.", img: null },
+      { name: "Francisco Laresgoiti", desc: "Director de Los Otros Californios.", img: null },
+      { name: "Alejandro Rivas", desc: "Fot\u00f3grafo de La Recua.", img: "/images/jurado/alejandro-rivas.jpg" },
+    ],
+  },
+  {
+    eje: "03",
+    titulo: "Econom\u00eda Sustentable",
+    members: [
+      { name: "Elena Fortes", desc: "Productora y gestora cultural.", img: null },
+      { name: "Eleonora Isunza", desc: "Directora de Cinema Planeta.", img: null },
+      { name: "Inti Cordera", desc: "Director de DocsMX.", img: null },
+      { name: "Pablo Ferrer", desc: "Fundador de Pesca del Futuro.", img: null },
+      { name: "Gabriela C\u00e1mara", desc: "Chef y empresaria.", img: null },
+    ],
   },
 ];
 
@@ -106,6 +136,8 @@ const aliadosLBI = [
   { name: "Cine de Verano", logo: "/images/aliados-lbi/cine-de-verano.png" },
   { name: "Pólvora", logo: "/images/aliados-lbi/polvora.png" },
   { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados-lbi/instituto-cultura-cabos.png" },
+  { name: "Tropicana", logo: "/images/aliados-lbi/tropicana.png" },
+  { name: "Baja Republic", logo: "/images/aliados-lbi/baja-republic.png" },
 ];
 const aliadosLBITrack = [...aliadosLBI, ...aliadosLBI];
 
@@ -312,6 +344,29 @@ export default function LaBajaInspira() {
         </div>
       </section>
 
+      {/* Aliados Institucionales */}
+      <section className="lbi-aliados-inst">
+        <div className="lbi-aliados-inst-inner">
+          <span className="lbi-aliados-inst-tag">Aliados Institucionales</span>
+          <div className="lbi-aliados-inst-logos">
+            {aliadosInstitucionales.map((a) => (
+              <div key={a.name} className="lbi-aliados-inst-item">
+                <div className="lbi-aliados-inst-circle">
+                  <Image
+                    src={a.logo}
+                    alt={`Logo ${a.name}`}
+                    fill
+                    sizes="120px"
+                    style={{ objectFit: "contain", padding: "1rem" }}
+                  />
+                </div>
+                <span className="lbi-aliados-inst-name">{a.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Comité de selección */}
       <section className="section-text overflow-x-clip" id="lbi-comite-section">
         <div className="section-text-inner">
@@ -356,6 +411,35 @@ export default function LaBajaInspira() {
         </div>
       </section>
 
+
+      {/* Jurado */}
+      <section className="lbi-jurado-section">
+        <div className="lbi-jurado-header">
+          <span className="lbi-jurado-eyebrow">Jurado</span>
+          <h2 className="lbi-jurado-title">Jurado 2026</h2>
+        </div>
+        {juradoEjes.map((eje) => (
+          <div key={eje.eje} className="lbi-jurado-eje">
+            <div className="lbi-jurado-eje-label">
+              <span className="lbi-jurado-eje-num">Eje {eje.eje}</span>
+              <h3 className="lbi-jurado-eje-titulo">{eje.titulo}</h3>
+            </div>
+            <div className="lbi-jurado-grid">
+              {eje.members.map((m) => (
+                <div key={m.name} className="lbi-jurado-card">
+                  {m.img && (
+                    <div className="lbi-jurado-avatar">
+                      <Image src={m.img} alt={m.name} fill sizes="120px" style={{ objectFit: "cover" }} />
+                    </div>
+                  )}
+                  <h4 className="lbi-jurado-name">{m.name}</h4>
+                  <p className="lbi-jurado-desc">{m.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </section>
 
       {/* Legado La Baja Inspira */}
       <section className="relative w-full flex flex-col overflow-hidden" style={{ background: "linear-gradient(to bottom, #0A1E23 66.66%, transparent 66.66%)" }}>
