@@ -2588,20 +2588,12 @@ body {
   gap: .75rem;
 }
 .lbi-aliados-inst-circle {
-  width: 180px;
-  height: 180px;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
-  border: 1.5px solid rgba(8,23,34,.15);
-  background: white;
+  background: var(--color-cream);
   position: relative;
   overflow: hidden;
-}
-.lbi-aliados-inst-name {
-  font-size: .7rem;
-  font-weight: 600;
-  color: var(--color-navy);
-  text-transform: uppercase;
-  letter-spacing: .05em;
 }
 
 /* ── LBI: Jurado ── */

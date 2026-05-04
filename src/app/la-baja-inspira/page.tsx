@@ -356,11 +356,10 @@ export default function LaBajaInspira() {
                     src={a.logo}
                     alt={`Logo ${a.name}`}
                     fill
-                    sizes="120px"
-                    style={{ objectFit: "contain", padding: "1rem" }}
+                    sizes="260px"
+                    style={{ objectFit: "contain" }}
                   />
                 </div>
-                <span className="lbi-aliados-inst-name">{a.name}</span>
               </div>
             ))}
           </div>
