@@ -86,11 +86,11 @@ const aliadosInstitucionales = [
 const comite = [
   {
     name: "Juan Patricio Riveroll",
-    desc: "Director, productor y novelista con una destacada trayectoria en la creaci\u00f3n audiovisual y la gesti\u00f3n p\u00fablica.",
+    desc: "Director, productor y novelista con una destacada trayectoria en la creación audiovisual y la gestión pública.",
     img: "/images/comite/juan-patricio-riveroll.jpg",
   },
   {
-    name: "Iv\u00e1n Carrillo",
+    name: "Iván Carrillo",
     desc: "Periodista, conductor y productor independiente especializado en ciencia, salud y medio ambiente.",
     img: "/images/comite/ivan-carrillo.jpg",
   },
@@ -102,13 +102,13 @@ const juradoEjes = [
     titulo: "Biodiversidad y Naturaleza",
     members: [
       {
-        name: "Alonso Rodr\u00edguez",
+        name: "Alonso Rodríguez",
         nameUrl: "https://www.instagram.com/alonsordzp",
         desc: (
           <>
             Explorador, documentalista y fundador de{" "}
-            <a href="https://www.instagram.com/maresdemexico/" target="_blank" rel="noopener noreferrer" className="lbi-jurado-link">Mares de M\u00e9xico</a>
-            : una iniciativa dedicada a la investigaci\u00f3n, conservaci\u00f3n y difusi\u00f3n de la vida marina. Su trabajo se ha desarrollado principalmente en los oc\u00e9anos de M\u00e9xico, donde ha logrado posicionarse como una voz activa en la protecci\u00f3n de ecosistemas marinos a trav\u00e9s de la ciencia, la narrativa audiovisual y la experiencia directa en campo.
+            <a href="https://www.instagram.com/maresdemexico/" target="_blank" rel="noopener noreferrer" className="lbi-jurado-link">Mares de México</a>
+            : una iniciativa dedicada a la investigación, conservación y difusión de la vida marina. Su trabajo se ha desarrollado principalmente en los océanos de México, donde ha logrado posicionarse como una voz activa en la protección de ecosistemas marinos a través de la ciencia, la narrativa audiovisual y la experiencia directa en campo.
           </>
         ),
         img: "/images/jurado/alonso-rodriguez.jpg",
@@ -117,82 +117,82 @@ const juradoEjes = [
       {
         name: "Hans Herrmann",
         nameUrl: "https://www.instagram.com/hans.herrmann__",
-        desc: "Explorador y desarrollador de proyectos en el Pac\u00edfico mexicano; enfocado en la protecci\u00f3n de especies y h\u00e1bitats, con experiencia en conservaci\u00f3n marina aplicada.",
+        desc: "Explorador y desarrollador de proyectos en el Pacífico mexicano; enfocado en la protección de especies y hábitats, con experiencia en conservación marina aplicada.",
         img: "/images/jurado/hans-herrmann.jpg",
       },
       {
-        name: "Jer\u00f3nimo Prieto",
+        name: "Jerónimo Prieto",
         nameUrl: "https://www.instagram.com/jerochucho/",
         desc: (
           <>
             Fundador de{" "}
-            <a href="https://www.instagram.com/pelagic_life/" target="_blank" rel="noopener noreferrer" className="lbi-jurado-link"><em>M\u00e9xico Pel\u00e1gico</em></a>
-            , organizaci\u00f3n mexicana dedicada a la protecci\u00f3n de la vida marina de mar abierto desde 2008. Es cineasta y explorador, ha colaborado con National Geographic, BBC y Discovery Channel. Dirigi\u00f3 el documental premiado <em>M\u00e9xico Pel\u00e1gico</em> y produce su secuela.
+            <a href="https://www.instagram.com/pelagic_life/" target="_blank" rel="noopener noreferrer" className="lbi-jurado-link"><em>México Pelágico</em></a>
+            , organización mexicana dedicada a la protección de la vida marina de mar abierto desde 2008. Es cineasta y explorador, ha colaborado con National Geographic, BBC y Discovery Channel. Dirigió el documental premiado <em>México Pelágico</em> y produce su secuela.
           </>
         ),
         img: "/images/jurado/jeronimo-prieto.jpg",
       },
       {
         name: "Octavio Aburto",
-        desc: "Investigador en Scripps Institution of Oceanography; especializado en ecosistemas marinos y conservaci\u00f3n, con enfoque cient\u00edfico aplicado a pol\u00edticas p\u00fablicas.",
+        desc: "Investigador en Scripps Institution of Oceanography; especializado en ecosistemas marinos y conservación, con enfoque científico aplicado a políticas públicas.",
         img: null,
       },
     ],
   },
   {
     eje: "02",
-    titulo: "Memoria Hist\u00f3rica",
+    titulo: "Memoria Histórica",
     members: [
       {
-        name: "Michelin Cari\u00f1o",
-        desc: "Investigadora y autora especializada en la historia de Baja California; su trabajo documenta la evoluci\u00f3n territorial y social de la pen\u00ednsula desde una perspectiva acad\u00e9mica s\u00f3lida.",
+        name: "Michelin Cariño",
+        desc: "Investigadora y autora especializada en la historia de Baja California; su trabajo documenta la evolución territorial y social de la península desde una perspectiva académica sólida.",
         img: null,
       },
       {
         name: "Dolores Heredia",
-        desc: "Actriz y promotora cultural originaria de La Paz; su trayectoria est\u00e1 vinculada a la construcci\u00f3n y difusi\u00f3n de la identidad sudcaliforniana.",
+        desc: "Actriz y promotora cultural originaria de La Paz; su trayectoria está vinculada a la construcción y difusión de la identidad sudcaliforniana.",
         img: null,
       },
       {
         name: "Francisco Laresgoiti",
-        desc: (<>Director de <em>Los Otros Californios</em>; su obra documenta la vida ranchera y la preservaci\u00f3n de tradiciones en el desierto de Baja California Sur.</>),
+        desc: (<>Director de <em>Los Otros Californios</em>; su obra documenta la vida ranchera y la preservación de tradiciones en el desierto de Baja California Sur.</>),
         img: null,
       },
       {
         name: "Alejandro Rivas",
         nameUrl: "https://www.instagram.com/alejandrorivasfoto",
-        desc: (<>Fot\u00f3grafo de <em>La Recua</em>; su mirada visual explora el tiempo, el territorio y la permanencia de las pr\u00e1cticas culturales en la pen\u00ednsula.</>),
+        desc: (<>Fotógrafo de <em>La Recua</em>; su mirada visual explora el tiempo, el territorio y la permanencia de las prácticas culturales en la península.</>),
         img: "/images/jurado/alejandro-rivas.jpg",
       },
     ],
   },
   {
     eje: "03",
-    titulo: "Econom\u00eda Sustentable",
+    titulo: "Economía Sustentable",
     members: [
       {
         name: "Elena Fortes",
-        desc: "Productora y gestora cultural; especializada en el desarrollo de plataformas que articulan cine, industria e impacto social con proyecci\u00f3n internacional.",
+        desc: "Productora y gestora cultural; especializada en el desarrollo de plataformas que articulan cine, industria e impacto social con proyección internacional.",
         img: null,
       },
       {
         name: "Eleonora Isunza",
-        desc: "Directora de Cinema Planeta; referente en curadur\u00eda de cine socioambiental, con experiencia en evaluar proyectos de impacto ambiental y social.",
+        desc: "Directora de Cinema Planeta; referente en curaduría de cine socioambiental, con experiencia en evaluar proyectos de impacto ambiental y social.",
         img: null,
       },
       {
         name: "Inti Cordera",
-        desc: "Director de DocsMX; su visi\u00f3n estrat\u00e9gica del documental permite evaluar el potencial de proyectos para su circulaci\u00f3n internacional.",
+        desc: "Director de DocsMX; su visión estratégica del documental permite evaluar el potencial de proyectos para su circulación internacional.",
         img: null,
       },
       {
         name: "Pablo Ferrer",
-        desc: "Fundador de Pesca del Futuro; especializado en modelos de pesca sostenible y regeneraci\u00f3n de ecosistemas marinos, con enfoque en innovaci\u00f3n y desarrollo territorial.",
+        desc: "Fundador de Pesca del Futuro; especializado en modelos de pesca sostenible y regeneración de ecosistemas marinos, con enfoque en innovación y desarrollo territorial.",
         img: null,
       },
       {
-        name: "Gabriela C\u00e1mara",
-        desc: "Chef y empresaria; referente en sostenibilidad alimentaria y econom\u00eda regenerativa, con una visi\u00f3n integral sobre la relaci\u00f3n entre gastronom\u00eda, comunidad y territorio.",
+        name: "Gabriela Cámara",
+        desc: "Chef y empresaria; referente en sostenibilidad alimentaria y economía regenerativa, con una visión integral sobre la relación entre gastronomía, comunidad y territorio.",
         img: null,
       },
     ],
