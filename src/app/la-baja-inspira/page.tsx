@@ -101,7 +101,7 @@ const juradoEjes = [
     eje: "01",
     titulo: "Biodiversidad y Naturaleza",
     members: [
-      { name: "Alonso Rodr\u00edguez", desc: "Explorador, documentalista y fundador de Mares de M\u00e9xico.", img: "/images/jurado/alonso-rodriguez.jpg" },
+      { name: "Alonso Rodr\u00edguez", desc: "Explorador, documentalista y fundador de Mares de M\u00e9xico.", img: "/images/jurado/alonso-rodriguez.jpg", imgPosition: "center 20%" },
       { name: "Hans Herrmann", desc: "Explorador y desarrollador de proyectos en el Pac\u00edfico mexicano.", img: "/images/jurado/hans-herrmann.jpg" },
       { name: "Jer\u00f3nimo Prieto", desc: "Fundador de M\u00e9xico Pel\u00e1gico.", img: "/images/jurado/jeronimo-prieto.jpg" },
       { name: "Octavio Aburto", desc: "Investigador en Scripps Institution of Oceanography.", img: null },
@@ -212,7 +212,7 @@ export default function LaBajaInspira() {
                 <Image src="/images/lbi-numbers/01.svg" alt="" width={260} height={260} />
               </span>
               <div data-anim="lbi-stagger-text" className="lbi-cat-body">
-                <h3 className="lbi-cat-title">Ciencias naturales<br />y ambientales</h3>
+                <h3 className="lbi-cat-title">Biodiversidad<br />y Naturaleza</h3>
                 <ul className="lbi-cat-items">
                   <li>Biología marina</li>
                   <li>Ecología y conservación</li>
@@ -226,7 +226,7 @@ export default function LaBajaInspira() {
                 <Image src="/images/lbi-numbers/02.svg" alt="" width={260} height={260} />
               </span>
               <div data-anim="lbi-stagger-text" className="lbi-cat-body">
-                <h3 className="lbi-cat-title">Historia y<br />ciencias sociales</h3>
+                <h3 className="lbi-cat-title">Memoria<br />Histórica</h3>
                 <ul className="lbi-cat-items">
                   <li>Historia regional</li>
                   <li>Antropología</li>
@@ -241,7 +241,7 @@ export default function LaBajaInspira() {
                 <Image src="/images/lbi-numbers/03.svg" alt="" width={260} height={260} />
               </span>
               <div data-anim="lbi-stagger-text" className="lbi-cat-body">
-                <h3 className="lbi-cat-title">Desarrollo<br />y economía territorial</h3>
+                <h3 className="lbi-cat-title">Economía<br />Sustentable</h3>
                 <ul className="lbi-cat-items">
                   <li>Economía azul</li>
                   <li>Seguridad alimentaria</li>
@@ -418,27 +418,29 @@ export default function LaBajaInspira() {
           <span className="lbi-jurado-eyebrow">Jurado</span>
           <h2 className="lbi-jurado-title">Jurado 2026</h2>
         </div>
-        {juradoEjes.map((eje) => (
-          <div key={eje.eje} className="lbi-jurado-eje">
-            <div className="lbi-jurado-eje-label">
-              <span className="lbi-jurado-eje-num">Eje {eje.eje}</span>
-              <h3 className="lbi-jurado-eje-titulo">{eje.titulo}</h3>
-            </div>
-            <div className="lbi-jurado-grid">
-              {eje.members.map((m) => (
-                <div key={m.name} className="lbi-jurado-card">
-                  {m.img && (
+        {juradoEjes.map((eje) => {
+          const visibles = eje.members.filter((m) => m.img);
+          if (visibles.length === 0) return null;
+          return (
+            <div key={eje.eje} className="lbi-jurado-eje">
+              <div className="lbi-jurado-eje-label">
+                <span className="lbi-jurado-eje-num">Eje {eje.eje}</span>
+                <h3 className="lbi-jurado-eje-titulo">{eje.titulo}</h3>
+              </div>
+              <div className="lbi-jurado-grid">
+                {visibles.map((m) => (
+                  <div key={m.name} className="lbi-jurado-card">
                     <div className="lbi-jurado-avatar">
-                      <Image src={m.img} alt={m.name} fill sizes="120px" style={{ objectFit: "cover" }} />
+                      <Image src={m.img!} alt={m.name} fill sizes="120px" style={{ objectFit: "cover", objectPosition: m.imgPosition ?? "center" }} />
                     </div>
-                  )}
-                  <h4 className="lbi-jurado-name">{m.name}</h4>
-                  <p className="lbi-jurado-desc">{m.desc}</p>
-                </div>
-              ))}
+                    <h4 className="lbi-jurado-name">{m.name}</h4>
+                    <p className="lbi-jurado-desc">{m.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </section>
 
       {/* Legado La Baja Inspira */}
