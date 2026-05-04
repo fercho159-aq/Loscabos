@@ -2651,9 +2651,18 @@ body {
   display: flex;
   flex-direction: column;
   gap: .5rem;
-  width: 200px;
+  width: 280px;
   align-items: center;
   text-align: center;
+}
+.lbi-jurado-ig-icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: .35rem;
+  vertical-align: -2px;
+  color: currentColor;
+  opacity: .9;
 }
 .lbi-jurado-avatar {
   width: 120px;
