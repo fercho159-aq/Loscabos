@@ -499,7 +499,7 @@ export default function LaBajaInspira() {
                 {visibles.map((m) => (
                   <div key={m.name} className="lbi-jurado-card">
                     <div className="lbi-jurado-avatar">
-                      <Image src={m.img!} alt={m.name} fill sizes="120px" style={{ objectFit: "cover", objectPosition: m.imgPosition ?? "center" }} />
+                      <Image src={m.img!} alt={m.name} fill sizes="120px" style={{ objectFit: "cover", objectPosition: (m as { imgPosition?: string }).imgPosition ?? "center" }} />
                     </div>
                     <h4 className="lbi-jurado-name">
                       {m.nameUrl ? (
