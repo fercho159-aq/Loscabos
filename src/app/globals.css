@@ -2642,14 +2642,18 @@ body {
   margin: 0 0 2rem;
 }
 .lbi-jurado-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
+  justify-content: center;
 }
 .lbi-jurado-card {
   display: flex;
   flex-direction: column;
   gap: .5rem;
+  width: 200px;
+  align-items: center;
+  text-align: center;
 }
 .lbi-jurado-avatar {
   width: 120px;
