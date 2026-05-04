@@ -101,31 +101,100 @@ const juradoEjes = [
     eje: "01",
     titulo: "Biodiversidad y Naturaleza",
     members: [
-      { name: "Alonso Rodr\u00edguez", desc: "Explorador, documentalista y fundador de Mares de M\u00e9xico.", img: "/images/jurado/alonso-rodriguez.jpg", imgPosition: "center 20%" },
-      { name: "Hans Herrmann", desc: "Explorador y desarrollador de proyectos en el Pac\u00edfico mexicano.", img: "/images/jurado/hans-herrmann.jpg" },
-      { name: "Jer\u00f3nimo Prieto", desc: "Fundador de M\u00e9xico Pel\u00e1gico.", img: "/images/jurado/jeronimo-prieto.jpg" },
-      { name: "Octavio Aburto", desc: "Investigador en Scripps Institution of Oceanography.", img: null },
+      {
+        name: "Alonso Rodr\u00edguez",
+        nameUrl: "https://www.instagram.com/alonsordzp",
+        desc: (
+          <>
+            Explorador, documentalista y fundador de{" "}
+            <a href="https://www.instagram.com/maresdemexico/" target="_blank" rel="noopener noreferrer" className="lbi-jurado-link">Mares de M\u00e9xico</a>
+            : una iniciativa dedicada a la investigaci\u00f3n, conservaci\u00f3n y difusi\u00f3n de la vida marina. Su trabajo se ha desarrollado principalmente en los oc\u00e9anos de M\u00e9xico, donde ha logrado posicionarse como una voz activa en la protecci\u00f3n de ecosistemas marinos a trav\u00e9s de la ciencia, la narrativa audiovisual y la experiencia directa en campo.
+          </>
+        ),
+        img: "/images/jurado/alonso-rodriguez.jpg",
+        imgPosition: "center 20%",
+      },
+      {
+        name: "Hans Herrmann",
+        nameUrl: "https://www.instagram.com/hans.herrmann__",
+        desc: "Explorador y desarrollador de proyectos en el Pac\u00edfico mexicano; enfocado en la protecci\u00f3n de especies y h\u00e1bitats, con experiencia en conservaci\u00f3n marina aplicada.",
+        img: "/images/jurado/hans-herrmann.jpg",
+      },
+      {
+        name: "Jer\u00f3nimo Prieto",
+        nameUrl: "https://www.instagram.com/jerochucho/",
+        desc: (
+          <>
+            Fundador de{" "}
+            <a href="https://www.instagram.com/pelagic_life/" target="_blank" rel="noopener noreferrer" className="lbi-jurado-link"><em>M\u00e9xico Pel\u00e1gico</em></a>
+            , organizaci\u00f3n mexicana dedicada a la protecci\u00f3n de la vida marina de mar abierto desde 2008. Es cineasta y explorador, ha colaborado con National Geographic, BBC y Discovery Channel. Dirigi\u00f3 el documental premiado <em>M\u00e9xico Pel\u00e1gico</em> y produce su secuela.
+          </>
+        ),
+        img: "/images/jurado/jeronimo-prieto.jpg",
+      },
+      {
+        name: "Octavio Aburto",
+        desc: "Investigador en Scripps Institution of Oceanography; especializado en ecosistemas marinos y conservaci\u00f3n, con enfoque cient\u00edfico aplicado a pol\u00edticas p\u00fablicas.",
+        img: null,
+      },
     ],
   },
   {
     eje: "02",
     titulo: "Memoria Hist\u00f3rica",
     members: [
-      { name: "Michelin Cari\u00f1o", desc: "Investigadora y autora especializada en la historia de Baja California.", img: null },
-      { name: "Dolores Heredia", desc: "Actriz y promotora cultural originaria de La Paz.", img: null },
-      { name: "Francisco Laresgoiti", desc: "Director de Los Otros Californios.", img: null },
-      { name: "Alejandro Rivas", desc: "Fot\u00f3grafo de La Recua.", img: "/images/jurado/alejandro-rivas.jpg" },
+      {
+        name: "Michelin Cari\u00f1o",
+        desc: "Investigadora y autora especializada en la historia de Baja California; su trabajo documenta la evoluci\u00f3n territorial y social de la pen\u00ednsula desde una perspectiva acad\u00e9mica s\u00f3lida.",
+        img: null,
+      },
+      {
+        name: "Dolores Heredia",
+        desc: "Actriz y promotora cultural originaria de La Paz; su trayectoria est\u00e1 vinculada a la construcci\u00f3n y difusi\u00f3n de la identidad sudcaliforniana.",
+        img: null,
+      },
+      {
+        name: "Francisco Laresgoiti",
+        desc: (<>Director de <em>Los Otros Californios</em>; su obra documenta la vida ranchera y la preservaci\u00f3n de tradiciones en el desierto de Baja California Sur.</>),
+        img: null,
+      },
+      {
+        name: "Alejandro Rivas",
+        nameUrl: "https://www.instagram.com/alejandrorivasfoto",
+        desc: (<>Fot\u00f3grafo de <em>La Recua</em>; su mirada visual explora el tiempo, el territorio y la permanencia de las pr\u00e1cticas culturales en la pen\u00ednsula.</>),
+        img: "/images/jurado/alejandro-rivas.jpg",
+      },
     ],
   },
   {
     eje: "03",
     titulo: "Econom\u00eda Sustentable",
     members: [
-      { name: "Elena Fortes", desc: "Productora y gestora cultural.", img: null },
-      { name: "Eleonora Isunza", desc: "Directora de Cinema Planeta.", img: null },
-      { name: "Inti Cordera", desc: "Director de DocsMX.", img: null },
-      { name: "Pablo Ferrer", desc: "Fundador de Pesca del Futuro.", img: null },
-      { name: "Gabriela C\u00e1mara", desc: "Chef y empresaria.", img: null },
+      {
+        name: "Elena Fortes",
+        desc: "Productora y gestora cultural; especializada en el desarrollo de plataformas que articulan cine, industria e impacto social con proyecci\u00f3n internacional.",
+        img: null,
+      },
+      {
+        name: "Eleonora Isunza",
+        desc: "Directora de Cinema Planeta; referente en curadur\u00eda de cine socioambiental, con experiencia en evaluar proyectos de impacto ambiental y social.",
+        img: null,
+      },
+      {
+        name: "Inti Cordera",
+        desc: "Director de DocsMX; su visi\u00f3n estrat\u00e9gica del documental permite evaluar el potencial de proyectos para su circulaci\u00f3n internacional.",
+        img: null,
+      },
+      {
+        name: "Pablo Ferrer",
+        desc: "Fundador de Pesca del Futuro; especializado en modelos de pesca sostenible y regeneraci\u00f3n de ecosistemas marinos, con enfoque en innovaci\u00f3n y desarrollo territorial.",
+        img: null,
+      },
+      {
+        name: "Gabriela C\u00e1mara",
+        desc: "Chef y empresaria; referente en sostenibilidad alimentaria y econom\u00eda regenerativa, con una visi\u00f3n integral sobre la relaci\u00f3n entre gastronom\u00eda, comunidad y territorio.",
+        img: null,
+      },
     ],
   },
 ];
@@ -432,7 +501,13 @@ export default function LaBajaInspira() {
                     <div className="lbi-jurado-avatar">
                       <Image src={m.img!} alt={m.name} fill sizes="120px" style={{ objectFit: "cover", objectPosition: m.imgPosition ?? "center" }} />
                     </div>
-                    <h4 className="lbi-jurado-name">{m.name}</h4>
+                    <h4 className="lbi-jurado-name">
+                      {m.nameUrl ? (
+                        <a href={m.nameUrl} target="_blank" rel="noopener noreferrer" className="lbi-jurado-link">{m.name}</a>
+                      ) : (
+                        m.name
+                      )}
+                    </h4>
                     <p className="lbi-jurado-desc">{m.desc}</p>
                   </div>
                 ))}

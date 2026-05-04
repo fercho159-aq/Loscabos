@@ -2558,7 +2558,7 @@ body {
 /* ── LBI: Aliados Institucionales ── */
 .lbi-aliados-inst {
   background: var(--color-cream);
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 0.5rem;
 }
 .lbi-aliados-inst-inner {
   max-width: 1200px;
@@ -2671,6 +2671,23 @@ body {
   line-height: 1.5;
   margin: 0;
 }
+.lbi-jurado-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,.25);
+  text-underline-offset: 3px;
+  transition: color .2s ease, text-decoration-color .2s ease;
+}
+.lbi-jurado-link:hover {
+  color: var(--color-orange);
+  text-decoration-color: var(--color-orange);
+}
+.lbi-jurado-name .lbi-jurado-link {
+  text-decoration: none;
+}
+.lbi-jurado-name .lbi-jurado-link:hover {
+  color: var(--color-orange);
+}
 @media (max-width: 768px) {
   .lbi-jurado-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
   .lbi-jurado-eje { padding: 2rem 1.25rem; }
@@ -2705,6 +2722,9 @@ body {
 }
 
 /* Force comité section-text-inner visible (cache override) */
+.lbi-page #lbi-comite-section {
+  padding-top: 1.5rem;
+}
 .lbi-page #lbi-comite-section .section-text-inner {
   display: block !important;
   max-width: 960px;
