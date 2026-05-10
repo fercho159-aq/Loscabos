@@ -23,6 +23,7 @@ const aliados = [
   { name: "\u00c1nima Village", logo: "/images/aliados/FICC_Logos_Aliados_2026-12.png" },
   { name: "The Cape, A Thompson Hotel", logo: "/images/aliados/FICC_Logos_Aliados_2026-the-cape.png" },
   { name: "Viceroy Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-viceroy.png" },
+  { name: "Secrets Puerto Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-secrets.png" },
   { name: "Suelo Sur", logo: "/images/aliados/FICC_Logos_Aliados_2026-21.png" },
   { name: "Sage", logo: "/images/aliados/FICC_Logos_Aliados_2026-22.png" },
   { name: "Flora Farms", logo: "/images/aliados/FICC_Logos_Aliados_2026-24.png" },
