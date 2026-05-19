@@ -476,17 +476,25 @@ export default function LaBajaInspira() {
 
 
       {/* Jurado */}
-      <section className="lbi-jurado-section">
+      <section className="lbi-jurado-section overflow-x-clip">
         <div className="lbi-jurado-header">
-          <span className="lbi-jurado-eyebrow">Jurado</span>
-          <h2 className="lbi-jurado-title">Jurado 2026</h2>
+          <span data-anim="lbi-jurado-eyebrow" className="lbi-jurado-eyebrow">Jurado</span>
+          <h2 className="lbi-jurado-title">
+            {"Jurado 2026".split(" ").map((word, wi) => (
+              <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.25em" }}>
+                {word.split("").map((char, ci) => (
+                  <span key={ci} data-anim="lbi-stagger-char" style={{ display: "inline-block" }}>{char}</span>
+                ))}
+              </span>
+            ))}
+          </h2>
         </div>
         {juradoEjes.map((eje) => {
           const visibles = eje.members.filter((m) => m.img);
           if (visibles.length === 0) return null;
           return (
             <div key={eje.eje} className="lbi-jurado-eje">
-              <div className="lbi-jurado-eje-label">
+              <div data-anim="lbi-jurado-eje-label" className="lbi-jurado-eje-label">
                 <span className="lbi-jurado-eje-num">Eje {eje.eje}</span>
                 <h3 className="lbi-jurado-eje-titulo">{eje.titulo}</h3>
               </div>
@@ -494,6 +502,7 @@ export default function LaBajaInspira() {
                 {visibles.map((m, idx) => (
                   <div
                     key={m.name}
+                    data-anim="lbi-jurado-row"
                     className={`lbi-jurado-row${idx % 2 === 1 ? " lbi-jurado-row--reverse" : ""}`}
                   >
                     <div className="lbi-jurado-row__media">

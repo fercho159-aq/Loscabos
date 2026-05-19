@@ -271,6 +271,62 @@ export default function LBIAnimations() {
         });
       });
 
+      // ── JURADO: eyebrow fade up ──
+      const juradoEyebrow = document.querySelector<HTMLElement>('[data-anim="lbi-jurado-eyebrow"]');
+      if (juradoEyebrow) {
+        gsap.from(juradoEyebrow, {
+          y: 20,
+          opacity: 0,
+          duration: 0.7,
+          ease: "power3.out",
+          force3D: true,
+          scrollTrigger: { trigger: juradoEyebrow, start: "top 90%", once: true },
+        });
+      }
+
+      // ── JURADO: eje labels slide in from left ──
+      const juradoLabels = gsap.utils.toArray<HTMLElement>('[data-anim="lbi-jurado-eje-label"]');
+      juradoLabels.forEach((label) => {
+        gsap.from(label, {
+          x: -60,
+          opacity: 0,
+          duration: 0.9,
+          ease: "power3.out",
+          force3D: true,
+          scrollTrigger: { trigger: label, start: "top 85%", once: true },
+        });
+      });
+
+      // ── JURADO: rows slide in from alternating sides ──
+      const juradoRows = gsap.utils.toArray<HTMLElement>('[data-anim="lbi-jurado-row"]');
+      juradoRows.forEach((row) => {
+        const fromRight = row.classList.contains("lbi-jurado-row--reverse");
+        const media = row.querySelector<HTMLElement>(".lbi-jurado-row__media");
+        const body = row.querySelector<HTMLElement>(".lbi-jurado-row__body");
+
+        if (media) {
+          gsap.from(media, {
+            x: fromRight ? "60vw" : "-60vw",
+            opacity: 0,
+            duration: 1.1,
+            ease: "power4.out",
+            force3D: true,
+            scrollTrigger: { trigger: row, start: "top 90%", once: true },
+          });
+        }
+        if (body) {
+          gsap.from(body, {
+            x: fromRight ? "-60vw" : "60vw",
+            opacity: 0,
+            duration: 1.1,
+            delay: 0.1,
+            ease: "power4.out",
+            force3D: true,
+            scrollTrigger: { trigger: row, start: "top 90%", once: true },
+          });
+        }
+      });
+
     });
 
     return () => ctx.kill();
