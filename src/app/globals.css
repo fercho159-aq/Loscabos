@@ -2641,48 +2641,53 @@ body {
   color: white;
   margin: 0 0 2rem;
 }
-.lbi-jurado-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-.lbi-jurado-card {
+.lbi-jurado-rows {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
-  width: 280px;
+  gap: 4rem;
+}
+.lbi-jurado-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 3rem;
   align-items: center;
-  text-align: center;
+}
+.lbi-jurado-row--reverse .lbi-jurado-row__media {
+  order: 2;
+}
+.lbi-jurado-row--reverse .lbi-jurado-row__body {
+  order: 1;
+  text-align: right;
+}
+.lbi-jurado-row__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 4px;
 }
 .lbi-jurado-ig-icon {
   display: inline-block;
-  width: 14px;
-  height: 14px;
-  margin-left: .35rem;
-  vertical-align: -2px;
+  width: 16px;
+  height: 16px;
+  margin-left: .4rem;
+  vertical-align: -3px;
   color: currentColor;
   opacity: .9;
 }
-.lbi-jurado-avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
-}
 .lbi-jurado-name {
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  font-weight: 900;
   color: white;
-  margin: 0;
+  margin: 0 0 1rem;
+  line-height: 1.1;
 }
 .lbi-jurado-desc {
-  font-size: .82rem;
-  color: rgba(255,255,255,.6);
-  line-height: 1.5;
+  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+  color: rgba(255,255,255,.75);
+  line-height: 1.6;
   margin: 0;
+  font-weight: 400;
 }
 .lbi-jurado-link {
   color: inherit;
@@ -2702,7 +2707,20 @@ body {
   color: var(--color-orange);
 }
 @media (max-width: 768px) {
-  .lbi-jurado-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .lbi-jurado-rows { gap: 2.5rem; }
+  .lbi-jurado-row,
+  .lbi-jurado-row--reverse {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .lbi-jurado-row--reverse .lbi-jurado-row__media { order: 0; }
+  .lbi-jurado-row--reverse .lbi-jurado-row__body { order: 0; text-align: center; }
+  .lbi-jurado-row__body { text-align: center; }
+  .lbi-jurado-row__media {
+    aspect-ratio: 1 / 1;
+    max-width: 320px;
+    margin: 0 auto;
+  }
   .lbi-jurado-eje { padding: 2rem 1.25rem; }
   .lbi-jurado-header { padding: 3rem 1.25rem 1.5rem; }
   .lbi-aliados-inst-logos { gap: 1.5rem; }
@@ -2730,10 +2748,6 @@ body {
   color: var(--color-orange);
 }
 
-.lbi-comite-mobile {
-  display: none;
-}
-
 /* Force comité section-text-inner visible (cache override) */
 .lbi-page #lbi-comite-section {
   padding-top: 1.5rem;
@@ -2742,55 +2756,82 @@ body {
   display: block !important;
   max-width: 960px;
 }
-.lbi-page #lbi-comite-section .profiles-grid {
-  grid-template-columns: repeat(2, minmax(0, 240px)) !important;
-  justify-content: center;
-}
 
-.comite-carousel {
-  overflow: hidden;
-  width: 100%;
-  padding: 2rem 0;
-}
-
-.comite-track {
+.lbi-comite-rows {
+  max-width: 1100px;
+  margin: 3rem auto 0;
+  padding: 0 2rem;
   display: flex;
-  gap: 1.5rem;
-  width: max-content;
-  animation: comiteScroll 20s linear infinite;
+  flex-direction: column;
+  gap: 4rem;
 }
 
-.comite-slide {
-  flex-shrink: 0;
-  width: 200px;
-  text-align: center;
+.lbi-comite-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 3rem;
+  align-items: center;
 }
 
-.comite-slide .profile-avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin: 0 auto 0.8rem;
+.lbi-comite-row--reverse .lbi-comite-row__media {
+  order: 2;
 }
 
-.comite-slide h3,
-.comite-slide h4 {
+.lbi-comite-row--reverse .lbi-comite-row__body {
+  order: 1;
+  text-align: right;
+}
+
+.lbi-comite-row__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.lbi-comite-row__body h3 {
   font-family: var(--font-inter);
-  font-size: 0.9rem;
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
   font-weight: 900;
-  margin-bottom: 0.4rem;
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
-.comite-slide p {
+.lbi-comite-row__body p {
   font-family: var(--font-inter);
-  font-size: 0.75rem;
-  line-height: 1.5;
-  color: #555;
+  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-navy);
 }
 
-@keyframes comiteScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+@media (max-width: 768px) {
+  .lbi-comite-rows {
+    gap: 2.5rem;
+    padding: 0 1.25rem;
+  }
+  .lbi-comite-row,
+  .lbi-comite-row--reverse {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .lbi-comite-row--reverse .lbi-comite-row__media {
+    order: 0;
+  }
+  .lbi-comite-row--reverse .lbi-comite-row__body {
+    order: 0;
+    text-align: center;
+  }
+  .lbi-comite-row__body {
+    text-align: center;
+  }
+  .lbi-comite-row__media {
+    aspect-ratio: 1 / 1;
+    max-width: 320px;
+    margin: 0 auto;
+  }
 }
 
 .lbi-page .section-highlight-inner {
@@ -2809,14 +2850,6 @@ body {
   .lbi-desc-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
-
-  .lbi-comite-desktop {
-    display: none !important;
-  }
-
-  .lbi-comite-mobile {
-    display: block !important;
   }
 
   .lbi-page .legado-grid {

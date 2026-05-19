@@ -87,13 +87,18 @@ const aliadosInstitucionales = [
 const comite = [
   {
     name: "Juan Patricio Riveroll",
-    desc: "Director, productor y novelista con una destacada trayectoria en la creación audiovisual y la gestión pública.",
+    desc: "Desde su rol en ESCINE como en su faceta de cineasta y escritor, conecta el cine con historias de profundidad social y cultural desde una visión sensible y contemporánea.",
     img: "/images/comite/juan-patricio-riveroll.jpg",
   },
   {
     name: "Iván Carrillo",
-    desc: "Periodista, conductor y productor independiente especializado en ciencia, salud y medio ambiente.",
+    desc: "Periodista, conductor y productor independiente que vincula ciencia, medio ambiente y cine documental desde una mirada accesible y contextual.",
     img: "/images/comite/ivan-carrillo.jpg",
+  },
+  {
+    name: "Salvador Amores",
+    desc: "Figura clave en la cultura cinematográfica contemporánea de México, destacándose principalmente como crítico, programador y cineasta.",
+    img: "/images/comite/salvador-amores.png",
   },
 ];
 
@@ -109,7 +114,7 @@ const juradoEjes = [
           <>
             Explorador, documentalista y fundador de{" "}
             <a href="https://www.instagram.com/maresdemexico/" target="_blank" rel="noopener noreferrer" className="lbi-jurado-link">Mares de México</a>
-            : una iniciativa dedicada a la investigación, conservación y difusión de la vida marina. Su trabajo se ha desarrollado principalmente en los océanos de México, donde ha logrado posicionarse como una voz activa en la protección de ecosistemas marinos a través de la ciencia, la narrativa audiovisual y la experiencia directa en campo.
+            : una iniciativa dedicada a la investigación, conservación y difusión de la vida marina. Explora el territorio a través de fotografía y video, creando narrativas visuales ligadas al mar, la exploración y los ecosistemas.
           </>
         ),
         img: "/images/jurado/alonso-rodriguez.jpg",
@@ -118,7 +123,7 @@ const juradoEjes = [
       {
         name: "Hans Herrmann",
         nameUrl: "https://www.instagram.com/hans.herrmann__",
-        desc: "Explorador y desarrollador de proyectos en el Pacífico mexicano; enfocado en la protección de especies y hábitats, con experiencia en conservación marina aplicada.",
+        desc: "Ecólogo marino y especialista en política pública ambiental con más de 40 años de experiencia liderando iniciativas de conservación y sostenibilidad en América Latina y Norteamérica. Su perfil une investigación, conservación y divulgación del mar de la mano de Azul Pacífico, crea una mirada ambiental enfocada en los ecosistemas marinos.",
         img: "/images/jurado/hans-herrmann.jpg",
       },
       {
@@ -128,7 +133,7 @@ const juradoEjes = [
           <>
             Fundador de{" "}
             <a href="https://www.instagram.com/pelagic_life/" target="_blank" rel="noopener noreferrer" className="lbi-jurado-link"><em>México Pelágico</em></a>
-            , organización mexicana dedicada a la protección de la vida marina de mar abierto desde 2008. Es cineasta y explorador, ha colaborado con National Geographic, BBC y Discovery Channel. Dirigió el documental premiado <em>México Pelágico</em> y produce su secuela.
+            , organización mexicana dedicada a la protección de la vida marina de mar abierto desde 2008. Entusiasta de la naturaleza enfocado en conservación marina, exploración y protección de ecosistemas.
           </>
         ),
         img: "/images/jurado/jeronimo-prieto.jpg",
@@ -155,15 +160,20 @@ const juradoEjes = [
         img: null,
       },
       {
-        name: "Francisco Laresgoiti",
-        desc: (<>Director de <em>Los Otros Californios</em>; su obra documenta la vida ranchera y la preservación de tradiciones en el desierto de Baja California Sur.</>),
-        img: null,
-      },
-      {
         name: "Alejandro Rivas",
         nameUrl: "https://www.instagram.com/alejandrorivasfoto",
-        desc: (<>Fotógrafo de <em>La Recua</em>; su mirada visual explora el tiempo, el territorio y la permanencia de las prácticas culturales en la península.</>),
+        desc: (<>Cineasta de Baja California Sur, explora la relación entre territorio e identidad, director de fotografía del premiado documental <em>La Recua</em>.</>),
         img: "/images/jurado/alejandro-rivas.jpg",
+      },
+      {
+        name: "Francisco Laresgoiti",
+        desc: (<>Director de <em>Los Otros Californios</em>; su obra documenta la vida ranchera y la preservación de tradiciones en el desierto de Baja California Sur.</>),
+        img: "/images/jurado/francisco-laresgoiti.png",
+      },
+      {
+        name: "Inti Cordera",
+        desc: "Fundador y director de DocsMX, plataforma clave para el cine documental en México y América Latina.",
+        img: "/images/jurado/inti-cordera.jpeg",
       },
     ],
   },
@@ -179,11 +189,6 @@ const juradoEjes = [
       {
         name: "Eleonora Isunza",
         desc: "Directora de Cinema Planeta; referente en curaduría de cine socioambiental, con experiencia en evaluar proyectos de impacto ambiental y social.",
-        img: null,
-      },
-      {
-        name: "Inti Cordera",
-        desc: "Director de DocsMX; su visión estratégica del documental permite evaluar el potencial de proyectos para su circulación internacional.",
         img: null,
       },
       {
@@ -449,32 +454,23 @@ export default function LaBajaInspira() {
           <p data-anim="lbi-comite-desc">
             Nuestra selecci&oacute;n es validada por un comit&eacute; de expertos en alianza con ESCINE y el periodismo cient&iacute;fico de alto nivel.
           </p>
-          {/* Desktop grid */}
-          <div className="profiles-grid lbi-comite-desktop">
-            {comite.map((p) => (
-              <div key={p.name} data-anim="lbi-comite-card" className="profile-card">
-                <div className="profile-avatar" style={{ position: "relative", overflow: "hidden" }}>
-                  <Image src={p.img} alt={`${p.name}, miembro del comité de selección — La Baja Inspira FICC Los Cabos`} fill sizes="(max-width: 768px) 50vw, 220px" style={{ objectFit: "cover" }} />
-                </div>
-                <h3>{p.name}</h3>
-                <p>{p.desc}</p>
-              </div>
-            ))}
-          </div>
         </div>
-        {/* Mobile carousel */}
-        <div className="comite-carousel lbi-comite-mobile">
-          <div className="comite-track">
-            {[...comite, ...comite].map((p, i) => (
-              <div key={`${p.name}-${i}`} className="comite-slide">
-                <div className="profile-avatar" style={{ position: "relative", overflow: "hidden" }}>
-                  <Image src={p.img} alt={`${p.name}, miembro del comité de selección — La Baja Inspira FICC Los Cabos`} fill sizes="(max-width: 768px) 60vw, 220px" style={{ objectFit: "cover" }} />
-                </div>
+        <div className="lbi-comite-rows">
+          {comite.map((p, idx) => (
+            <div
+              key={p.name}
+              data-anim="lbi-comite-card"
+              className={`lbi-comite-row${idx % 2 === 1 ? " lbi-comite-row--reverse" : ""}`}
+            >
+              <div className="lbi-comite-row__media">
+                <Image src={p.img} alt={`${p.name}, miembro del comité de selección — La Baja Inspira FICC Los Cabos`} fill sizes="(max-width: 768px) 90vw, 480px" style={{ objectFit: "cover" }} />
+              </div>
+              <div className="lbi-comite-row__body">
                 <h3>{p.name}</h3>
                 <p>{p.desc}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -494,27 +490,32 @@ export default function LaBajaInspira() {
                 <span className="lbi-jurado-eje-num">Eje {eje.eje}</span>
                 <h3 className="lbi-jurado-eje-titulo">{eje.titulo}</h3>
               </div>
-              <div className="lbi-jurado-grid">
-                {visibles.map((m) => (
-                  <div key={m.name} className="lbi-jurado-card">
-                    <div className="lbi-jurado-avatar">
-                      <Image src={m.img!} alt={m.name} fill sizes="120px" style={{ objectFit: "cover", objectPosition: (m as { imgPosition?: string }).imgPosition ?? "center" }} />
+              <div className="lbi-jurado-rows">
+                {visibles.map((m, idx) => (
+                  <div
+                    key={m.name}
+                    className={`lbi-jurado-row${idx % 2 === 1 ? " lbi-jurado-row--reverse" : ""}`}
+                  >
+                    <div className="lbi-jurado-row__media">
+                      <Image src={m.img!} alt={m.name} fill sizes="(max-width: 768px) 90vw, 480px" style={{ objectFit: "cover", objectPosition: (m as { imgPosition?: string }).imgPosition ?? "center" }} />
                     </div>
-                    <h4 className="lbi-jurado-name">
-                      {m.nameUrl ? (
-                        <a href={m.nameUrl} target="_blank" rel="noopener noreferrer" aria-label={`Instagram de ${m.name}`} className="lbi-jurado-link">
-                          {m.name}
-                          <svg className="lbi-jurado-ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                          </svg>
-                        </a>
-                      ) : (
-                        m.name
-                      )}
-                    </h4>
-                    <p className="lbi-jurado-desc">{m.desc}</p>
+                    <div className="lbi-jurado-row__body">
+                      <h4 className="lbi-jurado-name">
+                        {m.nameUrl ? (
+                          <a href={m.nameUrl} target="_blank" rel="noopener noreferrer" aria-label={`Instagram de ${m.name}`} className="lbi-jurado-link">
+                            {m.name}
+                            <svg className="lbi-jurado-ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                          </a>
+                        ) : (
+                          m.name
+                        )}
+                      </h4>
+                      <p className="lbi-jurado-desc">{m.desc}</p>
+                    </div>
                   </div>
                 ))}
               </div>
