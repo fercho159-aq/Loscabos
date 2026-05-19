@@ -329,90 +329,56 @@ export default function LaBajaInspira() {
 
 
       {/* Convocatoria 2026 */}
-      <section className="relative w-full bg-[#0A1E23] flex flex-col overflow-hidden">
-        <div className="shrink-0 flex flex-col justify-start pt-10 pr-5 pb-10 pl-5 md:pt-[7rem] md:pr-16 md:pb-[15rem] md:pl-[15rem]">
-
-          <h2 className="text-[42px] md:text-[58px] font-black leading-[1.0] max-w-[520px]" style={{ color: "var(--color-cream)" }}>
-            {"Convocatoria 2026".split(" ").map((word, wi) => (
-              <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.25em" }}>
-                {word.split("").map((char, ci) => (
-                  <span key={ci} data-anim="lbi-stagger-char" style={{ display: "inline-block" }}>{char}</span>
+      <section
+        className="lbi-conv-section relative w-full overflow-x-clip"
+        style={{
+          backgroundImage: "url('/images/lbi-convocatoria-bg-08.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="mx-auto max-w-6xl px-6 md:px-10 py-20 md:py-32" style={{ color: "#0A1C1F", fontFamily: "var(--font-inter)" }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+            {/* Columna izquierda */}
+            <div data-anim="lbi-conv-col-left">
+              <h2 className="lbi-conv-title">
+                {"Convocatoria 2026".split(" ").map((word, wi) => (
+                  <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.25em" }}>
+                    {word.split("").map((char, ci) => (
+                      <span key={ci} data-anim="lbi-stagger-char" style={{ display: "inline-block" }}>{char}</span>
+                    ))}
+                  </span>
                 ))}
-              </span>
-            ))}
-          </h2>
-        </div>
+              </h2>
+              <h3 className="lbi-conv-subtitle">La convocatoria 2026 acepta exclusivamente:</h3>
+              <ul className="lbi-conv-list">
+                <li>— Largometrajes documentales terminados</li>
+                <li>— Cortometrajes documentales terminados</li>
+                <li>— Ensayos cinematográficos de no ficción finalizados</li>
+                <li>— Documentales científicos concluidos</li>
+              </ul>
+            </div>
 
-        <div>
-          <div
-            className="relative w-full flex max-md:flex-col items-end max-md:items-center justify-center gap-8 max-md:gap-6 min-h-[471px] max-md:min-h-0 max-md:py-10 px-8"
-          >
-            <Image
-              src="/images/lbi-convocatoria-bg.png"
-              alt=""
-              aria-hidden="true"
-              fill
-              sizes="100vw"
-              className="object-cover -z-10 select-none pointer-events-none"
+            {/* Columna derecha */}
+            <div data-anim="lbi-conv-col-right" className="lbi-conv-right">
+              <h3 className="lbi-conv-subtitle">Fechas Clave</h3>
+              <div className="lbi-conv-dates">
+                <p><strong>Apertura:</strong> 28 de mayo, 2026</p>
+                <p><strong>Cierre:</strong> 14 de julio, 2026</p>
+                <p><strong>Selección:</strong> 5 títulos que definen el pulso de la región</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-14 md:mt-20 flex justify-center">
+            <SubscribeCTA
+              source="la-baja-inspira"
+              label="Sé el primero en recibir información"
+              title="La Baja Inspira · Convocatoria 2026"
+              description="Déjanos tus datos y recibe la información de la convocatoria en cuanto abra."
+              className="lbi-conv-cta"
+              dataAnim="lbi-conv-cta"
             />
-            {/* Card izquierda — info convocatoria */}
-            <div className="impulso-card-outer">
-              <div
-                className="relative overflow-hidden"
-                style={{
-                  width: 587,
-                  maxWidth: "calc(100vw - 2rem)",
-                  backgroundImage: "url('/images/lbi-gradient-warm.jpg')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              >
-                <div className="relative z-[2] p-6 pt-6 pb-8 px-8">
-                  <h3 className="tracking-[-0.03em] leading-[.93] mb-6" style={{ fontSize: "clamp(1.4rem, 3vw, 2.2rem)", fontWeight: 900, color: "#163218" }}>
-                    La convocatoria 2026 acepta exclusivamente:
-                  </h3>
-                  <ul style={{ listStyle: "none", padding: 0, margin: 0, fontFamily: "var(--font-inter)", fontSize: "clamp(1.1rem, 1.6vw, 1.35rem)", lineHeight: 1.6, color: "#163218", fontWeight: 400 }}>
-                    <li style={{ marginBottom: "0.4rem" }}>— Largometrajes documentales terminados</li>
-                    <li style={{ marginBottom: "0.4rem" }}>— Cortometrajes documentales terminados</li>
-                    <li style={{ marginBottom: "0.4rem" }}>— Ensayos cinematográficos de no ficción finalizados</li>
-                    <li>— Documentales científicos concluidos</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Card derecha — fechas + CTA */}
-            <div className="impulso-card-outer" style={{ textAlign: "center" }}>
-              <div
-                className="relative overflow-hidden"
-                style={{
-                  width: 587,
-                  maxWidth: "calc(100vw - 2rem)",
-                  backgroundImage: "url('/images/lbi-gradient-cool.jpg')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              >
-                <div className="relative z-[2] p-6 pt-6 pb-8 px-8">
-                  <h3 className="tracking-[-0.03em] leading-[.93] mb-6" style={{ fontSize: "clamp(1.4rem, 3vw, 2.2rem)", fontWeight: 900, color: "#163218" }}>
-                    Fechas Clave
-                  </h3>
-                  <div style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.1rem, 1.6vw, 1.35rem)", lineHeight: 1.8, color: "#163218", fontWeight: 400 }}>
-                    <p><strong>Apertura:</strong> 28 de mayo, 2026</p>
-                    <p><strong>Cierre:</strong> 14 de julio, 2026</p>
-                    <p><strong>Selección:</strong> 8 títulos que definen el pulso de la región</p>
-                  </div>
-                </div>
-              </div>
-              <SubscribeCTA
-                source="la-baja-inspira"
-                label="Sé el primero en recibir información"
-                title="La Baja Inspira · Convocatoria 2026"
-                description="Déjanos tus datos y recibe la información de la convocatoria en cuanto abra."
-                className="cta-button"
-                style={{ marginTop: "1.5rem", display: "inline-block" }}
-              />
-            </div>
           </div>
         </div>
       </section>

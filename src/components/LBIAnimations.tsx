@@ -271,6 +271,43 @@ export default function LBIAnimations() {
         });
       });
 
+      // ── CONVOCATORIA 2026 (rediseño): columnas slide in ──
+      const convLeft = document.querySelector<HTMLElement>('[data-anim="lbi-conv-col-left"]');
+      if (convLeft) {
+        gsap.from(convLeft, {
+          x: -80,
+          opacity: 0,
+          duration: 1,
+          ease: "power3.out",
+          force3D: true,
+          scrollTrigger: { trigger: convLeft, start: "top 85%", once: true },
+        });
+      }
+      const convRight = document.querySelector<HTMLElement>('[data-anim="lbi-conv-col-right"]');
+      if (convRight) {
+        gsap.from(convRight, {
+          x: 80,
+          opacity: 0,
+          duration: 1,
+          delay: 0.15,
+          ease: "power3.out",
+          force3D: true,
+          scrollTrigger: { trigger: convRight, start: "top 85%", once: true },
+        });
+      }
+      const convCta = document.querySelector<HTMLElement>('[data-anim="lbi-conv-cta"]');
+      if (convCta) {
+        gsap.from(convCta, {
+          y: 40,
+          opacity: 0,
+          scale: 0.92,
+          duration: 0.9,
+          ease: "back.out(1.7)",
+          force3D: true,
+          scrollTrigger: { trigger: convCta, start: "top 95%", once: true },
+        });
+      }
+
       // ── JURADO: eyebrow fade up ──
       const juradoEyebrow = document.querySelector<HTMLElement>('[data-anim="lbi-jurado-eyebrow"]');
       if (juradoEyebrow) {

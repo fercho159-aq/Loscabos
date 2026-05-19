@@ -4545,3 +4545,110 @@ body {
     font-size: 1.35rem;
   }
 }
+/* ── LBI: Convocatoria 2026 (rediseño) ── */
+.lbi-conv-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.lbi-conv-title {
+  font-family: var(--font-inter);
+  font-size: clamp(2.6rem, 6.4vw, 5rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  color: #0A1C1F;
+  margin: 0;
+}
+
+.lbi-conv-subtitle {
+  font-family: var(--font-inter);
+  font-size: clamp(1.15rem, 1.7vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: #0A1C1F;
+  margin: 2.5rem 0 1.25rem;
+}
+
+.lbi-conv-right .lbi-conv-subtitle {
+  margin-top: 0;
+}
+
+.lbi-conv-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-inter);
+  font-size: clamp(1.05rem, 1.45vw, 1.25rem);
+  line-height: 1.55;
+  color: #0A1C1F;
+  font-weight: 400;
+}
+
+.lbi-conv-list li {
+  margin-bottom: 0.55rem;
+}
+
+.lbi-conv-list li:last-child {
+  margin-bottom: 0;
+}
+
+.lbi-conv-dates {
+  font-family: var(--font-inter);
+  font-size: clamp(1.05rem, 1.45vw, 1.25rem);
+  line-height: 1.7;
+  color: #0A1C1F;
+  font-weight: 400;
+}
+
+.lbi-conv-dates p {
+  margin: 0 0 0.4rem;
+}
+
+.lbi-conv-dates p:last-child {
+  margin-bottom: 0;
+}
+
+.lbi-conv-dates strong {
+  font-weight: 700;
+}
+
+.lbi-conv-cta {
+  display: inline-block;
+  font-family: var(--font-inter);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: #ffffff;
+  font-size: clamp(1rem, 1.25vw, 1.2rem);
+  padding: 1rem 3.5rem;
+  border: none;
+  cursor: pointer;
+  background-color: #2a1a1a;
+  background-image: url('/images/lbi-convocatoria-btn.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-shadow: 0 1px 3px rgba(0,0,0,.55);
+  transition: transform 0.25s ease, filter 0.25s ease;
+  border-radius: 2px;
+  min-width: 360px;
+  text-align: center;
+}
+
+.lbi-conv-cta:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+@media (max-width: 768px) {
+  .lbi-conv-cta {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
+    width: 100%;
+    min-width: 0;
+  }
+  .lbi-conv-subtitle {
+    margin-top: 1.75rem;
+  }
+}
