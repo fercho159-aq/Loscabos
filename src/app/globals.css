@@ -4628,13 +4628,17 @@ body {
 .lbi-conv-dates {
   font-family: var(--font-inter);
   font-size: clamp(1.05rem, 1.45vw, 1.25rem);
-  line-height: 1.7;
+  line-height: 1.4;
   color: #0A1C1F;
   font-weight: 400;
 }
 
 .lbi-conv-dates p {
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.15rem;
+}
+
+.lbi-conv-dates p:nth-child(2) {
+  margin-bottom: 0.85rem;
 }
 
 .lbi-conv-dates p:last-child {
@@ -4650,6 +4654,7 @@ body {
   color: var(--color-cream);
   font-weight: 700;
   padding: 0.05em 0.35em;
+  margin-left: 0.25em;
   border-radius: 2px;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
