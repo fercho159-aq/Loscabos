@@ -2,6 +2,12 @@ import type { ReactNode } from "react";
 import HeroTitle from "./HeroTitle";
 import TextureStrip from "./TextureStrip";
 
+interface BgVideo {
+  mp4: string;
+  webm?: string;
+  poster?: string;
+}
+
 interface Props {
   lines: string[];
   subtitle?: string;
@@ -9,12 +15,28 @@ interface Props {
   short?: boolean;
   children?: ReactNode;
   bgImage?: string;
+  bgVideo?: BgVideo;
 }
 
-export default function PageHero({ lines, subtitle, hideStrip, short, children, bgImage }: Props) {
+export default function PageHero({ lines, subtitle, hideStrip, short, children, bgImage, bgVideo }: Props) {
   return (
     <section className={`relative ${short ? "h-[70vh]" : "h-screen"} bg-[#0A1E23] overflow-hidden`}>
-      {bgImage && (
+      {bgVideo && (
+        <video
+          aria-hidden="true"
+          className="absolute inset-0 z-0 pointer-events-none w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          poster={bgVideo.poster}
+        >
+          {bgVideo.webm && <source src={bgVideo.webm} type="video/webm" />}
+          <source src={bgVideo.mp4} type="video/mp4" />
+        </video>
+      )}
+      {bgImage && !bgVideo && (
         <div
           aria-hidden="true"
           className="absolute inset-0 z-0 pointer-events-none"

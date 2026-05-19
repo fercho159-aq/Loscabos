@@ -230,7 +230,16 @@ export default function LaBajaInspira() {
     <div className="lbi-page">
       <Navbar />
 
-      <PageHero lines={["La Baja", "Inspira"]} hideStrip short bgImage="/images/lbi-hero.gif" />
+      <PageHero
+        lines={["La Baja", "Inspira"]}
+        hideStrip
+        short
+        bgVideo={{
+          mp4: "/images/lbi-hero.mp4",
+          webm: "/images/lbi-hero.webm",
+          poster: "/images/lbi-hero-poster.jpg",
+        }}
+      />
 
       {/* Descripción — Logo left, content right */}
       <section id="lbi-desc-section" className="lbi-intro">

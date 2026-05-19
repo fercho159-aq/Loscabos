@@ -2569,7 +2569,6 @@ body {
   display: block;
   font-size: clamp(1.4rem, 3vw, 2rem);
   font-weight: 900;
-  text-transform: uppercase;
   letter-spacing: .02em;
   color: var(--color-orange);
   margin-bottom: 2rem;
