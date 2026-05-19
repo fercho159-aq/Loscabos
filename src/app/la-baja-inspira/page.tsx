@@ -338,18 +338,19 @@ export default function LaBajaInspira() {
         }}
       >
         <div className="mx-auto max-w-6xl px-6 md:px-10 py-20 md:py-32" style={{ color: "#0A1C1F", fontFamily: "var(--font-inter)" }}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+          <div className="lbi-conv-grid">
+            <h2 className="lbi-conv-title">
+              {"Convocatoria 2026".split(" ").map((word, wi) => (
+                <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.25em" }}>
+                  {word.split("").map((char, ci) => (
+                    <span key={ci} data-anim="lbi-stagger-char" style={{ display: "inline-block" }}>{char}</span>
+                  ))}
+                </span>
+              ))}
+            </h2>
+
             {/* Columna izquierda */}
-            <div data-anim="lbi-conv-col-left">
-              <h2 className="lbi-conv-title">
-                {"Convocatoria 2026".split(" ").map((word, wi) => (
-                  <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.25em" }}>
-                    {word.split("").map((char, ci) => (
-                      <span key={ci} data-anim="lbi-stagger-char" style={{ display: "inline-block" }}>{char}</span>
-                    ))}
-                  </span>
-                ))}
-              </h2>
+            <div data-anim="lbi-conv-col-left" className="lbi-conv-left">
               <h3 className="lbi-conv-subtitle">La convocatoria 2026 acepta exclusivamente:</h3>
               <ul className="lbi-conv-list">
                 <li>— Largometrajes documentales terminados</li>
@@ -363,8 +364,8 @@ export default function LaBajaInspira() {
             <div data-anim="lbi-conv-col-right" className="lbi-conv-right">
               <h3 className="lbi-conv-subtitle">Fechas Clave</h3>
               <div className="lbi-conv-dates">
-                <p><strong>Apertura:</strong> 28 de mayo, 2026</p>
-                <p><strong>Cierre:</strong> 14 de julio, 2026</p>
+                <p><strong>Apertura:</strong><span className="lbi-conv-date-hl">28 de mayo, 2026</span></p>
+                <p><strong>Cierre:</strong><span className="lbi-conv-date-hl">14 de julio, 2026</span></p>
                 <p><strong>Selección:</strong> 5 títulos que definen el pulso de la región</p>
               </div>
             </div>

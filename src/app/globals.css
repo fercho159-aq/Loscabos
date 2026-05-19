@@ -4551,6 +4551,42 @@ body {
   isolation: isolate;
 }
 
+.lbi-conv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+  row-gap: 3rem;
+  align-items: start;
+}
+
+.lbi-conv-grid > .lbi-conv-title {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.lbi-conv-grid > .lbi-conv-left {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.lbi-conv-grid > .lbi-conv-right {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+@media (max-width: 768px) {
+  .lbi-conv-grid {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  .lbi-conv-grid > .lbi-conv-title,
+  .lbi-conv-grid > .lbi-conv-left,
+  .lbi-conv-grid > .lbi-conv-right {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+
 .lbi-conv-title {
   font-family: var(--font-inter);
   font-size: clamp(2.6rem, 6.4vw, 5rem);
@@ -4567,11 +4603,7 @@ body {
   font-weight: 700;
   line-height: 1.25;
   color: #0A1C1F;
-  margin: 2.5rem 0 1.25rem;
-}
-
-.lbi-conv-right .lbi-conv-subtitle {
-  margin-top: 0;
+  margin: 0 0 1.25rem;
 }
 
 .lbi-conv-list {
@@ -4611,6 +4643,16 @@ body {
 
 .lbi-conv-dates strong {
   font-weight: 700;
+}
+
+.lbi-conv-date-hl {
+  background-color: var(--color-orange);
+  color: var(--color-cream);
+  font-weight: 700;
+  padding: 0.05em 0.35em;
+  border-radius: 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .lbi-conv-cta {
