@@ -8,11 +8,24 @@ interface Props {
   hideStrip?: boolean;
   short?: boolean;
   children?: ReactNode;
+  bgImage?: string;
 }
 
-export default function PageHero({ lines, subtitle, hideStrip, short, children }: Props) {
+export default function PageHero({ lines, subtitle, hideStrip, short, children, bgImage }: Props) {
   return (
     <section className={`relative ${short ? "h-[70vh]" : "h-screen"} bg-[#0A1E23] overflow-hidden`}>
+      {bgImage && (
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            backgroundImage: `url('${bgImage}')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+      )}
       <HeroTitle lines={lines} subtitle={subtitle} />
       {children && (
         <div className="absolute top-[calc(30vh+13vw+1.5rem)] md:top-[400px] left-4 md:left-[77px] z-40">

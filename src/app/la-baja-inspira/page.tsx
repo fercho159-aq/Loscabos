@@ -230,18 +230,7 @@ export default function LaBajaInspira() {
     <div className="lbi-page">
       <Navbar />
 
-      <PageHero lines={["La Baja", "Inspira"]} hideStrip short />
-
-      {/* Water banner */}
-      <section className="relative w-full" style={{ height: "30vh", minHeight: 200 }}>
-        <Image
-          src="/images/cactus-sunset-bg.jpg"
-          alt="Atardecer entre cactus en Baja California Sur — FICC Los Cabos"
-          fill
-          sizes="100vw"
-          style={{ objectFit: "cover" }}
-        />
-      </section>
+      <PageHero lines={["La Baja", "Inspira"]} hideStrip short bgImage="/images/lbi-hero.gif" />
 
       {/* Descripción — Logo left, content right */}
       <section id="lbi-desc-section" className="lbi-intro">
