@@ -437,7 +437,7 @@ export default function LaBajaInspira() {
       {/* Comité de selección */}
       <section className="section-text overflow-x-clip" id="lbi-comite-section">
         <div className="section-text-inner">
-          <h2 data-anim="lbi-comite-heading" className="section-heading">
+          <h2 data-anim="lbi-comite-heading" className="section-heading" style={{ textTransform: "unset" }}>
             {"Comité de Selección".split(" ").map((word, wi) => (
               <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.25em" }}>
                 {word.split("").map((char, ci) => (
