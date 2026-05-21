@@ -205,14 +205,17 @@ const juradoEjes = [
   },
 ];
 
-const aliadosLBI = [
-  { name: "Ánima Village", logo: "/images/aliados-lbi/anima-village.png" },
-  { name: "Arte Abierto", logo: "/images/aliados-lbi/arte-abierto.png" },
+const aliadosLBI: { name: string; logo: string | null }[] = [
+  { name: "ESCINE", logo: "/images/aliados-lbi/escine.png" },
+  { name: "IMCINE", logo: "/images/aliados-lbi/imcine.png" },
+  { name: "Puerto Los Cabos", logo: "/images/aliados-lbi/puerto-los-cabos.png" },
   { name: "Cine de Verano", logo: "/images/aliados-lbi/cine-de-verano.png" },
   { name: "Pólvora", logo: "/images/aliados-lbi/polvora.png" },
   { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados-lbi/instituto-cultura-cabos.png" },
+  { name: "Centro Cultural Tijuana", logo: "/images/aliados-lbi/centro-cultural-tijuana.png" },
   { name: "Tropicana", logo: "/images/aliados-lbi/tropicana.png" },
   { name: "Baja Republic", logo: "/images/aliados-lbi/baja-republic.png" },
+  { name: "Mares de México", logo: null },
 ];
 const aliadosLBITrack = [...aliadosLBI, ...aliadosLBI];
 
@@ -562,8 +565,12 @@ export default function LaBajaInspira() {
           <div className="aliados-track">
             {aliadosLBITrack.map((a, i) => (
               <div key={`${a.name}-${i}`} className="aliado-slide">
-                <Image src={a.logo} alt={`Logo de ${a.name}, aliado del FICC Los Cabos`} width={320} height={220} sizes="(max-width: 768px) 320px, 240px" loading="lazy"
-                  style={{ width: "auto", maxHeight: 170, height: "auto", objectFit: "contain" }} />
+                {a.logo ? (
+                  <Image src={a.logo} alt={`Logo de ${a.name}, aliado del FICC Los Cabos`} width={320} height={220} sizes="(max-width: 768px) 320px, 240px" loading="lazy"
+                    style={{ width: "auto", maxHeight: 170, height: "auto", objectFit: "contain" }} />
+                ) : (
+                  <div aria-label={a.name} style={{ width: 240, height: 170 }} />
+                )}
               </div>
             ))}
           </div>
