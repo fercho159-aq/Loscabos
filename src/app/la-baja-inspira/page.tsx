@@ -215,7 +215,9 @@ const aliadosLBI: { name: string; logo: string | null }[] = [
   { name: "Centro Cultural Tijuana", logo: "/images/aliados-lbi/centro-cultural-tijuana.png" },
   { name: "Tropicana", logo: "/images/aliados-lbi/tropicana.png" },
   { name: "Baja Republic", logo: "/images/aliados-lbi/baja-republic.png" },
-  { name: "Mares de México", logo: null },
+  { name: "Hotel El Ganzo", logo: null },
+  { name: "Mares de México", logo: "/images/aliados-lbi/mares-de-mexico.png" },
+  { name: "Cabo Mil", logo: null },
 ];
 const aliadosLBITrack = [...aliadosLBI, ...aliadosLBI];
 
