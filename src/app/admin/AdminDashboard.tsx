@@ -95,6 +95,12 @@ export default function AdminDashboard() {
           </div>
           <div className="flex gap-3">
             <a
+              href={`/api/admin/registros?${params}${params ? "&" : ""}format=xlsx`}
+              className="rounded-lg bg-[var(--color-teal)] px-4 py-2.5 text-sm font-bold text-white transition hover:opacity-90"
+            >
+              Exportar XLSX
+            </a>
+            <a
               href={`/api/admin/registros?${params}${params ? "&" : ""}format=csv`}
               className="rounded-lg bg-[var(--color-navy)] px-4 py-2.5 text-sm font-bold text-white transition hover:opacity-90"
             >

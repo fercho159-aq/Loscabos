@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { sql } from "@/lib/db";
 import { ADMIN_COOKIE, verifyToken } from "@/lib/auth";
+import { buildXlsx } from "@/lib/xlsx";
 
 export const runtime = "edge";
 
@@ -55,8 +56,10 @@ export async function GET(req: Request) {
       params,
     )) as Row[];
 
+    const header = ["id", "email", "name", "phone", "source", "consent", "medio", "cargo", "created_at"];
+    const stamp = new Date().toISOString().slice(0, 10);
+
     if (format === "csv") {
-      const header = ["id", "email", "name", "phone", "source", "consent", "medio", "cargo", "created_at"];
       const lines = [header.join(",")];
       for (const r of rows) {
         lines.push(header.map((h) => csvCell((r as Record<string, unknown>)[h])).join(","));
@@ -64,7 +67,21 @@ export async function GET(req: Request) {
       return new Response("﻿" + lines.join("\n"), {
         headers: {
           "Content-Type": "text/csv; charset=utf-8",
-          "Content-Disposition": `attachment; filename="registros-ficc-${new Date().toISOString().slice(0, 10)}.csv"`,
+          "Content-Disposition": `attachment; filename="registros-ficc-${stamp}.csv"`,
+        },
+      });
+    }
+
+    if (format === "xlsx") {
+      const norm = (v: unknown) => (v instanceof Date ? v.toISOString() : (v as string | number | boolean | null));
+      const matrix = [header, ...rows.map((r) => header.map((h) => norm((r as Record<string, unknown>)[h])))];
+      const buf = buildXlsx(matrix, "Registros FICC");
+      const body = new ArrayBuffer(buf.length);
+      new Uint8Array(body).set(buf);
+      return new Response(body, {
+        headers: {
+          "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "Content-Disposition": `attachment; filename="registros-ficc-${stamp}.xlsx"`,
         },
       });
     }
