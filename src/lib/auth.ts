@@ -32,10 +32,43 @@ function safeEqual(a: string, b: string): boolean {
   return diff === 0;
 }
 
-export function checkPassword(input: string): boolean {
-  const expected = process.env.ADMIN_PASSWORD;
-  if (!expected) throw new Error("ADMIN_PASSWORD no esta configurado");
-  return safeEqual(input, expected);
+// --- Hash de password (PBKDF2-SHA256, edge-compatible) ---
+// Formato almacenado: pbkdf2$<iteraciones>$<saltHex>$<hashHex>
+const PBKDF2_ITERATIONS = 100_000;
+
+function hex(bytes: Uint8Array): string {
+  return [...bytes].map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+function fromHex(s: string): Uint8Array {
+  const out = new Uint8Array(s.length / 2);
+  for (let i = 0; i < out.length; i++) out[i] = parseInt(s.slice(i * 2, i * 2 + 2), 16);
+  return out;
+}
+
+async function deriveHash(password: string, salt: Uint8Array, iterations: number): Promise<string> {
+  const key = await crypto.subtle.importKey("raw", enc.encode(password), "PBKDF2", false, ["deriveBits"]);
+  const bits = await crypto.subtle.deriveBits(
+    { name: "PBKDF2", salt: salt as BufferSource, iterations, hash: "SHA-256" },
+    key,
+    256,
+  );
+  return hex(new Uint8Array(bits));
+}
+
+export async function hashPassword(password: string): Promise<string> {
+  const salt = crypto.getRandomValues(new Uint8Array(16));
+  const h = await deriveHash(password, salt, PBKDF2_ITERATIONS);
+  return `pbkdf2$${PBKDF2_ITERATIONS}$${hex(salt)}$${h}`;
+}
+
+export async function verifyPassword(stored: string, input: string): Promise<boolean> {
+  const parts = stored.split("$");
+  if (parts.length !== 4 || parts[0] !== "pbkdf2") return false;
+  const iterations = Number(parts[1]);
+  if (!Number.isFinite(iterations)) return false;
+  const h = await deriveHash(input, fromHex(parts[2]), iterations);
+  return safeEqual(h, parts[3]);
 }
 
 export async function createToken(): Promise<string> {

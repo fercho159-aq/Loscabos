@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { ADMIN_COOKIE, COOKIE_MAX_AGE, checkPassword, createToken } from "@/lib/auth";
+import { sql } from "@/lib/db";
+import { ADMIN_COOKIE, COOKIE_MAX_AGE, createToken, verifyPassword } from "@/lib/auth";
 
 export const runtime = "edge";
 
@@ -12,7 +13,21 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: "invalid_json" }, { status: 400 });
   }
 
-  if (!checkPassword(password)) {
+  if (!password) {
+    return NextResponse.json({ ok: false, error: "invalid_password" }, { status: 401 });
+  }
+
+  // Login compartido: la clave es valida si coincide con cualquier usuario activo.
+  const users = (await sql`
+    SELECT password_hash FROM admin_users WHERE active = true
+  `) as { password_hash: string }[];
+
+  let match = false;
+  for (const u of users) {
+    if (await verifyPassword(u.password_hash, password)) match = true;
+  }
+
+  if (!match) {
     return NextResponse.json({ ok: false, error: "invalid_password" }, { status: 401 });
   }
 
