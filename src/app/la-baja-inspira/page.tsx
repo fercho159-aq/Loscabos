@@ -218,6 +218,7 @@ const aliadosLBI: { name: string; logo: string | null }[] = [
   { name: "Hotel El Ganzo", logo: "/images/aliados-lbi/hotel-el-ganzo.png" },
   { name: "Mares de México", logo: "/images/aliados-lbi/mares-de-mexico.png" },
   { name: "El Sudcaliforniano", logo: "/images/aliados-lbi/el-sudcaliforniano.png" },
+  { name: "Cabo Mil", logo: "/images/aliados-lbi/cabo-mil.png" },
 ];
 const aliadosLBITrack = [...aliadosLBI, ...aliadosLBI];
 
