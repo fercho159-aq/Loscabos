@@ -3148,14 +3148,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem .75rem;
+  width: 260px;
+  padding: 1rem 2rem;
   height: 180px;
 }
 
 .aliado-slide img {
   opacity: 1;
   filter: none;
-  max-height: 180px;
+  max-height: 130px;
+  max-width: 100%;
   width: auto;
   will-change: transform;
 }
@@ -3816,16 +3818,16 @@ body {
   }
 
   .aliado-slide {
-    padding: 1rem 1.5rem !important;
-    height: 240px !important;
+    width: 220px !important;
+    padding: 1rem 2rem !important;
+    height: 200px !important;
   }
 
   .aliado-slide img {
-    max-height: 220px !important;
+    max-height: 130px !important;
     height: auto !important;
     width: auto !important;
-    min-width: 260px !important;
-    max-width: 320px !important;
+    max-width: 100% !important;
     object-fit: contain !important;
   }
 
