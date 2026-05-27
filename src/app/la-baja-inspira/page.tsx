@@ -167,7 +167,7 @@ const juradoEjes = [
       },
       {
         name: "Francisco Laresgoiti",
-        desc: (<>Director de <em>Los Otros Californios</em>; su obra documenta la vida ranchera y la preservación de tradiciones en el desierto de Baja California Sur.</>),
+        desc: (<>Director del documental <em>Santuarios del infinito</em> y productor de <em>Atado de años</em>, sobre el making of del oscarizado <em>Centinelas del silencio</em> (1971).</>),
         img: "/images/jurado/francisco-laresgoiti.png",
       },
       {
