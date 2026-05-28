@@ -384,7 +384,7 @@ export default function LaBajaInspira() {
               className="lbi-conv-cta"
               data-anim="lbi-conv-cta"
             >
-              Sé el primero en recibir información
+              Aplica ahora
             </a>
           </div>
         </div>
