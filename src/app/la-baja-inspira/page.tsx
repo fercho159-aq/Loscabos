@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import LBIAnimations from "@/components/LBIAnimationsLazy";
-import SubscribeCTA from "@/components/SubscribeCTA";
 
 export const metadata: Metadata = {
   title: "La Baja Inspira | Plataforma de la Industria Cinematográfica",
@@ -378,14 +377,15 @@ export default function LaBajaInspira() {
           </div>
 
           <div className="mt-14 md:mt-20 flex justify-center">
-            <SubscribeCTA
-              source="la-baja-inspira"
-              label="Sé el primero en recibir información"
-              title="La Baja Inspira · Convocatoria 2026"
-              description="Déjanos tus datos y recibe la información de la convocatoria en cuanto abra."
+            <a
+              href="https://filmfreeway.com/ficloscabos"
+              target="_blank"
+              rel="noopener noreferrer"
               className="lbi-conv-cta"
-              dataAnim="lbi-conv-cta"
-            />
+              data-anim="lbi-conv-cta"
+            >
+              Sé el primero en recibir información
+            </a>
           </div>
         </div>
       </section>
