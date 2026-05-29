@@ -8,7 +8,8 @@ import SubscribeCTA from "@/components/SubscribeCTA";
 import BrandbookHero from "@/components/BrandbookHero";
 
 const aliados = [
-  { name: "Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-01.png" },
+  { name: "FICC Los Cabos", logo: "/images/logo-dark.png" },
+  { name: "FITURCA", logo: "/images/aliados/FICC_Logos_Aliados_2026-01.png" },
   { name: "IMCINE", logo: "/images/aliados/FICC_Logos_Aliados_2026-02.png" },
   { name: "Grupo Questro", logo: "/images/aliados/FICC_Logos_Aliados_2026-03.png" },
   { name: "Puerto Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-04.png" },
@@ -27,6 +28,8 @@ const aliados = [
   { name: "The Cape, A Thompson Hotel", logo: "/images/aliados/FICC_Logos_Aliados_2026-the-cape.png" },
   { name: "Viceroy Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-viceroy.png" },
   { name: "Secrets Puerto Los Cabos Golf & Spa Resort", logo: "/images/aliados/FICC_Logos_Aliados_2026-secrets.png" },
+  { name: "Krystal Grand Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-krystal.png" },
+  { name: "JW Marriott Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-jw-marriott.png" },
   { name: "Suelo Sur", logo: "/images/aliados/FICC_Logos_Aliados_2026-21.png" },
   { name: "Sage", logo: "/images/aliados/FICC_Logos_Aliados_2026-22.png" },
   { name: "Flora Farms", logo: "/images/aliados/FICC_Logos_Aliados_2026-24.png" },
@@ -36,11 +39,15 @@ const aliados = [
   { name: "Artegios", logo: "/images/aliados/FICC_Logos_Aliados_2026-09.png" },
   { name: "Chemistry", logo: "/images/aliados/FICC_Logos_Aliados_2026-10.png" },
   { name: "CineNet", logo: "/images/aliados/FICC_Logos_Aliados_2026-11.png" },
-  { name: "Cine de Verano", logo: "/images/aliados/FICC_Logos_Aliados_2026-14.png" },
   { name: "Pólvora", logo: "/images/aliados/FICC_Logos_Aliados_2026-15.png" },
+  { name: "Cine de Verano", logo: "/images/aliados/FICC_Logos_Aliados_2026-14.png" },
   { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-16.png" },
+  { name: "Centro Cultural Tijuana", logo: "/images/aliados/FICC_Logos_Aliados_2026-cecut.png" },
+  { name: "Mares de México", logo: "/images/aliados/FICC_Logos_Aliados_2026-mares.png" },
   { name: "Dobel 50", logo: "/images/aliados/FICC_Logos_Aliados_2026-29.png" },
   { name: "Baja Republic", logo: "/images/aliados/FICC_Logos_Aliados_2026-28.png" },
+  { name: "El Sudcaliforniano", logo: "/images/aliados/FICC_Logos_Aliados_2026-sudcaliforniano.png" },
+  { name: "Cabo Mil 96.3", logo: "/images/aliados/FICC_Logos_Aliados_2026-cabomil.png" },
 ];
 const aliadosTrack = [...aliados, ...aliados];
 
