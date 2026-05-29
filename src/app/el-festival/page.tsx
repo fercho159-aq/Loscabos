@@ -88,8 +88,6 @@ const aliados = [
   { name: "Artegios", logo: "/images/aliados/FICC_Logos_Aliados_2026-09.png" },
   { name: "Chemistry", logo: "/images/aliados/FICC_Logos_Aliados_2026-10.png" },
   { name: "CineNet", logo: "/images/aliados/FICC_Logos_Aliados_2026-11.png" },
-  { name: "Ánima Village", logo: "/images/aliados/FICC_Logos_Aliados_2026-12.png" },
-  { name: "Arte Abierto", logo: "/images/aliados/FICC_Logos_Aliados_2026-13.png" },
   { name: "Cine de Verano", logo: "/images/aliados/FICC_Logos_Aliados_2026-14.png" },
   { name: "Pólvora", logo: "/images/aliados/FICC_Logos_Aliados_2026-15.png" },
   { name: "Instituto de la Cultura y las Artes", logo: "/images/aliados/FICC_Logos_Aliados_2026-16.png" },
