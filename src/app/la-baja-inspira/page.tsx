@@ -213,11 +213,13 @@ const aliadosLBI: { name: string; logo: string | null }[] = [
   { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados-lbi/instituto-cultura-cabos.png" },
   { name: "Centro Cultural Tijuana", logo: "/images/aliados-lbi/centro-cultural-tijuana.png" },
   { name: "Tropicana", logo: "/images/aliados-lbi/tropicana.png" },
+  { name: "Suelo Sur", logo: "/images/aliados-lbi/suelo-sur.png" },
+  { name: "Sage", logo: "/images/aliados-lbi/sage.png" },
   { name: "Baja Republic", logo: "/images/aliados-lbi/baja-republic.png" },
   { name: "Hotel El Ganzo", logo: "/images/aliados-lbi/hotel-el-ganzo.png" },
   { name: "Mares de México", logo: "/images/aliados-lbi/mares-de-mexico.png" },
-  { name: "El Sudcaliforniano", logo: "/images/aliados-lbi/el-sudcaliforniano.png" },
   { name: "Cabo Mil", logo: "/images/aliados-lbi/cabo-mil.png" },
+  { name: "El Sudcaliforniano", logo: "/images/aliados-lbi/el-sudcaliforniano.png" },
 ];
 const aliadosLBITrack = [...aliadosLBI, ...aliadosLBI];
 
