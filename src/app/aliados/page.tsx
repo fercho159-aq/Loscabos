@@ -40,7 +40,6 @@ const aliados = [
   { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-16.png" },
   { name: "Centro Cultural Tijuana", logo: "/images/aliados/FICC_Logos_Aliados_2026-cecut.png" },
   { name: "Mares de M\u00e9xico", logo: "/images/aliados/FICC_Logos_Aliados_2026-mares.png" },
-  { name: "Dobel 50", logo: "/images/aliados/FICC_Logos_Aliados_2026-29.png" },
   { name: "Baja Republic", logo: "/images/aliados/FICC_Logos_Aliados_2026-28.png" },
   { name: "El Sudcaliforniano", logo: "/images/aliados/FICC_Logos_Aliados_2026-sudcaliforniano.png" },
   { name: "Cabo Mil 96.3", logo: "/images/aliados/FICC_Logos_Aliados_2026-cabomil.png" },
