@@ -45,3 +45,7 @@ firebase-debug.log
 firestore-debug.log
 # Local Netlify folder
 .netlify
+
+# Documentación de trabajo (no versionar — doc-ficc-images pesa ~473MB)
+/doc-ficc-images/
+/CAMBIOS-DOC-FICC.md

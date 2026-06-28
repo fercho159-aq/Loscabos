@@ -16,9 +16,11 @@ interface Props {
   children?: ReactNode;
   bgImage?: string;
   bgVideo?: BgVideo;
+  /** Velo oscuro sobre el fondo (legibilidad del título sobre video/imagen). */
+  overlay?: boolean;
 }
 
-export default function PageHero({ lines, subtitle, hideStrip, short, children, bgImage, bgVideo }: Props) {
+export default function PageHero({ lines, subtitle, hideStrip, short, children, bgImage, bgVideo, overlay }: Props) {
   return (
     <section className={`relative ${short ? "h-[70vh]" : "h-screen"} bg-[#0A1E23] overflow-hidden`}>
       {bgVideo && (
@@ -45,6 +47,16 @@ export default function PageHero({ lines, subtitle, hideStrip, short, children, 
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
+          }}
+        />
+      )}
+      {overlay && (bgImage || bgVideo) && (
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 z-[1] pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(10,30,35,.55) 0%, rgba(10,30,35,.35) 45%, rgba(10,30,35,.62) 100%)",
           }}
         />
       )}

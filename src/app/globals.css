@@ -2569,7 +2569,7 @@ body {
   display: block;
   font-size: clamp(1.4rem, 3vw, 2rem);
   font-weight: 900;
-  text-transform: unset;
+  text-transform: none;
   letter-spacing: .02em;
   color: var(--color-orange);
   margin-bottom: 2rem;
@@ -4700,4 +4700,833 @@ body {
   .lbi-conv-subtitle {
     margin-top: 1.75rem;
   }
+}
+
+/* ══════════════════════════════════════════
+   CAMPUS FICC — Sedes (arco del día: luz → noche)
+   ══════════════════════════════════════════ */
+.campus-page {
+  background: var(--color-cream);
+}
+
+/* ── Intro · amanece ── */
+.campus-intro {
+  position: relative;
+  background: var(--color-cream);
+  padding: clamp(3rem, 6vw, 5.5rem) clamp(1.25rem, 4vw, 2rem) clamp(2.5rem, 5vw, 4.5rem);
+  overflow: hidden;
+}
+
+/* Desktop: el hero PageHero es h-screen con la pleca de textura fija en
+   top:630px (alto 122px). Subimos la intro para que la pleca quede 50/50:
+   mitad sobre el navy del hero, mitad sobre el cream → el cream arranca en
+   el centro de la pleca (691px). min(0px, …) evita empujar hacia abajo en
+   viewports bajos. */
+@media (min-width: 768px) {
+  .campus-intro {
+    margin-top: min(0px, calc(691px - 100vh));
+  }
+}
+
+/* Destello cálido del amanecer, arriba */
+.campus-intro::before {
+  content: "";
+  position: absolute;
+  top: -38%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(120vw, 1400px);
+  height: 70vw;
+  max-height: 760px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(250, 105, 53, 0.18) 0%,
+    rgba(196, 122, 61, 0.08) 42%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.campus-intro-inner {
+  position: relative;
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.campus-intro-eyebrow {
+  display: inline-block;
+  font-family: var(--font-inter);
+  font-size: clamp(0.7rem, 1.4vw, 0.82rem);
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--color-orange);
+  margin-bottom: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.campus-lede {
+  font-family: var(--font-inter);
+  font-size: clamp(1.35rem, 3.2vw, 2.35rem);
+  line-height: 1.32;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--color-navy);
+  margin-bottom: 1.4rem;
+  text-wrap: balance;
+}
+
+.campus-lede strong {
+  font-weight: 800;
+}
+
+.campus-lede-sub {
+  font-family: var(--font-inter);
+  font-size: clamp(0.98rem, 2vw, 1.18rem);
+  line-height: 1.7;
+  font-weight: 400;
+  color: color-mix(in srgb, var(--color-navy) 64%, transparent);
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* ── Momento (banda) ── */
+.campus-moment {
+  position: relative;
+  padding: clamp(3rem, 6vw, 5.5rem) clamp(1.25rem, 5vw, 4rem) clamp(3.5rem, 7vw, 6rem);
+}
+
+.campus-moment--sunrise { background: var(--color-cream); }
+.campus-moment--midday  { background: #F2E7CB; }
+.campus-moment--sunset  { background: #EFC79A; padding-bottom: 0; }
+/* El degradado dusk ya termina en navy: la Cena no necesita tanto padding
+   superior (menos aire entre el atardecer y "Noche"). */
+.campus-moment--night   { background: #0A1E23; padding-top: clamp(1.25rem, 2.5vw, 2.25rem); }
+
+.campus-moment-inner,
+.campus-moment-head,
+.campus-moment-grid {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Encabezado del momento ── */
+.campus-moment-head {
+  margin-bottom: clamp(2rem, 4vw, 3.25rem);
+}
+
+.campus-moment-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-inter);
+  font-size: clamp(0.74rem, 1.5vw, 0.86rem);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cat);
+  margin-bottom: 0.9rem;
+}
+
+.campus-moment-glyph {
+  display: inline-flex;
+  color: var(--cat);
+}
+
+.campus-moment-name {
+  font-family: var(--font-inter);
+  font-size: clamp(2.4rem, 7vw, 4.6rem);
+  font-weight: 900;
+  line-height: 0.96;
+  letter-spacing: -0.025em;
+  color: var(--color-navy);
+}
+
+.campus-moment-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-top: 1.1rem;
+}
+
+.campus-moment-rule {
+  flex: none;
+  width: clamp(36px, 6vw, 72px);
+  height: 2px;
+  background: var(--cat);
+  transform: translateY(-0.35em);
+}
+
+.campus-moment-kicker {
+  font-family: var(--font-inter);
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  line-height: 1.5;
+  font-weight: 400;
+  color: color-mix(in srgb, var(--color-navy) 60%, transparent);
+  max-width: 540px;
+}
+
+/* Esquema oscuro (noche) */
+.campus-moment--night .campus-moment-name { color: var(--color-cream); }
+.campus-moment--night .campus-moment-kicker {
+  color: rgba(246, 237, 219, 0.6);
+}
+
+/* ── Grid de plates (feature + soporte) ── */
+.campus-moment-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 2.2vw, 1.9rem);
+  align-items: stretch;
+}
+
+.campus-plate {
+  position: relative;
+  flex: 1 1 320px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.campus-plate.is-feature {
+  flex: 1.55 1 440px;
+}
+
+.campus-moment-grid.is-solo .campus-plate {
+  flex: 1 1 100%;
+}
+
+.campus-plate-media {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--color-navy) 8%, transparent);
+}
+
+.campus-plate.is-feature .campus-plate-media { aspect-ratio: 3 / 2; }
+.campus-moment-grid.is-solo .campus-plate-media { aspect-ratio: 21 / 9; }
+
+.campus-plate-img {
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.campus-plate:hover .campus-plate-img,
+.campus-plate:focus-within .campus-plate-img {
+  transform: scale(1.05);
+}
+
+/* Velo de acento al hover (la "personalidad" del espacio) */
+.campus-plate-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 55%,
+    color-mix(in srgb, var(--cat) 55%, transparent) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.campus-plate:hover .campus-plate-media::after,
+.campus-plate:focus-within .campus-plate-media::after {
+  opacity: 1;
+}
+
+.campus-plate-caption {
+  padding: 1rem 0.1rem 0;
+}
+
+.campus-plate-name {
+  font-family: var(--font-inter);
+  font-size: clamp(1.02rem, 2.1vw, 1.4rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--color-navy);
+}
+
+.campus-moment--night .campus-plate-name { color: var(--color-cream); }
+
+.campus-plate-underline {
+  display: block;
+  width: 0;
+  height: 2px;
+  margin-top: 0.55rem;
+  background: var(--cat);
+  transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.campus-plate:hover .campus-plate-underline,
+.campus-plate:focus-within .campus-plate-underline {
+  width: clamp(40px, 20%, 90px);
+}
+
+/* ── Atardecer → noche: degradado de transición ── */
+.campus-dusk {
+  height: clamp(150px, 18vw, 280px);
+  margin: clamp(1rem, 2vw, 1.75rem) calc(-1 * clamp(1.25rem, 5vw, 4rem)) 0;
+  /* Interpolación en oklab = mezcla perceptualmente suave, sin bandas */
+  background: linear-gradient(
+    180deg in oklab,
+    #EFC79A 0%,
+    #EABA80 14%,
+    #DD9F60 28%,
+    #C97E4A 42%,
+    #A85A40 56%,
+    #7C4039 68%,
+    #4E2F33 80%,
+    #26252E 90%,
+    #0A1E23 100%
+  );
+}
+
+/* ── Responsive ── */
+@media (max-width: 760px) {
+  .campus-plate,
+  .campus-plate.is-feature {
+    flex-basis: 100%;
+  }
+  .campus-moment-grid.is-solo .campus-plate-media {
+    aspect-ratio: 16 / 10;
+  }
+  .campus-moment-meta {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .campus-moment-rule { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .campus-plate-img,
+  .campus-plate-underline,
+  .campus-plate-media::after {
+    transition: none;
+  }
+}
+
+
+/* ══════════════════════════════════════════
+   COMUNIDAD FICC — directorio de personas
+   ══════════════════════════════════════════ */
+.comunidad-page {
+  background: var(--color-cream);
+}
+
+/* ── Intro ── */
+.comunidad-intro {
+  position: relative;
+  /* Por encima del velo del hero (z-1) al solaparse en desktop, pero debajo
+     de la pleca (z-50): el cream tapa el velo, la pleca queda 50/50 encima. */
+  z-index: 2;
+  background: var(--color-cream);
+  padding: clamp(3rem, 6vw, 5.5rem) clamp(1.25rem, 4vw, 2rem) clamp(2rem, 4vw, 3.5rem);
+}
+
+/* Banner a 100vh completo: anclamos la pleca del PageHero al FONDO del banner
+   (en vez de top:630px) y subimos la intro media pleca (61px = 122/2) para que
+   quede 50/50 sobre el video y el cream. z-index:2 tapa el video bajo la mitad
+   inferior de la pleca. */
+.comunidad-page .page-hero-strip {
+  top: auto;
+  bottom: 0;
+}
+.comunidad-intro {
+  margin-top: -61px;
+}
+
+.comunidad-intro-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.comunidad-lede {
+  font-family: var(--font-inter);
+  /* Mismo tamaño que el texto de intro del resto del sitio (.section-text-inner p ≈ .92rem). */
+  font-size: clamp(0.92rem, 1.5vw, 1.1rem);
+  line-height: 1.8;
+  font-weight: 400;
+  color: var(--color-navy);
+  text-wrap: balance;
+}
+
+.comunidad-hashtag {
+  font-family: var(--font-inter);
+  font-size: clamp(1.15rem, 2.6vw, 1.7rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--color-orange);
+  margin-top: clamp(1.4rem, 3vw, 2.2rem);
+}
+
+/* ── Directorio (un solo grid, sin títulos de grupo) ── */
+.comunidad-groups {
+  position: relative;
+  /* Por encima del hero (que mide 100vh): en viewports altos el hero sobrepasa
+     el final de la intro, así que el directorio debe quedar sobre él para no
+     dejar asomar el video detrás. */
+  z-index: 2;
+  /* Acento único del directorio (placeholders + línea hover). */
+  --cat: var(--color-orange);
+  background: var(--color-cream);
+  padding: clamp(2rem, 4vw, 4rem) clamp(1.25rem, 5vw, 4rem) clamp(4rem, 8vw, 7rem);
+}
+
+/* ── Grid de personas ── */
+.cm-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: clamp(1.6rem, 2.8vw, 2.6rem) clamp(0.9rem, 1.8vw, 1.6rem);
+}
+
+@media (max-width: 1100px) { .cm-grid { grid-template-columns: repeat(5, 1fr); } }
+@media (max-width: 900px)  { .cm-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 680px)  { .cm-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 440px)  { .cm-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.cm-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cm-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(120% 120% at 50% 0%, color-mix(in srgb, var(--cat) 26%, transparent) 0%, transparent 62%),
+    color-mix(in srgb, var(--color-navy) 6%, var(--color-cream));
+}
+
+.cm-photo-img {
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cm-card:hover .cm-photo-img,
+.cm-card:focus-within .cm-photo-img {
+  transform: scale(1.06);
+}
+
+.cm-photo-initials {
+  font-family: var(--font-inter);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: color-mix(in srgb, var(--cat) 78%, var(--color-navy));
+}
+
+/* Línea de acento que crece al hover */
+.cm-photo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 0;
+  background: var(--cat);
+  transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cm-card:hover .cm-photo::after,
+.cm-card:focus-within .cm-photo::after {
+  width: 100%;
+}
+
+.cm-name {
+  font-family: var(--font-inter);
+  font-size: clamp(0.92rem, 1.7vw, 1.08rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--color-navy);
+  margin-top: 0.85rem;
+}
+
+.cm-role {
+  font-family: var(--font-inter);
+  font-size: clamp(0.74rem, 1.4vw, 0.84rem);
+  line-height: 1.4;
+  font-weight: 400;
+  color: color-mix(in srgb, var(--color-navy) 55%, transparent);
+  margin-top: 0.3rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cm-photo-img,
+  .cm-photo::after {
+    transition: none;
+  }
+}
+
+/* ══════════════════════════════════════════
+   EDICIÓN 2025 — recap #BeyondTheScreen
+   ══════════════════════════════════════════ */
+.edicion-page {
+  background: #0A1E23;
+}
+
+/* Banner 100vh completo: pleca anclada al fondo del banner (50/50) — igual que Comunidad. */
+.edicion-page .page-hero-strip {
+  top: auto;
+  bottom: 0;
+}
+
+/* ── Tipografía compartida ── */
+.edicion-eyebrow {
+  display: inline-block;
+  font-family: var(--font-inter);
+  font-size: clamp(0.72rem, 1.4vw, 0.84rem);
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(246, 237, 219, 0.42);
+}
+
+.edicion-eyebrow--accent {
+  color: var(--color-orange);
+}
+
+.edicion-section-title {
+  font-family: var(--font-inter);
+  font-size: clamp(2rem, 5.5vw, 3.6rem);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  color: var(--color-cream);
+}
+
+/* ── Concepto ── */
+.edicion-concepto {
+  position: relative;
+  z-index: 2;
+  margin-top: -61px; /* sube media pleca para el straddle 50/50 */
+  background: #0A1E23;
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 5vw, 3rem) clamp(3rem, 6vw, 5rem);
+}
+
+.edicion-concepto-inner {
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.edicion-concepto .edicion-eyebrow {
+  margin-bottom: 1.6rem;
+}
+
+.edicion-lede {
+  font-family: var(--font-inter);
+  font-size: clamp(1.1rem, 2.4vw, 1.7rem);
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: rgba(246, 237, 219, 0.85);
+  text-wrap: balance;
+}
+
+.edicion-lede strong {
+  font-weight: 800;
+  color: var(--color-cream);
+}
+
+/* #BeyondTheScreen en naranja (el espectro de colores vive en las barras). */
+.edicion-hashtag-inline {
+  font-weight: 800;
+  color: var(--color-orange);
+  white-space: nowrap;
+}
+
+/* 4 disciplinas — el eje estructural del ecosistema */
+.edicion-disciplinas {
+  list-style: none;
+  margin: clamp(2.5rem, 5vw, 4rem) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2.5vw, 2rem);
+  text-align: left;
+}
+
+.edicion-disciplina {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.edicion-disciplina-bar {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--cat);
+}
+
+.edicion-disciplina-label {
+  font-family: var(--font-inter);
+  font-size: clamp(0.95rem, 1.8vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--color-cream);
+}
+
+@media (max-width: 720px) {
+  .edicion-disciplinas { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Video recap ── */
+.edicion-video-section {
+  background: #061319;
+  padding: clamp(3.5rem, 7vw, 6rem) clamp(1.25rem, 5vw, 3rem);
+}
+
+.edicion-video-head {
+  max-width: 1120px;
+  margin: 0 auto clamp(1.75rem, 3.5vw, 2.75rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.edicion-video-frame {
+  position: relative;
+  max-width: 1120px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  overflow: hidden;
+  box-shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.8);
+}
+
+.edicion-video-iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.edicion-video-facade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: filter 0.3s ease;
+}
+
+.edicion-video-facade::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 19, 25, 0.4);
+  transition: background 0.3s ease;
+}
+
+.edicion-video-facade:hover::before,
+.edicion-video-facade:focus-visible::before {
+  background: rgba(6, 19, 25, 0.25);
+}
+
+.edicion-video-play {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(64px, 9vw, 86px);
+  height: clamp(64px, 9vw, 86px);
+  border-radius: 50%;
+  background: var(--color-orange);
+  color: #0A1E23;
+  padding-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.edicion-video-facade:hover .edicion-video-play,
+.edicion-video-facade:focus-visible .edicion-video-play {
+  transform: scale(1.08);
+}
+
+.edicion-video-label {
+  position: relative;
+  font-family: var(--font-inter);
+  font-size: clamp(0.8rem, 1.6vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-cream);
+}
+
+/* ── Carrusel de fotos (full-bleed) ── */
+.edicion-fotos-section {
+  background: #0A1E23;
+  padding: clamp(3.5rem, 7vw, 6rem) 0 clamp(4rem, 8vw, 7rem);
+  overflow: hidden;
+}
+
+.edicion-fotos-head {
+  max-width: 1200px;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+  padding: 0 clamp(1.25rem, 5vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.edicion-marquee {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75rem, 1.5vw, 1.25rem);
+}
+
+.edicion-marquee-row {
+  display: flex;
+  width: max-content;
+  gap: clamp(0.75rem, 1.5vw, 1.25rem);
+  animation: edicionMarquee 70s linear infinite;
+  will-change: transform;
+}
+
+.edicion-marquee-row--rev {
+  animation: edicionMarqueeRev 70s linear infinite;
+}
+
+.edicion-foto {
+  flex-shrink: 0;
+  height: clamp(150px, 22vw, 260px);
+  width: auto;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes edicionMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes edicionMarqueeRev {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+/* ── Carteles de ediciones pasadas ── */
+.edicion-carteles-section {
+  background: var(--color-cream);
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 5vw, 3rem) clamp(4.5rem, 9vw, 8rem);
+}
+
+.edicion-carteles-head {
+  max-width: 900px;
+  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+}
+
+.edicion-carteles-head .edicion-eyebrow {
+  color: var(--color-orange);
+  margin-bottom: 1rem;
+}
+
+.edicion-carteles-title {
+  font-family: var(--font-inter);
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+}
+
+.edicion-carteles-lead {
+  font-family: var(--font-inter);
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--color-navy) 62%, transparent);
+}
+
+.edicion-carteles-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: clamp(1rem, 2vw, 1.6rem);
+}
+
+@media (max-width: 1000px) { .edicion-carteles-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 680px)  { .edicion-carteles-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 440px)  { .edicion-carteles-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.edicion-cartel {
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+
+.edicion-cartel-img {
+  width: 100%;
+  aspect-ratio: 70 / 100;
+  object-fit: cover;
+  display: block;
+  background: rgba(8, 23, 34, 0.06);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.edicion-cartel:hover .edicion-cartel-img,
+.edicion-cartel:focus-visible .edicion-cartel-img {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px -16px rgba(8, 23, 34, 0.45);
+}
+
+.edicion-cartel-year {
+  display: block;
+  margin-top: 0.7rem;
+  font-family: var(--font-inter);
+  font-size: clamp(0.85rem, 1.6vw, 1rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--color-navy);
+}
+
+.edicion-carteles-cta {
+  display: inline-block;
+  margin: clamp(2.5rem, 5vw, 3.5rem) auto 0;
+  text-align: center;
+  width: 100%;
+  font-family: var(--font-inter);
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--color-orange);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.edicion-carteles-cta:hover {
+  opacity: 0.7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .edicion-marquee-row { animation: none; }
+  .edicion-cartel-img,
+  .edicion-video-play,
+  .edicion-video-facade::before { transition: none; }
 }

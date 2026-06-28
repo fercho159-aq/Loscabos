@@ -59,16 +59,13 @@ export default function FFGFAnimations() {
       // ── DATES: fade up ──
       const dates = document.querySelector<HTMLElement>('[data-anim="ffgf-dates"]');
       if (dates) {
-        gsap.from(dates, {
-          opacity: 0,
-          y: 20,
-          duration: 0.6,
-          ease: "power3.out",
-          force3D: true,
-          scrollTrigger: {
-            trigger: dates,
-            start: "top 90%",
-            once: true,
+        gsap.set(dates, { opacity: 0, y: 20 });
+        ScrollTrigger.create({
+          trigger: dates,
+          start: "top 90%",
+          once: true,
+          onEnter: () => {
+            gsap.to(dates, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out", force3D: true, overwrite: "auto" });
           },
         });
       }
@@ -76,17 +73,13 @@ export default function FFGFAnimations() {
       // ── CTA BUTTON: fade up ──
       const cta = document.querySelector<HTMLElement>('[data-anim="ffgf-cta"]');
       if (cta) {
-        gsap.from(cta, {
-          opacity: 0,
-          y: 20,
-          duration: 0.6,
-          delay: 0.2,
-          ease: "power3.out",
-          force3D: true,
-          scrollTrigger: {
-            trigger: cta,
-            start: "top 90%",
-            once: true,
+        gsap.set(cta, { opacity: 0, y: 20 });
+        ScrollTrigger.create({
+          trigger: cta,
+          start: "top 90%",
+          once: true,
+          onEnter: () => {
+            gsap.to(cta, { opacity: 1, y: 0, duration: 0.6, delay: 0.2, ease: "power3.out", force3D: true, overwrite: "auto" });
           },
         });
       }
@@ -94,16 +87,13 @@ export default function FFGFAnimations() {
       // ── LEGADO EYEBROW: fade up ──
       const eyebrow = document.querySelector<HTMLElement>('[data-anim="ffgf-legado-eyebrow"]');
       if (eyebrow) {
-        gsap.from(eyebrow, {
-          opacity: 0,
-          y: 15,
-          duration: 0.5,
-          ease: "power3.out",
-          force3D: true,
-          scrollTrigger: {
-            trigger: eyebrow,
-            start: "top 90%",
-            once: true,
+        gsap.set(eyebrow, { opacity: 0, y: 15 });
+        ScrollTrigger.create({
+          trigger: eyebrow,
+          start: "top 90%",
+          once: true,
+          onEnter: () => {
+            gsap.to(eyebrow, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out", force3D: true, overwrite: "auto" });
           },
         });
       }
@@ -142,17 +132,13 @@ export default function FFGFAnimations() {
       // ── LEGADO DESCRIPTION: fade up ──
       const legadoDesc = document.querySelector<HTMLElement>('[data-anim="ffgf-legado-desc"]');
       if (legadoDesc) {
-        gsap.from(legadoDesc, {
-          opacity: 0,
-          y: 25,
-          duration: 0.7,
-          delay: 0.3,
-          ease: "power3.out",
-          force3D: true,
-          scrollTrigger: {
-            trigger: legadoDesc,
-            start: "top 90%",
-            once: true,
+        gsap.set(legadoDesc, { opacity: 0, y: 25 });
+        ScrollTrigger.create({
+          trigger: legadoDesc,
+          start: "top 90%",
+          once: true,
+          onEnter: () => {
+            gsap.to(legadoDesc, { opacity: 1, y: 0, duration: 0.7, delay: 0.3, ease: "power3.out", force3D: true, overwrite: "auto" });
           },
         });
       }
@@ -202,16 +188,13 @@ export default function FFGFAnimations() {
       // ── ALIADOS TAG: fade up ──
       const aliadosTag = document.querySelector<HTMLElement>('[data-anim="ffgf-aliados-tag"]');
       if (aliadosTag) {
-        gsap.from(aliadosTag, {
-          opacity: 0,
-          y: 15,
-          duration: 0.5,
-          ease: "power3.out",
-          force3D: true,
-          scrollTrigger: {
-            trigger: aliadosTag,
-            start: "top 80%",
-            once: true,
+        gsap.set(aliadosTag, { opacity: 0, y: 15 });
+        ScrollTrigger.create({
+          trigger: aliadosTag,
+          start: "top 80%",
+          once: true,
+          onEnter: () => {
+            gsap.to(aliadosTag, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out", force3D: true, overwrite: "auto" });
           },
         });
       }
@@ -219,17 +202,13 @@ export default function FFGFAnimations() {
       // ── ALIADOS QUOTE: fade up ──
       const aliadosQuote = document.querySelector<HTMLElement>('[data-anim="ffgf-aliados-quote"]');
       if (aliadosQuote) {
-        gsap.from(aliadosQuote, {
-          opacity: 0,
-          y: 25,
-          duration: 0.7,
-          delay: 0.15,
-          ease: "power3.out",
-          force3D: true,
-          scrollTrigger: {
-            trigger: aliadosQuote,
-            start: "top 80%",
-            once: true,
+        gsap.set(aliadosQuote, { opacity: 0, y: 25 });
+        ScrollTrigger.create({
+          trigger: aliadosQuote,
+          start: "top 80%",
+          once: true,
+          onEnter: () => {
+            gsap.to(aliadosQuote, { opacity: 1, y: 0, duration: 0.7, delay: 0.15, ease: "power3.out", force3D: true, overwrite: "auto" });
           },
         });
       }
@@ -237,15 +216,13 @@ export default function FFGFAnimations() {
       // ── ALIADOS CAROUSEL: fade in ──
       const aliadosCarousel = document.querySelector<HTMLElement>('[data-anim="ffgf-aliados"] .aliados-carousel');
       if (aliadosCarousel) {
-        gsap.from(aliadosCarousel, {
-          opacity: 0,
-          duration: 0.6,
-          delay: 0.3,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: aliadosCarousel,
-            start: "top 80%",
-            once: true,
+        gsap.set(aliadosCarousel, { opacity: 0 });
+        ScrollTrigger.create({
+          trigger: aliadosCarousel,
+          start: "top 80%",
+          once: true,
+          onEnter: () => {
+            gsap.to(aliadosCarousel, { opacity: 1, duration: 0.6, delay: 0.3, ease: "power3.out", overwrite: "auto" });
           },
         });
       }
@@ -291,7 +268,23 @@ export default function FFGFAnimations() {
 
     });
 
-    return () => ctx.kill();
+    // Recalcula posiciones de los triggers tras asentarse la maquetación
+    // (font swap + banner GIF/imágenes pesadas cargan async). refresh() además
+    // dispara onEnter de cualquier trigger once:true ya en viewport que no haya
+    // entrado, evitando que una sección quede oculta permanentemente.
+    const refresh = () => ScrollTrigger.refresh();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);
+    window.addEventListener("load", refresh);
+    const refreshTimers = [
+      window.setTimeout(refresh, 400),
+      window.setTimeout(refresh, 1500),
+    ];
+
+    return () => {
+      window.removeEventListener("load", refresh);
+      refreshTimers.forEach(clearTimeout);
+      ctx.kill();
+    };
   }, []);
 
   return null;

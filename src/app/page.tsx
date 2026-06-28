@@ -28,11 +28,9 @@ const aliados = [
   { name: "The Cape, A Thompson Hotel", logo: "/images/aliados/FICC_Logos_Aliados_2026-the-cape.png" },
   { name: "Viceroy Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-viceroy.png" },
   { name: "Secrets Puerto Los Cabos Golf & Spa Resort", logo: "/images/aliados/FICC_Logos_Aliados_2026-secrets.png" },
-  { name: "Krystal Grand Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-krystal.png" },
   { name: "JW Marriott Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-jw-marriott.png" },
   { name: "Suelo Sur", logo: "/images/aliados/FICC_Logos_Aliados_2026-21.png" },
   { name: "Sage", logo: "/images/aliados/FICC_Logos_Aliados_2026-22.png" },
-  { name: "Flora Farms", logo: "/images/aliados/FICC_Logos_Aliados_2026-24.png" },
   { name: "Art Kingdom", logo: "/images/aliados/FICC_Logos_Aliados_2026-06.png" },
   { name: "CTT Exp & Rentals", logo: "/images/aliados/FICC_Logos_Aliados_2026-07.png" },
   { name: "Shalala", logo: "/images/aliados/FICC_Logos_Aliados_2026-08.png" },
@@ -42,12 +40,11 @@ const aliados = [
   { name: "Pólvora", logo: "/images/aliados/FICC_Logos_Aliados_2026-15.png" },
   { name: "Cine de Verano", logo: "/images/aliados/FICC_Logos_Aliados_2026-14.png" },
   { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-16.png" },
-  { name: "Centro Cultural Tijuana", logo: "/images/aliados/FICC_Logos_Aliados_2026-cecut.png" },
-  { name: "Mares de México", logo: "/images/aliados/FICC_Logos_Aliados_2026-mares.png" },
+  { name: "Ánima Village", logo: "/images/aliados/FICC_Logos_Aliados_2026-12.png" },
+  { name: "Arte Abierto", logo: "/images/aliados/FICC_Logos_Aliados_2026-13.png" },
+  { name: "Tamarindos", logo: "/images/aliados/FICC_Logos_Aliados_2026-23.png" },
   { name: "Dobel 50", logo: "/images/aliados/FICC_Logos_Aliados_2026-29.png" },
   { name: "Baja Republic", logo: "/images/aliados/FICC_Logos_Aliados_2026-28.png" },
-  { name: "El Sudcaliforniano", logo: "/images/aliados/FICC_Logos_Aliados_2026-sudcaliforniano.png" },
-  { name: "Cabo Mil 96.3", logo: "/images/aliados/FICC_Logos_Aliados_2026-cabomil.png" },
 ];
 const aliadosTrack = [...aliados, ...aliados];
 
@@ -58,6 +55,23 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section id="hero-section" className="relative flex flex-col bg-[#0A1E23] overflow-x-clip min-h-screen">
+        {/* Background video */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          poster="/videos/ficc-home-poster.jpg"
+          aria-hidden="true"
+        >
+          <source src="/videos/ficc-home.webm" type="video/webm" />
+          <source src="/videos/ficc-home.mp4" type="video/mp4" />
+        </video>
+        {/* Dark overlay for legibility */}
+        <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundColor: "rgba(10, 30, 35, 0.45)" }} />
+
         <div className="relative z-[1] px-6 pt-[5rem] pb-[5rem] md:px-8 md:pt-[8rem] md:pb-[9rem] flex flex-col items-center flex-1 justify-center gap-0">
           {/* Brand lockup — logo image only */}
           <h1 className="flex justify-center mb-[2.4rem] m-0" style={{ fontSize: 0, lineHeight: 0 }}>
@@ -71,7 +85,7 @@ export default function Home() {
             className="text-center m-0 mb-6 text-[#F6EDDB]"
             style={{ fontSize: "clamp(1.4rem, 2.4vw, 2.1rem)", letterSpacing: ".04em", fontWeight: 400 }}
           >
-            9 – 13 de diciembre 2026
+            14ª Edición · del 9 al 13 de diciembre 2026
           </p>
 
           {/* #BeyondTheScreen strip — centered, matching logo width */}
@@ -80,7 +94,7 @@ export default function Home() {
             style={{ width: 600, maxWidth: "90vw" }}
           >
             <p data-anim="hero-hashtag" className="text-[clamp(1.4rem,7.5vw,3.5rem)] font-black tracking-normal text-[#A3CDD8] m-0 leading-[1.05]" style={{ whiteSpace: "nowrap" }}>
-              {"#BeyondTheScreen".split("").map((char, i) => (
+              {"#BEYONDTHESCREEN".split("").map((char, i) => (
                 <span key={i} data-anim="hero-hashtag-char" style={{ display: "inline-block" }}>{char}</span>
               ))}
             </p>
@@ -118,7 +132,7 @@ export default function Home() {
               className="font-black max-w-[440px] leading-[1.3] m-0"
               style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", color: "var(--color-cream)" }}
             >
-              {"Accede a la preventa de boletos y descubre la programación antes que nadie.".split(" ").map((word, wi) => (
+              {"Recibe antes que nadie el anuncio de la programación y la apertura de taquilla.".split(" ").map((word, wi) => (
                 <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.28em" }}>
                   {word.split("").map((char, ci) => (
                     <span key={ci} data-anim="cta-text-char" style={{ display: "inline-block" }}>{char}</span>
@@ -128,9 +142,9 @@ export default function Home() {
             </p>
             <SubscribeCTA
               source="preventa"
-              label=" Regístrate "
-              title=" Regístrate "
-              description="Déjanos tus datos y recibe la información de la preventa antes que nadie."
+              label="Pre-regístrate"
+              title="Pre-regístrate"
+              description="Recibe antes que nadie el anuncio de la programación y la apertura de taquilla."
               className="cta-button"
               dataAnim="cta-btn"
             />

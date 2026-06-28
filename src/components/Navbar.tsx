@@ -14,6 +14,8 @@ const navItems: NavItem[] = [
   { label: "El Festival", href: "/el-festival" },
   { label: "La Baja Inspira", href: "/la-baja-inspira" },
   { label: "Fondo F\u00edlmico Gabriel Figueroa", href: "/ffgf" },
+  { label: "Campus", href: "/campus" },
+  { label: "Comunidad", href: "/comunidad" },
   { label: "Programaci\u00f3n", href: "/programacion" },
   { label: "Prensa", href: "/prensa" },
 ];

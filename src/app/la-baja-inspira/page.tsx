@@ -92,7 +92,7 @@ const comite = [
   {
     name: "Iván Carrillo",
     desc: "Periodista, conductor y productor independiente que vincula ciencia, medio ambiente y cine documental desde una mirada accesible y contextual.",
-    img: "/images/comite/ivan-carrillo.jpg",
+    img: "/images/comite/ivan-carrillo.png",
   },
   {
     name: "Salvador Amores",
@@ -139,8 +139,9 @@ const juradoEjes = [
       },
       {
         name: "Octavio Aburto",
-        desc: "Investigador en Scripps Institution of Oceanography; especializado en ecosistemas marinos y conservación, con enfoque científico aplicado a políticas públicas.",
-        img: null,
+        nameUrl: "https://www.instagram.com/octavioaburto/",
+        desc: "Investigador del Instituto de Oceanografía Scripps, Explorador de National Geographic y fotógrafo de conservación (ILCP). Galardonado por instituciones como WWF y la SEMARNAT, dirige la iniciativa Mares Mexicanos y lidera investigaciones sobre biodiversidad marina y manglares. Su trabajo científico y de divulgación ha sido fundamental para evidenciar la histórica recuperación ecológica de la reserva marina de Cabo Pulmo.",
+        img: "/images/jurado/octavio-aburto.jpg",
       },
     ],
   },
@@ -148,16 +149,6 @@ const juradoEjes = [
     eje: "02",
     titulo: "Memoria Histórica",
     members: [
-      {
-        name: "Michelin Cariño",
-        desc: "Investigadora y autora especializada en la historia de Baja California; su trabajo documenta la evolución territorial y social de la península desde una perspectiva académica sólida.",
-        img: null,
-      },
-      {
-        name: "Dolores Heredia",
-        desc: "Actriz y promotora cultural originaria de La Paz; su trayectoria está vinculada a la construcción y difusión de la identidad sudcaliforniana.",
-        img: null,
-      },
       {
         name: "Alejandro Rivas",
         nameUrl: "https://www.instagram.com/alejandrorivasfoto",
@@ -171,8 +162,25 @@ const juradoEjes = [
       },
       {
         name: "Inti Cordera",
-        desc: "Fundador y director de DocsMX, plataforma clave para el cine documental en México y América Latina.",
-        img: "/images/jurado/inti-cordera.jpeg",
+        nameUrl: "https://www.instagram.com/inticordera/",
+        desc: (
+          <>
+            Fundador y director de{" "}
+            <a href="https://www.instagram.com/docsmx/" target="_blank" rel="noopener noreferrer" className="lbi-jurado-link">DocsMX</a>
+            , plataforma clave para el cine documental en México y América Latina.
+          </>
+        ),
+        img: "/images/jurado/inti-cordera.jpg",
+      },
+      {
+        name: "Dra. Micheline Cariño",
+        desc: "Profesora de la UABCS, miembro del SNI nivel III y pionera de la historia ambiental en México con doctorado por la EHESS de Francia. Autora de 17 libros y ex Autora Líder del IPCC, su investigación se centra en la sustentabilidad, los oasis sudcalifornianos y la relación sociedad-naturaleza en el Golfo de California.",
+        img: "/images/jurado/micheline-carino.jpg",
+      },
+      {
+        name: "Dolores Heredia",
+        desc: "Actriz y promotora cultural originaria de La Paz; su trayectoria está vinculada a la construcción y difusión de la identidad sudcaliforniana.",
+        img: null,
       },
     ],
   },
@@ -208,18 +216,19 @@ const aliadosLBI: { name: string; logo: string | null }[] = [
   { name: "ESCINE", logo: "/images/aliados-lbi/escine.png" },
   { name: "IMCINE", logo: "/images/aliados-lbi/imcine.png" },
   { name: "Puerto Los Cabos", logo: "/images/aliados-lbi/puerto-los-cabos.png" },
-  { name: "Cine de Verano", logo: "/images/aliados-lbi/cine-de-verano.png" },
-  { name: "Pólvora", logo: "/images/aliados-lbi/polvora.png" },
-  { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados-lbi/instituto-cultura-cabos.png" },
-  { name: "Centro Cultural Tijuana", logo: "/images/aliados-lbi/centro-cultural-tijuana.png" },
   { name: "Tropicana", logo: "/images/aliados-lbi/tropicana.png" },
   { name: "Suelo Sur", logo: "/images/aliados-lbi/suelo-sur.png" },
   { name: "Sage", logo: "/images/aliados-lbi/sage.png" },
-  { name: "Baja Republic", logo: "/images/aliados-lbi/baja-republic.png" },
-  { name: "Hotel El Ganzo", logo: "/images/aliados-lbi/hotel-el-ganzo.png" },
-  { name: "Mares de México", logo: "/images/aliados-lbi/mares-de-mexico.png" },
   { name: "Cabo Mil", logo: "/images/aliados-lbi/cabo-mil.png" },
   { name: "El Sudcaliforniano", logo: "/images/aliados-lbi/el-sudcaliforniano.png" },
+  // Pelagic Life — pendiente logo (Fase 2: 1 de julio)
+  { name: "Mares de México", logo: "/images/aliados-lbi/mares-de-mexico.png" },
+  { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados-lbi/instituto-cultura-cabos.png" },
+  { name: "Centro Cultural Tijuana", logo: "/images/aliados-lbi/centro-cultural-tijuana.png" },
+  { name: "Baja Republic", logo: "/images/aliados-lbi/baja-republic.png" },
+  { name: "Cine de Verano", logo: "/images/aliados-lbi/cine-de-verano.png" },
+  { name: "Pólvora", logo: "/images/aliados-lbi/polvora.png" },
+  // MVS — pendiente logo
 ];
 const aliadosLBITrack = [...aliadosLBI, ...aliadosLBI];
 
@@ -344,7 +353,7 @@ export default function LaBajaInspira() {
           backgroundPosition: "center",
         }}
       >
-        <div className="mx-auto max-w-6xl px-6 md:px-10 py-20 md:py-32" style={{ color: "#0A1C1F", fontFamily: "var(--font-inter)" }}>
+        <div className="mx-auto max-w-6xl px-6 md:px-10 py-12 md:py-16" style={{ color: "#0A1C1F", fontFamily: "var(--font-inter)" }}>
           <div className="lbi-conv-grid">
             <h2 className="lbi-conv-title">
               {"Convocatoria 2026".split(" ").map((word, wi) => (
@@ -378,7 +387,7 @@ export default function LaBajaInspira() {
             </div>
           </div>
 
-          <div className="mt-14 md:mt-20 flex justify-center">
+          <div className="mt-8 md:mt-12 flex justify-center">
             <a
               href="https://filmfreeway.com/ficloscabos"
               target="_blank"
@@ -386,7 +395,7 @@ export default function LaBajaInspira() {
               className="lbi-conv-cta"
               data-anim="lbi-conv-cta"
             >
-              Aplica ahora
+              Sé el primero en recibir información
             </a>
           </div>
         </div>
@@ -417,7 +426,7 @@ export default function LaBajaInspira() {
       {/* Comité de selección */}
       <section className="section-text overflow-x-clip" id="lbi-comite-section">
         <div className="section-text-inner">
-          <h2 data-anim="lbi-comite-heading" className="section-heading" style={{ textTransform: "unset" }}>
+          <h2 data-anim="lbi-comite-heading" className="section-heading" style={{ textTransform: "uppercase" }}>
             {"Comité de Selección".split(" ").map((word, wi) => (
               <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.25em" }}>
                 {word.split("").map((char, ci) => (

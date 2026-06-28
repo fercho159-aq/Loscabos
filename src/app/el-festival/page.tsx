@@ -94,7 +94,6 @@ const aliados = [
   { name: "Hotel El Ganzo", logo: "/images/aliados/FICC_Logos_Aliados_2026-17.png" },
   { name: "Secrets Puerto Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-18.png" },
   { name: "Tropicana", logo: "/images/aliados/FICC_Logos_Aliados_2026-19.png" },
-  { name: "Krystal Grand Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-20.png" },
   { name: "Veleros Beach Club", logo: "/images/aliados/FICC_Logos_Aliados_2026-21.png" },
   { name: "Crania", logo: "/images/aliados/FICC_Logos_Aliados_2026-22.png" },
   { name: "Casa Ballena", logo: "/images/aliados/FICC_Logos_Aliados_2026-23.png" },

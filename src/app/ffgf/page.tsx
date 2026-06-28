@@ -78,12 +78,13 @@ export const metadata: Metadata = {
 };
 
 const aliadosFFGF = [
-  { name: "Aliado FFGF 1", logo: "/images/aliados-ffgf/aliado-ffgf-13.png" },
-  { name: "Aliado FFGF 2", logo: "/images/aliados-ffgf/aliado-ffgf-14.png" },
-  { name: "Aliado FFGF 3", logo: "/images/aliados-ffgf/aliado-ffgf-15.png" },
-  { name: "Aliado FFGF 4", logo: "/images/aliados-ffgf/aliado-ffgf-16.png" },
-  { name: "Aliado FFGF 5", logo: "/images/aliados-ffgf/aliado-ffgf-17.png" },
-  { name: "Aliado FFGF 6", logo: "/images/aliados-ffgf/aliado-ffgf-18.png" },
+  { name: "ESCINE", logo: "/images/aliados/FICC_Logos_Aliados_2026-05.png" },
+  { name: "Artegios", logo: "/images/aliados/FICC_Logos_Aliados_2026-09.png" },
+  { name: "Art Kingdom", logo: "/images/aliados/FICC_Logos_Aliados_2026-06.png" },
+  { name: "CTT Exp & Rentals", logo: "/images/aliados/FICC_Logos_Aliados_2026-07.png" },
+  { name: "Shalala", logo: "/images/aliados/FICC_Logos_Aliados_2026-08.png" },
+  { name: "CineNet", logo: "/images/aliados/FICC_Logos_Aliados_2026-11.png" },
+  { name: "Chemistry", logo: "/images/aliados/FICC_Logos_Aliados_2026-10.png" },
 ];
 const aliadosFFGFTrack = [...aliadosFFGF, ...aliadosFFGF];
 
@@ -91,7 +92,7 @@ const perfiles = [
   { title: "Africa Express (2025)", director: "Emilio Guerrero", desc: "El registro de la colisión entre Damon Albarn (Blur/Gorillaz) y México. Un puente entre el britpop y los ritmos africanos en suelo azteca.", tag: "Selección Oficial", still: "/images/stills/africa-express.jpg" },
   { title: "El sinaloense (2025)", director: "Luis Kles", desc: "Más allá del folclore, una exploración de la identidad y el mito. Una búsqueda por desmitificar el estigma para encontrar la esencia del norte.", tag: "Selección Oficial", still: "/images/stills/el-sinaloense.jpg" },
   { title: "Casa de guerreras (2025)", director: "Alejandro Paredes", desc: "Un retrato de resiliencia femenina. Se aleja del drama convencional para enfocarse en la fuerza colectiva y el legado de lucha.", tag: "Selección Oficial", still: "/images/stills/casa-de-guerreras.jpg" },
-  { title: "Al interior del fuego (2025)", director: "TaGolfo de California a Acuña", desc: "Cine de sensaciones. La dualidad entre destrucción y creación, usando el fuego como metáfora visual de la transformación personal.", tag: "Selección Oficial", still: "/images/stills/al-interior-del-fuego.jpg" },
+  { title: "Al interior del fuego (2025)", director: "Golfo de California a Acuña", desc: "Cine de sensaciones. La dualidad entre destrucción y creación, usando el fuego como metáfora visual de la transformación personal.", tag: "Selección Oficial", still: "/images/stills/al-interior-del-fuego.jpg" },
   { title: "Un lugar para volver (2025)", director: "Amanda Pérez Contreras", desc: "Una búsqueda sobre el desarraigo y el paisaje irreconocible al volver a casa. Un tema universal tratado con una estética muy personal.", tag: "Selección Oficial", still: "/images/stills/un-lugar-para-volver.jpg" },
   { title: "La Camarista (2017)", director: "Lila Avilés", desc: "Ganadora del Fondo Fílmico Gabriel Figueroa. Representante de México en los Premios Oscar y Premios Goya.", tag: "Ganadora FFGF", still: "/images/stills/la-camarista.jpg" },
   { title: "Tempestad (2015)", director: "Tatiana Huezo", desc: "Impulsada en etapa de Work in Progress. Mención Especial en la Berlinale y ganadora de 3 Premios Ariel.", tag: "Ganadora FFGF", still: "/images/stills/tempestad.jpg" },
@@ -103,7 +104,7 @@ export default function FFGF() {
       <style>{`html, body { background: #fff !important; }`}</style>
       <Navbar />
 
-      <PageHero lines={["Fondo Fílmico", "Gabriel Figueroa"]} hideStrip short />
+      <PageHero lines={["Fondo Fílmico", "Gabriel Figueroa"]} hideStrip short bgVideo={{ webm: "/images/ffgf-banner.webm", mp4: "/images/ffgf-banner.mp4", poster: "/images/ffgf-banner-poster.jpg" }} />
 
       {/* Descripción — Image left, text right (matches lbi-desc-grid pattern) */}
       <section id="ffgf-desc-section" style={{ minHeight: "auto", display: "flex", alignItems: "center", padding: "clamp(1.5rem, 3vw, 2rem)", maxWidth: 1200, margin: "0 auto", marginBottom: "clamp(1.5rem, 4vw, 3rem)" }}>
@@ -122,7 +123,7 @@ export default function FFGF() {
               y conexi&oacute;n profesional entre M&eacute;xico y el mundo, proyectando el talento de M&eacute;xico a la escena internacional.
             </p>
             <div data-anim="ffgf-dates" className="section-dates">
-              <p style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.05rem, 1.8vw, 1.5rem)", color: "#000", lineHeight: 1.4, fontWeight: 400, marginBottom: "1rem" }}>Apertura de convocatoria: Agosto 2026</p>
+              <p style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.05rem, 1.8vw, 1.5rem)", color: "#000", lineHeight: 1.4, fontWeight: 400, marginBottom: "1rem" }}>Apertura de convocatoria: 24 de julio de 2026</p>
             </div>
             <SubscribeCTA
               source="ffgf"
