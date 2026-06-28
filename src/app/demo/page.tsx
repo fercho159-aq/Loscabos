@@ -20,8 +20,6 @@ const aliados = [
   { name: "Artegios", logo: "/images/aliados/FICC_Logos_Aliados_2026-09.png" },
   { name: "Chemistry", logo: "/images/aliados/FICC_Logos_Aliados_2026-10.png" },
   { name: "CineNet", logo: "/images/aliados/FICC_Logos_Aliados_2026-11.png" },
-  { name: "Ánima Village", logo: "/images/aliados/FICC_Logos_Aliados_2026-12.png" },
-  { name: "Arte Abierto", logo: "/images/aliados/FICC_Logos_Aliados_2026-13.png" },
   { name: "Cine de Verano", logo: "/images/aliados/FICC_Logos_Aliados_2026-14.png" },
   { name: "Pólvora", logo: "/images/aliados/FICC_Logos_Aliados_2026-15.png" },
   { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-16.png" },
@@ -38,6 +36,9 @@ const aliados = [
   { name: "Dobel 50", logo: "/images/aliados/FICC_Logos_Aliados_2026-27.png" },
   { name: "Grupo Aeroportuario del Pacífico", logo: "/images/aliados/FICC_Logos_Aliados_2026-28.png" },
   { name: "Aeromexico", logo: "/images/aliados/FICC_Logos_Aliados_2026-29.png" },
+  { name: "YAYA Rentals", logo: "/images/aliados/FICC_Logos_Aliados_2026-30.png" },
+  { name: "Zadún, A Ritz-Carlton Reserve", logo: "/images/aliados/FICC_Logos_Aliados_2026-31.png" },
+  { name: "The Cape, A Thompson Hotel", logo: "/images/aliados/FICC_Logos_Aliados_2026-32.png" },
 ];
 
 export default function DemoPage() {
@@ -134,7 +135,7 @@ export default function DemoPage() {
               className="text-[#EDE6DC]/60 tracking-[.08em]"
               style={{ fontSize: "clamp(.7rem, .9vw, .82rem)" }}
             >
-              <span id="hero-date-text">9–12 de diciembre de 2026</span>
+              <span id="hero-date-text">9–13 de diciembre de 2026</span>
             </p>
           </div>
 
@@ -203,7 +204,7 @@ export default function DemoPage() {
               rel="noopener noreferrer"
               className="cta-button"
             >
-              Preventa de Boletos
+              Regístrate
             </a>
           </div>
         </div>

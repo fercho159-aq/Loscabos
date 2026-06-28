@@ -242,38 +242,146 @@ export default function LBIAnimations() {
         });
       });
 
-      // ── COMITÉ: description slides from right ──
+      // ── COMITÉ: description slides from right ── (Pattern A: refresh-proof)
       const comiteDesc = document.querySelector<HTMLElement>('[data-anim="lbi-comite-desc"]');
       if (comiteDesc) {
-        gsap.from(comiteDesc, {
-          x: "100vw",
-          opacity: 0,
-          duration: 1,
-          delay: 0.2,
-          ease: "power4.out",
-          force3D: true,
-          scrollTrigger: { trigger: comiteDesc, start: "top 90%", once: true },
+        gsap.set(comiteDesc, { x: "100vw", opacity: 0 });
+        ScrollTrigger.create({
+          trigger: comiteDesc,
+          start: "top 90%",
+          once: true,
+          onEnter: () => {
+            gsap.to(comiteDesc, { x: 0, opacity: 1, duration: 1, delay: 0.2, ease: "power4.out", force3D: true, overwrite: "auto" });
+          },
         });
       }
 
-      // ── COMITÉ: cards slide in from alternating sides ──
+      // ── COMITÉ: cards slide in from alternating sides ── (Pattern A)
       const comiteCards = gsap.utils.toArray<HTMLElement>('[data-anim="lbi-comite-card"]');
       comiteCards.forEach((card, i) => {
         const fromLeft = i % 2 === 0;
-        gsap.from(card, {
-          x: fromLeft ? "-100vw" : "100vw",
-          opacity: 0,
-          duration: 1.1,
-          delay: i * 0.15,
-          ease: "power4.out",
-          force3D: true,
-          scrollTrigger: { trigger: card, start: "top 95%", once: true },
+        gsap.set(card, { x: fromLeft ? "-100vw" : "100vw", opacity: 0 });
+        ScrollTrigger.create({
+          trigger: card,
+          start: "top 95%",
+          once: true,
+          onEnter: () => {
+            gsap.to(card, { x: 0, opacity: 1, duration: 1.1, delay: i * 0.15, ease: "power4.out", force3D: true, overwrite: "auto" });
+          },
+        });
+      });
+
+      // ── CONVOCATORIA 2026 (rediseño): columnas slide in ──
+      // Patrón A (set + onEnter): estado oculto estático (un refresh no puede
+      // congelarlo a opacity parcial) y reveal independiente que siempre llega
+      // al estado final gracias a overwrite:"auto". Evita que las columnas
+      // queden ocultas/atascadas si el trigger se recalcula tras cargar fuentes/imágenes.
+      const convLeft = document.querySelector<HTMLElement>('[data-anim="lbi-conv-col-left"]');
+      if (convLeft) {
+        gsap.set(convLeft, { x: -80, opacity: 0 });
+        ScrollTrigger.create({
+          trigger: convLeft,
+          start: "top 85%",
+          once: true,
+          onEnter: () => {
+            gsap.to(convLeft, { x: 0, opacity: 1, duration: 1, ease: "power3.out", force3D: true, overwrite: "auto" });
+          },
+        });
+      }
+      const convRight = document.querySelector<HTMLElement>('[data-anim="lbi-conv-col-right"]');
+      if (convRight) {
+        gsap.set(convRight, { x: 80, opacity: 0 });
+        ScrollTrigger.create({
+          trigger: convRight,
+          start: "top 85%",
+          once: true,
+          onEnter: () => {
+            gsap.to(convRight, { x: 0, opacity: 1, duration: 1, delay: 0.15, ease: "power3.out", force3D: true, overwrite: "auto" });
+          },
+        });
+      }
+      const convCta = document.querySelector<HTMLElement>('[data-anim="lbi-conv-cta"]');
+      if (convCta) {
+        gsap.set(convCta, { y: 40, opacity: 0, scale: 0.92 });
+        ScrollTrigger.create({
+          trigger: convCta,
+          start: "top 95%",
+          once: true,
+          onEnter: () => {
+            gsap.to(convCta, { y: 0, opacity: 1, scale: 1, duration: 0.9, ease: "back.out(1.7)", force3D: true, overwrite: "auto" });
+          },
+        });
+      }
+
+      // ── JURADO: eyebrow fade up ── (Pattern A)
+      const juradoEyebrow = document.querySelector<HTMLElement>('[data-anim="lbi-jurado-eyebrow"]');
+      if (juradoEyebrow) {
+        gsap.set(juradoEyebrow, { y: 20, opacity: 0 });
+        ScrollTrigger.create({
+          trigger: juradoEyebrow,
+          start: "top 90%",
+          once: true,
+          onEnter: () => {
+            gsap.to(juradoEyebrow, { y: 0, opacity: 1, duration: 0.7, ease: "power3.out", force3D: true, overwrite: "auto" });
+          },
+        });
+      }
+
+      // ── JURADO: eje labels slide in from left ── (Pattern A)
+      const juradoLabels = gsap.utils.toArray<HTMLElement>('[data-anim="lbi-jurado-eje-label"]');
+      juradoLabels.forEach((label) => {
+        gsap.set(label, { x: -60, opacity: 0 });
+        ScrollTrigger.create({
+          trigger: label,
+          start: "top 85%",
+          once: true,
+          onEnter: () => {
+            gsap.to(label, { x: 0, opacity: 1, duration: 0.9, ease: "power3.out", force3D: true, overwrite: "auto" });
+          },
+        });
+      });
+
+      // ── JURADO: rows slide in from alternating sides ── (Pattern A)
+      const juradoRows = gsap.utils.toArray<HTMLElement>('[data-anim="lbi-jurado-row"]');
+      juradoRows.forEach((row) => {
+        const fromRight = row.classList.contains("lbi-jurado-row--reverse");
+        const media = row.querySelector<HTMLElement>(".lbi-jurado-row__media");
+        const body = row.querySelector<HTMLElement>(".lbi-jurado-row__body");
+
+        if (media) gsap.set(media, { x: fromRight ? "60vw" : "-60vw", opacity: 0 });
+        if (body) gsap.set(body, { x: fromRight ? "-60vw" : "60vw", opacity: 0 });
+
+        ScrollTrigger.create({
+          trigger: row,
+          start: "top 90%",
+          once: true,
+          onEnter: () => {
+            if (media) gsap.to(media, { x: 0, opacity: 1, duration: 1.1, ease: "power4.out", force3D: true, overwrite: "auto" });
+            if (body) gsap.to(body, { x: 0, opacity: 1, duration: 1.1, delay: 0.1, ease: "power4.out", force3D: true, overwrite: "auto" });
+          },
         });
       });
 
     });
 
-    return () => ctx.kill();
+    // Recalcula las posiciones de los triggers después de que la maquetación
+    // se asiente (font swap de Inter + imagen de fondo ~15MB cargan async).
+    // ScrollTrigger.refresh() además re-evalúa el estado y dispara onEnter de
+    // cualquier trigger once:true que ya esté en viewport pero no haya entrado,
+    // de modo que ningún contenido puede quedarse oculto permanentemente.
+    const refresh = () => ScrollTrigger.refresh();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);
+    window.addEventListener("load", refresh);
+    const refreshTimers = [
+      window.setTimeout(refresh, 400),
+      window.setTimeout(refresh, 1500),
+    ];
+
+    return () => {
+      window.removeEventListener("load", refresh);
+      refreshTimers.forEach(clearTimeout);
+      ctx.kill();
+    };
   }, []);
 
   return null;

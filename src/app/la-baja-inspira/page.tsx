@@ -4,12 +4,69 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import LBIAnimations from "@/components/LBIAnimationsLazy";
-import SubscribeCTA from "@/components/SubscribeCTA";
 
 export const metadata: Metadata = {
   title: "La Baja Inspira | Plataforma de la Industria Cinematográfica",
   description:
     "La Baja Inspira es la plataforma de impulso a la industria del cine del FICC Los Cabos. Talleres, pitching, coproducción y desarrollo de proyectos.",
+  keywords: [
+    "La Baja Inspira",
+    "LBI",
+    "La Baja Inspira FICC",
+    "Plataforma de impulso",
+    "Plataforma de la industria cinematográfica",
+    "Plataforma de cine",
+    "Industria cinematográfica",
+    "Industria del cine en México",
+    "Industria audiovisual",
+    "Profesionalización cinematográfica",
+    "Formación cinematográfica",
+    "Educación en cine",
+    "Talleres de cine",
+    "Talleres FICC",
+    "Masterclass cine",
+    "Mentorías cinematográficas",
+    "Pitching",
+    "Pitching de proyectos",
+    "Sesiones de pitching",
+    "Coproducción",
+    "Coproducción internacional",
+    "Coproducción Iberoamericana",
+    "Desarrollo de proyectos",
+    "Desarrollo de guion",
+    "Work in Progress",
+    "Convocatorias",
+    "Convocatorias FICC",
+    "Convocatorias de cine 2026",
+    "Plataformas de impulso",
+    "FICC Los Cabos",
+    "Festival Internacional de Cine y Creatividad",
+    "Comité de la industria",
+    "Comité curatorial",
+    "ESCINE",
+    "IMCINE",
+    "Aliados de la industria",
+    "Cineastas emergentes",
+    "Productores emergentes",
+    "Guionistas mexicanos",
+    "Directoras mexicanas",
+    "Directores mexicanos",
+    "Talento iberoamericano",
+    "Networking cine",
+    "Encuentros de industria",
+    "Mercado de cine",
+    "Foros de coproducción",
+    "Cine Mexicano",
+    "Cine Iberoamericano",
+    "Cine Latinoamericano",
+    "Baja California Sur",
+    "Los Cabos",
+    "Fondo Fílmico Gabriel Figueroa",
+    "FFGF",
+    "Beyond The Screen",
+    "Diciembre 2026",
+    "Edición 2026 FICC",
+  ],
   alternates: { canonical: "/la-baja-inspira" },
   openGraph: {
     title: "La Baja Inspira | Plataforma de la Industria Cinematográfica",
@@ -19,35 +76,159 @@ export const metadata: Metadata = {
   },
 };
 
+const aliadosInstitucionales = [
+  { name: "ESCINE", logo: "/images/aliados-lbi/escine.png" },
+  { name: "IMCINE / Cultura", logo: "/images/aliados-lbi/imcine.png" },
+  { name: "Puerto Los Cabos", logo: "/images/aliados-lbi/puerto-los-cabos.png" },
+  { name: "Tropicana Tapestry Collection by Hilton", logo: "/images/aliados-lbi/tropicana-hilton.png" },
+];
+
 const comite = [
   {
-    name: "ESCINE",
-    desc: "Una de las instituciones acad\u00e9micas m\u00e1s importantes de M\u00e9xico dedicada a la profesionalizaci\u00f3n cinematogr\u00e1fica.",
-    img: "/images/comite/escine.png",
-  },
-  {
     name: "Juan Patricio Riveroll",
-    desc: "Director, productor y novelista con una destacada trayectoria en la creaci\u00f3n audiovisual y la gesti\u00f3n p\u00fablica.",
+    desc: "Desde su rol en ESCINE como en su faceta de cineasta y escritor, conecta el cine con historias de profundidad social y cultural desde una visión sensible y contemporánea.",
     img: "/images/comite/juan-patricio-riveroll.jpg",
   },
   {
-    name: "Alfredo Ruiz",
-    desc: "Director de la Licenciatura en Cinematograf\u00eda en ESCINE. Cuenta con una s\u00f3lida trayectoria en formaci\u00f3n acad\u00e9mica y cr\u00edtica cinematogr\u00e1fica.",
-    img: "/images/comite/alfredo-ruiz.jpeg",
+    name: "Iván Carrillo",
+    desc: "Periodista, conductor y productor independiente que vincula ciencia, medio ambiente y cine documental desde una mirada accesible y contextual.",
+    img: "/images/comite/ivan-carrillo.png",
   },
   {
-    name: "Iv\u00e1n Carrillo",
-    desc: "Periodista, conductor y productor independiente especializado en ciencia, salud y medio ambiente.",
-    img: "/images/comite/ivan-carrillo.jpg",
+    name: "Salvador Amores",
+    desc: "Figura clave en la cultura cinematográfica contemporánea de México, destacándose principalmente como crítico, programador y cineasta.",
+    img: "/images/comite/salvador-amores.png",
   },
 ];
 
-const aliadosLBI = [
-  { name: "Ánima Village", logo: "/images/aliados-lbi/anima-village.png" },
-  { name: "Arte Abierto", logo: "/images/aliados-lbi/arte-abierto.png" },
+const juradoEjes = [
+  {
+    eje: "01",
+    titulo: "Biodiversidad y Naturaleza",
+    members: [
+      {
+        name: "Alonso Rodríguez",
+        nameUrl: "https://www.instagram.com/alonsordzp",
+        desc: (
+          <>
+            Explorador, documentalista y fundador de{" "}
+            <a href="https://www.instagram.com/maresdemexico/" target="_blank" rel="noopener noreferrer" className="lbi-jurado-link">Mares de México</a>
+            : una iniciativa dedicada a la investigación, conservación y difusión de la vida marina. Explora el territorio a través de fotografía y video, creando narrativas visuales ligadas al mar, la exploración y los ecosistemas.
+          </>
+        ),
+        img: "/images/jurado/alonso-rodriguez.jpg",
+        imgPosition: "center 20%",
+      },
+      {
+        name: "Hans Herrmann",
+        nameUrl: "https://www.instagram.com/hans.herrmann__",
+        desc: "Ecólogo marino y especialista en política pública ambiental con más de 40 años de experiencia liderando iniciativas de conservación y sostenibilidad en América Latina y Norteamérica. Su perfil une investigación, conservación y divulgación del mar de la mano de Azul Pacífico, crea una mirada ambiental enfocada en los ecosistemas marinos.",
+        img: "/images/jurado/hans-herrmann.jpg",
+      },
+      {
+        name: "Jerónimo Prieto",
+        nameUrl: "https://www.instagram.com/jerochucho/",
+        desc: (
+          <>
+            Fundador de{" "}
+            <a href="https://www.instagram.com/pelagic_life/" target="_blank" rel="noopener noreferrer" className="lbi-jurado-link"><em>México Pelágico</em></a>
+            , organización mexicana dedicada a la protección de la vida marina de mar abierto desde 2008. Entusiasta de la naturaleza enfocado en conservación marina, exploración y protección de ecosistemas.
+          </>
+        ),
+        img: "/images/jurado/jeronimo-prieto.jpg",
+      },
+      {
+        name: "Octavio Aburto",
+        nameUrl: "https://www.instagram.com/octavioaburto/",
+        desc: "Investigador del Instituto de Oceanografía Scripps, Explorador de National Geographic y fotógrafo de conservación (ILCP). Galardonado por instituciones como WWF y la SEMARNAT, dirige la iniciativa Mares Mexicanos y lidera investigaciones sobre biodiversidad marina y manglares. Su trabajo científico y de divulgación ha sido fundamental para evidenciar la histórica recuperación ecológica de la reserva marina de Cabo Pulmo.",
+        img: "/images/jurado/octavio-aburto.jpg",
+      },
+    ],
+  },
+  {
+    eje: "02",
+    titulo: "Memoria Histórica",
+    members: [
+      {
+        name: "Alejandro Rivas",
+        nameUrl: "https://www.instagram.com/alejandrorivasfoto",
+        desc: (<>Cineasta de Baja California Sur, explora la relación entre territorio e identidad, director de fotografía del premiado documental <em>La Recua</em>.</>),
+        img: "/images/jurado/alejandro-rivas.jpg",
+      },
+      {
+        name: "Francisco Laresgoiti",
+        desc: (<>Director del documental <em>Santuarios del infinito</em> y productor de <em>Atado de años</em>, sobre el making of del oscarizado <em>Centinelas del silencio</em> (1971).</>),
+        img: "/images/jurado/francisco-laresgoiti.png",
+      },
+      {
+        name: "Inti Cordera",
+        nameUrl: "https://www.instagram.com/inticordera/",
+        desc: (
+          <>
+            Fundador y director de{" "}
+            <a href="https://www.instagram.com/docsmx/" target="_blank" rel="noopener noreferrer" className="lbi-jurado-link">DocsMX</a>
+            , plataforma clave para el cine documental en México y América Latina.
+          </>
+        ),
+        img: "/images/jurado/inti-cordera.jpg",
+      },
+      {
+        name: "Dra. Micheline Cariño",
+        desc: "Profesora de la UABCS, miembro del SNI nivel III y pionera de la historia ambiental en México con doctorado por la EHESS de Francia. Autora de 17 libros y ex Autora Líder del IPCC, su investigación se centra en la sustentabilidad, los oasis sudcalifornianos y la relación sociedad-naturaleza en el Golfo de California.",
+        img: "/images/jurado/micheline-carino.jpg",
+      },
+      {
+        name: "Dolores Heredia",
+        desc: "Actriz y promotora cultural originaria de La Paz; su trayectoria está vinculada a la construcción y difusión de la identidad sudcaliforniana.",
+        img: null,
+      },
+    ],
+  },
+  {
+    eje: "03",
+    titulo: "Economía Sustentable",
+    members: [
+      {
+        name: "Elena Fortes",
+        desc: "Productora y gestora cultural; especializada en el desarrollo de plataformas que articulan cine, industria e impacto social con proyección internacional.",
+        img: null,
+      },
+      {
+        name: "Eleonora Isunza",
+        desc: "Directora de Cinema Planeta; referente en curaduría de cine socioambiental, con experiencia en evaluar proyectos de impacto ambiental y social.",
+        img: null,
+      },
+      {
+        name: "Pablo Ferrer",
+        desc: "Fundador de Pesca del Futuro; especializado en modelos de pesca sostenible y regeneración de ecosistemas marinos, con enfoque en innovación y desarrollo territorial.",
+        img: null,
+      },
+      {
+        name: "Gabriela Cámara",
+        desc: "Chef y empresaria; referente en sostenibilidad alimentaria y economía regenerativa, con una visión integral sobre la relación entre gastronomía, comunidad y territorio.",
+        img: null,
+      },
+    ],
+  },
+];
+
+const aliadosLBI: { name: string; logo: string | null }[] = [
+  { name: "ESCINE", logo: "/images/aliados-lbi/escine.png" },
+  { name: "IMCINE", logo: "/images/aliados-lbi/imcine.png" },
+  { name: "Puerto Los Cabos", logo: "/images/aliados-lbi/puerto-los-cabos.png" },
+  { name: "Tropicana", logo: "/images/aliados-lbi/tropicana.png" },
+  { name: "Suelo Sur", logo: "/images/aliados-lbi/suelo-sur.png" },
+  { name: "Sage", logo: "/images/aliados-lbi/sage.png" },
+  { name: "Cabo Mil", logo: "/images/aliados-lbi/cabo-mil.png" },
+  { name: "El Sudcaliforniano", logo: "/images/aliados-lbi/el-sudcaliforniano.png" },
+  // Pelagic Life — pendiente logo (Fase 2: 1 de julio)
+  { name: "Mares de México", logo: "/images/aliados-lbi/mares-de-mexico.png" },
+  { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados-lbi/instituto-cultura-cabos.png" },
+  { name: "Centro Cultural Tijuana", logo: "/images/aliados-lbi/centro-cultural-tijuana.png" },
+  { name: "Baja Republic", logo: "/images/aliados-lbi/baja-republic.png" },
   { name: "Cine de Verano", logo: "/images/aliados-lbi/cine-de-verano.png" },
   { name: "Pólvora", logo: "/images/aliados-lbi/polvora.png" },
-  { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados-lbi/instituto-cultura-cabos.png" },
+  // MVS — pendiente logo
 ];
 const aliadosLBITrack = [...aliadosLBI, ...aliadosLBI];
 
@@ -71,18 +252,16 @@ export default function LaBajaInspira() {
     <div className="lbi-page">
       <Navbar />
 
-      <PageHero lines={["La Baja", "Inspira"]} hideStrip short />
-
-      {/* Water banner */}
-      <section className="relative w-full" style={{ height: "30vh", minHeight: 200 }}>
-        <Image
-          src="/images/cactus-sunset-bg.jpg"
-          alt="Atardecer entre cactus en Baja California Sur — FICC Los Cabos"
-          fill
-          sizes="100vw"
-          style={{ objectFit: "cover" }}
-        />
-      </section>
+      <PageHero
+        lines={["La Baja", "Inspira"]}
+        hideStrip
+        short
+        bgVideo={{
+          mp4: "/images/lbi-hero.mp4",
+          webm: "/images/lbi-hero.webm",
+          poster: "/images/lbi-hero-poster.jpg",
+        }}
+      />
 
       {/* Descripción — Logo left, content right */}
       <section id="lbi-desc-section" className="lbi-intro">
@@ -100,12 +279,12 @@ export default function LaBajaInspira() {
             <p data-anim="lbi-typewriter" className="lbi-intro-lead">
               Su propósito es posicionar a la región como un referente internacional en documental ambiental y territorial, integrando industria audiovisual, conocimiento y conservación con una visión de futuro sostenible.
             </p>
-            <div data-anim="lbi-typewriter" className="lbi-intro-apertura" aria-label="Apertura de convocatoria: 21 de mayo de 2026">
+            <div data-anim="lbi-typewriter" className="lbi-intro-apertura" role="group" aria-label="Apertura de convocatoria: 28 de mayo de 2026">
               <span className="lbi-intro-apertura-line">
                 <span className="lbi-intro-apertura-dot" aria-hidden="true" style={{ display: "inline-block", verticalAlign: "middle", marginRight: "0.5rem" }} />
                 Apertura de convocatoria
               </span>
-              <span className="lbi-intro-apertura-line"> - 21 de mayo de 2026</span>
+              <span className="lbi-intro-apertura-line"> - 28 de mayo de 2026</span>
             </div>
             <p data-anim="lbi-typewriter" className="lbi-intro-closer">
               El rigor cinematográfico es nuestra base. Buscamos obras donde la calidad narrativa y la investigación profunda se encuentran para definir el futuro de la región.
@@ -122,7 +301,7 @@ export default function LaBajaInspira() {
                 <Image src="/images/lbi-numbers/01.svg" alt="" width={260} height={260} />
               </span>
               <div data-anim="lbi-stagger-text" className="lbi-cat-body">
-                <h3 className="lbi-cat-title">Ciencias naturales<br />y ambientales</h3>
+                <h3 className="lbi-cat-title">Biodiversidad<br />y Naturaleza</h3>
                 <ul className="lbi-cat-items">
                   <li>Biología marina</li>
                   <li>Ecología y conservación</li>
@@ -136,7 +315,7 @@ export default function LaBajaInspira() {
                 <Image src="/images/lbi-numbers/02.svg" alt="" width={260} height={260} />
               </span>
               <div data-anim="lbi-stagger-text" className="lbi-cat-body">
-                <h3 className="lbi-cat-title">Historia y<br />ciencias sociales</h3>
+                <h3 className="lbi-cat-title">Memoria<br />Histórica</h3>
                 <ul className="lbi-cat-items">
                   <li>Historia regional</li>
                   <li>Antropología</li>
@@ -151,7 +330,7 @@ export default function LaBajaInspira() {
                 <Image src="/images/lbi-numbers/03.svg" alt="" width={260} height={260} />
               </span>
               <div data-anim="lbi-stagger-text" className="lbi-cat-body">
-                <h3 className="lbi-cat-title">Desarrollo<br />y economía territorial</h3>
+                <h3 className="lbi-cat-title">Economía<br />Sustentable</h3>
                 <ul className="lbi-cat-items">
                   <li>Economía azul</li>
                   <li>Seguridad alimentaria</li>
@@ -166,88 +345,80 @@ export default function LaBajaInspira() {
 
 
       {/* Convocatoria 2026 */}
-      <section className="relative w-full bg-[#0A1E23] flex flex-col overflow-hidden">
-        <div className="shrink-0 flex flex-col justify-start pt-10 pr-5 pb-10 pl-5 md:pt-[7rem] md:pr-16 md:pb-[15rem] md:pl-[15rem]">
+      <section
+        className="lbi-conv-section relative w-full overflow-x-clip"
+        style={{
+          backgroundImage: "url('/images/lbi-convocatoria-bg-08.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="mx-auto max-w-6xl px-6 md:px-10 py-12 md:py-16" style={{ color: "#0A1C1F", fontFamily: "var(--font-inter)" }}>
+          <div className="lbi-conv-grid">
+            <h2 className="lbi-conv-title">
+              {"Convocatoria 2026".split(" ").map((word, wi) => (
+                <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.25em" }}>
+                  {word.split("").map((char, ci) => (
+                    <span key={ci} data-anim="lbi-stagger-char" style={{ display: "inline-block" }}>{char}</span>
+                  ))}
+                </span>
+              ))}
+            </h2>
 
-          <h2 className="text-[42px] md:text-[58px] font-black leading-[1.0] max-w-[520px]" style={{ color: "var(--color-cream)" }}>
-            {"Convocatoria 2026".split(" ").map((word, wi) => (
-              <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.25em" }}>
-                {word.split("").map((char, ci) => (
-                  <span key={ci} data-anim="lbi-stagger-char" style={{ display: "inline-block" }}>{char}</span>
-                ))}
-              </span>
-            ))}
-          </h2>
+            {/* Columna izquierda */}
+            <div data-anim="lbi-conv-col-left" className="lbi-conv-left">
+              <h3 className="lbi-conv-subtitle">La convocatoria 2026 acepta exclusivamente:</h3>
+              <ul className="lbi-conv-list">
+                <li>— Largometrajes documentales terminados</li>
+                <li>— Cortometrajes documentales terminados</li>
+                <li>— Ensayos cinematográficos de no ficción finalizados</li>
+                <li>— Documentales científicos concluidos</li>
+              </ul>
+            </div>
+
+            {/* Columna derecha */}
+            <div data-anim="lbi-conv-col-right" className="lbi-conv-right">
+              <h3 className="lbi-conv-subtitle">Fechas Clave</h3>
+              <div className="lbi-conv-dates">
+                <p><strong>Apertura:</strong><span className="lbi-conv-date-hl">28 de mayo, 2026</span></p>
+                <p><strong>Cierre:</strong><span className="lbi-conv-date-hl">14 de julio, 2026</span></p>
+                <p><strong>Selección:</strong> 5 títulos que definen el pulso de la región</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 md:mt-12 flex justify-center">
+            <a
+              href="https://filmfreeway.com/ficloscabos"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="lbi-conv-cta"
+              data-anim="lbi-conv-cta"
+            >
+              Sé el primero en recibir información
+            </a>
+          </div>
         </div>
+      </section>
 
-        <div>
-          <div
-            className="w-full flex max-md:flex-col items-end max-md:items-center justify-center gap-8 max-md:gap-6 min-h-[471px] max-md:min-h-0 max-md:py-10 px-8"
-            style={{
-              backgroundImage: "url('/images/lbi-convocatoria-bg.png')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-          >
-            {/* Card izquierda — info convocatoria */}
-            <div className="impulso-card-outer">
-              <div
-                className="relative overflow-hidden"
-                style={{
-                  width: 587,
-                  maxWidth: "calc(100vw - 2rem)",
-                  backgroundImage: "url('/images/lbi-gradient-warm.jpg')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              >
-                <div className="relative z-[2] p-6 pt-6 pb-8 px-8">
-                  <h3 className="tracking-[-0.03em] leading-[.93] mb-6" style={{ fontSize: "clamp(1.4rem, 3vw, 2.2rem)", fontWeight: 900, color: "#163218" }}>
-                    La convocatoria 2026 acepta exclusivamente:
-                  </h3>
-                  <ul style={{ listStyle: "none", padding: 0, margin: 0, fontFamily: "var(--font-inter)", fontSize: "clamp(1.1rem, 1.6vw, 1.35rem)", lineHeight: 1.6, color: "#163218", fontWeight: 400 }}>
-                    <li style={{ marginBottom: "0.4rem" }}>— Largometrajes documentales terminados</li>
-                    <li style={{ marginBottom: "0.4rem" }}>— Cortometrajes documentales terminados</li>
-                    <li style={{ marginBottom: "0.4rem" }}>— Ensayos cinematográficos de no ficción finalizados</li>
-                    <li>— Documentales científicos concluidos</li>
-                  </ul>
+      {/* Aliados Institucionales */}
+      <section className="lbi-aliados-inst">
+        <div className="lbi-aliados-inst-inner">
+          <span className="lbi-aliados-inst-tag">Aliados Institucionales</span>
+          <div className="lbi-aliados-inst-logos">
+            {aliadosInstitucionales.map((a) => (
+              <div key={a.name} className="lbi-aliados-inst-item">
+                <div className="lbi-aliados-inst-circle">
+                  <Image
+                    src={a.logo}
+                    alt={`Logo ${a.name}`}
+                    fill
+                    sizes="260px"
+                    style={{ objectFit: "contain" }}
+                  />
                 </div>
               </div>
-            </div>
-
-            {/* Card derecha — fechas + CTA */}
-            <div className="impulso-card-outer" style={{ textAlign: "center" }}>
-              <div
-                className="relative overflow-hidden"
-                style={{
-                  width: 587,
-                  maxWidth: "calc(100vw - 2rem)",
-                  backgroundImage: "url('/images/lbi-gradient-cool.jpg')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              >
-                <div className="relative z-[2] p-6 pt-6 pb-8 px-8">
-                  <h3 className="tracking-[-0.03em] leading-[.93] mb-6" style={{ fontSize: "clamp(1.4rem, 3vw, 2.2rem)", fontWeight: 900, color: "#163218" }}>
-                    Fechas Clave
-                  </h3>
-                  <div style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.1rem, 1.6vw, 1.35rem)", lineHeight: 1.8, color: "#163218", fontWeight: 400 }}>
-                    <p><strong>Apertura:</strong> 21 de mayo, 2026</p>
-                    <p><strong>Cierre:</strong> 14 de julio, 2026</p>
-                    <p><strong>Selección:</strong> 8 títulos que definen el pulso de la región</p>
-                  </div>
-                </div>
-              </div>
-              <SubscribeCTA
-                source="la-baja-inspira"
-                label="Sé el primero en recibir información"
-                title="La Baja Inspira · Convocatoria 2026"
-                description="Déjanos tus datos y recibe la información de la convocatoria en cuanto abra."
-                className="cta-button"
-                style={{ marginTop: "1.5rem", display: "inline-block" }}
-              />
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -255,7 +426,7 @@ export default function LaBajaInspira() {
       {/* Comité de selección */}
       <section className="section-text overflow-x-clip" id="lbi-comite-section">
         <div className="section-text-inner">
-          <h2 data-anim="lbi-comite-heading" className="section-heading">
+          <h2 data-anim="lbi-comite-heading" className="section-heading" style={{ textTransform: "uppercase" }}>
             {"Comité de Selección".split(" ").map((word, wi) => (
               <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.25em" }}>
                 {word.split("").map((char, ci) => (
@@ -267,35 +438,84 @@ export default function LaBajaInspira() {
           <p data-anim="lbi-comite-desc">
             Nuestra selecci&oacute;n es validada por un comit&eacute; de expertos en alianza con ESCINE y el periodismo cient&iacute;fico de alto nivel.
           </p>
-          {/* Desktop grid */}
-          <div className="profiles-grid lbi-comite-desktop">
-            {comite.map((p) => (
-              <div key={p.name} data-anim="lbi-comite-card" className="profile-card">
-                <div className="profile-avatar" style={{ position: "relative", overflow: "hidden" }}>
-                  <Image src={p.img} alt={`${p.name}, miembro del comité de selección — La Baja Inspira FICC Los Cabos`} fill sizes="(max-width: 768px) 50vw, 220px" style={{ objectFit: "cover" }} />
-                </div>
-                <h4>{p.name}</h4>
-                <p>{p.desc}</p>
-              </div>
-            ))}
-          </div>
         </div>
-        {/* Mobile carousel */}
-        <div className="comite-carousel lbi-comite-mobile">
-          <div className="comite-track">
-            {[...comite, ...comite].map((p, i) => (
-              <div key={`${p.name}-${i}`} className="comite-slide">
-                <div className="profile-avatar" style={{ position: "relative", overflow: "hidden" }}>
-                  <Image src={p.img} alt={`${p.name}, miembro del comité de selección — La Baja Inspira FICC Los Cabos`} fill sizes="(max-width: 768px) 60vw, 220px" style={{ objectFit: "cover" }} />
-                </div>
-                <h4>{p.name}</h4>
+        <div className="lbi-comite-rows">
+          {comite.map((p, idx) => (
+            <div
+              key={p.name}
+              data-anim="lbi-comite-card"
+              className={`lbi-comite-row${idx % 2 === 1 ? " lbi-comite-row--reverse" : ""}`}
+            >
+              <div className="lbi-comite-row__media">
+                <Image src={p.img} alt={`${p.name}, miembro del comité de selección — La Baja Inspira FICC Los Cabos`} fill sizes="(max-width: 768px) 90vw, 480px" style={{ objectFit: "cover" }} />
+              </div>
+              <div className="lbi-comite-row__body">
+                <h3>{p.name}</h3>
                 <p>{p.desc}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
+
+      {/* Jurado */}
+      <section className="lbi-jurado-section overflow-x-clip">
+        <div className="lbi-jurado-header">
+          <span data-anim="lbi-jurado-eyebrow" className="lbi-jurado-eyebrow">Jurado</span>
+          <h2 className="lbi-jurado-title">
+            {"Jurado 2026".split(" ").map((word, wi) => (
+              <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.25em" }}>
+                {word.split("").map((char, ci) => (
+                  <span key={ci} data-anim="lbi-stagger-char" style={{ display: "inline-block" }}>{char}</span>
+                ))}
+              </span>
+            ))}
+          </h2>
+        </div>
+        {juradoEjes.map((eje) => {
+          const visibles = eje.members.filter((m) => m.img);
+          if (visibles.length === 0) return null;
+          return (
+            <div key={eje.eje} className="lbi-jurado-eje">
+              <div data-anim="lbi-jurado-eje-label" className="lbi-jurado-eje-label">
+                <span className="lbi-jurado-eje-num">Eje {eje.eje}</span>
+                <h3 className="lbi-jurado-eje-titulo">{eje.titulo}</h3>
+              </div>
+              <div className="lbi-jurado-rows">
+                {visibles.map((m, idx) => (
+                  <div
+                    key={m.name}
+                    data-anim="lbi-jurado-row"
+                    className={`lbi-jurado-row${idx % 2 === 1 ? " lbi-jurado-row--reverse" : ""}`}
+                  >
+                    <div className="lbi-jurado-row__media">
+                      <Image src={m.img!} alt={m.name} fill sizes="(max-width: 768px) 90vw, 480px" style={{ objectFit: "cover", objectPosition: (m as { imgPosition?: string }).imgPosition ?? "center" }} />
+                    </div>
+                    <div className="lbi-jurado-row__body">
+                      <h4 className="lbi-jurado-name">
+                        {m.nameUrl ? (
+                          <a href={m.nameUrl} target="_blank" rel="noopener noreferrer" aria-label={`Instagram de ${m.name}`} className="lbi-jurado-link">
+                            {m.name}
+                            <svg className="lbi-jurado-ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                          </a>
+                        ) : (
+                          m.name
+                        )}
+                      </h4>
+                      <p className="lbi-jurado-desc">{m.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          );
+        })}
+      </section>
 
       {/* Legado La Baja Inspira */}
       <section className="relative w-full flex flex-col overflow-hidden" style={{ background: "linear-gradient(to bottom, #0A1E23 66.66%, transparent 66.66%)" }}>
@@ -339,7 +559,7 @@ export default function LaBajaInspira() {
                     <Image src={p.poster} alt={`Poster de ${p.title} — Legado La Baja Inspira FICC Los Cabos`} fill sizes="(max-width: 768px) 50vw, 300px" style={{ objectFit: "cover" }} />
                   </div>
                   <div className="flip-card-back">
-                    <h4>{p.title}</h4>
+                    <h3>{p.title}</h3>
                     {p.director && <p style={{ fontWeight: 400, marginBottom: "0.5rem" }}>{p.director}</p>}
                     <p style={{ fontSize: "0.85rem", lineHeight: 1.6 }}>{p.desc}</p>
                   </div>
@@ -359,8 +579,12 @@ export default function LaBajaInspira() {
           <div className="aliados-track">
             {aliadosLBITrack.map((a, i) => (
               <div key={`${a.name}-${i}`} className="aliado-slide">
-                <Image src={a.logo} alt={`Logo de ${a.name}, aliado del FICC Los Cabos`} width={320} height={220} sizes="(max-width: 768px) 320px, 240px" loading="lazy"
-                  style={{ width: "auto", maxHeight: 170, height: "auto", objectFit: "contain" }} />
+                {a.logo ? (
+                  <Image src={a.logo} alt={`Logo de ${a.name}, aliado del FICC Los Cabos`} width={320} height={220} sizes="(max-width: 768px) 320px, 240px" loading="lazy"
+                    style={{ width: "auto", maxHeight: 170, height: "auto", objectFit: "contain" }} />
+                ) : (
+                  <div aria-label={a.name} style={{ width: 240, height: 170 }} />
+                )}
               </div>
             ))}
           </div>

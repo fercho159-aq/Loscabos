@@ -4,52 +4,74 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GSAPAnimations from "@/components/GSAPAnimationsLazy";
 import TextureStrip from "@/components/TextureStrip";
-import ZoomLink from "@/components/ZoomLink";
-import Card3D from "@/components/Card3D";
 import SubscribeCTA from "@/components/SubscribeCTA";
 import BrandbookHero from "@/components/BrandbookHero";
 
 const aliados = [
-  { name: "Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-01.png" },
+  { name: "FICC Los Cabos", logo: "/images/logo-dark.png" },
+  { name: "FITURCA", logo: "/images/aliados/FICC_Logos_Aliados_2026-01.png" },
   { name: "IMCINE", logo: "/images/aliados/FICC_Logos_Aliados_2026-02.png" },
   { name: "Grupo Questro", logo: "/images/aliados/FICC_Logos_Aliados_2026-03.png" },
   { name: "Puerto Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-04.png" },
   { name: "ESCINE", logo: "/images/aliados/FICC_Logos_Aliados_2026-05.png" },
+  { name: "Hotel El Ganzo", logo: "/images/aliados/FICC_Logos_Aliados_2026-17.png" },
+  { name: "Crania", logo: "/images/aliados/FICC_Logos_Aliados_2026-19.png" },
+  { name: "Casa Ballena", logo: "/images/aliados/FICC_Logos_Aliados_2026-20.png" },
+  { name: "Zadún, A Ritz-Carlton Reserve", logo: "/images/aliados/FICC_Logos_Aliados_2026-zadun.png" },
+  { name: "Tropicana", logo: "/images/aliados/FICC_Logos_Aliados_2026-18.png" },
+  { name: "YAYA Rentals", logo: "/images/aliados/FICC_Logos_Aliados_2026-yaya.png" },
+  { name: "HAAS", logo: "/images/aliados/FICC_Logos_Aliados_2026-haas.png" },
+  { name: "Trilogy", logo: "/images/aliados/FICC_Logos_Aliados_2026-trilogy.png" },
+  { name: "Grupo Aeroportuario del Pacífico", logo: "/images/aliados/FICC_Logos_Aliados_2026-25.png" },
+  { name: "Aeromexico", logo: "/images/aliados/FICC_Logos_Aliados_2026-26.png" },
+  { name: "National Car Rental", logo: "/images/aliados/FICC_Logos_Aliados_2026-27.png" },
+  { name: "The Cape, A Thompson Hotel", logo: "/images/aliados/FICC_Logos_Aliados_2026-the-cape.png" },
+  { name: "Viceroy Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-viceroy.png" },
+  { name: "Secrets Puerto Los Cabos Golf & Spa Resort", logo: "/images/aliados/FICC_Logos_Aliados_2026-secrets.png" },
+  { name: "JW Marriott Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-jw-marriott.png" },
+  { name: "Suelo Sur", logo: "/images/aliados/FICC_Logos_Aliados_2026-21.png" },
+  { name: "Sage", logo: "/images/aliados/FICC_Logos_Aliados_2026-22.png" },
   { name: "Art Kingdom", logo: "/images/aliados/FICC_Logos_Aliados_2026-06.png" },
   { name: "CTT Exp & Rentals", logo: "/images/aliados/FICC_Logos_Aliados_2026-07.png" },
   { name: "Shalala", logo: "/images/aliados/FICC_Logos_Aliados_2026-08.png" },
   { name: "Artegios", logo: "/images/aliados/FICC_Logos_Aliados_2026-09.png" },
   { name: "Chemistry", logo: "/images/aliados/FICC_Logos_Aliados_2026-10.png" },
   { name: "CineNet", logo: "/images/aliados/FICC_Logos_Aliados_2026-11.png" },
+  { name: "Pólvora", logo: "/images/aliados/FICC_Logos_Aliados_2026-15.png" },
+  { name: "Cine de Verano", logo: "/images/aliados/FICC_Logos_Aliados_2026-14.png" },
+  { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-16.png" },
   { name: "Ánima Village", logo: "/images/aliados/FICC_Logos_Aliados_2026-12.png" },
   { name: "Arte Abierto", logo: "/images/aliados/FICC_Logos_Aliados_2026-13.png" },
-  { name: "Cine de Verano", logo: "/images/aliados/FICC_Logos_Aliados_2026-14.png" },
-  { name: "Pólvora", logo: "/images/aliados/FICC_Logos_Aliados_2026-15.png" },
-  { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-16.png" },
-  { name: "Hotel El Ganzo", logo: "/images/aliados/FICC_Logos_Aliados_2026-17.png" },
-  { name: "Secrets Puerto Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-18.png" },
-  { name: "Tropicana", logo: "/images/aliados/FICC_Logos_Aliados_2026-19.png" },
-  { name: "Krystal Grand Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-20.png" },
-  { name: "Veleros Beach Club", logo: "/images/aliados/FICC_Logos_Aliados_2026-21.png" },
-  { name: "Crania", logo: "/images/aliados/FICC_Logos_Aliados_2026-22.png" },
-  { name: "Casa Ballena", logo: "/images/aliados/FICC_Logos_Aliados_2026-23.png" },
-  { name: "Suelo Sur", logo: "/images/aliados/FICC_Logos_Aliados_2026-24.png" },
-  { name: "Sage", logo: "/images/aliados/FICC_Logos_Aliados_2026-25.png" },
-  { name: "Baja Republic", logo: "/images/aliados/FICC_Logos_Aliados_2026-26.png" },
-  { name: "Dobel 50", logo: "/images/aliados/FICC_Logos_Aliados_2026-27.png" },
-  { name: "Grupo Aeroportuario del Pacífico", logo: "/images/aliados/FICC_Logos_Aliados_2026-28.png" },
-  { name: "Aeromexico", logo: "/images/aliados/FICC_Logos_Aliados_2026-29.png" },
+  { name: "Tamarindos", logo: "/images/aliados/FICC_Logos_Aliados_2026-23.png" },
+  { name: "Dobel 50", logo: "/images/aliados/FICC_Logos_Aliados_2026-29.png" },
+  { name: "Baja Republic", logo: "/images/aliados/FICC_Logos_Aliados_2026-28.png" },
 ];
 const aliadosTrack = [...aliados, ...aliados];
 
 export default function Home() {
   return (
     <>
-      <link rel="preload" as="image" href="/images/FICCLosCabos_2026_Brandbook.svg" fetchPriority="high" />
       <Navbar />
 
       {/* ── HERO ── */}
       <section id="hero-section" className="relative flex flex-col bg-[#0A1E23] overflow-x-clip min-h-screen">
+        {/* Background video */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          poster="/videos/ficc-home-poster.jpg"
+          aria-hidden="true"
+        >
+          <source src="/videos/ficc-home.webm" type="video/webm" />
+          <source src="/videos/ficc-home.mp4" type="video/mp4" />
+        </video>
+        {/* Dark overlay for legibility */}
+        <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundColor: "rgba(10, 30, 35, 0.45)" }} />
+
         <div className="relative z-[1] px-6 pt-[5rem] pb-[5rem] md:px-8 md:pt-[8rem] md:pb-[9rem] flex flex-col items-center flex-1 justify-center gap-0">
           {/* Brand lockup — logo image only */}
           <h1 className="flex justify-center mb-[2.4rem] m-0" style={{ fontSize: 0, lineHeight: 0 }}>
@@ -63,33 +85,24 @@ export default function Home() {
             className="text-center m-0 mb-6 text-[#F6EDDB]"
             style={{ fontSize: "clamp(1.4rem, 2.4vw, 2.1rem)", letterSpacing: ".04em", fontWeight: 400 }}
           >
-            9 – 12 de diciembre 2026
+            14ª Edición · del 9 al 13 de diciembre 2026
           </p>
 
           {/* #BeyondTheScreen strip — centered, matching logo width */}
           <div
-            className="flex items-center justify-between mt-8 md:mt-12 gap-6 md:gap-8"
-            style={{ width: 511, maxWidth: "90vw" }}
+            className="mt-8 md:mt-12 flex flex-col gap-[.55rem] text-left"
+            style={{ width: 600, maxWidth: "90vw" }}
           >
-            <div className="flex flex-col gap-[.55rem] text-left">
-              <p data-anim="hero-hashtag" className="text-[clamp(1.2rem,4vw,1.85rem)] font-black tracking-normal text-[#A3CDD8] m-0" style={{ overflow: "hidden" }}>
-                {"#BeyondTheScreen".split("").map((char, i) => (
-                  <span key={i} data-anim="hero-hashtag-char" style={{ display: "inline-block" }}>{char}</span>
-                ))}
-              </p>
-              <p data-anim="hero-desc" className="text-[clamp(0.95rem,2.8vw,1.35rem)] font-normal text-[#F6EDDB] leading-[1.5] m-0 opacity-75 max-w-[360px]">
-                El cine como punto de <br />encuentro entre la música,<br />
-                el arte digital y la comunidad.
-              </p>
-            </div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              data-anim="hero-play"
-              src="/images/play.svg"
-              alt="Ver video"
-              className="shrink-0 cursor-pointer"
-              style={{ width: "clamp(40px, 8vw, 58px)", height: "clamp(40px, 8vw, 58px)" }}
-            />
+            <p data-anim="hero-hashtag" className="text-[clamp(1.4rem,7.5vw,3.5rem)] font-black tracking-normal text-[#A3CDD8] m-0 leading-[1.05]" style={{ whiteSpace: "nowrap" }}>
+              {"#BEYONDTHESCREEN".split("").map((char, i) => (
+                <span key={i} data-anim="hero-hashtag-char" style={{ display: "inline-block" }}>{char}</span>
+              ))}
+            </p>
+            <p data-anim="hero-desc" className="text-[clamp(0.95rem,2.8vw,1.35rem)] font-normal text-[#F6EDDB] leading-[1.5] m-0 opacity-75 max-w-[360px]">
+              El cine como punto de <br />encuentro entre la música,<br />
+              el arte digital, la animación<br />
+              y la comunidad.
+            </p>
           </div>
         </div>
 
@@ -119,7 +132,7 @@ export default function Home() {
               className="font-black max-w-[440px] leading-[1.3] m-0"
               style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", color: "var(--color-cream)" }}
             >
-              {"Accede a la preventa de boletos y descubre la programación antes que nadie.".split(" ").map((word, wi) => (
+              {"Recibe antes que nadie el anuncio de la programación y la apertura de taquilla.".split(" ").map((word, wi) => (
                 <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.28em" }}>
                   {word.split("").map((char, ci) => (
                     <span key={ci} data-anim="cta-text-char" style={{ display: "inline-block" }}>{char}</span>
@@ -129,9 +142,9 @@ export default function Home() {
             </p>
             <SubscribeCTA
               source="preventa"
-              label="Preventa de Boletos"
-              title="Preventa de Boletos"
-              description="Déjanos tus datos y recibe la información de la preventa antes que nadie."
+              label="Pre-regístrate"
+              title="Pre-regístrate"
+              description="Recibe antes que nadie el anuncio de la programación y la apertura de taquilla."
               className="cta-button"
               dataAnim="cta-btn"
             />
@@ -195,6 +208,7 @@ export default function Home() {
                     src="https://videopress.com/embed/dCWJUwu4?at=8&loop=1&autoPlay=1&muted=1&controls=0&preloadContent=metadata"
                     title="La Baja Inspira"
                     allow="clipboard-write; autoplay"
+                    loading="lazy"
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full aspect-video border-0"
                   />
                 </div>
@@ -205,9 +219,8 @@ export default function Home() {
                       src="/images/lbi-logo-normalizado.png"
                       alt="La Baja Inspira"
                       fill
-                      sizes="587px"
+                      sizes="(max-width: 768px) calc(100vw - 4rem), 587px"
                       className="object-contain"
-                      priority
                     />
                   </div>
                 </div>
@@ -232,6 +245,7 @@ export default function Home() {
                     src="https://player.vimeo.com/video/286013330?h=44c9737e98&autoplay=1&muted=1&loop=1&background=1&controls=0"
                     title="Fondo Fílmico Gabriel Figueroa"
                     allow="autoplay; fullscreen; picture-in-picture"
+                    loading="lazy"
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full aspect-video border-0"
                   />
                 </div>
@@ -242,7 +256,7 @@ export default function Home() {
                       src="/images/ffgf-logo-normalizado.png"
                       alt="Fondo Fílmico Gabriel Figueroa"
                       fill
-                      sizes="587px"
+                      sizes="(max-width: 768px) calc(100vw - 4rem), 587px"
                       className="object-contain"
                     />
                   </div>

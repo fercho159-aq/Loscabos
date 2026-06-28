@@ -110,7 +110,7 @@ export default async function Image() {
           }}
         >
           <div style={{ display: "flex" }}>
-            9 – 12 DE DICIEMBRE · #BeyondTheScreen
+            9 – 13 DE DICIEMBRE · #BeyondTheScreen
           </div>
           <div
             style={{

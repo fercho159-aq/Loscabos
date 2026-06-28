@@ -2,17 +2,64 @@ import type { ReactNode } from "react";
 import HeroTitle from "./HeroTitle";
 import TextureStrip from "./TextureStrip";
 
+interface BgVideo {
+  mp4: string;
+  webm?: string;
+  poster?: string;
+}
+
 interface Props {
   lines: string[];
   subtitle?: string;
   hideStrip?: boolean;
   short?: boolean;
   children?: ReactNode;
+  bgImage?: string;
+  bgVideo?: BgVideo;
+  /** Velo oscuro sobre el fondo (legibilidad del título sobre video/imagen). */
+  overlay?: boolean;
 }
 
-export default function PageHero({ lines, subtitle, hideStrip, short, children }: Props) {
+export default function PageHero({ lines, subtitle, hideStrip, short, children, bgImage, bgVideo, overlay }: Props) {
   return (
     <section className={`relative ${short ? "h-[70vh]" : "h-screen"} bg-[#0A1E23] overflow-hidden`}>
+      {bgVideo && (
+        <video
+          aria-hidden="true"
+          className="absolute inset-0 z-0 pointer-events-none w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          poster={bgVideo.poster}
+        >
+          {bgVideo.webm && <source src={bgVideo.webm} type="video/webm" />}
+          <source src={bgVideo.mp4} type="video/mp4" />
+        </video>
+      )}
+      {bgImage && !bgVideo && (
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            backgroundImage: `url('${bgImage}')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+      )}
+      {overlay && (bgImage || bgVideo) && (
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 z-[1] pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(10,30,35,.55) 0%, rgba(10,30,35,.35) 45%, rgba(10,30,35,.62) 100%)",
+          }}
+        />
+      )}
       <HeroTitle lines={lines} subtitle={subtitle} />
       {children && (
         <div className="absolute top-[calc(30vh+13vw+1.5rem)] md:top-[400px] left-4 md:left-[77px] z-40">

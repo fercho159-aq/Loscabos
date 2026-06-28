@@ -267,11 +267,11 @@ export default function ElFestivalIntroScroll() {
                 </h2>
 
                 <p data-anim="intro-para" className="mb-6 md:mb-7 opacity-75">
-                  del 9 al 12 de diciembre de 2026
+                  del 9 al 13 de diciembre de 2026
                 </p>
 
                 <p data-anim="intro-para">
-                  Somos el punto de encuentro donde el <span className="ef-kw-cine">cine</span> converge con la <span className="ef-kw-musica">música</span>, el <span className="ef-kw-arte-digital">arte digital</span> y la <span className="ef-kw-animacion">animación</span>. Desde Los Cabos, conectamos el talento mexicano con el circuito internacional.
+                  Somos el punto de encuentro donde el <span className="ef-kw-cine">cine</span> converge con la <span className="ef-kw-musica">música</span>, el <span className="ef-kw-arte-digital">arte digital</span>, la <span className="ef-kw-animacion">animación</span> y la comunidad. Desde Los Cabos, conectamos el talento mexicano con el circuito internacional.
                 </p>
               </div>
               {/* eslint-disable-next-line @next/next/no-img-element */}
