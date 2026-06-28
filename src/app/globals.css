@@ -133,18 +133,22 @@ body {
 
   .nav-links {
     display: flex;
-    gap: clamp(1rem, 1.5vw, 1.75rem);
+    align-items: center;
+    gap: clamp(0.5rem, 0.9vw, 1.05rem);
     list-style: none;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    /* En flujo (entre logo y CTA): el nav se reparte con space-between y nunca
+       encima el CTA, aunque "Fondo Fílmico Gabriel Figueroa" sea largo. El menú
+       horizontal solo aparece en ≥xl (1280px), donde la etiqueta completa cabe;
+       debajo se usa el menú hamburguesa. */
+    flex: 0 1 auto;
+    min-width: 0;
   }
 
   .nav-links a {
     font-family: var(--font-inter);
     font-weight: 900;
-    font-size: clamp(.8rem, .95vw, .95rem);
-    letter-spacing: .08em;
+    font-size: clamp(.72rem, .82vw, .86rem);
+    letter-spacing: .035em;
     text-transform: uppercase;
     text-decoration: none;
     color: rgba(255, 255, 255, .82);

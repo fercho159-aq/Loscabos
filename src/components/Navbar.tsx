@@ -13,7 +13,7 @@ type NavItem = {
 const navItems: NavItem[] = [
   { label: "El Festival", href: "/el-festival" },
   { label: "La Baja Inspira", href: "/la-baja-inspira" },
-  { label: "Fondo F\u00edlmico Gabriel Figueroa", href: "/ffgf" },
+  { label: "Fondo Fílmico Gabriel Figueroa", href: "/ffgf" },
   { label: "Campus", href: "/campus" },
   { label: "Comunidad", href: "/comunidad" },
   { label: "Programaci\u00f3n", href: "/programacion" },
@@ -39,7 +39,7 @@ export default function Navbar() {
       </Link>
 
       {/* Desktop Nav */}
-      <ul className="nav-links hidden lg:flex">
+      <ul className="nav-links hidden xl:flex">
         {navItems.map((item) => (
           <li
             key={item.label}
@@ -69,12 +69,12 @@ export default function Navbar() {
         label="Únete a la comunidad"
         title="Únete a la comunidad"
         description="Recibe noticias, programación y novedades del FICC Los Cabos."
-        className="nav-cta hidden lg:inline-flex"
+        className="nav-cta hidden xl:inline-flex"
       />
 
       {/* Mobile hamburger */}
       <button
-        className="lg:hidden flex flex-col gap-1.5 p-2"
+        className="xl:hidden flex flex-col gap-1.5 p-2"
         onClick={() => setMobileOpen(!mobileOpen)}
         aria-label="Abrir menú de navegación"
         aria-expanded={mobileOpen}
