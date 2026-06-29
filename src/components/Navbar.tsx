@@ -17,6 +17,7 @@ const navItems: NavItem[] = [
   { label: "Campus", href: "/campus" },
   { label: "Comunidad", href: "/comunidad" },
   { label: "Programaci\u00f3n", href: "/programacion" },
+  { label: "Edici\u00f3n 2025", href: "/edicion-2025" },
   { label: "Prensa", href: "/prensa" },
 ];
 
