@@ -140,7 +140,8 @@ body {
        encima el CTA, aunque "Fondo Fílmico Gabriel Figueroa" sea largo. El menú
        horizontal solo aparece en ≥xl (1280px), donde la etiqueta completa cabe;
        debajo se usa el menú hamburguesa. */
-    flex: 0 1 auto;
+    flex: 1;
+    justify-content: center;
     min-width: 0;
   }
 
