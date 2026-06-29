@@ -85,6 +85,7 @@ const aliadosFFGF = [
   { name: "Shalala", logo: "/images/aliados/FICC_Logos_Aliados_2026-08.png" },
   { name: "CineNet", logo: "/images/aliados/FICC_Logos_Aliados_2026-11.png" },
   { name: "Chemistry", logo: "/images/aliados/FICC_Logos_Aliados_2026-10.png" },
+  { name: "Pimienta Films", logo: "/images/aliados/FICC_Logos_Aliados_2026-pimienta-films.png" },
 ];
 const aliadosFFGFTrack = [...aliadosFFGF, ...aliadosFFGF];
 

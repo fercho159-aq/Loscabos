@@ -228,6 +228,7 @@ const aliadosLBI: { name: string; logo: string | null }[] = [
   { name: "Baja Republic", logo: "/images/aliados-lbi/baja-republic.png" },
   { name: "Cine de Verano", logo: "/images/aliados-lbi/cine-de-verano.png" },
   { name: "Pólvora", logo: "/images/aliados-lbi/polvora.png" },
+  { name: "Hotel El Ganzo", logo: "/images/aliados/FICC_Logos_Aliados_2026-17.png" },
   // MVS — pendiente logo
 ];
 const aliadosLBITrack = [...aliadosLBI, ...aliadosLBI];
