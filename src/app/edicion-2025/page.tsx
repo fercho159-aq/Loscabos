@@ -57,8 +57,6 @@ export default function Edicion2025() {
         <PageHero
           lines={["Nuestra", "Edición 2025"]}
           subtitle="#BeyondTheScreen"
-          overlay
-          bgImage="/images/edicion-2025/foto-07.jpg"
         />
 
         {/* ── CONCEPTO ── */}
@@ -75,19 +73,6 @@ export default function Edicion2025() {
               la industria y nuestros aliados.
             </p>
 
-            <ul className="edicion-disciplinas">
-              {disciplinas.map((d) => (
-                <li
-                  key={d.label}
-                  data-anim="ed-disciplina"
-                  className="edicion-disciplina"
-                  style={{ ["--cat" as string]: d.accent } as React.CSSProperties}
-                >
-                  <span className="edicion-disciplina-bar" aria-hidden="true" />
-                  <span className="edicion-disciplina-label">{d.label}</span>
-                </li>
-              ))}
-            </ul>
           </div>
         </section>
 

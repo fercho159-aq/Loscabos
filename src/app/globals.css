@@ -107,9 +107,9 @@ body {
     left: 0;
     right: 0;
     z-index: 100;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    justify-content: space-between;
     padding: 0 2.4rem;
     height: 70px;
     background: #0A1E23 !important;
@@ -134,14 +134,9 @@ body {
   .nav-links {
     display: flex;
     align-items: center;
-    gap: clamp(0.5rem, 0.9vw, 1.05rem);
-    list-style: none;
-    /* En flujo (entre logo y CTA): el nav se reparte con space-between y nunca
-       encima el CTA, aunque "Fondo Fílmico Gabriel Figueroa" sea largo. El menú
-       horizontal solo aparece en ≥xl (1280px), donde la etiqueta completa cabe;
-       debajo se usa el menú hamburguesa. */
-    flex: 1;
     justify-content: center;
+    gap: clamp(1rem, 2vw, 2.2rem);
+    list-style: none;
     min-width: 0;
   }
 
@@ -4772,8 +4767,8 @@ body {
 
 .campus-lede {
   font-family: var(--font-inter);
-  font-size: clamp(1.35rem, 3.2vw, 2.35rem);
-  line-height: 1.32;
+  font-size: clamp(1.15rem, 1.5vw, 1.375rem);
+  line-height: 1.5;
   font-weight: 400;
   letter-spacing: -0.01em;
   color: var(--color-navy);
@@ -4787,10 +4782,10 @@ body {
 
 .campus-lede-sub {
   font-family: var(--font-inter);
-  font-size: clamp(0.98rem, 2vw, 1.18rem);
+  font-size: clamp(1.15rem, 1.5vw, 1.375rem);
   line-height: 1.7;
   font-weight: 400;
-  color: color-mix(in srgb, var(--color-navy) 64%, transparent);
+  color: var(--color-navy);
   max-width: 620px;
   margin: 0 auto;
 }
@@ -4801,12 +4796,11 @@ body {
   padding: clamp(3rem, 6vw, 5.5rem) clamp(1.25rem, 5vw, 4rem) clamp(3.5rem, 7vw, 6rem);
 }
 
-.campus-moment--sunrise { background: var(--color-cream); }
-.campus-moment--midday  { background: #F2E7CB; }
-.campus-moment--sunset  { background: #EFC79A; padding-bottom: 0; }
-/* El degradado dusk ya termina en navy: la Cena no necesita tanto padding
-   superior (menos aire entre el atardecer y "Noche"). */
-.campus-moment--night   { background: #0A1E23; padding-top: clamp(1.25rem, 2.5vw, 2.25rem); }
+.campus-moment--sunrise,
+.campus-moment--midday,
+.campus-moment--sunset  { background: var(--color-cream); }
+.campus-moment--sunset  { padding-bottom: 0; }
+.campus-moment--night   { background: var(--color-cream); padding-top: clamp(1.25rem, 2.5vw, 2.25rem); }
 
 .campus-moment-inner,
 .campus-moment-head,
@@ -4872,10 +4866,10 @@ body {
   max-width: 540px;
 }
 
-/* Esquema oscuro (noche) */
-.campus-moment--night .campus-moment-name { color: var(--color-cream); }
+/* Esquema noche (ahora sobre crema) */
+.campus-moment--night .campus-moment-name { color: var(--color-navy); }
 .campus-moment--night .campus-moment-kicker {
-  color: rgba(246, 237, 219, 0.6);
+  color: color-mix(in srgb, var(--color-navy) 60%, transparent);
 }
 
 /* ── Grid de plates (feature + soporte) ── */
@@ -4888,18 +4882,19 @@ body {
 
 .campus-plate {
   position: relative;
-  flex: 1 1 320px;
+  flex: 1 1 calc(50% - 1rem);
   min-width: 0;
   display: flex;
   flex-direction: column;
 }
 
 .campus-plate.is-feature {
-  flex: 1.55 1 440px;
+  flex: 1 1 calc(50% - 1rem);
 }
 
 .campus-moment-grid.is-solo .campus-plate {
-  flex: 1 1 100%;
+  flex: 1 1 calc(50% - 1rem);
+  max-width: calc(50% - 1rem);
 }
 
 .campus-plate-media {
@@ -4909,8 +4904,8 @@ body {
   background: color-mix(in srgb, var(--color-navy) 8%, transparent);
 }
 
-.campus-plate.is-feature .campus-plate-media { aspect-ratio: 3 / 2; }
-.campus-moment-grid.is-solo .campus-plate-media { aspect-ratio: 21 / 9; }
+.campus-plate.is-feature .campus-plate-media { aspect-ratio: 3 / 2; /* igual al resto */ }
+.campus-moment-grid.is-solo .campus-plate-media { aspect-ratio: 3 / 2; }
 
 .campus-plate-img {
   object-fit: cover;
@@ -4955,7 +4950,7 @@ body {
   color: var(--color-navy);
 }
 
-.campus-moment--night .campus-plate-name { color: var(--color-cream); }
+.campus-moment--night .campus-plate-name { color: var(--color-navy); }
 
 .campus-plate-underline {
   display: block;
@@ -5235,7 +5230,7 @@ body {
 
 .edicion-lede {
   font-family: var(--font-inter);
-  font-size: clamp(1.1rem, 2.4vw, 1.7rem);
+  font-size: clamp(1.15rem, 1.5vw, 1.375rem);
   line-height: 1.5;
   font-weight: 400;
   letter-spacing: -0.01em;
@@ -5408,12 +5403,12 @@ body {
   display: flex;
   width: max-content;
   gap: clamp(0.75rem, 1.5vw, 1.25rem);
-  animation: edicionMarquee 70s linear infinite;
+  animation: edicionMarquee 120s linear infinite;
   will-change: transform;
 }
 
 .edicion-marquee-row--rev {
-  animation: edicionMarqueeRev 70s linear infinite;
+  animation: edicionMarqueeRev 120s linear infinite;
 }
 
 .edicion-foto {

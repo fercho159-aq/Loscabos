@@ -50,10 +50,11 @@ export default function Footer() {
             <li><a href="/el-festival">El Festival</a></li>
             <li><a href="/la-baja-inspira">La Baja Inspira</a></li>
             <li><a href="/ffgf">Fondo F&iacute;lmico Gabriel Figueroa</a></li>
+            <li><a href="/campus">Campus</a></li>
+            <li><a href="/comunidad">Comunidad</a></li>
             <li><a href="/programacion">Programaci&oacute;n</a></li>
+            <li><a href="/edicion-2025">Edici&oacute;n 2025</a></li>
             <li><a href="/prensa">Prensa</a></li>
-            <li><a href="/ediciones-anteriores">Ediciones Anteriores</a></li>
-            <li><a href="https://festivaldecinedeloscabos.us15.list-manage.com/subscribe?u=24bf46409995ffe6e8ad030da&id=12e1ce1334" target="_blank" rel="noopener noreferrer">&Uacute;nete a la comunidad</a></li>
           </ul>
         </div>
       </div>

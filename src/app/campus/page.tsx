@@ -180,13 +180,11 @@ export default function Campus() {
               Nuestras sedes · 14ª Edición
             </span>
             <p data-anim="campus-lede" className="campus-lede">
-              <strong>Campus FICC</strong> se conforma por espacios con identidad que transforman
-              cada encuentro en una conexión, cada conversación en una idea brillante y cada
-              proyección en un momento memorable.
+              <strong>Campus FICC</strong> se conforma por espacios con identidad que transforman cada encuentro en una
+              conexión, cada conversación en una idea brillante y cada proyección en un momento memorable.
             </p>
             <p data-anim="campus-lede" className="campus-lede-sub">
-              Aquí, los espacios son los coprotagonistas de una experiencia vibrante, con una
-              personalidad que solo puede suceder aquí. Recórrelos del día a la noche.
+              Aquí, los espacios son los coprotagonistas de una experiencia vibrante, y con una personalidad que solo puede suceder aquí.
             </p>
           </div>
         </section>
@@ -204,17 +202,7 @@ export default function Campus() {
               style={{ "--cat": moment.accent } as CSSProperties}
             >
               <header data-anim="campus-moment-head" className="campus-moment-head">
-                <span className="campus-moment-time">
-                  <span className="campus-moment-glyph">
-                    <SunPhase phase={moment.phase} />
-                  </span>
-                  {moment.time}
-                </span>
                 <h2 className="campus-moment-name">{moment.name}</h2>
-                <div className="campus-moment-meta">
-                  <span className="campus-moment-rule" aria-hidden="true" />
-                  <p className="campus-moment-kicker">{moment.kicker}</p>
-                </div>
               </header>
 
               <div className={`campus-moment-grid${solo ? " is-solo" : ""}`}>
@@ -232,9 +220,7 @@ export default function Campus() {
                         sizes={
                           solo
                             ? "(max-width: 900px) 100vw, 1100px"
-                            : i === 0
-                              ? "(max-width: 760px) 100vw, 60vw"
-                              : "(max-width: 760px) 100vw, 40vw"
+                            : "(max-width: 760px) 100vw, 50vw"
                         }
                         className="campus-plate-img"
                       />
@@ -247,10 +233,6 @@ export default function Campus() {
                 ))}
               </div>
 
-              {/* Atardece → la noche: degradado que baja hacia la Cena */}
-              {moment.phase === "sunset" && (
-                <div className="campus-dusk" aria-hidden="true" />
-              )}
             </section>
           );
         })}
