@@ -131,7 +131,6 @@ const groups: Group[] = [
       { name: "David Zonana", image: "/images/comunidad/david-zonana.jpg" },
       { name: "Damián Romero", image: "/images/comunidad/damian-romero.jpg" },
       { name: "Mario Escobar" },
-      { name: "Romina Sacre", image: "/images/comunidad/romina-sacre.jpg" },
     ],
   },
 ];
