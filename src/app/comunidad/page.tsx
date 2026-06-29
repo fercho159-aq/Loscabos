@@ -130,7 +130,7 @@ const groups: Group[] = [
       { name: "Ximena Lamadrid", image: "/images/comunidad/ximena-lamadrid.jpg" },
       { name: "David Zonana", image: "/images/comunidad/david-zonana.jpg" },
       { name: "Damián Romero", image: "/images/comunidad/damian-romero.jpg" },
-      { name: "Mario Escobar" },
+      { name: "Mario Escobar", tbc: true },
     ],
   },
 ];
