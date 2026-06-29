@@ -16,13 +16,11 @@ const aliados = [
   { name: "Zad\u00fan, A Ritz-Carlton Reserve", logo: "/images/aliados/FICC_Logos_Aliados_2026-zadun.png" },
   { name: "Tropicana", logo: "/images/aliados/FICC_Logos_Aliados_2026-18.png" },
   { name: "YAYA Rentals", logo: "/images/aliados/FICC_Logos_Aliados_2026-yaya.png" },
-  { name: "HAAS", logo: "/images/aliados/FICC_Logos_Aliados_2026-haas.png" },
+  // { name: "Del Cabo Events", logo: "/images/aliados/FICC_Logos_Aliados_2026-del-cabo-events.png" }, // REVISAR — logo pendiente
   { name: "Trilogy", logo: "/images/aliados/FICC_Logos_Aliados_2026-trilogy.png" },
   { name: "Grupo Aeroportuario del Pac\u00edfico", logo: "/images/aliados/FICC_Logos_Aliados_2026-25.png" },
   { name: "Aeromexico", logo: "/images/aliados/FICC_Logos_Aliados_2026-26.png" },
   { name: "National Car Rental", logo: "/images/aliados/FICC_Logos_Aliados_2026-27.png" },
-  { name: "The Cape, A Thompson Hotel", logo: "/images/aliados/FICC_Logos_Aliados_2026-the-cape.png" },
-  { name: "Viceroy Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-viceroy.png" },
   { name: "Secrets Puerto Los Cabos Golf & Spa Resort", logo: "/images/aliados/FICC_Logos_Aliados_2026-secrets.png" },
   { name: "JW Marriott Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-jw-marriott.png" },
   { name: "Suelo Sur", logo: "/images/aliados/FICC_Logos_Aliados_2026-21.png" },
@@ -41,6 +39,7 @@ const aliados = [
   { name: "Baja Republic", logo: "/images/aliados/FICC_Logos_Aliados_2026-28.png" },
   { name: "El Sudcaliforniano", logo: "/images/aliados/FICC_Logos_Aliados_2026-sudcaliforniano.png" },
   { name: "Cabo Mil 96.3", logo: "/images/aliados/FICC_Logos_Aliados_2026-cabomil.png" },
+  // { name: "EXA", logo: "/images/aliados/FICC_Logos_Aliados_2026-exa.png" }, // logo pendiente
 ];
 
 // Duplicate for seamless infinite loop
