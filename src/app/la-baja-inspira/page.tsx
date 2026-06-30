@@ -382,13 +382,13 @@ export default function LaBajaInspira() {
               <h3 className="lbi-conv-subtitle">Fechas Clave</h3>
               <div className="lbi-conv-dates">
                 <p><strong>Apertura:</strong><span className="lbi-conv-date-hl">28 de mayo, 2026</span></p>
-                <p><strong>Cierre:</strong><span className="lbi-conv-date-hl">14 de julio, 2026</span></p>
+                <p><strong>Cierre:</strong><span className="lbi-conv-date-hl">15 de julio, 2026</span></p>
                 <p><strong>Selección:</strong> 5 títulos que definen el pulso de la región</p>
               </div>
             </div>
           </div>
 
-          <div className="mt-8 md:mt-12 flex justify-center">
+          <div className="mt-8 md:mt-12 flex flex-col items-center gap-3">
             <a
               href="https://filmfreeway.com/ficloscabos"
               target="_blank"
@@ -396,8 +396,11 @@ export default function LaBajaInspira() {
               className="lbi-conv-cta"
               data-anim="lbi-conv-cta"
             >
-              Sé el primero en recibir información
+              Aplica ahora
             </a>
+            <p className="text-sm font-semibold tracking-widest uppercase opacity-60" style={{ color: "var(--lbi-acid)" }}>
+              Se retira el 15 de julio
+            </p>
           </div>
         </div>
       </section>
