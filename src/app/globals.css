@@ -5125,7 +5125,7 @@ body {
   font-size: clamp(0.74rem, 1.4vw, 0.84rem);
   line-height: 1.4;
   font-weight: 400;
-  color: color-mix(in srgb, var(--color-navy) 55%, transparent);
+  color: var(--color-blue);
   margin-top: 0.3rem;
 }
 
