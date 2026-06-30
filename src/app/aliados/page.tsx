@@ -39,7 +39,7 @@ const aliados = [
   { name: "Baja Republic", logo: "/images/aliados/FICC_Logos_Aliados_2026-28.png" },
   { name: "El Sudcaliforniano", logo: "/images/aliados/FICC_Logos_Aliados_2026-sudcaliforniano.png" },
   { name: "Cabo Mil 96.3", logo: "/images/aliados/FICC_Logos_Aliados_2026-cabomil.png" },
-  // { name: "EXA", logo: "/images/aliados/FICC_Logos_Aliados_2026-exa.png" }, // logo pendiente
+  { name: "Exa", logo: "/images/aliados/FICC_Logos_Aliados_2026-exa.png" },
 ];
 
 // Duplicate for seamless infinite loop

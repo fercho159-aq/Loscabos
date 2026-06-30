@@ -43,7 +43,7 @@ const aliados = [
   { name: "Baja Republic", logo: "/images/aliados/FICC_Logos_Aliados_2026-28.png" },
   { name: "Sudcaliforniano", logo: "/images/aliados/FICC_Logos_Aliados_2026-sudcaliforniano.png" },
   { name: "Cabo Mil", logo: "/images/aliados/FICC_Logos_Aliados_2026-cabomil.png" },
-  // { name: "Exa", logo: "..." }, // pendiente logo
+  { name: "Exa", logo: "/images/aliados/FICC_Logos_Aliados_2026-exa.png" },
 ];
 const aliadosTrack = [...aliados, ...aliados];
 
