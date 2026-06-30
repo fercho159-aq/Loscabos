@@ -4728,24 +4728,6 @@ body {
   }
 }
 
-/* Destello cálido del amanecer, arriba */
-.campus-intro::before {
-  content: "";
-  position: absolute;
-  top: -38%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(120vw, 1400px);
-  height: 70vw;
-  max-height: 760px;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(250, 105, 53, 0.18) 0%,
-    rgba(196, 122, 61, 0.08) 42%,
-    transparent 70%
-  );
-  pointer-events: none;
-}
 
 .campus-intro-inner {
   position: relative;
@@ -4918,24 +4900,6 @@ body {
 }
 
 /* Velo de acento al hover (la "personalidad" del espacio) */
-.campus-plate-media::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    transparent 55%,
-    color-mix(in srgb, var(--cat) 55%, transparent) 100%
-  );
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  pointer-events: none;
-}
-
-.campus-plate:hover .campus-plate-media::after,
-.campus-plate:focus-within .campus-plate-media::after {
-  opacity: 1;
-}
 
 .campus-plate-caption {
   padding: 1rem 0.1rem 0;
@@ -4957,7 +4921,7 @@ body {
   width: 0;
   height: 2px;
   margin-top: 0.55rem;
-  background: var(--cat);
+  background: var(--color-orange);
   transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
