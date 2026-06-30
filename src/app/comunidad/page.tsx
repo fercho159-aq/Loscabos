@@ -81,7 +81,6 @@ const groups: Group[] = [
       { name: "Juan Patricio Riveroll", role: "Comité de selección", image: "/images/comite/juan-patricio-riveroll.jpg" },
       { name: "Iván Carrillo", role: "Comité de selección", image: "/images/comite/ivan-carrillo.png" },
       { name: "Salvador Amores", role: "Coordinación de programación", image: "/images/comite/salvador-amores.png" },
-      { name: "Anamaria Sayre", role: "Comité FICC Los Cabos", image: "/images/comunidad/anamaria-sayre.jpg" },
       { name: "Johanna Murillo", role: "Comité FICC Los Cabos", tbc: true },
     ],
   },
@@ -124,6 +123,7 @@ const groups: Group[] = [
     accent: "var(--color-orange)",
     hideRole: true,
     people: [
+      { name: "Anamaria Sayre", image: "/images/comunidad/anamaria-sayre.jpg" },
       { name: "Adolfo Margulis", image: "/images/comunidad/adolfo-margulis.jpg" },
       { name: "Mariana Arriaga", image: "/images/comunidad/mariana-arriaga.jpg" },
       { name: "Mar Prieto", image: "/images/comunidad/mar-prieto.jpg" },

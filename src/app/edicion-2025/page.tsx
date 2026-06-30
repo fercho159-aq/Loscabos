@@ -78,14 +78,6 @@ export default function Edicion2025() {
 
         {/* ── VIDEO RECAP ── */}
         <section className="edicion-video-section">
-          <div className="edicion-video-head">
-            <span data-anim="ed-eyebrow" className="edicion-eyebrow edicion-eyebrow--accent">
-              Video recap
-            </span>
-            <h2 data-anim="ed-title" className="edicion-section-title">
-              Revive el festival
-            </h2>
-          </div>
           <div data-anim="ed-video" className="edicion-video-frame">
             <YouTubeFacade id="DjSLAT8RJr0" title="Recap FICC Los Cabos 2025" />
           </div>
@@ -93,10 +85,6 @@ export default function Edicion2025() {
 
         {/* ── CARRUSEL FOTOS ── */}
         <section className="edicion-fotos-section">
-          <div className="edicion-fotos-head">
-            <span className="edicion-eyebrow edicion-eyebrow--accent">2025 en imágenes</span>
-            <h2 className="edicion-section-title">Lo que sucedió</h2>
-          </div>
           <div className="edicion-marquee" aria-label="Galería de fotos del festival 2025">
             <div className="edicion-marquee-row">
               {[...fotosRow1, ...fotosRow1].map((src, i) => (
@@ -116,11 +104,7 @@ export default function Edicion2025() {
         {/* ── CARTELES EDICIONES PASADAS ── */}
         <section className="edicion-carteles-section">
           <div className="edicion-carteles-head">
-            <span className="edicion-eyebrow">Archivo</span>
-            <h2 className="edicion-carteles-title">Carteles de ediciones pasadas</h2>
-            <p className="edicion-carteles-lead">
-              Cada año, una identidad. Recorre los pósters de más de una década de festival.
-            </p>
+            <h2 className="edicion-carteles-title">Nuestras ediciones anteriores</h2>
           </div>
           <div className="edicion-carteles-grid">
             {carteles.map((ed) => (
