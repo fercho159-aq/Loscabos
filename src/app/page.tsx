@@ -97,10 +97,8 @@ export default function Home() {
                 <span key={i} data-anim="hero-hashtag-char" style={{ display: "inline-block" }}>{char}</span>
               ))}
             </p>
-            <p data-anim="hero-desc" className="text-[clamp(0.95rem,2.8vw,1.35rem)] font-normal text-[#F6EDDB] leading-[1.5] m-0 opacity-75 max-w-[360px]">
-              El cine como punto de <br />encuentro entre la música,<br />
-              el arte digital, la animación<br />
-              y la comunidad.
+            <p data-anim="hero-desc" className="text-[clamp(0.95rem,2.8vw,1.35rem)] font-normal text-[#F6EDDB] leading-[1.5] m-0 opacity-75 text-center">
+              El cine como punto de encuentro entre la música, el arte digital, la animación y la comunidad.
             </p>
           </div>
         </div>
