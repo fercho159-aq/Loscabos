@@ -398,7 +398,7 @@ export default function LaBajaInspira() {
             </div>
           </div>
 
-          <div className="mt-8 md:mt-12 flex justify-center">
+          <div className="mt-8 md:mt-12 flex flex-col items-center gap-2">
             <a
               href="https://filmfreeway.com/ficloscabos"
               target="_blank"
@@ -406,8 +406,11 @@ export default function LaBajaInspira() {
               className="lbi-conv-cta"
               data-anim="lbi-conv-cta"
             >
-              Sé el primero en recibir información
+              Aplica ahora
             </a>
+            <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "var(--lbi-acid)", opacity: 0.8 }}>
+              Se retira el 15 de julio
+            </span>
           </div>
         </div>
       </section>
