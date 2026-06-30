@@ -129,7 +129,7 @@ export default function Home() {
               className="font-black max-w-[440px] leading-[1.3] m-0"
               style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", color: "var(--color-cream)" }}
             >
-              {"Recibe antes que nadie el anuncio de la programación y la apertura de taquilla.".split(" ").map((word, wi) => (
+              {"Recibe antes que nadie el anuncio de la programación y la apertura de taquilla 2026.".split(" ").map((word, wi) => (
                 <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.28em" }}>
                   {word.split("").map((char, ci) => (
                     <span key={ci} data-anim="cta-text-char" style={{ display: "inline-block" }}>{char}</span>
@@ -141,7 +141,7 @@ export default function Home() {
               source="preventa"
               label="Pre-regístrate"
               title="Pre-regístrate"
-              description="Recibe antes que nadie el anuncio de la programación y la apertura de taquilla."
+              description="Recibe antes que nadie el anuncio de la programación y la apertura de taquilla 2026."
               className="cta-button"
               dataAnim="cta-btn"
             />
