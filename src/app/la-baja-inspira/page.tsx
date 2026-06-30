@@ -280,12 +280,22 @@ export default function LaBajaInspira() {
             <p data-anim="lbi-typewriter" className="lbi-intro-lead">
               Su propósito es posicionar a la región como un referente internacional en documental ambiental y territorial, integrando industria audiovisual, conocimiento y conservación con una visión de futuro sostenible.
             </p>
-            <div data-anim="lbi-typewriter" className="lbi-intro-apertura" role="group" aria-label="Apertura de convocatoria: 28 de mayo de 2026">
-              <span className="lbi-intro-apertura-line">
-                <span className="lbi-intro-apertura-dot" aria-hidden="true" style={{ display: "inline-block", verticalAlign: "middle", marginRight: "0.5rem" }} />
-                Apertura de convocatoria
+            <div data-anim="lbi-typewriter" className="flex flex-col items-start gap-2">
+              <a
+                href="https://filmfreeway.com/ficloscabos"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="lbi-intro-apertura"
+                role="button"
+              >
+                <span className="lbi-intro-apertura-line">
+                  <span className="lbi-intro-apertura-dot" aria-hidden="true" style={{ display: "inline-block", verticalAlign: "middle", marginRight: "0.5rem" }} />
+                  Aplica ahora
+                </span>
+              </a>
+              <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "var(--lbi-acid)", opacity: 0.8 }}>
+                Se retira el 15 de julio
               </span>
-              <span className="lbi-intro-apertura-line"> - 28 de mayo de 2026</span>
             </div>
             <p data-anim="lbi-typewriter" className="lbi-intro-closer">
               El rigor cinematográfico es nuestra base. Buscamos obras donde la calidad narrativa y la investigación profunda se encuentran para definir el futuro de la región.
@@ -388,7 +398,7 @@ export default function LaBajaInspira() {
             </div>
           </div>
 
-          <div className="mt-8 md:mt-12 flex flex-col items-center gap-3">
+          <div className="mt-8 md:mt-12 flex justify-center">
             <a
               href="https://filmfreeway.com/ficloscabos"
               target="_blank"
@@ -396,11 +406,8 @@ export default function LaBajaInspira() {
               className="lbi-conv-cta"
               data-anim="lbi-conv-cta"
             >
-              Aplica ahora
+              Sé el primero en recibir información
             </a>
-            <p className="text-sm font-semibold tracking-widest uppercase opacity-60" style={{ color: "var(--lbi-acid)" }}>
-              Se retira el 15 de julio
-            </p>
           </div>
         </div>
       </section>
