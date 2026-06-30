@@ -204,7 +204,7 @@ export default function Comunidad() {
                   )}
                 </div>
                 <h3 className="cm-name">{person.name}</h3>
-                {person.affiliation && <p className="cm-role">{person.affiliation}</p>}
+                {person.affiliation && <p className="cm-role" style={{ color: "var(--color-blue)" }}>{person.affiliation}</p>}
               </article>
             ))}
           </div>
