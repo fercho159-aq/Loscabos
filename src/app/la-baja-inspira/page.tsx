@@ -280,7 +280,7 @@ export default function LaBajaInspira() {
             <p data-anim="lbi-typewriter" className="lbi-intro-lead">
               Su propósito es posicionar a la región como un referente internacional en documental ambiental y territorial, integrando industria audiovisual, conocimiento y conservación con una visión de futuro sostenible.
             </p>
-            <div className="flex flex-col items-start gap-2">
+            <div className="flex flex-col items-center gap-2">
               <a
                 href="https://filmfreeway.com/ficloscabos"
                 target="_blank"
