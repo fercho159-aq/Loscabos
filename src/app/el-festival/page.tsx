@@ -97,7 +97,6 @@ const aliados = [
   { name: "Veleros Beach Club", logo: "/images/aliados/FICC_Logos_Aliados_2026-21.png" },
   { name: "Crania", logo: "/images/aliados/FICC_Logos_Aliados_2026-22.png" },
   { name: "Casa Ballena", logo: "/images/aliados/FICC_Logos_Aliados_2026-23.png" },
-  { name: "Suelo Sur", logo: "/images/aliados/FICC_Logos_Aliados_2026-24.png" },
   { name: "Sage", logo: "/images/aliados/FICC_Logos_Aliados_2026-25.png" },
   { name: "Baja Republic", logo: "/images/aliados/FICC_Logos_Aliados_2026-26.png" },
   { name: "Dobel 50", logo: "/images/aliados/FICC_Logos_Aliados_2026-27.png" },
