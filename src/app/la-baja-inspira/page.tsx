@@ -293,9 +293,6 @@ export default function LaBajaInspira() {
                   Apertura de convocatoria del 28 de mayo al 14 de Julio
                 </span>
               </a>
-              <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "var(--lbi-acid)", opacity: 0.8 }}>
-                Se retira el 15 de julio
-              </span>
             </div>
             <p data-anim="lbi-typewriter" className="lbi-intro-closer">
               El rigor cinematográfico es nuestra base. Buscamos obras donde la calidad narrativa y la investigación profunda se encuentran para definir el futuro de la región.
@@ -398,7 +395,7 @@ export default function LaBajaInspira() {
             </div>
           </div>
 
-          <div className="mt-8 md:mt-12 flex flex-col items-center gap-2">
+          <div className="mt-8 md:mt-12 flex justify-center">
             <a
               href="https://filmfreeway.com/ficloscabos"
               target="_blank"
@@ -408,9 +405,6 @@ export default function LaBajaInspira() {
             >
               Aplica ahora
             </a>
-            <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "var(--lbi-acid)", opacity: 0.8 }}>
-              Se retira el 15 de julio
-            </span>
           </div>
         </div>
       </section>
