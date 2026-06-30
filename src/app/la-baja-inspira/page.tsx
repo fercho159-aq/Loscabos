@@ -290,7 +290,7 @@ export default function LaBajaInspira() {
               >
                 <span className="lbi-intro-apertura-line">
                   <span className="lbi-intro-apertura-dot" aria-hidden="true" style={{ display: "inline-block", verticalAlign: "middle", marginRight: "0.5rem" }} />
-                  Aplica ahora
+                  Apertura de convocatoria del 28 de mayo al 14 de Julio
                 </span>
               </a>
               <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "var(--lbi-acid)", opacity: 0.8 }}>
