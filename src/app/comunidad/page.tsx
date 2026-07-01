@@ -44,8 +44,8 @@ export const metadata: Metadata = {
    queda en los datos para activar quitando `tbc`.
 
    ESTRUCTURA: directorio agrupado por afiliación. Cada grupo muestra su
-   título + bajada y va separado por un divisor. `hideRole: true` oculta el
-   rol por persona (el título del grupo basta). Grupos sin personas visibles
+   título y va separado por un divisor. El rol por persona solo se pinta
+   si la persona lo trae (`role`). Grupos sin personas visibles
    (todas tbc) no se renderizan.
    - Sin grupo / falta info (no renderizados): Chef Guillermo (Suelo Sur),
      Dolores Heredia.
@@ -64,11 +64,7 @@ type Person = {
 type Group = {
   id: string;
   title: string;
-  /** Bajada opcional del grupo. */
-  blurb?: string;
   accent: string;
-  /** No mostrar rol por persona (heredan el del grupo). */
-  hideRole?: boolean;
   people: Person[];
 };
 
@@ -76,22 +72,19 @@ const groups: Group[] = [
   {
     id: "comite-ficc",
     title: "Comité FICC Los Cabos",
-    blurb: "Quienes seleccionan, programan y dan forma al festival.",
     accent: "var(--color-teal)",
     people: [
-      { name: "Juan Patricio Riveroll", role: "Comité de selección", image: "/images/comite/juan-patricio-riveroll.jpg" },
-      { name: "Iván Carrillo", role: "Comité de selección", image: "/images/comite/ivan-carrillo.png" },
-      { name: "Salvador Amores", role: "Coordinación de programación", image: "/images/comite/salvador-amores.png" },
+      { name: "Salvador Amores", role: "Coordinador de programación", image: "/images/comite/salvador-amores.png" },
       { name: "Johanna Murillo", role: "Comité FICC Los Cabos", tbc: true },
     ],
   },
   {
     id: "la-baja-inspira",
     title: "La Baja Inspira",
-    blurb: "Comité y voces que acompañan la plataforma.",
     accent: "var(--color-blue)",
-    hideRole: true,
     people: [
+      { name: "Juan Patricio Riveroll", role: "Comité de selección", image: "/images/comite/juan-patricio-riveroll.jpg" },
+      { name: "Iván Carrillo", role: "Comité de selección", image: "/images/comite/ivan-carrillo.png" },
       { name: "Alonso Rodríguez", image: "/images/jurado/alonso-rodriguez.jpg" },
       { name: "Hans Herrmann", image: "/images/jurado/hans-herrmann.jpg" },
       { name: "Jerónimo Prieto", image: "/images/jurado/jeronimo-prieto.jpg" },
@@ -105,9 +98,7 @@ const groups: Group[] = [
   {
     id: "ffgf",
     title: "Fondo Fílmico Gabriel Figueroa",
-    blurb: "Jurado del FFGF.",
     accent: "var(--color-wine)",
-    hideRole: true,
     people: [
       { name: "Elena Fortes", image: "/images/comunidad/elena-fortes.jpg" },
       { name: "Juan Pablo Bastarrachea", tbc: true },
@@ -120,9 +111,7 @@ const groups: Group[] = [
   {
     id: "voces-ficc",
     title: "Voces FICC",
-    blurb: "Voces que amplifican la conversación del festival.",
     accent: "var(--color-orange)",
-    hideRole: true,
     people: [
       { name: "Adolfo Margulis", image: "/images/comunidad/adolfo-margulis.jpg" },
       { name: "Mariana Arriaga", image: "/images/comunidad/mariana-arriaga.jpg" },
@@ -136,9 +125,7 @@ const groups: Group[] = [
   {
     id: "community-leaders",
     title: "Community Leaders",
-    blurb: "Líderes de comunidad.",
     accent: "var(--color-acid)",
-    hideRole: true,
     people: [
       { name: "Mario Escobar", tbc: true },
       { name: "Romina Sacre", tbc: true },
@@ -202,7 +189,6 @@ export default function Comunidad() {
                 >
                   <header data-anim="comu-group-head" className="cm-group-head">
                     <h2 className="cm-group-title">{group.title}</h2>
-                    {group.blurb && <p className="cm-group-blurb">{group.blurb}</p>}
                   </header>
                   <div className="cm-grid">
                   {visible.map((person) => (
@@ -223,7 +209,7 @@ export default function Comunidad() {
                         )}
                       </div>
                       <h3 className="cm-name">{person.name}</h3>
-                      {!group.hideRole && person.role && (
+                      {person.role && (
                         <p className="cm-role">{person.role}</p>
                       )}
                     </article>

@@ -49,3 +49,6 @@ firestore-debug.log
 # Documentación de trabajo (no versionar — doc-ficc-images pesa ~473MB)
 /doc-ficc-images/
 /CAMBIOS-DOC-FICC.md
+
+# material de trabajo (dumps de Drive, no assets del sitio)
+/public/doc-ficc-images/

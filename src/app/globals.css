@@ -5069,15 +5069,6 @@ body {
   line-height: 0.98;
 }
 
-.cm-group-blurb {
-  font-family: var(--font-inter);
-  font-size: clamp(0.88rem, 1.6vw, 1.02rem);
-  line-height: 1.55;
-  color: color-mix(in srgb, var(--color-navy) 60%, transparent);
-  margin: 0.9rem auto 0;
-  max-width: 540px;
-}
-
 /* ── Grid de personas ── flex-wrap: cards de ancho fijo, sin columnas
    fantasma cuando el grupo tiene pocas personas. ── */
 .cm-grid {
