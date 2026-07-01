@@ -19,7 +19,7 @@ const aliados = [
   { name: "Zadún, A Ritz-Carlton Reserve", logo: "/images/aliados/FICC_Logos_Aliados_2026-zadun.png" },
   { name: "Tropicana", logo: "/images/aliados/FICC_Logos_Aliados_2026-18.png" },
   { name: "YAYA Rentals", logo: "/images/aliados/FICC_Logos_Aliados_2026-yaya.png" },
-  // { name: "Del Cabo Events", logo: "..." }, // pendiente logo
+  { name: "Del Cabo Events", logo: "/images/aliados/FICC_Logos_Aliados_2026-del-cabo-events.png" },
   { name: "Trilogy", logo: "/images/aliados/FICC_Logos_Aliados_2026-trilogy.png" },
   { name: "Grupo Aeroportuario del Pacífico", logo: "/images/aliados/FICC_Logos_Aliados_2026-25.png" },
   { name: "Aeromexico", logo: "/images/aliados/FICC_Logos_Aliados_2026-26.png" },

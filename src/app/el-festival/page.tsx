@@ -183,7 +183,6 @@ export default function ElFestival() {
           }}
           entitiesLabel="Programación"
           entities={[
-            { label: "Competencia Mexicana" },
             { label: "Animación" },
             { label: "Marejada" },
             { label: "#BeyondTheScreen" },
@@ -191,7 +190,7 @@ export default function ElFestival() {
           iconReveal="wipe-right"
         >
           <p data-anim="eje-para" className="mb-6 md:mb-7">
-            Nuestra curaduría descubre y posiciona las voces que definen el futuro del cine. Desde la <span className="ef-accent">Competencia Mexicana</span> y su apuesta por el riesgo narrativo, hasta la consolidación de la <span className="ef-accent">Animación</span> como un lenguaje cinematográfico mayor y <span className="ef-accent">Marejada</span>, nuestra muestra Internacional  como nuestra vitrina de los grandes circuitos y festivales, el Festival dialoga permanentemente con el circuito de festivales internacional.
+            Nuestra curaduría descubre y posiciona las voces que definen el futuro del cine. Desde la consolidación de la <span className="ef-accent">Animación</span> como un lenguaje cinematográfico mayor y <span className="ef-accent">Marejada</span>, nuestra muestra Internacional como nuestra vitrina de los grandes circuitos y festivales, el Festival dialoga permanentemente con el circuito de festivales internacional.
           </p>
           {/* TODO(cliente): este párrafo #BeyondTheScreen se repite verbatim en eje 4. Cliente debe decidir si eliminar de aquí, de eje 4, o reescribir uno de los dos. */}
           <p data-anim="eje-para">
