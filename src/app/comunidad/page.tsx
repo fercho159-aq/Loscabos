@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -42,10 +43,10 @@ export const metadata: Metadata = {
    `tbc: true` → "Pendiente" / "Falta información": NO se renderiza aún,
    queda en los datos para activar quitando `tbc`.
 
-   NOTA estructura (confirmar con cliente):
-   - "La Baja Inspira (no subir título)" → interpretado como: NO repetir un
-     rol por persona en ese grupo (el encabezado ya lo dice). El encabezado
-     del grupo sí se muestra; si tampoco debe ir, poner hideHeading: true.
+   ESTRUCTURA: directorio agrupado por afiliación. Cada grupo muestra su
+   título + bajada y va separado por un divisor. `hideRole: true` oculta el
+   rol por persona (el título del grupo basta). Grupos sin personas visibles
+   (todas tbc) no se renderizan.
    - Sin grupo / falta info (no renderizados): Chef Guillermo (Suelo Sur),
      Dolores Heredia.
    ────────────────────────────────────────────────────────────── */
@@ -117,31 +118,36 @@ const groups: Group[] = [
     ],
   },
   {
-    id: "community-leaders",
-    title: "Community Leaders",
-    blurb: "Comité de Convocatoria.",
+    id: "voces-ficc",
+    title: "Voces FICC",
+    blurb: "Voces que amplifican la conversación del festival.",
     accent: "var(--color-orange)",
     hideRole: true,
     people: [
-      { name: "Anamaria Sayre", image: "/images/comunidad/anamaria-sayre.jpg" },
       { name: "Adolfo Margulis", image: "/images/comunidad/adolfo-margulis.jpg" },
       { name: "Mariana Arriaga", image: "/images/comunidad/mariana-arriaga.jpg" },
       { name: "Mar Prieto", image: "/images/comunidad/mar-prieto.jpg" },
       { name: "Ximena Lamadrid", image: "/images/comunidad/ximena-lamadrid.jpg" },
       { name: "David Zonana", image: "/images/comunidad/david-zonana.jpg" },
       { name: "Damián Romero", image: "/images/comunidad/damian-romero.jpg" },
+      { name: "Anamaria Sayre", image: "/images/comunidad/anamaria-sayre.jpg" },
+    ],
+  },
+  {
+    id: "community-leaders",
+    title: "Community Leaders",
+    blurb: "Líderes de comunidad.",
+    accent: "var(--color-acid)",
+    hideRole: true,
+    people: [
       { name: "Mario Escobar", tbc: true },
+      { name: "Romina Sacre", tbc: true },
     ],
   },
 ];
 
-// Directorio plano (sin títulos de grupo): cada persona conserva su afiliación
-// como subtítulo, derivada de su rol o del nombre del grupo al que pertenece.
-const people = groups.flatMap((group) =>
-  group.people
-    .filter((p) => !p.tbc)
-    .map((p) => ({ ...p, affiliation: p.role ?? group.title }))
-);
+// Grupos con al menos una persona visible (los que son todo `tbc` no se pintan).
+const visibleGroups = groups.filter((group) => group.people.some((p) => !p.tbc));
 
 function initials(name: string) {
   const parts = name
@@ -183,31 +189,49 @@ export default function Comunidad() {
           </div>
         </section>
 
-        {/* ── DIRECTORIO ── un solo grid, sin títulos de grupo ── */}
+        {/* ── DIRECTORIO ── agrupado por afiliación, con título editorial y
+            divisor de marca (TextureStrip) entre grupos ── */}
         <section className="comunidad-groups">
-          <div className="cm-grid">
-            {people.map((person) => (
-              <article key={person.name} data-anim="comu-card" className="cm-card">
-                <div className="cm-photo">
-                  {person.image ? (
-                    <Image
-                      src={person.image}
-                      alt={person.name}
-                      fill
-                      sizes="(max-width: 560px) 45vw, (max-width: 900px) 30vw, 200px"
-                      className="cm-photo-img"
-                    />
-                  ) : (
-                    <span className="cm-photo-initials" aria-hidden="true">
-                      {initials(person.name)}
-                    </span>
-                  )}
+          {visibleGroups.map((group) => {
+            const visible = group.people.filter((p) => !p.tbc);
+            return (
+                <div
+                  key={group.id}
+                  className="cm-group"
+                  style={{ "--cat": group.accent } as CSSProperties}
+                >
+                  <header data-anim="comu-group-head" className="cm-group-head">
+                    <h2 className="cm-group-title">{group.title}</h2>
+                    {group.blurb && <p className="cm-group-blurb">{group.blurb}</p>}
+                  </header>
+                  <div className="cm-grid">
+                  {visible.map((person) => (
+                    <article key={person.name} data-anim="comu-card" className="cm-card">
+                      <div className="cm-photo">
+                        {person.image ? (
+                          <Image
+                            src={person.image}
+                            alt={person.name}
+                            fill
+                            sizes="(max-width: 560px) 45vw, (max-width: 820px) 30vw, 240px"
+                            className="cm-photo-img"
+                          />
+                        ) : (
+                          <span className="cm-photo-initials" aria-hidden="true">
+                            {initials(person.name)}
+                          </span>
+                        )}
+                      </div>
+                      <h3 className="cm-name">{person.name}</h3>
+                      {!group.hideRole && person.role && (
+                        <p className="cm-role">{person.role}</p>
+                      )}
+                    </article>
+                  ))}
+                  </div>
                 </div>
-                <h3 className="cm-name">{person.name}</h3>
-                {person.affiliation && <p className="cm-role" style={{ color: "var(--color-blue)" }}>{person.affiliation}</p>}
-              </article>
-            ))}
-          </div>
+            );
+          })}
         </section>
       </div>
 

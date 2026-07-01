@@ -5041,25 +5041,64 @@ body {
   padding: clamp(2rem, 4vw, 4rem) clamp(1.25rem, 5vw, 4rem) clamp(4rem, 8vw, 7rem);
 }
 
-/* ── Grid de personas ── */
-.cm-grid {
-  max-width: 1200px;
+/* ── Grupo (título editorial por afiliación) ── */
+.cm-group {
+  --cat: var(--color-orange);
+  max-width: 1280px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: clamp(1.6rem, 2.8vw, 2.6rem) clamp(0.9rem, 1.8vw, 1.6rem);
 }
 
-@media (max-width: 1100px) { .cm-grid { grid-template-columns: repeat(5, 1fr); } }
-@media (max-width: 900px)  { .cm-grid { grid-template-columns: repeat(4, 1fr); } }
-@media (max-width: 680px)  { .cm-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 440px)  { .cm-grid { grid-template-columns: repeat(2, 1fr); } }
+/* Separación entre grupos. */
+.cm-group + .cm-group {
+  margin-top: clamp(5rem, 9vw, 8rem);
+}
+
+.cm-group-head {
+  text-align: center;
+  margin-bottom: clamp(2rem, 3.5vw, 3rem);
+}
+
+.cm-group-title {
+  display: inline-block;
+  font-family: var(--font-inter);
+  font-size: clamp(1.7rem, 4.2vw, 2.9rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+  line-height: 0.98;
+}
+
+.cm-group-blurb {
+  font-family: var(--font-inter);
+  font-size: clamp(0.88rem, 1.6vw, 1.02rem);
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--color-navy) 60%, transparent);
+  margin: 0.9rem auto 0;
+  max-width: 540px;
+}
+
+/* ── Grid de personas ── flex-wrap: cards de ancho fijo, sin columnas
+   fantasma cuando el grupo tiene pocas personas. ── */
+.cm-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(2rem, 3.2vw, 3.4rem) clamp(1.2rem, 2vw, 2rem);
+}
 
 .cm-card {
+  flex: 0 0 auto;
+  width: clamp(148px, 17vw, 214px);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+@media (max-width: 560px) {
+  .cm-grid { justify-content: center; gap: 2rem 1.2rem; }
+  .cm-card { width: calc(50% - 0.6rem); }
 }
 
 .cm-photo {
@@ -5112,26 +5151,33 @@ body {
 
 .cm-name {
   font-family: var(--font-inter);
-  font-size: clamp(0.92rem, 1.7vw, 1.08rem);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.01em;
   color: var(--color-navy);
-  margin-top: 0.85rem;
+  margin-top: 1rem;
+  transition: color 0.35s ease;
+}
+
+.cm-card:hover .cm-name,
+.cm-card:focus-within .cm-name {
+  color: color-mix(in srgb, var(--cat) 88%, var(--color-navy));
 }
 
 .cm-role {
   font-family: var(--font-inter);
   font-size: clamp(0.74rem, 1.4vw, 0.84rem);
   line-height: 1.4;
-  font-weight: 400;
-  color: var(--color-blue);
+  font-weight: 500;
+  color: color-mix(in srgb, var(--cat) 85%, var(--color-navy));
   margin-top: 0.3rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .cm-photo-img,
-  .cm-photo::after {
+  .cm-photo::after,
+  .cm-name {
     transition: none;
   }
 }

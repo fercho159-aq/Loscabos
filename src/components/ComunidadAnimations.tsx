@@ -32,17 +32,17 @@ export default function ComunidadAnimations() {
         });
       });
 
-      // ── GROUP HEAD: entra desde la izquierda ──
+      // ── GROUP HEAD: fade-up centrado ──
       const heads = gsap.utils.toArray<HTMLElement>('[data-anim="comu-group-head"]');
       heads.forEach((head) => {
-        gsap.set(head, { x: -40, opacity: 0 });
+        gsap.set(head, { y: 28, opacity: 0 });
         ScrollTrigger.create({
           trigger: head,
           start: "top 88%",
           once: true,
           onEnter: () =>
             gsap.to(head, {
-              x: 0,
+              y: 0,
               opacity: 1,
               duration: 0.9,
               ease: "power4.out",
