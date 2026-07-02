@@ -182,7 +182,7 @@ export default function Comunidad() {
         </section>
 
         {/* ── DIRECTORIO ── agrupado por afiliación, con título editorial y
-            divisor de marca (TextureStrip) entre grupos ── */}
+            espacio entre grupos ── */}
         <section className="comunidad-groups">
           {visibleGroups.map((group) => {
             const visible = group.people.filter((p) => !p.tbc);
