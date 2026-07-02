@@ -76,33 +76,6 @@ export default function Edicion2025() {
           </div>
         </section>
 
-        {/* ── CARTEL 2025 ── */}
-        <section className="edicion-cartel25">
-          <div className="edicion-cartel25-inner">
-            <div data-anim="ed-cartel25" className="edicion-cartel25-poster">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/edicion-2025/cartel-2025.jpg"
-                alt="Cartel oficial FICC Los Cabos 2025 — 13ª Edición, #BeyondTheScreen"
-                loading="lazy"
-                decoding="async"
-                className="edicion-cartel25-img"
-              />
-            </div>
-            <div className="edicion-cartel25-text">
-              <span data-anim="ed-eyebrow" className="edicion-eyebrow edicion-eyebrow--accent">
-                Cartel oficial 2025
-              </span>
-              <p data-anim="ed-lede" className="edicion-lede">
-                <strong>FICCLosCabos 2025</strong> consolidó su evolución hacia una plataforma
-                creativa capaz de generar visibilidad, conversación y valor mediático real para la
-                industria del cine, el ecosistema creativo y nuestros socios aliados: instituciones
-                públicas y privadas, centros de consumo, hoteles y marcas.
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* ── VIDEO RECAP ── */}
         <section className="edicion-video-section">
           <div data-anim="ed-video" className="edicion-video-frame">

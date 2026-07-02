@@ -11,6 +11,15 @@ export type Edition = {
 
 export const editionsData: Edition[] = [
   {
+    slug: "edicion-2025",
+    year: "2025",
+    dates: "10 al 14 de diciembre",
+    title: "#BeyondTheScreen",
+    posterSrc: "/images/edicion-2025/cartel-2025.jpg",
+    description:
+      "FICCLosCabos 2025 consolidó su evolución hacia una plataforma creativa capaz de generar visibilidad, conversación y valor mediático real para la industria del cine, el ecosistema creativo y nuestros socios aliados: instituciones públicas y privadas, centros de consumo, hoteles y marcas. Bajo el concepto #BeyondTheScreen, la 13ª edición integró cine, música, arte digital y experiencias inmersivas en Puerto Los Cabos.",
+  },
+  {
     slug: "edicion-2024",
     year: "2024",
     dates: "4 al 8 de diciembre",
