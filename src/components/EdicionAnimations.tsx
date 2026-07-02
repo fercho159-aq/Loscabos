@@ -11,7 +11,7 @@ export default function EdicionAnimations() {
     const ctx = gsap.context(() => {
       // ── Fade-up genérico para eyebrows, ledes y títulos ── (Pattern A)
       const fadeEls = gsap.utils.toArray<HTMLElement>(
-        '[data-anim="ed-eyebrow"], [data-anim="ed-lede"], [data-anim="ed-title"]'
+        '[data-anim="ed-eyebrow"], [data-anim="ed-lede"], [data-anim="ed-title"], [data-anim="ed-cartel25"]'
       );
       fadeEls.forEach((el) => {
         gsap.set(el, { y: 30, opacity: 0 });

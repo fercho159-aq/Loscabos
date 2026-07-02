@@ -5292,6 +5292,56 @@ body {
   .edicion-disciplinas { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ── Cartel oficial 2025: póster + texto lado a lado ── */
+.edicion-cartel25 {
+  background: #0A1E23;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 5vw, 3rem) clamp(4rem, 8vw, 7rem);
+}
+
+.edicion-cartel25-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(260px, 420px) 1fr;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+.edicion-cartel25-poster {
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.edicion-cartel25-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.edicion-cartel25-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  text-align: left;
+}
+
+.edicion-cartel25-text .edicion-lede {
+  text-wrap: pretty;
+}
+
+@media (max-width: 720px) {
+  .edicion-cartel25-inner {
+    grid-template-columns: 1fr;
+  }
+  .edicion-cartel25-poster {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+  .edicion-cartel25-text {
+    text-align: center;
+    align-items: center;
+  }
+}
+
 /* ── Video recap ── */
 .edicion-video-section {
   background: #061319;
