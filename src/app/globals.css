@@ -5039,14 +5039,9 @@ body {
   margin: 0 auto;
 }
 
-/* Divisor de marca (TextureStrip) entre grupos: separa y marca el cambio
-   de afiliación. */
-.cm-divider {
-  height: clamp(70px, 8vw, 122px);
-  max-width: 1280px;
-  margin: clamp(3.5rem, 6vw, 5.5rem) auto;
-  pointer-events: none;
-  overflow: hidden;
+/* Separación entre grupos. */
+.cm-group + .cm-group {
+  margin-top: clamp(5rem, 9vw, 8rem);
 }
 
 .cm-group-head {

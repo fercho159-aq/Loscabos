@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import Image from "next/image";
-import { Fragment } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
-import TextureStrip from "@/components/TextureStrip";
 import ComunidadAnimations from "@/components/ComunidadAnimations";
 
 export const metadata: Metadata = {
@@ -46,10 +44,10 @@ export const metadata: Metadata = {
    queda en los datos para activar quitando `tbc`.
 
    ESTRUCTURA: directorio agrupado por afiliación. Cada grupo muestra su
-   título y va separado por un divisor de marca (TextureStrip). El rol por
-   persona solo se pinta si la persona lo trae (`role`). Grupos sin
-   personas visibles (todas tbc) no se renderizan — hoy: Comité FICC
-   (Johanna tbc) y Community Leaders.
+   título; separación entre grupos solo con espacio. El rol por persona
+   solo se pinta si la persona lo trae (`role`). Grupos sin personas
+   visibles (todas tbc) no se renderizan — hoy: Comité FICC (Johanna tbc)
+   y Community Leaders.
    ────────────────────────────────────────────────────────────── */
 
 type Person = {
@@ -186,16 +184,11 @@ export default function Comunidad() {
         {/* ── DIRECTORIO ── agrupado por afiliación, con título editorial y
             divisor de marca (TextureStrip) entre grupos ── */}
         <section className="comunidad-groups">
-          {visibleGroups.map((group, index) => {
+          {visibleGroups.map((group) => {
             const visible = group.people.filter((p) => !p.tbc);
             return (
-              <Fragment key={group.id}>
-                {index > 0 && (
-                  <div className="cm-divider" aria-hidden="true">
-                    <TextureStrip style={{ display: "block" }} />
-                  </div>
-                )}
                 <div
+                  key={group.id}
                   className="cm-group"
                   style={{ "--cat": group.accent } as CSSProperties}
                 >
@@ -228,7 +221,6 @@ export default function Comunidad() {
                   ))}
                   </div>
                 </div>
-              </Fragment>
             );
           })}
         </section>
