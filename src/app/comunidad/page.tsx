@@ -103,7 +103,8 @@ const groups: Group[] = [
     title: "Fondo Fílmico Gabriel Figueroa",
     accent: "var(--color-wine)",
     people: [
-      { name: "Elena Fortes", image: "/images/comunidad/elena-fortes.jpg" },
+      // Confirmada, en reserva hasta tener más confirmados del fondo.
+      { name: "Elena Fortes", image: "/images/comunidad/elena-fortes.jpg", tbc: true },
       { name: "Juan Pablo Bastarrachea", tbc: true },
       { name: "Bruno Santamaría", tbc: true },
       { name: "Ximena Urrutia Partida", tbc: true },
