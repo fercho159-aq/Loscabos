@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import Image from "next/image";
+import { Fragment } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
+import TextureStrip from "@/components/TextureStrip";
 import ComunidadAnimations from "@/components/ComunidadAnimations";
 
 export const metadata: Metadata = {
@@ -44,11 +46,10 @@ export const metadata: Metadata = {
    queda en los datos para activar quitando `tbc`.
 
    ESTRUCTURA: directorio agrupado por afiliación. Cada grupo muestra su
-   título y va separado por un divisor. El rol por persona solo se pinta
-   si la persona lo trae (`role`). Grupos sin personas visibles
-   (todas tbc) no se renderizan.
-   - Sin grupo / falta info (no renderizados): Chef Guillermo (Suelo Sur),
-     Dolores Heredia.
+   título y va separado por un divisor de marca (TextureStrip). El rol por
+   persona solo se pinta si la persona lo trae (`role`). Grupos sin
+   personas visibles (todas tbc) no se renderizan — hoy: Comité FICC
+   (Johanna tbc) y Community Leaders.
    ────────────────────────────────────────────────────────────── */
 
 type Person = {
@@ -74,7 +75,6 @@ const groups: Group[] = [
     title: "Comité FICC Los Cabos",
     accent: "var(--color-teal)",
     people: [
-      { name: "Salvador Amores", role: "Coordinador de programación", image: "/images/comite/salvador-amores.png" },
       { name: "Johanna Murillo", role: "Comité FICC Los Cabos", tbc: true },
     ],
   },
@@ -85,6 +85,7 @@ const groups: Group[] = [
     people: [
       { name: "Juan Patricio Riveroll", role: "Comité de selección", image: "/images/comite/juan-patricio-riveroll.jpg" },
       { name: "Iván Carrillo", role: "Comité de selección", image: "/images/comite/ivan-carrillo.png" },
+      { name: "Salvador Amores", role: "Coordinador de programación", image: "/images/comite/salvador-amores.png" },
       { name: "Alonso Rodríguez", image: "/images/jurado/alonso-rodriguez.jpg" },
       { name: "Hans Herrmann", image: "/images/jurado/hans-herrmann.jpg" },
       { name: "Jerónimo Prieto", image: "/images/jurado/jeronimo-prieto.jpg" },
@@ -93,6 +94,8 @@ const groups: Group[] = [
       { name: "Francisco Laresgoiti", image: "/images/jurado/francisco-laresgoiti.png" },
       { name: "Inti Cordera", image: "/images/jurado/inti-cordera.jpg" },
       { name: "Dra. Micheline Cariño", image: "/images/jurado/micheline-carino.jpg" },
+      { name: "Chef Guillermo", role: "Suelo Sur", tbc: true },
+      { name: "Dolores Heredia", tbc: true },
     ],
   },
   {
@@ -179,11 +182,16 @@ export default function Comunidad() {
         {/* ── DIRECTORIO ── agrupado por afiliación, con título editorial y
             divisor de marca (TextureStrip) entre grupos ── */}
         <section className="comunidad-groups">
-          {visibleGroups.map((group) => {
+          {visibleGroups.map((group, index) => {
             const visible = group.people.filter((p) => !p.tbc);
             return (
+              <Fragment key={group.id}>
+                {index > 0 && (
+                  <div className="cm-divider" aria-hidden="true">
+                    <TextureStrip style={{ display: "block" }} />
+                  </div>
+                )}
                 <div
-                  key={group.id}
                   className="cm-group"
                   style={{ "--cat": group.accent } as CSSProperties}
                 >
@@ -216,6 +224,7 @@ export default function Comunidad() {
                   ))}
                   </div>
                 </div>
+              </Fragment>
             );
           })}
         </section>
