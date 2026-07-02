@@ -135,7 +135,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: clamp(1rem, 2vw, 2.2rem);
+    gap: clamp(.7rem, 1.3vw, 1.5rem);
     list-style: none;
     min-width: 0;
   }
