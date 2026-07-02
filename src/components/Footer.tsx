@@ -53,7 +53,7 @@ export default function Footer() {
             <li><a href="/campus">Campus</a></li>
             <li><a href="/comunidad">Comunidad</a></li>
             <li><a href="/programacion">Programaci&oacute;n</a></li>
-            <li><a href="/edicion-2025">Edici&oacute;n 2025</a></li>
+            <li><a href="/edicion-2025">Ediciones anteriores</a></li>
             <li><a href="/prensa">Prensa</a></li>
           </ul>
         </div>
