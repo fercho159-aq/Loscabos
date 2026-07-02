@@ -174,9 +174,6 @@ export default function Comunidad() {
               opinión compartirán un mismo espacio, generando conversaciones y conexiones que
               difícilmente ocurren en otro lugar.
             </p>
-            <p data-anim="comu-hashtag" className="comunidad-hashtag">
-              #FICCLosCabos2026
-            </p>
           </div>
         </section>
 

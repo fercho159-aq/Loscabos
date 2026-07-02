@@ -5019,15 +5019,6 @@ body {
   text-wrap: balance;
 }
 
-.comunidad-hashtag {
-  font-family: var(--font-inter);
-  font-size: clamp(1.15rem, 2.6vw, 1.7rem);
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  color: var(--color-orange);
-  margin-top: clamp(1.4rem, 3vw, 2.2rem);
-}
-
 /* ── Directorio (grupos por afiliación con divisor de marca) ── */
 .comunidad-groups {
   position: relative;

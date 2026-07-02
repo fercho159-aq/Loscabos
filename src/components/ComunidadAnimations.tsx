@@ -9,9 +9,9 @@ gsap.registerPlugin(ScrollTrigger);
 export default function ComunidadAnimations() {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      // ── INTRO: lede + hashtag fade up ── (Pattern A)
+      // ── INTRO: lede fade up ── (Pattern A)
       const introEls = gsap.utils.toArray<HTMLElement>(
-        '[data-anim="comu-lede"], [data-anim="comu-hashtag"]'
+        '[data-anim="comu-lede"]'
       );
       introEls.forEach((el, i) => {
         gsap.set(el, { y: 30, opacity: 0 });
