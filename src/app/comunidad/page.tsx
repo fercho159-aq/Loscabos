@@ -85,7 +85,6 @@ const groups: Group[] = [
     people: [
       { name: "Juan Patricio Riveroll", role: "Comité de selección", image: "/images/comite/juan-patricio-riveroll.jpg" },
       { name: "Iván Carrillo", role: "Comité de selección", image: "/images/comite/ivan-carrillo.png" },
-      { name: "Salvador Amores", role: "Coordinador de programación", image: "/images/comite/salvador-amores.png" },
       { name: "Alonso Rodríguez", image: "/images/jurado/alonso-rodriguez.jpg" },
       { name: "Hans Herrmann", image: "/images/jurado/hans-herrmann.jpg" },
       { name: "Jerónimo Prieto", image: "/images/jurado/jeronimo-prieto.jpg" },
@@ -99,12 +98,19 @@ const groups: Group[] = [
     ],
   },
   {
+    id: "programa-de-cine",
+    title: "Programa de cine",
+    accent: "var(--color-teal)",
+    people: [
+      { name: "Salvador Amores", role: "Coordinador de programación", image: "/images/comunidad/salvador-amores.jpg" },
+    ],
+  },
+  {
     id: "ffgf",
     title: "Fondo Fílmico Gabriel Figueroa",
     accent: "var(--color-wine)",
     people: [
-      // Confirmada, en reserva hasta tener más confirmados del fondo.
-      { name: "Elena Fortes", image: "/images/comunidad/elena-fortes.jpg", tbc: true },
+      { name: "Elena Fortes", image: "/images/comunidad/elena-fortes.jpg" },
       { name: "Juan Pablo Bastarrachea", tbc: true },
       { name: "Bruno Santamaría", tbc: true },
       { name: "Ximena Urrutia Partida", tbc: true },
