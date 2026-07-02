@@ -8,7 +8,7 @@ import EdicionAnimations from "@/components/EdicionAnimations";
 import { editionsData } from "@/lib/editions-data";
 
 export const metadata: Metadata = {
-  title: "Nuestra Edición 2025 | #BeyondTheScreen",
+  title: "Ediciones anteriores | #BeyondTheScreen",
   description:
     "En 2025, FICC Los Cabos trascendió la pantalla y se transformó en un ecosistema creativo multidisciplinario: cine, música, arte digital y experiencias inmersivas bajo el concepto #BeyondTheScreen.",
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/edicion-2025" },
   openGraph: {
-    title: "Nuestra Edición 2025 | #BeyondTheScreen",
+    title: "Ediciones anteriores | #BeyondTheScreen",
     description:
       "El año en que el cine trascendió la pantalla: música, arte digital y experiencias inmersivas en Los Cabos.",
     url: "/edicion-2025",
@@ -55,7 +55,7 @@ export default function Edicion2025() {
       <div className="edicion-page">
         {/* ── HERO ── */}
         <PageHero
-          lines={["Nuestra", "Edición 2025"]}
+          lines={["Ediciones", "anteriores"]}
           subtitle="#BeyondTheScreen"
         />
 
