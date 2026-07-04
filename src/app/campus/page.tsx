@@ -84,7 +84,7 @@ const moments: Moment[] = [
       { name: "Cinépolis San José del Cabo", image: "/images/campus/cinepolis-sjc.jpg" },
       { name: "Hotel El Ganzo", image: "/images/campus/el-ganzo.jpg" },
       { name: "JW Marriott Los Cabos", image: "/images/campus/jw-marriott.jpg", tbc: true },
-      { name: "Hotel Tropicana", image: "/images/campus/tropicana.jpg", tbc: true },
+      { name: "Hotel Tropicana", image: "/images/campus/tropicana.jpg" },
     ],
   },
   {
@@ -98,6 +98,7 @@ const moments: Moment[] = [
       { name: "JW Marriott Los Cabos", image: "/images/campus/jw-marriott.jpg", tbc: true },
       { name: "Sage", image: "/images/campus/sage.jpg" },
       { name: "Jetty · Hotel El Ganzo", image: "/images/campus/jetty-el-ganzo.jpg" },
+      { name: "Hotel Tropicana", image: "/images/campus/tropicana.jpg" },
     ],
   },
   {
