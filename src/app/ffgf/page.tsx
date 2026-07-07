@@ -109,6 +109,7 @@ const jurado = [
   },
   {
     name: "Bruno Santamaría",
+    img: "/images/comunidad/bruno-santamaria.jpg",
     desc: "Director, productor y fotógrafo mexicano. Su cine explora la frontera entre documental y ficción desde la intimidad, la memoria y los secretos. Dirigió Seis meses en el edificio rosa con azul, estrenada en la Semana de la Crítica de Cannes, y premiada por el FFGF.",
   },
   {
@@ -171,40 +172,6 @@ export default function FFGF() {
       </section>
 
 
-      {/* Jurado FFGF 2026 — reutiliza el patrón lbi-jurado (fondo oscuro, filas
-          alternadas foto+bio). Fotos en B&W vía filtro scoped .ffgf-jurado. */}
-      <section className="lbi-jurado-section ffgf-jurado overflow-x-clip">
-        <div className="lbi-jurado-header">
-          <span data-anim="ffgf-jurado-eyebrow" className="lbi-jurado-eyebrow">Jurado</span>
-          <h2 data-anim="ffgf-jurado-title" className="lbi-jurado-title">Jurado 2026</h2>
-        </div>
-        <div className="lbi-jurado-eje" style={{ borderTop: "none", paddingTop: 0 }}>
-          <div className="lbi-jurado-rows">
-            {juradoVisible.map((m, idx) => (
-              <div
-                key={m.name}
-                data-anim="ffgf-jurado-row"
-                className={`lbi-jurado-row${idx % 2 === 1 ? " lbi-jurado-row--reverse" : ""}`}
-              >
-                <div className="lbi-jurado-row__media">
-                  <Image
-                    src={m.img!}
-                    alt={`${m.name} — Jurado del Fondo Fílmico Gabriel Figueroa, FICC Los Cabos`}
-                    fill
-                    sizes="(max-width: 768px) 320px, 480px"
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
-                <div className="lbi-jurado-row__body">
-                  <h4 className="lbi-jurado-name">{m.name}</h4>
-                  <p className="lbi-jurado-desc">{m.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Legado FFGF — dark section pattern (matches la-baja-inspira legado) */}
       <section className="relative w-full flex flex-col overflow-hidden" style={{ background: "#0A1E23" }}>
         {/* Background image */}
@@ -251,6 +218,41 @@ export default function FFGF() {
                     {p.director && <p style={{ fontWeight: 400, marginBottom: "0.5rem" }}>{p.director}</p>}
                     <p style={{ fontSize: "0.85rem", lineHeight: 1.6 }}>{p.desc}</p>
                   </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Jurado FFGF 2026 — debajo de "Historias que trascienden" (Legado).
+          Reutiliza el patrón lbi-jurado (fondo oscuro, filas alternadas
+          foto+bio). Fotos en B&W vía filtro scoped .ffgf-jurado. */}
+      <section className="lbi-jurado-section ffgf-jurado overflow-x-clip">
+        <div className="lbi-jurado-header">
+          <span data-anim="ffgf-jurado-eyebrow" className="lbi-jurado-eyebrow">Jurado</span>
+          <h2 data-anim="ffgf-jurado-title" className="lbi-jurado-title">Jurado 2026</h2>
+        </div>
+        <div className="lbi-jurado-eje" style={{ borderTop: "none", paddingTop: 0 }}>
+          <div className="lbi-jurado-rows">
+            {juradoVisible.map((m, idx) => (
+              <div
+                key={m.name}
+                data-anim="ffgf-jurado-row"
+                className={`lbi-jurado-row${idx % 2 === 1 ? " lbi-jurado-row--reverse" : ""}`}
+              >
+                <div className="lbi-jurado-row__media">
+                  <Image
+                    src={m.img!}
+                    alt={`${m.name} — Jurado del Fondo Fílmico Gabriel Figueroa, FICC Los Cabos`}
+                    fill
+                    sizes="(max-width: 768px) 320px, 480px"
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+                <div className="lbi-jurado-row__body">
+                  <h4 className="lbi-jurado-name">{m.name}</h4>
+                  <p className="lbi-jurado-desc">{m.desc}</p>
                 </div>
               </div>
             ))}

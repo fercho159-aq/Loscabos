@@ -110,7 +110,7 @@ const groups: Group[] = [
     people: [
       { name: "Elena Fortes", image: "/images/comunidad/elena-fortes.jpg" },
       { name: "Juan Pablo Bastarrachea", image: "/images/comunidad/juan-pablo-bastarrachea.jpg" },
-      { name: "Bruno Santamaría Razo", tbc: true },
+      { name: "Bruno Santamaría Razo", image: "/images/comunidad/bruno-santamaria.jpg" },
       { name: "Ximena Urrutia Partida", tbc: true },
       { name: "Michel Lipkes Leduc", tbc: true },
       { name: "Nico Celis", image: "/images/comunidad/nico-celis.jpg" },
