@@ -109,11 +109,12 @@ const groups: Group[] = [
     accent: "var(--color-wine)",
     people: [
       { name: "Elena Fortes", image: "/images/comunidad/elena-fortes.jpg" },
-      { name: "Juan Pablo Bastarrachea", tbc: true },
+      { name: "Juan Pablo Bastarrachea", image: "/images/comunidad/juan-pablo-bastarrachea.jpg" },
       { name: "Bruno Santamaría Razo", tbc: true },
       { name: "Ximena Urrutia Partida", tbc: true },
       { name: "Michel Lipkes Leduc", tbc: true },
       { name: "Nico Celis", image: "/images/comunidad/nico-celis.jpg" },
+      { name: "Alfredo Ruiz", image: "/images/comunidad/alfredo-ruiz.jpg" },
     ],
   },
   {
