@@ -129,7 +129,6 @@ const groups: Group[] = [
       { name: "David Zonana", image: "/images/comunidad/david-zonana.jpg" },
       { name: "Damián Romero", image: "/images/comunidad/damian-romero.jpg" },
       { name: "Ana Maria Sayre", image: "/images/comunidad/anamaria-sayre.jpg" },
-      { name: "Romina Sacre", image: "/images/comunidad/romina-sacre.jpg" },
     ],
   },
   {
@@ -138,6 +137,7 @@ const groups: Group[] = [
     accent: "var(--color-acid)",
     people: [
       { name: "Mario Escobar", tbc: true },
+      { name: "Romina Sacre", image: "/images/comunidad/romina-sacre.jpg" },
     ],
   },
 ];
