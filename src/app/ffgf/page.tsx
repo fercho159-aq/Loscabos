@@ -125,7 +125,7 @@ const jurado = [
   {
     name: "Alfredo Ruiz",
     img: "/images/comunidad/alfredo-ruiz.jpg",
-    desc: "Director y fundador de ESCINE (Escuela de Cine y Narrativa Visual) en México. Es un destacado cineasta, docente y promotor cultural, reconocido por impulsar la formación de nuevas generaciones en el cine independiente y las artes visuales en el país.",
+    desc: "Director de la licenciatura en cine y fundador de ESCINE (Escuela de Cine y Narrativa Visual) en México. Es un destacado cineasta, docente y promotor cultural, reconocido por impulsar la formación de nuevas generaciones en el cine independiente y las artes visuales en el país.",
   },
 ];
 const juradoVisible = jurado.filter((j) => j.img);
