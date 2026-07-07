@@ -71,7 +71,7 @@ const groups: Group[] = [
   {
     id: "comite-ficc",
     title: "Comité FICC Los Cabos",
-    accent: "var(--color-teal)",
+    accent: "var(--color-orange)",
     people: [
       { name: "Johanna Murillo", role: "Comité FICC Los Cabos", tbc: true },
     ],
@@ -79,7 +79,7 @@ const groups: Group[] = [
   {
     id: "la-baja-inspira",
     title: "La Baja Inspira",
-    accent: "var(--color-blue)",
+    accent: "var(--color-orange)",
     people: [
       { name: "Juan Patricio Riveroll", role: "Comité de selección", image: "/images/comunidad/juan-patricio-riveroll.jpg" },
       { name: "Iván Carrillo", role: "Comité de selección", image: "/images/comunidad/ivan-carrillo.jpg" },
@@ -98,7 +98,7 @@ const groups: Group[] = [
   {
     id: "programa-de-cine",
     title: "Programa de cine",
-    accent: "var(--color-teal)",
+    accent: "var(--color-orange)",
     people: [
       { name: "Salvador Amores", role: "Coordinador de programación", image: "/images/comunidad/salvador-amores.jpg" },
     ],
@@ -106,7 +106,7 @@ const groups: Group[] = [
   {
     id: "ffgf",
     title: "Fondo Fílmico Gabriel Figueroa",
-    accent: "var(--color-wine)",
+    accent: "var(--color-orange)",
     people: [
       { name: "Elena Fortes", image: "/images/comunidad/elena-fortes.jpg" },
       { name: "Juan Pablo Bastarrachea", image: "/images/comunidad/juan-pablo-bastarrachea.jpg" },
@@ -134,7 +134,7 @@ const groups: Group[] = [
   {
     id: "community-leaders",
     title: "Community Leaders",
-    accent: "var(--color-acid)",
+    accent: "var(--color-orange)",
     people: [
       { name: "Mario Escobar", tbc: true },
       { name: "Romina Sacre", image: "/images/comunidad/romina-sacre.jpg" },

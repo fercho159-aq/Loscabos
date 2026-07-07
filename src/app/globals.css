@@ -4864,14 +4864,14 @@ body {
 
 .campus-plate {
   position: relative;
-  flex: 1 1 calc(50% - 1rem);
+  flex: 0 1 calc(50% - 1rem);
   min-width: 0;
   display: flex;
   flex-direction: column;
 }
 
 .campus-plate.is-feature {
-  flex: 1 1 calc(50% - 1rem);
+  flex: 0 1 calc(50% - 1rem);
 }
 
 .campus-moment-grid.is-solo .campus-plate {
