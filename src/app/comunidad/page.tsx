@@ -128,7 +128,7 @@ const groups: Group[] = [
       { name: "Ximena Lamadrid", image: "/images/comunidad/ximena-lamadrid.jpg" },
       { name: "David Zonana", image: "/images/comunidad/david-zonana.jpg" },
       { name: "Damián Romero", image: "/images/comunidad/damian-romero.jpg" },
-      { name: "Anamaria Sayre", image: "/images/comunidad/anamaria-sayre.jpg" },
+      { name: "Ana Maria Sayre", image: "/images/comunidad/anamaria-sayre.jpg" },
       { name: "Romina Sacre", image: "/images/comunidad/romina-sacre.jpg" },
     ],
   },
