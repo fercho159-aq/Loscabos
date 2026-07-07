@@ -108,12 +108,12 @@ const groups: Group[] = [
     title: "Fondo Fílmico Gabriel Figueroa",
     accent: "var(--color-wine)",
     people: [
-      { name: "Elena Fortes", tbc: true },
+      { name: "Elena Fortes", image: "/images/comunidad/elena-fortes.jpg" },
       { name: "Juan Pablo Bastarrachea", tbc: true },
-      { name: "Bruno Santamaría", tbc: true },
+      { name: "Bruno Santamaría Razo", tbc: true },
       { name: "Ximena Urrutia Partida", tbc: true },
       { name: "Michel Lipkes Leduc", tbc: true },
-      { name: "Nico Celis", tbc: true },
+      { name: "Nico Celis", image: "/images/comunidad/nico-celis.jpg" },
     ],
   },
   {
@@ -128,6 +128,7 @@ const groups: Group[] = [
       { name: "David Zonana", image: "/images/comunidad/david-zonana.jpg" },
       { name: "Damián Romero", image: "/images/comunidad/damian-romero.jpg" },
       { name: "Anamaria Sayre", image: "/images/comunidad/anamaria-sayre.jpg" },
+      { name: "Romina Sacre", image: "/images/comunidad/romina-sacre.jpg" },
     ],
   },
   {
@@ -136,7 +137,6 @@ const groups: Group[] = [
     accent: "var(--color-acid)",
     people: [
       { name: "Mario Escobar", tbc: true },
-      { name: "Romina Sacre", tbc: true },
     ],
   },
 ];
