@@ -46,8 +46,7 @@ export const metadata: Metadata = {
    ESTRUCTURA: directorio agrupado por afiliación. Cada grupo muestra su
    título; separación entre grupos solo con espacio. El rol por persona
    solo se pinta si la persona lo trae (`role`). Grupos sin personas
-   visibles (todas tbc) no se renderizan — hoy: Comité FICC (Johanna tbc)
-   y Community Leaders.
+   visibles (todas tbc) no se renderizan — hoy: Comité FICC (Johanna tbc).
    ────────────────────────────────────────────────────────────── */
 
 type Person = {
@@ -129,14 +128,6 @@ const groups: Group[] = [
       { name: "David Zonana", image: "/images/comunidad/david-zonana.jpg" },
       { name: "Damián Romero", image: "/images/comunidad/damian-romero.jpg" },
       { name: "Ana Maria Sayre", image: "/images/comunidad/anamaria-sayre.jpg" },
-    ],
-  },
-  {
-    id: "community-leaders",
-    title: "Community Leaders",
-    accent: "var(--color-orange)",
-    people: [
-      { name: "Mario Escobar", tbc: true },
       { name: "Romina Sacre", image: "/images/comunidad/romina-sacre.jpg" },
     ],
   },
