@@ -35,10 +35,10 @@ export const metadata: Metadata = {
 /* ──────────────────────────────────────────────────────────────
    COMUNIDAD FICC — directorio de personas, agrupado por afiliación.
 
-   FOTOS (pendientes — el cliente las envía): formato 1:1 (cuadradas),
-   van en /public/images/comunidad/ con el slug del nombre + .jpg
-   (ej. juan-patricio-riveroll.jpg). Sin `image` la tarjeta muestra un
-   placeholder con las iniciales.
+   FOTOS: formato 1:1 (cuadradas), van en /public/images/comunidad/ con
+   el slug del nombre + .jpg (ej. juan-patricio-riveroll.jpg).
+   Sin `image` la persona NO se renderiza (regla del cliente: solo
+   aparece quien tiene foto).
 
    `tbc: true` → "Pendiente" / "Falta información": NO se renderiza aún,
    queda en los datos para activar quitando `tbc`.
@@ -141,8 +141,8 @@ const groups: Group[] = [
   },
 ];
 
-// Grupos con al menos una persona visible (los que son todo `tbc` no se pintan).
-const visibleGroups = groups.filter((group) => group.people.some((p) => !p.tbc));
+// Solo se pintan personas con foto; grupos sin ninguna persona con foto no se pintan.
+const visibleGroups = groups.filter((group) => group.people.some((p) => !p.tbc && p.image));
 
 function initials(name: string) {
   const parts = name
@@ -185,7 +185,7 @@ export default function Comunidad() {
             espacio entre grupos ── */}
         <section className="comunidad-groups">
           {visibleGroups.map((group) => {
-            const visible = group.people.filter((p) => !p.tbc);
+            const visible = group.people.filter((p) => !p.tbc && p.image);
             return (
                 <div
                   key={group.id}
