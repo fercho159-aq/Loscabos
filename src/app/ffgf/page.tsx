@@ -99,10 +99,41 @@ const perfiles = [
   { title: "Tempestad (2015)", director: "Tatiana Huezo", desc: "Impulsada en etapa de Work in Progress. Mención Especial en la Berlinale y ganadora de 3 Premios Ariel.", tag: "Ganadora FFGF", still: "/images/stills/tempestad.jpg" },
 ];
 
+// Jurado FFGF 2026. Fotos en /images/comunidad (1:1), se muestran en B&W.
+// Sin `img` la persona no se renderiza (Bruno Santamaría: pendiente de foto).
+const jurado = [
+  {
+    name: "Elena Fortes",
+    img: "/images/comunidad/elena-fortes.jpg",
+    desc: "Productora creativa y estratega cultural con más de 15 años de trayectoria. Cofundó y dirigió AMBULANTE entre 2005 y 2016, impulsando la cultura del cine documental en México. Su labor ha sido reconocida con premios como el Prince Claus y el Human Rights Award de WOLA.",
+  },
+  {
+    name: "Bruno Santamaría",
+    desc: "Director, productor y fotógrafo mexicano. Su cine explora la frontera entre documental y ficción desde la intimidad, la memoria y los secretos. Dirigió Seis meses en el edificio rosa con azul, estrenada en la Semana de la Crítica de Cannes, y premiada por el FFGF.",
+  },
+  {
+    name: "Nico Celis",
+    img: "/images/comunidad/nico-celis.jpg",
+    desc: "Uno de los productores de cine más destacados de México. Fundador de Pimienta Films, es reconocido internacionalmente por producir la galardonada película Roma de Alfonso Cuarón, además de Noche de fuego y Pájaros de verano, impulsando con fuerza el cine de autor.",
+  },
+  {
+    name: "Juan Pablo Bastarrachea",
+    img: "/images/comunidad/juan-pablo-bastarrachea.jpg",
+    desc: "Gestor cultural y productor que cofundó el Cine Tonalá en 2012. Licenciado en Comunicación Audiovisual, cuenta con más de 20 años de trayectoria impulsando el cine independiente en México y Colombia, además de destacar como docente y promotor de la cultura.",
+  },
+  {
+    name: "Alfredo Ruiz",
+    img: "/images/comunidad/alfredo-ruiz.jpg",
+    desc: "Director y fundador de ESCINE (Escuela de Cine y Narrativa Visual) en México. Es un destacado cineasta, docente y promotor cultural, reconocido por impulsar la formación de nuevas generaciones en el cine independiente y las artes visuales en el país.",
+  },
+];
+const juradoVisible = jurado.filter((j) => j.img);
+
 export default function FFGF() {
   return (
     <div className="ffgf-page">
-      <style>{`html, body { background: #fff !important; }`}</style>
+      <style>{`html, body { background: #fff !important; }
+        .ffgf-jurado .lbi-jurado-row__media img { filter: grayscale(100%); }`}</style>
       <Navbar />
 
       <PageHero lines={["Fondo Fílmico", "Gabriel Figueroa"]} hideStrip short bgVideo={{ webm: "/images/ffgf-banner.webm", mp4: "/images/ffgf-banner.mp4", poster: "/images/ffgf-banner-poster.jpg" }} />
@@ -139,6 +170,40 @@ export default function FFGF() {
         </div>
       </section>
 
+
+      {/* Jurado FFGF 2026 — reutiliza el patrón lbi-jurado (fondo oscuro, filas
+          alternadas foto+bio). Fotos en B&W vía filtro scoped .ffgf-jurado. */}
+      <section className="lbi-jurado-section ffgf-jurado overflow-x-clip">
+        <div className="lbi-jurado-header">
+          <span data-anim="ffgf-jurado-eyebrow" className="lbi-jurado-eyebrow">Jurado</span>
+          <h2 data-anim="ffgf-jurado-title" className="lbi-jurado-title">Jurado 2026</h2>
+        </div>
+        <div className="lbi-jurado-eje" style={{ borderTop: "none", paddingTop: 0 }}>
+          <div className="lbi-jurado-rows">
+            {juradoVisible.map((m, idx) => (
+              <div
+                key={m.name}
+                data-anim="ffgf-jurado-row"
+                className={`lbi-jurado-row${idx % 2 === 1 ? " lbi-jurado-row--reverse" : ""}`}
+              >
+                <div className="lbi-jurado-row__media">
+                  <Image
+                    src={m.img!}
+                    alt={`${m.name} — Jurado del Fondo Fílmico Gabriel Figueroa, FICC Los Cabos`}
+                    fill
+                    sizes="(max-width: 768px) 320px, 480px"
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+                <div className="lbi-jurado-row__body">
+                  <h4 className="lbi-jurado-name">{m.name}</h4>
+                  <p className="lbi-jurado-desc">{m.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Legado FFGF — dark section pattern (matches la-baja-inspira legado) */}
       <section className="relative w-full flex flex-col overflow-hidden" style={{ background: "#0A1E23" }}>

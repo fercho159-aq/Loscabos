@@ -266,6 +266,35 @@ export default function FFGFAnimations() {
         });
       });
 
+      // ── JURADO 2026: eyebrow + título + filas fade-up ──
+      const juradoHead = gsap.utils.toArray<HTMLElement>(
+        '[data-anim="ffgf-jurado-eyebrow"], [data-anim="ffgf-jurado-title"]'
+      );
+      juradoHead.forEach((el) => {
+        gsap.set(el, { opacity: 0, y: 20 });
+        ScrollTrigger.create({
+          trigger: el,
+          start: "top 88%",
+          once: true,
+          onEnter: () => {
+            gsap.to(el, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out", force3D: true, overwrite: "auto" });
+          },
+        });
+      });
+
+      const juradoRows = gsap.utils.toArray<HTMLElement>('[data-anim="ffgf-jurado-row"]');
+      juradoRows.forEach((row) => {
+        gsap.set(row, { opacity: 0, y: 40 });
+        ScrollTrigger.create({
+          trigger: row,
+          start: "top 85%",
+          once: true,
+          onEnter: () => {
+            gsap.to(row, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out", force3D: true, overwrite: "auto" });
+          },
+        });
+      });
+
     });
 
     // Recalcula posiciones de los triggers tras asentarse la maquetación
