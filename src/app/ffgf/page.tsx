@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import FFGFAnimations from "@/components/FFGFAnimationsLazy";
-import SubscribeCTA from "@/components/SubscribeCTA";
+import FFGFConvocatoriaCTA from "@/components/FFGFConvocatoriaCTA";
 
 export const metadata: Metadata = {
   title: "Fondo Fílmico Gabriel Figueroa | Financiamiento Cinematográfico",
@@ -99,8 +99,8 @@ const perfiles = [
   { title: "Tempestad (2015)", director: "Tatiana Huezo", desc: "Impulsada en etapa de Work in Progress. Mención Especial en la Berlinale y ganadora de 3 Premios Ariel.", tag: "Ganadora FFGF", still: "/images/stills/tempestad.jpg" },
 ];
 
-// Jurado FFGF 2026. Fotos en /images/comunidad (1:1), se muestran en B&W.
-// Sin `img` la persona no se renderiza (Bruno Santamaría: pendiente de foto).
+// Jurado FFGF 2026. Fotos en /images/comunidad (1:1), se muestran en B&W
+// (filtro scoped .ffgf-jurado). Sin `img` la persona no se renderiza.
 const jurado = [
   {
     name: "Elena Fortes",
@@ -125,7 +125,17 @@ const jurado = [
   {
     name: "Alfredo Ruiz",
     img: "/images/comunidad/alfredo-ruiz.jpg",
-    desc: "Director de la licenciatura en cine y fundador de ESCINE (Escuela de Cine y Narrativa Visual) en México. Es un destacado cineasta, docente y promotor cultural, reconocido por impulsar la formación de nuevas generaciones en el cine independiente y las artes visuales en el país.",
+    desc: "Director de la licenciatura en cine (Escuela de Cine y Narrativa Visual) en México. Es un destacado cineasta, docente y promotor cultural, reconocido por impulsar la formación de nuevas generaciones en el cine independiente y las artes visuales en el país.",
+  },
+  {
+    name: "María José Cuevas",
+    img: "/images/comunidad/maria-jose-cuevas.jpg",
+    desc: "Destacada directora y documentalista mexicana. Saltó a la fama internacional con su aclamado documental Bellas de noche (2016), nominado al Premio Ariel. Su trabajo visual explora con sensibilidad la memoria, la cultura pop y la condición humana.",
+  },
+  {
+    name: "Cristina Velasco",
+    img: "/images/comunidad/cristina-velasco.jpg",
+    desc: "Es una reconocida productora cinematográfica mexicana con más de veinte años de trayectoria. Fundadora de Paloma Negra Films, ha liderado multipremiados largometrajes, series de televisión y coproducciones internacionales.",
   },
 ];
 const juradoVisible = jurado.filter((j) => j.img);
@@ -156,17 +166,9 @@ export default function FFGF() {
               y conexi&oacute;n profesional entre M&eacute;xico y el mundo, proyectando el talento de M&eacute;xico a la escena internacional.
             </p>
             <div data-anim="ffgf-dates" className="section-dates">
-              <p style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.05rem, 1.8vw, 1.5rem)", color: "#000", lineHeight: 1.4, fontWeight: 400, marginBottom: "1rem" }}>Apertura de convocatoria: 24 de julio de 2026</p>
+              <p style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(1.05rem, 1.8vw, 1.5rem)", color: "#000", lineHeight: 1.4, fontWeight: 400, marginBottom: "1rem" }}>Apertura de convocatoria: 24 de julio</p>
             </div>
-            <SubscribeCTA
-              source="ffgf"
-              label="Sé el primero en recibir la información de la convocatoria"
-              title="Fondo Fílmico Gabriel Figueroa 2026"
-              description="Déjanos tus datos y recibe la información de la convocatoria FFGF en cuanto se abra."
-              className="cta-button"
-              dataAnim="ffgf-cta"
-              style={{ marginTop: "1.5rem" }}
-            />
+            <FFGFConvocatoriaCTA />
           </div>
         </div>
       </section>
