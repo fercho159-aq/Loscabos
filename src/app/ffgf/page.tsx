@@ -110,7 +110,7 @@ const jurado = [
   {
     name: "Bruno Santamaría",
     img: "/images/comunidad/bruno-santamaria.jpg",
-    desc: "Director, productor y fotógrafo mexicano. Su cine explora la frontera entre documental y ficción desde la intimidad, la memoria y los secretos. Dirigió Seis meses en el edificio rosa con azul, estrenada en la Semana de la Crítica de Cannes, y premiada por el FFGF.",
+    desc: "Director, productor y fotógrafo mexicano. Su cine explora la frontera entre documental y ficción desde la intimidad, la memoria y los secretos. Dirigió Seis meses en el edificio rosa con azul, estrenada en la Semana de la Crítica de Cannes 2026, y premiada por el FFGF.",
   },
   {
     name: "Nico Celis",
