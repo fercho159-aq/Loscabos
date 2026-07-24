@@ -9,6 +9,7 @@ import SubscribeCTA from "./SubscribeCTA";
    (useEffect) para no romper la hidratación ni depender del build. */
 const OPEN_AT = Date.parse("2026-07-24T00:00:00-07:00");
 const FORM_URL = "https://forms.gle/FAhDCdrZASmN5HnDA";
+const CONVOCATORIA_PDF = "/docs/convocatoria-ffgf-2026.pdf";
 
 export default function FFGFConvocatoriaCTA() {
   const [open, setOpen] = useState(false);
@@ -43,9 +44,10 @@ export default function FFGFConvocatoriaCTA() {
         Aplica ahora
       </a>
       <a
-        href={FORM_URL}
+        href={CONVOCATORIA_PDF}
         target="_blank"
         rel="noopener noreferrer"
+        download
         style={{
           fontFamily: "var(--font-inter)",
           fontSize: "clamp(.95rem, 1.4vw, 1.05rem)",
