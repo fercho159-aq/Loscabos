@@ -46,7 +46,8 @@ export const metadata: Metadata = {
    ESTRUCTURA: directorio agrupado por afiliación. Cada grupo muestra su
    título; separación entre grupos solo con espacio. El rol por persona
    solo se pinta si la persona lo trae (`role`). Grupos sin personas
-   visibles (todas tbc) no se renderizan — hoy: Comité FICC (Johanna tbc).
+   visibles (todas tbc o vacías) no se renderizan — hoy: Jalisco, Austin,
+   Canadá (sin personas) y los pendientes de cada grupo.
    ────────────────────────────────────────────────────────────── */
 
 type Person = {
@@ -67,14 +68,6 @@ type Group = {
 };
 
 const groups: Group[] = [
-  {
-    id: "comite-ficc",
-    title: "Comité FICC Los Cabos",
-    accent: "var(--color-orange)",
-    people: [
-      { name: "Johanna Murillo", role: "Comité FICC Los Cabos", tbc: true },
-    ],
-  },
   {
     id: "la-baja-inspira",
     title: "La Baja Inspira",
@@ -99,15 +92,14 @@ const groups: Group[] = [
     title: "Fondo Fílmico Gabriel Figueroa",
     accent: "var(--color-orange)",
     people: [
-      { name: "Bruno Santamaría Razo", image: "/images/comunidad/bruno-santamaria.jpg" },
-      { name: "Elena Fortes", image: "/images/comunidad/elena-fortes.jpg" },
-      { name: "Nico Celis", image: "/images/comunidad/nico-celis.jpg" },
-      { name: "Juan Pablo Bastarrachea", image: "/images/comunidad/juan-pablo-bastarrachea.jpg" },
-      { name: "Alfredo Ruiz", image: "/images/comunidad/alfredo-ruiz.jpg" },
       { name: "Cristina Velasco", image: "/images/comunidad/cristina-velasco.jpg" },
       { name: "María José Cuevas", image: "/images/comunidad/maria-jose-cuevas.jpg" },
-      { name: "Ximena Urrutia Partida", tbc: true },
-      { name: "Michel Lipkes Leduc", tbc: true },
+      { name: "Nico Celis", image: "/images/comunidad/nico-celis.jpg" },
+      { name: "Juan Pablo Bastarrachea", image: "/images/comunidad/juan-pablo-bastarrachea.jpg" },
+      { name: "Bruno Santamaría Razo", image: "/images/comunidad/bruno-santamaria.jpg" },
+      { name: "Elena Fortes", image: "/images/comunidad/elena-fortes.jpg" },
+      { name: "Juan Patricio Riveroll", image: "/images/comunidad/juan-patricio-riveroll.jpg" },
+      { name: "Alfredo Ruiz", image: "/images/comunidad/alfredo-ruiz.jpg" },
     ],
   },
   {
@@ -117,6 +109,24 @@ const groups: Group[] = [
     people: [
       { name: "Salvador Amores", role: "Coordinador de programación", image: "/images/comunidad/salvador-amores.jpg" },
     ],
+  },
+  {
+    id: "jalisco",
+    title: "Jalisco",
+    accent: "var(--color-orange)",
+    people: [],
+  },
+  {
+    id: "austin",
+    title: "Austin",
+    accent: "var(--color-orange)",
+    people: [],
+  },
+  {
+    id: "canada",
+    title: "Canadá",
+    accent: "var(--color-orange)",
+    people: [],
   },
   {
     id: "speakers",
@@ -142,6 +152,8 @@ const groups: Group[] = [
       { name: "Álvaro Martínez", image: "/images/comunidad/alvaro-martinez.jpg" },
       { name: "Pablo Díaz de León Hicks", image: "/images/comunidad/pablo-diaz-de-leon-hicks.jpg" },
       { name: "Eliseo Hagerman", image: "/images/comunidad/eliseo-hagerman.jpg" },
+      { name: "Johanna Murillo", tbc: true },
+      { name: "Mario Escobar", tbc: true },
     ],
   },
 ];
