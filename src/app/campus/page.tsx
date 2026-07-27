@@ -111,7 +111,6 @@ const moments: Moment[] = [
     venues: [
       { name: "Zadún Los Cabos, a Ritz-Carlton Reserve", image: "/images/campus/zadun.jpg" },
       { name: "JW Marriott Los Cabos", image: "/images/campus/jw-marriott.jpg", tbc: true },
-      { name: "CRANIA", image: "/images/campus/crania.jpg" },
     ],
   },
   {

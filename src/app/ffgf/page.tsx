@@ -86,6 +86,10 @@ const aliadosFFGF = [
   { name: "CineNet", logo: "/images/aliados/FICC_Logos_Aliados_2026-11.png" },
   { name: "Chemistry", logo: "/images/aliados/FICC_Logos_Aliados_2026-10.png" },
   { name: "Pimienta Films", logo: "/images/aliados/FICC_Logos_Aliados_2026-pimienta-films.png" },
+  { name: "Hotel El Ganzo", logo: "/images/aliados/FICC_Logos_Aliados_2026-elganzo.png" },
+  { name: "Filma Jalisco", logo: "/images/aliados/FICC_Logos_Aliados_2026-filma-jalisco.png" },
+  { name: "Cabo Mil", logo: "/images/aliados/FICC_Logos_Aliados_2026-cabomil.png" },
+  { name: "Exa", logo: "/images/aliados/FICC_Logos_Aliados_2026-exa.png" },
 ];
 const aliadosFFGFTrack = [...aliadosFFGF, ...aliadosFFGF];
 
