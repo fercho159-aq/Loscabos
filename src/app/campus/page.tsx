@@ -38,15 +38,15 @@ export const metadata: Metadata = {
 };
 
 /* ──────────────────────────────────────────────────────────────
-   CAMPUS FICC — Sedes, organizadas como el arco de un día de festival:
-   Día (sede principal) → Mediodía (brunch) → Atardecer → Noche (cena).
-   El fondo viaja de la luz a la oscuridad conforme avanza el recorrido.
+   CAMPUS FICC — Una sola sección ("Nuestro Campus") con la lista de
+   sedes en el orden en que se muestran. Antes estaban divididas por
+   momento del día (Brunch / Sunset Events / Cena Inaugural); esas
+   subsecciones se eliminaron.
 
    IMÁGENES en /public/images/campus/ (ya optimizadas).
 
-   TBC (tbc: true) — NO se publican aún (FASE 2 · 1 jul). Quedan en los
-   datos con su imagen ya cargada; para activarlas, quitar `tbc`.
-   En cada momento, la primera sede visible se muestra como "feature".
+   TBC (tbc: true) — no se renderizan (falta foto o confirmación).
+   Para publicar una sede, cargar su imagen y quitar `tbc`.
    ────────────────────────────────────────────────────────────── */
 
 type Venue = {
@@ -83,45 +83,13 @@ const moments: Moment[] = [
     venues: [
       { name: "Cinépolis San José del Cabo", image: "/images/campus/cinepolis-sjc.jpg" },
       { name: "Hotel El Ganzo", image: "/images/campus/el-ganzo.jpg" },
-      { name: "JW Marriott Los Cabos", image: "/images/campus/jw-marriott.jpg", tbc: true },
       { name: "Hotel Tropicana", image: "/images/campus/tropicana.jpg" },
-    ],
-  },
-  {
-    id: "brunch",
-    phase: "midday",
-    time: "Mediodía",
-    name: "Brunch",
-    kicker: "Mesa larga, sol alto y conversaciones que encienden ideas.",
-    accent: "var(--color-acid)",
-    venues: [
-      { name: "JW Marriott Los Cabos", image: "/images/campus/jw-marriott.jpg", tbc: true },
-      { name: "Sage", image: "/images/campus/sage.jpg" },
-      { name: "Jetty · Hotel El Ganzo", image: "/images/campus/jetty-el-ganzo.jpg" },
-      { name: "Hotel Tropicana", image: "/images/campus/tropicana.jpg" },
-    ],
-  },
-  {
-    id: "sunset-events",
-    phase: "sunset",
-    time: "Atardecer",
-    name: "Sunset Events",
-    kicker: "La hora dorada, frente al mar de Cortés.",
-    accent: "var(--color-peach)",
-    venues: [
-      { name: "Zadún Los Cabos, a Ritz-Carlton Reserve", image: "/images/campus/zadun.jpg" },
-      { name: "JW Marriott Los Cabos", image: "/images/campus/jw-marriott.jpg", tbc: true },
-    ],
-  },
-  {
-    id: "cena-inaugural",
-    phase: "night",
-    time: "Noche",
-    name: "Cena Inaugural",
-    kicker: "El gran arranque, bajo el cielo de Baja.",
-    accent: "var(--color-wine)",
-    venues: [
+      { name: "Campus Jalisco: JW Marriott Los Cabos", image: "/images/campus/jw-marriott.jpg" },
+      // Flora Farms: falta la foto. Al cargarla en /images/campus/flora-farms.jpg, quitar `tbc`.
+      { name: "Flora Farms", image: "/images/campus/flora-farms.jpg", tbc: true },
       { name: "Suelo Sur", image: "/images/campus/suelo-sur.jpg" },
+      { name: "Sage", image: "/images/campus/sage.jpg" },
+      { name: "Zadún Los Cabos, a Ritz-Carlton Reserve", image: "/images/campus/zadun.jpg" },
     ],
   },
 ];

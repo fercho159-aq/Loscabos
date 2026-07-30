@@ -77,8 +77,12 @@ export const metadata: Metadata = {
   },
 };
 
+// Pleca de aliados del FFGF, en el orden que se muestra.
+// `bw: true` pinta el logo en blanco y negro (filtro CSS, el archivo queda a color).
 const aliadosFFGF = [
+  { name: "IMCINE", logo: "/images/aliados/FICC_Logos_Aliados_2026-02.png", bw: true },
   { name: "ESCINE", logo: "/images/aliados/FICC_Logos_Aliados_2026-05.png" },
+  { name: "Hotel El Ganzo", logo: "/images/aliados/FICC_Logos_Aliados_2026-elganzo.png" },
   { name: "Artegios", logo: "/images/aliados/FICC_Logos_Aliados_2026-09.png" },
   { name: "Art Kingdom", logo: "/images/aliados/FICC_Logos_Aliados_2026-06.png" },
   { name: "CTT Exp & Rentals", logo: "/images/aliados/FICC_Logos_Aliados_2026-07.png" },
@@ -86,7 +90,6 @@ const aliadosFFGF = [
   { name: "CineNet", logo: "/images/aliados/FICC_Logos_Aliados_2026-11.png" },
   { name: "Chemistry", logo: "/images/aliados/FICC_Logos_Aliados_2026-10.png" },
   { name: "Pimienta Films", logo: "/images/aliados/FICC_Logos_Aliados_2026-pimienta-films.png" },
-  { name: "Hotel El Ganzo", logo: "/images/aliados/FICC_Logos_Aliados_2026-elganzo.png" },
   { name: "Filma Jalisco", logo: "/images/aliados/FICC_Logos_Aliados_2026-filma-jalisco.png" },
   { name: "Cabo Mil", logo: "/images/aliados/FICC_Logos_Aliados_2026-cabomil.png" },
   { name: "Exa", logo: "/images/aliados/FICC_Logos_Aliados_2026-exa.png" },
@@ -281,7 +284,7 @@ export default function FFGF() {
             {aliadosFFGFTrack.map((a, i) => (
               <div key={`${a.name}-${i}`} className="aliado-slide">
                 <Image src={a.logo} alt={`Logo de ${a.name}, aliado del FICC Los Cabos`} width={320} height={220} sizes="(max-width: 768px) 320px, 240px" loading="lazy"
-                  style={{ width: "auto", maxHeight: 170, height: "auto", objectFit: "contain" }} />
+                  style={{ width: "auto", maxHeight: 170, height: "auto", objectFit: "contain", filter: a.bw ? "grayscale(100%)" : undefined }} />
               </div>
             ))}
           </div>
