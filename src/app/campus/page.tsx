@@ -85,8 +85,7 @@ const moments: Moment[] = [
       { name: "Hotel El Ganzo", image: "/images/campus/el-ganzo.jpg" },
       { name: "Hotel Tropicana", image: "/images/campus/tropicana.jpg" },
       { name: "Campus Jalisco: JW Marriott Los Cabos", image: "/images/campus/jw-marriott.jpg" },
-      // Flora Farms: falta la foto. Al cargarla en /images/campus/flora-farms.jpg, quitar `tbc`.
-      { name: "Flora Farms", image: "/images/campus/flora-farms.jpg", tbc: true },
+      { name: "Flora Farms", image: "/images/campus/flora-farms.jpg" },
       { name: "Suelo Sur", image: "/images/campus/suelo-sur.jpg" },
       { name: "Sage", image: "/images/campus/sage.jpg" },
       { name: "Zadún Los Cabos, a Ritz-Carlton Reserve", image: "/images/campus/zadun.jpg" },
