@@ -141,6 +141,11 @@ const jurado = [
     img: "/images/comunidad/cristina-velasco.jpg",
     desc: "Es una reconocida productora cinematográfica mexicana con más de veinte años de trayectoria. Fundadora de Paloma Negra Films, ha liderado multipremiados largometrajes, series de televisión y coproducciones internacionales.",
   },
+  {
+    name: "Raúl Orozco Magaña",
+    img: "/images/comunidad/raul-orozco-magana.jpg",
+    desc: "Maestro y especialista en políticas públicas cinematográficas. Actualmente es Gerente de Estímulos y Desarrollo en FILMA Jalisco y candidato a doctor con una investigación sobre la política cinematográfica en México.",
+  },
 ];
 const juradoVisible = jurado.filter((j) => j.img);
 
