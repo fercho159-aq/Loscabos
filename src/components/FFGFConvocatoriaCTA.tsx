@@ -11,6 +11,23 @@ const OPEN_AT = Date.parse("2026-07-24T00:00:00-07:00");
 const FORM_URL = "https://forms.gle/FAhDCdrZASmN5HnDA";
 const CONVOCATORIA_PDF = "/docs/convocatoria-ffgf-2026.pdf";
 
+/* Conversión Google Ads: "Registro Fondo Fílmico — clic Aplica ahora".
+   El botón abre el formulario en pestaña nueva, así que no hay que retrasar
+   la navegación; si gtag aún no cargó simplemente no se dispara. */
+const CONVERSION_ID = "AW-17633221839/TXV7CIHd79gcEM-5lthB";
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+function reportConversion() {
+  if (typeof window.gtag === "function") {
+    window.gtag("event", "conversion", { send_to: CONVERSION_ID });
+  }
+}
+
 export default function FFGFConvocatoriaCTA() {
   const [open, setOpen] = useState(false);
 
@@ -40,6 +57,7 @@ export default function FFGFConvocatoriaCTA() {
         rel="noopener noreferrer"
         className="cta-button"
         data-anim="ffgf-cta"
+        onClick={reportConversion}
       >
         Aplica ahora
       </a>
