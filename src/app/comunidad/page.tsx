@@ -247,9 +247,12 @@ export default function Comunidad() {
                         )}
                       </div>
                       <h3 className="cm-name">{person.name}</h3>
-                      {person.role && (
-                        <p className="cm-role">{person.role}</p>
-                      )}
+                     {person.role && (
+  <p 
+    className="cm-role" 
+    dangerouslySetInnerHTML={{ __html: person.role }} 
+  />
+)}
                     </article>
                   ))}
                   </div>
