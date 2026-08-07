@@ -93,8 +93,8 @@ const groups: Group[] = [
     accent: "var(--color-orange)",
     people: [
      
-  { name: "Alejandro Tavares", role: "Director General <br> Filma Jalisco", image: "/images/comunidad/alejandro-tavares.jpg" },
-  { name: "Raúl Orozco Magaña", role: "Gerente de Estímulos y Desarrollo para la Industria Fílmica y Audiovisual <br> Filma Jalisco", image: "/images/comunidad/raul-orozco-magana.jpg" },
+  { name: "Alejandro Tavares", role: "Director General <br> FILMA Jalisco", image: "/images/comunidad/alejandro-tavares.jpg" },
+  { name: "Raúl Orozco Magaña", role: "Gerente de Estímulos y Desarrollo para la Industria Fílmica y Audiovisual <br> FILMA Jalisco", image: "/images/comunidad/raul-orozco-magana.jpg" },
   { name: "Alfredo Aceves Fernández", role: "Director General <br> Ciudad Creativa Digital", image: "/images/comunidad/alfredo-aceves.jpg" },
   { name: "Fernando Lebrija", role: "Fundador <br> Irreversible Pictures", image: "/images/comunidad/fernando-lebrija.jpg" },
   { name: "Noemí Pizano", role: "Ciudad Creativa Digital", tbc: true },
