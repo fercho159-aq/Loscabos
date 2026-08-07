@@ -89,7 +89,7 @@ const groups: Group[] = [
   },
   {
     id: "industria",
-    title: "Industria",
+    title: "Jalisco",
     accent: "var(--color-orange)",
     people: [
       { name: "Alejandro Tavares", role: "Director General — Filma Jalisco", image: "/images/comunidad/alejandro-tavares.jpg" },
