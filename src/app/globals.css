@@ -5575,6 +5575,7 @@ body {
 .gplgi-section--white { background: #fff; }
 .gplgi-section--cream { background: var(--color-cream); }
 .gplgi-section--dark { background: var(--gplgi-dark); color: var(--color-cream); }
+.gplgi-page .aliados-plaque { background: var(--color-cream); }
 
 /* ── Tipografía ── */
 .gplgi-eyebrow {
