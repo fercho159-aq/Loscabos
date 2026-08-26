@@ -18,13 +18,14 @@ export const metadata: Metadata = {
   },
 };
 
-// Quienes convocan. Se muestran en grid estático (son 4, un carrusel se ve vacío).
-const convocan = [
-  { name: "Lemon Studios", role: "Casa productora", logo: "/images/aliados/FICC_Logos_Aliados_2026-lemon-films.png" },
-  { name: "Irreversible Pictures", role: "Casa productora", logo: "/images/aliados/FICC_Logos_Aliados_2026-irreversible-pictures.png" },
-  { name: "Filma Jalisco", role: "Aliado", logo: "/images/aliados/FICC_Logos_Aliados_2026-filma-jalisco.png" },
-  { name: "ESCINE", role: "Aliado", logo: "/images/aliados/FICC_Logos_Aliados_2026-05.png" },
+// Aliados de la convocatoria (carrusel infinito, mismo patrón que FFGF).
+const aliadosGPLGI = [
+  { name: "Lemon Studios", logo: "/images/aliados/FICC_Logos_Aliados_2026-lemon-films.png" },
+  { name: "Irreversible Pictures", logo: "/images/aliados/FICC_Logos_Aliados_2026-irreversible-pictures.png" },
+  { name: "Filma Jalisco", logo: "/images/aliados/FICC_Logos_Aliados_2026-filma-jalisco.png" },
+  { name: "ESCINE", logo: "/images/aliados/FICC_Logos_Aliados_2026-05.png" },
 ];
+const aliadosGPLGITrack = [...aliadosGPLGI, ...aliadosGPLGI];
 
 const datos = [
   { value: "$150,000", unit: "MXN", label: "Estímulo económico" },
@@ -200,31 +201,30 @@ export default function GuionParaLaGranIndustria() {
         </div>
       </section>
 
-      {/* ── CONVOCAN ── */}
-      <section id="gplgi-convocan" className="gplgi-convocan">
-        <div className="gplgi-container">
-          <div className="gplgi-convocan__head" data-anim="gplgi-reveal">
-            <span className="gplgi-eyebrow">Convocan</span>
-            <p className="gplgi-body">
-              Productoras y aliados que hacen posible impulsar el talento guionístico mexicano.
-            </p>
-          </div>
-          <ul className="gplgi-convocan__grid" data-anim="gplgi-stagger">
-            {convocan.map((a) => (
-              <li key={a.name} className="gplgi-convocan__item" data-anim="gplgi-stagger-item">
+      {/* ── ALIADOS: pleca + carrusel infinito (patrón del sitio) ── */}
+      <section className="aliados-plaque">
+        <p
+          className="aliados-plaque-quote"
+          style={{ fontSize: "clamp(1.2rem, 2vw, 1.6rem)", fontWeight: 400 }}
+        >
+          Con el apoyo de aliados estratégicos que hacen posible impulsar el talento guionístico mexicano.
+        </p>
+        <div className="aliados-carousel">
+          <div className="aliados-track">
+            {aliadosGPLGITrack.map((a, i) => (
+              <div key={`${a.name}-${i}`} className="aliado-slide">
                 <Image
                   src={a.logo}
-                  alt={`Logo de ${a.name}`}
+                  alt={`Logo de ${a.name}, aliado de Guión para la Gran Industria`}
                   width={320}
                   height={220}
-                  sizes="(max-width: 768px) 40vw, 240px"
+                  sizes="(max-width: 768px) 320px, 240px"
                   loading="lazy"
-                  style={{ width: "auto", height: "auto", maxHeight: 120, maxWidth: "100%", objectFit: "contain" }}
+                  style={{ width: "auto", maxHeight: 170, height: "auto", objectFit: "contain" }}
                 />
-                <span className="gplgi-convocan__role">{a.role}</span>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 

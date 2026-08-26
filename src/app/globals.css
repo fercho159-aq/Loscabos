@@ -5904,42 +5904,6 @@ body {
   margin-bottom: .5rem;
 }
 
-/* ── Convocan ── */
-.gplgi-convocan {
-  background: #E0DBD0;
-  padding: clamp(3.5rem, 7vw, 6rem) 0;
-}
-.gplgi-convocan__head {
-  max-width: 640px;
-  margin-bottom: 3rem;
-}
-.gplgi-convocan__grid {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-}
-.gplgi-convocan__item {
-  background: #fff;
-  min-height: 200px;
-  padding: 2rem 1.5rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.25rem;
-}
-.gplgi-convocan__role {
-  font-family: var(--font-inter);
-  font-size: .72rem;
-  font-weight: 900;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: rgba(8,23,34,.55);
-}
-
 /* ── Responsive ── */
 @media (max-width: 1024px) {
   .gplgi-benefits { grid-template-columns: repeat(2, 1fr); }
@@ -5962,9 +5926,6 @@ body {
   .gplgi-benefit { min-height: 0; }
   .gplgi-benefit--featured { grid-column: auto; }
   .gplgi-benefit__num { margin-bottom: 0; padding-bottom: 1rem; }
-
-  .gplgi-convocan__grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-  .gplgi-convocan__item { min-height: 160px; padding: 1.5rem 1rem 1rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
