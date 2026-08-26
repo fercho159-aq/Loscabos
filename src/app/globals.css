@@ -5554,10 +5554,10 @@ body {
 
 /* ══════════════════════════════════════════
    GUIÓN PARA LA GRAN INDUSTRIA (/guion-para-la-gran-industria)
-   Acento: --color-acid del manual (marcador). Fondos: cream / navy-dark.
+   Acento: #A0CBD7 (azul claro, definido para esta página). Fondos: cream / navy-dark.
    ══════════════════════════════════════════ */
 .gplgi-page {
-  --gplgi-yellow: var(--color-acid);
+  --gplgi-accent: #A0CBD7;
   --gplgi-dark: #0A1E23; /* dark recurrente del sitio */
   background: #fff;
   color: var(--color-navy);
@@ -5586,7 +5586,7 @@ body {
   text-transform: uppercase;
   color: var(--color-navy);
   padding: .3rem .6rem;
-  background: var(--gplgi-yellow);
+  background: var(--gplgi-accent);
   margin-bottom: 1.25rem;
 }
 .gplgi-eyebrow--light {
@@ -5620,7 +5620,7 @@ body {
 /* Marcador amarillo que se dibuja (GSAP anima --gplgi-mark 0→1). */
 .gplgi-mark {
   --gplgi-mark: 1;
-  background-image: linear-gradient(var(--gplgi-yellow), var(--gplgi-yellow));
+  background-image: linear-gradient(var(--gplgi-accent), var(--gplgi-accent));
   background-repeat: no-repeat;
   background-size: calc(var(--gplgi-mark) * 100%) 100%;
   background-position: 0 0;
@@ -5708,12 +5708,12 @@ body {
   text-decoration: none;
   transition: color .2s ease, gap .2s ease;
 }
-.gplgi-link-arrow:hover { color: var(--gplgi-yellow); gap: .8rem; }
+.gplgi-link-arrow:hover { color: var(--gplgi-accent); gap: .8rem; }
 
 /* Botón principal: amarillo del logo, texto navy (contraste ~13:1). */
 .gplgi-page .cta-button.gplgi-cta,
 .gplgi-page .gplgi-convocatoria .cta-button {
-  background: var(--gplgi-yellow);
+  background: var(--gplgi-accent);
   color: var(--color-navy);
   min-height: 48px;
 }
@@ -5724,13 +5724,13 @@ body {
 }
 .gplgi-page .cta-button:focus-visible,
 .gplgi-page .gplgi-link-arrow:focus-visible {
-  outline: 3px solid var(--gplgi-yellow);
+  outline: 3px solid var(--gplgi-accent);
   outline-offset: 3px;
 }
 
 /* ── Datos clave ── */
 .gplgi-stats {
-  background: var(--gplgi-yellow);
+  background: var(--gplgi-accent);
   color: var(--color-navy);
 }
 .gplgi-stats__inner {
@@ -5817,13 +5817,13 @@ body {
   flex-direction: column;
   transition: background .2s ease, color .2s ease;
 }
-.gplgi-benefit:hover { background: var(--gplgi-yellow); color: var(--color-navy); }
+.gplgi-benefit:hover { background: var(--gplgi-accent); color: var(--color-navy); }
 .gplgi-benefit__num {
   font-family: var(--font-inter);
   font-size: .8rem;
   font-weight: 900;
   letter-spacing: .12em;
-  color: var(--gplgi-yellow);
+  color: var(--gplgi-accent);
   margin-bottom: auto;
   padding-bottom: 2rem;
   transition: color .2s ease;
@@ -5847,7 +5847,7 @@ body {
 }
 .gplgi-benefit--featured {
   grid-column: span 2;
-  background: var(--gplgi-yellow);
+  background: var(--gplgi-accent);
   color: var(--color-navy);
 }
 .gplgi-benefit--featured .gplgi-benefit__num { color: var(--color-navy); }
