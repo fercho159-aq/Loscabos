@@ -268,6 +268,33 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── GUIÓN PARA LA GRAN INDUSTRIA ── */}
+      <section id="guion-section" className="relative w-full bg-[#0A1E23] overflow-hidden">
+        <div className="relative min-h-[420px] md:h-[560px] flex items-center justify-center px-5 py-[5.5rem] md:px-16 md:py-[110px]">
+          <Image
+            src="/images/GPLGI_GIF_SinLogo.gif"
+            alt=""
+            aria-hidden="true"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            unoptimized
+          />
+          <div className="absolute inset-0 z-[1] pointer-events-none" style={{ backgroundColor: "rgba(10, 30, 35, 0.35)" }} />
+          <div className="relative z-20 w-full max-w-[600px]">
+            <Image
+              src="/images/Guion_Logo-02.png"
+              alt="Guión para la Gran Industria"
+              width={1927}
+              height={814}
+              sizes="(max-width: 768px) 90vw, 600px"
+              className="w-full h-auto object-contain"
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ── ALIADOS ── */}
       <section id="aliados-section" data-anim="aliados-marquee" className="aliados-plaque">
         <span data-anim="aliados-tag" className="aliados-plaque-tag">Nuestros aliados y patrocinadores</span>

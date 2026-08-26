@@ -3,11 +3,14 @@
 import { useEffect, useState } from "react";
 import SubscribeCTA from "./SubscribeCTA";
 
-/* Convocatoria FFGF 2026 — el CTA cambia solo el 24 de julio de 2026, 00:00
-   hora de Los Cabos (UTC-7). Antes: registro para recibir la info. Después:
-   descarga + aplicación al formulario. El switch se resuelve en el cliente
-   (useEffect) para no romper la hidratación ni depender del build. */
+/* Convocatoria FFGF 2026 — el CTA cambia según la fecha, hora de Los Cabos
+   (UTC-7). El switch se resuelve en el cliente (useEffect) para no romper la
+   hidratación ni depender del build.
+   - Antes del 24 de julio: pre-registro.
+   - 24 de julio al 28 de agosto: aplicación + descarga.
+   - Después del 28 de agosto: convocatoria cerrada. */
 const OPEN_AT = Date.parse("2026-07-24T00:00:00-07:00");
+const CLOSE_AT = Date.parse("2026-08-28T00:00:00-07:00");
 const FORM_URL = "https://forms.gle/FAhDCdrZASmN5HnDA";
 const CONVOCATORIA_PDF = "/docs/convocatoria-ffgf-2026.pdf";
 
@@ -29,13 +32,26 @@ function reportConversion() {
 }
 
 export default function FFGFConvocatoriaCTA() {
-  const [open, setOpen] = useState(false);
+  const [phase, setPhase] = useState<"pre" | "open" | "closed">("pre");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    if (Date.now() >= OPEN_AT) setOpen(true);
+    setMounted(true);
+    const now = Date.now();
+    if (now >= CLOSE_AT) {
+      setPhase("closed");
+    } else if (now >= OPEN_AT) {
+      setPhase("open");
+    } else {
+      setPhase("pre");
+    }
   }, []);
 
-  if (!open) {
+  if (!mounted) {
+    return null;
+  }
+
+  if (phase === "pre") {
     return (
       <SubscribeCTA
         source="ffgf"
@@ -46,6 +62,19 @@ export default function FFGFConvocatoriaCTA() {
         dataAnim="ffgf-cta"
         style={{ marginTop: "1.5rem" }}
       />
+    );
+  }
+
+  if (phase === "closed") {
+    return (
+      <button
+        disabled
+        className="cta-button"
+        data-anim="ffgf-cta"
+        style={{ marginTop: "1.5rem", opacity: 0.6, cursor: "not-allowed" }}
+      >
+        Convocatoria cerrada 28 de agosto
+      </button>
     );
   }
 

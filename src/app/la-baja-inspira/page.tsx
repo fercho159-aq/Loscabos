@@ -217,19 +217,18 @@ const aliadosLBI: { name: string; logo: string | null }[] = [
   { name: "IMCINE", logo: "/images/aliados-lbi/imcine.png" },
   { name: "Puerto Los Cabos", logo: "/images/aliados-lbi/puerto-los-cabos.png" },
   { name: "Tropicana", logo: "/images/aliados-lbi/tropicana.png" },
+  { name: "Hotel El Ganzo", logo: "/images/aliados-lbi/hotel-el-ganzo.png" },
   { name: "Suelo Sur", logo: "/images/aliados-lbi/suelo-sur.png" },
   { name: "Sage", logo: "/images/aliados-lbi/sage.png" },
   { name: "Cabo Mil", logo: "/images/aliados-lbi/cabo-mil.png" },
   { name: "El Sudcaliforniano", logo: "/images/aliados-lbi/el-sudcaliforniano.png" },
-  // Pelagic Life — pendiente logo (Fase 2: 1 de julio)
   { name: "Mares de México", logo: "/images/aliados-lbi/mares-de-mexico.png" },
-  { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados-lbi/instituto-cultura-cabos.png" },
-  { name: "Centro Cultural Tijuana", logo: "/images/aliados-lbi/centro-cultural-tijuana.png" },
   { name: "Baja Republic", logo: "/images/aliados-lbi/baja-republic.png" },
   { name: "Cine de Verano", logo: "/images/aliados-lbi/cine-de-verano.png" },
   { name: "Pólvora", logo: "/images/aliados-lbi/polvora.png" },
-  { name: "Hotel El Ganzo", logo: "/images/aliados/FICC_Logos_Aliados_2026-17.png" },
-  // MVS — pendiente logo
+  { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados-lbi/instituto-cultura-cabos.png" },
+  { name: "Centro Cultural Tijuana", logo: "/images/aliados-lbi/centro-cultural-tijuana.png" },
+  { name: "Girls at Films", logo: "/images/aliados-lbi/girls-at-films.png" },
 ];
 const aliadosLBITrack = [...aliadosLBI, ...aliadosLBI];
 
