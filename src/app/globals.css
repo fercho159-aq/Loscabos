@@ -143,14 +143,17 @@ body {
   .nav-links a {
     font-family: var(--font-inter);
     font-weight: 900;
-    font-size: clamp(.72rem, .82vw, .86rem);
-    letter-spacing: .035em;
+    font-size: clamp(.62rem, .72vw, .76rem);
+    letter-spacing: .03em;
     text-transform: uppercase;
     text-decoration: none;
     color: rgba(255, 255, 255, .82);
     transition: color .25s;
     position: relative;
-    white-space: nowrap;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.2;
+    max-width: 14ch;
   }
 
   .nav-links a::after {
