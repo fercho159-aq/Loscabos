@@ -47,7 +47,7 @@ export const metadata: Metadata = {
    título; separación entre grupos solo con espacio. El rol por persona
    solo se pinta si la persona lo trae (`role`). Grupos sin personas
    visibles (todas tbc o vacías) no se renderizan — hoy: Austin, Canadá
-   (sin personas), Panelistas, Emerging (sin fotos) y los pendientes.
+   (sin personas) y los pendientes de cada grupo.
    ────────────────────────────────────────────────────────────── */
 
 type Person = {
@@ -150,25 +150,24 @@ const groups: Group[] = [
     title: "Panelistas",
     accent: "var(--color-orange)",
     people: [
-      { name: "Griselda Siciliani", role: "Actriz, cantante y bailarina", tbc: true }, // sin foto
+      { name: "Griselda Siciliani", role: "Actriz, cantante y bailarina", image: "/images/comunidad/griselda-siciliani.jpg" },
     ],
   },
   {
     id: "emerging",
     title: "Emerging",
     accent: "var(--color-orange)",
-    // Sin fotos aún: ninguno se pinta hasta tener imagen en /images/comunidad.
     people: [
-      { name: "Natalia León", role: "Guionista, directora, animadora y actriz", tbc: true },
-      { name: "Mariana Mendívil", role: "Cineasta, artista visual y animadora", tbc: true },
-      { name: "Diego Gaxiola", role: "Guionista, director y productor", tbc: true },
-      { name: "Karla Condado", role: "Directora, guionista y fotógrafa", tbc: true },
-      { name: "Leo Aguirre", role: "Guionista y director", tbc: true },
-      { name: "Amandine Thomas", role: "Guionista, directora y editora", tbc: true },
-      { name: "Gerardo Coello Escalante", role: "Guionista, director y productor", tbc: true },
-      { name: "Federico Luis", role: "Guionista y director", tbc: true },
-      { name: "Eduardo Braun Costa", role: "Guionista, director y productor", tbc: true },
-      { name: "Gabriela Ortega", role: "Directora de Marga en el DF, guionista y actriz", tbc: true },
+      { name: "Natalia León", role: "Guionista, directora, animadora y actriz", image: "/images/comunidad/natalia-leon.jpg" },
+      { name: "Mariana Mendívil", role: "Cineasta, artista visual y animadora", image: "/images/comunidad/mariana-mendivil.jpg" },
+      { name: "Diego Gaxiola", role: "Guionista, director y productor", image: "/images/comunidad/diego-gaxiola.jpg" },
+      { name: "Karla Condado", role: "Directora, guionista y fotógrafa", image: "/images/comunidad/karla-condado.jpg" },
+      { name: "Leo Aguirre", role: "Guionista y director", image: "/images/comunidad/leo-aguirre.jpg" },
+      { name: "Amandine Thomas", role: "Guionista, directora y editora", image: "/images/comunidad/amandine-thomas.jpg" },
+      { name: "Gerardo Coello Escalante", role: "Guionista, director y productor", image: "/images/comunidad/gerardo-coello-escalante.jpg" },
+      { name: "Federico Luis", role: "Guionista y director", image: "/images/comunidad/federico-luis.jpg" },
+      { name: "Eduardo Braun Costa", role: "Guionista, director y productor", image: "/images/comunidad/eduardo-braun-costa.jpg" },
+      { name: "Gabriela Ortega", role: "Directora de Marga en el DF, guionista y actriz", image: "/images/comunidad/gabriela-ortega.jpg" },
     ],
   },
   {
