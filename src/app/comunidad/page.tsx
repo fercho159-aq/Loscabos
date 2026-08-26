@@ -46,8 +46,8 @@ export const metadata: Metadata = {
    ESTRUCTURA: directorio agrupado por afiliación. Cada grupo muestra su
    título; separación entre grupos solo con espacio. El rol por persona
    solo se pinta si la persona lo trae (`role`). Grupos sin personas
-   visibles (todas tbc o vacías) no se renderizan — hoy: Jalisco, Austin,
-   Canadá (sin personas) y los pendientes de cada grupo.
+   visibles (todas tbc o vacías) no se renderizan — hoy: Austin, Canadá
+   (sin personas), Panelistas, Emerging (sin fotos) y los pendientes.
    ────────────────────────────────────────────────────────────── */
 
 type Person = {
@@ -73,34 +73,31 @@ const groups: Group[] = [
     title: "La Baja Inspira",
     accent: "var(--color-orange)",
     people: [
-      { name: "Juan Patricio Riveroll", role: "Comité de selección", image: "/images/comunidad/juan-patricio-riveroll.jpg" },
-      { name: "Iván Carrillo", role: "Comité de selección", image: "/images/comunidad/ivan-carrillo.jpg" },
-      { name: "Alonso Rodríguez", image: "/images/comunidad/alonso-rodriguez.jpg" },
-      { name: "Hans Herrmann", image: "/images/comunidad/hans-herrmann.jpg" },
-      { name: "Jerónimo Prieto", image: "/images/comunidad/jeronimo-prieto.jpg" },
-      { name: "Octavio Aburto", image: "/images/comunidad/octavio-aburto.jpg" },
-      { name: "Alejandro Rivas", image: "/images/comunidad/alejandro-rivas.jpg" },
-      { name: "Francisco Laresgoiti", image: "/images/comunidad/francisco-laresgoiti.jpg" },
-      { name: "Inti Cordera", image: "/images/comunidad/inti-cordera.jpg" },
-      { name: "Dra. Micheline Cariño", image: "/images/comunidad/micheline-carino.jpg" },
-      { name: "Chef Guillermo J. Gómez", image: "/images/comunidad/chef-guillermo-gomez.jpg" },
-      { name: "Dolores Heredia", tbc: true },
+      { name: "Juan Patricio Riveroll", role: "Director Académico ESCINE <br> Comité de selección", image: "/images/comunidad/juan-patricio-riveroll.jpg" },
+      { name: "Iván Carrillo", role: "Periodista y documentalista <br> Comité de selección", image: "/images/comunidad/ivan-carrillo.jpg" },
+      { name: "Alonso Rodríguez", role: "Fundador de Mares México", image: "/images/comunidad/alonso-rodriguez.jpg" },
+      { name: "Hans Herrmann", role: "Asociado Senior de IISD", image: "/images/comunidad/hans-herrmann.jpg" },
+      { name: "Jerónimo Prieto", role: "Fundador de Pelagic Life", image: "/images/comunidad/jeronimo-prieto.jpg" },
+      { name: "Octavio Aburto", role: "Profesor e investigador del SIO", image: "/images/comunidad/octavio-aburto.jpg" },
+      { name: "Alejandro Rivas", role: "Codirector en Producciones Cormorán", image: "/images/comunidad/alejandro-rivas.jpg" },
+      { name: "Francisco Laresgoiti", role: "Fundador de Corriente Alterna", image: "/images/comunidad/francisco-laresgoiti.jpg" },
+      { name: "Inti Cordera", role: "Fundador de La Maroma Producciones", image: "/images/comunidad/inti-cordera.jpg" },
+      { name: "Dra. Micheline Cariño", role: "Profesora investigadora de la UABCS", image: "/images/comunidad/micheline-carino.jpg" },
+      { name: "Chef Guillermo J. Gómez", role: "Fundador de Suelo Sur", image: "/images/comunidad/chef-guillermo-gomez.jpg" },
+      { name: "Dolores Heredia", tbc: true }, // falta confirmación
     ],
   },
   {
-    id: "industria",
+    id: "jalisco",
     title: "Jalisco",
     accent: "var(--color-orange)",
     people: [
-     
-  { name: "Alejandro Tavares", role: "Director General <br> FILMA Jalisco", image: "/images/comunidad/alejandro-tavares.jpg" },
-  { name: "Raúl Orozco Magaña", role: "Gerente de Estímulos y Desarrollo para la Industria Fílmica y Audiovisual <br> FILMA Jalisco", image: "/images/comunidad/raul-orozco-magana.jpg" },
-  { name: "Alfredo Aceves Fernández", role: "Director General <br> Ciudad Creativa Digital", image: "/images/comunidad/alfredo-aceves.jpg" },
-  { name: "Fernando Lebrija", role: "Fundador <br> Irreversible Pictures", image: "/images/comunidad/fernando-lebrija.jpg" },
-  { name: "Noemí Pizano", role: "Ciudad Creativa Digital", tbc: true },
-  { name: "Billy Rovzar", role: "Fundador y CEO <br> Lemon Studios", tbc: true },
-  { name: "Fernando Rovzar", role: "Fundador y Director Creativo <br> Lemon Studios", tbc: true }
-
+      { name: "Alejandro Tavares", role: "Director General <br> FILMA Jalisco", image: "/images/comunidad/alejandro-tavares.jpg" },
+      { name: "Raúl Orozco Magaña", role: "Gerente de Estímulos y Desarrollo para la Industria Fílmica y Audiovisual <br> FILMA Jalisco", image: "/images/comunidad/raul-orozco-magana.jpg" },
+      { name: "Alfredo Aceves Fernández", role: "Director General <br> Ciudad Creativa Digital", image: "/images/comunidad/alfredo-aceves.jpg" },
+      { name: "Fernando Lebrija", role: "Fundador <br> Irreversible Pictures", image: "/images/comunidad/fernando-lebrija.jpg" },
+      { name: "Billy Rovzar", role: "Fundador y CEO <br> Lemon Studios", tbc: true }, // sin foto
+      { name: "Fernando Rovzar", role: "Fundador y Director Creativo <br> Lemon Studios", tbc: true }, // sin foto
     ],
   },
   {
@@ -108,14 +105,14 @@ const groups: Group[] = [
     title: "Fondo Fílmico Gabriel Figueroa",
     accent: "var(--color-orange)",
     people: [
-      { name: "Cristina Velasco", image: "/images/comunidad/cristina-velasco.jpg" },
-      { name: "María José Cuevas", image: "/images/comunidad/maria-jose-cuevas.jpg" },
-      { name: "Nico Celis", image: "/images/comunidad/nico-celis.jpg" },
-      { name: "Juan Pablo Bastarrachea", image: "/images/comunidad/juan-pablo-bastarrachea.jpg" },
-      { name: "Bruno Santamaría Razo", image: "/images/comunidad/bruno-santamaria.jpg" },
-      { name: "Elena Fortes", image: "/images/comunidad/elena-fortes.jpg" },
-      { name: "Juan Patricio Riveroll", image: "/images/comunidad/juan-patricio-riveroll.jpg" },
-      { name: "Alfredo Ruiz", image: "/images/comunidad/alfredo-ruiz.jpg" },
+      { name: "Cristina Velasco", role: "Cofundadora de Paloma Negra Films", image: "/images/comunidad/cristina-velasco.jpg" },
+      { name: "María José Cuevas", role: "Directora y productora de cine", image: "/images/comunidad/maria-jose-cuevas.jpg" },
+      { name: "Nico Celis", role: "Fundador de Pimienta Films", image: "/images/comunidad/nico-celis.jpg" },
+      { name: "Juan Pablo Bastarrachea", role: "Co-fundador de Cine Tonalá", image: "/images/comunidad/juan-pablo-bastarrachea.jpg" },
+      { name: "Bruno Santamaría Razo", role: "Director, productor y fotógrafo", image: "/images/comunidad/bruno-santamaria.jpg" },
+      { name: "Elena Fortes", role: "Fundadora de FIASCO", image: "/images/comunidad/elena-fortes.jpg" },
+      { name: "Juan Patricio Riveroll", role: "Director Académico ESCINE", image: "/images/comunidad/juan-patricio-riveroll.jpg" },
+      { name: "Alfredo Ruiz", role: "Director de la Licenciatura en Cinematografía ESCINE", image: "/images/comunidad/alfredo-ruiz.jpg" },
     ],
   },
   {
@@ -127,29 +124,51 @@ const groups: Group[] = [
     ],
   },
   {
-    id: "jalisco",
-    title: "Jalisco",
-    accent: "var(--color-orange)",
-    people: [],
-  },
-  {
     id: "austin",
     title: "Austin",
     accent: "var(--color-orange)",
-    people: [],
+    people: [], // pendiente
   },
   {
     id: "canada",
     title: "Canadá",
     accent: "var(--color-orange)",
-    people: [],
+    people: [], // pendiente
   },
   {
     id: "speakers",
     title: "Speakers",
     accent: "var(--color-orange)",
     people: [
-      { name: "Jim Kolmar", image: "/images/comunidad/jim-kolmar.jpg" },
+      { name: "Jim Kolmar", role: "Programador de cine, escritor y consultor", image: "/images/comunidad/jim-kolmar.jpg" },
+      // NO subir antes de finales de septiembre 2026.
+      { name: "Marina Stavenhagen", role: "Directora General <br> Cineteca Nacional", tbc: true },
+    ],
+  },
+  {
+    id: "panelistas",
+    title: "Panelistas",
+    accent: "var(--color-orange)",
+    people: [
+      { name: "Griselda Siciliani", role: "Actriz, cantante y bailarina", tbc: true }, // sin foto
+    ],
+  },
+  {
+    id: "emerging",
+    title: "Emerging",
+    accent: "var(--color-orange)",
+    // Sin fotos aún: ninguno se pinta hasta tener imagen en /images/comunidad.
+    people: [
+      { name: "Natalia León", role: "Guionista, directora, animadora y actriz", tbc: true },
+      { name: "Mariana Mendívil", role: "Cineasta, artista visual y animadora", tbc: true },
+      { name: "Diego Gaxiola", role: "Guionista, director y productor", tbc: true },
+      { name: "Karla Condado", role: "Directora, guionista y fotógrafa", tbc: true },
+      { name: "Leo Aguirre", role: "Guionista y director", tbc: true },
+      { name: "Amandine Thomas", role: "Guionista, directora y editora", tbc: true },
+      { name: "Gerardo Coello Escalante", role: "Guionista, director y productor", tbc: true },
+      { name: "Federico Luis", role: "Guionista y director", tbc: true },
+      { name: "Eduardo Braun Costa", role: "Guionista, director y productor", tbc: true },
+      { name: "Gabriela Ortega", role: "Directora de Marga en el DF, guionista y actriz", tbc: true },
     ],
   },
   {
