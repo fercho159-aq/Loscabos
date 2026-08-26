@@ -12,10 +12,16 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   { label: "El Festival", href: "/el-festival" },
-  { label: "La Baja Inspira", href: "/la-baja-inspira" },
-  { label: "Fondo Fílmico Gabriel Figueroa", href: "/ffgf" },
-  { label: "Guión para la Gran Industria", href: "/guion-para-la-gran-industria" },
-  { label: "Campus", href: "/campus" },
+  {
+    label: "Plataformas de impulso",
+    href: "/plataformas-de-impulso",
+    children: [
+      { label: "La Baja Inspira", href: "/la-baja-inspira" },
+      { label: "Fondo Fílmico Gabriel Figueroa", href: "/ffgf" },
+      { label: "Guión para la Gran Industria", href: "/guion-para-la-gran-industria" },
+      { label: "Campus", href: "/campus" },
+    ],
+  },
   { label: "Comunidad", href: "/comunidad" },
   { label: "Programaci\u00f3n 2026", href: "/programacion" },
   { label: "Ediciones anteriores", href: "/edicion-2025" },
@@ -47,7 +53,14 @@ export default function Navbar() {
             key={item.label}
             className={`nav-item ${item.children ? "has-dropdown" : ""}`}
           >
-            <Link href={item.href}>{item.label}</Link>
+            <Link href={item.href} aria-haspopup={item.children ? "true" : undefined}>
+              {item.label}
+              {item.children && (
+                <svg className="nav-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              )}
+            </Link>
             {item.children && (
               <div className="nav-dropdown">
                 {item.children.map((child) => (
