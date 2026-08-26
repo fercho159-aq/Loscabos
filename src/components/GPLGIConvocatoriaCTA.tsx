@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 /* Convocatoria Guión para la Gran Industria 2026 — el CTA cambia según la fecha,
    hora de Los Cabos (UTC-7). El switch se resuelve en el cliente (useEffect)
    para no romper la hidratación ni depender del build.
-   - Antes del 5 de septiembre: apertura anunciada.
+   - Antes del 5 de septiembre: sin CTA (la página muestra la fecha de apertura).
    - 5 de septiembre al 13 de septiembre: descarga de convocatoria.
    - A partir del 14 de septiembre: aplicación al formulario. */
 const ANNOUNCE_AT = Date.parse("2026-09-05T00:00:00-07:00");
@@ -57,19 +57,6 @@ export default function GPLGIConvocatoriaCTA() {
     );
   }
 
-  return (
-    <p
-      data-anim="gplgi-cta"
-      style={{
-        marginTop: "1.5rem",
-        fontFamily: "var(--font-inter)",
-        fontSize: "clamp(1.05rem, 1.8vw, 1.5rem)",
-        color: "#000",
-        lineHeight: 1.4,
-        fontWeight: 700,
-      }}
-    >
-      Apertura de convocatoria: 24 de septiembre
-    </p>
-  );
+  // Antes de la apertura la página ya muestra la fecha; el CTA no pinta nada.
+  return null;
 }
