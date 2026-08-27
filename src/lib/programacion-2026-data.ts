@@ -51,7 +51,7 @@ export const eventos2026: Evento[] = [
   {
     slug: "laboratorio-de-escritura",
     title: "Laboratorio de Escritura",
-    date: "Jueves 10 de diciembre",
+    date: "6 – 12 de diciembre",
     venue: "Hotel El Ganzo",
     image: "/images/programacion-2026/laboratorio-de-escritura.jpg",
     imageAlt: "Sesión del Laboratorio de Escritura de FICCLosCabos",
