@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
+import PersonalidadesAnimations from "@/components/PersonalidadesAnimations";
 import { editionsData } from "@/lib/editions-data";
+import { personalidadesPorAnio } from "@/lib/personalidades-data";
+import { initials } from "@/lib/initials";
 
 export const metadata: Metadata = {
   title: "Ediciones Anteriores | FICC Los Cabos",
@@ -66,7 +70,62 @@ export default function EdicionesAnteriores() {
         </div>
       </section>
 
+      {/* ── PERSONALIDADES POR AÑO — línea de tiempo con el año sticky ── */}
+      <section className="pers-section">
+        <div className="pers-intro">
+          <span data-anim="pers-eyebrow" className="editions-index-eyebrow">
+            Quiénes han pasado por aquí
+          </span>
+          <p data-anim="pers-lede" className="editions-index-lead">
+            Actrices, actores, cineastas y músicos que han caminado Los Cabos desde
+            2012. Una línea de tiempo del talento que ha hecho suyo el Festival.
+          </p>
+        </div>
+
+        <div className="pers-timeline">
+          {personalidadesPorAnio.map((anio) => (
+            <div key={anio.year} className="pers-year-row">
+              <div className="pers-year-col">
+                <div className="pers-year-sticky">
+                  <Link
+                    href={`/ediciones-anteriores/${anio.slug}`}
+                    data-anim="pers-year"
+                    className="pers-year"
+                  >
+                    {anio.year}
+                  </Link>
+                </div>
+              </div>
+
+              <div className="pers-grid">
+                {anio.people.map((persona) => (
+                  <article key={persona.name} data-anim="pers-card" className="pers-card">
+                    <div className="pers-photo">
+                      {persona.image ? (
+                        <Image
+                          src={persona.image}
+                          alt={persona.alt ?? `${persona.name} en FICC Los Cabos ${anio.year}`}
+                          fill
+                          sizes="(max-width: 560px) 45vw, (max-width: 900px) 30vw, 200px"
+                          className="pers-photo-img"
+                        />
+                      ) : (
+                        <span className="pers-photo-initials" aria-hidden="true">
+                          {initials(persona.name)}
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="pers-name">{persona.name}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <Footer />
+      <PersonalidadesAnimations />
     </>
   );
 }

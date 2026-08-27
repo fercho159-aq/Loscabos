@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import ComunidadAnimations from "@/components/ComunidadAnimations";
+import { initials } from "@/lib/initials";
 
 export const metadata: Metadata = {
   title: "Comunidad FICC | Quienes la integran",
@@ -192,14 +193,6 @@ const groups: Group[] = [
 
 // Solo se pintan personas con foto; grupos sin ninguna persona con foto no se pintan.
 const visibleGroups = groups.filter((group) => group.people.some((p) => !p.tbc && p.image));
-
-function initials(name: string) {
-  const parts = name
-    .replace(/^(Dra?\.|Dr\.|Chef)\s+/i, "")
-    .split(/\s+/)
-    .filter(Boolean);
-  return ((parts[0]?.[0] ?? "") + (parts[1]?.[0] ?? "")).toUpperCase();
-}
 
 export default function Comunidad() {
   return (
