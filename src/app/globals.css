@@ -6175,3 +6175,430 @@ body {
     transition: none;
   }
 }
+
+/* ══════════════════════════════════════════
+   PROGRAMACIÓN 2026 (/programacion-2026)
+   Calca el sistema editorial de filmfestival.gr/en/tiff:
+   bloque divisor (hr + título grande), tarjetas 16:9 con subrayado
+   animado, y detalle a dos columnas (fecha/sede a la izquierda,
+   cuerpo a la derecha). Eyebrows y metadatos en monoespaciada.
+   Namespace `p26-` a propósito: el bloque PROGRAMACION de más arriba
+   (.prog-featured, .prog-stat-*) es CSS huérfano de un diseño anterior.
+   Cada evento inyecta su acento como --cat en el wrapper.
+   ══════════════════════════════════════════ */
+
+.p26-page,
+.p26-detail-page {
+  --cat: var(--color-orange);
+  --p26-mono: ui-monospace, SFMono-Regular, Menlo, "Roboto Mono", monospace;
+  --p26-gutter: clamp(1rem, 2.2vw, 2rem);
+  background: var(--color-cream);
+  color: var(--color-navy);
+}
+
+/* Subrayado que se dibuja al hover — el gesto `animated-underline` de la
+   referencia, aquí con el acento del evento. */
+.p26-underline {
+  background-image: linear-gradient(var(--cat), var(--cat));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0 2px;
+  transition: background-size 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  padding-bottom: 0.12em;
+}
+
+a:hover .p26-underline,
+a:focus-visible .p26-underline,
+.p26-underline:hover {
+  background-size: 100% 2px;
+}
+
+/* ── Bloque divisor: hr + título de sección ── */
+
+.p26-divider {
+  padding: 0 var(--p26-gutter);
+  margin-bottom: clamp(2rem, 3.5vw, 2.5rem);
+}
+
+.p26-divider hr {
+  border: 0;
+  border-top: 1px solid color-mix(in srgb, var(--color-navy) 30%, transparent);
+  margin-bottom: clamp(1rem, 2vw, 1.25rem);
+}
+
+.p26-section-title {
+  font-family: var(--font-inter);
+  font-size: clamp(2.25rem, 4.2vw, 3rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+  max-width: 58%;
+}
+
+@media (max-width: 900px) {
+  .p26-section-title { max-width: none; }
+}
+
+.p26-eyebrow {
+  display: block;
+  font-family: var(--p26-mono);
+  font-size: 0.8125rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+}
+
+/* ── Índice: rejilla de eventos ── */
+
+.p26-index {
+  padding: clamp(3rem, 6vw, 4.5rem) 0 clamp(4.5rem, 8vw, 6.5rem);
+}
+
+.p26-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 2.2vw, 2rem) clamp(1rem, 1.6vw, 1.25rem);
+  padding: 0 var(--p26-gutter);
+}
+
+.p26-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.p26-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--color-navy) 8%, transparent);
+}
+
+.p26-card-img {
+  object-fit: cover;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.p26-card:hover .p26-card-img,
+.p26-card:focus-visible .p26-card-img {
+  transform: scale(1.1);
+}
+
+.p26-card-title {
+  font-family: var(--font-inter);
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  font-weight: 600;
+  line-height: 1.375;
+  letter-spacing: -0.01em;
+  color: var(--color-navy);
+}
+
+.p26-card-meta {
+  font-family: var(--p26-mono);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-navy) 55%, transparent);
+}
+
+@media (max-width: 1024px) {
+  .p26-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 700px) {
+  .p26-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* ── Detalle: bloque de encabezado ── */
+
+.p26-header {
+  background: color-mix(in srgb, var(--color-navy) 6%, var(--color-cream));
+  padding: clamp(6.5rem, 10vw, 8.5rem) var(--p26-gutter) clamp(3rem, 5vw, 5rem);
+  margin-bottom: clamp(3rem, 5vw, 5rem);
+}
+
+.p26-header-eyebrow {
+  margin-bottom: 0.875rem;
+}
+
+.p26-header-eyebrow a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.p26-detail-title {
+  font-family: var(--font-inter);
+  font-size: clamp(2.75rem, 6.5vw, 5.5rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--color-navy);
+  max-width: 85%;
+}
+
+@media (max-width: 900px) {
+  .p26-detail-title { max-width: none; }
+}
+
+/* ── Detalle: figura del evento ── */
+
+.p26-figure {
+  padding: 0 var(--p26-gutter);
+  margin-bottom: clamp(3rem, 5vw, 5rem);
+}
+
+.p26-figure-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--color-navy) 8%, transparent);
+}
+
+.p26-figure-img {
+  object-fit: cover;
+}
+
+/* ── Detalle: cuerpo a dos columnas (4 / 8 de 12) ── */
+
+.p26-two-col {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(1rem, 1.6vw, 1.25rem);
+  padding: 0 var(--p26-gutter);
+  margin-bottom: clamp(3.5rem, 6vw, 5rem);
+}
+
+.p26-col-side {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 2.4vw, 2.5rem);
+}
+
+.p26-col-main {
+  grid-column: 5 / span 8;
+}
+
+.p26-detail-date {
+  font-family: var(--font-inter);
+  font-size: clamp(1.4rem, 2.2vw, 1.875rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+}
+
+.p26-detail-facts p {
+  font-family: var(--font-inter);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--color-navy);
+}
+
+.p26-detail-facts p + p {
+  margin-top: 0.35rem;
+}
+
+.p26-prose p {
+  font-family: var(--font-inter);
+  font-size: clamp(1rem, 1.4vw, 1.125rem);
+  line-height: 1.75;
+  color: color-mix(in srgb, var(--color-navy) 88%, transparent);
+}
+
+.p26-prose p + p {
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .p26-two-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
+
+/* ── Detalle: personas ── */
+
+.p26-people {
+  padding-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.p26-people-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(2rem, 3vw, 2.75rem) clamp(1rem, 1.6vw, 1.25rem);
+  padding: 0 var(--p26-gutter);
+}
+
+.p26-people-grid--compact {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.p26-person {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.p26-person-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--cat) 12%, color-mix(in srgb, var(--color-navy) 6%, var(--color-cream)));
+}
+
+.p26-person-img {
+  object-fit: cover;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.p26-person:hover .p26-person-img {
+  transform: scale(1.1);
+}
+
+.p26-person-initials {
+  font-family: var(--font-inter);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: color-mix(in srgb, var(--cat) 78%, var(--color-navy));
+}
+
+.p26-person-name {
+  font-family: var(--font-inter);
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  font-weight: 600;
+  line-height: 1.375;
+  letter-spacing: -0.01em;
+  color: var(--color-navy);
+}
+
+.p26-person-meta {
+  font-family: var(--p26-mono);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-navy) 55%, transparent);
+  margin-top: -0.25rem;
+}
+
+.p26-person-bio {
+  font-family: var(--font-inter);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: color-mix(in srgb, var(--color-navy) 80%, transparent);
+}
+
+@media (max-width: 1024px) {
+  .p26-people-grid,
+  .p26-people-grid--compact { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .p26-people-grid,
+  .p26-people-grid--compact { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ── Detalle: aliado presentador ── */
+
+.p26-presented {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: clamp(2rem, 3.5vw, 2.75rem);
+}
+
+.p26-presented-label {
+  font-family: var(--p26-mono);
+  font-size: 0.75rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-navy) 55%, transparent);
+}
+
+/* Los logos llegan con proporciones muy distintas (un wordmark alargado y un
+   bloque casi cuadrado): se acotan por ancho Y por alto para que pesen igual.
+   El PNG viene con fondo blanco, que multiply funde con la crema. */
+.p26-presented-logo {
+  width: auto;
+  height: auto;
+  max-width: clamp(120px, 18vw, 170px);
+  max-height: clamp(56px, 8vw, 84px);
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+/* ── Detalle: navegación entre eventos ── */
+
+.p26-nav {
+  padding: clamp(1.25rem, 2.4vw, 1.75rem) var(--p26-gutter) 0;
+  margin: clamp(3.5rem, 6vw, 5rem) var(--p26-gutter) clamp(4rem, 7vw, 6rem);
+  border-top: 1px solid color-mix(in srgb, var(--color-navy) 30%, transparent);
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.p26-nav-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-decoration: none;
+  max-width: 44%;
+}
+
+.p26-nav-item--next {
+  text-align: right;
+  margin-left: auto;
+  align-items: flex-end;
+}
+
+.p26-nav-label {
+  font-family: var(--p26-mono);
+  font-size: 0.75rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-navy) 55%, transparent);
+}
+
+.p26-nav-title {
+  font-family: var(--font-inter);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 600;
+  line-height: 1.375;
+  color: var(--color-navy);
+}
+
+@media (max-width: 640px) {
+  .p26-nav { flex-direction: column; }
+  .p26-nav-item { max-width: none; }
+  .p26-nav-item--next { text-align: left; margin-left: 0; align-items: flex-start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .p26-card-img,
+  .p26-person-img,
+  .p26-underline {
+    transition: none;
+  }
+}
