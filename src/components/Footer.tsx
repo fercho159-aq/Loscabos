@@ -47,12 +47,12 @@ export default function Footer() {
       <div className="footer-columns">
         <div className="footer-col">
           <ul>
+            <li><a href="/programacion-2026">Programaci&oacute;n 2026</a></li>
             <li><a href="/el-festival">El Festival</a></li>
             <li><a href="/la-baja-inspira">La Baja Inspira</a></li>
             <li><a href="/ffgf">Fondo F&iacute;lmico Gabriel Figueroa</a></li>
             <li><a href="/campus">Campus</a></li>
             <li><a href="/comunidad">Comunidad</a></li>
-            <li><a href="/programacion">Programaci&oacute;n</a></li>
             <li><a href="/edicion-2025">Ediciones anteriores</a></li>
             <li><a href="/prensa">Prensa</a></li>
           </ul>
