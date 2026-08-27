@@ -193,14 +193,14 @@ export const eventos2026: Evento[] = [
             bio: "Guionista y director. Su cortometraje The Opponents ganó la Palme d'Or al Mejor Cortometraje en Cannes 2025 — el máximo honor del festival en su categoría. Un retrato sutil de conexión humana y pertenencia ambientado en el mundo del fútbol amateur.",
           },
           {
-            // Pendiente de foto.
             name: "Eduardo Braun Costa",
+            image: "/images/programacion-2026/personas/eduardo-braun-costa.jpg",
             meta: "Argentina",
             bio: "Guionista, director y productor. Su primer cortometraje de ficción The Liars ganó el Special Jury Award for Acting en Sundance 2026. Coproducción entre Argentina, Brasil y Francia sobre la inocencia y resiliencia de la infancia.",
           },
           {
-            // Pendiente de foto.
             name: "Gabriela Ortega",
+            image: "/images/programacion-2026/personas/gabriela-ortega.jpg",
             meta: "República Dominicana",
             bio: "Directora, guionista y actriz, egresada de USC y alumni de Sundance. Su cortometraje Huella fue seleccionado en Sundance 2022. Nombrada por Filmmaker Magazine como una de las 25 New Faces of Independent Film. En 2026 estrenó Marga en el DF en Sundance. Su trabajo explora la intersección entre ficción, poesía e identidad caribeña.",
           },
