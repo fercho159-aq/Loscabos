@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Optimiza las fotos del Sneak Peek de /programacion-2026.
+Optimiza las fotos del Sneak Peak de /programacion-2026.
 
 Origen:  ~/Downloads/ (los archivos tal cual los manda el cliente)
 Destino: public/images/programacion-2026/

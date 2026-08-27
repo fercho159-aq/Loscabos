@@ -11,12 +11,12 @@ import { eventos2026 } from "@/lib/programacion-2026-data";
 export const metadata: Metadata = {
   title: "Programación 2026 | FICC Los Cabos",
   description:
-    "Sneak Peek de la programación 2026 de FICCLosCabos: el homenaje a Dolores Heredia, el Laboratorio de Escritura, el Brunch Girls At Films y el panel The Next Wave.",
+    "Sneak Peak de la programación 2026 de FICCLosCabos: el homenaje a Dolores Heredia, el Laboratorio de Escritura, el Brunch Girls At Films y el panel The Next Wave.",
   alternates: { canonical: "/programacion-2026" },
   openGraph: {
     title: "Programación 2026 | FICC Los Cabos",
     description:
-      "Sneak Peek de la programación 2026 de FICCLosCabos: el homenaje a Dolores Heredia, el Laboratorio de Escritura, el Brunch Girls At Films y el panel The Next Wave.",
+      "Sneak Peak de la programación 2026 de FICCLosCabos: el homenaje a Dolores Heredia, el Laboratorio de Escritura, el Brunch Girls At Films y el panel The Next Wave.",
     url: "/programacion-2026",
     images: [{ url: "/images/programacion-2026/homenaje-dolores-heredia.jpg", width: 1600, height: 900 }],
   },
@@ -36,7 +36,7 @@ export default function Programacion2026() {
           {/* Bloque divisor: filete + título, como el `divider-block` de la referencia. */}
           <header data-anim="p26-head" className="p26-divider">
             <hr />
-            <h2 className="p26-section-title">Sneak Peek</h2>
+            <h2 className="p26-section-title">Sneak Peak</h2>
           </header>
 
           <div className="p26-grid">

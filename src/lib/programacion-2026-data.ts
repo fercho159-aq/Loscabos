@@ -32,7 +32,7 @@ export type Evento = {
   groups?: PersonaGrupo[];
 };
 
-// Sneak Peek de la edición 2026, en orden de programa. Las fotos se generan con
+// Sneak Peak de la edición 2026, en orden de programa. Las fotos se generan con
 // `python3 scripts/optimize-programacion.py`; quien todavía no tiene `image` se
 // pinta con iniciales.
 export const eventos2026: Evento[] = [
