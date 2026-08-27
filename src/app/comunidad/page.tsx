@@ -168,7 +168,7 @@ const groups: Group[] = [
       { name: "Gerardo Coello Escalante", role: "Guionista, director y productor", image: "/images/comunidad/gerardo-coello-escalante.jpg" },
       { name: "Federico Luis", role: "Guionista y director", image: "/images/comunidad/federico-luis.jpg" },
       { name: "Eduardo Braun Costa", role: "Guionista, director y productor", image: "/images/comunidad/eduardo-braun-costa.jpg" },
-      { name: "Gabriela Ortega", role: "Directora de Marga en el DF, guionista y actriz", image: "/images/comunidad/gabriela-ortega.jpg" },
+      { name: "Gabriela Ortega", role: "Directora, guionista y actriz", image: "/images/comunidad/gabriela-ortega.jpg" },
     ],
   },
   {

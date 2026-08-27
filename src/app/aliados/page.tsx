@@ -6,21 +6,21 @@ import PageHero from "@/components/PageHero";
 /* Pleca de aliados 2026. El orden es el que entregó diseño: los archivos en
    /images/aliados/2026/ van numerados con esa misma posición, así que para
    reacomodar basta mover la línea (el número del archivo es histórico, no
-   manda). Flora Farms (posición 14) sigue pendiente de logo. */
+   manda). */
 const aliados = [
   { name: "Los Cabos", logo: "/images/aliados/2026/01-fiturca-los-cabos.png" },
   { name: "Grupo Questro", logo: "/images/aliados/2026/02-grupo-questro.png" },
   { name: "Puerto Los Cabos", logo: "/images/aliados/2026/03-puerto-los-cabos.png" },
   { name: "Marina Puerto Los Cabos", logo: "/images/aliados/2026/04-marina-puerto-los-cabos.png" },
+  { name: "Asociación de Hoteles de Los Cabos", logo: "/images/aliados/2026/04b-asociacion-hoteles-los-cabos.png" },
   { name: "Hotel El Ganzo", logo: "/images/aliados/2026/05-hotel-el-ganzo.png" },
   { name: "IMCINE", logo: "/images/aliados/2026/06-imcine.png" },
-  { name: "Filma Jalisco", logo: "/images/aliados/2026/07-filma-jalisco.png" },
-  { name: "Ciudad Creativa Digital", logo: "/images/aliados/2026/08-ciudad-creativa-digital.png" },
   { name: "ESCINE", logo: "/images/aliados/2026/09-escine.png" },
   { name: "Tropicana", logo: "/images/aliados/2026/10-tropicana.png" },
   { name: "JW Marriott Los Cabos", logo: "/images/aliados/2026/11-jw-marriott.png" },
   { name: "Zadún, A Ritz-Carlton Reserve", logo: "/images/aliados/2026/12-zadun.png" },
   { name: "Secrets Puerto Los Cabos Golf & Spa Resort", logo: "/images/aliados/2026/13-secrets.png" },
+  { name: "Flora Farms", logo: "/images/aliados/2026/14-flora-farms.png" },
   { name: "YAYA Rentals", logo: "/images/aliados/2026/15-yaya-rentals.png" },
   { name: "Bar Ligaya", logo: "/images/aliados/2026/16-bar-ligaya.png" },
   { name: "Space Xmas", logo: "/images/aliados/2026/17-space-xmas.png" },
@@ -33,10 +33,10 @@ const aliados = [
   { name: "National Car Rental", logo: "/images/aliados/2026/24-national-car-rental.png" },
   { name: "Salomon", logo: "/images/aliados/2026/25-salomon.png" },
   { name: "Cinépolis", logo: "/images/aliados/2026/26-cinepolis.png" },
-  { name: "Valiente Films", logo: "/images/aliados/2026/27-valiente-films.png" },
   { name: "Irreversible Pictures", logo: "/images/aliados/2026/28-irreversible.png" },
   { name: "Lemon Studios", logo: "/images/aliados/2026/29-lemon-studios.png" },
   { name: "Pimienta Films", logo: "/images/aliados/2026/30-pimienta-films.png" },
+  { name: "Cine Club Documental Los Cabos", logo: "/images/aliados/2026/30b-cine-club-documental.png" },
   { name: "Art Kingdom", logo: "/images/aliados/2026/31-art-kingdom.png" },
   { name: "CTT Exp & Rentals", logo: "/images/aliados/2026/32-ctt-exp-rentals.png" },
   { name: "Shalala", logo: "/images/aliados/2026/33-shalala.png" },
