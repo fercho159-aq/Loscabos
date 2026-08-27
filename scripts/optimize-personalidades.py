@@ -2,7 +2,7 @@
 """
 Optimiza las fotos de personalidades por año para /ediciones-anteriores.
 
-Origen:  ~/Downloads/TImeline/<año>/<archivo original>
+Origen:  ~/Downloads/TImeline/<año>/ o ~/Downloads/<año>/
 Destino: public/images/personalidades/<año>/<slug>.jpg
 
 Las fotos llegan por tandas. Al recibir un año nuevo:
@@ -18,9 +18,10 @@ import re
 import sys
 import unicodedata
 
-from PIL import Image, ImageFilter, ImageOps
+from PIL import Image, ImageOps
 
-SRC_ROOT = os.path.expanduser("~/Downloads/TImeline")
+# El cliente manda las carpetas por año en cualquiera de estas raíces.
+SRC_ROOTS = [os.path.expanduser("~/Downloads/TImeline"), os.path.expanduser("~/Downloads")]
 OUT_ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                         "public", "images", "personalidades")
 
@@ -30,12 +31,16 @@ MAX_W, MAX_H = 600, 900
 RATIO = MAX_W / MAX_H
 QUALITY = 82
 
-# nombre real -> archivo dentro de SRC_ROOT/<año>/
+# nombre real -> archivo dentro de <año>/, o (archivo, cx, cy[, zoom]) para reencuadrar.
+# cx/cy son 0..1 sobre el original: 0.5 = centro, 0 = izquierda/arriba.
+# zoom > 1 recorta más cerrado (para sujetos lejanos en planos generales).
+# Solo se especifican cuando el recorte 2:3 por defecto pierde al sujeto
+# (típico en fotos apaisadas de alfombra roja con el logo ocupando media foto).
 MAPPING = {
     "2012": {
         "Edward Norton": "Edward_Norton.jpg",
         "Diego Luna": "Diego_Luna.png",
-        "Gael García Bernal": "Gael_GarcíaBernal.png",
+        "Gael García Bernal": ("Gael_GarcíaBernal.png", 0.5, 0.3),  # apaisada
         "Matt Dillon": "Matt_Dillon.png",
         "Octavia Spencer": "Allison Janney, Tate Taylor and Octavia Spencer .jpg",
     },
@@ -60,9 +65,50 @@ MAPPING = {
         "Humberto Busto": "HumbertoBusto.png",
         "Alosian Vivancos": "Alosian Vivancos.png",
     },
-    # Pendientes de foto — misma convención al llegar:
-    # "2016": {"Monica Bellucci": "MonicaBelucci.jpg", ...}
-    # "2017", "2018", "2019", "2022", "2025"
+    "2016": {
+        "Monica Bellucci": "MonicaBelucci.jpg",
+        "Jacob Tremblay": ("JacobTremblay.jpg", 0.46, 0.6, 1.9),
+        "Lyn May": ("LynMay.jpg", 0.2, 0.2),
+        "Natalia Lafourcade": "NataliaLafourcade.jpg",
+        "Tony Dalton": ("TonyDalton.jpg", 0.72, 0.5),
+    },
+    "2017": {
+        "Nicole Kidman": "NicoleKidman.png",
+        "Dolores Heredia": "Dolores_Heredia.png",
+        "Sophie Alexander": "Sophie_Alexander.png",
+        "Michel Franco": "Michel_Franco.png",
+        "Zuria Vega y Alberto Guerra": "ZuriaVegayAlbertoGuerra.png",
+    },
+    "2018": {
+        "Adam Driver": "AdamDriver.jpg",
+        "Rebecca Jones": "Rebecca Jones.jpg",
+        "Martha Higareda": "MartaHiagerda.jpg",
+        "Terry Gilliam": ("TerryGilliam.jpg", 0.55, 0.5),
+        "Spike Lee": "SpikeLee.jpg",
+    },
+    "2019": {
+        "Robert De Niro": "RobertDeniro.jpg",
+        "Yalitza Aparicio": "YalitzaAparicio.jpg",
+        "Cassandra Sánchez Navarro": "CassandraSanchezNavarro.jpg",
+        "Ludwika Paleta": "LudwikaPaleta.jpg",
+        "Ira Sachs": "IraSachs.jpg",
+    },
+    "2022": {
+        "Karla Souza": "KarlaSouza.png",
+        "Ana Valeria Becerril": "AnaValeriaBecerril.png",
+        "Christian Chávez": "Christian Chávez.png",
+        "Michelle Renaud": "MichelleRenaud.png",
+        "Marian Mathias y Joy Jorgensen": ("Marian Mathias y Joy Jorgensen.png", 0.46, 0.45),
+    },
+    "2025": {
+        "Ed Maverick": ("EdMaverick.jpg", 0.52, 0.55, 1.9),
+        "Eugenio Caballero": ("EugenioCaballero.JPG", 0.42, 0.755, 3.6),
+        "Fernando Cattori": "Fernando Cattori.JPG",
+        "Alejandro Puente": "AlejandroPuente.JPG",
+        "Tessa Ia y Naian González Norvind": "TessaIayNaian.JPG",
+        "Andrea Chaparro": "AndreaChaparro.JPG",
+        "Lizeth Selene": "LizethSelene.JPG",
+    },
 }
 
 
@@ -72,62 +118,73 @@ def slugify(name: str) -> str:
     return re.sub(r"[^a-zA-Z0-9]+", "-", ascii_name).strip("-").lower()
 
 
-def to_portrait(im: Image.Image) -> Image.Image:
-    """Devuelve la imagen en 2:3 vertical, sin ampliar."""
+def to_portrait(im: Image.Image, centering, zoom: float) -> Image.Image:
+    """Recorta a 2:3 vertical alrededor de `centering`, sin ampliar."""
     im = ImageOps.exif_transpose(im).convert("RGB")
     w, h = im.size
 
-    if w > h:
-        # Apaisada (p. ej. 2012/Gael_GarcíaBernal.png, 1024x595): en vez de recortar
-        # a ciegas, se monta sobre un lienzo 2:3 con su propio fondo desenfocado.
-        cw = min(MAX_W, w)
-        ch = round(cw / RATIO)
-        bg = ImageOps.fit(im, (cw, ch), Image.LANCZOS, centering=(0.5, 0.5))
-        bg = bg.filter(ImageFilter.GaussianBlur(radius=max(8, cw * 0.06)))
-        bg = bg.point(lambda p: int(p * 0.5))
-        fg = im.copy()
-        fg.thumbnail((cw, ch), Image.LANCZOS)
-        bg.paste(fg, ((cw - fg.width) // 2, (ch - fg.height) // 2))
-        return bg
+    if zoom <= 1:
+        out_w = min(MAX_W, w)
+        out_h = round(out_w / RATIO)
+        if out_h > h:
+            out_h = h
+            out_w = round(h * RATIO)
+        return ImageOps.fit(im, (out_w, out_h), Image.LANCZOS, centering=centering)
 
-    # Vertical: recorte 2:3 sesgado hacia arriba para no decapitar a nadie.
-    out_w = min(MAX_W, w)
-    out_h = round(out_w / RATIO)
-    if out_h > h:
-        out_h = h
-        out_w = round(h * RATIO)
-    return ImageOps.fit(im, (out_w, out_h), Image.LANCZOS, centering=(0.5, 0.22))
+    # Zoom: se recorta a mano una ventana 2:3 más chica alrededor de (cx, cy)
+    # y se deja al tamaño nativo del recorte (nunca se amplía).
+    box_w = min(w, h * RATIO) / zoom
+    box_h = box_w / RATIO
+    cx, cy = centering
+    left = min(max(cx * w - box_w / 2, 0), w - box_w)
+    top = min(max(cy * h - box_h / 2, 0), h - box_h)
+    crop = im.crop((round(left), round(top), round(left + box_w), round(top + box_h)))
+    if crop.width > MAX_W:
+        crop = crop.resize((MAX_W, round(MAX_W / RATIO)), Image.LANCZOS)
+    return crop
 
 
-def convert(src_path: str, out_path: str) -> int:
+def convert(src_path: str, out_path: str, centering, zoom: float) -> int:
     with Image.open(src_path) as im:
-        out = to_portrait(im)
+        if centering is None:
+            # Apaisadas: el sujeto rara vez está arriba, así que se centra vertical.
+            centering = (0.5, 0.35) if im.size[0] > im.size[1] else (0.5, 0.22)
+        out = to_portrait(im, centering, zoom)
     out.save(out_path, "JPEG", quality=QUALITY, optimize=True, progressive=True)
     return os.path.getsize(out_path)
 
 
-def main() -> int:
-    if not os.path.isdir(SRC_ROOT):
-        print(f"No existe el origen: {SRC_ROOT}", file=sys.stderr)
-        return 1
+def find_year_dir(year: str):
+    for root in SRC_ROOTS:
+        candidate = os.path.join(root, year)
+        if os.path.isdir(candidate):
+            return candidate
+    return None
 
+
+def main() -> int:
     total = count = missing = 0
     for year, people in sorted(MAPPING.items()):
-        src_dir = os.path.join(SRC_ROOT, year)
+        src_dir = find_year_dir(year)
         out_dir = os.path.join(OUT_ROOT, year)
-        if not os.path.isdir(src_dir):
+        if src_dir is None:
             print(f"[{year}] carpeta de origen ausente, se omite")
             continue
         os.makedirs(out_dir, exist_ok=True)
 
-        for name, filename in people.items():
+        for name, entry in people.items():
+            if isinstance(entry, tuple):
+                filename, centering = entry[0], (entry[1], entry[2])
+                zoom = entry[3] if len(entry) > 3 else 1.0
+            else:
+                filename, centering, zoom = entry, None, 1.0
             src = os.path.join(src_dir, filename)
             if not os.path.isfile(src):
                 print(f"[{year}] FALTA: {filename} ({name})", file=sys.stderr)
                 missing += 1
                 continue
             out = os.path.join(out_dir, f"{slugify(name)}.jpg")
-            size = convert(src, out)
+            size = convert(src, out, centering, zoom)
             total += size
             count += 1
             print(f"[{year}] {name:32s} -> {os.path.basename(out):34s} {size // 1024:4d} KB")

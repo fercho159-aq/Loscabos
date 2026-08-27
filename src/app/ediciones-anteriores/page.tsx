@@ -29,47 +29,6 @@ export default function EdicionesAnteriores() {
 
       <PageHero lines={["Ediciones", "Anteriores"]} />
 
-      <section className="editions-index-section">
-        <div className="editions-index-intro">
-          <span className="editions-index-eyebrow">Archivo</span>
-          <p className="editions-index-lead">
-            Desde 2012, el Festival Internacional de Cine y Creatividad de Los
-            Cabos ha sido escenario de encuentros entre el cine iberoamericano y
-            la industria cinematográfica mundial. Aquí, el registro de cada
-            edición.
-          </p>
-        </div>
-
-        <div className="editions-grid">
-          {editionsData.map((ed, i) => (
-            <Link
-              key={ed.slug}
-              href={`/ediciones-anteriores/${ed.slug}`}
-              className="edition-card"
-            >
-              <div className="edition-card-poster-wrap">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={ed.posterSrc}
-                  alt={`Póster oficial edición ${ed.year} — ${ed.title}`}
-                  loading={i < 4 ? "eager" : "lazy"}
-                  decoding="async"
-                  className="edition-card-poster"
-                />
-                <div className="edition-card-overlay">
-                  <span className="edition-card-cta">Ver edición →</span>
-                </div>
-              </div>
-              <div className="edition-card-info">
-                <span className="edition-card-year">{ed.year}</span>
-                <span className="edition-card-title">{ed.title}</span>
-                <span className="edition-card-dates">{ed.dates}</span>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
       {/* ── PERSONALIDADES POR AÑO — línea de tiempo con el año sticky ── */}
       <section className="pers-section">
         <div className="pers-intro">
@@ -120,6 +79,47 @@ export default function EdicionesAnteriores() {
                 ))}
               </div>
             </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="editions-index-section">
+        <div className="editions-index-intro">
+          <span className="editions-index-eyebrow">Archivo</span>
+          <p className="editions-index-lead">
+            Desde 2012, el Festival Internacional de Cine y Creatividad de Los
+            Cabos ha sido escenario de encuentros entre el cine iberoamericano y
+            la industria cinematográfica mundial. Aquí, el registro de cada
+            edición.
+          </p>
+        </div>
+
+        <div className="editions-grid">
+          {editionsData.map((ed, i) => (
+            <Link
+              key={ed.slug}
+              href={`/ediciones-anteriores/${ed.slug}`}
+              className="edition-card"
+            >
+              <div className="edition-card-poster-wrap">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={ed.posterSrc}
+                  alt={`Póster oficial edición ${ed.year} — ${ed.title}`}
+                  loading={i < 4 ? "eager" : "lazy"}
+                  decoding="async"
+                  className="edition-card-poster"
+                />
+                <div className="edition-card-overlay">
+                  <span className="edition-card-cta">Ver edición →</span>
+                </div>
+              </div>
+              <div className="edition-card-info">
+                <span className="edition-card-year">{ed.year}</span>
+                <span className="edition-card-title">{ed.title}</span>
+                <span className="edition-card-dates">{ed.dates}</span>
+              </div>
+            </Link>
           ))}
         </div>
       </section>
