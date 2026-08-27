@@ -273,10 +273,22 @@ body {
      IMPULSO CARD OUTER (handles desktop translateY)
      ══════════════════════════════════════════ */
   .impulso-card-outer {
-    flex-shrink: 0;
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 587px;
     transform: translateY(-200px);
-    margin-left: 100px;
-    margin-right: 10px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .impulso-cards-row {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .impulso-card-outer [data-anim="impulso-card"] {
+    width: 100%;
+    aspect-ratio: 587 / 460;
   }
 
   .lbi-card-outer {
@@ -3822,11 +3834,20 @@ body {
     margin-right: 0 !important;
   }
 
+  .impulso-cards-row {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .impulso-card-outer {
+    max-width: none !important;
+  }
+
   [data-anim="impulso-card"] {
     width: min(480px, calc(100vw - 2rem)) !important;
     height: auto !important;
     min-height: 340px !important;
-    aspect-ratio: 16 / 11;
+    aspect-ratio: 16 / 11 !important;
   }
 
   [data-anim="impulso-card"] h3 {
@@ -5554,10 +5575,10 @@ body {
 
 /* ══════════════════════════════════════════
    GUIÓN PARA LA GRAN INDUSTRIA (/guion-para-la-gran-industria)
-   Acento: #A0CBD7 (azul claro, definido para esta página). Fondos: cream / navy-dark.
+   Acento: #FCE017 (amarillo del logo Guion_Logo-02.png). Fondos: cream / navy-dark.
    ══════════════════════════════════════════ */
 .gplgi-page {
-  --gplgi-accent: #A0CBD7;
+  --gplgi-accent: #FCE017;
   --gplgi-dark: #0A1E23; /* dark recurrente del sitio */
   background: #fff;
   color: var(--color-navy);
