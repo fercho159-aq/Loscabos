@@ -39,7 +39,6 @@ const beneficios = [
   { title: "Estímulo económico", desc: "$100,000 MXN para el guionista seleccionado.", featured: true },
   { title: "Taller de pulido", desc: "Sesiones de trabajo sobre el guion con Lemon Studios e Irreversible Pictures." },
   { title: "Producción", desc: "El proyecto se produce de la mano de las dos casas productoras." },
-  { title: "Bono por desempeño", desc: "Bono adicional sujeto a taquilla y ventas internacionales." },
   { title: "Regalías", desc: "Vía SOGEM y derechos de autor." },
   { title: "Crédito como guionista", desc: "Con posible crédito compartido con un co-guionista de apoyo." },
   { title: "Visibilidad", desc: "Dentro del ecosistema del FICC Los Cabos 2026." },
