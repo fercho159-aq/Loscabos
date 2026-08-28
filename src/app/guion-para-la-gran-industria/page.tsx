@@ -28,7 +28,7 @@ const aliadosGPLGI = [
 const aliadosGPLGITrack = [...aliadosGPLGI, ...aliadosGPLGI];
 
 const datos = [
-  { value: "$150,000", unit: "MXN", label: "Estímulo económico" },
+  { value: "$100,000", unit: "MXN", label: "Estímulo económico" },
   { value: "24", unit: "SEP", label: "Apertura de convocatoria" },
   { value: "2", unit: "casas", label: "Productoras que producen el proyecto" },
   { value: "1", unit: "guion", label: "Largometraje de ficción" },
@@ -36,7 +36,7 @@ const datos = [
 
 // El primer beneficio se pinta como tarjeta destacada.
 const beneficios = [
-  { title: "Estímulo económico", desc: "$150,000 MXN para el guionista seleccionado.", featured: true },
+  { title: "Estímulo económico", desc: "$100,000 MXN para el guionista seleccionado.", featured: true },
   { title: "Taller de pulido", desc: "Sesiones de trabajo sobre el guion con Lemon Studios e Irreversible Pictures." },
   { title: "Producción", desc: "El proyecto se produce de la mano de las dos casas productoras." },
   { title: "Bono por desempeño", desc: "Bono adicional sujeto a taquilla y ventas internacionales." },
