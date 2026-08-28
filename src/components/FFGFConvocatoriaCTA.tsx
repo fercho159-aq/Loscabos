@@ -7,10 +7,10 @@ import SubscribeCTA from "./SubscribeCTA";
    (UTC-7). El switch se resuelve en el cliente (useEffect) para no romper la
    hidratación ni depender del build.
    - Antes del 24 de julio: pre-registro.
-   - 24 de julio al 28 de agosto: aplicación + descarga.
-   - Después del 28 de agosto: convocatoria cerrada. */
+   - 24 de julio al 28 de agosto (hasta las 23:59): aplicación + descarga.
+   - A partir del 29 de agosto: convocatoria cerrada. */
 const OPEN_AT = Date.parse("2026-07-24T00:00:00-07:00");
-const CLOSE_AT = Date.parse("2026-08-28T00:00:00-07:00");
+const CLOSE_AT = Date.parse("2026-08-28T23:59:59-07:00");
 const FORM_URL = "https://forms.gle/FAhDCdrZASmN5HnDA";
 const CONVOCATORIA_PDF = "/docs/convocatoria-ffgf-2026.pdf";
 
