@@ -36,7 +36,6 @@ const aliados = [
   { name: "Chemistry", logo: "/images/aliados/FICC_Logos_Aliados_2026-10.png" },
   { name: "CineNet", logo: "/images/aliados/FICC_Logos_Aliados_2026-11.png" },
   { name: "Pimienta Films", logo: "/images/aliados/FICC_Logos_Aliados_2026-pimienta-films.png" },
-  { name: "Valiente Films", logo: "/images/aliados/FICC_Logos_Aliados_2026-valiente-films.png" },
   { name: "Pólvora", logo: "/images/aliados/FICC_Logos_Aliados_2026-15.png" },
   { name: "Cine de Verano", logo: "/images/aliados/FICC_Logos_Aliados_2026-14.png" },
   { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-16.png" },
