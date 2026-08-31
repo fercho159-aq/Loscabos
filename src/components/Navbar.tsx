@@ -13,9 +13,15 @@ type NavItem = {
 const navItems: NavItem[] = [
   { label: "Programaci\u00f3n 2026", href: "/programacion-2026" },
   { label: "El Festival", href: "/el-festival" },
-  { label: "La Baja Inspira", href: "/la-baja-inspira" },
-  { label: "Fondo Fílmico Gabriel Figueroa", href: "/ffgf" },
-  { label: "Guión para la Gran Industria", href: "/guion-para-la-gran-industria" },
+  {
+    label: "Plataformas de apoyo a la industria",
+    href: "/plataformas-de-impulso",
+    children: [
+      { label: "La Baja Inspira", href: "/la-baja-inspira" },
+      { label: "Fondo Fílmico Gabriel Figueroa", href: "/ffgf" },
+      { label: "Guión para la Gran Industria", href: "/guion-para-la-gran-industria" },
+    ],
+  },
   { label: "Campus", href: "/campus" },
   { label: "Comunidad", href: "/comunidad" },
   { label: "Ediciones anteriores", href: "/edicion-2025" },

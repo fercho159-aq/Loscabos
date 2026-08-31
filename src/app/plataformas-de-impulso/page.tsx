@@ -13,9 +13,9 @@ const plataformas = [
     title: "La Baja Inspira",
     description:
       "Un programa integral de formación, desarrollo y producción que impulsa el talento creativo de Baja California Sur, conectando cineastas locales con la industria audiovisual internacional.",
-    href: "/plataformas-de-impulso/la-baja-inspira",
+    href: "/la-baja-inspira",
     bg: "bg-lime",
-    cta: "Inscríbete",
+    cta: "Conoce más",
     image: "/images/webpdf/img-025.jpg",
     accent: "#BDC957",
   },
@@ -23,32 +23,21 @@ const plataformas = [
     title: "Fondo Fílmico Gabriel Figueroa",
     description:
       "Fondo de apoyo a la postproducción de largometrajes latinoamericanos que busca impulsar voces emergentes y consolidar proyectos cinematográficos con visión autoral.",
-    href: "/plataformas-de-impulso/fondo-filmico-gabriel-figueroa",
+    href: "/ffgf",
     bg: "bg-lavender",
-    cta: "Inscríbete",
+    cta: "Conoce más",
     image: "/images/webpdf/img-010.jpg",
     accent: "#6687C3",
   },
   {
-    title: "Semillas del Desierto",
-    subtitle: "Emerging Film Makers",
+    title: "Guión para la Gran Industria",
     description:
-      "Programa dedicado a descubrir y nutrir el talento de cineastas emergentes, ofreciendo mentoría, talleres y oportunidades de networking con profesionales de la industria.",
-    href: "/plataformas-de-impulso/semillas-del-desierto",
+      "Convocatoria especializada en guion cinematográfico de largometraje: estímulo económico, taller de pulido con casas productoras y ruta de producción para el proyecto seleccionado.",
+    href: "/guion-para-la-gran-industria",
     bg: "bg-blush",
     cta: "Conoce más",
-    image: "/images/webpdf/img-005.jpg",
+    image: "/images/gplgi-hero-poster.jpg",
     accent: "#E9B0BD",
-  },
-  {
-    title: "Miradas al Sur",
-    description:
-      "Ventana al cine latinoamericano que celebra las narrativas del sur global, creando puentes entre culturas y abriendo espacios de diálogo cinematográfico.",
-    href: "/plataformas-de-impulso/miradas-al-sur",
-    bg: "bg-lavender",
-    cta: "Conoce más",
-    image: "/images/webpdf/img-089.jpg",
-    accent: "#6687C3",
   },
 ];
 
@@ -58,7 +47,7 @@ export default function PlataformasDeImpulso() {
       <Navbar />
 
       {/* Hero banner */}
-      <PageHero lines={["Plataformas", "de Impulso"]} />
+      <PageHero lines={["Plataformas de apoyo", "a la industria"]} />
 
       {/* Intro text */}
       <section className="festival-text" style={{ position: "relative", overflow: "hidden" }}>
@@ -70,9 +59,9 @@ export default function PlataformasDeImpulso() {
         />
         <div className="festival-text-container" style={{ position: "relative", zIndex: 2 }}>
           <p className="gsap-fade-up">
-            Las Plataformas de Impulso del FICC Los Cabos son el corazón de nuestra
-            misión: crear puentes entre el talento emergente y la industria cinematográfica
-            global. A través de cinco programas especializados, ofrecemos formación,
+            Las plataformas de apoyo a la industria del FICC Los Cabos son el corazón de
+            nuestra misión: crear puentes entre el talento emergente y la industria
+            cinematográfica global. A través de programas especializados, ofrecemos formación,
             financiamiento y visibilidad a proyectos que transforman el panorama
             audiovisual de México y Latinoamérica.
           </p>
@@ -87,7 +76,7 @@ export default function PlataformasDeImpulso() {
             <div className="plat-fullbleed-img">
               <Image
                 src={p.image}
-                alt={`${p.title} — plataforma de impulso FICC Los Cabos`}
+                alt={`${p.title} — plataforma de apoyo a la industria FICC Los Cabos`}
                 fill
                 sizes="100vw"
                 style={{ objectFit: "cover" }}
@@ -101,9 +90,6 @@ export default function PlataformasDeImpulso() {
             <div className={`plat-floating-panel ${i % 2 === 0 ? "panel-left" : "panel-right"} ${p.bg} ${i % 2 === 0 ? "gsap-fade-left" : "gsap-fade-right"}`}>
               <span className="plat-floating-number">0{i + 1}</span>
               <h2 className="plat-title">{p.title}</h2>
-              {p.subtitle && (
-                <p className="plat-subtitle">{p.subtitle}</p>
-              )}
               <div className="gsap-line-reveal" style={{ height: 2, background: "rgba(13,21,32,.15)", marginBottom: "1.2rem" }} />
               <p className="plat-desc">{p.description}</p>
               <Link href={p.href} className="plat-cta">
