@@ -136,7 +136,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: clamp(.7rem, 1.05vw, 1.4rem);
+    gap: clamp(.85rem, 1.25vw, 1.7rem);
     list-style: none;
     min-width: 0;
   }
@@ -144,7 +144,7 @@ body {
   .nav-links a {
     font-family: var(--font-inter);
     font-weight: 900;
-    font-size: clamp(.58rem, .66vw, .76rem);
+    font-size: clamp(.74rem, .95vw, .95rem);
     letter-spacing: .03em;
     text-transform: uppercase;
     text-decoration: none;
@@ -204,16 +204,20 @@ body {
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translateX(-50%);
-    background: rgba(10, 22, 34, .97);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 0.6rem 0;
-    min-width: 260px;
+    transform: translateX(-50%) translateY(-8px);
+    background: rgba(8, 23, 34, .98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: .4rem;
+    min-width: max(260px, 100%);
     opacity: 0;
     visibility: hidden;
-    transition: opacity .25s, visibility .25s;
-    border: 1px solid rgba(255, 255, 255, .08);
+    transition: opacity .22s cubic-bezier(.4, 0, .2, 1),
+                transform .22s cubic-bezier(.4, 0, .2, 1),
+                visibility .22s;
+    border: 1px solid rgba(255, 255, 255, .09);
+    border-top: 2px solid #C47A3D;
+    box-shadow: 0 22px 44px -14px rgba(0, 0, 0, .65);
     z-index: 200;
     margin-top: 0;
   }
@@ -222,24 +226,53 @@ body {
   .has-dropdown:focus-within .nav-dropdown {
     opacity: 1;
     visibility: visible;
+    transform: translateX(-50%) translateY(0);
   }
 
   .nav-dropdown-link {
+    position: relative;
     display: block;
-    padding: 0.55rem 1.25rem;
+    padding: .62rem .9rem .62rem 1.5rem;
     font-family: var(--font-inter);
-    font-weight: 900;
-    font-size: 0.7rem;
-    letter-spacing: 0.06em;
+    font-weight: 800;
+    font-size: .78rem;
+    letter-spacing: .045em;
     text-transform: uppercase;
     text-decoration: none;
-    color: rgba(255, 255, 255, .8);
-    transition: background .2s, color .2s;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, .72);
+    transition: background .2s, color .2s, padding-left .2s;
   }
 
-  .nav-dropdown-link:hover {
-    background: rgba(255, 255, 255, .06);
+  /* Barra de acento que crece en hover */
+  .nav-dropdown-link::before {
+    content: '';
+    position: absolute;
+    left: .55rem;
+    top: 50%;
+    width: 2px;
+    height: 0;
+    background: #C47A3D;
+    transform: translateY(-50%);
+    transition: height .22s cubic-bezier(.4, 0, .2, 1);
+  }
+
+  .nav-dropdown-link:hover,
+  .nav-dropdown-link:focus-visible {
+    background: rgba(255, 255, 255, .05);
     color: #fff;
+    padding-left: 1.7rem;
+  }
+
+  .nav-dropdown-link:hover::before,
+  .nav-dropdown-link:focus-visible::before {
+    height: 1.05em;
+  }
+
+  /* El subrayado del padre queda fijo mientras el menú está abierto */
+  .has-dropdown:hover>a::after,
+  .has-dropdown:focus-within>a::after {
+    width: 100%;
   }
 
   .nav-cta {
@@ -249,7 +282,7 @@ body {
     color: #ffffff;
     font-family: var(--font-inter);
     font-weight: 900;
-    font-size: clamp(.62rem, .72vw, .85rem);
+    font-size: clamp(.7rem, .82vw, .92rem);
     letter-spacing: .08em;
     text-transform: uppercase;
     white-space: nowrap;

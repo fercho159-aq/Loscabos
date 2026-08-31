@@ -156,10 +156,12 @@ export default function Navbar() {
                     href={child.href}
                     onClick={() => setMobileOpen(false)}
                     style={{
-                      display: "block", padding: "0.8rem 0 0.8rem 1.25rem",
-                      fontFamily: "var(--font-inter)", fontWeight: 900,
-                      fontSize: "1.3rem", textTransform: "uppercase", color: "rgba(255,255,255,.7)",
+                      display: "block", padding: "0.8rem 0 0.8rem 1.1rem",
+                      margin: "0 0 0 0.15rem",
+                      fontFamily: "var(--font-inter)", fontWeight: 800,
+                      fontSize: "1.15rem", textTransform: "uppercase", color: "rgba(255,255,255,.66)",
                       letterSpacing: "0.02em", textDecoration: "none",
+                      borderLeft: "2px solid rgba(196,122,61,.55)",
                       borderBottom: "1px solid rgba(255,255,255,.04)",
                     }}
                   >
