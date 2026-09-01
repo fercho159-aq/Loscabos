@@ -14,7 +14,7 @@ const navItems: NavItem[] = [
   { label: "Programaci\u00f3n 2026", href: "/programacion-2026" },
   { label: "El Festival", href: "/el-festival" },
   {
-    label: "Plataformas de apoyo a la industria",
+    label: "Plataformas de impulso a la industria",
     href: "/plataformas-de-impulso",
     children: [
       { label: "La Baja Inspira", href: "/la-baja-inspira" },
