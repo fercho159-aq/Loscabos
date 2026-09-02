@@ -156,7 +156,7 @@ const groups: Group[] = [
   },
   {
     id: "emerging",
-    title: "Emerging",
+    title: "Emerging Filmmaker Panel",
     accent: "var(--color-orange)",
     people: [
       { name: "Natalia León", role: "Guionista, directora, animadora y actriz", image: "/images/comunidad/natalia-leon.jpg" },

@@ -37,6 +37,7 @@ const aliados = [
   { name: "Lemon Studios", logo: "/images/aliados/2026/29-lemon-studios.png" },
   { name: "Pimienta Films", logo: "/images/aliados/2026/30-pimienta-films.png" },
   { name: "Cine Club Documental Los Cabos", logo: "/images/aliados/2026/30b-cine-club-documental.png" },
+  { name: "Mighty", logo: "/images/aliados/2026/30c-mighty.png" },
   { name: "Art Kingdom", logo: "/images/aliados/2026/31-art-kingdom.png" },
   { name: "CTT Exp & Rentals", logo: "/images/aliados/2026/32-ctt-exp-rentals.png" },
   { name: "Shalala", logo: "/images/aliados/2026/33-shalala.png" },
