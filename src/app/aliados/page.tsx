@@ -23,7 +23,6 @@ const aliados = [
   { name: "Flora Farms", logo: "/images/aliados/2026/14-flora-farms.png" },
   { name: "YAYA Rentals", logo: "/images/aliados/2026/15-yaya-rentals.png" },
   { name: "Bar Ligaya", logo: "/images/aliados/2026/16-bar-ligaya.png" },
-  { name: "Space Xmas", logo: "/images/aliados/2026/17-space-xmas.png" },
   { name: "Suelo Sur", logo: "/images/aliados/2026/18-suelo-sur.png" },
   { name: "Sage", logo: "/images/aliados/2026/19-sage.png" },
   { name: "Casa Ballena", logo: "/images/aliados/2026/20-casa-ballena.png" },
@@ -54,6 +53,7 @@ const aliados = [
   { name: "Cabo Mil", logo: "/images/aliados/2026/44-cabo-mil.png" },
   { name: "Exa", logo: "/images/aliados/2026/45-exa.png" },
   { name: "Girls at Films", logo: "/images/aliados/2026/46-girls-at-films.png" },
+  { name: "Palmilla Dunes", logo: "/images/aliados/2026/47-palmilla-dunes.png" },
 ];
 
 // Duplicate for seamless infinite loop
