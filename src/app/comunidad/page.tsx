@@ -151,7 +151,7 @@ const groups: Group[] = [
     title: "Panelistas",
     accent: "var(--color-orange)",
     people: [
-      { name: "Griselda Siciliani", role: "Actriz, cantante y bailarina", image: "/images/comunidad/griselda-siciliani.jpg" },
+      { name: "Griselda Siciliani", role: "Actriz", image: "/images/comunidad/griselda-siciliani.jpg" },
     ],
   },
   {

@@ -32,7 +32,7 @@ export type Evento = {
   groups?: PersonaGrupo[];
 };
 
-// Sneak Peak de la edición 2026, en orden de programa. Las fotos se generan con
+// Sneak Peek de la edición 2026, en orden de programa. Las fotos se generan con
 // `python3 scripts/optimize-programacion.py`; quien todavía no tiene `image` se
 // pinta con iniciales.
 export const eventos2026: Evento[] = [
@@ -73,11 +73,6 @@ export const eventos2026: Evento[] = [
             name: "Fernando Frías",
             image: "/images/programacion-2026/personas/fernando-frias.jpg",
             bio: "Director y guionista de Ya no estoy aquí y No voy a pedirle a nadie que me crea.",
-          },
-          {
-            name: "Alejandra Márquez Abella",
-            image: "/images/programacion-2026/personas/alejandra-marquez-abella.jpg",
-            bio: "Directora y guionista de Las Niñas Bien, El Norte Sobre el Vacío, A Million Miles Away y La Liberación.",
           },
           {
             name: "Gibrán Portela",

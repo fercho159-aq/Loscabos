@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Optimiza las fotos del Sneak Peak de /programacion-2026.
+Optimiza las fotos del Sneak Peek de /programacion-2026.
 
 Origen:  ~/Downloads/ (los archivos tal cual los manda el cliente)
 Destino: public/images/programacion-2026/
@@ -39,7 +39,8 @@ QUALITY = 82
 
 # Foto de cada evento. La clave es el `slug` del evento en programacion-2026-data.ts.
 EVENTOS = {
-    "homenaje-dolores-heredia": "DoloresHeredia.png",
+    # Original vertical (1129x1697): el recorte 16:9 se centra en el rostro.
+    "homenaje-dolores-heredia": ("Dolores_Heredia.png", 0.5, 0.25),
     "laboratorio-de-escritura": "TallerdeEscritura.jpg",
     # Original vertical (1170x1560): el 16:9 por defecto se comería la escena.
     "brunch-girls-at-films": ("Brunch.jpg", 0.5, 0.30),
@@ -51,7 +52,6 @@ PERSONAS = {
     # Laboratorio de Escritura — mentores
     "Carlos Cuarón": "CarlosCuaron.jpg",
     "Fernando Frías": "FernandoFrias.jpg",
-    "Alejandra Márquez Abella": "AlejandraMarquezAbella.jpg",
     "Gibrán Portela": "GibranPortela.jpg",
     # Brunch Girls At Films — invitada especial
     "Griselda Siciliani": ("IMAGEN GRISELDA SICILIANI .jpg", 0.5, 0.30),  # apaisada 6048x4032
