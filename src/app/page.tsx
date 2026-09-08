@@ -261,39 +261,6 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Guión para la Gran Industria */}
-            <div className="impulso-card-outer">
-              <Link
-                href="/guion-para-la-gran-industria"
-                data-anim="impulso-card"
-                className="relative overflow-hidden cursor-pointer block"
-                style={{ backgroundColor: "#0A1E23" }}
-              >
-                <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                  <Image
-                    src="/images/GPLGI_GIF_SinLogo.gif"
-                    alt=""
-                    aria-hidden="true"
-                    fill
-                    sizes="(max-width: 768px) calc(100vw - 2rem), 33vw"
-                    className="object-cover"
-                    unoptimized
-                  />
-                </div>
-                <div className="absolute inset-0 pointer-events-none z-[1]" style={{ backgroundColor: "rgba(10, 30, 35, 0.35)" }} />
-                <div className="absolute inset-0 z-[2] pointer-events-none p-8">
-                  <div className="relative w-full h-full">
-                    <Image
-                      src="/images/Guion_Logo-02.png"
-                      alt="Guión para la Gran Industria"
-                      fill
-                      sizes="(max-width: 768px) calc(100vw - 4rem), 33vw"
-                      className="object-contain"
-                    />
-                  </div>
-                </div>
-              </Link>
-            </div>
           </div>
           <div></div>
         </div>

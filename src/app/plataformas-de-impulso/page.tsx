@@ -29,16 +29,6 @@ const plataformas = [
     image: "/images/webpdf/img-010.jpg",
     accent: "#6687C3",
   },
-  {
-    title: "Guión para la Gran Industria",
-    description:
-      "Convocatoria especializada en guion cinematográfico de largometraje: estímulo económico, taller de pulido con casas productoras y ruta de producción para el proyecto seleccionado.",
-    href: "/guion-para-la-gran-industria",
-    bg: "bg-blush",
-    cta: "Conoce más",
-    image: "/images/gplgi-hero-poster.jpg",
-    accent: "#E9B0BD",
-  },
 ];
 
 export default function PlataformasDeImpulso() {

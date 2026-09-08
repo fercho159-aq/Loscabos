@@ -19,7 +19,6 @@ const navItems: NavItem[] = [
     children: [
       { label: "La Baja Inspira", href: "/la-baja-inspira" },
       { label: "Fondo Fílmico Gabriel Figueroa", href: "/ffgf" },
-      { label: "Guión para la Gran Industria", href: "/guion-para-la-gran-industria" },
     ],
   },
   { label: "Campus", href: "/campus" },
