@@ -125,6 +125,14 @@ const groups: Group[] = [
     ],
   },
   {
+    id: "homenaje",
+    title: "Homenaje",
+    accent: "var(--color-orange)",
+    people: [
+      { name: "Dolores Heredia", role: "Actriz", image: "/images/comunidad/dolores-heredia.jpg" },
+    ],
+  },
+  {
     id: "austin",
     title: "Austin",
     accent: "var(--color-orange)",
