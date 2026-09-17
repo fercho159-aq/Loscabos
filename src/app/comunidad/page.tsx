@@ -99,6 +99,7 @@ const groups: Group[] = [
       { name: "Fernando Lebrija", role: "Fundador <br> Irreversible Pictures", image: "/images/comunidad/fernando-lebrija.jpg" },
       { name: "Billy Rovzar", role: "Fundador y CEO <br> Lemon Studios", tbc: true }, // sin foto
       { name: "Fernando Rovzar", role: "Fundador y Director Creativo <br> Lemon Studios", tbc: true }, // sin foto
+      { name: "Claudio Jiménez Palomar", role: "Productor ejecutivo y cofundador <br> Mighty Animation", image: "/images/comunidad/claudio-jimenez-palomar.jpg" },
     ],
   },
   {
