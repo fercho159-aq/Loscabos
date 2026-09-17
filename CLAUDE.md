@@ -52,7 +52,7 @@ src/
     convocatorias/page.tsx
     prensa/page.tsx
     ffgf/page.tsx
-    fon/page.tsx
+    frequencies-of-now/page.tsx   # Oculta (noindex, sin nav) hasta lanzamiento
     la-baja-inspira/page.tsx
     plataformas-de-impulso/page.tsx
   components/
@@ -209,3 +209,4 @@ Overlay WebGL global (montado en `layout.tsx`). Aplica textura de grano de pelic
 ## Paginas Documentadas en Detalle
 
 - **La Baja Inspira**: Ver `LA-BAJA-INSPIRA.md` para identidad visual, animaciones, y estructura completa.
+- **Frequencies of Now**: Ver `FREQUENCIES-OF-NOW.md` (pagina oculta, diagrama de senal, timeline, CTA por fecha, como publicarla).

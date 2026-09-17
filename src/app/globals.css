@@ -6254,3 +6254,578 @@ a:focus-visible .p26-underline,
     transition: none;
   }
 }
+
+
+/* ══════════════════════════════════════════
+   FREQUENCIES OF NOW  (/frequencies-of-now)
+   Identidad: brandbook FoN 2026. Paleta propia (coral/lima), títulos
+   Arial Black, tarjetas redondeadas, pulso de frecuencia.
+   Reusa lbi-desc-grid, lbi-jurado-*, cta-button.
+   ══════════════════════════════════════════ */
+.fon-page {
+  --fon-dark: #0E1B23;
+  --fon-card: #1E2A35;
+  --fon-cream: #F2EDE4;
+  --fon-coral: #FF4F5E;
+  --fon-lime: #C4DA6D;
+  --fon-display: "Arial Black", "Arial-Black", "Helvetica Neue", var(--font-inter), Arial, sans-serif;
+  background: var(--fon-dark);
+  font-family: var(--font-inter);
+}
+
+/* ── Tipografía base ── */
+.fon-eyebrow {
+  display: block;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--fon-coral);
+  margin-bottom: .9rem;
+}
+.fon-h2 {
+  font-family: var(--fon-display);
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  color: var(--fon-cream);
+  line-height: 1.04;
+  margin: 0 0 1.25rem;
+  max-width: 900px;
+  letter-spacing: .005em;
+}
+.fon-h3 {
+  font-family: var(--fon-display);
+  font-weight: 900;
+  font-size: clamp(1.5rem, 2.8vw, 2.3rem);
+  color: var(--fon-cream);
+  line-height: 1.08;
+  margin: 0;
+}
+.fon-lead {
+  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+  line-height: 1.55;
+  color: rgba(242,237,228,.82);
+  font-weight: 400;
+  margin: 0;
+}
+.fon-body {
+  font-size: clamp(1.02rem, 1.4vw, 1.2rem);
+  line-height: 1.55;
+  color: var(--fon-dark);
+  font-weight: 400;
+  margin: 0 0 1rem;
+}
+
+/* ── Logo ── */
+.fon-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(1rem, 2.5vw, 2.2rem);
+}
+.fon-logo--vertical {
+  flex-direction: column;
+  text-align: center;
+  gap: 1.25rem;
+}
+.fon-logo-bars {
+  display: block;
+  height: clamp(72px, 12vw, 170px);
+  width: auto;
+  flex-shrink: 0;
+  overflow: visible;
+}
+.fon-logo--vertical .fon-logo-bars {
+  height: clamp(64px, 9vw, 120px);
+}
+.fon-logo-word {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-inter);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--fon-cream);
+  line-height: .95;
+  letter-spacing: -.005em;
+  font-size: clamp(2.2rem, 7vw, 5.6rem);
+}
+.fon-logo--vertical .fon-logo-word {
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  align-items: center;
+}
+.fon-logo-word small {
+  font-size: .28em;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: lowercase;
+  margin-top: .5em;
+  color: rgba(242,237,228,.8);
+}
+
+/* ── Hero ── */
+.fon-hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  background: var(--fon-dark);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.fon-hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+.fon-hero-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(14,27,35,.7) 0%, rgba(14,27,35,.45) 45%, rgba(14,27,35,.78) 100%);
+}
+.fon-hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(7rem, 16vh, 10rem) clamp(1.25rem, 5vw, 4.8rem) clamp(4rem, 8vh, 6rem);
+}
+.fon-hero-title {
+  margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
+  font-size: 0;
+  line-height: 0;
+}
+.fon-hero-tagline {
+  font-family: var(--fon-display);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(1.3rem, 2.6vw, 2rem);
+  color: var(--fon-lime);
+  margin: 0 0 .6rem;
+  line-height: 1.2;
+}
+.fon-hero-sub {
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  color: rgba(242,237,228,.72);
+  margin: 0 0 1.5rem;
+  max-width: 520px;
+  line-height: 1.5;
+}
+.fon-hero-hashtag {
+  display: inline-block;
+  font-weight: 700;
+  color: var(--fon-coral);
+  font-size: .95rem;
+  letter-spacing: .02em;
+}
+
+/* ── Intro (única sección clara) ── */
+.fon-intro {
+  background: var(--fon-cream);
+  padding: clamp(3.5rem, 7vw, 6rem) clamp(1.25rem, 3vw, 2rem);
+}
+.fon-intro .lbi-desc-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+.fon-intro-media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+}
+.fon-intro-title {
+  font-family: var(--fon-display);
+  font-weight: 900;
+  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+  line-height: 1.1;
+  color: var(--fon-dark);
+  margin: 0 0 1.25rem;
+}
+.fon-quote {
+  margin: 1.4rem 0 1.6rem;
+  font-family: var(--fon-display);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  line-height: 1.5;
+  color: var(--fon-dark);
+}
+.fon-quote mark {
+  background: var(--fon-lime);
+  color: inherit;
+  padding: .1em .3em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* ── Misión + pulso ── */
+.fon-mision {
+  position: relative;
+  background: var(--fon-dark);
+  padding: clamp(4rem, 8vw, 7rem) 0 clamp(6rem, 9vw, 9rem);
+}
+.fon-mision-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 3vw, 2rem);
+}
+.fon-mision-header .fon-lead {
+  max-width: 720px;
+}
+.fon-signal {
+  max-width: 1200px;
+  margin: clamp(2.5rem, 5vw, 4rem) auto 0;
+  padding: 0 clamp(1.25rem, 3vw, 2rem);
+}
+.fon-pulse {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.fon-signal-labels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+.fon-signal-label {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+}
+.fon-signal-label strong {
+  font-family: var(--fon-display);
+  font-weight: 900;
+  font-size: clamp(1.15rem, 2.6vw, 2.2rem);
+  color: var(--fon-cream);
+  line-height: 1;
+}
+.fon-signal-label span {
+  font-size: clamp(.75rem, 1.2vw, 1.05rem);
+  color: rgba(242,237,228,.6);
+  line-height: 1.3;
+}
+.fon-lenguajes {
+  max-width: 1200px;
+  margin: clamp(3rem, 5vw, 4.5rem) auto 0;
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.25rem, 3vw, 2rem) 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 4rem;
+  border-top: 1px solid rgba(242,237,228,.12);
+}
+.fon-lenguaje h3 {
+  font-family: var(--fon-display);
+  font-size: clamp(1.9rem, 4vw, 3.2rem);
+  font-weight: 900;
+  color: var(--fon-lime);
+  line-height: 1;
+  margin: 0 0 .5rem;
+}
+.fon-lenguaje p {
+  font-size: clamp(1.15rem, 1.8vw, 1.6rem);
+  color: var(--fon-cream);
+  font-weight: 400;
+  margin: 0;
+}
+.fon-lenguajes-note {
+  grid-column: 1 / -1;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  font-style: italic;
+  color: rgba(242,237,228,.55);
+  margin: .5rem 0 0;
+}
+
+/* ── Convocatoria ── */
+.fon-convocatoria {
+  position: relative;
+  width: 100%;
+  background: var(--fon-dark);
+  overflow: hidden;
+}
+.fon-conv-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(5rem, 9vw, 8rem) clamp(1.25rem, 3vw, 2rem) clamp(2rem, 4vw, 3rem);
+}
+.fon-conv-body {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 3vw, 2rem) clamp(4rem, 7vw, 6rem);
+}
+.fon-sub-header {
+  margin: clamp(3.5rem, 6vw, 5rem) 0 1.5rem;
+}
+
+/* Timeline en tarjetas (brandbook: última coral) */
+.fon-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
+.fon-timeline-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.5rem;
+  min-height: 160px;
+  padding: 1.25rem 1.1rem 1.1rem;
+  border-radius: 14px;
+  background: var(--fon-dark);
+  border: 1px solid rgba(242,237,228,.08);
+}
+.fon-timeline-item--last {
+  background: var(--fon-coral);
+  border-color: var(--fon-coral);
+}
+.fon-timeline-date {
+  font-family: var(--fon-display);
+  font-weight: 900;
+  font-size: clamp(1.1rem, 1.45vw, 1.35rem);
+  color: var(--fon-cream);
+  line-height: 1.1;
+  white-space: nowrap;
+}
+.fon-timeline-label {
+  font-size: .9rem;
+  color: rgba(242,237,228,.65);
+  line-height: 1.35;
+}
+.fon-timeline-item--last .fon-timeline-label { color: var(--fon-dark); }
+
+/* Seis ejes */
+.fon-ejes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.fon-eje {
+  background: var(--fon-card);
+  border-radius: 14px;
+  padding: 1.5rem 1.4rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+.fon-eje-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--fon-coral);
+  color: var(--fon-dark);
+  font-family: var(--fon-display);
+  font-weight: 900;
+  font-size: 1rem;
+  margin-bottom: .4rem;
+}
+.fon-eje h4 {
+  font-family: var(--font-inter);
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--fon-cream);
+  margin: 0;
+  line-height: 1.2;
+}
+.fon-eje p {
+  font-size: .95rem;
+  line-height: 1.5;
+  color: rgba(242,237,228,.68);
+  margin: 0;
+}
+
+/* Categorías */
+.fon-cats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.fon-cat {
+  background: var(--fon-card);
+  border-radius: 14px;
+  padding: 1.5rem 1.4rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.fon-cat-tag {
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.fon-cat--coral .fon-cat-tag { color: var(--fon-coral); }
+.fon-cat--lime .fon-cat-tag { color: var(--fon-lime); }
+.fon-cat strong {
+  font-family: var(--fon-display);
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--fon-cream);
+  line-height: 1;
+}
+
+/* CTA */
+.fon-cta-row {
+  margin-top: clamp(2rem, 3.5vw, 3rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+}
+.fon-page .cta-button {
+  background: var(--fon-coral);
+  color: var(--fon-dark);
+  border-radius: 10px;
+}
+.fon-page .cta-button:hover {
+  background: var(--fon-cream);
+  color: var(--fon-dark);
+}
+.fon-page .cta-button[disabled] {
+  background: rgba(255,79,94,.16);
+  color: rgba(242,237,228,.55);
+  border: 1px solid rgba(255,79,94,.45);
+  cursor: not-allowed;
+  transform: none;
+}
+.fon-cta-note {
+  font-size: .95rem;
+  color: rgba(242,237,228,.55);
+}
+.fon-cta-link {
+  font-size: clamp(.95rem, 1.4vw, 1.05rem);
+  font-weight: 700;
+  color: var(--fon-cream);
+  text-decoration: underline;
+  text-decoration-color: rgba(242,237,228,.35);
+  text-underline-offset: .25em;
+  transition: color .2s ease, text-decoration-color .2s ease;
+}
+.fon-cta-link:hover {
+  color: var(--fon-lime);
+  text-decoration-color: var(--fon-lime);
+}
+
+/* ── Jurado: monograma placeholder + rol ── */
+.fon-jurado .lbi-jurado-section,
+.fon-jurado { background: var(--fon-dark); }
+.fon-jurado .lbi-jurado-row__media { border-radius: 14px; }
+.fon-jurado .lbi-jurado-link:hover,
+.fon-jurado .lbi-jurado-name .lbi-jurado-link:hover { color: var(--fon-coral); text-decoration-color: var(--fon-coral); }
+.fon-jurado-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--fon-coral);
+}
+.fon-jurado-placeholder--lime { background: var(--fon-lime); }
+.fon-jurado-placeholder span {
+  font-family: var(--fon-display);
+  font-weight: 900;
+  font-size: clamp(3.5rem, 9vw, 7rem);
+  color: var(--fon-dark);
+  line-height: 1;
+}
+.fon-jurado-role {
+  font-size: clamp(.9rem, 1.2vw, 1rem);
+  color: var(--fon-lime);
+  font-weight: 700;
+  margin: -.5rem 0 1rem;
+}
+
+/* ── Cierre / Instagram ── */
+.fon-ig-band {
+  background: var(--fon-dark);
+  border-top: 1px solid rgba(242,237,228,.1);
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 3vw, 2rem) clamp(3rem, 6vw, 5rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.fon-ig-tagline {
+  font-family: var(--fon-display);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(1.3rem, 2.6vw, 2rem);
+  color: var(--fon-lime);
+  margin: 1rem 0 0;
+}
+.fon-ig-claim {
+  font-size: clamp(.95rem, 1.3vw, 1.1rem);
+  color: rgba(242,237,228,.55);
+  margin: 0 0 1.5rem;
+}
+.fon-ig-link {
+  display: inline-flex;
+  flex-direction: column;
+  gap: .5rem;
+  text-decoration: none;
+  color: var(--fon-cream);
+}
+.fon-ig-kicker {
+  font-size: clamp(.9rem, 1.2vw, 1rem);
+  color: rgba(242,237,228,.5);
+}
+.fon-ig-handle {
+  font-family: var(--fon-display);
+  font-weight: 900;
+  font-size: clamp(1.6rem, 5vw, 3.6rem);
+  line-height: 1;
+  transition: color .25s ease;
+}
+.fon-ig-link:hover .fon-ig-handle,
+.fon-ig-link:focus-visible .fon-ig-handle { color: var(--fon-coral); }
+.fon-ig-hashtag {
+  margin-top: 2rem;
+  font-weight: 700;
+  color: var(--fon-coral);
+  font-size: .95rem;
+}
+
+@media (max-width: 1024px) {
+  .fon-timeline { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .fon-ejes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 768px) {
+  .fon-hero-inner { padding-top: 7rem; }
+  .fon-logo--horizontal { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
+  .fon-logo--horizontal .fon-logo-bars { height: 84px; }
+  .fon-logo--horizontal .fon-logo-word { font-size: clamp(2.4rem, 12vw, 3.4rem); }
+  .fon-intro-media { aspect-ratio: 16 / 10; }
+  .fon-signal-labels { gap: .5rem; }
+  .fon-signal-label span { display: none; }
+  .fon-lenguajes { grid-template-columns: 1fr; gap: 1.75rem; }
+  .fon-timeline { grid-template-columns: 1fr 1fr; }
+  .fon-timeline-item { min-height: 130px; gap: 1.5rem; }
+  .fon-timeline-item--last { grid-column: 1 / -1; }
+  .fon-ejes { grid-template-columns: 1fr; }
+  .fon-cats { grid-template-columns: 1fr; }
+  .fon-jurado-placeholder span { font-size: clamp(3rem, 20vw, 5rem); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fon-ig-handle,
+  .fon-cta-link { transition: none; }
+}

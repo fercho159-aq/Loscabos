@@ -29,7 +29,7 @@ Complement to `CLAUDE.md`. Read that first for stack/conventions, then this for 
 | `/convocatorias` | — | Timeline + cards |
 | `/prensa` | — | Press quotes |
 | `/ffgf` | `src/app/ffgf/page.tsx` | Fondo Fílmico Gabriel Figueroa — intro grid + legado flip cards + aliados |
-| `/fon` | — | Frequencies Of Now |
+| `/frequencies-of-now` | `src/app/frequencies-of-now/page.tsx` | Frequencies of Now — **oculta** (noindex, sin nav, sin sitemap) hasta 24 sep 2026. Ver `FREQUENCIES-OF-NOW.md` |
 | `/la-baja-inspira` | `src/app/la-baja-inspira/page.tsx` | Heaviest page: desc grid, comite, legado, aliados |
 | `/plataformas-de-impulso` | — | Plataformas overview with GradientBlobs |
 | `/demo` | — | Legacy demo — not linked from nav |
