@@ -13,12 +13,12 @@ export type AnioPersonalidades = {
   people: Personalidad[];
 };
 
-// Orden cronológico ascendente (2012 -> 2025). Fuera: 2020 (en línea), 2021 (híbrida),
+// Orden cronológico descendente (2025 -> 2012); ver .reverse() al final. Fuera: 2020 (en línea), 2021 (híbrida),
 // 2023 (cancelada) y 2024 (pendiente de material).
 //
 // Las fotos se generan con `scripts/optimize-personalidades.py` (2:3, máx
 // 600x900). Quien no tenga `image` se pinta con placeholder de iniciales.
-export const personalidadesPorAnio: AnioPersonalidades[] = [
+export const personalidadesPorAnio: AnioPersonalidades[] = ([
   {
     year: "2012",
     slug: "edicion-2012",
@@ -136,4 +136,4 @@ export const personalidadesPorAnio: AnioPersonalidades[] = [
       { name: "Lizeth Selene", image: "/images/personalidades/2025/lizeth-selene.jpg" },
     ],
   },
-];
+] satisfies AnioPersonalidades[]).reverse();
