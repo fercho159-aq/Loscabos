@@ -2,7 +2,7 @@ export type Persona = {
   name: string;
   /** Sin `image` la tarjeta se pinta como placeholder con iniciales. */
   image?: string;
-  /** Línea corta en monoespaciada bajo el nombre: el país en The Next Wave. */
+  /** Línea corta en monoespaciada bajo el nombre: la obra (o el rol) en The Next Wave. */
   meta?: string;
   bio?: string;
 };
@@ -126,7 +126,7 @@ export const eventos2026: Evento[] = [
     accent: "#6687C3",
     body: [
       "El Festival presenta The Next Wave: un panel de cineastas emergentes de América Latina cuyo trabajo define el lenguaje audiovisual de la próxima generación.",
-      "Moderado por Carlos López Estrada, cineasta mexicano nominado al Oscar cuyo debut Blindspotting abrió el Sundance Film Festival 2018, co-director de Raya and the Last Dragon de Disney y fundador de Antigravity Academy, plataforma dedicada a impulsar cineastas emergentes. El panel reúne a diez cineastas emergentes de América Latina con presencia en Sundance, Cannes, Berlín y SXSW.",
+      "Moderado por Carlos López Estrada, cineasta mexicano nominado al Oscar cuyo debut Blindspotting abrió el Sundance Film Festival 2018, co-director de Raya and the Last Dragon de Disney y fundador de Antigravity Academy, plataforma dedicada a impulsar cineastas emergentes. El panel reúne a once cineastas emergentes de América Latina con presencia en Sundance, Cannes, Berlín y SXSW.",
     ],
     presentedBy: {
       name: "Salomon",
@@ -140,64 +140,76 @@ export const eventos2026: Evento[] = [
         layout: "bio",
         people: [
           {
-            name: "Natalia León",
-            image: "/images/programacion-2026/personas/natalia-leon.jpg",
-            meta: "México",
-            bio: "Guionista, directora, animadora y actriz. Graduada de ENSAD París y School of Visual Arts Nueva York. Su cortometraje debut Como si la tierra se las hubiera tragado ganó el Jury Award for Best Animated Short Film en Sundance 2025. Explora identidad, migración, memoria y duelo colectivo con una sensibilidad visual extraordinaria.",
+            name: "Carlos López Estrada",
+            image: "/images/programacion-2026/personas/carlos-lopez-estrada.jpg",
+            meta: "Moderador",
+            bio: "Cineasta y fundador de Antigravity Academy.",
           },
           {
             name: "Mariana Mendívil",
             image: "/images/programacion-2026/personas/mariana-mendivil.jpg",
-            meta: "México",
-            bio: "Cineasta, artista visual y animadora. Su cortometraje Memoria de un cuerpo desplazado ganó la Medalla Puma de Plata en FICUNAM 2024 y ha recorrido Morelia, Bogoshorts y Animafest Zagreb. Combina ensayo cinematográfico, animación y collage para explorar desplazamiento y memoria.",
+            meta: "“Memoria de un cuerpo desplazado”",
+            bio: "Cineasta, artista visual y animadora.",
           },
           {
             name: "Diego Gaxiola",
             image: "/images/programacion-2026/personas/diego-gaxiola.jpg",
-            meta: "México",
-            bio: "Guionista, director y productor. Su cortometraje Circo de Loy, desarrollado con el apoyo del cineasta ganador del Oscar Paolo Sorrentino, ha ganado reconocimiento internacional por su lenguaje visual único y su fuerza narrativa — creado con presupuesto casi inexistente.",
+            meta: "“Circo de Loy”",
+            bio: "Guionista, director y productor.",
           },
           {
             name: "Karla Condado",
             image: "/images/programacion-2026/personas/karla-condado.jpg",
-            meta: "México",
-            bio: "Directora, guionista y fotógrafa, egresada de ESCINE. Su cortometraje Miriam tuvo su estreno mundial en la sección Berlinale Shorts de la Berlinale 2026, compitiendo por el Oso de Oro. Una carta de video dirigida a su tía, víctima de feminicidio: memoria, ausencia e impacto de la violencia de género.",
+            meta: "“Miriam”",
+            bio: "Directora, guionista y fotógrafa.",
           },
           {
             name: "Leo Aguirre",
             image: "/images/programacion-2026/personas/leo-aguirre.jpg",
-            meta: "EUA",
-            bio: "Guionista y director mexicano-americano criado entre El Paso y Ciudad Juárez. Su cortometraje Isme tuvo su estreno mundial en SXSW 2024. Explora identidad, espiritualidad y el crecimiento entre dos culturas con un lenguaje cinematográfico rico en simbolismo.",
+            meta: "“Isme”",
+            bio: "Guionista y director.",
           },
           {
             name: "Amandine Thomas",
             image: "/images/programacion-2026/personas/amandine-thomas.jpg",
-            meta: "Francia / EUA",
-            bio: "Guionista, directora y editora franco-americana. Su cortometraje Albatross tuvo su estreno mundial en Sundance 2026. Con una sensibilidad visual refinada, descubre lo extraordinario dentro de lo cotidiano a través de historias profundamente humanas.",
-          },
-          {
-            name: "Gerardo Coello Escalante",
-            image: "/images/programacion-2026/personas/gerardo-coello-escalante.jpg",
-            meta: "México",
-            bio: "Guionista, director y productor. Su cortometraje Viaje de Negocios tuvo su estreno mundial en Sundance 2024. Colaboró como guionista y productor en Albatross (Sundance 2026). Una de las voces emergentes más notables del cine mexicano contemporáneo.",
+            meta: "“Albatross”",
+            bio: "Guionista, directora y editora.",
           },
           {
             name: "Federico Luis",
             image: "/images/programacion-2026/personas/federico-luis.jpg",
-            meta: "Argentina",
-            bio: "Guionista y director. Su cortometraje The Opponents ganó la Palme d'Or al Mejor Cortometraje en Cannes 2025 — el máximo honor del festival en su categoría. Un retrato sutil de conexión humana y pertenencia ambientado en el mundo del fútbol amateur.",
+            meta: "“For the Opponents”",
+            bio: "Guionista y director.",
           },
           {
             name: "Eduardo Braun Costa",
             image: "/images/programacion-2026/personas/eduardo-braun-costa.jpg",
-            meta: "Argentina",
-            bio: "Guionista, director y productor. Su primer cortometraje de ficción The Liars ganó el Special Jury Award for Acting en Sundance 2026. Coproducción entre Argentina, Brasil y Francia sobre la inocencia y resiliencia de la infancia.",
+            meta: "“Los mentirosos”",
+            bio: "Guionista, director y productor.",
           },
           {
             name: "Gabriela Ortega",
             image: "/images/programacion-2026/personas/gabriela-ortega.jpg",
-            meta: "República Dominicana",
-            bio: "Directora, guionista y actriz, egresada de USC y alumni de Sundance. Su cortometraje Huella fue seleccionado en Sundance 2022. Nombrada por Filmmaker Magazine como una de las 25 New Faces of Independent Film. En 2026 estrenó Marga en el DF en Sundance. Su trabajo explora la intersección entre ficción, poesía e identidad caribeña.",
+            meta: "“Marga en el DF”",
+            bio: "Directora, guionista y actriz.",
+          },
+          {
+            name: "Martín André",
+            image: "/images/programacion-2026/personas/martin-andre.jpg",
+            meta: "“La pena no duerme de noche”",
+            bio: "Cineasta y animador.",
+          },
+          {
+            name: "Josefina Montino",
+            image: "/images/programacion-2026/personas/josefina-montino.jpg",
+            meta: "“La pena no duerme de noche”",
+            bio: "Cineasta y periodista.",
+          },
+          {
+            name: "Natalia León",
+            image: "/images/programacion-2026/personas/natalia-leon.jpg",
+            meta: "“Como si la tierra se las hubiera tragado”",
+            bio: "Guionista, directora, animadora y actriz.",
           },
         ],
       },

@@ -55,16 +55,21 @@ PERSONAS = {
     "Gibrán Portela": "GibranPortela.jpg",
     # Brunch Girls At Films — invitada especial
     "Griselda Siciliani": ("IMAGEN GRISELDA SICILIANI .jpg", 0.5, 0.30),  # apaisada 6048x4032
-    # Panel The Next Wave — cineastas
-    "Natalia León": "NataliaLeon.jpg",
-    "Mariana Mendívil": "MarianaMendivil.png",
-    "Diego Gaxiola": "DiegoGaxiola.png",
-    "Karla Condado": "KarlaCondado.jpg",
-    "Leo Aguirre": "LeoAguirre.jpg",
-    "Amandine Thomas": "AmandineThomas.png",
-    "Gerardo Coello Escalante": "GerardoCoelloEscalante.jpeg",
-    "Federico Luis": "FedericoLuis.jpg",
-    # Pendientes de foto: Eduardo Braun Costa, Gabriela Ortega.
+    # Panel The Next Wave — moderador y cineastas (tanda del 16 sep 2026)
+    "Carlos López Estrada": "Carlos Lopez Estrada_Headshot.jpeg",
+    "Mariana Mendívil": "Mariana Mendivil por Carlota Murillo 4.jpg",
+    "Diego Gaxiola": "Diego Headshot.png",
+    "Karla Condado": "Karla Condado_headshot.jpg",
+    "Leo Aguirre": "LeoAguirre_HS.jpg",
+    "Amandine Thomas": "Amandine Thomas Headshot.jpeg",
+    "Federico Luis": "Federico Luis Headshot.jpg",
+    "Eduardo Braun Costa": "HEADSHOT EDUARDO BRAUN COSTA 2026 LOW.jpg",
+    # Foto de cuerpo entero (912x1146): el script no puede hacer zoom, así que el
+    # retrato publicado se recortó a mano (caja 150,20,660,530). No correr sobre él.
+    # "Gabriela Ortega": "Gabriela Headshot.jpg",
+    "Martín André": "Martín_André Headshot.png",
+    "Josefina Montino": "Josefina_Montino Headshot.png",
+    "Natalia León": "PHOTO_Natalia.png",
 }
 
 # Logos de aliado: PNG con fondo blanco y mucho margen. Se recorta el margen y se
