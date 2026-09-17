@@ -91,16 +91,21 @@ export default async function EventoDetalle({ params }: Props) {
               ))}
             </div>
 
-            {ev.presentedBy && (
+            {ev.presentedBy && ev.presentedBy.length > 0 && (
               <aside className="p26-presented">
                 <span className="p26-presented-label">Presentado por</span>
-                <Image
-                  src={ev.presentedBy.logo}
-                  alt={ev.presentedBy.name}
-                  width={ev.presentedBy.width}
-                  height={ev.presentedBy.height}
-                  className="p26-presented-logo"
-                />
+                <div className="p26-presented-logos">
+                  {ev.presentedBy.map((brand) => (
+                    <Image
+                      key={brand.name}
+                      src={brand.logo}
+                      alt={brand.name}
+                      width={brand.width}
+                      height={brand.height}
+                      className="p26-presented-logo"
+                    />
+                  ))}
+                </div>
               </aside>
             )}
           </div>

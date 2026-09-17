@@ -28,7 +28,8 @@ export type Evento = {
   /** Acento de la página; se expone como `--cat` en el JSX. */
   accent: string;
   body: string[];
-  presentedBy?: { name: string; logo: string; width: number; height: number };
+  /** Uno o varios logos de quien presenta el evento. */
+  presentedBy?: { name: string; logo: string; width: number; height: number }[];
   groups?: PersonaGrupo[];
 };
 
@@ -84,23 +85,31 @@ export const eventos2026: Evento[] = [
     ],
   },
   {
-    slug: "brunch-girls-at-films",
-    title: "Brunch Girls At Films #BeyondTheScreen",
+    slug: "desayuno-girls-at-films",
+    title: "Desayuno Girls At Films #BeyondTheScreen",
     date: "Jueves 10 de diciembre",
     venue: "Flora Farms",
-    image: "/images/programacion-2026/brunch-girls-at-films.jpg",
-    imageAlt: "Mesa del Brunch Girls At Films en Flora Farms",
+    image: "/images/programacion-2026/desayuno-girls-at-films.jpg",
+    imageAlt: "Sede del Desayuno Girls At Films en Flora Farms",
     accent: "#960942",
     body: [
       "Un encuentro que reúne a mujeres del cine y la actuación, junto con prensa especializada y profesionales de la industria, para conversar sobre el papel de las mujeres frente y detrás de cámara.",
       "Una conversación sobre representación, liderazgo y las nuevas formas de contar y hacer cine.",
     ],
-    presentedBy: {
-      name: "Girls at Films",
-      logo: "/images/programacion-2026/logos/girls-at-films.png",
-      width: 317,
-      height: 267,
-    },
+    presentedBy: [
+      {
+        name: "Girls at Films",
+        logo: "/images/programacion-2026/logos/girls-at-films.png",
+        width: 317,
+        height: 267,
+      },
+      {
+        name: "Elle",
+        logo: "/images/programacion-2026/logos/elle.png",
+        width: 359,
+        height: 106,
+      },
+    ],
     groups: [
       {
         title: "Invitada especial",
@@ -116,24 +125,26 @@ export const eventos2026: Evento[] = [
   },
   {
     slug: "panel-the-next-wave",
-    title: "Panel The Next Wave — Programa de cineastas emergentes de América Latina",
-    cardTitle: "Panel The Next Wave",
+    title: "The Next Wave — Emerging Filmmaker Panel",
+    cardTitle: "The Next Wave",
     date: "Sábado 12 de diciembre",
     venue: "Cinépolis San José del Cabo",
     credit: "Moderado por Carlos López Estrada",
     image: "/images/programacion-2026/panel-the-next-wave.jpg",
-    imageAlt: "Panel The Next Wave de cineastas emergentes de América Latina",
+    imageAlt: "Panel The Next Wave en Cinépolis San José del Cabo",
     accent: "#6687C3",
     body: [
       "El Festival presenta The Next Wave: un panel de cineastas emergentes de América Latina cuyo trabajo define el lenguaje audiovisual de la próxima generación.",
-      "Moderado por Carlos López Estrada, cineasta mexicano nominado al Oscar cuyo debut Blindspotting abrió el Sundance Film Festival 2018, co-director de Raya and the Last Dragon de Disney y fundador de Antigravity Academy, plataforma dedicada a impulsar cineastas emergentes. El panel reúne a once cineastas emergentes de América Latina con presencia en Sundance, Cannes, Berlín y SXSW.",
+      "Moderado por Carlos López Estrada, cineasta mexicano nominado al Oscar cuyo debut Blindspotting abrió el Sundance Film Festival 2018, co-director de Raya and the Last Dragon de Disney y fundador de Antigravity Academy, plataforma dedicada a impulsar cineastas emergentes. El panel reúne a diez cineastas emergentes de América Latina con presencia en Sundance, Cannes, Berlín y SXSW.",
     ],
-    presentedBy: {
-      name: "Salomon",
-      logo: "/images/programacion-2026/logos/salomon.png",
-      width: 383,
-      height: 46,
-    },
+    presentedBy: [
+      {
+        name: "Salomon",
+        logo: "/images/programacion-2026/logos/salomon.png",
+        width: 383,
+        height: 46,
+      },
+    ],
     groups: [
       {
         title: "Participantes",

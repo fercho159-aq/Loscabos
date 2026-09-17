@@ -42,9 +42,9 @@ EVENTOS = {
     # Original vertical (1129x1697): el recorte 16:9 se centra en el rostro.
     "homenaje-dolores-heredia": ("Dolores_Heredia.png", 0.5, 0.25),
     "laboratorio-de-escritura": "TallerdeEscritura.jpg",
-    # Original vertical (1170x1560): el 16:9 por defecto se comería la escena.
-    "brunch-girls-at-films": ("Brunch.jpg", 0.5, 0.30),
-    "panel-the-next-wave": "Panel.png",
+    # Sede del desayuno (apaisada 1500x1001): recorte 16:9 centrado.
+    "desayuno-girls-at-films": "Brunch.png",
+    "panel-the-next-wave": "Panel2.png",
 }
 
 # Retratos. La clave es el nombre real; el archivo de salida es su slug.
@@ -53,7 +53,7 @@ PERSONAS = {
     "Carlos Cuarón": "CarlosCuaron.jpg",
     "Fernando Frías": "FernandoFrias.jpg",
     "Gibrán Portela": "GibranPortela.jpg",
-    # Brunch Girls At Films — invitada especial
+    # Desayuno Girls At Films — invitada especial
     "Griselda Siciliani": ("IMAGEN GRISELDA SICILIANI .jpg", 0.5, 0.30),  # apaisada 6048x4032
     # Panel The Next Wave — moderador y cineastas (tanda del 16 sep 2026)
     "Carlos López Estrada": "Carlos Lopez Estrada_Headshot.jpeg",
@@ -78,6 +78,7 @@ PERSONAS = {
 LOGOS = {
     "girls-at-films": "46_FICC_Logos_Aliados_2026_Mesa de trabajo 1 copia 59.png",
     "salomon": "25_FICC_Logos_Aliados-44.png",
+    "elle": "FICC_Logos_Aliados_2026_Mesa de trabajo 1 copia 68.png",
 }
 
 

@@ -11,12 +11,12 @@ import { eventos2026 } from "@/lib/programacion-2026-data";
 export const metadata: Metadata = {
   title: "Programación 2026 | FICC Los Cabos",
   description:
-    "Sneak Peek de la programación 2026 de FICCLosCabos: el homenaje a Dolores Heredia, el Laboratorio de Escritura, el Brunch Girls At Films y el panel The Next Wave.",
+    "Sneak Peek de la programación 2026 de FICCLosCabos: el homenaje a Dolores Heredia, el Laboratorio de Escritura, el Desayuno Girls At Films y el panel The Next Wave — Emerging Filmmaker Panel.",
   alternates: { canonical: "/programacion-2026" },
   openGraph: {
     title: "Programación 2026 | FICC Los Cabos",
     description:
-      "Sneak Peek de la programación 2026 de FICCLosCabos: el homenaje a Dolores Heredia, el Laboratorio de Escritura, el Brunch Girls At Films y el panel The Next Wave.",
+      "Sneak Peek de la programación 2026 de FICCLosCabos: el homenaje a Dolores Heredia, el Laboratorio de Escritura, el Desayuno Girls At Films y el panel The Next Wave — Emerging Filmmaker Panel.",
     url: "/programacion-2026",
     images: [{ url: "/images/programacion-2026/homenaje-dolores-heredia.jpg", width: 1600, height: 900 }],
   },

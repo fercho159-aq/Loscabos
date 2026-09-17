@@ -6186,6 +6186,14 @@ a:focus-visible .p26-underline,
   color: color-mix(in srgb, var(--color-navy) 55%, transparent);
 }
 
+/* Varios logos (p. ej. Girls at Films + Elle) van en fila, con aire entre ellos. */
+.p26-presented-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+}
+
 /* Los logos llegan con proporciones muy distintas (un wordmark alargado y un
    bloque casi cuadrado): se acotan por ancho Y por alto para que pesen igual.
    El PNG viene con fondo blanco, que multiply funde con la crema. */
@@ -6691,7 +6699,7 @@ a:focus-visible .p26-underline,
   gap: 1rem 1.5rem;
 }
 .fon-page .cta-button {
-  background: var(--fon-coral);
+  background: var(--fon-lime);
   color: var(--fon-dark);
   border-radius: 10px;
 }
@@ -6700,15 +6708,15 @@ a:focus-visible .p26-underline,
   color: var(--fon-dark);
 }
 .fon-page .cta-button[disabled] {
-  background: rgba(255,79,94,.16);
-  color: rgba(242,237,228,.55);
-  border: 1px solid rgba(255,79,94,.45);
+  background: var(--fon-lime);
+  color: var(--fon-dark);
+  border: 1px solid var(--fon-lime);
   cursor: not-allowed;
   transform: none;
 }
 .fon-cta-note {
   font-size: .95rem;
-  color: rgba(242,237,228,.55);
+  color: #fff;
 }
 .fon-cta-link {
   font-size: clamp(.95rem, 1.4vw, 1.05rem);

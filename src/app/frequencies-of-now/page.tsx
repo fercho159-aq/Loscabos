@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import TextureStrip from "@/components/TextureStrip";
 import FoNLogo from "@/components/FoNLogo";
 import FoNMisionDiagram from "@/components/FoNMisionDiagram";
 import FoNConvocatoriaCTA from "@/components/FoNConvocatoriaCTA";
@@ -242,11 +241,6 @@ export default function FrequenciesOfNow() {
           </p>
         </div>
       </section>
-
-      {/* TextureStrip divisor (half-overlap) */}
-      <div className="texture-strip-wrap w-full pointer-events-none relative z-10" style={{ height: 122, marginBottom: "-1rem", marginTop: -61 }}>
-        <TextureStrip style={{ display: "block" }} />
-      </div>
 
       {/* Convocatoria 2026 — sección oscura, timeline en tarjetas (brandbook) */}
       <section className="fon-convocatoria overflow-x-clip">
