@@ -83,7 +83,6 @@ const moments: Moment[] = [
     venues: [
       { name: "Cinépolis San José del Cabo", image: "/images/campus/cinepolis-sjc.jpg" },
       { name: "Hotel El Ganzo", image: "/images/campus/el-ganzo.jpg" },
-      { name: "Hotel Tropicana", image: "/images/campus/tropicana.jpg" },
       { name: "JW Marriott Los Cabos", image: "/images/campus/jw-marriott.jpg" },
       { name: "Flora Farms", image: "/images/campus/flora-farms.jpg", tbc: true },
       { name: "Suelo Sur", image: "/images/campus/suelo-sur.jpg" },

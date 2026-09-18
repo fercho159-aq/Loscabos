@@ -80,7 +80,6 @@ const aliadosInstitucionales = [
   { name: "ESCINE", logo: "/images/aliados-lbi/escine.png" },
   { name: "IMCINE / Cultura", logo: "/images/aliados-lbi/imcine.png" },
   { name: "Puerto Los Cabos", logo: "/images/aliados-lbi/puerto-los-cabos.png" },
-  { name: "Tropicana Tapestry Collection by Hilton", logo: "/images/aliados-lbi/tropicana-hilton.png" },
 ];
 
 const comite = [
@@ -216,7 +215,6 @@ const aliadosLBI: { name: string; logo: string | null }[] = [
   { name: "ESCINE", logo: "/images/aliados-lbi/escine.png" },
   { name: "IMCINE", logo: "/images/aliados-lbi/imcine.png" },
   { name: "Puerto Los Cabos", logo: "/images/aliados-lbi/puerto-los-cabos.png" },
-  { name: "Tropicana", logo: "/images/aliados-lbi/tropicana.png" },
   { name: "Hotel El Ganzo", logo: "/images/aliados-lbi/hotel-el-ganzo.png" },
   { name: "Suelo Sur", logo: "/images/aliados-lbi/suelo-sur.png" },
   { name: "Sage", logo: "/images/aliados-lbi/sage.png" },

@@ -25,7 +25,6 @@ const aliados = [
   { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-16.png" },
   { name: "Hotel El Ganzo", logo: "/images/aliados/FICC_Logos_Aliados_2026-17.png" },
   { name: "Secrets Puerto Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-18.png" },
-  { name: "Tropicana", logo: "/images/aliados/FICC_Logos_Aliados_2026-19.png" },
   { name: "Krystal Grand Los Cabos", logo: "/images/aliados/FICC_Logos_Aliados_2026-20.png" },
   { name: "Veleros Beach Club", logo: "/images/aliados/FICC_Logos_Aliados_2026-21.png" },
   { name: "Crania", logo: "/images/aliados/FICC_Logos_Aliados_2026-22.png" },

@@ -16,7 +16,6 @@ const aliados = [
   { name: "Hotel El Ganzo", logo: "/images/aliados/2026/05-hotel-el-ganzo.png" },
   { name: "IMCINE", logo: "/images/aliados/2026/06-imcine.png" },
   { name: "ESCINE", logo: "/images/aliados/2026/09-escine.png" },
-  { name: "Tropicana", logo: "/images/aliados/2026/10-tropicana.png" },
   { name: "JW Marriott Los Cabos", logo: "/images/aliados/2026/11-jw-marriott.png" },
   { name: "Zadún, A Ritz-Carlton Reserve", logo: "/images/aliados/2026/12-zadun.png" },
   { name: "Secrets Puerto Los Cabos Golf & Spa Resort", logo: "/images/aliados/2026/13-secrets.png" },
