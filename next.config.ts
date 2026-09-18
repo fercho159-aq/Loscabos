@@ -7,6 +7,15 @@ const nextConfig: NextConfig = {
   },
   compress: true,
   poweredByHeader: false,
+  async redirects() {
+    return [
+      {
+        source: "/programacion-2026/brunch-girls-at-films",
+        destination: "/programacion-2026/desayuno-girls-at-films",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

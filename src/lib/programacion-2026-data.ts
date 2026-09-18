@@ -126,7 +126,6 @@ export const eventos2026: Evento[] = [
   {
     slug: "panel-the-next-wave",
     title: "The Next Wave — Emerging Filmmaker Panel",
-    cardTitle: "The Next Wave",
     date: "Sábado 12 de diciembre",
     venue: "Cinépolis San José del Cabo",
     credit: "Moderado por Carlos López Estrada",
