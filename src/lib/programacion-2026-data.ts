@@ -157,6 +157,12 @@ export const eventos2026: Evento[] = [
             bio: "Cineasta y fundador de Antigravity Academy.",
           },
           {
+            name: "Natalia León",
+            image: "/images/programacion-2026/personas/natalia-leon.jpg",
+            meta: "“Como si la tierra se las hubiera tragado”",
+            bio: "Guionista, directora, animadora y actriz.",
+          },
+          {
             name: "Mariana Mendívil",
             image: "/images/programacion-2026/personas/mariana-mendivil.jpg",
             meta: "“Memoria de un cuerpo desplazado”",
@@ -215,12 +221,6 @@ export const eventos2026: Evento[] = [
             image: "/images/programacion-2026/personas/josefina-montino.jpg",
             meta: "“La pena no duerme de noche”",
             bio: "Cineasta y periodista.",
-          },
-          {
-            name: "Natalia León",
-            image: "/images/programacion-2026/personas/natalia-leon.jpg",
-            meta: "“Como si la tierra se las hubiera tragado”",
-            bio: "Guionista, directora, animadora y actriz.",
           },
         ],
       },
