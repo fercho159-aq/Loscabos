@@ -35,7 +35,7 @@ const timeline = [
   { label: "Cierre", date: "30 oct 2026" },
   { label: "Evaluación", date: "Oct–Nov 2026" },
   { label: "Anuncio Selección Oficial", date: "20 nov 2026" },
-  { label: "Exhibición y premiación", date: "9–14 dic 2026" },
+  { label: "Exhibición y premiación", date: "9–13 dic 2026" },
 ];
 
 /* Seis ejes de contenido y categorías: brandbook, sección El Archivo. */
