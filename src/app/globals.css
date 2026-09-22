@@ -6509,7 +6509,7 @@ a:focus-visible .p26-underline,
 .fon-intro-media {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   border-radius: 14px;
 }
 .fon-intro-title {
@@ -6885,7 +6885,6 @@ a:focus-visible .p26-underline,
   .fon-logo--horizontal { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
   .fon-logo--horizontal .fon-logo-bars { height: 84px; }
   .fon-logo--horizontal .fon-logo-word { font-size: clamp(2.4rem, 12vw, 3.4rem); }
-  .fon-intro-media { aspect-ratio: 16 / 10; }
   .fon-signal-labels { gap: .5rem; }
   .fon-signal-label span { display: none; }
   .fon-lenguajes { grid-template-columns: 1fr; gap: 1.75rem; }

@@ -186,10 +186,10 @@ export default function FrequenciesOfNow() {
         <div className="lbi-desc-grid">
           <div data-anim="fon-image" className="fon-intro-media">
             <Image
-              src="/images/fon-mixer.jpg"
-              alt="Consola de mezcla iluminada — Frequencies of Now, FICC Los Cabos"
-              width={900}
-              height={600}
+              src="/images/fon-intro.jpg"
+              alt="Figura en movimiento fragmentada por luz — Frequencies of Now, FICC Los Cabos"
+              width={736}
+              height={414}
               priority
               sizes="(max-width: 768px) 90vw, 560px"
               style={{ objectFit: "cover", width: "100%", height: "100%" }}
