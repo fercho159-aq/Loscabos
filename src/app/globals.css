@@ -229,7 +229,14 @@ body {
     transform: translateX(-50%) translateY(0);
   }
 
-  .nav-dropdown-link {
+  /* Un item por renglon: `.nav-links a` (display: inline-flex) le gana en
+     especificidad a `.nav-dropdown-link`, asi que el dropdown apila en columna. */
+  .nav-dropdown {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links .nav-dropdown-link {
     position: relative;
     display: block;
     padding: .62rem .9rem .62rem 1.5rem;
@@ -369,20 +376,6 @@ body {
     transform: translateY(-24%) scale(.68);
   }
 
-  .impulso-card-badge {
-    position: absolute;
-    top: 1.25rem;
-    right: 1.25rem;
-    z-index: 4;
-    padding: .3rem .7rem;
-    border-radius: 999px;
-    background: #FF4F5E;
-    color: #0E1B23;
-    font-size: .68rem;
-    font-weight: 800;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-  }
 
   /* Sin hover (tactil): descripcion siempre visible bajo el logo */
   @media (hover: none) {

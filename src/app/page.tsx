@@ -306,7 +306,6 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <span className="impulso-card-badge">Nuevo</span>
                 <div className="impulso-card-desc">
                   <p>
                     FICCLosCabos entiende al cine como un punto de partida para conectar disciplinas, industrias,
