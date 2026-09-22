@@ -93,8 +93,10 @@ const groups: Group[] = [
     title: "Jalisco",
     accent: "var(--color-orange)",
     people: [
+      { name: "Alfredo Aceves Fernández", role: "Director General <br> Ciudad Creativa Digital", image: "/images/comunidad/alfredo-aceves.jpg" },
       { name: "Billy Rovzar", role: "Fundador y CEO <br> Lemon Studios", tbc: true }, // sin foto
       { name: "Fernando Rovzar", role: "Fundador y Director Creativo <br> Lemon Studios", tbc: true }, // sin foto
+      { name: "Claudio Jiménez Palomar", role: "Productor ejecutivo y cofundador <br> Mighty Animation", image: "/images/comunidad/claudio-jimenez-palomar.jpg" },
     ],
   },
   {
