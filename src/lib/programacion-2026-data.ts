@@ -85,45 +85,6 @@ export const eventos2026: Evento[] = [
     ],
   },
   {
-    slug: "desayuno-girls-at-films",
-    title: "Desayuno Girls At Films #BeyondTheScreen",
-    date: "Jueves 10 de diciembre",
-    venue: "Flora Farms",
-    image: "/images/programacion-2026/desayuno-girls-at-films.jpg",
-    imageAlt: "Sede del Desayuno Girls At Films en Flora Farms",
-    accent: "#960942",
-    body: [
-      "Un encuentro que reúne a mujeres del cine y la actuación, junto con prensa especializada y profesionales de la industria, para conversar sobre el papel de las mujeres frente y detrás de cámara.",
-      "Una conversación sobre representación, liderazgo y las nuevas formas de contar y hacer cine.",
-    ],
-    presentedBy: [
-      {
-        name: "Girls at Films",
-        logo: "/images/programacion-2026/logos/girls-at-films.png",
-        width: 317,
-        height: 267,
-      },
-      {
-        name: "Elle",
-        logo: "/images/programacion-2026/logos/elle.png",
-        width: 359,
-        height: 106,
-      },
-    ],
-    groups: [
-      {
-        title: "Invitada especial",
-        layout: "compact",
-        people: [
-          {
-            name: "Griselda Siciliani",
-            image: "/images/programacion-2026/personas/griselda-siciliani.jpg",
-          },
-        ],
-      },
-    ],
-  },
-  {
     slug: "panel-the-next-wave",
     title: "The Next Wave — Emerging Filmmaker Panel",
     date: "Sábado 12 de diciembre",

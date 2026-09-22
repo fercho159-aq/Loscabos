@@ -160,7 +160,6 @@ const groups: Group[] = [
     title: "Panelistas",
     accent: "var(--color-orange)",
     people: [
-      { name: "Griselda Siciliani", role: "Actriz", image: "/images/comunidad/griselda-siciliani.jpg" },
       { name: "Claudia Cándano", role: "Editora en Jefe de ELLE México", image: "/images/comunidad/claudia-candano.jpg" },
       { name: "Nico Celis", role: "Productor mexicano y fundador de Pimienta Films", image: "/images/comunidad/nico-celis-panelista.jpg" },
     ],
