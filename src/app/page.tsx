@@ -214,7 +214,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="absolute inset-0 pointer-events-none z-[1]" style={{ backgroundColor: "rgba(0, 130, 194, 0.3)" }} />
-                <div className="absolute inset-0 z-[2] pointer-events-none p-8">
+                <div className="impulso-card-logo absolute inset-0 z-[2] pointer-events-none p-8">
                   <div className="relative w-full h-full">
                     <Image
                       src="/images/lbi-logo-normalizado.png"
@@ -224,6 +224,13 @@ export default function Home() {
                       className="object-contain"
                     />
                   </div>
+                </div>
+                <div className="impulso-card-desc">
+                  <p>
+                    La Baja Inspira es un espacio estratégico de exhibición, proyección e incidencia cultural que articula
+                    el lenguaje cinematográfico con la investigación científica, las ciencias sociales y los estudios sobre
+                    desarrollo territorial.
+                  </p>
                 </div>
               </Link>
             </div>
@@ -246,7 +253,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="absolute inset-0 pointer-events-none z-[1]" style={{ backgroundColor: "rgba(0, 0, 0, 0.45)" }} />
-                <div className="absolute inset-0 z-[2] pointer-events-none p-8">
+                <div className="impulso-card-logo absolute inset-0 z-[2] pointer-events-none p-8">
                   <div className="relative w-full h-full">
                     <Image
                       src="/images/ffgf-logo-normalizado.png"
@@ -256,6 +263,56 @@ export default function Home() {
                       className="object-contain"
                     />
                   </div>
+                </div>
+                <div className="impulso-card-desc">
+                  <p>
+                    Fortalece la industria audiovisual mexicana al generar una vinculación efectiva entre cineastas y
+                    empresas estratégicas del sector. Mediante apoyos especializados, mentorías y redes internacionales de
+                    colaboración, el programa impulsa la finalización y circulación global de nuevas obras.
+                  </p>
+                </div>
+              </Link>
+            </div>
+
+            {/* Frequencies of Now */}
+            <div className="impulso-card-outer">
+              <Link
+                href="/frequencies-of-now"
+                data-anim="impulso-card"
+                className="relative overflow-hidden cursor-pointer block"
+                style={{ backgroundColor: "#0E1B23" }}
+              >
+                <video
+                  className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  poster="/images/fon-card-poster.jpg"
+                >
+                  <source src="/images/fon-card.webm" type="video/webm" />
+                  <source src="/images/fon-card.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 pointer-events-none z-[1]" style={{ backgroundColor: "rgba(14, 27, 35, 0.45)" }} />
+                <div className="impulso-card-logo absolute inset-0 z-[2] pointer-events-none p-8">
+                  <div className="relative w-full h-full">
+                    <Image
+                      src="/images/fon-logo-normalizado.png"
+                      alt="Frequencies of Now"
+                      fill
+                      sizes="(max-width: 768px) calc(100vw - 4rem), 33vw"
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+                <span className="impulso-card-badge">Nuevo</span>
+                <div className="impulso-card-desc">
+                  <p>
+                    FICCLosCabos entiende al cine como un punto de partida para conectar disciplinas, industrias,
+                    territorios y nuevas formas de creación. Bajo esta visión, el Festival articula cine, música, arte,
+                    tecnología y cultura contemporánea dentro de una misma plataforma.
+                  </p>
                 </div>
               </Link>
             </div>
