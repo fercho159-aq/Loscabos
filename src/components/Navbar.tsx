@@ -18,6 +18,7 @@ const navItems: NavItem[] = [
     href: "/plataformas-de-impulso",
     children: [
       { label: "La Baja Inspira", href: "/la-baja-inspira" },
+      { label: "Frequencies of Now", href: "/frequencies-of-now" },
       { label: "Fondo Fílmico Gabriel Figueroa", href: "/ffgf" },
     ],
   },

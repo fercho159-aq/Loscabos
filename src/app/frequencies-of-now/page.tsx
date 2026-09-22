@@ -7,16 +7,26 @@ import FoNMisionDiagram from "@/components/FoNMisionDiagram";
 import FoNConvocatoriaCTA from "@/components/FoNConvocatoriaCTA";
 import FoNAnimations from "@/components/FoNAnimationsLazy";
 
-/* Página OCULTA hasta el lanzamiento (24 sep 2026): noindex, sin canonical,
-   fuera del sitemap y del Navbar. Cuando se publique: quitar `robots`,
-   agregar canonical/openGraph, sumar a sitemap.ts y al dropdown del Navbar.
+/* Página pública desde el lanzamiento (22 sep 2026).
    Identidad visual: brandbook Frequencies_of_Now_2026 (ver FREQUENCIES-OF-NOW.md). */
+const DESCRIPCION =
+  "Frequencies of Now es la plataforma internacional de FICCLosCabos dedicada a construir un archivo documental de la cultura y el ecosistema contemporáneo de la música. Convocatoria 2026.";
+
 export const metadata: Metadata = {
   title: "Frequencies of Now | Stories Behind the Sound",
-  description:
-    "Frequencies of Now es la plataforma internacional de FICCLosCabos dedicada a construir un archivo documental de la cultura y el ecosistema contemporáneo de la música. Convocatoria 2026.",
-  robots: { index: false, follow: false },
+  description: DESCRIPCION,
+  alternates: { canonical: "/frequencies-of-now" },
+  openGraph: {
+    title: "Frequencies of Now | Stories Behind the Sound",
+    description: DESCRIPCION,
+    url: "/frequencies-of-now",
+    images: [{ url: "/images/fon-hero.jpg", width: 1600, height: 900 }],
+  },
 };
+
+/* Jurados y mentores: sección apagada hasta tener el jurado confirmado.
+   Para reactivarla, poner MOSTRAR_JURADO en true. */
+const MOSTRAR_JURADO = false;
 
 const INSTAGRAM_URL = "https://www.instagram.com/frequenciesofnow";
 
@@ -305,7 +315,8 @@ export default function FrequenciesOfNow() {
         </div>
       </section>
 
-      {/* Jurados y mentores — reutiliza lbi-jurado */}
+      {/* Jurados y mentores — reutiliza lbi-jurado. Oculta hasta confirmar jurado (MOSTRAR_JURADO). */}
+      {MOSTRAR_JURADO && (
       <section className="lbi-jurado-section fon-jurado overflow-x-clip">
         <div className="lbi-jurado-header">
           <span data-anim="fon-eyebrow" className="fon-eyebrow">Frequencies of Now 2026</span>
@@ -339,6 +350,7 @@ export default function FrequenciesOfNow() {
           </div>
         </div>
       </section>
+      )}
 
       {/* Cierre — logo vertical + tagline + Instagram (brandbook, última lámina) */}
       <section className="fon-ig-band">
