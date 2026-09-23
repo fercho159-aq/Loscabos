@@ -201,22 +201,21 @@ export default function FrequenciesOfNow() {
             <p data-anim="fon-typewriter" className="fon-body">
               El Festival Internacional de Cine y Creatividad de Los Cabos entiende al cine como un punto de partida para conectar
               disciplinas, industrias, territorios y nuevas formas de creación. Bajo la visión #BeyondTheScreen, el Festival articula
-              cine, música, arte, tecnología y cultura contemporánea dentro de una misma plataforma, generando espacios donde las
-              historias pueden encontrar nuevas audiencias y donde los creadores pueden vincularse con otros ecosistemas culturales
-              e industriales.
+              cine, música, arte, tecnología y cultura contemporánea dentro de una misma plataforma. Así genera espacios donde las
+              historias encuentran nuevas audiencias y donde los creadores se vinculan con otros ecosistemas culturales e
+              industriales.
             </p>
             <p data-anim="fon-typewriter" className="fon-body">
               La música es una de las formas en las que una sociedad registra su tiempo. Detrás de una canción, un artista, una
-              escena o un movimiento existen historias sobre identidad, territorio, memoria, comunidad, transformación y pertenencia
-              que ayudan a entender no sólo cómo sonamos, sino quiénes somos.
+              escena o un movimiento existen historias sobre identidad, territorio, memoria, comunidad y pertenencia que ayudan a
+              entender no sólo cómo sonamos, sino quiénes somos.
             </p>
             <p data-anim="fon-quote" className="fon-quote">
-              <mark>“La música no solamente acompaña una época: la documenta.”</mark>
+              <mark>“La música no sólo acompaña una época: también la documenta.”</mark>
             </p>
             <p data-anim="fon-typewriter" className="fon-body">
-              Desde la visión #BeyondTheScreen, FICCLosCabos presenta Frequencies of Now: el archivo vivo de la cultura de la
-              industria musical, una plataforma internacional dedicada a construir un archivo documental de la cultura y el
-              ecosistema contemporáneo de la música.
+              De esa convicción nace Frequencies of Now: A Living Archive of Music Culture, la plataforma internacional de
+              FICCLosCabos dedicada al documental de la industria y el ecosistema de la música.
             </p>
           </div>
         </div>
