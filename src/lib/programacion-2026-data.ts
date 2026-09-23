@@ -125,7 +125,7 @@ export const eventos2026: Evento[] = [
           {
             name: "Mariana Mendívil",
             image: "/images/programacion-2026/personas/mariana-mendivil.jpg",
-            meta: "“Memoria de un cuerpo desplazado”",
+            meta: "“Memoria de un Cuerpo Desplazado”",
             bio: "Cineasta, artista visual y animadora.",
           },
           {
@@ -155,13 +155,13 @@ export const eventos2026: Evento[] = [
           {
             name: "Federico Luis",
             image: "/images/programacion-2026/personas/federico-luis.jpg",
-            meta: "“For the Opponents”",
+            meta: "“For the opponents”",
             bio: "Guionista y director.",
           },
           {
             name: "Eduardo Braun Costa",
             image: "/images/programacion-2026/personas/eduardo-braun-costa.jpg",
-            meta: "“Los mentirosos”",
+            meta: "“Los Mentirosos”",
             bio: "Guionista, director y productor.",
           },
           {
