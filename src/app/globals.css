@@ -6651,17 +6651,13 @@ a:focus-visible .p26-underline,
 .fon-timeline-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 2.5rem;
-  min-height: 160px;
-  padding: 1.25rem 1.1rem 1.1rem;
-  border-radius: 14px;
-  background: var(--fon-dark);
-  border: 1px solid rgba(242,237,228,.08);
+  justify-content: flex-start;
+  gap: .75rem;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid rgba(242,237,228,.25);
 }
 .fon-timeline-item--last {
-  background: var(--fon-coral);
-  border-color: var(--fon-coral);
+  border-top: 3px solid var(--fon-coral);
 }
 .fon-timeline-date {
   font-family: var(--fon-display);
@@ -6673,10 +6669,9 @@ a:focus-visible .p26-underline,
 }
 .fon-timeline-label {
   font-size: .9rem;
-  color: rgba(242,237,228,.65);
+  color: var(--fon-cream);
   line-height: 1.35;
 }
-.fon-timeline-item--last .fon-timeline-label { color: var(--fon-dark); }
 
 /* Seis ejes */
 .fon-ejes {
@@ -6685,12 +6680,10 @@ a:focus-visible .p26-underline,
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 2.5rem 2rem;
 }
 .fon-eje {
-  background: var(--fon-card);
-  border-radius: 14px;
-  padding: 1.5rem 1.4rem 1.6rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: .6rem;
@@ -6720,7 +6713,7 @@ a:focus-visible .p26-underline,
 .fon-eje p {
   font-size: .95rem;
   line-height: 1.5;
-  color: rgba(242,237,228,.68);
+  color: var(--fon-cream);
   margin: 0;
 }
 
@@ -6889,7 +6882,6 @@ a:focus-visible .p26-underline,
   .fon-signal-label span { display: none; }
   .fon-lenguajes { grid-template-columns: 1fr; gap: 1.75rem; }
   .fon-timeline { grid-template-columns: 1fr 1fr; }
-  .fon-timeline-item { min-height: 130px; gap: 1.5rem; }
   .fon-timeline-item--last { grid-column: 1 / -1; }
   .fon-ejes { grid-template-columns: 1fr; }
   .fon-cats { grid-template-columns: 1fr; }
