@@ -3,14 +3,14 @@
 import { useSyncExternalStore } from "react";
 
 /* Convocatoria Frequencies of Now 2026 — el CTA cambia según la fecha, hora
-   de Los Cabos (UTC-7). Mismo patrón que FFGFConvocatoriaCTA: se resuelve en
+   de Los Cabos (UTC-7); apertura a las 9:00 CDMX (UTC-6). Mismo patrón que FFGFConvocatoriaCTA: se resuelve en
    el cliente (useEffect) para no romper la hidratación.
    - Antes del 24 de septiembre, 9:00: botón bloqueado con la fecha de apertura.
    - 24 de septiembre (9:00) al 30 de octubre (23:59): "Aplica ahora" a
      FilmFreeway.
    - A partir del 31 de octubre: convocatoria cerrada.
 */
-const OPEN_AT = Date.parse("2026-09-24T09:00:00-07:00");
+const OPEN_AT = Date.parse("2026-09-24T09:00:00-06:00");
 const CLOSE_AT = Date.parse("2026-10-30T23:59:59-07:00");
 const FORM_URL: string | null = "https://filmfreeway.com/FICCLosCabos";
 const CONVOCATORIA_URL =
