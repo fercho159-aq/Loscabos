@@ -63,8 +63,8 @@ Datos en `page.tsx` (`ejes[]`, `categorias[]`), tomados del brandbook (El Archiv
 
 ### CTA `FoNConvocatoriaCTA.tsx`
 Cliente, resuelve fase con `useSyncExternalStore` (snapshot server = null, no renderiza en SSR).
-- `OPEN_AT` 2026-09-24 09:00 CDMX (UTC-6), `CLOSE_AT` 2026-10-30 23:59.
-- Antes de `OPEN_AT`: boton "Aplica ahora" `disabled` con nota "Disponible a partir del 24 de septiembre de 2026, 9:00 am". Desde `OPEN_AT`: link a `FORM_URL` = https://filmfreeway.com/FICCLosCabos.
+- Sin hora de apertura (abierto desde el 24 sep 2026). `CLOSE_AT` 2026-10-30 23:59 (UTC-7).
+- Antes de `CLOSE_AT`: "Aplica ahora" link a `FORM_URL` = https://filmfreeway.com/FICCLosCabos. Despues: boton `disabled` "Convocatoria cerrada 30 de octubre".
 - Siempre visible: "Descargar convocatoria" -> Google Doc.
 
 ### Jurado
