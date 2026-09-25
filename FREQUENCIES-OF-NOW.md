@@ -21,12 +21,12 @@ Tokens propios, definidos como CSS vars en `.fon-page` (no son tokens del sitio)
 |-----------------|-----------|------------------------------------------------------------|
 | `--fon-dark`    | `#0E1B23` | Fondo de toda la pagina (hero, mision, convocatoria, jurado, cierre) |
 | `--fon-card`    | `#1E2A35` | Tarjetas sobre fondo oscuro (ejes, categorias)             |
-| `--fon-cream`   | `#F2EDE4` | Fondo intro; texto sobre oscuro                            |
+| `--fon-cream`   | `#F2EDE4` | Texto sobre oscuro (intro ahora fondo blanco)                           |
 | `--fon-coral`   | `#FF4F5E` | Eyebrows, boton, numeros de ejes, ultima tarjeta timeline, hashtag |
 | `--fon-lime`    | `#C4DA6D` | Tagline, titulos Musica/Cine documental, roles jurado, highlight cita |
 
-**Tipografia** (brandbook: Arial Black titulos / Arial cuerpo):
-- Titulos: `--fon-display` = `"Arial Black", ... , var(--font-inter)` con `font-weight: 900`. Clases `.fon-h2`, `.fon-h3`, `.fon-intro-title`, fechas, iniciales.
+**Tipografia** (Inter del sitio en todo; se quito Arial Black del brandbook):
+- Titulos: `--fon-display` = `var(--font-inter)` con `font-weight: 900`. Clases `.fon-h2`, `.fon-h3`, `.fon-intro-title`, fechas, iniciales.
 - Wordmark del logo: `--font-inter` 800 uppercase (el brandbook usa Inter Bold en el logotipo).
 - Cuerpo: `--font-inter` (Neue Haas), coherente con el resto del sitio.
 
@@ -44,7 +44,7 @@ Tokens propios, definidos como CSS vars en `.fon-page` (no son tokens del sitio)
 
 ```
 Hero (.fon-hero)    custom (no PageHero): video fon-loop + velo + FoNLogo horizontal + tagline + sub + #BeyondTheScreen
-Intro (.fon-intro)  crema, .lbi-desc-grid: imagen fon-mixer.jpg | eyebrow + h2 + parrafos typewriter + cita con highlight lima
+Intro (.fon-intro)  blanco, .lbi-desc-grid: imagen fon-intro-dancer.jpg | eyebrow + h2 + parrafos typewriter + cita con highlight lima
 Mision (.fon-mision) oscuro: eyebrow + h2 stagger + lead + FoNMisionDiagram (pulso) + .fon-lenguajes (Musica | Cine documental)
 TextureStrip        divisor half-overlap (marginTop -61)
 Convocatoria (.fon-convocatoria) oscuro sobre fon-hero.jpg velado .86:

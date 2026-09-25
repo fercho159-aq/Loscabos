@@ -6331,7 +6331,7 @@ a:focus-visible .p26-underline,
 /* ══════════════════════════════════════════
    FREQUENCIES OF NOW  (/frequencies-of-now)
    Identidad: brandbook FoN 2026. Paleta propia (coral/lima), títulos
-   Arial Black, tarjetas redondeadas, pulso de frecuencia.
+   Inter black (tipografía del sitio), tarjetas redondeadas, pulso de frecuencia.
    Reusa lbi-desc-grid, lbi-jurado-*, cta-button.
    ══════════════════════════════════════════ */
 .fon-page {
@@ -6340,7 +6340,7 @@ a:focus-visible .p26-underline,
   --fon-cream: #F2EDE4;
   --fon-coral: #FF4F5E;
   --fon-lime: #C4DA6D;
-  --fon-display: "Arial Black", "Arial-Black", "Helvetica Neue", var(--font-inter), Arial, sans-serif;
+  --fon-display: var(--font-inter), "Inter", system-ui, sans-serif;
   background: var(--fon-dark);
   font-family: var(--font-inter);
 }
@@ -6498,7 +6498,7 @@ a:focus-visible .p26-underline,
 
 /* ── Intro (única sección clara) ── */
 .fon-intro {
-  background: var(--fon-cream);
+  background: #fff;
   padding: clamp(3.5rem, 7vw, 6rem) clamp(1.25rem, 3vw, 2rem);
 }
 .fon-intro .lbi-desc-grid {
