@@ -11,7 +11,7 @@ import { useSyncExternalStore } from "react";
 const CLOSE_AT = Date.parse("2026-10-30T23:59:59-07:00");
 const FORM_URL: string | null = "https://filmfreeway.com/FICCLosCabos";
 const CONVOCATORIA_URL =
-  "https://docs.google.com/document/d/1ri4K9cvziyhkMdi-T1Pzeicr6a309vvFZ9Jt7w6o0Ig/edit?tab=t.0";
+  "https://drive.google.com/file/d/1ghcNajhjvSzWhMqn3FSfa4jEC72Mo7_s/view?usp=drive_link";
 
 type Phase = "open" | "closed";
 
@@ -55,6 +55,9 @@ export default function FoNConvocatoriaCTA() {
         <span className="fon-cta-note">
           Gracias a todas las personas que participaron
         </span>
+      )}
+      {phase === "open" && FORM_URL && (
+        <span className="fon-cta-note">Del 24 de septiembre al 30 de octubre</span>
       )}
       {phase === "open" && !FORM_URL && (
         <span className="fon-cta-note">El enlace de aplicación se publicará muy pronto</span>

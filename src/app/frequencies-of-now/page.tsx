@@ -246,7 +246,8 @@ export default function FrequenciesOfNow() {
             <p>Una forma de preservarla.</p>
           </div>
           <p data-anim="fon-lenguaje" className="fon-lenguajes-note">
-            Frequencies of Now conecta dos lenguajes capaces de documentar nuestro tiempo.
+            Frequencies of Now conecta así dos lenguajes capaces de documentar nuestro tiempo: la música como expresión de una
+            época y el cine documental como una forma de preservarla.
           </p>
         </div>
       </section>
@@ -264,7 +265,8 @@ export default function FrequenciesOfNow() {
             <StaggerTitle text="Convocatoria 2026" />
           </h2>
           <p data-anim="fon-desc" className="fon-lead" style={{ maxWidth: 820 }}>
-            Frequencies of Now busca documentales que trascienden la biografía o la fama para descubrir a las personas, los
+            A través de una convocatoria internacional, Frequencies of Now buscará documentales que trascienden la biografía o
+            la fama para descubrir a las personas, los
             lugares, los procesos creativos, las comunidades y los movimientos culturales que hacen posible la música.
           </p>
           <p data-anim="fon-desc" className="fon-lead" style={{ maxWidth: 820, marginTop: "1rem" }}>
