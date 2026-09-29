@@ -76,8 +76,8 @@ export default async function PeliculaDetalle({ params }: Props) {
         </div>
 
         {trailer && (
-          <section className={styles.trailerSection} aria-labelledby="trailer-title">
-            <h2 id="trailer-title">{trailerLabel}</h2>
+          <section id="trailer-title" className={styles.trailerSection} aria-label={`${trailerLabel} de ${film.title}`}>
+            {trailerLabel !== "Clip" && <h2>{trailerLabel}</h2>}
             <div className={styles.trailerPlayer}>
               <iframe
                 src={trailer}
@@ -92,8 +92,7 @@ export default async function PeliculaDetalle({ params }: Props) {
         )}
 
         {film.poster && (
-          <section className={styles.posterSection} aria-labelledby="poster-title">
-            <h2 id="poster-title">Póster</h2>
+          <section className={styles.posterSection} aria-label={`Póster de ${film.title}`}>
             <div className={styles.poster}>
               <Image src={film.poster} alt={`Póster de ${film.title}`} fill sizes="(max-width: 600px) 90vw, 520px" unoptimized={film.poster.startsWith("http")} />
             </div>

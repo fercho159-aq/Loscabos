@@ -2,13 +2,12 @@
 .header { margin-bottom: 2.5rem; }
 .header h1 { font-size: clamp(2.5rem, 6vw, 6rem); line-height: 1; font-weight: 800; letter-spacing: -.045em; }
 .intro { margin-top: 1.1rem; font-size: 1.05rem; }
-.categories { display: flex; flex-direction: column; align-items: flex-start; margin-left: calc(-1 * clamp(1.25rem, 5vw, 5rem)); margin-bottom: 2.5rem; }
-.categoryRibbon { display: flex; align-items: center; justify-content: space-between; gap: .8rem; max-width: 100%; border: 0; border-radius: 0 100px 100px 0; padding: .9rem 1.75rem .95rem clamp(1.25rem, 5vw, 5rem); background: var(--section-color); color: var(--section-text); font: inherit; font-weight: 800; font-size: clamp(1.15rem, 2.5vw, 2.7rem); line-height: 1.18; letter-spacing: -.035em; text-align: left; cursor: pointer; }
-.categoryRibbon:hover { box-shadow: inset 0 0 0 2px currentColor; }
-.categoryRibbon[aria-pressed="true"] { box-shadow: inset 0 0 0 3px currentColor; }
-.ribbonIcon { flex-shrink: 0; width: 1em; font-size: .65em; }
-.controls { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; padding-bottom: 1.25rem; border-bottom: 1px solid #08172230; }
-.allFilter { font: inherit; font-size: .9rem; line-height: 1.3; border: 1px solid #081722; padding: .7rem 1rem; border-radius: 100px; background: transparent; color: #081722; cursor: pointer; }
+.categories { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.categoryFilter { max-width: 100%; border: 1px solid transparent; border-radius: 0; padding: .65rem .9rem; background: var(--section-color); color: var(--section-text); font: inherit; font-weight: 600; font-size: .82rem; line-height: 1.3; text-align: left; cursor: pointer; }
+.categoryFilter:hover { border-color: currentColor; }
+.categoryFilter[aria-pressed="true"] { outline: 2px solid #081722; outline-offset: 2px; }
+.controls { display: flex; flex-direction: column; gap: 1.6rem; padding-bottom: 1.25rem; border-bottom: 1px solid #08172230; }
+.allFilter { font: inherit; font-size: .82rem; line-height: 1.3; border: 1px solid #081722; padding: .65rem .9rem; border-radius: 0; background: transparent; color: #081722; cursor: pointer; }
 .allFilter span { margin-left: .5rem; }
 .allFilter[aria-pressed="true"] { color: #fff; background: #081722; }
 .search { display: flex; flex-direction: column; gap: .5rem; width: min(100%, 28rem); }
@@ -37,7 +36,7 @@
 @media (max-width: 950px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .placeholderTitle { font-size: clamp(1.1rem, 2.5vw, 1.65rem); } }
 @media (max-width: 600px) {
   .grid { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
-  .categoryRibbon { padding-top: .8rem; padding-bottom: .85rem; padding-right: 1rem; font-size: 1.2rem; }
+  .categoryFilter, .allFilter { font-size: .75rem; padding: .6rem .7rem; }
   .controls { align-items: flex-start; }
   .search { width: 100%; }
   .placeholderTitle { font-size: clamp(1.2rem, 5vw, 1.6rem); }

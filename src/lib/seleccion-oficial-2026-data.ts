@@ -47,7 +47,7 @@ export const categorias2026: { id: string; label: string; color: string }[] = [
   },
   {
     "id": "proyecciones-especiales",
-    "label": "Proyecciones especiales",
+    "label": "Proyección especial",
     "color": "#ECE8DF"
   },
   {
