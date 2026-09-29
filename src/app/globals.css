@@ -6206,6 +6206,7 @@ a:focus-visible .p26-underline,
   color: var(--color-navy);
 }
 
+.p26-person-country,
 .p26-person-meta {
   font-family: var(--p26-mono);
   font-size: 0.75rem;

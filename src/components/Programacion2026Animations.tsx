@@ -91,10 +91,13 @@ export default function Programacion2026Animations() {
     const refresh = () => ScrollTrigger.refresh();
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);
     window.addEventListener("load", refresh);
+    // Los desplegables de la agenda cambian la posición de las tarjetas.
+    document.addEventListener("toggle", refresh, true);
     const refreshTimers = [window.setTimeout(refresh, 400), window.setTimeout(refresh, 1500)];
 
     return () => {
       window.removeEventListener("load", refresh);
+      document.removeEventListener("toggle", refresh, true);
       refreshTimers.forEach(clearTimeout);
       ctx.kill();
     };

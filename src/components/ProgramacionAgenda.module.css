@@ -1,0 +1,261 @@
+.agenda {
+  width: 100%;
+  background: #d9d4cd;
+  color: #0a1e23;
+  font-family: var(--font-inter), sans-serif;
+  scroll-margin-top: 6rem;
+}
+
+.day {
+  margin: 0;
+}
+
+.dayToggle {
+  display: block;
+  padding: 1.25rem 2rem;
+  background: var(--agenda-day-color, var(--color-cream));
+  list-style: none;
+  cursor: pointer;
+}
+
+.dayToggle::-webkit-details-marker {
+  display: none;
+}
+
+.dayToggle::marker {
+  content: "";
+}
+
+.dayToggle:focus-visible {
+  outline: 3px solid var(--color-navy);
+  outline-offset: -5px;
+}
+
+.dayHeading {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.dayLabel {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.chevron {
+  flex-shrink: 0;
+  transform: rotate(-90deg);
+}
+
+.day[open] .chevron {
+  transform: rotate(0deg);
+}
+
+.dayContent {
+  display: grid;
+  gap: 2.25rem;
+  max-width: 1504px;
+  margin: 0 auto;
+  padding: 2rem 2rem 3rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.card {
+  min-width: 0;
+  scroll-margin-top: 7rem;
+  overflow-wrap: break-word;
+}
+
+.timeRow {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  margin-bottom: 0.45rem;
+}
+
+.timeRow::after {
+  content: "";
+  flex: 1;
+  min-width: 0;
+  height: 2px;
+  background: var(--agenda-accent);
+}
+
+.time {
+  display: inline-block;
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 100%;
+  padding: 0.2rem 0.6rem;
+  background: var(--agenda-accent);
+  color: var(--agenda-time-text, #0a1e23);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.navy {
+  --agenda-accent: #0a1e23;
+  --agenda-time-text: var(--color-cream);
+}
+
+.blue {
+  --agenda-accent: #a3cdd8;
+}
+
+.orange {
+  --agenda-accent: #d97a5b;
+}
+
+.peach {
+  --agenda-accent: #e3a97c;
+}
+
+.sage {
+  --agenda-accent: #8fa79d;
+}
+
+.eventTitle {
+  margin: 0 0 0.6rem;
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.eventLink {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+}
+
+.eventLink:hover {
+  text-decoration-color: currentColor;
+}
+
+.eventLink:focus-visible,
+.ticketLink:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.description,
+.venue,
+.metadata {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+.description {
+  margin-bottom: 0.5rem;
+}
+
+.venue {
+  font-weight: 700;
+}
+
+.metadata {
+  display: grid;
+  gap: 0.1rem;
+  margin-top: 0.25rem;
+}
+
+.ticketLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.65rem;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  background: #0a1e23;
+  color: var(--color-cream);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.ticketLink:hover {
+  background: var(--color-teal);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 1100px) {
+  .row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .dayToggle {
+    padding: 1rem 1.25rem;
+  }
+
+  .dayHeading {
+    gap: 0.75rem;
+  }
+
+  .dayLabel {
+    font-size: clamp(1.2rem, 5.2vw, 1.65rem);
+  }
+
+  .chevron {
+    width: 18px;
+  }
+
+  .dayContent {
+    gap: 1.5rem;
+    padding: 1.5rem 1.25rem 2rem;
+  }
+
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgb(10 30 35 / 16%);
+  }
+
+  .row:last-child .card:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .eventTitle {
+    font-size: 1.1rem;
+  }
+
+  .description,
+  .venue,
+  .metadata {
+    font-size: 0.875rem;
+  }
+}
