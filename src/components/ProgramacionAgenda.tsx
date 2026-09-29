@@ -1,4 +1,6 @@
-import type { CSSProperties } from "react";
+"use client";
+
+import { useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { agenda2026, type AgendaEvent } from "@/lib/agenda-2026-data";
 import styles from "./ProgramacionAgenda.module.css";
@@ -48,6 +50,8 @@ function AgendaCard({ event }: { event: AgendaEvent }) {
 }
 
 export default function ProgramacionAgenda() {
+  const [openDayId, setOpenDayId] = useState<string | null>(agenda2026[0]?.id ?? null);
+
   return (
     <section
       className={styles.agenda}
@@ -55,10 +59,14 @@ export default function ProgramacionAgenda() {
       aria-label="Programación por día"
     >
       {agenda2026.map((day) => (
-        <details className={styles.day} key={day.id} open>
+        <details className={styles.day} key={day.id} open={openDayId === day.id}>
           <summary
             className={styles.dayToggle}
             style={{ "--agenda-day-color": day.color } as CSSProperties}
+            onClick={(event) => {
+              event.preventDefault();
+              setOpenDayId((current) => current === day.id ? null : day.id);
+            }}
           >
             <h2 className={styles.dayHeading}>
               <span className={styles.dayLabel}>{day.label}</span>
