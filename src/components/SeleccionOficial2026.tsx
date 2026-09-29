@@ -57,7 +57,7 @@ export default function SeleccionOficial2026() {
             return (
               <article key={film.slug} className={styles.card} style={{ "--film-accent": category?.color || "#FA6935" } as CSSProperties}>
                 <Link href={`${PREVIEW_FILM_BASE}/${film.slug}`} className={styles.cardLink}>
-                  <div className={styles.media}>
+                  <div className={`${styles.media} ${image ? styles.mediaWithImage : ""}`}>
                     {image ? (
                       <Image src={image} alt={`${film.poster ? "Póster" : "Imagen"} de ${film.title}`} fill sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, (max-width: 1400px) 33vw, 25vw" unoptimized={image.startsWith("http")} className={styles.image} />
                     ) : (
