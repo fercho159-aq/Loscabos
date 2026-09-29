@@ -10,9 +10,11 @@ export type Pelicula2026 = {
   image?: string;
   poster?: string;
   trailerUrl?: string;
+  trailerLabel?: "Tráiler" | "Clip";
 };
 
 export const PREVIEW_FILM_BASE = "/programacion-2026-preview/peliculas";
+export const PREVIEW_SELECTION_URL = "/programacion-2026-preview/seleccion-oficial";
 
 // Selección Oficial 2026: contenido y materiales proporcionados en el documento.
 // https://docs.google.com/document/d/1e56bhRB7ubZZOMVvUfl_ZXcR5tYcK8T77ctQyn6hbRc/edit?tab=t.u81o9exgnzci
@@ -21,37 +23,37 @@ export const categorias2026: { id: string; label: string; color: string }[] = [
   {
     "id": "marejada-nacional",
     "label": "Marejada: Panorama de Largometrajes Nacionales",
-    "color": "#FA6935"
+    "color": "#A3CDD5"
   },
   {
     "id": "marejada-internacional",
     "label": "Marejada: Panorama de Largometrajes Internacionales",
-    "color": "#6687C3"
+    "color": "#0A1E23"
   },
   {
     "id": "next-wave",
     "label": "The Next Wave",
-    "color": "#BDC957"
+    "color": "#E5AC82"
   },
   {
     "id": "animacion",
     "label": "Animación",
-    "color": "#E9B0BD"
+    "color": "#90A79C"
   },
   {
     "id": "filma-jalisco",
     "label": "Animación · Filma Jalisco",
-    "color": "#C47A3D"
+    "color": "#90A79C"
   },
   {
     "id": "proyecciones-especiales",
     "label": "Proyecciones especiales",
-    "color": "#006666"
+    "color": "#ECE8DF"
   },
   {
     "id": "homenaje",
     "label": "Homenaje a Dolores Heredia",
-    "color": "#960942"
+    "color": "#886D5E"
   }
 ];
 
@@ -278,7 +280,8 @@ export const peliculas2026: Pelicula2026[] = [
     "synopsis": "En el centro de esta historia está un profesor a punto de cumplir los 70 años, a quien su esposa abandona la misma noche en que se jubila, obligándolo a poner a prueba en su propia vida las lecciones sobre el amor y la literatura que impartió a sus estudiantes durante décadas.",
     "image": "/images/seleccion-oficial-2026/love-lessons-still.jpg",
     "poster": "/images/seleccion-oficial-2026/love-lessons-poster.jpg",
-    "trailerUrl": "https://drive.google.com/drive/folders/1DqUhPZ5G_joy5loobLV8setWItbAT4Nr?usp=drive_link"
+    "trailerUrl": "https://drive.google.com/file/d/1NBXODI0nYRE3TWuIKwzXQZZV2owWYVBQ/view",
+    "trailerLabel": "Clip"
   },
   {
     "slug": "marga-en-el-df",
@@ -452,7 +455,8 @@ export const peliculas2026: Pelicula2026[] = [
     "synopsis": "En el Singapur actual, las diferencias sociales y económicas marcan el destino de varias familias, cuestionando los lazos que las unen y el verdadero significado de ser familia.",
     "image": "/images/seleccion-oficial-2026/we-are-all-strangers-still.jpg",
     "poster": "/images/seleccion-oficial-2026/we-are-all-strangers-poster.jpg",
-    "trailerUrl": "https://drive.google.com/file/d/1Z18PqPKYCFRWWg54nQ2p5uZ1_gvWmmMC/view?usp=drive_link"
+    "trailerUrl": "https://drive.google.com/file/d/1Z18PqPKYCFRWWg54nQ2p5uZ1_gvWmmMC/view?usp=drive_link",
+    "trailerLabel": "Clip"
   },
   {
     "slug": "wishful-thinking",

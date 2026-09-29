@@ -7,18 +7,18 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import Programacion2026Animations from "@/components/Programacion2026Animations";
 import ProgramacionAgenda from "@/components/ProgramacionAgenda";
-import SeleccionOficial2026 from "@/components/SeleccionOficial2026";
+import Programacion2026Tabs from "@/components/Programacion2026Tabs";
 import { eventos2026 } from "@/lib/programacion-2026-preview-data";
 
 export const metadata: Metadata = {
   title: "Programación 2026 | FICC Los Cabos",
   description:
-    "Explora la agenda por día, los eventos especiales y las 36 películas de la selección oficial 2026 de FICCLosCabos.",
+    "Explora la agenda por día y los eventos especiales de FICCLosCabos 2026.",
   alternates: { canonical: "/programacion-2026-preview" },
   openGraph: {
     title: "Programación 2026 | FICC Los Cabos",
     description:
-      "Explora la agenda por día, los eventos especiales y las 36 películas de la selección oficial 2026 de FICCLosCabos.",
+      "Explora la agenda por día y los eventos especiales de FICCLosCabos 2026.",
     url: "/programacion-2026-preview",
     images: [{ url: "/images/programacion-2026/homenaje-dolores-heredia.jpg", width: 1600, height: 900 }],
   },
@@ -34,6 +34,7 @@ export default function Programacion2026() {
       <div className="p26-page">
         <PageHero lines={["Programación", "2026"]} bgImage="/images/programacion-hero.jpg" overlay />
 
+        <Programacion2026Tabs active="programacion" />
         <ProgramacionAgenda />
 
         <section className="p26-index scroll-mt-28" id="eventos-especiales">
@@ -72,8 +73,6 @@ export default function Programacion2026() {
             ))}
           </div>
         </section>
-
-        <SeleccionOficial2026 />
       </div>
 
       <Footer />

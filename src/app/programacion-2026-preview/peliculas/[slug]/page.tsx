@@ -5,11 +5,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { categorias2026, peliculas2026, PREVIEW_FILM_BASE } from "@/lib/seleccion-oficial-2026-data";
+import { categorias2026, peliculas2026, PREVIEW_FILM_BASE, PREVIEW_SELECTION_URL } from "@/lib/seleccion-oficial-2026-data";
+import { getTrailerEmbedUrl } from "@/lib/trailer-embed";
 import styles from "./pelicula.module.css";
 
 type Props = { params: Promise<{ slug: string }> };
-const catalogUrl = "/programacion-2026-preview#seleccion-oficial";
+const catalogUrl = PREVIEW_SELECTION_URL;
 
 export function generateStaticParams() {
   return peliculas2026.map(({ slug }) => ({ slug }));
@@ -30,20 +31,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-function safeTrailer(value?: string) {
-  if (!value) return undefined;
-  try {
-    const url = new URL(value.trim());
-    return ["https:", "http:"].includes(url.protocol) ? url.href : undefined;
-  } catch { return undefined; }
-}
-
 export default async function PeliculaDetalle({ params }: Props) {
   const { slug } = await params;
   const film = peliculas2026.find((item) => item.slug === slug);
   if (!film) notFound();
   const category = categorias2026.find((item) => item.id === film.categoryId);
-  const trailer = safeTrailer(film.trailerUrl);
+  const trailer = getTrailerEmbedUrl(film.trailerUrl);
+  const trailerLabel = film.trailerLabel || "Tráiler";
   const index = peliculas2026.findIndex((item) => item.slug === slug);
   const previous = peliculas2026[index - 1];
   const next = peliculas2026[index + 1];
@@ -61,7 +55,7 @@ export default async function PeliculaDetalle({ params }: Props) {
 
         {film.image && (
           <figure className={styles.still}>
-            <Image src={film.image} alt={`Imagen de ${film.title}`} fill sizes="(max-width: 1440px) 100vw, 1440px" priority unoptimized={film.image.startsWith("http")} />
+            <Image src={film.image} alt={`Still de ${film.title}`} fill sizes="(max-width: 1440px) 100vw, 1440px" priority unoptimized={film.image.startsWith("http")} />
           </figure>
         )}
 
@@ -77,11 +71,25 @@ export default async function PeliculaDetalle({ params }: Props) {
           <div className={styles.synopsis}>
             <h2>Sinopsis</h2>
             <p>{film.synopsis || "Sinopsis por confirmar."}</p>
-            {trailer ? (
-              <a href={trailer} target="_blank" rel="noopener noreferrer" className={styles.trailer}>{trailer.includes("/folders/") ? "Ver material del tráiler" : "Ver tráiler"} <span aria-hidden="true">↗</span><span className={styles.srOnly}> (se abre en otra pestaña)</span></a>
-            ) : <p className={styles.unavailable}>Tráiler no disponible.</p>}
+            {!trailer && <p className={styles.unavailable}>Tráiler no disponible.</p>}
           </div>
         </div>
+
+        {trailer && (
+          <section className={styles.trailerSection} aria-labelledby="trailer-title">
+            <h2 id="trailer-title">{trailerLabel}</h2>
+            <div className={styles.trailerPlayer}>
+              <iframe
+                src={trailer}
+                title={`${trailerLabel} de ${film.title}`}
+                loading="lazy"
+                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </section>
+        )}
 
         {film.poster && (
           <section className={styles.posterSection} aria-labelledby="poster-title">
