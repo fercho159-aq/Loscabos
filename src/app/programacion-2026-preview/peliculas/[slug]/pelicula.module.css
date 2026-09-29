@@ -1,0 +1,29 @@
+.page { padding: clamp(7rem, 12vw, 12rem) clamp(1.25rem, 5vw, 5rem) 4rem; background: #F6EDDB; color: #081722; }
+.header, .content, .posterSection, .navigation { max-width: 1440px; margin-left: auto; margin-right: auto; }
+.back { display: inline-block; font-size: .85rem; text-decoration: underline; text-underline-offset: .25em; }
+.category { margin: 2.7rem 0 1rem; font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; }
+.header h1 { font-size: clamp(2.4rem, 6.5vw, 7rem); line-height: .98; letter-spacing: -.045em; font-weight: 800; max-width: 1200px; overflow-wrap: anywhere; }
+.directors { margin: 1.5rem 0 3rem; font-size: clamp(1rem, 2vw, 1.5rem); }
+.still { position: relative; max-width: 1440px; margin: 0 auto 3.5rem; aspect-ratio: 16 / 9; background: #e5dfd3; }
+.still img { object-fit: contain; }
+.content { border-top: 4px solid var(--film-accent); display: grid; grid-template-columns: 1fr 2fr; gap: clamp(2rem, 5vw, 5rem); padding-top: 2rem; }
+.facts { display: grid; gap: 1.2rem; }
+.facts dt { text-transform: uppercase; font-size: .67rem; letter-spacing: .08em; margin-bottom: .3rem; opacity: .7; }
+.facts dd { font-size: 1.05rem; line-height: 1.45; }
+.synopsis h2, .posterSection h2 { font-size: 1.1rem; text-transform: uppercase; font-weight: 750; letter-spacing: .02em; margin-bottom: 1.1rem; }
+.synopsis p { font-size: clamp(1.15rem, 2vw, 1.6rem); line-height: 1.55; white-space: pre-line; }
+.synopsis .unavailable { margin-top: 1.5rem; font-size: .8rem; opacity: .65; }
+.trailer { display: inline-flex; gap: 2rem; align-items: center; margin-top: 2rem; padding: .9rem 1.3rem; color: #F6EDDB; background: #081722; font-weight: 650; }
+.trailer:hover { background: #FA6935; color: #081722; }
+.posterSection { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #08172240; }
+.poster { position: relative; width: min(100%, 520px); aspect-ratio: 2 / 3; background: #e5dfd3; }
+.poster img { object-fit: contain; }
+.navigation { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; margin-top: 4rem; padding: 2rem 0; border-top: 1px solid #081722; }
+.navigation a { min-width: 0; display: flex; flex-direction: column; gap: .75rem; }
+.navigation span { font-size: .75rem; }
+.navigation strong { font-size: clamp(1.1rem, 2vw, 1.7rem); line-height: 1.15; overflow-wrap: anywhere; }
+.navigation a:hover strong { text-decoration: underline; text-underline-offset: .2em; }
+.next { text-align: right; }
+.page a:focus-visible { outline: 3px solid #FA6935; outline-offset: 5px; }
+.srOnly { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (max-width: 700px) { .content { grid-template-columns: minmax(0, 1fr); } .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; } .still { margin-bottom: 2rem; } .category { margin-top: 2rem; } .navigation { gap: 1rem; } }

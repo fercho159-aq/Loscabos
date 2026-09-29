@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Programacion2026Animations from "@/components/Programacion2026Animations";
 import { eventos2026 } from "@/lib/programacion-2026-preview-data";
+import { peliculas2026, PREVIEW_FILM_BASE } from "@/lib/seleccion-oficial-2026-data";
 import { initials } from "@/lib/initials";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -43,6 +44,10 @@ export default async function EventoDetalle({ params }: Props) {
   const idx = eventos2026.findIndex((e) => e.slug === slug);
   const prev = eventos2026[idx - 1] ?? null;
   const next = eventos2026[idx + 1] ?? null;
+  const filmCategory = slug === "panel-the-next-wave"
+    ? "next-wave"
+    : slug === "homenaje-dolores-heredia" ? "homenaje" : null;
+  const relatedFilms = peliculas2026.filter((film) => film.categoryId === filmCategory);
 
   return (
     <>
@@ -144,6 +149,22 @@ export default async function EventoDetalle({ params }: Props) {
             </div>
           </section>
         ))}
+
+        {relatedFilms.length > 0 && (
+          <section className="px-5 pb-16 md:px-8" aria-labelledby="peliculas-del-programa">
+            <h2 id="peliculas-del-programa" className="mb-6 text-2xl font-semibold md:text-3xl">Películas de este programa</h2>
+            <ul className="grid gap-x-8 gap-y-4 md:grid-cols-2">
+              {relatedFilms.map((film) => (
+                <li key={film.slug}>
+                  <Link href={`${PREVIEW_FILM_BASE}/${film.slug}`} className="p26-underline text-lg font-semibold">
+                    {film.title}
+                  </Link>
+                  <p className="mt-1 text-sm">Dir. {film.directors}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         <nav className="p26-nav">
           {prev ? (

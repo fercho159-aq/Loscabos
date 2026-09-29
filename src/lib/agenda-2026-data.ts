@@ -339,6 +339,7 @@ const agendaSource: AgendaSourceDay[] = [
           "startTime": "19:00",
           "endTime": "22:00",
           "title": "MEMOREX + REXSEXEX",
+          "href": "/programacion-2026-preview/peliculas/memorex-rexsexex-y-mas",
           "venue": "Terraza AMET",
           "access": "Abierto al público",
           "accent": "navy"

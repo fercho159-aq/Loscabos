@@ -7,17 +7,18 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import Programacion2026Animations from "@/components/Programacion2026Animations";
 import ProgramacionAgenda from "@/components/ProgramacionAgenda";
+import SeleccionOficial2026 from "@/components/SeleccionOficial2026";
 import { eventos2026 } from "@/lib/programacion-2026-preview-data";
 
 export const metadata: Metadata = {
   title: "Programación 2026 | FICC Los Cabos",
   description:
-    "Sneak Peek de la programación 2026 de FICCLosCabos: el homenaje a Dolores Heredia, el desayuno Girls At Films y el panel The Next Wave — Emerging Filmmaker Panel.",
+    "Explora la agenda por día, los eventos especiales y las 36 películas de la selección oficial 2026 de FICCLosCabos.",
   alternates: { canonical: "/programacion-2026-preview" },
   openGraph: {
     title: "Programación 2026 | FICC Los Cabos",
     description:
-      "Sneak Peek de la programación 2026 de FICCLosCabos: el homenaje a Dolores Heredia, el desayuno Girls At Films y el panel The Next Wave — Emerging Filmmaker Panel.",
+      "Explora la agenda por día, los eventos especiales y las 36 películas de la selección oficial 2026 de FICCLosCabos.",
     url: "/programacion-2026-preview",
     images: [{ url: "/images/programacion-2026/homenaje-dolores-heredia.jpg", width: 1600, height: 900 }],
   },
@@ -33,9 +34,15 @@ export default function Programacion2026() {
       <div className="p26-page">
         <PageHero lines={["Programación", "2026"]} bgImage="/images/programacion-hero.jpg" overlay />
 
+        <nav aria-label="Secciones de programación" className="flex flex-wrap gap-x-8 gap-y-3 px-5 py-6 text-base font-semibold md:px-8">
+          <a href="#agenda-por-dia" className="p26-underline">Agenda por día</a>
+          <a href="#eventos-especiales" className="p26-underline">Eventos especiales</a>
+          <a href="#seleccion-oficial" className="p26-underline">Selección oficial</a>
+        </nav>
+
         <ProgramacionAgenda />
 
-        <section className="p26-index">
+        <section className="p26-index scroll-mt-28" id="eventos-especiales">
           {/* Bloque divisor: filete + título, como el `divider-block` de la referencia. */}
           <header data-anim="p26-head" className="p26-divider">
             <hr />
@@ -71,6 +78,8 @@ export default function Programacion2026() {
             ))}
           </div>
         </section>
+
+        <SeleccionOficial2026 />
       </div>
 
       <Footer />
