@@ -34,12 +34,6 @@ export default function Programacion2026() {
       <div className="p26-page">
         <PageHero lines={["Programación", "2026"]} bgImage="/images/programacion-hero.jpg" overlay />
 
-        <nav aria-label="Secciones de programación" className="flex flex-wrap gap-x-8 gap-y-3 px-5 py-6 text-base font-semibold md:px-8">
-          <a href="#agenda-por-dia" className="p26-underline">Agenda por día</a>
-          <a href="#eventos-especiales" className="p26-underline">Eventos especiales</a>
-          <a href="#seleccion-oficial" className="p26-underline">Selección oficial</a>
-        </nav>
-
         <ProgramacionAgenda />
 
         <section className="p26-index scroll-mt-28" id="eventos-especiales">
