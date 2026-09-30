@@ -50,41 +50,6 @@ export const eventos2026: Evento[] = [
     ],
   },
   {
-    slug: "laboratorio-de-escritura",
-    title: "Laboratorio de Escritura",
-    date: "6 – 12 de diciembre",
-    venue: "Hotel El Ganzo",
-    image: "/images/programacion-2026/laboratorio-de-escritura.jpg",
-    imageAlt: "Sesión del Laboratorio de Escritura de FICCLosCabos",
-    accent: "#006666",
-    body: [
-      "El Laboratorio de Escritura es el espacio de FICCLosCabos dedicado a acompañar el desarrollo de nuevos proyectos cinematográficos de Baja California Sur. A través de mentorías, escritura y encuentro con la industria, el programa impulsa a cineastas locales a fortalecer sus guiones y llevar sus proyectos hacia su siguiente etapa.",
-    ],
-    groups: [
-      {
-        title: "Mentores",
-        layout: "compact",
-        people: [
-          {
-            name: "Carlos Cuarón",
-            image: "/images/programacion-2026/personas/carlos-cuaron.jpg",
-            bio: "Director y guionista de Y Tu Mamá También, Rudo y Cursi y Sólo con Tu Pareja.",
-          },
-          {
-            name: "Fernando Frías",
-            image: "/images/programacion-2026/personas/fernando-frias.jpg",
-            bio: "Director y guionista de Ya no estoy aquí y No voy a pedirle a nadie que me crea.",
-          },
-          {
-            name: "Gibrán Portela",
-            image: "/images/programacion-2026/personas/gibran-portela.jpg",
-            bio: "Dramaturgo y guionista de La Jaula de Oro, Güeros, La Región Salvaje y Familia de Medianoche.",
-          },
-        ],
-      },
-    ],
-  },
-  {
     slug: "panel-the-next-wave",
     title: "The Next Wave — Emerging Filmmaker Panel",
     date: "Sábado 12 de diciembre",

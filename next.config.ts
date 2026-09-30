@@ -10,6 +10,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/programacion-2026/laboratorio-de-escritura",
+        destination: "/programacion-2026",
+        permanent: false,
+      },
+      {
         source: "/programacion-2026/brunch-girls-at-films",
         destination: "/programacion-2026",
         permanent: false,
