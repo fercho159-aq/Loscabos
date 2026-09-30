@@ -16,12 +16,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/programacion-2026/brunch-girls-at-films",
-        destination: "/programacion-2026",
-        permanent: false,
-      },
-      {
-        source: "/programacion-2026/desayuno-girls-at-films",
-        destination: "/programacion-2026",
+        destination: "/programacion-2026/desayuno-girls-at-films",
         permanent: false,
       },
     ];

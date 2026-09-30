@@ -185,7 +185,6 @@ const groups: Group[] = [
     accent: "var(--color-orange)",
     people: [
       { name: "Adolfo Margulis", role: "Director de cine y fotógrafo", image: "/images/comunidad/adolfo-margulis.jpg" },
-      { name: "Mariana Arriaga", role: "Co-fundadora de Memento Mori Films", image: "/images/comunidad/mariana-arriaga.jpg" },
       { name: "Mar Prieto", role: "Directora y guionista", image: "/images/comunidad/mar-prieto.jpg" },
       { name: "Ximena Lamadrid", role: "Actriz, autora y productora", image: "/images/comunidad/ximena-lamadrid.jpg" },
       { name: "David Zonana", role: "Director, escritor y productor", image: "/images/comunidad/david-zonana.jpg" },

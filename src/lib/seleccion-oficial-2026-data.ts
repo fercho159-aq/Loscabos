@@ -51,6 +51,11 @@ export const categorias2026: { id: string; label: string; color: string }[] = [
     "color": "#ECE8DF"
   },
   {
+    "id": "la-baja-inspira",
+    "label": "La Baja Inspira",
+    "color": "#BDC957"
+  },
+  {
     "id": "homenaje",
     "label": "Homenaje a Dolores Heredia",
     "color": "#886D5E"
@@ -83,6 +88,17 @@ export const peliculas2026: Pelicula2026[] = [
     "trailerUrl": "https://drive.google.com/file/d/1m_Q74rB4HyVRvG7FLEHL5d4cpiZMUTVt/view?usp=drive_link"
   },
   {
+    "slug": "angeles-fc",
+    "title": "Ángeles FC",
+    "categoryId": "la-baja-inspira",
+    "directors": "Roberto Ortiz",
+    "countries": "México",
+    "year": "2025",
+    "duration": "102’",
+    "image": "/images/seleccion-oficial-2026/angeles-fc-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/angeles-fc-poster.jpg"
+  },
+  {
     "slug": "angels-egg-4k-restoration",
     "title": "Angel's Egg (4K Restoration)",
     "categoryId": "animacion",
@@ -91,6 +107,27 @@ export const peliculas2026: Pelicula2026[] = [
     "year": "1985",
     "duration": "71’",
     "synopsis": "En una ciudad sumergida, una niña cuida con devoción un gran huevo entre sus brazos, convencida de que pertenece a un ángel. Un muchacho aparece con un artefacto al hombro, en busca de un ave que contempló en un sueño. Al principio, nace entre ellos simpatía, hasta que, el muchacho aplasta el huevo."
+  },
+  {
+    "slug": "azul-vivo",
+    "title": "Azul Vivo",
+    "categoryId": "la-baja-inspira",
+    "directors": "Fernando Castanier",
+    "countries": "México",
+    "year": "2025",
+    "duration": "17’",
+    "image": "/images/seleccion-oficial-2026/azul-vivo-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/azul-vivo-poster.jpg"
+  },
+  {
+    "slug": "baja-viva",
+    "title": "BAJA VIVA",
+    "categoryId": "la-baja-inspira",
+    "directors": "Cristian Cortizo Perez",
+    "countries": "México",
+    "year": "2026",
+    "duration": "42’",
+    "image": "/images/seleccion-oficial-2026/baja-viva-still.jpg"
   },
   {
     "slug": "blaise",
@@ -161,6 +198,26 @@ export const peliculas2026: Pelicula2026[] = [
     "synopsis": "Azul y su amigo Tlacu protegen a una frágil semilla en un viaje por la búsqueda de agua en un mundo devastado por la sequía y el cambio climático."
   },
   {
+    "slug": "fiesta-en-la-mision",
+    "title": "Fiesta en la misión",
+    "categoryId": "la-baja-inspira",
+    "directors": "Alexandra Hernandez Borja",
+    "countries": "México",
+    "year": "2025",
+    "duration": "38’",
+    "poster": "/images/seleccion-oficial-2026/fiesta-en-la-mision-poster.jpg"
+  },
+  {
+    "slug": "guardianes-del-golfo-from-sand-to-sea",
+    "title": "Guardianes Del Golfo: From Sand to Sea",
+    "categoryId": "la-baja-inspira",
+    "directors": "Nicolas Diaz-Magaloni",
+    "countries": "México",
+    "year": "2026",
+    "duration": "18’",
+    "poster": "/images/seleccion-oficial-2026/guardianes-del-golfo-from-sand-to-sea-poster.jpg"
+  },
+  {
     "slug": "hasta-pronto",
     "title": "Hasta pronto",
     "categoryId": "filma-jalisco",
@@ -188,7 +245,21 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "Irán",
     "year": "2026",
     "duration": "76’",
-    "synopsis": "El vasto archivo de objetos encontrados y documentos históricos no oficiales del artista iraní Nasser Bakhshi preserva la memoria colectiva en Tabriz. Las pinturas surrealistas de su pareja Roghayeh Najdi abordan el papel de la mujer en la sociedad iraní."
+    "synopsis": "El vasto archivo de objetos encontrados y documentos históricos no oficiales del artista iraní Nasser Bakhshi preserva la memoria colectiva en Tabriz. Las pinturas surrealistas de su pareja Roghayeh Najdi abordan el papel de la mujer en la sociedad iraní.",
+    "image": "/images/seleccion-oficial-2026/i-deserve-a-lover-whose-every-rise-sets-fiery-dooms-raging-across-the-skies-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/i-deserve-a-lover-whose-every-rise-sets-fiery-dooms-raging-across-the-skies-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/1WK1OZxD-yUKGqXQauzk_BZeex263KPbr/view?usp=drive_link"
+  },
+  {
+    "slug": "in-praise-of-shadows",
+    "title": "In Praise of Shadows",
+    "categoryId": "la-baja-inspira",
+    "directors": "Minori Murakami, Zoren Gold",
+    "countries": "México",
+    "year": "2026",
+    "duration": "10’",
+    "image": "/images/seleccion-oficial-2026/in-praise-of-shadows-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/in-praise-of-shadows-poster.jpg"
   },
   {
     "slug": "iron-boy",
@@ -231,7 +302,8 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2026",
     "duration": "65’",
-    "synopsis": "Un cineasta en apuros tiene la oportunidad de lanzar su ambicioso drama histórico sobre Benito Juárez a un rico potencial inversionista."
+    "synopsis": "Un cineasta en apuros tiene la oportunidad de lanzar su ambicioso drama histórico sobre Benito Juárez a un rico potencial inversionista.",
+    "poster": "/images/seleccion-oficial-2026/la-peluca-poster.jpg"
   },
   {
     "slug": "la-pena-no-duerme-de-noche",
@@ -245,6 +317,27 @@ export const peliculas2026: Pelicula2026[] = [
     "image": "/images/seleccion-oficial-2026/la-pena-no-duerme-de-noche-still.jpg",
     "poster": "/images/seleccion-oficial-2026/la-pena-no-duerme-de-noche-poster.jpg",
     "trailerUrl": "https://drive.google.com/file/d/1waPTG7fm-SA25pOXY0ChRKJgpZWEYwsS/view?usp=drive_link"
+  },
+  {
+    "slug": "la-ventana-a-la-esperanza",
+    "title": "La ventana a la esperanza",
+    "categoryId": "la-baja-inspira",
+    "directors": "Guillermo Acevedo",
+    "countries": "México",
+    "year": "2025",
+    "duration": "12’",
+    "image": "/images/seleccion-oficial-2026/la-ventana-a-la-esperanza-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/la-ventana-a-la-esperanza-poster.jpg"
+  },
+  {
+    "slug": "la-ventana-a-story-of-baja-california-sur-told-from-the-channel-of-isla-cerralvo",
+    "title": "La Ventana: A Story of Baja California Sur told from the channel of Isla Cerralvo",
+    "categoryId": "la-baja-inspira",
+    "directors": "Alonso I. Rodríguez de la Parra",
+    "countries": "México",
+    "year": "2026",
+    "duration": "34’",
+    "poster": "/images/seleccion-oficial-2026/la-ventana-a-story-of-baja-california-sur-told-from-the-channel-of-isla-cerralvo-poster.jpg"
   },
   {
     "slug": "lo-que-queda-de-mi",
@@ -335,6 +428,17 @@ export const peliculas2026: Pelicula2026[] = [
     "poster": "/images/seleccion-oficial-2026/miriam-poster.jpg"
   },
   {
+    "slug": "my-blue-whale-family",
+    "title": "My Blue Whale Family",
+    "categoryId": "la-baja-inspira",
+    "directors": "Hugh Pearson",
+    "countries": "México",
+    "year": "2025",
+    "duration": "55’",
+    "image": "/images/seleccion-oficial-2026/my-blue-whale-family-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/my-blue-whale-family-poster.jpg"
+  },
+  {
     "slug": "nagi-notes",
     "title": "Nagi Notes",
     "categoryId": "marejada-internacional",
@@ -379,6 +483,17 @@ export const peliculas2026: Pelicula2026[] = [
     "duration": "100’"
   },
   {
+    "slug": "oro-rojo",
+    "title": "Oro Rojo",
+    "categoryId": "la-baja-inspira",
+    "directors": "Jesús Salazar",
+    "countries": "México",
+    "year": "2026",
+    "duration": "37’",
+    "image": "/images/seleccion-oficial-2026/oro-rojo-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/oro-rojo-poster.jpg"
+  },
+  {
     "slug": "para-los-contrincantes",
     "title": "Para los contrincantes",
     "categoryId": "next-wave",
@@ -390,6 +505,28 @@ export const peliculas2026: Pelicula2026[] = [
     "image": "/images/seleccion-oficial-2026/para-los-contrincantes-still.jpg",
     "poster": "/images/seleccion-oficial-2026/para-los-contrincantes-poster.jpg",
     "trailerUrl": "https://drive.google.com/file/d/1D-aCZWL1qlnuubJT0GEKQpRCBrvPmuSf/view?usp=drive_link"
+  },
+  {
+    "slug": "rata-canguro-de-san-quintin-100-anos-de-resiliencia",
+    "title": "Rata Canguro de San Quintín: 100 años de resiliencia",
+    "categoryId": "la-baja-inspira",
+    "directors": "Terra Peninsular",
+    "countries": "México",
+    "year": "2025",
+    "duration": "10’",
+    "image": "/images/seleccion-oficial-2026/rata-canguro-de-san-quintin-100-anos-de-resiliencia-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/rata-canguro-de-san-quintin-100-anos-de-resiliencia-poster.jpg"
+  },
+  {
+    "slug": "recuerdos-profundos",
+    "title": "Recuerdos Profundos",
+    "categoryId": "la-baja-inspira",
+    "directors": "Rafael Quiroga",
+    "countries": "México",
+    "year": "2024",
+    "duration": "10’",
+    "image": "/images/seleccion-oficial-2026/recuerdos-profundos-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/recuerdos-profundos-poster.jpg"
   },
   {
     "slug": "rehearsals-for-a-revolution",
@@ -422,6 +559,28 @@ export const peliculas2026: Pelicula2026[] = [
     "synopsis": "Julio y Ana hace más de quince años que están juntos. Forman una pareja que ya no se mira ni se toca, y que ha hecho del combate diario la esencia de su relación."
   },
   {
+    "slug": "surgencia",
+    "title": "Surgencia",
+    "categoryId": "la-baja-inspira",
+    "directors": "Alejandro Montalvo",
+    "countries": "México",
+    "year": "2024",
+    "duration": "86’",
+    "image": "/images/seleccion-oficial-2026/surgencia-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/surgencia-poster.jpg"
+  },
+  {
+    "slug": "taje",
+    "title": "Tajé",
+    "categoryId": "la-baja-inspira",
+    "directors": "Ángel Linares",
+    "countries": "México",
+    "year": "2026",
+    "duration": "24’",
+    "image": "/images/seleccion-oficial-2026/taje-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/taje-poster.jpg"
+  },
+  {
     "slug": "the-only-living-pickpocket-in-new-york",
     "title": "The Only Living Pickpocket in New York",
     "categoryId": "marejada-internacional",
@@ -430,6 +589,17 @@ export const peliculas2026: Pelicula2026[] = [
     "year": "2026",
     "duration": "88’",
     "synopsis": "Un carterista experimentado debe recorrer Nueva York en una misión para recuperar lo robado después de que un robo sale mal."
+  },
+  {
+    "slug": "tierra",
+    "title": "Tierra",
+    "categoryId": "la-baja-inspira",
+    "directors": "José Fernando Altieri",
+    "countries": "México",
+    "year": "2025",
+    "duration": "13’",
+    "image": "/images/seleccion-oficial-2026/tierra-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/tierra-poster.jpg"
   },
   {
     "slug": "we-are-aliens",
