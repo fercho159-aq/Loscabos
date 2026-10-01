@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import LBIAnimations from "@/components/LBIAnimationsLazy";
+import styles from "./seleccionados.module.css";
 
 export const metadata: Metadata = {
   title: "La Baja Inspira | Plataforma de la Industria Cinematográfica",
@@ -75,6 +76,26 @@ export const metadata: Metadata = {
     url: "/la-baja-inspira",
   },
 };
+
+// Anuncio 2026: títulos y nombres de la pestaña La Baja Inspira del documento.
+// Pósters y sinopsis se incorporarán en una fase posterior.
+const seleccionados2026 = [
+  { title: "Fiesta en La Misión", name: "Alexandra Hernández Borja" },
+  { title: "Rata Canguro de San Quintín: 100 años de resiliencia", name: "Terra Peninsular" },
+  { title: "BAJA VIVA", name: "Cristian Cortizo Perez" },
+  { title: "Ángeles FC", name: "Roberto Ortiz" },
+  { title: "Surgencia", name: "Alejandro Montalvo" },
+  { title: "Tajé", name: "Ángel Linares" },
+  { title: "My Blue Whale Family", name: "Hugh Pearson" },
+  { title: "La Ventana: A Story of Baja California Sur told from the channel of Isla Cerralvo", name: "Alonso I. Rodríguez de la Parra" },
+  { title: "Guardianes Del Golfo: From Sand to Sea", name: "Nicolas Diaz-Magaloni" },
+  { title: "In Praise of Shadows", name: "Minori Murakami, Zoren Gold" },
+  { title: "La ventana a la esperanza", name: "Guillermo Acevedo" },
+  { title: "Tierra", name: "José Fernando Altieri" },
+  { title: "Azul Vivo", name: "Fernando Castanier" },
+  { title: "Recuerdos Profundos", name: "Rafael Quiroga" },
+  { title: "Oro Rojo", name: "Jesús Salazar" },
+];
 
 const aliadosInstitucionales = [
   { name: "ESCINE", logo: "/images/aliados-lbi/escine.png" },
@@ -279,15 +300,12 @@ export default function LaBajaInspira() {
             </p>
             <div className="flex flex-col items-center gap-2">
               <a
-                href="https://filmfreeway.com/ficloscabos"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="lbi-intro-apertura"
-                role="button"
+                href="#seleccionados-2026"
+                className={`lbi-intro-apertura ${styles.jumpLink}`}
               >
                 <span className="lbi-intro-apertura-line">
                   <span className="lbi-intro-apertura-dot" aria-hidden="true" style={{ display: "inline-block", verticalAlign: "middle", marginRight: "0.5rem" }} />
-                  Apertura de convocatoria del 28 de mayo al 14 de Julio
+                  Conoce a los seleccionados 2026
                 </span>
               </a>
             </div>
@@ -372,7 +390,7 @@ export default function LaBajaInspira() {
 
             {/* Columna izquierda */}
             <div data-anim="lbi-conv-col-left" className="lbi-conv-left">
-              <h3 className="lbi-conv-subtitle">La convocatoria 2026 acepta exclusivamente:</h3>
+              <h3 className="lbi-conv-subtitle">La convocatoria 2026 recibió exclusivamente:</h3>
               <ul className="lbi-conv-list">
                 <li>— Largometrajes documentales terminados</li>
                 <li>— Cortometrajes documentales terminados</li>
@@ -386,21 +404,19 @@ export default function LaBajaInspira() {
               <h3 className="lbi-conv-subtitle">Fechas Clave</h3>
               <div className="lbi-conv-dates">
                 <p><strong>Apertura:</strong><span className="lbi-conv-date-hl">28 de mayo, 2026</span></p>
-                <p><strong>Cierre:</strong><span className="lbi-conv-date-hl">15 de julio, 2026</span></p>
-                <p><strong>Selección:</strong> 5 títulos que definen el pulso de la región</p>
+                <p><strong>Cierre:</strong><span className="lbi-conv-date-hl">14 de julio, 2026</span></p>
+                <p><strong>Selección:</strong> {seleccionados2026.length} títulos seleccionados en 2026</p>
               </div>
             </div>
           </div>
 
           <div className="mt-8 md:mt-12 flex justify-center">
             <a
-              href="https://filmfreeway.com/ficloscabos"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="lbi-conv-cta"
+              href="#seleccionados-2026"
+              className={`lbi-conv-cta ${styles.jumpLink}`}
               data-anim="lbi-conv-cta"
             >
-              Aplica ahora
+              Ver seleccionados 2026
             </a>
           </div>
         </div>
@@ -520,6 +536,21 @@ export default function LaBajaInspira() {
             </div>
           );
         })}
+      </section>
+
+      {/* Seleccionados 2026 — primera fase del anuncio */}
+      <section id="seleccionados-2026" className={styles.section} aria-labelledby="seleccionados-2026-title">
+        <div className={styles.inner}>
+          <h2 id="seleccionados-2026-title" className={styles.heading}>Conoce a los seleccionados 2026</h2>
+          <ul className={styles.list}>
+            {seleccionados2026.map((film) => (
+              <li key={film.title} className={styles.film}>
+                <h3>{film.title}</h3>
+                <p>{film.name}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       {/* Legado La Baja Inspira */}
