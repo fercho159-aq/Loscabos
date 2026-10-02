@@ -392,7 +392,7 @@ export const peliculas2026: Pelicula2026[] = [
   {
     "slug": "memorex-rexsexex-y-mas",
     "title": "Memorex + Rexsexex y mas",
-    "categoryId": "proyecciones-especiales",
+    "categoryId": "marejada-nacional",
     "directors": "Rodrigo Guardiola",
     "countries": "México",
     "year": "2026",
@@ -541,7 +541,7 @@ export const peliculas2026: Pelicula2026[] = [
   {
     "slug": "santitos",
     "title": "Santitos",
-    "categoryId": "homenaje",
+    "categoryId": "marejada-nacional",
     "directors": "Alejandro Springall",
     "countries": "México",
     "year": "1999",
@@ -551,7 +551,7 @@ export const peliculas2026: Pelicula2026[] = [
   {
     "slug": "sentimental",
     "title": "Sentimental",
-    "categoryId": "proyecciones-especiales",
+    "categoryId": "marejada-internacional",
     "directors": "Cesc Gay",
     "countries": "España",
     "year": "2020",
@@ -639,3 +639,12 @@ export const peliculas2026: Pelicula2026[] = [
     "synopsis": "Una pareja descubre que sus emociones afectan físicamente su entorno, haciéndoles plantearse si su relación les beneficia o les perjudica."
   }
 ];
+
+// El preview de Selección Oficial muestra únicamente las dos secciones de Marejada.
+export const categoriasSeleccion2026 = categorias2026.filter((category) =>
+  category.id === "marejada-nacional" || category.id === "marejada-internacional",
+);
+
+export const peliculasSeleccion2026 = peliculas2026.filter((film) =>
+  categoriasSeleccion2026.some((category) => category.id === film.categoryId),
+);

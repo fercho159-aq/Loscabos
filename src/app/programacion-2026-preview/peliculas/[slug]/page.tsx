@@ -5,7 +5,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { categorias2026, peliculas2026, PREVIEW_FILM_BASE, PREVIEW_SELECTION_URL } from "@/lib/seleccion-oficial-2026-data";
+import { categorias2026, peliculas2026, peliculasSeleccion2026, PREVIEW_FILM_BASE, PREVIEW_SELECTION_URL } from "@/lib/seleccion-oficial-2026-data";
 import { getTrailerEmbedUrl } from "@/lib/trailer-embed";
 import styles from "./pelicula.module.css";
 
@@ -38,9 +38,12 @@ export default async function PeliculaDetalle({ params }: Props) {
   const category = categorias2026.find((item) => item.id === film.categoryId);
   const trailer = getTrailerEmbedUrl(film.trailerUrl);
   const trailerLabel = film.trailerLabel || "Tráiler";
-  const index = peliculas2026.findIndex((item) => item.slug === slug);
-  const previous = peliculas2026[index - 1];
-  const next = peliculas2026[index + 1];
+  const navigationFilms = peliculasSeleccion2026.some((item) => item.slug === slug)
+    ? peliculasSeleccion2026
+    : peliculas2026;
+  const index = navigationFilms.findIndex((item) => item.slug === slug);
+  const previous = navigationFilms[index - 1];
+  const next = navigationFilms[index + 1];
 
   return (
     <>

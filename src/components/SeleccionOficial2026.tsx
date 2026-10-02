@@ -3,7 +3,7 @@
 import { useMemo, useState, type CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { categorias2026, peliculas2026, PREVIEW_FILM_BASE } from "@/lib/seleccion-oficial-2026-data";
+import { categoriasSeleccion2026, peliculasSeleccion2026, PREVIEW_FILM_BASE } from "@/lib/seleccion-oficial-2026-data";
 import styles from "./SeleccionOficial2026.module.css";
 
 function normalize(value: string) {
@@ -15,7 +15,7 @@ export default function SeleccionOficial2026() {
   const [query, setQuery] = useState("");
   const films = useMemo(() => {
     const search = normalize(query.trim());
-    return peliculas2026.filter((film) =>
+    return peliculasSeleccion2026.filter((film) =>
       (categoryId === "all" || film.categoryId === categoryId) &&
       (!search || normalize(`${film.title} ${film.directors}`).includes(search)),
     );
@@ -31,9 +31,9 @@ export default function SeleccionOficial2026() {
       <div className={styles.controls}>
         <div className={styles.categories} role="group" aria-label="Filtrar por sección">
           <button className={styles.allFilter} type="button" aria-pressed={categoryId === "all"} aria-controls="seleccion-peliculas" onClick={() => setCategoryId("all")}>
-            Todas <span>{peliculas2026.length}</span>
+            Todas <span>{peliculasSeleccion2026.length}</span>
           </button>
-          {categorias2026.map((category) => (
+          {categoriasSeleccion2026.map((category) => (
             <button
               key={category.id}
               className={styles.categoryFilter}
@@ -59,7 +59,7 @@ export default function SeleccionOficial2026() {
       {films.length ? (
         <div id="seleccion-peliculas" className={styles.grid}>
           {films.map((film) => {
-            const category = categorias2026.find((item) => item.id === film.categoryId);
+            const category = categoriasSeleccion2026.find((item) => item.id === film.categoryId);
             const image = film.image;
             return (
               <article key={film.slug} className={styles.card} style={{ "--film-accent": category?.color || "#FA6935", "--film-label-color": ["marejada-internacional", "homenaje"].includes(film.categoryId) ? "#F6EDDB" : "#0A1E23" } as CSSProperties}>
