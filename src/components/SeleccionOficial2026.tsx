@@ -31,7 +31,6 @@ export default function SeleccionOficial2026({ title = "Selección oficial", cat
     <section id="seleccion-oficial" className={styles.section} aria-labelledby="seleccion-oficial-title">
       <header className={styles.header}>
         <h1 id="seleccion-oficial-title">{title}</h1>
-        <p className={styles.intro}>Descubre las películas de esta edición.</p>
       </header>
 
       <div className={styles.controls}>
