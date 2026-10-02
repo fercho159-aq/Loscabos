@@ -4,7 +4,6 @@ import { useMemo, useState, type CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { categoriasSeleccion2026, peliculasSeleccion2026, PREVIEW_FILM_BASE, type Pelicula2026 } from "@/lib/seleccion-oficial-2026-data";
-import PeliculaPresentadaPor from "./PeliculaPresentadaPor";
 import styles from "./SeleccionOficial2026.module.css";
 
 function normalize(value: string) {
@@ -87,7 +86,6 @@ export default function SeleccionOficial2026({ title = "Selección oficial", cat
                 <p className={styles.director}>Dir. {film.directors}</p>
                 <p className={styles.facts}>{[film.countries, film.year, film.duration].filter(Boolean).join(" · ")}</p>
                 <p className={styles.synopsis}>{film.synopsis || "Sinopsis por confirmar."}</p>
-                {film.presentedBy && <PeliculaPresentadaPor name={film.presentedBy} />}
               </article>
             );
           })}
