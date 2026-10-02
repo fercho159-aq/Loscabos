@@ -6,7 +6,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Programacion2026Animations from "@/components/Programacion2026Animations";
-import Programacion2026Tabs from "@/components/Programacion2026Tabs";
+import CatalogoPrograma2026 from "@/components/CatalogoPrograma2026";
 import { eventos2026 } from "@/lib/programacion-2026-preview-data";
 import { peliculas2026, PREVIEW_FILM_BASE } from "@/lib/seleccion-oficial-2026-data";
 import { initials } from "@/lib/initials";
@@ -21,7 +21,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const ev = eventos2026.find((e) => e.slug === slug);
   if (!ev) return {};
-  const description = ev.body[0].slice(0, 160);
+  const description = slug === "panel-the-next-wave"
+    ? "Descubre las películas de los participantes de The Next Wave — Emerging Filmmakers Panel en FICC Los Cabos 2026."
+    : ev.body[0].slice(0, 160);
   return {
     title: `${ev.title} | Programación 2026 FICC Los Cabos`,
     description,
@@ -42,21 +44,19 @@ export default async function EventoDetalle({ params }: Props) {
   const ev = eventos2026.find((e) => e.slug === slug);
   if (!ev) notFound();
 
+  if (slug === "panel-the-next-wave") {
+    return <CatalogoPrograma2026 categoryId="next-wave" title={ev.title} />;
+  }
+
   const idx = eventos2026.findIndex((e) => e.slug === slug);
   const prev = eventos2026[idx - 1] ?? null;
   const next = eventos2026[idx + 1] ?? null;
-  const filmCategory = slug === "panel-the-next-wave"
-    ? "next-wave"
-    : slug === "homenaje-dolores-heredia" ? "homenaje" : null;
+  const filmCategory = slug === "homenaje-dolores-heredia" ? "homenaje" : null;
   const relatedFilms = peliculas2026.filter((film) => film.categoryId === filmCategory);
 
   return (
     <>
       <Navbar />
-
-      {slug === "panel-the-next-wave" && (
-        <div style={{ paddingTop: "7rem" }}><Programacion2026Tabs active="next-wave" /></div>
-      )}
 
       <div className="p26-detail-page" style={{ "--cat": ev.accent } as CSSProperties}>
         {/* Encabezado: eyebrow monoespaciado + titular grande sobre plano claro. */}
