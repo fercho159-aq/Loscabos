@@ -66,6 +66,7 @@ export default function SeleccionOficial2026({ title = "Selección oficial", cat
         <div id="seleccion-peliculas" className={styles.grid}>
           {films.map((film) => {
             const category = categories.find((item) => item.id === film.categoryId);
+            const isMarejada = film.categoryId === "marejada-nacional" || film.categoryId === "marejada-internacional";
             const image = film.image;
             return (
               <article key={film.slug} className={styles.card} style={{ "--film-accent": category?.color || "#FA6935", "--film-label-color": ["marejada-internacional", "homenaje"].includes(film.categoryId) ? "#F6EDDB" : "#0A1E23" } as CSSProperties}>
@@ -79,7 +80,7 @@ export default function SeleccionOficial2026({ title = "Selección oficial", cat
                         <span className={styles.pending}>Still por confirmar</span>
                       </div>
                     )}
-                    <span className={styles.category}>{category?.label}</span>
+                    {isMarejada && <span className={styles.category}>{category?.label}</span>}
                   </div>
                   <h3>{film.title}</h3>
                 </Link>
