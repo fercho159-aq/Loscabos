@@ -3,37 +3,44 @@
 import { useMemo, useState, type CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { categoriasSeleccion2026, peliculasSeleccion2026, PREVIEW_FILM_BASE } from "@/lib/seleccion-oficial-2026-data";
+import { categoriasSeleccion2026, peliculasSeleccion2026, PREVIEW_FILM_BASE, type Pelicula2026 } from "@/lib/seleccion-oficial-2026-data";
+import PeliculaPresentadaPor from "./PeliculaPresentadaPor";
 import styles from "./SeleccionOficial2026.module.css";
 
 function normalize(value: string) {
   return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es");
 }
 
-export default function SeleccionOficial2026() {
+type Props = {
+  title?: string;
+  categories?: typeof categoriasSeleccion2026;
+  catalog?: Pelicula2026[];
+};
+
+export default function SeleccionOficial2026({ title = "Selección oficial", categories = categoriasSeleccion2026, catalog = peliculasSeleccion2026 }: Props) {
   const [categoryId, setCategoryId] = useState("all");
   const [query, setQuery] = useState("");
   const films = useMemo(() => {
     const search = normalize(query.trim());
-    return peliculasSeleccion2026.filter((film) =>
+    return catalog.filter((film) =>
       (categoryId === "all" || film.categoryId === categoryId) &&
       (!search || normalize(`${film.title} ${film.directors}`).includes(search)),
     );
-  }, [categoryId, query]);
+  }, [categoryId, query, catalog]);
 
   return (
     <section id="seleccion-oficial" className={styles.section} aria-labelledby="seleccion-oficial-title">
       <header className={styles.header}>
-        <h1 id="seleccion-oficial-title">Selección oficial</h1>
+        <h1 id="seleccion-oficial-title">{title}</h1>
         <p className={styles.intro}>Descubre las películas de esta edición.</p>
       </header>
 
       <div className={styles.controls}>
-        <div className={styles.categories} role="group" aria-label="Filtrar por sección">
+        {categories.length > 1 && <div className={styles.categories} role="group" aria-label="Filtrar por sección">
           <button className={styles.allFilter} type="button" aria-pressed={categoryId === "all"} aria-controls="seleccion-peliculas" onClick={() => setCategoryId("all")}>
-            Todas <span>{peliculasSeleccion2026.length}</span>
+            Todas <span>{catalog.length}</span>
           </button>
-          {categoriasSeleccion2026.map((category) => (
+          {categories.map((category) => (
             <button
               key={category.id}
               className={styles.categoryFilter}
@@ -46,7 +53,7 @@ export default function SeleccionOficial2026() {
               {category.label}
             </button>
           ))}
-        </div>
+        </div>}
         <label className={styles.search}>
           <span>Buscar película o dirección</span>
           <input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Título, directora o director…" autoComplete="off" />
@@ -59,7 +66,7 @@ export default function SeleccionOficial2026() {
       {films.length ? (
         <div id="seleccion-peliculas" className={styles.grid}>
           {films.map((film) => {
-            const category = categoriasSeleccion2026.find((item) => item.id === film.categoryId);
+            const category = categories.find((item) => item.id === film.categoryId);
             const image = film.image;
             return (
               <article key={film.slug} className={styles.card} style={{ "--film-accent": category?.color || "#FA6935", "--film-label-color": ["marejada-internacional", "homenaje"].includes(film.categoryId) ? "#F6EDDB" : "#0A1E23" } as CSSProperties}>
@@ -80,6 +87,7 @@ export default function SeleccionOficial2026() {
                 <p className={styles.director}>Dir. {film.directors}</p>
                 <p className={styles.facts}>{[film.countries, film.year, film.duration].filter(Boolean).join(" · ")}</p>
                 <p className={styles.synopsis}>{film.synopsis || "Sinopsis por confirmar."}</p>
+                {film.presentedBy && <PeliculaPresentadaPor name={film.presentedBy} />}
               </article>
             );
           })}

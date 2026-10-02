@@ -5,12 +5,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { categorias2026, peliculas2026, peliculasSeleccion2026, PREVIEW_FILM_BASE, PREVIEW_SELECTION_URL } from "@/lib/seleccion-oficial-2026-data";
+import { categorias2026, peliculas2026, getProgramaPelicula2026, PREVIEW_FILM_BASE, PREVIEW_SELECTION_URL } from "@/lib/seleccion-oficial-2026-data";
+import PeliculaPresentadaPor from "@/components/PeliculaPresentadaPor";
 import { getTrailerEmbedUrl } from "@/lib/trailer-embed";
 import styles from "./pelicula.module.css";
 
 type Props = { params: Promise<{ slug: string }> };
-const catalogUrl = PREVIEW_SELECTION_URL;
 
 export function generateStaticParams() {
   return peliculas2026.map(({ slug }) => ({ slug }));
@@ -20,10 +20,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const film = peliculas2026.find((item) => item.slug === slug);
   if (!film) return { robots: { index: false, follow: false } };
-  const description = film.synopsis?.slice(0, 160) || `${film.title}, de ${film.directors}. Selección Oficial 2026 de FICC Los Cabos.`;
+  const programa = getProgramaPelicula2026(film);
+  const description = film.synopsis?.slice(0, 160) || `${film.title}, de ${film.directors}. ${programa?.title || "Selección oficial"} 2026 de FICC Los Cabos.`;
   const image = film.image || film.poster;
   return {
-    title: `${film.title} | Selección Oficial 2026 FICC Los Cabos`,
+    title: `${film.title} | ${programa?.title || "Selección oficial"} 2026 FICC Los Cabos`,
     description,
     alternates: { canonical: `${PREVIEW_FILM_BASE}/${film.slug}` },
     robots: { index: false, follow: false },
@@ -36,10 +37,13 @@ export default async function PeliculaDetalle({ params }: Props) {
   const film = peliculas2026.find((item) => item.slug === slug);
   if (!film) notFound();
   const category = categorias2026.find((item) => item.id === film.categoryId);
+  const programa = getProgramaPelicula2026(film);
+  const catalogUrl = programa?.href || PREVIEW_SELECTION_URL;
+  const catalogTitle = programa?.title || "Selección oficial";
   const trailer = getTrailerEmbedUrl(film.trailerUrl);
   const trailerLabel = film.trailerLabel || "Tráiler";
-  const navigationFilms = peliculasSeleccion2026.some((item) => item.slug === slug)
-    ? peliculasSeleccion2026
+  const navigationFilms = programa
+    ? peliculas2026.filter((item) => programa.categoryIds.includes(item.categoryId))
     : peliculas2026;
   const index = navigationFilms.findIndex((item) => item.slug === slug);
   const previous = navigationFilms[index - 1];
@@ -50,7 +54,7 @@ export default async function PeliculaDetalle({ params }: Props) {
       <Navbar />
       <main className={styles.page} style={{ "--film-accent": category?.color || "#FA6935" } as CSSProperties}>
         <header className={styles.header}>
-          <Link href={catalogUrl} className={styles.back}>← Selección oficial 2026</Link>
+          <Link href={catalogUrl} className={styles.back}>← {catalogTitle} 2026</Link>
           <p className={styles.category}>{category?.label}</p>
           <h1>{film.title}</h1>
           <p className={styles.directors}>Dir. {film.directors}</p>
@@ -74,6 +78,7 @@ export default async function PeliculaDetalle({ params }: Props) {
           <div className={styles.synopsis}>
             <h2>Sinopsis</h2>
             <p>{film.synopsis || "Sinopsis por confirmar."}</p>
+            {film.presentedBy && <PeliculaPresentadaPor name={film.presentedBy} />}
             {!trailer && <p className={styles.unavailable}>Tráiler no disponible.</p>}
           </div>
         </div>
@@ -106,7 +111,7 @@ export default async function PeliculaDetalle({ params }: Props) {
           {previous ? <Link href={`${PREVIEW_FILM_BASE}/${previous.slug}`}><span>← Anterior</span><strong>{previous.title}</strong></Link> : <span />}
           {next ? <Link href={`${PREVIEW_FILM_BASE}/${next.slug}`} className={styles.next}><span>Siguiente →</span><strong>{next.title}</strong></Link> : <span />}
         </nav>
-        <Link href={catalogUrl} className={styles.back}>← Volver a todas las películas</Link>
+        <Link href={catalogUrl} className={styles.back}>← Volver a {catalogTitle}</Link>
       </main>
       <Footer />
     </>

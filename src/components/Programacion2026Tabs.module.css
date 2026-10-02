@@ -1,5 +1,5 @@
-.tabs { display: flex; gap: clamp(1.5rem, 5vw, 4rem); padding: 0 clamp(1.25rem, 5vw, 5rem); background: #F6EDDB; color: #081722; border-bottom: 1px solid #08172230; }
-.tabs a { padding: 1.25rem 0 1rem; border-bottom: 4px solid transparent; font-size: clamp(.95rem, 2vw, 1.25rem); font-weight: 700; }
+.tabs { display: flex; flex-wrap: wrap; align-items: stretch; column-gap: clamp(1rem, 2vw, 2rem); padding: 0 clamp(1.25rem, 5vw, 5rem); background: #F6EDDB; color: #081722; border-bottom: 1px solid #08172230; }
+.tabs a { display: flex; align-items: center; max-width: 100%; min-height: 44px; padding: 1rem 0 .85rem; border-bottom: 4px solid transparent; font-size: clamp(.85rem, 1.2vw, 1.05rem); line-height: 1.35; font-weight: 700; }
 .tabs a[aria-current="page"] { border-bottom-color: #FA6935; }
 .tabs a:hover { color: #b43c13; }
 .tabs a:focus-visible { outline: 3px solid #FA6935; outline-offset: 4px; }

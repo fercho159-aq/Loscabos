@@ -6,6 +6,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Programacion2026Animations from "@/components/Programacion2026Animations";
+import Programacion2026Tabs from "@/components/Programacion2026Tabs";
 import { eventos2026 } from "@/lib/programacion-2026-preview-data";
 import { peliculas2026, PREVIEW_FILM_BASE } from "@/lib/seleccion-oficial-2026-data";
 import { initials } from "@/lib/initials";
@@ -52,6 +53,10 @@ export default async function EventoDetalle({ params }: Props) {
   return (
     <>
       <Navbar />
+
+      {slug === "panel-the-next-wave" && (
+        <div style={{ paddingTop: "7rem" }}><Programacion2026Tabs active="next-wave" /></div>
+      )}
 
       <div className="p26-detail-page" style={{ "--cat": ev.accent } as CSSProperties}>
         {/* Encabezado: eyebrow monoespaciado + titular grande sobre plano claro. */}

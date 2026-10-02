@@ -79,7 +79,7 @@ export const eventos2026: Evento[] = [
   },
   {
     slug: "panel-the-next-wave",
-    title: "The Next Wave — Emerging Filmmaker Panel",
+    title: "The Next Wave — Emerging Filmmakers Panel",
     date: "Sábado 12 de diciembre",
     venue: "Cinépolis San José del Cabo",
     credit: "Moderado por Carlos López Estrada",
@@ -87,7 +87,7 @@ export const eventos2026: Evento[] = [
     imageAlt: "Panel The Next Wave en Cinépolis San José del Cabo",
     accent: "#6687C3",
     body: [
-      "El Festival presenta The Next Wave — Emerging Filmmaker Panel: un panel de cineastas emergentes de América Latina cuyo trabajo define el lenguaje audiovisual de la próxima generación.",
+      "El Festival presenta The Next Wave — Emerging Filmmakers Panel: un panel de cineastas emergentes de América Latina cuyo trabajo define el lenguaje audiovisual de la próxima generación.",
       "Moderado por Carlos López Estrada, cineasta mexicano nominado al Oscar cuyo debut Blindspotting abrió el Sundance Film Festival 2018, co-director de Raya and the Last Dragon de Disney y fundador de Antigravity Academy, plataforma dedicada a impulsar cineastas emergentes. El panel reúne a diez cineastas emergentes de América Latina con presencia en Sundance, Cannes, Berlín y SXSW.",
     ],
     presentedBy: [

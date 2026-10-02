@@ -11,10 +11,18 @@ export type Pelicula2026 = {
   poster?: string;
   trailerUrl?: string;
   trailerLabel?: "Tráiler" | "Clip";
+  presentedBy?: "Filma Jalisco";
 };
 
 export const PREVIEW_FILM_BASE = "/programacion-2026-preview/peliculas";
 export const PREVIEW_SELECTION_URL = "/programacion-2026-preview/seleccion-oficial";
+
+export const programasPeliculas2026 = [
+  { id: "seleccion", title: "Selección oficial", href: PREVIEW_SELECTION_URL, categoryIds: ["marejada-nacional", "marejada-internacional"] },
+  { id: "la-baja-inspira", title: "La Baja Inspira", href: "/programacion-2026-preview/la-baja-inspira", categoryIds: ["la-baja-inspira"] },
+  { id: "animacion", title: "Animación", href: "/programacion-2026-preview/animacion", categoryIds: ["animacion"] },
+  { id: "next-wave", title: "The Next Wave — Emerging Filmmakers Panel", href: "/programacion-2026-preview/panel-the-next-wave", categoryIds: ["next-wave"] },
+];
 
 // Selección Oficial 2026: contenido y materiales proporcionados en el documento.
 // https://docs.google.com/document/d/1e56bhRB7ubZZOMVvUfl_ZXcR5tYcK8T77ctQyn6hbRc/edit?tab=t.u81o9exgnzci
@@ -38,11 +46,6 @@ export const categorias2026: { id: string; label: string; color: string }[] = [
   {
     "id": "animacion",
     "label": "Animación",
-    "color": "#90A79C"
-  },
-  {
-    "id": "filma-jalisco",
-    "label": "Animación · Filma Jalisco",
     "color": "#90A79C"
   },
   {
@@ -170,7 +173,8 @@ export const peliculas2026: Pelicula2026[] = [
   {
     "slug": "dolores",
     "title": "Dolores",
-    "categoryId": "filma-jalisco",
+    "categoryId": "animacion",
+    "presentedBy": "Filma Jalisco",
     "directors": "Cecilia Andalon",
     "countries": "México",
     "year": "2025",
@@ -180,7 +184,8 @@ export const peliculas2026: Pelicula2026[] = [
   {
     "slug": "el-teatro-secreto",
     "title": "El teatro secreto",
-    "categoryId": "filma-jalisco",
+    "categoryId": "animacion",
+    "presentedBy": "Filma Jalisco",
     "directors": "Diego Martínez Gutiérrez",
     "countries": "México",
     "year": "2025",
@@ -190,7 +195,8 @@ export const peliculas2026: Pelicula2026[] = [
   {
     "slug": "el-viaje-azul",
     "title": "El viaje azul",
-    "categoryId": "filma-jalisco",
+    "categoryId": "animacion",
+    "presentedBy": "Filma Jalisco",
     "directors": "Aline Romero",
     "countries": "México",
     "year": "2026",
@@ -220,7 +226,8 @@ export const peliculas2026: Pelicula2026[] = [
   {
     "slug": "hasta-pronto",
     "title": "Hasta pronto",
-    "categoryId": "filma-jalisco",
+    "categoryId": "animacion",
+    "presentedBy": "Filma Jalisco",
     "directors": "Jennifer Skarbnik López",
     "countries": "México",
     "year": "2025",
@@ -342,7 +349,8 @@ export const peliculas2026: Pelicula2026[] = [
   {
     "slug": "lo-que-queda-de-mi",
     "title": "Lo que queda de mí",
-    "categoryId": "filma-jalisco",
+    "categoryId": "animacion",
+    "presentedBy": "Filma Jalisco",
     "directors": "Melany Leyva Ruiz",
     "countries": "México",
     "year": "2026",
@@ -648,3 +656,7 @@ export const categoriasSeleccion2026 = categorias2026.filter((category) =>
 export const peliculasSeleccion2026 = peliculas2026.filter((film) =>
   categoriasSeleccion2026.some((category) => category.id === film.categoryId),
 );
+
+export function getProgramaPelicula2026(film: Pelicula2026) {
+  return programasPeliculas2026.find((programa) => programa.categoryIds.includes(film.categoryId));
+}
