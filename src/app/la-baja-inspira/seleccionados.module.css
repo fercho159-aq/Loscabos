@@ -36,6 +36,28 @@
   border-top: 1px solid color-mix(in srgb, var(--color-navy) 20%, transparent);
 }
 
+.filmWithImage {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  align-content: start;
+  gap: 1.25rem;
+}
+
+.photo {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--color-navy) 8%, var(--color-cream));
+}
+
+.photoImage {
+  object-fit: contain;
+}
+
+.filmBody {
+  min-width: 0;
+}
+
 .film h3 {
   margin: 0 0 0.65rem;
   font-family: var(--font-inter);
@@ -71,5 +93,15 @@
 
   .film {
     padding: 1.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .filmWithImage {
+    grid-template-columns: 1fr;
+  }
+
+  .photo {
+    aspect-ratio: 16 / 9;
   }
 }

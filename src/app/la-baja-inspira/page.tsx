@@ -78,8 +78,17 @@ export const metadata: Metadata = {
 };
 
 // Anuncio 2026: títulos y nombres de la pestaña La Baja Inspira del documento.
-// Pósters y sinopsis se incorporarán en una fase posterior.
-const seleccionados2026 = [
+// Las imágenes corresponden a los enlaces FOTO oficiales del mismo listado.
+// La Ventana incluye un retrato del director; Guardianes del Golfo, un cartel.
+// Las sinopsis se incorporarán en una fase posterior.
+type Seleccionado2026 = {
+  title: string;
+  name: string;
+  image?: string;
+  imageAlt?: string;
+};
+
+const seleccionados2026: Seleccionado2026[] = [
   { title: "Fiesta en La Misión", name: "Alexandra Hernández Borja" },
   { title: "Rata Canguro de San Quintín: 100 años de resiliencia", name: "Terra Peninsular" },
   { title: "BAJA VIVA", name: "Cristian Cortizo Perez" },
@@ -87,14 +96,54 @@ const seleccionados2026 = [
   { title: "Surgencia", name: "Alejandro Montalvo" },
   { title: "Tajé", name: "Ángel Linares" },
   { title: "My Blue Whale Family", name: "Hugh Pearson" },
-  { title: "La Ventana: A Story of Baja California Sur told from the channel of Isla Cerralvo", name: "Alonso I. Rodríguez de la Parra" },
-  { title: "Guardianes Del Golfo: From Sand to Sea", name: "Nicolas Diaz-Magaloni" },
-  { title: "In Praise of Shadows", name: "Minori Murakami, Zoren Gold" },
-  { title: "La ventana a la esperanza", name: "Guillermo Acevedo" },
-  { title: "Tierra", name: "José Fernando Altieri" },
-  { title: "Azul Vivo", name: "Fernando Castanier" },
-  { title: "Recuerdos Profundos", name: "Rafael Quiroga" },
-  { title: "Oro Rojo", name: "Jesús Salazar" },
+  {
+    title: "La Ventana: A Story of Baja California Sur told from the channel of Isla Cerralvo",
+    name: "Alonso I. Rodríguez de la Parra",
+    image: "/images/lbi-seleccionados-2026/la-ventana-a-story-of-baja-california-sur-told-from-the-channel-of-isla-cerralvo.jpg",
+    imageAlt: "Alonso I. Rodríguez de la Parra, director de La Ventana",
+  },
+  {
+    title: "Guardianes Del Golfo: From Sand to Sea",
+    name: "Nicolas Diaz-Magaloni",
+    image: "/images/lbi-seleccionados-2026/guardianes-del-golfo-from-sand-to-sea.png",
+    imageAlt: "Cartel de Guardianes Del Golfo: From Sand to Sea",
+  },
+  {
+    title: "In Praise of Shadows",
+    name: "Minori Murakami, Zoren Gold",
+    image: "/images/lbi-seleccionados-2026/in-praise-of-shadows.jpg",
+    imageAlt: "Fotograma de In Praise of Shadows",
+  },
+  {
+    title: "La ventana a la esperanza",
+    name: "Guillermo Acevedo",
+    image: "/images/lbi-seleccionados-2026/la-ventana-a-la-esperanza.jpg",
+    imageAlt: "Fotograma de La ventana a la esperanza",
+  },
+  {
+    title: "Tierra",
+    name: "José Fernando Altieri",
+    image: "/images/lbi-seleccionados-2026/tierra.jpg",
+    imageAlt: "Fotograma de Tierra",
+  },
+  {
+    title: "Azul Vivo",
+    name: "Fernando Castanier",
+    image: "/images/lbi-seleccionados-2026/azul-vivo.jpg",
+    imageAlt: "Fotograma de Azul Vivo",
+  },
+  {
+    title: "Recuerdos Profundos",
+    name: "Rafael Quiroga",
+    image: "/images/lbi-seleccionados-2026/recuerdos-profundos.jpg",
+    imageAlt: "Fotograma de Recuerdos Profundos",
+  },
+  {
+    title: "Oro Rojo",
+    name: "Jesús Salazar",
+    image: "/images/lbi-seleccionados-2026/oro-rojo.jpg",
+    imageAlt: "Fotograma de Oro Rojo",
+  },
 ];
 
 const aliadosInstitucionales = [
@@ -545,9 +594,22 @@ export default function LaBajaInspira() {
           <h2 id="seleccionados-2026-title" className={styles.heading}>Conoce a los seleccionados 2026</h2>
           <ul className={styles.list}>
             {seleccionados2026.map((film) => (
-              <li key={film.title} className={styles.film}>
-                <h3>{film.title}</h3>
-                <p>{film.name}</p>
+              <li key={film.title} className={`${styles.film}${film.image ? ` ${styles.filmWithImage}` : ""}`}>
+                {film.image && (
+                  <div className={styles.photo}>
+                    <Image
+                      src={film.image}
+                      alt={film.imageAlt ?? film.title}
+                      fill
+                      sizes="(max-width: 480px) calc(100vw - 2.5rem), 160px"
+                      className={styles.photoImage}
+                    />
+                  </div>
+                )}
+                <div className={styles.filmBody}>
+                  <h3>{film.title}</h3>
+                  <p>{film.name}</p>
+                </div>
               </li>
             ))}
           </ul>

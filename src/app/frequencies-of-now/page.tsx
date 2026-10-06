@@ -67,6 +67,7 @@ const jurado: Jurado[] = [
     name: "Rodrigo Guardiola",
     role: "Cineasta, productor y baterista",
     ig: "rguardiola",
+    img: "/images/comunidad/rodrigo-guardiola.jpeg",
     desc: "Cineasta, productor y baterista de Zoé. Su trabajo audiovisual se nutre directamente de su experiencia como creador sonoro y escénico. Codirigió el largometraje de ficción El comediante (Ganador a Mejor Película en el FICG 2021) y el documental Zoé: Panoramas, con amplia trayectoria internacional. En Zoé: Memorex + Rexsexex y Más, captura la residencia de la banda en el Estadio GNP Seguros para construir un retrato cercano sobre la música, el público y la memoria compartida.",
   },
   {
@@ -80,6 +81,7 @@ const jurado: Jurado[] = [
     name: "Hermann Neudert",
     role: "Director",
     ig: "hermanneudert",
+    img: "/images/comunidad/hermann-neudert.jpg",
     desc: "Director nacido en Hermosillo, Sonora. De formación autodidacta, desarrolló su lenguaje audiovisual a través de la exploración en Internet, el cine y un constante proceso de prueba y error. En los últimos años se ha enfocado en la realización de videos musicales, que define como “cortometrajes musicales”, producidos bajo el sello de su casa productora Neuderts. Su trabajo se caracteriza por una dirección de ritmo marcado, donde la música funciona como eje central para construir narrativas y atmósferas visuales.",
   },
   {
