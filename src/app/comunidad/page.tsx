@@ -81,6 +81,7 @@ const groups: Group[] = [
       { name: "Jerónimo Prieto", role: "Fundador de Pelagic Life", image: "/images/comunidad/jeronimo-prieto.jpg" },
       { name: "Octavio Aburto", role: "Profesor e investigador del SIO", image: "/images/comunidad/octavio-aburto.jpg" },
       { name: "Alejandro Rivas", role: "Codirector en Producciones Cormorán", image: "/images/comunidad/alejandro-rivas.jpg" },
+      { name: "Francisco Laresgoiti", role: "Fundador de Corriente Alterna", image: "/images/comunidad/francisco-laresgoiti.jpg" },
       { name: "Inti Cordera", role: "Fundador de La Maroma Producciones", image: "/images/comunidad/inti-cordera.jpg" },
       { name: "Dra. Micheline Cariño", role: "Profesora investigadora de la UABCS", image: "/images/comunidad/micheline-carino.jpg" },
       { name: "Chef Guillermo J. Gómez", role: "Fundador de Suelo Sur", image: "/images/comunidad/chef-guillermo-gomez.jpg" },
@@ -92,7 +93,10 @@ const groups: Group[] = [
     title: "Jalisco",
     accent: "var(--color-orange)",
     people: [
+      { name: "Alejandro Tavares", role: "Director General <br> Filma Jalisco", image: "/images/comunidad/alejandro-tavares.jpg" },
+      { name: "Raúl Orozco Magaña", role: "Gerente de Estímulos y Desarrollo para la Industria Fílmica y Audiovisual <br> Filma Jalisco", image: "/images/comunidad/raul-orozco-magana.jpg" },
       { name: "Alfredo Aceves Fernández", role: "Director General <br> Ciudad Creativa Digital", image: "/images/comunidad/alfredo-aceves.jpg" },
+      { name: "Fernando Lebrija", role: "Fundador <br> Irreversible Pictures", image: "/images/comunidad/fernando-lebrija.jpg" },
       { name: "Billy Rovzar", role: "Fundador y CEO <br> Lemon Studios", tbc: true }, // sin foto
       { name: "Fernando Rovzar", role: "Fundador y Director Creativo <br> Lemon Studios", tbc: true }, // sin foto
       { name: "Claudio Jiménez Palomar", role: "Productor ejecutivo y cofundador <br> Mighty Animation", image: "/images/comunidad/claudio-jimenez-palomar.jpg" },

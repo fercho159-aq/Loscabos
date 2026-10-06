@@ -24,9 +24,8 @@ export const metadata: Metadata = {
   },
 };
 
-/* Jurados y mentores: sección apagada hasta tener el jurado confirmado.
-   Para reactivarla, poner MOSTRAR_JURADO en true. */
-const MOSTRAR_JURADO = false;
+/* Jurado confirmado en el documento vigente del Festival (octubre 2026). */
+const MOSTRAR_JURADO = true;
 
 const INSTAGRAM_URL = "https://www.instagram.com/frequenciesofnow";
 
@@ -52,73 +51,48 @@ const categorias = [
   { tag: "Short music documentary", range: "5–39 min", tone: "lime" },
 ];
 
-/* Jurados y mentores 2026, en el orden entregado. `img` en /images/comunidad
+/* Jurado 2026, en el orden entregado. `img` en /images/comunidad
    (1:1). Sin `img` se pinta un monograma con iniciales (estilo brandbook);
    cuando llegue la foto solo hay que agregar la ruta. */
 type Jurado = { name: string; role: string; ig: string; img?: string; desc: string };
 const jurado: Jurado[] = [
   {
     name: "Juan Patricio Riveroll",
-    role: "Director y productor",
+    role: "Director, productor y guionista",
     ig: "jpriveroll",
     img: "/images/comunidad/juan-patricio-riveroll.jpg",
-    desc: "Desde su rol en ESCINE como en su faceta de cineasta y escritor, conecta el cine con historias de profundidad social y cultural desde una visión sensible y contemporánea.",
+    desc: "Director, productor y guionista. Actualmente es Director de Extensión Académica en la Escuela Superior de Cine (ESCINE), institución que acompaña la curaduría de las convocatorias, garantiza rigor profesional y consolida programas clave como La Baja Inspira, el Fondo Fílmico Gabriel Figueroa, la nueva Sección de Animación y Frequencies of now.",
   },
   {
     name: "Rodrigo Guardiola",
     role: "Cineasta, productor y baterista",
     ig: "rguardiola",
-    desc: "Cineasta, productor y baterista de Zoé. Su trabajo audiovisual se nutre de su experiencia como creador sonoro y escénico. Codirigió el largometraje El comediante (Mejor Película, FICG 2021) y el documental Zoé: Panoramas, y dirigió Zoé: Memorex + Rexsexex y Más.",
+    desc: "Cineasta, productor y baterista de Zoé. Su trabajo audiovisual se nutre directamente de su experiencia como creador sonoro y escénico. Codirigió el largometraje de ficción El comediante (Ganador a Mejor Película en el FICG 2021) y el documental Zoé: Panoramas, con amplia trayectoria internacional. En Zoé: Memorex + Rexsexex y Más, captura la residencia de la banda en el Estadio GNP Seguros para construir un retrato cercano sobre la música, el público y la memoria compartida.",
   },
   {
-    name: "María José Cuevas",
-    role: "Directora y documentalista",
-    ig: "mariajosecuevas",
-    img: "/images/comunidad/maria-jose-cuevas.jpg",
-    desc: "Destacada directora y documentalista mexicana. Saltó a la fama internacional con su aclamado documental Bellas de noche (2016), nominado al Premio Ariel. Su trabajo visual explora con sensibilidad la memoria, la cultura pop y la condición humana.",
+    name: "Alejandro Tavares",
+    role: "Comunicador, productor y gestor cultural",
+    ig: "tavaresalaire",
+    img: "/images/comunidad/alejandro-tavares.jpg",
+    desc: "Comunicador, productor y gestor cultural con más de tres décadas de trayectoria en medios de comunicación, promoción musical y gestión cultural. Entre 2018 y 2024 fue Director General del Sistema Jalisciense de Radio y Televisión (SJRTV), desde donde impulsó la producción de contenidos culturales y documentales. En 2025 asumió la dirección de Filma Jalisco, desde donde trabaja en el fortalecimiento de la industria audiovisual y en la consolidación de Jalisco como destino para producciones nacionales e internacionales.",
   },
   {
-    name: "Anamaria Sayre",
-    role: "Productora",
-    ig: "anamaria.sayre",
-    img: "/images/comunidad/anamaria-sayre.jpg",
-    desc: "Es una joven productora y curadora de la música mexicoamericana de 26 años, reconocida por su trabajo en NPR Music como impulsora clave de la cultura y los sonidos latinos.",
+    name: "Hermann Neudert",
+    role: "Director",
+    ig: "hermanneudert",
+    desc: "Director nacido en Hermosillo, Sonora. De formación autodidacta, desarrolló su lenguaje audiovisual a través de la exploración en Internet, el cine y un constante proceso de prueba y error. En los últimos años se ha enfocado en la realización de videos musicales, que define como “cortometrajes musicales”, producidos bajo el sello de su casa productora Neuderts. Su trabajo se caracteriza por una dirección de ritmo marcado, donde la música funciona como eje central para construir narrativas y atmósferas visuales.",
   },
   {
-    name: "Sol Talamantes",
-    role: "Fotógrafa y directora",
-    ig: "soltalamantes",
-    desc: "Directora creativa, fotógrafa y productora mexicana de la industria de la música, con base en Guadalajara, Jalisco. Se enfoca en la fotografía de retrato, video y la dirección creativa para proyectos musicales.",
+    name: "Mario Escobar",
+    role: "Mánager y ejecutivo de la industria musical",
+    ig: "warioescobar",
+    desc: "Mánager y ejecutivo de la industria musical en México. Actualmente forma parte de Global Talent Services (GTS), la división de management y booking de Universal Music Group. Es reconocido por su trabajo como mánager de Ed Maverick, acompañando el desarrollo estratégico de su carrera y proyectos. Ha participado en espacios como la Feria Internacional de la Música de Guadalajara (FIM GDL), donde ha compartido su perspectiva sobre el desarrollo de artistas, los procesos creativos y los retos de la industria musical frente a la transformación digital.",
   },
   {
     name: "Zunshu",
-    role: "Diseñador industrial",
-    ig: "zunshy",
-    desc: "Miembro del equipo creativo de la Revista 192, donde colabora frecuentemente en labores de texto, estilismo y dirección para editoriales de moda y entrevistas. Asimismo es un creador de contenido de moda, estilo de vida y música con presencia en plataformas como TikTok e Instagram.",
-  },
-  {
-    name: "Diego Naudert",
-    role: "Director de cine",
-    ig: "hermanneudert",
-    desc: "Su primer trabajo fue en un proyecto de La Tuerca Films, y a la par inició con sus hermanos su propia casa productora, llamada Neuderts, donde realizaron Verde Pastel, el primer video de la música que los impulsó a crear más producciones.",
-  },
-  {
-    name: "Carlos Metta",
-    role: "Músico",
-    ig: "elmetta",
-    desc: "Un joven músico que busca en el sonido un sinfín de posibilidades de expresión y de experimentación artística a través de diferentes proyectos. Sus proyectos confluyen sus orígenes como diseñador de audio y como explorador de formas de expresión visual.",
-  },
-  {
-    name: "Rita Marymen",
-    role: "Productora",
-    ig: "ritamarimen",
-    desc: "Cofundadora de Ediciones Marea, una plataforma dedicada a la producción y venta de ediciones limitadas de piezas de arte de artistas contemporáneos. Además, también es la fuerza creativa de AORA MÉXICO, la marca de maquillaje 100 % libre de plástico que está revolucionando el panorama con sus fórmulas limpias y sus colores.",
-  },
-  {
-    name: "Carlos Lenin",
-    role: "Director de cine",
-    ig: "carlosleini",
-    desc: "Es un director, guionista y cineasta mexicano. FICUNAM y en el Festival de Los Cabos, y recibió múltiples nominaciones al Premio Ariel.",
+    role: "Creativo y diseñador industrial",
+    ig: "zunshu",
+    desc: "Creativo enfocado en la cultura contemporánea y las vanguardias de las industrias creativas. De formación en diseño industrial, desarrolla su trabajo alrededor del texto, la imagen y la moda. Forma parte de la dirección de Revista 192, además de participar en diversos proyectos vinculados a la cultura y la creación contemporánea. Su práctica se nutre de referentes que van de Demna, Lyn May, Mitzy y Mecano al cine de Rosemary’s Baby y Tár.",
   },
 ];
 
@@ -316,12 +290,12 @@ export default function FrequenciesOfNow() {
         </div>
       </section>
 
-      {/* Jurados y mentores — reutiliza lbi-jurado. Oculta hasta confirmar jurado (MOSTRAR_JURADO). */}
+      {/* Jurado confirmado — reutiliza lbi-jurado. */}
       {MOSTRAR_JURADO && (
       <section className="lbi-jurado-section fon-jurado overflow-x-clip">
         <div className="lbi-jurado-header">
           <span data-anim="fon-eyebrow" className="fon-eyebrow">Frequencies of Now 2026</span>
-          <h2 data-anim="fon-title" className="lbi-jurado-title fon-h2"><StaggerTitle text="Jurados y mentores" /></h2>
+          <h2 data-anim="fon-title" className="lbi-jurado-title fon-h2"><StaggerTitle text="Jurado Frequencies of Now 2026" /></h2>
         </div>
         <div className="lbi-jurado-eje" style={{ borderTop: "none", paddingTop: 0 }}>
           <div className="lbi-jurado-rows">

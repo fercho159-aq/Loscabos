@@ -3,18 +3,20 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 
-/* Pleca de aliados 2026. El orden es el que entregó diseño: los archivos en
-   /images/aliados/2026/ van numerados con esa misma posición, así que para
-   reacomodar basta mover la línea (el número del archivo es histórico, no
-   manda). */
+/* Pleca de aliados 2026. El orden sigue el documento de diseño;
+   la numeración de los archivos es histórica. */
 const aliados = [
   { name: "Los Cabos", logo: "/images/aliados/2026/01-fiturca-los-cabos.png" },
   { name: "Grupo Questro", logo: "/images/aliados/2026/02-grupo-questro.png" },
   { name: "Puerto Los Cabos", logo: "/images/aliados/2026/03-puerto-los-cabos.png" },
   { name: "Marina Puerto Los Cabos", logo: "/images/aliados/2026/04-marina-puerto-los-cabos.png" },
+  { name: "Secretaría de Turismo y Economía", logo: "/images/aliados/2026/secretaria-turismo-economia.png" },
+  { name: "Comisión Mexicana de Filmaciones", logo: "/images/aliados/2026/comision-mexicana-filmaciones.png" },
   { name: "Asociación de Hoteles de Los Cabos", logo: "/images/aliados/2026/04b-asociacion-hoteles-los-cabos.png" },
   { name: "Hotel El Ganzo", logo: "/images/aliados/2026/05-hotel-el-ganzo.png" },
   { name: "IMCINE", logo: "/images/aliados/2026/06-imcine.png" },
+  { name: "Ciudad Creativa Digital", logo: "/images/aliados/2026/08-ciudad-creativa-digital.png" },
+  { name: "Filma Jalisco", logo: "/images/aliados/2026/07-filma-jalisco.png" },
   { name: "ESCINE", logo: "/images/aliados/2026/09-escine.png" },
   { name: "JW Marriott Los Cabos", logo: "/images/aliados/2026/11-jw-marriott.png" },
   { name: "Zadún, A Ritz-Carlton Reserve", logo: "/images/aliados/2026/12-zadun.png" },
@@ -44,12 +46,16 @@ const aliados = [
   { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados/2026/39-instituto-cultura-artes-los-cabos.png" },
   { name: "Centro Cultural Tijuana", logo: "/images/aliados/2026/40-centro-cultural-tijuana.png" },
   { name: "Mares de México", logo: "/images/aliados/2026/41-mares-de-mexico.png" },
+  { name: "Pelagic Life", logo: "/images/aliados/2026/pelagic-life.png" },
   { name: "Baja Republic", logo: "/images/aliados/2026/42-baja-republic.png" },
   { name: "Sudcaliforniano", logo: "/images/aliados/2026/43-sudcaliforniano.png" },
   { name: "Cabo Mil", logo: "/images/aliados/2026/44-cabo-mil.png" },
   { name: "Exa", logo: "/images/aliados/2026/45-exa.png" },
   { name: "Girls at Films", logo: "/images/aliados/2026/46-girls-at-films.png" },
   { name: "Palmilla Dunes", logo: "/images/aliados/2026/47-palmilla-dunes.png" },
+  { name: "ELLE", logo: "/images/aliados/2026/elle.png" },
+  { name: "Quién", logo: "/images/aliados/2026/quien.png" },
+  { name: "Baja Traveler", logo: "/images/aliados/2026/baja-traveler.png" },
 ];
 
 // Duplicate for seamless infinite loop
@@ -80,7 +86,7 @@ export default function Aliados() {
                   height={220}
                   sizes="(max-width: 768px) 320px, 240px"
                   loading="lazy"
-                  style={{ width: "auto", maxHeight: 170, height: "auto", objectFit: "contain" }}
+                  style={{ width: "auto", maxHeight: 170, height: "auto", objectFit: "contain", ...(a.name === "Comisión Mexicana de Filmaciones" ? { backgroundColor: "#0A1E23", borderRadius: 8 } : {}) }}
                 />
               </div>
             ))}

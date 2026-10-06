@@ -11,7 +11,7 @@ import { useSyncExternalStore } from "react";
 const CLOSE_AT = Date.parse("2026-10-30T23:59:59-07:00");
 const FORM_URL: string | null = "https://filmfreeway.com/FICCLosCabos";
 const CONVOCATORIA_URL =
-  "https://drive.google.com/file/d/1ghcNajhjvSzWhMqn3FSfa4jEC72Mo7_s/view?usp=drive_link";
+  "https://drive.google.com/file/d/1STy67tXZO_kb-xwIHICkjK_AS-yztRv8/view?usp=sharing";
 
 type Phase = "open" | "closed";
 

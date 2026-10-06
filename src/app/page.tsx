@@ -12,9 +12,13 @@ const aliados = [
   { name: "Grupo Questro", logo: "/images/aliados/2026/02-grupo-questro.png" },
   { name: "Puerto Los Cabos", logo: "/images/aliados/2026/03-puerto-los-cabos.png" },
   { name: "Marina Puerto Los Cabos", logo: "/images/aliados/2026/04-marina-puerto-los-cabos.png" },
+  { name: "Secretaría de Turismo y Economía", logo: "/images/aliados/2026/secretaria-turismo-economia.png" },
+  { name: "Comisión Mexicana de Filmaciones", logo: "/images/aliados/2026/comision-mexicana-filmaciones.png" },
   { name: "Asociación de Hoteles de Los Cabos", logo: "/images/aliados/2026/04b-asociacion-hoteles-los-cabos.png" },
   { name: "Hotel El Ganzo", logo: "/images/aliados/2026/05-hotel-el-ganzo.png" },
   { name: "IMCINE", logo: "/images/aliados/2026/06-imcine.png" },
+  { name: "Ciudad Creativa Digital", logo: "/images/aliados/2026/08-ciudad-creativa-digital.png" },
+  { name: "Filma Jalisco", logo: "/images/aliados/2026/07-filma-jalisco.png" },
   { name: "ESCINE", logo: "/images/aliados/2026/09-escine.png" },
   { name: "JW Marriott Los Cabos", logo: "/images/aliados/2026/11-jw-marriott.png" },
   { name: "Zadún, A Ritz-Carlton Reserve", logo: "/images/aliados/2026/12-zadun.png" },
@@ -44,12 +48,16 @@ const aliados = [
   { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados/2026/39-instituto-cultura-artes-los-cabos.png" },
   { name: "Centro Cultural Tijuana", logo: "/images/aliados/2026/40-centro-cultural-tijuana.png" },
   { name: "Mares de México", logo: "/images/aliados/2026/41-mares-de-mexico.png" },
+  { name: "Pelagic Life", logo: "/images/aliados/2026/pelagic-life.png" },
   { name: "Baja Republic", logo: "/images/aliados/2026/42-baja-republic.png" },
   { name: "Sudcaliforniano", logo: "/images/aliados/2026/43-sudcaliforniano.png" },
   { name: "Cabo Mil", logo: "/images/aliados/2026/44-cabo-mil.png" },
   { name: "Exa", logo: "/images/aliados/2026/45-exa.png" },
   { name: "Girls at Films", logo: "/images/aliados/2026/46-girls-at-films.png" },
   { name: "Palmilla Dunes", logo: "/images/aliados/2026/47-palmilla-dunes.png" },
+  { name: "ELLE", logo: "/images/aliados/2026/elle.png" },
+  { name: "Quién", logo: "/images/aliados/2026/quien.png" },
+  { name: "Baja Traveler", logo: "/images/aliados/2026/baja-traveler.png" },
 ];
 const aliadosTrack = [...aliados, ...aliados];
 
@@ -329,7 +337,7 @@ export default function Home() {
             {aliadosTrack.map((a, i) => (
               <div key={`${a.name}-${i}`} className="aliado-slide">
                 <Image src={a.logo} alt={`Logo de ${a.name}, aliado del FICC Los Cabos`} width={320} height={220} sizes="(max-width: 768px) 320px, 240px" loading="lazy"
-                  style={{ width: "auto", maxHeight: 170, height: "auto", objectFit: "contain" }} />
+                  style={{ width: "auto", maxHeight: 170, height: "auto", objectFit: "contain", ...(a.name === "Comisión Mexicana de Filmaciones" ? { backgroundColor: "#0A1E23", borderRadius: 8 } : {}) }} />
               </div>
             ))}
           </div>

@@ -589,6 +589,16 @@ export const peliculas2026: Pelicula2026[] = [
     "poster": "/images/seleccion-oficial-2026/taje-poster.jpg"
   },
   {
+    "slug": "the-match",
+    "title": "The Match",
+    "categoryId": "marejada-internacional",
+    "directors": "Juan Cabral, Santiago Franco",
+    "countries": "Argentina",
+    "year": "2026",
+    "duration": "91’",
+    "synopsis": "El partido rememora el mítico encuentro que tuvo lugar entre Inglaterra y Argentina en el Estadio Azteca de la Ciudad de México durante el Mundial de 1986, utilizando imágenes de archivo excepcionales, que incluyen el gol de la “Mano de Dios” de Maradona, para tejer una potente reconstrucción del evento. Esta película va más allá del terreno de juego y recorre más de dos siglos de conflicto entre ambas naciones, desde los primeros enfrentamientos hasta la Guerra de las Malvinas. Replantea el partido como un hito deportivo que es eco de una rivalidad histórica más profunda, un encuentro entre la belleza del fútbol y la sinrazón de la guerra."
+  },
+  {
     "slug": "the-only-living-pickpocket-in-new-york",
     "title": "The Only Living Pickpocket in New York",
     "categoryId": "marejada-internacional",

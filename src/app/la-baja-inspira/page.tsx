@@ -248,6 +248,7 @@ const aliadosLBI: { name: string; logo: string | null }[] = [
   { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados-lbi/instituto-cultura-cabos.png" },
   { name: "Centro Cultural Tijuana", logo: "/images/aliados-lbi/centro-cultural-tijuana.png" },
   { name: "Girls at Films", logo: "/images/aliados-lbi/girls-at-films.png" },
+  { name: "Pelagic Life", logo: "/images/aliados/2026/pelagic-life.png" },
 ];
 const aliadosLBITrack = [...aliadosLBI, ...aliadosLBI];
 
