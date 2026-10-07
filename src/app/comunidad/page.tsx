@@ -161,7 +161,7 @@ const groups: Group[] = [
     people: [
       { name: "Jim Kolmar", role: "Programador de cine, escritor y consultor", image: "/images/comunidad/jim-kolmar.jpg" },
       { name: "Marina Stavenhagen", role: "Directora General <br> Cineteca Nacional", image: "/images/comunidad/marina-stavenhagen.jpg" },
-      { name: "Greg Rosenbaum", role: "SVP de Programación SXSW", tbc: true }, // falta acceso a la foto oficial
+      { name: "Greg Rosenbaum", role: "SVP de Programación SXSW", image: "/images/comunidad/greg-rosenbaum.jpg" },
       { name: "Claudio Jiménez Palomar", role: "Productor ejecutivo y cofundador de Mighty Animation", image: "/images/comunidad/claudio-jimenez-palomar.jpg" },
     ],
   },
