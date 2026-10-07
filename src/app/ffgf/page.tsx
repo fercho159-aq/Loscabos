@@ -87,7 +87,6 @@ const aliadosFFGF = [
   { name: "Art Kingdom", logo: "/images/aliados/FICC_Logos_Aliados_2026-06.png" },
   { name: "CTT Exp & Rentals", logo: "/images/aliados/FICC_Logos_Aliados_2026-07.png" },
   { name: "Shalala", logo: "/images/aliados/FICC_Logos_Aliados_2026-08.png" },
-  { name: "CineNet", logo: "/images/aliados/FICC_Logos_Aliados_2026-11.png" },
   { name: "Chemistry", logo: "/images/aliados/FICC_Logos_Aliados_2026-10.png" },
   { name: "Pimienta Films", logo: "/images/aliados/FICC_Logos_Aliados_2026-pimienta-films.png" },
   { name: "Cabo Mil", logo: "/images/aliados/FICC_Logos_Aliados_2026-cabomil.png" },

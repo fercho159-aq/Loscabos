@@ -54,7 +54,7 @@ const categorias = [
 /* Jurado 2026, en el orden entregado. `img` en /images/comunidad
    (1:1). Sin `img` se pinta un monograma con iniciales (estilo brandbook);
    cuando llegue la foto solo hay que agregar la ruta. */
-type Jurado = { name: string; role: string; ig: string; img?: string; desc: string };
+type Jurado = { name: string; role: string; ig: string; img?: string; desc: string; tbc?: boolean };
 const jurado: Jurado[] = [
   {
     name: "Juan Patricio Riveroll",
@@ -86,6 +86,7 @@ const jurado: Jurado[] = [
   },
   {
     name: "Mario Escobar",
+    tbc: true, // No publicar hasta recibir su foto oficial.
     role: "Mánager y ejecutivo de la industria musical",
     ig: "warioescobar",
     desc: "Mánager y ejecutivo de la industria musical en México. Actualmente forma parte de Global Talent Services (GTS), la división de management y booking de Universal Music Group. Es reconocido por su trabajo como mánager de Ed Maverick, acompañando el desarrollo estratégico de su carrera y proyectos. Ha participado en espacios como la Feria Internacional de la Música de Guadalajara (FIM GDL), donde ha compartido su perspectiva sobre el desarrollo de artistas, los procesos creativos y los retos de la industria musical frente a la transformación digital.",
@@ -301,7 +302,7 @@ export default function FrequenciesOfNow() {
         </div>
         <div className="lbi-jurado-eje" style={{ borderTop: "none", paddingTop: 0 }}>
           <div className="lbi-jurado-rows">
-            {jurado.map((m, idx) => (
+            {jurado.filter((m) => !m.tbc).map((m, idx) => (
               <div key={m.name} data-anim="fon-jurado-row" className={`lbi-jurado-row${idx % 2 === 1 ? " lbi-jurado-row--reverse" : ""}`}>
                 <div className="lbi-jurado-row__media">
                   {m.img ? (

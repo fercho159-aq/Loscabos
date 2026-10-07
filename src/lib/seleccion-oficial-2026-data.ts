@@ -109,7 +109,24 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "Japón",
     "year": "1985",
     "duration": "71’",
-    "synopsis": "En una ciudad sumergida, una niña cuida con devoción un gran huevo entre sus brazos, convencida de que pertenece a un ángel. Un muchacho aparece con un artefacto al hombro, en busca de un ave que contempló en un sueño. Al principio, nace entre ellos simpatía, hasta que, el muchacho aplasta el huevo."
+    "synopsis": "En una ciudad sumergida, una joven continúa cuidando un enorme huevo que sostiene con celo entre sus brazos. Ella cree que es el huevo de un ángel. Un chico con un enorme fusil desciende de un carro peculiar. Está buscando al ave que vio en sus sueños. En una ciudad abandonada, parece haber surgido una leve simpatía entre los dos. Sin embargo, una noche, el chico destruye el huevo de la joven.",
+    "image": "/images/seleccion-oficial-2026/angels-egg-4k-restoration-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/angels-egg-4k-restoration-poster.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=4X9LM3aTiyY"
+  },
+  {
+    "slug": "azul-la-ultima-semilla",
+    "title": "Azul: La última semilla",
+    "categoryId": "animacion",
+    "presentedBy": "Filma Jalisco",
+    "directors": "Aline Romero",
+    "countries": "México, España",
+    "year": "2026",
+    "duration": "9’",
+    "synopsis": "Han pasado años desde las últimas lluvias. Las semillas mueren y con ellas, la vida. Los pocos supervivientes emigran al norte buscando agua. Pero Azul, joven guardiana, imagina un futuro diferente. Con su mejor amigo, Tlacu, emprende un peligroso viaje para proteger la última semilla, la única esperanza para la vida que les queda.",
+    "image": "/images/seleccion-oficial-2026/azul-la-ultima-semilla-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/azul-la-ultima-semilla-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/1k_8DYP0EO5R1iM-xwucqU4OqUYvMxcpM/view?usp=drive_link"
   },
   {
     "slug": "azul-vivo",
@@ -179,29 +196,10 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2025",
     "duration": "10’",
-    "synopsis": "Dolores solo quiere jugar, huye de un demonio de fuego y accidentalmente cae en una tumba. Ahí conoce a dos siniestros cráneos de cáscara de maíz que quieren que se quede con ellos y un curioso armadillo que intenta sacarla a toda costa."
-  },
-  {
-    "slug": "el-teatro-secreto",
-    "title": "El teatro secreto",
-    "categoryId": "animacion",
-    "presentedBy": "Filma Jalisco",
-    "directors": "Diego Martínez Gutiérrez",
-    "countries": "México",
-    "year": "2025",
-    "duration": "13’",
-    "synopsis": "Una mujer ofrece un mechón de pelo a su mágico teatro de marionetas. Ella gira el mango de la manivela, y éste le da un regalo, el artefacto la absorbe en una actuación de títeres e insectos donde su presencia iluminará la vida."
-  },
-  {
-    "slug": "el-viaje-azul",
-    "title": "El viaje azul",
-    "categoryId": "animacion",
-    "presentedBy": "Filma Jalisco",
-    "directors": "Aline Romero",
-    "countries": "México",
-    "year": "2026",
-    "duration": "8.40’",
-    "synopsis": "Azul y su amigo Tlacu protegen a una frágil semilla en un viaje por la búsqueda de agua en un mundo devastado por la sequía y el cambio climático."
+    "synopsis": "Dolores solo quiere jugar, huye de un demonio de fuego y accidentalmente cae en una tumba. Ahí conoce a dos siniestros cráneos de cáscara de maíz que quieren que se quede con ellos y un curioso armadillo que intenta sacarla a toda costa.",
+    "image": "/images/seleccion-oficial-2026/dolores-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/dolores-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/15Vmz_e8Ro0yyjgnZy4oq0ii-EJdC1OKz/view?usp=drive_link"
   },
   {
     "slug": "fiesta-en-la-mision",
@@ -221,7 +219,9 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2026",
     "duration": "18’",
-    "poster": "/images/seleccion-oficial-2026/guardianes-del-golfo-from-sand-to-sea-poster.jpg"
+    "poster": "/images/seleccion-oficial-2026/guardianes-del-golfo-from-sand-to-sea-poster.jpg",
+    "image": "/images/seleccion-oficial-2026/guardianes-del-golfo-from-sand-to-sea-still.jpg",
+    "trailerUrl": "https://vimeo.com/1222525365?share=copy&fl=sv&fe=ci"
   },
   {
     "slug": "hasta-pronto",
@@ -232,7 +232,10 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2025",
     "duration": "14’",
-    "synopsis": "Un cortometraje animado inspirado en hechos reales. La carta de mi abuelo Ruwen le revela a su hermana menor Haneczka la tragedia que sufrió su familia en un acontecimiento histórico que marcó a la humanidad. La esperanza y el anhelo de reunirse y reconstruir sus vidas, es su mayor fuerza de supervivencia."
+    "synopsis": "Un cortometraje animado inspirado en hechos reales. La carta de mi abuelo Ruwen le revela a su hermana menor Haneczka la tragedia que sufrió su familia en un acontecimiento histórico que marcó a la humanidad. La esperanza y el anhelo de reunirse y reconstruir sus vidas, es su mayor fuerza de supervivencia.",
+    "image": "/images/seleccion-oficial-2026/hasta-pronto-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/hasta-pronto-poster.jpg",
+    "trailerUrl": "https://vimeo.com/1077366960?share=copy"
   },
   {
     "slug": "hijas-del-bosque",
@@ -242,7 +245,10 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2026",
     "duration": "95’",
-    "synopsis": "Dos micólogas mexicanas entrelazan la ciencia moderna y la sabiduría indígena ancestral junto a una comunidad de recolectoras de hongos, invitando a reconsiderar la relación de la humanidad con la naturaleza."
+    "synopsis": "HIJAS DEL BOSQUE entrelaza conocimiento generacional y ciencia occidental, lo visible y lo invisible, lo humano y lo no humano. Con destellos de ciencia ficción este documental sigue a Eliseete y Julieta, dos jóvenes biólogas del Estado de México y Oaxaca que mantienen una relación profunda con los hongos. Entre la deforestación y la falta de oportunidades, sus vidas, guiadas por el micelio, reflejan nuevas posibilidades de coexistencia en tiempos de crisis.",
+    "image": "/images/seleccion-oficial-2026/hijas-del-bosque-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/hijas-del-bosque-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/1eIZGAugqs3uEySA_IgIVjYb5eUhcTjHC/view?usp=drive_link"
   },
   {
     "slug": "i-deserve-a-lover-whose-every-rise-sets-fiery-dooms-raging-across-the-skies",
@@ -309,7 +315,7 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2026",
     "duration": "65’",
-    "synopsis": "Un cineasta en apuros tiene la oportunidad de lanzar su ambicioso drama histórico sobre Benito Juárez a un rico potencial inversionista.",
+    "synopsis": "Silvestre, un cansado y derrotado director de cine, va de camino a encontrarse con “Ricky”, un posible inversionista interesado en su más reciente guión cinematográfico. Nadie conoce o ha visto al enigmático “Ricky”, pero si hay algo que se sabe de él es que tiene dinero de sobra y una especial afinidad por las artes. De camino, un ranchero de nombre “Silverio” decide darle aventón a su destino, y de paso aprovecha para contarle a Silvestre acerca de su increíble idea para una película de comedia. Silvestre, cansado, le dice que no tiene interés en su historia. Al llegar a la casa de Ricky, un gran festejo que comienza a doblar las líneas entre realidad y ficción hace que Silvestre se confronte con sus decisiones pasadas y cuestione si en verdad tiene lo necesario para ser compararse con los grandes directores de antaño.",
     "poster": "/images/seleccion-oficial-2026/la-peluca-poster.jpg"
   },
   {
@@ -355,7 +361,9 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2026",
     "duration": "5.10’",
-    "synopsis": "Una criatura sin memoria y una madre que busca a su hijo se unen en un pueblo en ruinas, emprendiendo una búsqueda que revelará la identidad del ser y una dolorosa verdad sobre el olvido."
+    "synopsis": "Una criatura sin memoria y una madre que busca a su hijo se unen en un pueblo en ruinas, emprendiendo una búsqueda que revelará la identidad del ser y una dolorosa verdad sobre el olvido.",
+    "image": "/images/seleccion-oficial-2026/lo-que-queda-de-mi-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/lo-que-queda-de-mi-poster.jpg"
   },
   {
     "slug": "los-mentirosos",
@@ -488,7 +496,11 @@ export const peliculas2026: Pelicula2026[] = [
     "directors": "Mariano Rentería",
     "countries": "México",
     "year": "2026",
-    "duration": "100’"
+    "duration": "100’",
+    "synopsis": "Un viaje compuesto por micro historias íntimas que exploran la relación profunda entre la arquitectura y la vida cotidiana, revelando experiencias humanas universales como la identidad, la desigualdad, la fe, la naturaleza, el arte y la necesidad de pertenecer. Una experiencia cinematográfica inmersiva sobre cómo los espacios nos moldean como seres humanos y el profundo impacto que tienen en nuestras vidas.",
+    "image": "/images/seleccion-oficial-2026/odisea-nacional-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/odisea-nacional-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/1SkZV3yQ1rt8YYbhQVQ0NB4m--Jw1eqTe/view?usp=drive_link"
   },
   {
     "slug": "oro-rojo",
@@ -564,7 +576,10 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "España",
     "year": "2020",
     "duration": "82’",
-    "synopsis": "Julio y Ana hace más de quince años que están juntos. Forman una pareja que ya no se mira ni se toca, y que ha hecho del combate diario la esencia de su relación."
+    "synopsis": "Julio (Javier Cámara) y Ana (Griselda Siciliani) hace más de quince años que están juntos. Forman una pareja que ya no se mira ni se toca, y que ha hecho del combate diario la esencia de su relación. Esta noche Ana ha invitado a casa a sus vecinos del piso de arriba, Salva (Alberto San Juan) y Laura (Belén Cuesta), una pareja más joven que ellos, amable y simpática, pero cuyos “ruidos” se han convertido en una molestia para Julio y Ana... ¿o quizás en un estímulo? Los vecinos les harán una inusual y sorprendente propuesta que convertirá la velada en una experiencia catártica para el matrimonio... Adaptación cinematográfica de 'Los vecinos de arriba', la obra teatral debut de Cesc Gay.",
+    "image": "/images/seleccion-oficial-2026/sentimental-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/sentimental-poster.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=a_cya2Q5n6w"
   },
   {
     "slug": "surgencia",
@@ -575,7 +590,8 @@ export const peliculas2026: Pelicula2026[] = [
     "year": "2024",
     "duration": "86’",
     "image": "/images/seleccion-oficial-2026/surgencia-still.jpg",
-    "poster": "/images/seleccion-oficial-2026/surgencia-poster.jpg"
+    "poster": "/images/seleccion-oficial-2026/surgencia-poster.jpg",
+    "synopsis": "El reconocido vitivinicultor Hugo D’Acosta y el célebre chef Benito Molina emprenden un viaje a lo largo de la península de Baja California, una de las regiones más singulares de México. Desde los viñedos del Valle de Guadalupe hasta los oasis de San Ignacio, recorren un territorio donde la naturaleza imponente y la huella del ser humano conviven en un frágil equilibrio. A través de paisajes agrestes, costas indómitas y comunidades que han moldeado su identidad en torno al mar y la tierra, Surgencia revela las cicatrices de un territorio transformado por el tiempo y la intervención humana. Esta travesía es, a la vez, una exploración personal y una carta de amor a Baja California, escrita por dos figuras que han dejado una marca profunda e irreversible en su cultura gastronómica y enológica."
   },
   {
     "slug": "taje",
@@ -607,6 +623,20 @@ export const peliculas2026: Pelicula2026[] = [
     "year": "2026",
     "duration": "88’",
     "synopsis": "Un carterista experimentado debe recorrer Nueva York en una misión para recuperar lo robado después de que un robo sale mal."
+  },
+  {
+    "slug": "teatro-secreto",
+    "title": "Teatro secreto",
+    "categoryId": "animacion",
+    "presentedBy": "Filma Jalisco",
+    "directors": "Diego Martínez Gutiérrez",
+    "countries": "México",
+    "year": "2025",
+    "duration": "13’",
+    "synopsis": "Una mujer ofrece un mechón de pelo a su mágico teatro de marionetas. Ella gira el mango de la manivela, y éste le da un regalo, el artefacto la absorbe en una actuación de títeres e insectos donde su presencia iluminará la vida.",
+    "image": "/images/seleccion-oficial-2026/teatro-secreto-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/teatro-secreto-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/1S6bx2grmBpfANtDDRAKv3d2rHXKskCIw/view?usp=drive_link"
   },
   {
     "slug": "tierra",

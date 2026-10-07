@@ -95,10 +95,7 @@ const groups: Group[] = [
     people: [
       { name: "Alejandro Tavares", role: "Director General <br> Filma Jalisco", image: "/images/comunidad/alejandro-tavares.jpg" },
       { name: "Raúl Orozco Magaña", role: "Gerente de Estímulos y Desarrollo para la Industria Fílmica y Audiovisual <br> Filma Jalisco", image: "/images/comunidad/raul-orozco-magana.jpg" },
-      { name: "Alfredo Aceves Fernández", role: "Director General <br> Ciudad Creativa Digital", image: "/images/comunidad/alfredo-aceves.jpg" },
-      { name: "Fernando Lebrija", role: "Fundador <br> Irreversible Pictures", image: "/images/comunidad/fernando-lebrija.jpg" },
-      { name: "Billy Rovzar", role: "Fundador y CEO <br> Lemon Studios", tbc: true }, // sin foto
-      { name: "Fernando Rovzar", role: "Fundador y Director Creativo <br> Lemon Studios", tbc: true }, // sin foto
+      { name: "Alfredo Aceves Fernández", role: "Presidente del Fideicomiso <br> Ciudad Creativa Digital", image: "/images/comunidad/alfredo-aceves.jpg" },
       { name: "Claudio Jiménez Palomar", role: "Productor ejecutivo y cofundador <br> Mighty Animation", image: "/images/comunidad/claudio-jimenez-palomar.jpg" },
     ],
   },
@@ -115,6 +112,18 @@ const groups: Group[] = [
       { name: "Elena Fortes", role: "Fundadora de FIASCO", image: "/images/comunidad/elena-fortes.jpg" },
       { name: "Juan Patricio Riveroll", role: "Director Académico ESCINE", image: "/images/comunidad/juan-patricio-riveroll.jpg" },
       { name: "Alfredo Ruiz", role: "Director de la Licenciatura en Cinematografía ESCINE", image: "/images/comunidad/alfredo-ruiz.jpg" },
+    ],
+  },
+  {
+    id: "frequencies-of-now",
+    title: "Frequencies of Now",
+    accent: "var(--color-orange)",
+    people: [
+      { name: "Juan Patricio Riveroll", role: "Director Académico ESCINE", image: "/images/comunidad/juan-patricio-riveroll.jpg" },
+      { name: "Rodrigo Guardiola", role: "Cineasta, productor y baterista de Zoé", image: "/images/comunidad/rodrigo-guardiola.jpeg" },
+      { name: "Alejandro Tavares", role: "Director General <br> Filma Jalisco", image: "/images/comunidad/alejandro-tavares.jpg" },
+      { name: "Hermann Neudert", role: "Director", image: "/images/comunidad/hermann-neudert.jpg" },
+      { name: "Zunshu", role: "Creativo. Parte de la dirección de Revista 192", tbc: true }, // falta acceso a la foto oficial
     ],
   },
   {
@@ -151,8 +160,9 @@ const groups: Group[] = [
     accent: "var(--color-orange)",
     people: [
       { name: "Jim Kolmar", role: "Programador de cine, escritor y consultor", image: "/images/comunidad/jim-kolmar.jpg" },
-      // NO subir antes de finales de septiembre 2026.
-      { name: "Marina Stavenhagen", role: "Directora General <br> Cineteca Nacional", tbc: true },
+      { name: "Marina Stavenhagen", role: "Directora General <br> Cineteca Nacional", image: "/images/comunidad/marina-stavenhagen.jpg" },
+      { name: "Greg Rosenbaum", role: "SVP de Programación SXSW", tbc: true }, // falta acceso a la foto oficial
+      { name: "Claudio Jiménez Palomar", role: "Productor ejecutivo y cofundador de Mighty Animation", image: "/images/comunidad/claudio-jimenez-palomar.jpg" },
     ],
   },
   {
@@ -162,6 +172,7 @@ const groups: Group[] = [
     people: [
       { name: "Claudia Cándano", role: "Editora en Jefe de ELLE México", image: "/images/comunidad/claudia-candano.jpg" },
       { name: "Nico Celis", role: "Productor mexicano y fundador de Pimienta Films", image: "/images/comunidad/nico-celis-panelista.jpg" },
+      { name: "Griselda Siciliani", role: "Actriz", image: "/images/comunidad/griselda-siciliani.jpg" },
     ],
   },
   {

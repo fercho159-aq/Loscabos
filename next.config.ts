@@ -10,6 +10,16 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/programacion-2026-preview/peliculas/el-viaje-azul",
+        destination: "/programacion-2026-preview/peliculas/azul-la-ultima-semilla",
+        permanent: false,
+      },
+      {
+        source: "/programacion-2026-preview/peliculas/el-teatro-secreto",
+        destination: "/programacion-2026-preview/peliculas/teatro-secreto",
+        permanent: false,
+      },
+      {
         source: "/programacion-2026/laboratorio-de-escritura",
         destination: "/programacion-2026",
         permanent: false,
