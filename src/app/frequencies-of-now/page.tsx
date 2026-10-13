@@ -95,6 +95,7 @@ const jurado: Jurado[] = [
     name: "Zunshu",
     role: "Creativo y diseñador industrial",
     ig: "zunshu",
+    img: "/images/comunidad/zunshu.jpg",
     desc: "Creativo enfocado en la cultura contemporánea y las vanguardias de las industrias creativas. De formación en diseño industrial, desarrolla su trabajo alrededor del texto, la imagen y la moda. Forma parte de la dirección de Revista 192, además de participar en diversos proyectos vinculados a la cultura y la creación contemporánea. Su práctica se nutre de referentes que van de Demna, Lyn May, Mitzy y Mecano al cine de Rosemary’s Baby y Tár.",
   },
 ];

@@ -123,7 +123,7 @@ const groups: Group[] = [
       { name: "Rodrigo Guardiola", role: "Cineasta, productor y baterista de Zoé", image: "/images/comunidad/rodrigo-guardiola.jpeg" },
       { name: "Alejandro Tavares", role: "Director General <br> Filma Jalisco", image: "/images/comunidad/alejandro-tavares.jpg" },
       { name: "Hermann Neudert", role: "Director", image: "/images/comunidad/hermann-neudert.jpg" },
-      { name: "Zunshu", role: "Creativo. Parte de la dirección de Revista 192", tbc: true }, // falta acceso a la foto oficial
+      { name: "Zunshu", role: "Creativo. Parte de la dirección de Revista 192", image: "/images/comunidad/zunshu.jpg" },
     ],
   },
   {
