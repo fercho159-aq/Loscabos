@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Programacion2026Tabs from "@/components/Programacion2026Tabs";
 import SeleccionOficial2026 from "@/components/SeleccionOficial2026";
-import { peliculasSeleccion2026, PREVIEW_SELECTION_URL } from "@/lib/seleccion-oficial-2026-data";
+import { categoriasSeleccion2026, peliculasSeleccion2026, PREVIEW_FILM_BASE, PREVIEW_SELECTION_URL } from "@/lib/seleccion-oficial-2026-data";
 
 export const metadata: Metadata = {
   title: "Selección oficial 2026 | FICC Los Cabos",
@@ -18,7 +18,7 @@ export default function SeleccionOficialPage() {
       <Navbar />
       <main style={{ paddingTop: "7rem" }}>
         <Programacion2026Tabs active="seleccion" />
-        <SeleccionOficial2026 />
+        <SeleccionOficial2026 categories={categoriasSeleccion2026} catalog={peliculasSeleccion2026} filmBase={PREVIEW_FILM_BASE} />
       </main>
       <Footer />
     </>

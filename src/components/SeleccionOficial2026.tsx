@@ -3,7 +3,7 @@
 import { useMemo, useState, type CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { categoriasSeleccion2026, peliculasSeleccion2026, PREVIEW_FILM_BASE, type Pelicula2026 } from "@/lib/seleccion-oficial-2026-data";
+import type { Pelicula2026, categoriasSeleccion2026 } from "@/lib/seleccion-oficial-2026-data";
 import styles from "./SeleccionOficial2026.module.css";
 
 function normalize(value: string) {
@@ -12,11 +12,13 @@ function normalize(value: string) {
 
 type Props = {
   title?: string;
-  categories?: typeof categoriasSeleccion2026;
-  catalog?: Pelicula2026[];
+  categories: typeof categoriasSeleccion2026;
+  catalog: Pelicula2026[];
+  filmBase: string;
+  headingLevel?: "h1" | "h2";
 };
 
-export default function SeleccionOficial2026({ title = "Selección oficial", categories = categoriasSeleccion2026, catalog = peliculasSeleccion2026 }: Props) {
+export default function SeleccionOficial2026({ title = "Selección oficial", categories, catalog, filmBase, headingLevel: Heading = "h1" }: Props) {
   const [categoryId, setCategoryId] = useState("all");
   const [query, setQuery] = useState("");
   const films = useMemo(() => {
@@ -30,7 +32,7 @@ export default function SeleccionOficial2026({ title = "Selección oficial", cat
   return (
     <section id="seleccion-oficial" className={styles.section} aria-labelledby="seleccion-oficial-title">
       <header className={styles.header}>
-        <h1 id="seleccion-oficial-title">{title}</h1>
+        <Heading id="seleccion-oficial-title">{title}</Heading>
       </header>
 
       <div className={styles.controls}>
@@ -69,7 +71,7 @@ export default function SeleccionOficial2026({ title = "Selección oficial", cat
             const image = film.image;
             return (
               <article key={film.slug} className={styles.card} style={{ "--film-accent": category?.color || "#FA6935", "--film-label-color": ["marejada-internacional", "homenaje"].includes(film.categoryId) ? "#F6EDDB" : "#0A1E23" } as CSSProperties}>
-                <Link href={`${PREVIEW_FILM_BASE}/${film.slug}`} className={styles.cardLink}>
+                <Link href={`${filmBase}/${film.slug}`} className={styles.cardLink}>
                   <div className={`${styles.media} ${image ? styles.mediaWithImage : ""}`}>
                     {image ? (
                       <Image src={image} alt={`Still de ${film.title}`} fill sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, 33vw" unoptimized={image.startsWith("http")} className={styles.image} />

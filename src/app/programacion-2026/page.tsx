@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import Programacion2026Animations from "@/components/Programacion2026Animations";
+import Programacion2026Tabs from "@/components/Programacion2026Tabs";
 import { eventos2026 } from "@/lib/programacion-2026-data";
 
 export const metadata: Metadata = {
@@ -20,8 +21,7 @@ export const metadata: Metadata = {
     url: "/programacion-2026",
     images: [{ url: "/images/programacion-2026/homenaje-dolores-heredia.jpg", width: 1600, height: 900 }],
   },
-  // La página está fuera del menú hasta el anuncio oficial. Borrar al lanzar.
-  robots: { index: false, follow: false },
+
 };
 
 export default function Programacion2026() {
@@ -31,6 +31,8 @@ export default function Programacion2026() {
 
       <div className="p26-page">
         <PageHero lines={["Programación", "2026"]} bgImage="/images/programacion-hero.jpg" overlay />
+
+        <Programacion2026Tabs active="programacion" preview={false} />
 
         <section className="p26-index">
           {/* Bloque divisor: filete + título, como el `divider-block` de la referencia. */}

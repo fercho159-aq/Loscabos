@@ -16,6 +16,7 @@ export type Pelicula2026 = {
 
 export const PREVIEW_FILM_BASE = "/programacion-2026-preview/peliculas";
 export const PREVIEW_SELECTION_URL = "/programacion-2026-preview/seleccion-oficial";
+export const PUBLIC_FILM_BASE = "/programacion-2026/peliculas";
 
 export const programasPeliculas2026 = [
   { id: "seleccion", title: "Selección oficial", href: PREVIEW_SELECTION_URL, categoryIds: ["marejada-nacional", "marejada-internacional"] },
@@ -23,6 +24,11 @@ export const programasPeliculas2026 = [
   { id: "animacion", title: "Animación", href: "/programacion-2026-preview/animacion", categoryIds: ["animacion"] },
   { id: "next-wave", title: "The Next Wave — Emerging Filmmakers Panel", href: "/programacion-2026-preview/panel-the-next-wave", categoryIds: ["next-wave"] },
 ];
+
+// Únicamente estas dos secciones se liberan el 14 de octubre de 2026.
+export const programasPublicos2026 = programasPeliculas2026
+  .filter((programa) => programa.id === "animacion" || programa.id === "next-wave")
+  .map((programa) => ({ ...programa, href: programa.href.replace("/programacion-2026-preview", "/programacion-2026") }));
 
 // Selección Oficial 2026: contenido y materiales proporcionados en el documento.
 // https://docs.google.com/document/d/1e56bhRB7ubZZOMVvUfl_ZXcR5tYcK8T77ctQyn6hbRc/edit?tab=t.u81o9exgnzci
@@ -282,7 +288,8 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "Francia, Bélgica",
     "year": "2026",
     "duration": "90’",
-    "synopsis": "Obligado a dejar las tareas de la granja tras ponerse un corsé médico, un niño de 11 años transforma su vida al descubrir el deporte, la música y nuevas amistades."
+    "synopsis": "Obligado a dejar las tareas de la granja tras ponerse un corsé médico, un niño de 11 años transforma su vida al descubrir el deporte, la música y nuevas amistades.",
+    "image": "/images/seleccion-oficial-2026/iron-boy-still.jpg"
   },
   {
     "slug": "isme",
@@ -695,6 +702,10 @@ export const categoriasSeleccion2026 = categorias2026.filter((category) =>
 
 export const peliculasSeleccion2026 = peliculas2026.filter((film) =>
   categoriasSeleccion2026.some((category) => category.id === film.categoryId),
+);
+
+export const peliculasPublicas2026 = peliculas2026.filter((film) =>
+  programasPublicos2026.some((programa) => programa.categoryIds.includes(film.categoryId)),
 );
 
 export function getProgramaPelicula2026(film: Pelicula2026) {

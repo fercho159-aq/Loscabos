@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { peliculasPublicas2026, programasPublicos2026, PUBLIC_FILM_BASE } from "@/lib/seleccion-oficial-2026-data";
 
 const BASE_URL = "https://ficc.vercel.app";
 
@@ -60,6 +61,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    ...["/programacion-2026", ...programasPublicos2026.map((programa) => programa.href), ...peliculasPublicas2026.map((film) => `${PUBLIC_FILM_BASE}/${film.slug}`)].map((path) => ({
+      url: `${BASE_URL}${path}`,
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    })),
     {
       url: `${BASE_URL}/prensa`,
       lastModified,

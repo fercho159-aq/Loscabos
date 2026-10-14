@@ -7,7 +7,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Programacion2026Animations from "@/components/Programacion2026Animations";
 import { eventos2026 } from "@/lib/programacion-2026-data";
-import { initials } from "@/lib/initials";
+import Programacion2026Tabs from "@/components/Programacion2026Tabs";
+import SeleccionOficial2026 from "@/components/SeleccionOficial2026";
+import { categorias2026, peliculasPublicas2026, PUBLIC_FILM_BASE } from "@/lib/seleccion-oficial-2026-data";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -30,8 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `/programacion-2026/${slug}`,
       images: [{ url: ev.image, width: 1600, height: 900 }],
     },
-    // La sección está fuera del menú hasta el anuncio oficial. Borrar al lanzar.
-    robots: { index: false, follow: false },
+    ...(slug === "panel-the-next-wave" ? {} : { robots: { index: false, follow: false } }),
   };
 }
 
@@ -49,6 +50,7 @@ export default async function EventoDetalle({ params }: Props) {
       <Navbar />
 
       <div className="p26-detail-page" style={{ "--cat": ev.accent } as CSSProperties}>
+        {slug === "panel-the-next-wave" && <Programacion2026Tabs active="next-wave" preview={false} />}
         {/* Encabezado: eyebrow monoespaciado + titular grande sobre plano claro. */}
         <header className="p26-header">
           <p className="p26-eyebrow p26-header-eyebrow">
@@ -111,6 +113,16 @@ export default async function EventoDetalle({ params }: Props) {
           </div>
         </div>
 
+        {slug === "panel-the-next-wave" && (
+          <SeleccionOficial2026
+            title="Películas"
+            headingLevel="h2"
+            categories={categorias2026.filter((category) => category.id === "next-wave")}
+            catalog={peliculasPublicas2026.filter((film) => film.categoryId === "next-wave")}
+            filmBase={PUBLIC_FILM_BASE}
+          />
+        )}
+
         {ev.groups?.map((group) => (
           <section key={group.title} className="p26-people">
             <header data-anim="p26-head" className="p26-divider">
@@ -118,22 +130,16 @@ export default async function EventoDetalle({ params }: Props) {
               <h2 className="p26-section-title">{group.title}</h2>
             </header>
             <div className={`p26-people-grid p26-people-grid--${group.layout}`}>
-              {group.people.map((person) => (
+              {group.people.filter((person): person is typeof person & { image: string } => Boolean(person.image)).map((person) => (
                 <article key={person.name} data-anim="p26-person" className="p26-person">
                   <div className="p26-person-photo">
-                    {person.image ? (
-                      <Image
-                        src={person.image}
-                        alt={person.name}
-                        fill
-                        sizes="(max-width: 760px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                        className="p26-person-img"
-                      />
-                    ) : (
-                      <span className="p26-person-initials" aria-hidden="true">
-                        {initials(person.name)}
-                      </span>
-                    )}
+                    <Image
+                      src={person.image}
+                      alt={person.name}
+                      fill
+                      sizes="(max-width: 760px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      className="p26-person-img"
+                    />
                   </div>
                   <h3 className="p26-person-name">{person.name}</h3>
                   {person.meta && <p className="p26-person-meta">{person.meta}</p>}
