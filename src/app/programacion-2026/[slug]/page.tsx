@@ -9,7 +9,9 @@ import Programacion2026Animations from "@/components/Programacion2026Animations"
 import { eventos2026 } from "@/lib/programacion-2026-data";
 import Programacion2026Tabs from "@/components/Programacion2026Tabs";
 import SeleccionOficial2026 from "@/components/SeleccionOficial2026";
-import { categorias2026, peliculasPublicas2026, PUBLIC_FILM_BASE } from "@/lib/seleccion-oficial-2026-data";
+import { categorias2026, peliculasPublicas2026, programasPublicos2026, PUBLIC_FILM_BASE } from "@/lib/seleccion-oficial-2026-data";
+
+const nextWavePublished = programasPublicos2026.some((programa) => programa.id === "next-wave");
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -32,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `/programacion-2026/${slug}`,
       images: [{ url: ev.image, width: 1600, height: 900 }],
     },
-    ...(slug === "panel-the-next-wave" ? {} : { robots: { index: false, follow: false } }),
+    ...(slug === "panel-the-next-wave" && nextWavePublished ? {} : { robots: { index: false, follow: false } }),
   };
 }
 
@@ -113,7 +115,7 @@ export default async function EventoDetalle({ params }: Props) {
           </div>
         </div>
 
-        {slug === "panel-the-next-wave" && (
+        {slug === "panel-the-next-wave" && nextWavePublished && (
           <SeleccionOficial2026
             title="Películas"
             headingLevel="h2"

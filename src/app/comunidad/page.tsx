@@ -203,7 +203,6 @@ const groups: Group[] = [
       { name: "Mar Prieto", role: "Directora y guionista", image: "/images/comunidad/mar-prieto.jpg" },
       { name: "Ximena Lamadrid", role: "Actriz, autora y productora", image: "/images/comunidad/ximena-lamadrid.jpg" },
       { name: "David Zonana", role: "Director, escritor y productor", image: "/images/comunidad/david-zonana.jpg" },
-      { name: "Ana Maria Sayre", role: "Productora de Tiny Desk de NPR", image: "/images/comunidad/anamaria-sayre.jpg" },
       { name: "Johanna Murillo", tbc: true },
       { name: "Mario Escobar", tbc: true },
     ],

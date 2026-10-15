@@ -17,6 +17,8 @@ const publicTabs = [
 ];
 
 export default function Programacion2026Tabs({ active, preview = true }: { active: ProgramaTab; preview?: boolean }) {
+  if (!preview && programasPublicos2026.length === 0) return null;
+
   return (
     <nav className={styles.tabs} aria-label="Programación 2026">
       {(preview ? tabs : publicTabs).map((tab) => (

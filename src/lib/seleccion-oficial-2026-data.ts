@@ -25,10 +25,8 @@ export const programasPeliculas2026 = [
   { id: "next-wave", title: "The Next Wave — Emerging Filmmakers Panel", href: "/programacion-2026-preview/panel-the-next-wave", categoryIds: ["next-wave"] },
 ];
 
-// Únicamente estas dos secciones se liberan el 14 de octubre de 2026.
-export const programasPublicos2026 = programasPeliculas2026
-  .filter((programa) => programa.id === "animacion" || programa.id === "next-wave")
-  .map((programa) => ({ ...programa, href: programa.href.replace("/programacion-2026-preview", "/programacion-2026") }));
+// La publicación del 14 de octubre se canceló; los catálogos siguen en el preview.
+export const programasPublicos2026: typeof programasPeliculas2026 = [];
 
 // Selección Oficial 2026: contenido y materiales proporcionados en el documento.
 // https://docs.google.com/document/d/1e56bhRB7ubZZOMVvUfl_ZXcR5tYcK8T77ctQyn6hbRc/edit?tab=t.u81o9exgnzci

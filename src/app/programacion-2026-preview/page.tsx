@@ -38,11 +38,9 @@ export default function Programacion2026() {
         <ProgramacionAgenda />
 
         <section className="p26-index scroll-mt-28" id="eventos-especiales">
-          {/* Bloque divisor: filete + título, como el `divider-block` de la referencia. */}
-          <header data-anim="p26-head" className="p26-divider">
+          <div data-anim="p26-head" className="p26-divider">
             <hr />
-            <h2 className="p26-section-title">Sneak Peek</h2>
-          </header>
+          </div>
 
           <div className="p26-grid">
             {eventos2026.map((ev, i) => (
