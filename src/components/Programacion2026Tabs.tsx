@@ -16,11 +16,11 @@ const publicTabs = [
   ...programasPublicos2026,
 ];
 
-export default function Programacion2026Tabs({ active, preview = true }: { active: ProgramaTab; preview?: boolean }) {
+export default function Programacion2026Tabs({ active, preview = true, gray = false }: { active: ProgramaTab; preview?: boolean; gray?: boolean }) {
   if (!preview && programasPublicos2026.length === 0) return null;
 
   return (
-    <nav className={styles.tabs} aria-label="Programación 2026">
+    <nav className={`${styles.tabs} ${gray ? styles.gray : ""}`} aria-label="Programación 2026">
       {(preview ? tabs : publicTabs).map((tab) => (
         <Link key={tab.id} href={tab.href} aria-current={active === tab.id ? "page" : undefined}>{tab.title}</Link>
       ))}

@@ -193,7 +193,7 @@ function SectionCard({ card }: { card: AgendaSectionCard }) {
   );
 }
 
-export default function ProgramacionAgenda() {
+export default function ProgramacionAgenda({ nav }: { nav?: ReactNode }) {
   // Todos los días cerrados al cargar, como el mockup del cliente.
   const [openDayId, setOpenDayId] = useState<string | null>(null);
   // Al abrir un día se cierra el anterior; si ese era largo, el encabezado
@@ -219,13 +219,15 @@ export default function ProgramacionAgenda() {
 
   return (
     <div className={styles.agenda}>
-      {/* Las tarjetas de sección van primero, a sangre completa, justo
-          después de la barra de pestañas. */}
+      {/* Las tarjetas de sección van primero, a sangre completa; la barra
+          de pestañas queda entre ellas y los días, sobre el gris. */}
       <div className={styles.cards} aria-label="Programas del festival" role="group">
         {agendaSectionCards2026.map((card) => (
           <SectionCard card={card} key={card.id} />
         ))}
       </div>
+
+      {nav}
 
       <section className={styles.days} id="agenda-por-dia" aria-label="Programación por día">
         {agenda2026.map((day) => (

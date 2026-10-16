@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-import type { CSSProperties } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import Programacion2026Animations from "@/components/Programacion2026Animations";
 import ProgramacionAgenda from "@/components/ProgramacionAgenda";
 import Programacion2026Tabs from "@/components/Programacion2026Tabs";
-import { eventos2026 } from "@/lib/programacion-2026-preview-data";
 
 export const metadata: Metadata = {
   title: "Programación 2026 | FICC Los Cabos",
@@ -34,43 +30,8 @@ export default function Programacion2026() {
       <div className="p26-page">
         <PageHero lines={["Programación", "2026"]} bgImage="/images/programacion-hero.jpg" overlay />
 
-        <ProgramacionAgenda />
-        <Programacion2026Tabs active="programacion" />
-
-        <section className="p26-index scroll-mt-28" id="eventos-especiales">
-          <div data-anim="p26-head" className="p26-divider">
-            <hr />
-          </div>
-
-          <div className="p26-grid">
-            {eventos2026.map((ev, i) => (
-              <Link
-                key={ev.slug}
-                href={`/programacion-2026-preview/${ev.slug}`}
-                data-anim="p26-card"
-                className="p26-card"
-                style={{ "--cat": ev.accent } as CSSProperties}
-              >
-                <div className="p26-card-media">
-                  <Image
-                    src={ev.image}
-                    alt={ev.imageAlt}
-                    fill
-                    sizes="(max-width: 700px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    priority={i < 3}
-                    className="p26-card-img"
-                  />
-                </div>
-                <h3 className="p26-card-title">
-                  <span className="p26-underline">{ev.cardTitle ?? ev.title}</span>
-                </h3>
-                {(ev.date || ev.venue) && (
-                  <p className="p26-card-meta">{[ev.date, ev.venue].filter(Boolean).join(" · ")}</p>
-                )}
-              </Link>
-            ))}
-          </div>
-        </section>
+        {/* Los eventos especiales se abren desde su liga en la agenda. */}
+        <ProgramacionAgenda nav={<Programacion2026Tabs active="programacion" gray />} />
       </div>
 
       <Footer />

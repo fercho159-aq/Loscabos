@@ -1,4 +1,6 @@
 .tabs { display: flex; flex-wrap: wrap; align-items: stretch; column-gap: clamp(1rem, 2vw, 2rem); padding: 0 clamp(1.25rem, 5vw, 5rem); background: #F6EDDB; color: #081722; border-bottom: 1px solid #08172230; }
+/* Sobre la zona gris de los días de la agenda. */
+.gray { background: #d9d4cd; }
 .tabs a { display: flex; align-items: center; max-width: 100%; min-height: 44px; padding: 1rem 0 .85rem; border-bottom: 4px solid transparent; font-size: clamp(.85rem, 1.2vw, 1.05rem); line-height: 1.35; font-weight: 700; }
 .tabs a[aria-current="page"] { border-bottom-color: #FA6935; }
 .tabs a:hover { color: #b43c13; }
