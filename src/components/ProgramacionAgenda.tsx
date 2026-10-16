@@ -194,7 +194,8 @@ function SectionCard({ card }: { card: AgendaSectionCard }) {
 }
 
 export default function ProgramacionAgenda() {
-  const [openDayId, setOpenDayId] = useState<string | null>(agenda2026[0]?.id ?? null);
+  // Todos los días cerrados al cargar, como el mockup del cliente.
+  const [openDayId, setOpenDayId] = useState<string | null>(null);
   // Al abrir un día se cierra el anterior; si ese era largo, el encabezado
   // recién abierto puede quedar arriba, fuera de pantalla. Lo regresamos.
   const toggleRefs = useRef(new Map<string, HTMLElement>());
@@ -207,86 +208,88 @@ export default function ProgramacionAgenda() {
     const toggle = toggleRefs.current.get(id);
     if (!toggle) return;
     const top = toggle.getBoundingClientRect().top;
-    if (top >= 0) return;
-    // Salto inmediato (el scroll suave global se cancela con el cambio de
-    // altura); scroll-margin-top deja libre el navbar fijo.
+    // scroll-margin-top deja libre el navbar fijo: si la fila queda por
+    // encima de ese margen (aunque top >= 0), el navbar la tapa.
     const margin = parseFloat(getComputedStyle(toggle).scrollMarginTop) || 0;
+    if (top >= margin) return;
+    // Salto inmediato (el scroll suave global se cancela con el cambio de
+    // altura).
     window.scrollTo({ top: window.scrollY + top - margin, behavior: "instant" });
   }, [openDayId]);
 
   return (
-    <section
-      className={styles.agenda}
-      id="agenda-por-dia"
-      aria-label="Programación por día"
-    >
-      {agenda2026.map((day) => (
-        <details className={styles.day} key={day.id} open={openDayId === day.id}>
-          <summary
-            className={styles.dayToggle}
-            ref={(node) => {
-              if (node) toggleRefs.current.set(day.id, node);
-              else toggleRefs.current.delete(day.id);
-            }}
-            onClick={(event) => {
-              event.preventDefault();
-              pendingScrollId.current = day.id;
-              setOpenDayId((current) => (current === day.id ? null : day.id));
-            }}
-          >
-            <h2 className={styles.dayHeading}>
-              <span className={styles.dayLabel}>{day.label}</span>
-              <svg
-                className={styles.chevron}
-                width="22"
-                height="14"
-                viewBox="0 0 22 14"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="m3 3 8 7 8-7"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </h2>
-          </summary>
-          <div className={styles.dayContent}>
-            {day.blocks.map((block, index) => (
-              <div
-                className={styles.block}
-                key={`${day.id}-${index}`}
-                style={
-                  {
-                    "--block-bg": block.bg,
-                    "--block-text": block.text,
-                    "--block-rule": block.rule,
-                    // Columna de 1694 px del artboard; algunas bandas del PDF
-                    // la corren unos píxeles a la izquierda.
-                    "--block-pad-left": `${(block.x ?? 113) / 19.2}cqw`,
-                    "--block-pad-right": `${(1920 - 1694 - (block.x ?? 113)) / 19.2}cqw`,
-                  } as CSSProperties
-                }
-              >
-                <div className={styles.blockInner}>
-                  {block.events.map((event) => (
-                    <AgendaItem event={event} key={event.id} />
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </details>
-      ))}
-
+    <div className={styles.agenda}>
+      {/* Las tarjetas de sección van primero, a sangre completa, justo
+          después de la barra de pestañas. */}
       <div className={styles.cards} aria-label="Programas del festival" role="group">
         {agendaSectionCards2026.map((card) => (
           <SectionCard card={card} key={card.id} />
         ))}
       </div>
-    </section>
+
+      <section className={styles.days} id="agenda-por-dia" aria-label="Programación por día">
+        {agenda2026.map((day) => (
+          <details className={styles.day} key={day.id} open={openDayId === day.id}>
+            <summary
+              className={styles.dayToggle}
+              ref={(node) => {
+                if (node) toggleRefs.current.set(day.id, node);
+                else toggleRefs.current.delete(day.id);
+              }}
+              onClick={(event) => {
+                event.preventDefault();
+                pendingScrollId.current = day.id;
+                setOpenDayId((current) => (current === day.id ? null : day.id));
+              }}
+            >
+              <h2 className={styles.dayHeading}>
+                <span className={styles.dayLabel}>{day.label}</span>
+                <svg
+                  className={styles.chevron}
+                  width="22"
+                  height="14"
+                  viewBox="0 0 22 14"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="m3 3 8 7 8-7"
+                    stroke="currentColor"
+                    strokeWidth="3.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </h2>
+            </summary>
+            <div className={styles.dayContent}>
+              {day.blocks.map((block, index) => (
+                <div
+                  className={styles.block}
+                  key={`${day.id}-${index}`}
+                  style={
+                    {
+                      "--block-bg": block.bg,
+                      "--block-text": block.text,
+                      "--block-rule": block.rule,
+                      // Columna de 1694 px del artboard; algunas bandas del PDF
+                      // la corren unos píxeles a la izquierda.
+                      "--block-pad-left": `${(block.x ?? 113) / 19.2}cqw`,
+                      "--block-pad-right": `${(1920 - 1694 - (block.x ?? 113)) / 19.2}cqw`,
+                    } as CSSProperties
+                  }
+                >
+                  <div className={styles.blockInner}>
+                    {block.events.map((event) => (
+                      <AgendaItem event={event} key={event.id} />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </details>
+        ))}
+      </section>
+    </div>
   );
 }

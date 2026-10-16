@@ -53,7 +53,7 @@ export const eventos2026: Evento[] = [
   {
     slug: "desayuno-girls-at-films",
     title: "Desayuno Girls At Films #BeyondTheScreen",
-    date: "Jueves 10 de diciembre",
+    date: "Sábado 12 de diciembre",
     venue: "SAGE",
     image: "/images/programacion-2026/desayuno-girls-at-films.jpg",
     imageAlt: "SAGE, sede del Desayuno Girls At Films",
@@ -81,10 +81,10 @@ export const eventos2026: Evento[] = [
     slug: "panel-the-next-wave",
     title: "The Next Wave — Emerging Filmmakers Panel",
     date: "Sábado 12 de diciembre",
-    venue: "Cinépolis San José del Cabo",
+    venue: "Hotel El Ganzo — Rooftop",
     credit: "Moderado por Carlos López Estrada",
     image: "/images/programacion-2026/panel-the-next-wave.jpg",
-    imageAlt: "Panel The Next Wave en Cinépolis San José del Cabo",
+    imageAlt: "Panel The Next Wave — Emerging Filmmakers",
     accent: "#6687C3",
     body: [
       "El Festival presenta The Next Wave — Emerging Filmmakers Panel: un panel de cineastas emergentes de América Latina cuyo trabajo define el lenguaje audiovisual de la próxima generación.",
