@@ -8,9 +8,7 @@
 //   C) Jueves 10: sin ubicaciones en el bloque terracota (15:00–17:00).
 //   D) Viernes 11 y Sábado 12: sin ubicaciones en el bloque terracota.
 //
-// El texto es copia literal del PDF, incluidas sus erratas ("Inagural",
-// "internacionaln", "Sicialini", "(Letoni", "Proyeción", "Pryección",
-// "Palaza"). No corregir sin indicación del cliente.
+// El texto sigue al PDF con la ortografía corregida (16-oct-2026).
 
 /**
  * Fragmento de texto; `italic` reproduce las itálicas del PDF. Un segmento
@@ -122,7 +120,7 @@ export const agenda2026: AgendaDay[] = [
             id: "2026-12-09-02",
             locationRemoved: true,
             time: "20:15–22:00 hrs",
-            title: [line(t("Proyección Inagural — "), i("Por anunciarse"))],
+            title: [line(t("Proyección Inaugural — "), i("Por anunciarse"))],
           },
           {
             id: "2026-12-09-03",
@@ -211,7 +209,7 @@ export const agenda2026: AgendaDay[] = [
             id: "2026-12-10-04",
             time: "12:30 – 13:45 hrs",
             title: [line(t("Proyección — "), i("Jaripeo"))],
-            subtitle: "Dir. Rebecca Zweig, Efraín Mojica · México · 71´",
+            subtitle: "Dir. Rebecca Zweig, Efraín Mojica · México · 71′",
             location: SALA_8,
           },
           {
@@ -280,7 +278,7 @@ export const agenda2026: AgendaDay[] = [
             time: "9:00–11:00 hrs",
             title: plain("Work in Progress — Insectario"),
             description:
-              "Día 2 — Work-in-Progress y caso de estudio de la cinta Insectario. Con la directora Sofía Carrillo y el coproductor\nMatīss Kaža (Letonia) Participan: Sofía Carrillo, Invitada especial (México) y Matīss Kaža (Letoni",
+              "Día 2 — Work-in-Progress y caso de estudio de la cinta Insectario. Con la directora Sofía Carrillo y el coproductor\nMatīss Kaža (Letonia). Participan: Sofía Carrillo, invitada especial (México), y Matīss Kaža (Letonia)",
             location: "Cinépolis San José del Cabo",
           },
         ],
@@ -298,7 +296,7 @@ export const agenda2026: AgendaDay[] = [
             title: [
               line(
                 // Doble espacio antes de la raya, como en el PDF.
-                t("Brunch + Panel  "),
+                t("Brunch + Panel "),
                 i("— La música como memoria, identidad y testimonio de "),
                 softBreak,
                 i("nuestro tiempo"),
@@ -330,7 +328,7 @@ export const agenda2026: AgendaDay[] = [
             time: "9:00–11:00 hrs",
             title: plain("Desayuno de Mujeres en la Industria"),
             description:
-              "Mujeres del ecosistema fílmico mexicano e internacionaln, en colaboración con Girls at Films, Elle México, Hollywood\nReporter y Quién. Con la presencia de Griselda Sicialini y Dolores Heredia",
+              "Mujeres del ecosistema fílmico mexicano e internacional, en colaboración con Girls at Films, Elle México, The Hollywood\nReporter y Quién. Con la presencia de Griselda Siciliani y Dolores Heredia",
             location: "Sage",
             href: "/programacion-2026-preview/desayuno-girls-at-films",
           },
@@ -385,8 +383,8 @@ export const agenda2026: AgendaDay[] = [
             id: "2026-12-13-01",
             time: "18:30–20:00 hrs",
             title: plain("Proyección al aire libre — Por anunciarse"),
-            description: "Pryección en alianza con Cine Club Documental Los Cabos",
-            location: "Palaza Mijares, San José del Cabo",
+            description: "Proyección en alianza con Cine Club Documental Los Cabos",
+            location: "Plaza Mijares, San José del Cabo",
           },
         ],
       },
@@ -416,7 +414,7 @@ export const agendaSectionCards2026: AgendaSectionCard[] = [
     location: "Cinépolis San José del Cabo",
     description: [
       line(
-        t("Keynotes en colaboración con WIRED · Proyeción de "),
+        t("Keynotes en colaboración con WIRED · Proyección de "),
         softBreak,
         t("cine · Conversatorios · Homenaje · Reconocimientos"),
       ),
