@@ -1,8 +1,28 @@
+/*
+ * Réplica del programa final (FICCLosCabos_Programa.pdf, artboards de
+ * 1920 px). Las medidas se expresan en cqw del contenedor para conservar las
+ * proporciones del PDF: 1cqw = 19.2 px del artboard.
+ */
+
+/* Inter Italic real (la del PDF); sin ella el navegador inclina la regular. */
+@font-face {
+  font-family: "FICC Agenda Inter Italic";
+  src: url("/fonts/Inter-Italic-VariableFont_opsz_wght.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 .agenda {
+  container-type: inline-size;
   width: 100%;
-  background: #d9d4cd;
+  background: #ffffff;
   color: #0a1e23;
   font-family: var(--font-inter), sans-serif;
+  /* El PDF usa Inter estática (óptica "text"); sin esto la Inter variable
+     del sitio cambia a su corte Display en tamaños grandes. */
+  font-optical-sizing: none;
+  font-variation-settings: "opsz" 14;
   scroll-margin-top: 6rem;
 }
 
@@ -10,12 +30,16 @@
   margin: 0;
 }
 
+/* Encabezado del día: franja blanca, texto navy black. */
 .dayToggle {
   display: block;
-  padding: 1.25rem 2rem;
-  background: var(--agenda-day-color, var(--color-cream));
+  /* Asimétrico como el PDF: franja de 187 px con el texto a 81 px del borde. */
+  padding: clamp(1rem, 3.7cqw, 4.45rem) max(16px, 3.96cqw) clamp(1rem, 1.95cqw, 2.35rem);
+  background: #ffffff;
+  color: #0a1e23;
   list-style: none;
   cursor: pointer;
+  scroll-margin-top: 6rem;
 }
 
 .dayToggle::-webkit-details-marker {
@@ -27,235 +51,279 @@
 }
 
 .dayToggle:focus-visible {
-  outline: 3px solid var(--color-navy);
+  outline: 3px solid #0a1e23;
   outline-offset: -5px;
 }
 
 .dayHeading {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1.25rem;
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .dayLabel {
-  margin: 0;
-  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  font-size: clamp(1.6rem, 3.7cqw, 4.45rem);
   font-weight: 900;
-  line-height: 1.15;
-  letter-spacing: -0.035em;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 .chevron {
   flex-shrink: 0;
+  width: clamp(18px, 1.6cqw, 30px);
+  height: auto;
   transform: rotate(-90deg);
+  transition: transform 0.2s ease;
 }
 
 .day[open] .chevron {
   transform: rotate(0deg);
 }
 
-.dayContent {
-  display: grid;
-  gap: 2.25rem;
-  max-width: 1504px;
-  margin: 0 auto;
-  padding: 2rem 2rem 3rem;
+/* Bandas de color a todo el ancho, sin separación entre ellas. */
+.block {
+  background: var(--block-bg);
+  color: var(--block-text);
 }
 
-.row {
+.blockInner {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 1.5rem;
-  align-items: start;
+  gap: clamp(1.5rem, 2.2cqw, 2.65rem);
+  padding: clamp(1.25rem, 1.6cqw, 1.9rem) max(16px, var(--block-pad-right, 5.9cqw))
+    clamp(1.5rem, 2.4cqw, 2.9rem) max(16px, var(--block-pad-left, 5.9cqw));
 }
 
-.card {
+.event {
   min-width: 0;
   scroll-margin-top: 7rem;
   overflow-wrap: break-word;
 }
 
-.timeRow {
-  display: flex;
-  align-items: center;
-  min-width: 0;
-  margin-bottom: 0.45rem;
-}
-
-.timeRow::after {
-  content: "";
-  flex: 1;
-  min-width: 0;
-  height: 2px;
-  background: var(--agenda-accent);
-}
-
 .time {
-  display: inline-block;
-  flex: 0 1 auto;
-  min-width: 0;
-  max-width: 100%;
-  padding: 0.2rem 0.6rem;
-  background: var(--agenda-accent);
-  color: var(--agenda-time-text, #0a1e23);
-  font-size: 0.75rem;
-  font-weight: 700;
-  line-height: 1.3;
-}
-
-.navy {
-  --agenda-accent: #0a1e23;
-  --agenda-time-text: var(--color-cream);
-}
-
-.blue {
-  --agenda-accent: #a3cdd8;
-}
-
-.orange {
-  --agenda-accent: #d97a5b;
-}
-
-.peach {
-  --agenda-accent: #e3a97c;
-}
-
-.sage {
-  --agenda-accent: #8fa79d;
+  margin: 0;
+  padding-bottom: clamp(2px, 0.25cqw, 5px);
+  /* 3 pt en el PDF = 3 px en el artboard de 1920. */
+  border-bottom: clamp(2px, 0.16cqw, 3px) solid var(--block-rule);
+  font-size: clamp(1.25rem, 2.6cqw, 3.125rem);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
 }
 
 .eventTitle {
-  margin: 0 0 0.6rem;
-  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  margin: clamp(0.35rem, 0.55cqw, 0.65rem) 0 0;
+  font-size: clamp(1.125rem, 2.5cqw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+  white-space: pre-wrap;
+}
+
+.eventTitle em,
+.location,
+.cardLocation {
+  font-family: "FICC Agenda Inter Italic", var(--font-inter), sans-serif;
+}
+
+.eventTitle em {
+  font-style: italic;
 }
 
 .eventLink {
   color: inherit;
   text-decoration-line: underline;
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: 2px;
   text-decoration-color: transparent;
-  text-underline-offset: 3px;
+  text-underline-offset: 0.12em;
+  transition: text-decoration-color 0.2s ease;
 }
 
 .eventLink:hover {
   text-decoration-color: currentColor;
 }
 
-.eventLink:focus-visible,
-.ticketLink:focus-visible {
+.eventLink:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 4px;
 }
 
+.subtitle,
 .description,
-.venue,
-.metadata {
+.location {
   margin: 0;
-  font-size: 0.8rem;
-  line-height: 1.35;
+  line-height: 1.2;
+}
+
+.subtitle {
+  margin-top: clamp(0.15rem, 0.3cqw, 0.4rem);
+  font-size: clamp(0.875rem, 1.4cqw, 1.7rem);
+  font-weight: 700;
+}
+
+.description,
+.location {
+  font-size: clamp(0.875rem, 1.56cqw, 1.875rem);
+  font-weight: 400;
 }
 
 .description {
-  margin-bottom: 0.5rem;
+  margin-top: clamp(0.25rem, 0.45cqw, 0.55rem);
 }
 
-.venue {
-  font-weight: 700;
+/* En el PDF un título de dos o más renglones deja ~9 px más antes del texto. */
+.eventTitleMultiline + .description,
+.eventTitleMultiline + .location {
+  margin-top: calc(clamp(0.25rem, 0.45cqw, 0.55rem) + 0.45cqw);
 }
 
-.metadata {
+/* …y el evento siguiente no se recorre: la hora sigue donde la pone el PDF. */
+.eventMultiline {
+  margin-bottom: -0.45cqw;
+}
+
+.location {
+  font-style: italic;
+}
+
+/* Hueco de una ubicación quitada por el cliente (solo escritorio). */
+.locationGap {
+  user-select: none;
+}
+
+.subtitle + .location {
+  margin-top: 0.1em;
+}
+
+.eventTitle + .location {
+  margin-top: clamp(0.25rem, 0.45cqw, 0.55rem);
+}
+
+/* Tarjetas de sección (páginas 5–10 del PDF, artboard 960 × 438). */
+.cards {
   display: grid;
-  gap: 0.1rem;
-  margin-top: 0.25rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 1.6cqw, 2rem);
+  padding: clamp(2rem, 4cqw, 5rem) max(16px, 3.96cqw);
+  background: #ffffff;
 }
 
-.ticketLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  margin-top: 0.65rem;
-  padding: 0.2rem 0.7rem;
-  border-radius: 999px;
-  background: #0a1e23;
-  color: var(--color-cream);
-  font-size: 0.7rem;
-  font-weight: 700;
-  line-height: 1.35;
-  text-decoration: none;
-}
-
-.ticketLink:hover {
-  background: var(--color-teal);
-}
-
-.srOnly {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
+.card {
+  container-type: inline-size;
+  position: relative;
+  min-width: 0;
+  aspect-ratio: 960 / 438;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+  background: var(--card-bg);
+  color: var(--card-text);
+  scroll-margin-top: 7rem;
 }
 
-@media (max-width: 1100px) {
-  .row {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+.cardDecoration {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.cardDecorationOver {
+  z-index: 2;
+}
+
+.cardBody {
+  position: relative;
+  z-index: 1;
+  padding: 6.9cqw 4.5cqw 5cqw 5.6cqw;
+}
+
+.cardTitle {
+  margin: 0 -1.5cqw 0.9cqw 0.5cqw;
+  font-size: 5.5cqw;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.cardTitleSingle {
+  margin-bottom: 3.4cqw;
+}
+
+.cardLine {
+  margin: 0;
+  font-size: 3.25cqw;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.cardLocation {
+  font-style: italic;
+}
+
+.cardAccess {
+  font-weight: 700;
+}
+
+/* En escritorio cada renglón corta exactamente donde el PDF (los saltos van
+   en los datos); en móvil el texto vuelve a fluir. */
+@media (min-width: 769px) {
+  .cardLine {
+    white-space: nowrap;
+  }
+}
+
+/* Las descripciones siguen los saltos del PDF solo cuando su tamaño es el
+   proporcional del artboard (≥960 px; abajo entra el mínimo de 14 px). */
+@media (min-width: 960px) {
+  .descriptionLines {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 959px) {
+  .eventBreak {
+    display: none !important;
   }
 }
 
 @media (max-width: 768px) {
-  .dayToggle {
-    padding: 1rem 1.25rem;
+  .cardBreak,
+  .locationGap {
+    display: none !important;
   }
 
   .dayHeading {
     gap: 0.75rem;
   }
 
-  .dayLabel {
-    font-size: clamp(1.2rem, 5.2vw, 1.65rem);
+  .blockInner {
+    padding-inline: max(20px, 5.9cqw);
   }
 
-  .chevron {
-    width: 18px;
-  }
-
-  .dayContent {
-    gap: 1.5rem;
-    padding: 1.5rem 1.25rem 2rem;
-  }
-
-  .row {
+  .cards {
     grid-template-columns: minmax(0, 1fr);
-    gap: 1.5rem;
   }
 
+  /* Con overflow: hidden el aspect-ratio fija la altura; en móvil el texto
+     crece por encima de la escala del PDF, así que la tarjeta crece con él. */
   .card {
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgb(10 30 35 / 16%);
+    aspect-ratio: auto;
+    min-height: calc(100cqw * 438 / 960);
   }
 
-  .row:last-child .card:last-child {
-    padding-bottom: 0;
-    border-bottom: 0;
+  .cardBody {
+    padding: max(1.5rem, 6.9cqw) max(1.25rem, 5.6cqw) max(1.5rem, 5cqw);
   }
 
-  .eventTitle {
-    font-size: 1.1rem;
+  .cardTitle {
+    margin-inline: 0;
+    font-size: max(1.5rem, 5.6cqw);
   }
 
-  .description,
-  .venue,
-  .metadata {
-    font-size: 0.875rem;
+  .cardLine {
+    font-size: max(0.95rem, 3.25cqw);
   }
 }
