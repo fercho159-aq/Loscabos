@@ -34,8 +34,8 @@ export default function Programacion2026() {
       <div className="p26-page">
         <PageHero lines={["Programación", "2026"]} bgImage="/images/programacion-hero.jpg" overlay />
 
-        <Programacion2026Tabs active="programacion" />
         <ProgramacionAgenda />
+        <Programacion2026Tabs active="programacion" />
 
         <section className="p26-index scroll-mt-28" id="eventos-especiales">
           <div data-anim="p26-head" className="p26-divider">
