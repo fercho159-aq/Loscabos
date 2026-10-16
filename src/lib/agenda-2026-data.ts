@@ -428,7 +428,7 @@ export const agendaSectionCards2026: AgendaSectionCard[] = [
     id: "brunch-networking",
     title: plain("Brunch & Networking"),
     time: "15:00–17:00 hrs",
-    location: "Hotel Tropicana | JW Marriott | Hotel El Ganzo Rooftop",
+    location: "JW Marriott | Hotel El Ganzo Rooftop",
     description: [
       line(
         t("Brunch en colaboración con Forbes Global Properties · "),
@@ -445,7 +445,7 @@ export const agendaSectionCards2026: AgendaSectionCard[] = [
     id: "beyond-the-screen-musica",
     title: [line(t("Programa #BeyondTheScreen:")), line(t("Música"))],
     time: "17:00–18:30 hrs",
-    location: "Hotel Tropicana | JW Marriott | Hotel El Ganzo",
+    location: "JW Marriott | Hotel El Ganzo",
     description: plain("Showcases musicales · Conversatorios"),
     access: "Abierto al público",
     bg: "#876B5D",
