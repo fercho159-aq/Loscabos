@@ -7,6 +7,10 @@
 //      Segoviano; se quita "Participan… Moderador…" de la descripción.
 //   C) Jueves 10: sin ubicaciones en el bloque terracota (15:00–17:00).
 //   D) Viernes 11 y Sábado 12: sin ubicaciones en el bloque terracota.
+// Y del 19-oct-2026:
+//   E) Jueves 10, 12:05: nuevo título del keynote de Diana Segoviano.
+//   F) Jueves 10, 12:30: la proyección pasa a "Por anunciarse" sin ficha, y
+//      el conversatorio ya no nombra a los directores.
 //
 // El texto sigue al PDF con la ortografía corregida (16-oct-2026).
 
@@ -192,7 +196,9 @@ export const agenda2026: AgendaDay[] = [
             title: [
               line(
                 t("Keynote — "),
-                i("Filmar en México: El territorio como aliado de la producción"),
+                i(
+                  "The New Geography of Content, Filmar en México: el territorio como infraestructura de producción",
+                ),
                 t("\u00A0|"),
               ),
               line(
@@ -208,15 +214,14 @@ export const agenda2026: AgendaDay[] = [
           {
             id: "2026-12-10-04",
             time: "12:30 – 13:45 hrs",
-            title: [line(t("Proyección — "), i("Jaripeo"))],
-            subtitle: "Dir. Rebecca Zweig, Efraín Mojica · México · 71′",
+            title: [line(t("Proyección — "), i("Por anunciarse"))],
             location: SALA_8,
           },
           {
             id: "2026-12-10-05",
             time: "13:45 – 14:00 hrs",
             title: plain("Conversatorio postproyección"),
-            description: "Q&A con los directores Rebecca Zweig, Efraín Mojica",
+            description: "Q&A con los directores",
             location: SALA_8,
           },
           {

@@ -31,7 +31,7 @@ export default function Programacion2026() {
         <PageHero lines={["Programación", "2026"]} bgImage="/images/programacion-hero.jpg" overlay />
 
         {/* Los eventos especiales se abren desde su liga en la agenda. */}
-        <ProgramacionAgenda nav={<Programacion2026Tabs active="programacion" gray />} />
+        <ProgramacionAgenda nav={<Programacion2026Tabs active="programacion" gray soloProgramacion />} />
       </div>
 
       <Footer />
