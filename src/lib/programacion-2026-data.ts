@@ -17,8 +17,10 @@ export type PersonaGrupo = {
 export type Evento = {
   slug: string;
   title: string;
-  /** Título corto para la tarjeta del índice cuando el largo no cabe. */
+  /** Título corto para la navegación anterior/siguiente cuando el largo no cabe. */
   cardTitle?: string;
+  /** La tarjeta del índice muestra `title | credit`, como viene en el documento. */
+  cardCredit?: boolean;
   date?: string;
   venue?: string;
   /** Crédito extra del encabezado, p. ej. "Moderado por…". */
@@ -74,6 +76,7 @@ export const eventos2026: Evento[] = [
     slug: "keynote-greg-rosenbaum",
     title: "Keynote — Shaping the Next Wave of Creative Convergence",
     cardTitle: "Keynote — Greg Rosenbaum",
+    cardCredit: true,
     venue: "Cinépolis San José del Cabo | Sala 8",
     credit: "Greg Rosenbaum · Senior Vice President Programming SXSW",
     image: "/images/programacion-2026/keynote-greg-rosenbaum.jpg",
@@ -87,6 +90,7 @@ export const eventos2026: Evento[] = [
     slug: "keynote-diana-segoviano",
     title: "Keynote — The New Geography of Content, Filmar en México: el territorio como infraestructura de producción",
     cardTitle: "Keynote — Diana Segoviano",
+    cardCredit: true,
     venue: "Cinépolis San José del Cabo | Sala 8",
     credit: "Diana Segoviano · Coordinadora General de la Comisión Mexicana de Filmaciones (COMEFILM)",
     image: "/images/programacion-2026/keynote-diana-segoviano.jpg",
@@ -114,6 +118,7 @@ export const eventos2026: Evento[] = [
     slug: "keynote-alfredo-aceves",
     title: "Keynote — Ciudad Creativa Digital: innovación e industrias creativas",
     cardTitle: "Keynote — Alfredo Aceves",
+    cardCredit: true,
     venue: "Cinépolis San José del Cabo | Sala 8",
     credit: "Alfredo Aceves · Presidente del Fideicomiso Ciudad Creativa Digital",
     image: "/images/programacion-2026/keynote-alfredo-aceves.jpg",
@@ -135,6 +140,7 @@ export const eventos2026: Evento[] = [
     slug: "keynote-claudio-jimenez",
     title: "Keynote — La transferencia de lenguajes y formatos en la creación de contenidos",
     cardTitle: "Keynote — Claudio Jiménez",
+    cardCredit: true,
     venue: "Cinépolis San José del Cabo | Sala 8",
     credit: "Claudio Jiménez · Fundador de Mighty Studios",
     image: "/images/programacion-2026/keynote-claudio-jimenez.jpg",
@@ -223,8 +229,8 @@ export const eventos2026: Evento[] = [
     cardTitle: "The Next Wave — Emerging Filmmakers Panel",
     venue: "Cinépolis San José del Cabo",
     credit: "Moderado por Carlos López Estrada",
-    image: "/images/programacion-2026/panel-the-next-wave.jpg",
-    imageAlt: "Panel The Next Wave en Cinépolis San José del Cabo",
+    image: "/images/programacion-2026/panel-the-next-wave-teaser.jpg",
+    imageAlt: "Fotograma de un cortometraje del panel The Next Wave",
     accent: "#6687C3",
     body: [
       "El Festival presenta The Next Wave: Emerging Filmmakers: un panel de cineastas emergentes de América Latina cuyo trabajo define el lenguaje audiovisual de la próxima generación.",
@@ -323,6 +329,7 @@ export const eventos2026: Evento[] = [
     slug: "keynote-jim-kolmar",
     title: "Keynote — How to pitch your movie to a festival",
     cardTitle: "Keynote — Jim Kolmar",
+    cardCredit: true,
     venue: "Hotel El Ganzo — Rooftop",
     credit: "Jim Kolmar · Programador SXSW",
     image: "/images/programacion-2026/keynote-jim-kolmar.jpg",

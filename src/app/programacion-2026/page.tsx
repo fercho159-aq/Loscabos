@@ -59,11 +59,11 @@ export default function Programacion2026() {
                   />
                 </div>
                 <h3 className="p26-card-title">
-                  <span className="p26-underline">{ev.cardTitle ?? ev.title}</span>
+                  <span className="p26-underline">
+                    {ev.cardCredit && ev.credit ? `${ev.title} | ${ev.credit}` : ev.title}
+                  </span>
                 </h3>
-                {(ev.date || ev.venue) && (
-                  <p className="p26-card-meta">{[ev.date, ev.venue].filter(Boolean).join(" · ")}</p>
-                )}
+                {ev.date && <p className="p26-card-meta">{ev.date}</p>}
               </Link>
             ))}
           </div>
