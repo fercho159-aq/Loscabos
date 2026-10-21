@@ -97,7 +97,7 @@ export default async function EventoDetalle({ params }: Props) {
 
             {ev.presentedBy && ev.presentedBy.length > 0 && (
               <aside className="p26-presented">
-                <span className="p26-presented-label">Presentado por</span>
+                <span className="p26-presented-label">{ev.presentedLabel ?? "Presentado por"}</span>
                 <div className="p26-presented-logos">
                   {ev.presentedBy.map((brand) => (
                     <Image
