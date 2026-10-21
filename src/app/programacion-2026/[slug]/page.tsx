@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Programacion2026Animations from "@/components/Programacion2026Animations";
 import { eventos2026 } from "@/lib/programacion-2026-data";
+import { plainText, withItalics } from "@/lib/italics";
 import Programacion2026Tabs from "@/components/Programacion2026Tabs";
 import SeleccionOficial2026 from "@/components/SeleccionOficial2026";
 import { categorias2026, peliculasPublicas2026, programasPublicos2026, PUBLIC_FILM_BASE } from "@/lib/seleccion-oficial-2026-data";
@@ -25,11 +26,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!ev) return {};
   const description = ev.body[0].slice(0, 160);
   return {
-    title: `${ev.title} | Programación 2026 FICC Los Cabos`,
+    title: `${plainText(ev.title)} | Programación 2026 FICC Los Cabos`,
     description,
     alternates: { canonical: `/programacion-2026/${slug}` },
     openGraph: {
-      title: `${ev.title} | Programación 2026 FICC Los Cabos`,
+      title: `${plainText(ev.title)} | Programación 2026 FICC Los Cabos`,
       description,
       url: `/programacion-2026/${slug}`,
       images: [{ url: ev.image, width: 1600, height: 900 }],
@@ -60,7 +61,7 @@ export default async function EventoDetalle({ params }: Props) {
               <span className="p26-underline">Programación 2026</span>
             </Link>
           </p>
-          <h1 className="p26-detail-title">{ev.title}</h1>
+          <h1 className="p26-detail-title">{withItalics(ev.title)}</h1>
         </header>
 
         <figure className="p26-figure">
@@ -157,7 +158,7 @@ export default async function EventoDetalle({ params }: Props) {
             <Link href={`/programacion-2026/${prev.slug}`} className="p26-nav-item p26-nav-item--prev">
               <span className="p26-nav-label">← Anterior</span>
               <span className="p26-nav-title">
-                <span className="p26-underline">{prev.cardTitle ?? prev.title}</span>
+                <span className="p26-underline">{withItalics(prev.cardTitle ?? prev.title)}</span>
               </span>
             </Link>
           ) : (
@@ -167,7 +168,7 @@ export default async function EventoDetalle({ params }: Props) {
             <Link href={`/programacion-2026/${next.slug}`} className="p26-nav-item p26-nav-item--next">
               <span className="p26-nav-label">Siguiente →</span>
               <span className="p26-nav-title">
-                <span className="p26-underline">{next.cardTitle ?? next.title}</span>
+                <span className="p26-underline">{withItalics(next.cardTitle ?? next.title)}</span>
               </span>
             </Link>
           ) : (

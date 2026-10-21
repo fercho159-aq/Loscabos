@@ -8,16 +8,17 @@ import PageHero from "@/components/PageHero";
 import Programacion2026Animations from "@/components/Programacion2026Animations";
 import Programacion2026Tabs from "@/components/Programacion2026Tabs";
 import { eventos2026 } from "@/lib/programacion-2026-data";
+import { withItalics } from "@/lib/italics";
 
 export const metadata: Metadata = {
   title: "Programación 2026 | FICC Los Cabos",
   description:
-    "Sneak Peek de la Programación 2026 de FICCLosCabos: keynotes de SXSW, COMEFILM, Ciudad Creativa Digital y Mighty Studios, el homenaje a Dolores Heredia, el Work in Progress de Insectario y el panel The Next Wave.",
+    "Sneak Peek de la Programación 2026 de FICCLosCabos: keynotes de SXSW, COMEFILM y Mighty Studios, el homenaje a Dolores Heredia, el Work in Progress de Insectario, la proyección de Blaise y el panel The Next Wave.",
   alternates: { canonical: "/programacion-2026" },
   openGraph: {
     title: "Programación 2026 | FICC Los Cabos",
     description:
-      "Sneak Peek de la Programación 2026 de FICCLosCabos: keynotes de SXSW, COMEFILM, Ciudad Creativa Digital y Mighty Studios, el homenaje a Dolores Heredia, el Work in Progress de Insectario y el panel The Next Wave.",
+      "Sneak Peek de la Programación 2026 de FICCLosCabos: keynotes de SXSW, COMEFILM y Mighty Studios, el homenaje a Dolores Heredia, el Work in Progress de Insectario, la proyección de Blaise y el panel The Next Wave.",
     url: "/programacion-2026",
     images: [{ url: "/images/programacion-2026/homenaje-dolores-heredia.jpg", width: 1600, height: 900 }],
   },
@@ -60,10 +61,12 @@ export default function Programacion2026() {
                 </div>
                 <h3 className="p26-card-title">
                   <span className="p26-underline">
-                    {ev.cardCredit && ev.credit ? `${ev.title} | ${ev.credit}` : ev.title}
+                    {withItalics(ev.cardCredit && ev.credit ? `${ev.title} | ${ev.credit}` : ev.title)}
                   </span>
                 </h3>
-                {ev.date && <p className="p26-card-meta">{ev.date}</p>}
+                {(ev.date || ev.cardSubtitle) && (
+                  <p className="p26-card-meta">{[ev.date, ev.cardSubtitle].filter(Boolean).join(" · ")}</p>
+                )}
               </Link>
             ))}
           </div>

@@ -16,11 +16,14 @@ export type PersonaGrupo = {
 
 export type Evento = {
   slug: string;
+  /** Admite `*…*` para itálicas (ver src/lib/italics.tsx). */
   title: string;
   /** Título corto para la navegación anterior/siguiente cuando el largo no cabe. */
   cardTitle?: string;
   /** La tarjeta del índice muestra `title | credit`, como viene en el documento. */
   cardCredit?: boolean;
+  /** Línea bajo el título de la tarjeta del índice, p. ej. dirección y ficha de una película. */
+  cardSubtitle?: string;
   date?: string;
   venue?: string;
   /** Crédito extra del encabezado, p. ej. "Moderado por…". */
@@ -39,42 +42,14 @@ export type Evento = {
 
 
 // Sneak Peek de la edición 2026, en el orden del teaser del 21 de octubre
-// (pestaña "Teaser 21 octubre" del documento del sitio). Sin fechas: se anuncian
+// (pestaña "Teaser 21 octubre" del documento del sitio; Insectario va al final
+// por indicación del cliente). Sin fechas: se anuncian
 // después. Las fotos se generan con `python3 scripts/optimize-programacion.py`;
 // quien todavía no tiene `image` no se pinta.
 export const eventos2026: Evento[] = [
   {
-    slug: "work-in-progress-insectario",
-    title: "Work in Progress — Insectario",
-    venue: "Cinépolis San José del Cabo",
-    image: "/images/programacion-2026/work-in-progress-insectario.jpg",
-    imageAlt: "Fotograma de la cinta animada Insectario",
-    accent: "#006666",
-    body: [
-      "Work-in-Progress y caso de estudio de la cinta Insectario. Con la directora Sofía Carrillo y el coproductor Matīss Kaža (Letonia).",
-    ],
-    groups: [
-      {
-        title: "Participan",
-        layout: "bio",
-        people: [
-          {
-            name: "Sofía Carrillo",
-            image: "/images/programacion-2026/personas/sofia-carrillo.jpg",
-            meta: "Directora",
-          },
-          {
-            name: "Matīss Kaža",
-            image: "/images/programacion-2026/personas/matiss-kaza.jpg",
-            meta: "Coproductor · Letonia",
-          },
-        ],
-      },
-    ],
-  },
-  {
     slug: "keynote-greg-rosenbaum",
-    title: "Keynote — Shaping the Next Wave of Creative Convergence",
+    title: "Keynote — *Shaping the Next Wave of Creative Convergence*",
     cardTitle: "Keynote — Greg Rosenbaum",
     cardCredit: true,
     venue: "Cinépolis San José del Cabo | Sala 8",
@@ -88,7 +63,7 @@ export const eventos2026: Evento[] = [
   },
   {
     slug: "keynote-diana-segoviano",
-    title: "Keynote — The New Geography of Content, Filmar en México: el territorio como infraestructura de producción",
+    title: "Keynote — *The New Geography of Content, Filmar en México: el territorio como infraestructura de producción*",
     cardTitle: "Keynote — Diana Segoviano",
     cardCredit: true,
     venue: "Cinépolis San José del Cabo | Sala 8",
@@ -115,30 +90,8 @@ export const eventos2026: Evento[] = [
     ],
   },
   {
-    slug: "keynote-alfredo-aceves",
-    title: "Keynote — Ciudad Creativa Digital: innovación e industrias creativas",
-    cardTitle: "Keynote — Alfredo Aceves",
-    cardCredit: true,
-    venue: "Cinépolis San José del Cabo | Sala 8",
-    credit: "Alfredo Aceves · Presidente del Fideicomiso Ciudad Creativa Digital",
-    image: "/images/programacion-2026/keynote-alfredo-aceves.jpg",
-    imageAlt: "Alfredo Aceves, Presidente del Fideicomiso Ciudad Creativa Digital",
-    accent: "#6687C3",
-    body: [
-      "Presentación del ecosistema de Ciudad Creativa Digital como hub de innovación, tecnología e industrias creativas de Jalisco, y de las oportunidades de colaboración con Baja California Sur para impulsar el desarrollo audiovisual y creativo.",
-    ],
-    presentedBy: [
-      {
-        name: "Ciudad Creativa Digital",
-        logo: "/images/programacion-2026/logos/ciudad-creativa-digital.png",
-        width: 539,
-        height: 194,
-      },
-    ],
-  },
-  {
     slug: "keynote-claudio-jimenez",
-    title: "Keynote — La transferencia de lenguajes y formatos en la creación de contenidos",
+    title: "Keynote — *La transferencia de lenguajes y formatos en la creación de contenidos*",
     cardTitle: "Keynote — Claudio Jiménez",
     cardCredit: true,
     venue: "Cinépolis San José del Cabo | Sala 8",
@@ -152,8 +105,10 @@ export const eventos2026: Evento[] = [
   },
   {
     slug: "blaise",
-    title: "Blaise",
-    credit: "Dimitri Planchon, Jean-Paul Guigue · Francia · 2026 · 82’",
+    title: "Proyección — *Blaise* + Conversatorio con directores",
+    cardTitle: "Proyección — Blaise",
+    credit: "Dir. Dimitri Planchon, Jean-Paul Guigue · Francia · 2026 · 82’",
+    cardSubtitle: "Dir. Dimitri Planchon, Jean-Paul Guigue · Francia · 2026 · 82’",
     image: "/images/seleccion-oficial-2026/blaise-still.jpg",
     imageAlt: "Fotograma de la película Blaise",
     accent: "#BDC957",
@@ -327,7 +282,7 @@ export const eventos2026: Evento[] = [
   },
   {
     slug: "keynote-jim-kolmar",
-    title: "Keynote — How to pitch your movie to a festival",
+    title: "Keynote — *How to pitch your movie to a festival*",
     cardTitle: "Keynote — Jim Kolmar",
     cardCredit: true,
     venue: "Hotel El Ganzo — Rooftop",
@@ -337,6 +292,35 @@ export const eventos2026: Evento[] = [
     accent: "#081722",
     body: [
       "Jim Kolmar, programador de SXSW desde 2009, asesora a cineastas emergentes para llevar sus películas a festivales: revisa cortes y guiones con la mirada de un programador.",
+    ],
+  },
+  {
+    slug: "work-in-progress-insectario",
+    title: "Work in Progress — Insectario",
+    venue: "Cinépolis San José del Cabo",
+    image: "/images/programacion-2026/work-in-progress-insectario.jpg",
+    imageAlt: "Fotograma de la cinta animada Insectario",
+    accent: "#006666",
+    body: [
+      "Work-in-Progress y caso de estudio de la cinta Insectario. Con la directora Sofía Carrillo y el coproductor Matīss Kaža (Letonia).",
+    ],
+    groups: [
+      {
+        title: "Participan",
+        layout: "bio",
+        people: [
+          {
+            name: "Sofía Carrillo",
+            image: "/images/programacion-2026/personas/sofia-carrillo.jpg",
+            meta: "Directora",
+          },
+          {
+            name: "Matīss Kaža",
+            image: "/images/programacion-2026/personas/matiss-kaza.jpg",
+            meta: "Coproductor · Letonia",
+          },
+        ],
+      },
     ],
   },
 ];
