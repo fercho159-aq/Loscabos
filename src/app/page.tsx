@@ -142,7 +142,7 @@ export default function Home() {
               className="font-black max-w-[440px] leading-[1.3] m-0"
               style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", color: "var(--color-cream)" }}
             >
-              {"Preventa disponible ahora.".split(" ").map((word, wi) => (
+              {"Preventa disponible ahora".split(" ").map((word, wi) => (
                 <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.28em" }}>
                   {word.split("").map((char, ci) => (
                     <span key={ci} data-anim="cta-text-char" style={{ display: "inline-block" }}>{char}</span>
