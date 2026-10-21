@@ -299,7 +299,6 @@ export const eventos2026: Evento[] = [
   {
     slug: "work-in-progress-insectario",
     title: "Work in Progress — *Insectario*",
-    publishAt: "2026-10-21T16:00:00-06:00",
     venue: "Cinépolis San José del Cabo",
     image: "/images/programacion-2026/work-in-progress-insectario.jpg",
     imageAlt: "Fotograma de la cinta animada Insectario",
