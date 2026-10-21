@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GSAPAnimations from "@/components/GSAPAnimationsLazy";
 import TextureStrip from "@/components/TextureStrip";
-import SubscribeCTA from "@/components/SubscribeCTA";
 import BrandbookHero from "@/components/BrandbookHero";
 
 const aliados = [
@@ -98,7 +97,7 @@ export default function Home() {
             className="text-center m-0 mb-6 text-[#F6EDDB]"
             style={{ fontSize: "clamp(1.4rem, 2.4vw, 2.1rem)", letterSpacing: ".04em", fontWeight: 400 }}
           >
-            14ª Edición · del 9 al 13 de diciembre 2026
+            14ª Edición del 9 al 13 de diciembre 2026
           </p>
 
           {/* #BeyondTheScreen strip — centered, matching logo width */}
@@ -143,7 +142,7 @@ export default function Home() {
               className="font-black max-w-[440px] leading-[1.3] m-0"
               style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", color: "var(--color-cream)" }}
             >
-              {"Recibe antes que nadie el anuncio de la programación y la apertura de taquilla 2026.".split(" ").map((word, wi) => (
+              {"Preventa disponible ahora.".split(" ").map((word, wi) => (
                 <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.28em" }}>
                   {word.split("").map((char, ci) => (
                     <span key={ci} data-anim="cta-text-char" style={{ display: "inline-block" }}>{char}</span>
@@ -151,14 +150,16 @@ export default function Home() {
                 </span>
               ))}
             </p>
-            <SubscribeCTA
-              source="preventa"
-              label="Pre-regístrate"
-              title="Pre-regístrate"
-              description="Recibe antes que nadie el anuncio de la programación y la apertura de taquilla 2026."
+            {/* Preventa abierta el 21-oct-2026: antes era el pre-registro (SubscribeCTA). */}
+            <a
+              href="https://festival-internacional-de-cine-y-creatividad-de-los-cabos.boletia.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="cta-button"
-              dataAnim="cta-btn"
-            />
+              data-anim="cta-btn"
+            >
+              Adquiere tus accesos
+            </a>
           </div>
         </div>
 
