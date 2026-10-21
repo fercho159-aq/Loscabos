@@ -6,7 +6,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Programacion2026Animations from "@/components/Programacion2026Animations";
-import { eventos2026 } from "@/lib/programacion-2026-data";
+import { eventosVisibles2026 } from "@/lib/programacion-2026-data";
 import { plainText, withItalics } from "@/lib/italics";
 import Programacion2026Tabs from "@/components/Programacion2026Tabs";
 import SeleccionOficial2026 from "@/components/SeleccionOficial2026";
@@ -16,13 +16,16 @@ const nextWavePublished = programasPublicos2026.some((programa) => programa.id =
 
 type Props = { params: Promise<{ slug: string }> };
 
+// Revalida cada minuto para que los eventos con `publishAt` aparezcan a su hora.
+export const revalidate = 60;
+
 export async function generateStaticParams() {
-  return eventos2026.map((ev) => ({ slug: ev.slug }));
+  return eventosVisibles2026().map((ev) => ({ slug: ev.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const ev = eventos2026.find((e) => e.slug === slug);
+  const ev = eventosVisibles2026().find((e) => e.slug === slug);
   if (!ev) return {};
   const description = ev.body[0].slice(0, 160);
   return {
@@ -41,12 +44,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function EventoDetalle({ params }: Props) {
   const { slug } = await params;
-  const ev = eventos2026.find((e) => e.slug === slug);
+  const eventos = eventosVisibles2026();
+  const ev = eventos.find((e) => e.slug === slug);
   if (!ev) notFound();
 
-  const idx = eventos2026.findIndex((e) => e.slug === slug);
-  const prev = eventos2026[idx - 1] ?? null;
-  const next = eventos2026[idx + 1] ?? null;
+  const idx = eventos.findIndex((e) => e.slug === slug);
+  const prev = eventos[idx - 1] ?? null;
+  const next = eventos[idx + 1] ?? null;
 
   return (
     <>

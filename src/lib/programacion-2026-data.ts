@@ -24,6 +24,8 @@ export type Evento = {
   cardCredit?: boolean;
   /** Línea bajo el título de la tarjeta del índice, p. ej. dirección y ficha de una película. */
   cardSubtitle?: string;
+  /** Hora (ISO con zona) a partir de la cual se publica; antes no se pinta ni tiene página. */
+  publishAt?: string;
   date?: string;
   venue?: string;
   /** Crédito extra del encabezado, p. ej. "Moderado por…". */
@@ -296,7 +298,8 @@ export const eventos2026: Evento[] = [
   },
   {
     slug: "work-in-progress-insectario",
-    title: "Work in Progress — Insectario",
+    title: "Work in Progress — *Insectario*",
+    publishAt: "2026-10-21T16:00:00-06:00",
     venue: "Cinépolis San José del Cabo",
     image: "/images/programacion-2026/work-in-progress-insectario.jpg",
     imageAlt: "Fotograma de la cinta animada Insectario",
@@ -324,3 +327,8 @@ export const eventos2026: Evento[] = [
     ],
   },
 ];
+
+/** Eventos ya publicados. Las páginas que la usan revalidan cada minuto. */
+export function eventosVisibles2026(now: number = Date.now()): Evento[] {
+  return eventos2026.filter((ev) => !ev.publishAt || Date.parse(ev.publishAt) <= now);
+}

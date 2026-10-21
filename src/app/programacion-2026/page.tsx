@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import Programacion2026Animations from "@/components/Programacion2026Animations";
 import Programacion2026Tabs from "@/components/Programacion2026Tabs";
-import { eventos2026 } from "@/lib/programacion-2026-data";
+import { eventosVisibles2026 } from "@/lib/programacion-2026-data";
 import { withItalics } from "@/lib/italics";
 
 export const metadata: Metadata = {
@@ -25,7 +25,11 @@ export const metadata: Metadata = {
 
 };
 
+// Revalida cada minuto para que los eventos con `publishAt` aparezcan a su hora.
+export const revalidate = 60;
+
 export default function Programacion2026() {
+  const eventos = eventosVisibles2026();
   return (
     <>
       <Navbar />
@@ -41,7 +45,7 @@ export default function Programacion2026() {
           </div>
 
           <div className="p26-grid">
-            {eventos2026.map((ev, i) => (
+            {eventos.map((ev, i) => (
               <Link
                 key={ev.slug}
                 href={`/programacion-2026/${ev.slug}`}
