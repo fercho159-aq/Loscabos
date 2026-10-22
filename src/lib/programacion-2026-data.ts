@@ -184,7 +184,7 @@ export const eventos2026: Evento[] = [
     slug: "panel-the-next-wave",
     title: "Panel — The Next Wave: Emerging Filmmakers",
     cardTitle: "The Next Wave — Emerging Filmmakers Panel",
-    venue: "Cinépolis San José del Cabo",
+    venue: "Hotel El Ganzo — Rooftop",
     credit: "Moderado por Carlos López Estrada",
     image: "/images/programacion-2026/panel-the-next-wave-teaser.jpg",
     imageAlt: "Fotograma de un cortometraje del panel The Next Wave",
