@@ -293,7 +293,8 @@ export const eventos2026: Evento[] = [
     imageAlt: "Jim Kolmar, programador de SXSW",
     accent: "#081722",
     body: [
-      "Jim Kolmar, programador de SXSW desde 2009, asesora a cineastas emergentes para llevar sus películas a festivales: revisa cortes y guiones con la mirada de un programador.",
+      "Jim Kolmar, Programador de SXSW desde 2009, comparte cómo llega una película a un festival y qué buscan quienes la seleccionan.",
+      "Su trabajo acompañando a cineastas emergentes, revisando cortes y guiones con la mirada de un programador, convierte este keynote en una guía directa para quienes buscan llevar su película al circuito de festivales.",
     ],
   },
   {
