@@ -12,7 +12,7 @@ const aliados = [
   { name: "Puerto Los Cabos", logo: "/images/aliados/2026/03-puerto-los-cabos.png" },
   { name: "Marina Puerto Los Cabos", logo: "/images/aliados/2026/04-marina-puerto-los-cabos.png" },
   { name: "Secretaría de Turismo y Economía", logo: "/images/aliados/2026/secretaria-turismo-economia.png" },
-  { name: "Comisión Mexicana de Filmaciones", logo: "/images/aliados/2026/comision-mexicana-filmaciones.png" },
+  { name: "Comisión Mexicana de Filmaciones", logo: "/images/aliados/2026/comision-mexicana-filmaciones-negro.png" },
   { name: "Asociación de Hoteles de Los Cabos", logo: "/images/aliados/2026/04b-asociacion-hoteles-los-cabos.png" },
   { name: "Hotel El Ganzo", logo: "/images/aliados/2026/05-hotel-el-ganzo.png" },
   { name: "IMCINE", logo: "/images/aliados/2026/06-imcine.png" },
@@ -336,9 +336,9 @@ export default function Home() {
         <div className="aliados-carousel">
           <div className="aliados-track">
             {aliadosTrack.map((a, i) => (
-              <div key={`${a.name}-${i}`} className="aliado-slide">
-                <Image src={a.logo} alt={`Logo de ${a.name}, aliado del FICC Los Cabos`} width={320} height={220} sizes="(max-width: 768px) 320px, 240px" loading="lazy"
-                  style={{ width: "auto", maxHeight: 170, height: "auto", objectFit: "contain", ...(a.name === "Comisión Mexicana de Filmaciones" ? { backgroundColor: "#0A1E23", borderRadius: 8 } : {}) }} />
+              <div key={`${a.name}-${i}`} className={`aliado-slide${a.name === "Ciudad Creativa Digital" ? " aliado-slide-wide" : ""}`}>
+                <Image src={a.logo} alt={`Logo de ${a.name}, aliado del FICC Los Cabos`} width={320} height={220} sizes={a.name === "Ciudad Creativa Digital" ? "(max-width: 768px) 272px, 416px" : "(max-width: 768px) 320px, 240px"} loading="lazy"
+                  style={{ width: "auto", maxHeight: 170, height: "auto", objectFit: "contain" }} />
               </div>
             ))}
           </div>

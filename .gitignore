@@ -52,3 +52,4 @@ firestore-debug.log
 
 # material de trabajo (dumps de Drive, no assets del sitio)
 /public/doc-ficc-images/
+.env*.local

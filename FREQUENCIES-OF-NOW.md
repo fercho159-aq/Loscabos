@@ -4,12 +4,12 @@
 
 **Frequencies of Now** (`/frequencies-of-now`) es la plataforma internacional de FICCLosCabos dedicada a construir un archivo documental de la cultura y el ecosistema contemporaneo de la musica. Nace bajo la vision #BeyondTheScreen.
 
-**Estado: OCULTA** hasta el lanzamiento (24 sep 2026). Existe y se ve terminada, pero:
-- `robots: { index: false, follow: false }` en `metadata` (sin `canonical` ni `openGraph`)
-- No esta en `sitemap.ts`
-- No esta en `Navbar.tsx` ni en `/plataformas-de-impulso`
+**Estado: PÚBLICA** (verificado el 14 oct 2026; ya publicada antes de esta actualización).
+- `metadata` incluye `alternates.canonical` y `openGraph`, sin `noindex`.
+- La ruta está en `sitemap.ts` y en el dropdown "Plataformas de impulso" de `Navbar.tsx`.
+- No se agrega una tarjeta en `/plataformas-de-impulso`: el contenido marcado para el 14 de octubre no la solicita.
 
-**Para publicarla**: quitar `robots` y agregar `alternates.canonical` + `openGraph` en `page.tsx`; sumar la ruta a `sitemap.ts`; agregar `{ label: "Frequencies of Now", href: "/frequencies-of-now" }` al dropdown "Plataformas de impulso" del Navbar; opcionalmente agregar tarjeta en `/plataformas-de-impulso`.
+**Para publicarla** (referencia, pasos ya cumplidos): quitar `robots` y agregar `alternates.canonical` + `openGraph` en `page.tsx`; sumar la ruta a `sitemap.ts`; agregar `{ label: "Frequencies of Now", href: "/frequencies-of-now" }` al dropdown "Plataformas de impulso" del Navbar. Agregar tarjeta en `/plataformas-de-impulso` solo cuando el documento lo pida.
 
 ---
 
@@ -50,7 +50,7 @@ TextureStrip        divisor half-overlap (marginTop -61)
 Convocatoria (.fon-convocatoria) oscuro sobre fon-hero.jpg velado .86:
                     h2 + 2 parrafos + .fon-timeline (5 tarjetas) + FoNConvocatoriaCTA
                     + "Seis ejes de contenido" (.fon-ejes, 6 tarjetas numeradas) + "Categorias" (.fon-cats, 2 tarjetas)
-Jurado (.lbi-jurado-section.fon-jurado) 10 filas alternadas; sin foto -> .fon-jurado-placeholder (monograma coral/lima)
+Jurado (.lbi-jurado-section.fon-jurado) filas alternadas; solo personas confirmadas con foto (sin placeholders)
 Cierre (.fon-ig-band) FoNLogo vertical + tagline + claim + @frequenciesofnow + #BeyondTheScreen
 Footer + <FoNAnimations />
 ```
@@ -68,9 +68,9 @@ Cliente, resuelve fase con `useSyncExternalStore` (snapshot server = null, no re
 - Siempre visible: "Descargar convocatoria" -> Google Doc.
 
 ### Jurado
-Datos en `page.tsx` (`jurado[]`: `name, role, ig, img?, desc`). Reusa `.lbi-jurado-*`. Fotos en `/images/comunidad/` (1:1). Sin `img` se pinta `.fon-jurado-placeholder` (monograma: fondo coral o lima + iniciales en oscuro); al recibir la foto solo hay que agregar la ruta.
+Datos en `page.tsx` (`jurado[]`: `name, role, ig, img?, desc, tbc?`). Reusa `.lbi-jurado-*`. Las nuevas fotos deben ser JPG 800x800 (1:1) en `/images/comunidad/<slug>.jpg`. Solo se renderiza quien tenga `img` y no esté marcado `tbc`; no se muestran iniciales. Los datos pendientes se conservan en el código.
 
-Con foto hoy: Riveroll, Cuevas, Sayre. Sin foto: Guardiola, Talamantes, Zunshu, Naudert, Metta, Marymen, Lenin. El placeholder alterna coral / lima segun la fila.
+Con foto al 14 oct 2026: Juan Patricio Riveroll, Rodrigo Guardiola, Alejandro Tavares, Hermann Neudert y Zunshu. Mario Escobar sigue oculto, sin foto y con `tbc: true`. Para activarlo, agregar su foto oficial y quitar `tbc`. La misma regla se aplica en `/comunidad`.
 
 ---
 

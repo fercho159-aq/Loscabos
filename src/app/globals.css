@@ -3298,6 +3298,22 @@ body {
   will-change: transform;
 }
 
+/* La pleca de Ciudad Creativa Digital reúne tres marcas. */
+.aliado-slide-wide {
+  width: 480px;
+}
+
+.aliado-slide.aliado-slide-wide img {
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .aliado-slide.aliado-slide-wide {
+    width: min(320px, calc(100vw - 4rem)) !important;
+    padding-inline: 1.5rem !important;
+  }
+}
+
 .aliado-slide:hover img {
   opacity: 1;
 }

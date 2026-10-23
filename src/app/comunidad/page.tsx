@@ -5,7 +5,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import ComunidadAnimations from "@/components/ComunidadAnimations";
-import { initials } from "@/lib/initials";
 
 export const metadata: Metadata = {
   title: "Comunidad FICC | Quienes la integran",
@@ -55,7 +54,7 @@ type Person = {
   name: string;
   /** Rol/cargo bajo el nombre. Omitir para grupos donde el encabezado basta. */
   role?: string;
-  /** Ruta en /images/comunidad (1:1). Sin ella → placeholder con iniciales. */
+  /** Ruta en /images/comunidad (1:1, 800x800 JPG). Sin ella no se renderiza. */
   image?: string;
   /** Pendiente / falta información: no se renderiza aún. */
   tbc?: boolean;
@@ -119,11 +118,11 @@ const groups: Group[] = [
     title: "Frequencies of Now",
     accent: "var(--color-orange)",
     people: [
-      { name: "Juan Patricio Riveroll", role: "Director Académico ESCINE", image: "/images/comunidad/juan-patricio-riveroll.jpg" },
       { name: "Rodrigo Guardiola", role: "Cineasta, productor y baterista de Zoé", image: "/images/comunidad/rodrigo-guardiola.jpeg" },
       { name: "Alejandro Tavares", role: "Director General <br> Filma Jalisco", image: "/images/comunidad/alejandro-tavares.jpg" },
       { name: "Hermann Neudert", role: "Director", image: "/images/comunidad/hermann-neudert.jpg" },
       { name: "Zunshu", role: "Creativo. Parte de la dirección de Revista 192", image: "/images/comunidad/zunshu.jpg" },
+      { name: "Carla Margarita", role: "Profesional de la industria musical, creadora de contenido, artista y curadora musical", image: "/images/comunidad/carla-margarita.jpg" },
     ],
   },
   {
@@ -245,7 +244,7 @@ export default function Comunidad() {
             espacio entre grupos ── */}
         <section className="comunidad-groups">
           {visibleGroups.map((group) => {
-            const visible = group.people.filter((p) => !p.tbc && p.image);
+            const visible = group.people.filter((p): p is Person & { image: string } => !p.tbc && Boolean(p.image));
             return (
                 <div
                   key={group.id}
@@ -259,19 +258,13 @@ export default function Comunidad() {
                   {visible.map((person) => (
                     <article key={person.name} data-anim="comu-card" className="cm-card">
                       <div className="cm-photo">
-                        {person.image ? (
-                          <Image
-                            src={person.image}
-                            alt={person.name}
-                            fill
-                            sizes="(max-width: 560px) 45vw, (max-width: 820px) 30vw, 240px"
-                            className="cm-photo-img"
-                          />
-                        ) : (
-                          <span className="cm-photo-initials" aria-hidden="true">
-                            {initials(person.name)}
-                          </span>
-                        )}
+                        <Image
+                          src={person.image}
+                          alt={person.name}
+                          fill
+                          sizes="(max-width: 560px) 45vw, (max-width: 820px) 30vw, 240px"
+                          className="cm-photo-img"
+                        />
                       </div>
                       <h3 className="cm-name">{person.name}</h3>
                      {person.role && (

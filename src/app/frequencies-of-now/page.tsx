@@ -52,17 +52,10 @@ const categorias = [
 ];
 
 /* Jurado 2026, en el orden entregado. `img` en /images/comunidad
-   (1:1). Sin `img` se pinta un monograma con iniciales (estilo brandbook);
-   cuando llegue la foto solo hay que agregar la ruta. */
+   (1:1, 800x800 JPG). Sin `img` no se renderiza;
+   cuando llegue la foto hay que agregar la ruta y quitar `tbc`, si existe. */
 type Jurado = { name: string; role: string; ig: string; img?: string; desc: string; tbc?: boolean };
 const jurado: Jurado[] = [
-  {
-    name: "Juan Patricio Riveroll",
-    role: "Director, productor y guionista",
-    ig: "jpriveroll",
-    img: "/images/comunidad/juan-patricio-riveroll.jpg",
-    desc: "Director, productor y guionista. Actualmente es Director de Extensión Académica en la Escuela Superior de Cine (ESCINE), institución que acompaña la curaduría de las convocatorias, garantiza rigor profesional y consolida programas clave como La Baja Inspira, el Fondo Fílmico Gabriel Figueroa, la nueva Sección de Animación y Frequencies of now.",
-  },
   {
     name: "Rodrigo Guardiola",
     role: "Cineasta, productor y baterista",
@@ -98,11 +91,14 @@ const jurado: Jurado[] = [
     img: "/images/comunidad/zunshu.jpg",
     desc: "Creativo enfocado en la cultura contemporánea y las vanguardias de las industrias creativas. De formación en diseño industrial, desarrolla su trabajo alrededor del texto, la imagen y la moda. Forma parte de la dirección de Revista 192, además de participar en diversos proyectos vinculados a la cultura y la creación contemporánea. Su práctica se nutre de referentes que van de Demna, Lyn May, Mitzy y Mecano al cine de Rosemary’s Baby y Tár.",
   },
+  {
+    name: "Carla Margarita",
+    role: "Curadora musical y creadora de contenido",
+    ig: "carlamargarita__",
+    img: "/images/comunidad/carla-margarita.jpg",
+    desc: "Profesional de la industria musical, creadora de contenido, artista y curadora musical con más de 15 años de experiencia. A lo largo de su carrera, a parte de ser música, ha trabajado en distintas áreas como booking, management, promoción, ticketing, marketing y desarrollo de artistas. Desde @carlamargarita__, comparte recomendaciones, nuevos lanzamientos y conversaciones alrededor de la música, con especial interés en la escena independiente, el rock y las mujeres dentro de la industria musical.",
+  },
 ];
-
-function initials(name: string) {
-  return name.split(" ").filter(Boolean).slice(0, 2).map((w) => w[0]).join("").toUpperCase();
-}
 
 function StaggerTitle({ text }: { text: string }) {
   return (
@@ -303,16 +299,10 @@ export default function FrequenciesOfNow() {
         </div>
         <div className="lbi-jurado-eje" style={{ borderTop: "none", paddingTop: 0 }}>
           <div className="lbi-jurado-rows">
-            {jurado.filter((m) => !m.tbc).map((m, idx) => (
+            {jurado.filter((m): m is Jurado & { img: string } => !m.tbc && Boolean(m.img)).map((m, idx) => (
               <div key={m.name} data-anim="fon-jurado-row" className={`lbi-jurado-row${idx % 2 === 1 ? " lbi-jurado-row--reverse" : ""}`}>
                 <div className="lbi-jurado-row__media">
-                  {m.img ? (
-                    <Image src={m.img} alt={`${m.name} — Jurado de Frequencies of Now, FICC Los Cabos`} fill sizes="(max-width: 768px) 320px, 480px" style={{ objectFit: "cover" }} />
-                  ) : (
-                    <div className={`fon-jurado-placeholder${idx % 2 === 1 ? " fon-jurado-placeholder--lime" : ""}`} aria-hidden="true">
-                      <span>{initials(m.name)}</span>
-                    </div>
-                  )}
+                  <Image src={m.img} alt={`${m.name} — Jurado de Frequencies of Now, FICC Los Cabos`} fill sizes="(max-width: 768px) 320px, 480px" style={{ objectFit: "cover" }} />
                 </div>
                 <div className="lbi-jurado-row__body">
                   <h4 className="lbi-jurado-name">
