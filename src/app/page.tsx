@@ -137,19 +137,26 @@ export default function Home() {
             className="object-cover"
           />
           <div className="relative z-20 flex flex-row max-md:flex-col items-center max-md:items-start justify-between w-full max-w-[1100px] gap-8 md:gap-12 text-left">
-            <p
-              data-anim="cta-text"
-              className="font-black max-w-[440px] leading-[1.3] m-0"
-              style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", color: "var(--color-cream)" }}
-            >
-              {"Preventa disponible ahora".split(" ").map((word, wi) => (
-                <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.28em" }}>
-                  {word.split("").map((char, ci) => (
-                    <span key={ci} data-anim="cta-text-char" style={{ display: "inline-block" }}>{char}</span>
-                  ))}
-                </span>
-              ))}
-            </p>
+            <div data-anim="cta-text" className="max-w-[440px]">
+              <p
+                className="font-black leading-[1.3] m-0"
+                style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", color: "var(--color-cream)" }}
+              >
+                {"Preventa disponible ahora".split(" ").map((word, wi) => (
+                  <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap", marginRight: "0.28em" }}>
+                    {word.split("").map((char, ci) => (
+                      <span key={ci} data-anim="cta-text-char" style={{ display: "inline-block" }}>{char}</span>
+                    ))}
+                  </span>
+                ))}
+              </p>
+              <p
+                className="font-medium leading-[1.45] mt-4 mb-0"
+                style={{ fontSize: "clamp(1rem, 1.4vw, 1.2rem)", color: "var(--color-cream)" }}
+              >
+                Asegura tu lugar en la Proyección inaugural y tu acceso por día al Programa de Cine e Industria.
+              </p>
+            </div>
             {/* Preventa abierta el 21-oct-2026: antes era el pre-registro (SubscribeCTA). */}
             <a
               href="https://festival-internacional-de-cine-y-creatividad-de-los-cabos.boletia.com/"
