@@ -11,12 +11,13 @@ const aliados = [
   { name: "Grupo Questro", logo: "/images/aliados/2026/02-grupo-questro.png" },
   { name: "Puerto Los Cabos", logo: "/images/aliados/2026/03-puerto-los-cabos.png" },
   { name: "Marina Puerto Los Cabos", logo: "/images/aliados/2026/04-marina-puerto-los-cabos.png" },
+  { name: "Secretaría de Economía", logo: "/images/aliados/2026/secretaria-economia.png", wide: true },
   { name: "Secretaría de Turismo y Economía", logo: "/images/aliados/2026/secretaria-turismo-economia.png" },
   { name: "Comisión Mexicana de Filmaciones", logo: "/images/aliados/2026/comision-mexicana-filmaciones-negro.png" },
   { name: "Asociación de Hoteles de Los Cabos", logo: "/images/aliados/2026/04b-asociacion-hoteles-los-cabos.png" },
   { name: "Hotel El Ganzo", logo: "/images/aliados/2026/05-hotel-el-ganzo.png" },
   { name: "IMCINE", logo: "/images/aliados/2026/06-imcine.png" },
-  { name: "Ciudad Creativa Digital", logo: "/images/aliados/2026/08-ciudad-creativa-digital.png" },
+  { name: "Ciudad Creativa Digital", logo: "/images/aliados/2026/08-ciudad-creativa-digital.png", wide: true },
   { name: "Filma Jalisco", logo: "/images/aliados/2026/07-filma-jalisco.png" },
   { name: "ESCINE", logo: "/images/aliados/2026/09-escine.png" },
   { name: "JW Marriott Los Cabos", logo: "/images/aliados/2026/11-jw-marriott.png" },
@@ -56,7 +57,9 @@ const aliados = [
   { name: "Palmilla Dunes", logo: "/images/aliados/2026/47-palmilla-dunes.png" },
   { name: "ELLE", logo: "/images/aliados/2026/elle.png" },
   { name: "Quién", logo: "/images/aliados/2026/quien.png" },
+  { name: "WIRED", logo: "/images/aliados/2026/wired.png" },
   { name: "Baja Traveler", logo: "/images/aliados/2026/baja-traveler.png" },
+  { name: "The Hollywood Reporter", logo: "/images/aliados/2026/the-hollywood-reporter.png" },
 ];
 const aliadosTrack = [...aliados, ...aliados];
 
@@ -343,8 +346,8 @@ export default function Home() {
         <div className="aliados-carousel">
           <div className="aliados-track">
             {aliadosTrack.map((a, i) => (
-              <div key={`${a.name}-${i}`} className={`aliado-slide${a.name === "Ciudad Creativa Digital" ? " aliado-slide-wide" : ""}`}>
-                <Image src={a.logo} alt={`Logo de ${a.name}, aliado del FICC Los Cabos`} width={320} height={220} sizes={a.name === "Ciudad Creativa Digital" ? "(max-width: 768px) 272px, 416px" : "(max-width: 768px) 320px, 240px"} loading="lazy"
+              <div key={`${a.name}-${i}`} className={`aliado-slide${a.wide ? " aliado-slide-wide" : ""}`}>
+                <Image src={a.logo} alt={`Logo de ${a.name}, aliado del FICC Los Cabos`} width={320} height={220} sizes={a.wide ? "(max-width: 768px) 272px, 416px" : "(max-width: 768px) 320px, 240px"} loading="lazy"
                   style={{ width: "auto", maxHeight: 170, height: "auto", objectFit: "contain" }} />
               </div>
             ))}
