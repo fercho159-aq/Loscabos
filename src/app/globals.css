@@ -6286,6 +6286,10 @@ a:focus-visible .p26-underline,
   object-fit: contain;
   mix-blend-mode: multiply;
 }
+/* Logo compuesto de varias marcas en fila (p. ej. Agencia + CCD + Jalisco). */
+.p26-presented-logo--wide {
+  max-width: min(100%, 480px);
+}
 
 /* ── Detalle: navegación entre eventos ── */
 

@@ -111,7 +111,7 @@ export default async function EventoDetalle({ params }: Props) {
                       alt={brand.name}
                       width={brand.width}
                       height={brand.height}
-                      className="p26-presented-logo"
+                      className={`p26-presented-logo${brand.wide ? " p26-presented-logo--wide" : ""}`}
                     />
                   ))}
                 </div>

@@ -38,7 +38,7 @@ export type Evento = {
   /** Etiqueta sobre los logos; "Presentado por" si se omite. */
   presentedLabel?: string;
   /** Uno o varios logos de quien presenta el evento. */
-  presentedBy?: { name: string; logo: string; width: number; height: number }[];
+  presentedBy?: { name: string; logo: string; width: number; height: number; wide?: boolean }[];
   groups?: PersonaGrupo[];
 };
 
@@ -341,9 +341,10 @@ export const eventos2026: Evento[] = [
     presentedBy: [
       {
         name: "Ciudad Creativa Digital",
-        logo: "/images/programacion-2026/logos/ciudad-creativa-digital.png",
-        width: 539,
-        height: 194,
+        logo: "/images/programacion-2026/logos/ciudad-creativa-digital-jalisco.png",
+        width: 1759,
+        height: 241,
+        wide: true,
       },
       {
         name: "Filma Jalisco",
@@ -381,14 +382,12 @@ export const eventos2026: Evento[] = [
     imageAlt: "Panel de cineastas en una sala de cine",
     accent: "#960942",
     body: [
-      "Cinco voces creativas detrás de dos cortometrajes con reconocimiento internacional: Para los contrincantes, dirigido por Federico Luis y producido por Elena Fortes, y Marga en el DF, dirigido por Gabriela Ortega y producido por Carlos López Estrada y Stacy Perskie.",
-      "Ambas películas han ganado impulso en el circuito internacional de festivales y están desarrollando campañas rumbo al Óscar, convirtiéndose en casos relevantes para explorar cómo el cine independiente, con una identidad creativa propia, construye visibilidad y llega a audiencias de todo el mundo.",
-      "Directores y productores conversarán sobre las alianzas creativas, las estrategias de producción y las relaciones dentro de la industria que permiten que una obra original transite del descubrimiento en festivales al reconocimiento internacional.",
-      "Duración: 30 minutos.",
+      "¿Cómo logra el cine independiente abrirse camino en la industria internacional? Cinco voces creativas detrás de Para los contrincantes, dirigido por Federico Luis y producido por Elena Fortes, y Marga en el DF, dirigido por Gabriela Ortega y producido por Carlos López Estrada y Stacy Perskie, compartirán sus experiencias tras destacar en el circuito internacional de festivales y emprender campañas rumbo al Óscar.",
+      "Una conversación sobre las alianzas creativas, las estrategias de producción y las conexiones dentro de la industria que permiten a las historias originales alcanzar nuevas audiencias y reconocimiento internacional.",
     ],
     groups: [
       {
-        title: "Participan",
+        title: "Panelistas",
         layout: "bio",
         people: [
           {
