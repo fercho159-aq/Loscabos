@@ -365,6 +365,7 @@ export const eventos2026: Evento[] = [
           },
           {
             name: "Alejandro Tavares",
+            image: "/images/programacion-2026/personas/alejandro-tavares.jpg",
             meta: "Director de Filma Jalisco",
           },
         ],
@@ -411,6 +412,7 @@ export const eventos2026: Evento[] = [
           },
           {
             name: "Elena Fortes",
+            image: "/images/programacion-2026/personas/elena-fortes.jpg",
             meta: "Moderadora · Productora de “Para los contrincantes”",
           },
         ],
