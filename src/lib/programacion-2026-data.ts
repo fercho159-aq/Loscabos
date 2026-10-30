@@ -44,8 +44,8 @@ export type Evento = {
 
 
 // Sneak Peek de la edición 2026, en el orden del teaser del 21 de octubre
-// (pestaña "Teaser 21 octubre" del documento del sitio; Insectario va al final
-// por indicación del cliente). Sin fechas: se anuncian
+// (pestaña "Teaser 21 octubre" del documento del sitio), más el conversatorio de
+// Jalisco y el panel de festivales del documento del 29 de octubre. Sin fechas: se anuncian
 // después. Las fotos se generan con `python3 scripts/optimize-programacion.py`;
 // quien todavía no tiene `image` no se pinta.
 export const eventos2026: Evento[] = [
@@ -60,7 +60,7 @@ export const eventos2026: Evento[] = [
     imageAlt: "Greg Rosenbaum, Senior Vice President Programming de SXSW",
     accent: "#BDC957",
     body: [
-      "Evolución de tendencias de contenido durante la última década vista desde SXSW: cine, TV, música, tecnología, comedia y educación · Relación de SXSW con México · Visión hacia 2027.",
+      "¿Cómo han evolucionado las tendencias que están transformando las industrias creativas? A través de la mirada de Rosenbaum (SXSW), exploraremos los cambios más relevantes de la última década en cine, televisión, música, tecnología, comedia y educación, así como la relación del festival con México y las tendencias que marcarán el rumbo hacia 2027.",
     ],
   },
   {
@@ -74,21 +74,19 @@ export const eventos2026: Evento[] = [
     imageAlt: "Diana Segoviano, Coordinadora General de la Comisión Mexicana de Filmaciones",
     accent: "#C47A3D",
     body: [
-      "Una conversación sobre cómo está cambiando la geografía de la producción audiovisual y por qué los territorios se vuelven parte estratégica del proceso creativo y productivo. Qué hace hoy competitivo a un territorio y cómo México puede conectar sus capacidades regionales con la industria global.",
+      "¿Cómo está cambiando el mapa de la producción audiovisual y qué oportunidades representa para México? Una conversación sobre el papel estratégico de los territorios en los procesos creativos y de producción, los factores que hacen competitivo a un destino y cómo México puede aprovechar las capacidades de sus distintas regiones para fortalecer su conexión con la industria audiovisual global.",
     ],
   },
   {
     slug: "homenaje-dolores-heredia",
-    title: "Homenaje 2026 FICCLosCabos — Dolores Heredia",
-    cardTitle: "Homenaje 2026 — Dolores Heredia",
+    title: "Homenaje 2026 — Dolores Heredia",
     venue: "Cinépolis San José del Cabo | Sala 8",
     image: "/images/programacion-2026/homenaje-dolores-heredia.jpg",
     imageAlt: "Dolores Heredia, homenajeada de FICCLosCabos 2026",
     accent: "#FA6935",
     body: [
-      "FICCLosCabos 2026 rinde homenaje a Dolores Heredia, una de las actrices más representativas del cine mexicano contemporáneo, cuya trayectoria se distingue por su versatilidad, sensibilidad artística y compromiso con la cinematografía nacional.",
-      "A través de una remembranza audiovisual de 15 minutos de su vida y obra, celebraremos su contribución al cine, su capacidad para dar vida a personajes memorables y su vínculo con Baja California Sur, territorio que forma parte de su identidad.",
-      "La ceremonia culminará con la entrega del reconocimiento a su trayectoria artística.",
+      "FICCLosCabos 2026 rinde homenaje a Dolores Heredia, una de las actrices más representativas del cine mexicano contemporáneo.",
+      "Presentado por José María Yazpik, este encuentro celebrará su trayectoria artística a través de una retrospectiva audiovisual de su vida y obra, recordando algunos de los momentos más significativos de su carrera y su vínculo con Baja California Sur.",
     ],
   },
   {
@@ -102,7 +100,7 @@ export const eventos2026: Evento[] = [
     imageAlt: "Claudio Jiménez, fundador de Mighty Studios",
     accent: "#E9B0BD",
     body: [
-      "La animación, la IA y el storytelling como las tendencias que están redefiniendo la manera de contar historias.",
+      "¿Cómo están evolucionando las formas de contar historias? Claudio Jiménez, fundador de Mighty Animation, explorará cómo la animación, la inteligencia artificial y el storytelling están transformando los procesos creativos y abriendo nuevas posibilidades para desarrollar historias y experimentar con distintos formatos de contenido.",
     ],
   },
   {
@@ -146,8 +144,8 @@ export const eventos2026: Evento[] = [
       {
         name: "The Hollywood Reporter",
         logo: "/images/programacion-2026/logos/the-hollywood-reporter.png",
-        width: 527,
-        height: 124,
+        width: 621,
+        height: 146,
       },
       {
         name: "Quién",
@@ -190,8 +188,7 @@ export const eventos2026: Evento[] = [
     imageAlt: "Fotograma de un cortometraje del panel The Next Wave",
     accent: "#6687C3",
     body: [
-      "El Festival presenta The Next Wave: Emerging Filmmakers: un panel de cineastas emergentes de América Latina cuyo trabajo define el lenguaje audiovisual de la próxima generación.",
-      "Moderado por Carlos López Estrada, cineasta mexicano nominado al Oscar cuyo debut Blindspotting abrió el Sundance Film Festival 2018, co-director de Raya and the Last Dragon de Disney y fundador de Antigravity Academy, plataforma dedicada a impulsar cineastas emergentes. El panel reúne a diez cineastas emergentes de América Latina con presencia en Sundance, Cannes, Berlín y SXSW.",
+      "Conoce a los 11 cineastas emergentes de América Latina que forman parte de The Next Wave, un programa dedicado a impulsar nuevas voces del cine latinoamericano. En su presentación oficial, descubriremos a los talentos seleccionados y sus perspectivas creativas a través de un encuentro moderado por Carlos López Estrada.",
     ],
     presentedBy: [
       {
@@ -288,13 +285,12 @@ export const eventos2026: Evento[] = [
     cardTitle: "Keynote — Jim Kolmar",
     cardCredit: true,
     venue: "Hotel El Ganzo — Rooftop",
-    credit: "Jim Kolmar · Programador SXSW",
+    credit: "Jim Kolmar · Curador y programador cinematográfico internacional - SXSW Film & TV",
     image: "/images/programacion-2026/keynote-jim-kolmar.jpg",
-    imageAlt: "Jim Kolmar, programador de SXSW",
+    imageAlt: "Jim Kolmar, curador y programador de SXSW Film & TV",
     accent: "#081722",
     body: [
-      "Jim Kolmar, Programador de SXSW desde 2009, comparte cómo llega una película a un festival y qué buscan quienes la seleccionan.",
-      "Su trabajo acompañando a cineastas emergentes, revisando cortes y guiones con la mirada de un programador, convierte este keynote en una guía directa para quienes buscan llevar su película al circuito de festivales.",
+      "Desde su experiencia en el circuito internacional de festivales, Jim Kolmar compartirá las claves para presentar una película ante los equipos de programación, entender los criterios de selección y desarrollar estrategias que aumenten sus oportunidades de formar parte de festivales y llegar a nuevas audiencias.",
     ],
   },
   {
@@ -305,7 +301,7 @@ export const eventos2026: Evento[] = [
     imageAlt: "Fotograma de la cinta animada Insectario",
     accent: "#006666",
     body: [
-      "Work-in-Progress y caso de estudio de la cinta Insectario. Con la directora Sofía Carrillo y el coproductor Matīss Kaža (Letonia).",
+      "Un acercamiento al proceso creativo y de producción de Insectario a través de un caso de estudio presentado por su directora, Sofía Carrillo, y su coproductor, Matīss Kaža (Letonia). Una conversación para conocer el desarrollo de la película, sus desafíos creativos y la experiencia de colaboración internacional detrás del proyecto.",
     ],
     groups: [
       {
@@ -321,6 +317,102 @@ export const eventos2026: Evento[] = [
             name: "Matīss Kaža",
             image: "/images/programacion-2026/personas/matiss-kaza.jpg",
             meta: "Coproductor · Letonia",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "conversatorio-ciudad-creativa-digital-filma-jalisco",
+    title:
+      "Conversatorio — *De la idea a la industria: Cómo funcionan Ciudad Creativa Digital y Filma Jalisco y qué oportunidades ofrecen a la comunidad creativa nacional e internacional desde Jalisco*",
+    cardTitle: "Conversatorio — Ciudad Creativa Digital y Filma Jalisco",
+    venue: "Cinépolis San José del Cabo | Sala 8",
+    credit:
+      "Alfredo Aceves · Presidente del Fideicomiso de Ciudad Creativa Digital y Alejandro Tavares · Director de Filma Jalisco",
+    image: "/images/programacion-2026/keynote-alfredo-aceves.jpg",
+    imageAlt: "Alfredo Aceves, Presidente del Fideicomiso de Ciudad Creativa Digital",
+    accent: "#FA6935",
+    body: [
+      "¿Qué oportunidades ofrece Jalisco a los profesionales de las industrias creativas y audiovisuales? Una conversación para conocer de cerca el trabajo de Ciudad Creativa Digital y FILMA Jalisco, los apoyos y recursos que ofrecen a creadores y empresas y cómo acceder a ellos. Abordaremos también cómo profesionales de otros estados y del extranjero pueden aprovechar estas iniciativas para desarrollar sus proyectos y generar nuevas colaboraciones.",
+      "Ciudad Creativa Digital reúne empresas, espacios, formación y disciplinas como animación, videojuegos, software y producción audiovisual. Filma Jalisco trabaja con estímulos, promoción y acompañamiento a la actividad audiovisual.",
+    ],
+    presentedLabel: "En colaboración con",
+    presentedBy: [
+      {
+        name: "Ciudad Creativa Digital",
+        logo: "/images/programacion-2026/logos/ciudad-creativa-digital.png",
+        width: 539,
+        height: 194,
+      },
+      {
+        name: "Filma Jalisco",
+        logo: "/images/programacion-2026/logos/filma-jalisco.png",
+        width: 587,
+        height: 140,
+      },
+    ],
+    groups: [
+      {
+        title: "Participan",
+        layout: "bio",
+        people: [
+          {
+            name: "Alfredo Aceves",
+            image: "/images/programacion-2026/personas/alfredo-aceves.jpg",
+            meta: "Presidente del Fideicomiso de Ciudad Creativa Digital",
+          },
+          {
+            name: "Alejandro Tavares",
+            meta: "Director de Filma Jalisco",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "panel-del-circuito-de-festivales",
+    title:
+      "Panel — *Del circuito de festivales al reconocimiento internacional: nuevos caminos para el cine independiente*",
+    cardTitle: "Panel — Del circuito de festivales al reconocimiento internacional",
+    venue: "Cinépolis San José del Cabo | Sala 8",
+    credit: "Modera: Elena Fortes · Productora de Para los contrincantes",
+    image: "/images/programacion-2026/panel-the-next-wave.jpg",
+    imageAlt: "Panel de cineastas en una sala de cine",
+    accent: "#960942",
+    body: [
+      "Cinco voces creativas detrás de dos cortometrajes con reconocimiento internacional: Para los contrincantes, dirigido por Federico Luis y producido por Elena Fortes, y Marga en el DF, dirigido por Gabriela Ortega y producido por Carlos López Estrada y Stacy Perskie.",
+      "Ambas películas han ganado impulso en el circuito internacional de festivales y están desarrollando campañas rumbo al Óscar, convirtiéndose en casos relevantes para explorar cómo el cine independiente, con una identidad creativa propia, construye visibilidad y llega a audiencias de todo el mundo.",
+      "Directores y productores conversarán sobre las alianzas creativas, las estrategias de producción y las relaciones dentro de la industria que permiten que una obra original transite del descubrimiento en festivales al reconocimiento internacional.",
+      "Duración: 30 minutos.",
+    ],
+    groups: [
+      {
+        title: "Participan",
+        layout: "bio",
+        people: [
+          {
+            name: "Federico Luis",
+            image: "/images/programacion-2026/personas/federico-luis.jpg",
+            meta: "Director de “Para los contrincantes”",
+          },
+          {
+            name: "Gabriela Ortega",
+            image: "/images/programacion-2026/personas/gabriela-ortega.jpg",
+            meta: "Directora de “Marga en el DF”",
+          },
+          {
+            name: "Carlos López Estrada",
+            image: "/images/programacion-2026/personas/carlos-lopez-estrada.jpg",
+            meta: "Productor de “Marga en el DF” · Fundador de Antigravity Academy",
+          },
+          {
+            name: "Stacy Perskie",
+            meta: "Productor de “Marga en el DF” · Fundador de REDRUM",
+          },
+          {
+            name: "Elena Fortes",
+            meta: "Moderadora · Productora de “Para los contrincantes”",
           },
         ],
       },
