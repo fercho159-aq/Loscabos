@@ -330,8 +330,8 @@ export const eventos2026: Evento[] = [
     venue: "Cinépolis San José del Cabo | Sala 8",
     credit:
       "Alfredo Aceves · Presidente del Fideicomiso de Ciudad Creativa Digital y Alejandro Tavares · Director de Filma Jalisco",
-    image: "/images/programacion-2026/keynote-alfredo-aceves.jpg",
-    imageAlt: "Alfredo Aceves, Presidente del Fideicomiso de Ciudad Creativa Digital",
+    image: "/images/programacion-2026/conversatorio-ciudad-creativa-digital-filma-jalisco.jpg",
+    imageAlt: "Rodaje en un foro con pantalla verde",
     accent: "#FA6935",
     body: [
       "¿Qué oportunidades ofrece Jalisco a los profesionales de las industrias creativas y audiovisuales? Una conversación para conocer de cerca el trabajo de Ciudad Creativa Digital y FILMA Jalisco, los apoyos y recursos que ofrecen a creadores y empresas y cómo acceder a ellos. Abordaremos también cómo profesionales de otros estados y del extranjero pueden aprovechar estas iniciativas para desarrollar sus proyectos y generar nuevas colaboraciones.",
