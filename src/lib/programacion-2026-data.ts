@@ -379,8 +379,8 @@ export const eventos2026: Evento[] = [
     cardTitle: "Panel — Del circuito de festivales al reconocimiento internacional",
     venue: "Cinépolis San José del Cabo | Sala 8",
     credit: "Modera: Elena Fortes · Productora de Para los contrincantes",
-    image: "/images/programacion-2026/panel-the-next-wave.jpg",
-    imageAlt: "Panel de cineastas en una sala de cine",
+    image: "/images/programacion-2026/panel-del-circuito-de-festivales.jpg",
+    imageAlt: "Pósters de los cortometrajes Para los contrincantes y Marga en el DF",
     accent: "#960942",
     body: [
       "¿Cómo logra el cine independiente abrirse camino en la industria internacional? Cinco voces creativas detrás de Para los contrincantes, dirigido por Federico Luis y producido por Elena Fortes, y Marga en el DF, dirigido por Gabriela Ortega y producido por Carlos López Estrada y Stacy Perskie, compartirán sus experiencias tras destacar en el circuito internacional de festivales y emprender campañas rumbo al Óscar.",
@@ -408,6 +408,7 @@ export const eventos2026: Evento[] = [
           },
           {
             name: "Stacy Perskie",
+            image: "/images/programacion-2026/personas/stacy-perskie.jpg",
             meta: "Productor de “Marga en el DF” · Fundador de REDRUM",
           },
           {
