@@ -6,7 +6,7 @@ import { useSyncExternalStore } from "react";
    de Los Cabos (UTC-7). Mismo patrón que FFGFConvocatoriaCTA: se resuelve en
    el cliente para no romper la hidratación.
    - Hasta el 30 de octubre (23:59): "Aplica ahora" a FilmFreeway.
-   - A partir del 31 de octubre: convocatoria cerrada.
+   - A partir del 31 de octubre: convocatoria cerrada, sin enlace a las bases.
 */
 const CLOSE_AT = Date.parse("2026-10-30T23:59:59-07:00");
 const FORM_URL: string | null = "https://filmfreeway.com/FICCLosCabos";
@@ -62,9 +62,11 @@ export default function FoNConvocatoriaCTA() {
       {phase === "open" && !FORM_URL && (
         <span className="fon-cta-note">El enlace de aplicación se publicará muy pronto</span>
       )}
-      <a href={CONVOCATORIA_URL} target="_blank" rel="noopener noreferrer" className="fon-cta-link">
-        Descargar convocatoria
-      </a>
+      {phase === "open" && (
+        <a href={CONVOCATORIA_URL} target="_blank" rel="noopener noreferrer" className="fon-cta-link">
+          Descargar convocatoria
+        </a>
+      )}
     </div>
   );
 }
