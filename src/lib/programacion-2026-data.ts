@@ -65,7 +65,7 @@ export const eventos2026: Evento[] = [
   },
   {
     slug: "keynote-diana-segoviano",
-    title: "Keynote — *The New Geography of Content, Filmar en México: el territorio como infraestructura de producción*",
+    title: "Keynote — *Filmar en México: el territorio como infraestructura de producción*",
     cardTitle: "Keynote — Diana Segoviano",
     cardCredit: true,
     venue: "Cinépolis San José del Cabo | Sala 8",
@@ -325,7 +325,7 @@ export const eventos2026: Evento[] = [
   {
     slug: "conversatorio-ciudad-creativa-digital-filma-jalisco",
     title:
-      "Conversatorio — *De la idea a la industria: Cómo funcionan Ciudad Creativa Digital y Filma Jalisco y qué oportunidades ofrecen a la comunidad creativa nacional e internacional desde Jalisco*",
+      "Conversatorio — *De la idea a la industria*",
     cardTitle: "Conversatorio — Ciudad Creativa Digital y Filma Jalisco",
     venue: "Cinépolis San José del Cabo | Sala 8",
     credit:
@@ -334,8 +334,10 @@ export const eventos2026: Evento[] = [
     imageAlt: "Rodaje en un foro con pantalla verde",
     accent: "#FA6935",
     body: [
-      "¿Qué oportunidades ofrece Jalisco a los profesionales de las industrias creativas y audiovisuales? Una conversación para conocer de cerca el trabajo de Ciudad Creativa Digital y FILMA Jalisco, los apoyos y recursos que ofrecen a creadores y empresas y cómo acceder a ellos. Abordaremos también cómo profesionales de otros estados y del extranjero pueden aprovechar estas iniciativas para desarrollar sus proyectos y generar nuevas colaboraciones.",
-      "Ciudad Creativa Digital reúne empresas, espacios, formación y disciplinas como animación, videojuegos, software y producción audiovisual. Filma Jalisco trabaja con estímulos, promoción y acompañamiento a la actividad audiovisual.",
+      "¿Qué oportunidades ofrece Jalisco a los profesionales de las industrias creativas y audiovisuales? Una conversación para conocer de cerca el trabajo de Ciudad Creativa Digital y FILMA Jalisco, los apoyos y recursos que ofrecen a creadores y empresas y cómo acceder a ellos.",
+      "Abordaremos también cómo profesionales de otros estados y del extranjero pueden aprovechar estas iniciativas para desarrollar sus proyectos y generar nuevas colaboraciones.",
+      "Ciudad Creativa Digital, el hub de innovación, tecnología e industrias creativas de Jalisco. Reúne estudios, laboratorios, proyectos de innovación y espacios de formación en un mismo ecosistema.",
+      "Filma Jalisco representa una nueva generación de comisiones fílmicas, ayuda a facilitar producciones, articula creadores, industria, instituciones, incentivos e infraestructura, para hacer las capacidades de Jalisco visibles y accesibles a productores nacionales e internacionales.",
     ],
     presentedLabel: "En colaboración con",
     presentedBy: [
@@ -362,11 +364,13 @@ export const eventos2026: Evento[] = [
             name: "Alfredo Aceves",
             image: "/images/programacion-2026/personas/alfredo-aceves.jpg",
             meta: "Presidente del Fideicomiso de Ciudad Creativa Digital",
+            bio: "Dirige la Agencia para el Desarrollo de las Industrias Creativas y Digitales de Jalisco y preside la Junta de Gobierno de PLAi, desde donde impulsa iniciativas de innovación, tecnología y desarrollo económico.",
           },
           {
             name: "Alejandro Tavares",
             image: "/images/programacion-2026/personas/alejandro-tavares.jpg",
             meta: "Director de Filma Jalisco",
+            bio: "Comunicador, productor y gestor cultural con más de tres décadas de trayectoria. Dirigió el Sistema Jalisciense de Radio y Televisión entre 2018 y 2024, y desde 2025 encabeza Filma Jalisco.",
           },
         ],
       },

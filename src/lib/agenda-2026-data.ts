@@ -197,7 +197,7 @@ export const agenda2026: AgendaDay[] = [
               line(
                 t("Keynote — "),
                 i(
-                  "The New Geography of Content, Filmar en México: el territorio como infraestructura de producción",
+                  "Filmar en México: el territorio como infraestructura de producción",
                 ),
                 t("\u00A0|"),
               ),
