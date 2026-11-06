@@ -5928,6 +5928,9 @@ body {
   color: var(--color-navy);
 }
 
+/* Índice de Programación: fondo gris cálido pedido por el cliente (6-nov). */
+.p26-page { background: #D9D4CD; }
+
 /* Subrayado que se dibuja al hover — el gesto `animated-underline` de la
    referencia, aquí con el acento del evento. */
 .p26-underline {

@@ -343,6 +343,7 @@ export const peliculas2026: Pelicula2026[] = [
     "year": "2026",
     "duration": "71’",
     "synopsis": "Cada Navidad en Penjamillo, Michoacán, el jaripeo anual atrae tanto a los habitantes locales como a los migrantes que regresan desde Estados Unidos para celebrar lo que significa ser un vaquero michoacano. El evento evoca nostalgia y refuerza las normas culturales, recordando a la diáspora \"lo que significa ser un hombre\" en la sociedad rural mexicana.\n\nDebajo del espectáculo del jaripeo, se desenvuelve otra narrativa: toques fugaces, miradas cómplices y encuentros secretos en los arbolados detrás de la plaza de toros. Estos momentos revelan una subcultura queer oculta que nace de este mismo entorno. El cineasta Efraín, quien creció entre Penjamillo y Riverside, California, nos guía a través de este mundo, combinando la experiencia personal con una narrativa llena de matices. Mediante una mezcla de metraje en Super-8, recuerdos estilizados y un crudo estilo verité, se cuestiona e interroga al mismo machismo que el jaripeo enaltece.\n\nEn el jaripeo navideño, Efraín conoce a nuestros otros dos protagonistas: Noé, un vaquero macho y codiciado que, aunque ha salido del clóset con algunos miembros de su familia, aún vive mayoritariamente en secreto; y Joseph, una diva extravagante y aficionada de corazón al jaripeo, quien es un pilar muy querido en su comunidad. Acompañamos a Efraín en un viaje para reconocerse a sí mismo, mientras sus interacciones con los demás protagonistas trazan retratos ricos y complejos de la vida de cada uno de ellos.",
+    "image": "/images/seleccion-oficial-2026/jaripeo-still.jpg",
     "poster": "/images/seleccion-oficial-2026/jaripeo-poster.jpg",
     "trailerUrl": "https://drive.google.com/file/d/1Ln4kq6qhaI0UIMn8LyWPuqomUppDuERN/view?usp=drive_link"
   },
@@ -355,6 +356,7 @@ export const peliculas2026: Pelicula2026[] = [
     "year": "2026",
     "duration": "65’",
     "synopsis": "Silvestre, un cansado y derrotado director de cine, va de camino a encontrarse con “Ricky”, un posible inversionista interesado en su más reciente guión cinematográfico. Nadie conoce o ha visto al enigmático “Ricky”, pero si hay algo que se sabe de él es que tiene dinero de sobra y una especial afinidad por las artes. De camino, un ranchero de nombre “Silverio” decide darle aventón a su destino, y de paso aprovecha para contarle a Silvestre acerca de su increíble idea para una película de comedia. Silvestre, cansado, le dice que no tiene interés en su historia. Al llegar a la casa de Ricky, un gran festejo que comienza a doblar las líneas entre realidad y ficción hace que Silvestre se confronte con sus decisiones pasadas y cuestione si en verdad tiene lo necesario para ser compararse con los grandes directores de antaño.",
+    "image": "/images/seleccion-oficial-2026/la-peluca-still.jpg",
     "poster": "/images/seleccion-oficial-2026/la-peluca-poster.jpg",
     "trailerUrl": "https://drive.google.com/file/d/1X8uAQdFgeQG4FrMNvL2a3Mk4gwNDlyA_/view?usp=drive_link"
   },

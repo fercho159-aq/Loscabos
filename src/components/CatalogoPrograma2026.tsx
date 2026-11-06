@@ -17,7 +17,7 @@ export default function CatalogoPrograma2026({ categoryId, title, preview = true
     <>
       <Navbar />
       <main style={{ paddingTop: "7rem" }}>
-        <Programacion2026Tabs active={categoryId} preview={preview} />
+        <Programacion2026Tabs active={categoryId} preview={preview} gray />
         <SeleccionOficial2026 title={title ?? categories[0].label} categories={categories} catalog={catalog} filmBase={preview ? PREVIEW_FILM_BASE : PUBLIC_FILM_BASE} />
       </main>
       <Footer />
