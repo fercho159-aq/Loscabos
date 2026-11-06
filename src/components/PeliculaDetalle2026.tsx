@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { categorias2026, peliculas2026, programasPublicos2026, getProgramaPelicula2026, PREVIEW_FILM_BASE, PREVIEW_SELECTION_URL, PUBLIC_FILM_BASE, type Pelicula2026 } from "@/lib/seleccion-oficial-2026-data";
+import { categorias2026, peliculas2026, peliculasPublicas2026, programasPublicos2026, getProgramaPelicula2026, PREVIEW_FILM_BASE, PREVIEW_SELECTION_URL, PUBLIC_FILM_BASE, type Pelicula2026 } from "@/lib/seleccion-oficial-2026-data";
 import PeliculaPresentadaPor from "@/components/PeliculaPresentadaPor";
 import { getTrailerEmbedUrl } from "@/lib/trailer-embed";
 import styles from "./PeliculaDetalle2026.module.css";
@@ -16,9 +16,10 @@ export default function PeliculaDetalle2026({ film, preview = true }: { film: Pe
   const catalogTitle = programa?.title || "Selección oficial";
   const trailer = getTrailerEmbedUrl(film.trailerUrl);
   const trailerLabel = film.trailerLabel || "Tráiler";
+  const films = preview ? peliculas2026 : peliculasPublicas2026;
   const navigationFilms = programa
-    ? peliculas2026.filter((item) => programa.categoryIds.includes(item.categoryId))
-    : peliculas2026;
+    ? films.filter((item) => programa.categoryIds.includes(item.categoryId))
+    : films;
   const index = navigationFilms.findIndex((item) => item.slug === film.slug);
   const previous = navigationFilms[index - 1];
   const next = navigationFilms[index + 1];
@@ -43,10 +44,9 @@ export default function PeliculaDetalle2026({ film, preview = true }: { film: Pe
         <div className={styles.content}>
           <aside className={styles.sidebar} aria-label="Ficha técnica">
             <dl className={styles.facts}>
-              <div><dt>Dirección</dt><dd>{film.directors}</dd></div>
-              <div><dt>País</dt><dd>{film.countries}</dd></div>
-              <div><dt>Año</dt><dd>{film.year}</dd></div>
-              <div><dt>Duración</dt><dd>{film.duration}</dd></div>
+              {([["Dirección", film.directors], ["País", film.countries], ["Año", film.year], ["Duración", film.duration]] as const)
+                .filter(([, value]) => value)
+                .map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
             </dl>
           </aside>
           <div className={styles.synopsis}>

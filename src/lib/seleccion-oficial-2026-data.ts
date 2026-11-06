@@ -25,8 +25,18 @@ export const programasPeliculas2026 = [
   { id: "next-wave", title: "The Next Wave — Emerging Filmmakers Panel", href: "/programacion-2026-preview/panel-the-next-wave", categoryIds: ["next-wave"] },
 ];
 
-// La publicación del 14 de octubre se canceló; los catálogos siguen en el preview.
-export const programasPublicos2026: typeof programasPeliculas2026 = [];
+// Liberados el 6 de noviembre de 2026: Animación y parte de la Selección oficial.
+export const programasPublicos2026 = programasPeliculas2026
+  .filter((programa) => programa.id === "animacion" || programa.id === "seleccion")
+  .map((programa) => ({ ...programa, href: programa.href.replace("/programacion-2026-preview", "/programacion-2026") }));
+
+// De la Selección oficial solo se liberan estas películas; el resto sigue en el preview.
+export const peliculasSeleccionLiberadas2026 = [
+  "6-meses-en-el-edificio-rosa-con-azul",
+  "hijas-del-bosque",
+  "jaripeo",
+  "la-peluca",
+];
 
 // Selección Oficial 2026: contenido y materiales proporcionados en el documento.
 // https://docs.google.com/document/d/1e56bhRB7ubZZOMVvUfl_ZXcR5tYcK8T77ctQyn6hbRc/edit?tab=t.u81o9exgnzci
@@ -79,7 +89,9 @@ export const peliculas2026: Pelicula2026[] = [
     "year": "2026",
     "duration": "104’",
     "synopsis": "Cuando Bruno cumple 11 años, se enamora de su mejor amigo Vladimir. Esa noche, al padre de Bruno le diagnostican VIH. Tras la noticia, la dinámica familiar empieza a cambiar de forma inesperada, tierna y liberadora.",
-    "image": "/images/seleccion-oficial-2026/6-meses-en-el-edificio-rosa-con-azul-still.jpg"
+    "image": "/images/seleccion-oficial-2026/6-meses-en-el-edificio-rosa-con-azul-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/6-meses-en-el-edificio-rosa-con-azul-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/11Q8HlH76B4NOLT52-QpjC-KiTvFsXsFI/view?usp=drive_link"
   },
   {
     "slug": "albatross",
@@ -167,6 +179,15 @@ export const peliculas2026: Pelicula2026[] = [
     "trailerUrl": "https://drive.google.com/file/d/1akamxtWBPhQQ52GfhCqz8QBWoxJ8AA_Z/view?usp=drive_link"
   },
   {
+    "slug": "cameron-winter-at-carnegie-hall",
+    "title": "Cameron Winter At Carnegie Hall",
+    "categoryId": "marejada-internacional",
+    "directors": "Paul Thomas Anderson",
+    "countries": "",
+    "year": "",
+    "duration": ""
+  },
+  {
     "slug": "circo-de-loy",
     "title": "Circo de Loy",
     "categoryId": "next-wave",
@@ -204,6 +225,17 @@ export const peliculas2026: Pelicula2026[] = [
     "image": "/images/seleccion-oficial-2026/dolores-still.jpg",
     "poster": "/images/seleccion-oficial-2026/dolores-poster.jpg",
     "trailerUrl": "https://drive.google.com/file/d/15Vmz_e8Ro0yyjgnZy4oq0ii-EJdC1OKz/view?usp=drive_link"
+  },
+  {
+    "slug": "elsinore",
+    "title": "Elsinore",
+    "categoryId": "marejada-internacional",
+    "directors": "Simon Stone",
+    "countries": "",
+    "year": "",
+    "duration": "",
+    "image": "/images/seleccion-oficial-2026/elsinore-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/elsinore-poster.jpg"
   },
   {
     "slug": "fiesta-en-la-mision",
@@ -249,7 +281,7 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2026",
     "duration": "95’",
-    "synopsis": "HIJAS DEL BOSQUE entrelaza conocimiento generacional y ciencia occidental, lo visible y lo invisible, lo humano y lo no humano. Con destellos de ciencia ficción este documental sigue a Eliseete y Julieta, dos jóvenes biólogas del Estado de México y Oaxaca que mantienen una relación profunda con los hongos. Entre la deforestación y la falta de oportunidades, sus vidas, guiadas por el micelio, reflejan nuevas posibilidades de coexistencia en tiempos de crisis.",
+    "synopsis": "Hijas del bosque entrelaza conocimiento generacional y ciencia occidental, lo visible y lo invisible, lo humano y lo no humano. Con destellos de ciencia ficción este documental sigue a Eliseete y Julieta, dos jóvenes biólogas del Estado de México y Oaxaca que mantienen una relación profunda con los hongos. Entre la deforestación y la falta de oportunidades, sus vidas, guiadas por el micelio, reflejan nuevas posibilidades de coexistencia en tiempos de crisis.",
     "image": "/images/seleccion-oficial-2026/hijas-del-bosque-still.jpg",
     "poster": "/images/seleccion-oficial-2026/hijas-del-bosque-poster.jpg",
     "trailerUrl": "https://drive.google.com/file/d/1eIZGAugqs3uEySA_IgIVjYb5eUhcTjHC/view?usp=drive_link"
@@ -262,7 +294,7 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "Irán",
     "year": "2026",
     "duration": "76’",
-    "synopsis": "El vasto archivo de objetos encontrados y documentos históricos no oficiales del artista iraní Nasser Bakhshi preserva la memoria colectiva en Tabriz. Las pinturas surrealistas de su pareja Roghayeh Najdi abordan el papel de la mujer en la sociedad iraní.",
+    "synopsis": "Ambientada entre Tabriz y Teherán en las semanas previas al conflicto posterior entre Irán, Israel y Estados Unidos tras la Guerra de los Doce Días, esta película sigue a dos artistas iraníes cuyas vidas se han vuelto inseparables de un vasto archivo privado reunido a lo largo de décadas: fotografías, documentos, objetos desechados y rastros de vidas anónimas. En un punto intermedio entre el coleccionismo, la acumulación, la conservación y la obsesión, han creado un museo improvisado de vidas olvidadas, donde trabajadoras sexuales, jóvenes soldados, niños trabajadores y familias comunes emergen a través de álbumes abandonados, pertenencias deterioradas y fragmentos de memoria relegados por la historia.",
     "image": "/images/seleccion-oficial-2026/i-deserve-a-lover-whose-every-rise-sets-fiery-dooms-raging-across-the-skies-still.jpg",
     "poster": "/images/seleccion-oficial-2026/i-deserve-a-lover-whose-every-rise-sets-fiery-dooms-raging-across-the-skies-poster.jpg",
     "trailerUrl": "https://drive.google.com/file/d/1WK1OZxD-yUKGqXQauzk_BZeex263KPbr/view?usp=drive_link"
@@ -310,7 +342,9 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México, Estados Unidos",
     "year": "2026",
     "duration": "71’",
-    "synopsis": "Un viaje a los jaripeos hipermasculinos de Michoacán desciende al subconsciente de la memoria, el deseo queer y la añoranza. Un ajuste de cuentas con las heridas y la belleza de un hogar dejado atrás."
+    "synopsis": "Cada Navidad en Penjamillo, Michoacán, el jaripeo anual atrae tanto a los habitantes locales como a los migrantes que regresan desde Estados Unidos para celebrar lo que significa ser un vaquero michoacano. El evento evoca nostalgia y refuerza las normas culturales, recordando a la diáspora \"lo que significa ser un hombre\" en la sociedad rural mexicana.\n\nDebajo del espectáculo del jaripeo, se desenvuelve otra narrativa: toques fugaces, miradas cómplices y encuentros secretos en los arbolados detrás de la plaza de toros. Estos momentos revelan una subcultura queer oculta que nace de este mismo entorno. El cineasta Efraín, quien creció entre Penjamillo y Riverside, California, nos guía a través de este mundo, combinando la experiencia personal con una narrativa llena de matices. Mediante una mezcla de metraje en Super-8, recuerdos estilizados y un crudo estilo verité, se cuestiona e interroga al mismo machismo que el jaripeo enaltece.\n\nEn el jaripeo navideño, Efraín conoce a nuestros otros dos protagonistas: Noé, un vaquero macho y codiciado que, aunque ha salido del clóset con algunos miembros de su familia, aún vive mayoritariamente en secreto; y Joseph, una diva extravagante y aficionada de corazón al jaripeo, quien es un pilar muy querido en su comunidad. Acompañamos a Efraín en un viaje para reconocerse a sí mismo, mientras sus interacciones con los demás protagonistas trazan retratos ricos y complejos de la vida de cada uno de ellos.",
+    "poster": "/images/seleccion-oficial-2026/jaripeo-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/1Ln4kq6qhaI0UIMn8LyWPuqomUppDuERN/view?usp=drive_link"
   },
   {
     "slug": "la-peluca",
@@ -321,7 +355,8 @@ export const peliculas2026: Pelicula2026[] = [
     "year": "2026",
     "duration": "65’",
     "synopsis": "Silvestre, un cansado y derrotado director de cine, va de camino a encontrarse con “Ricky”, un posible inversionista interesado en su más reciente guión cinematográfico. Nadie conoce o ha visto al enigmático “Ricky”, pero si hay algo que se sabe de él es que tiene dinero de sobra y una especial afinidad por las artes. De camino, un ranchero de nombre “Silverio” decide darle aventón a su destino, y de paso aprovecha para contarle a Silvestre acerca de su increíble idea para una película de comedia. Silvestre, cansado, le dice que no tiene interés en su historia. Al llegar a la casa de Ricky, un gran festejo que comienza a doblar las líneas entre realidad y ficción hace que Silvestre se confronte con sus decisiones pasadas y cuestione si en verdad tiene lo necesario para ser compararse con los grandes directores de antaño.",
-    "poster": "/images/seleccion-oficial-2026/la-peluca-poster.jpg"
+    "poster": "/images/seleccion-oficial-2026/la-peluca-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/1X8uAQdFgeQG4FrMNvL2a3Mk4gwNDlyA_/view?usp=drive_link"
   },
   {
     "slug": "la-pena-no-duerme-de-noche",
@@ -418,7 +453,7 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2026",
     "duration": "182’",
-    "synopsis": "Crónica del hito histórico de Zoé al reunir a más de 380 000 personas en seis conciertos en el Estadio GNP de la Ciudad de México, un evento sin precedentes que celebra la vigencia de la banda y su profunda conexión con varias generaciones de fans.",
+    "synopsis": "Seis Estadios GNP en la Ciudad de México. Más de 380 000 almas. Lo que ocurrió a lo largo de esas seis noches fue mucho más que un récord sin precedentes para el rock mexicano; fue un encuentro histórico e íntimo entre una banda que ha sido la banda sonora de universos enteros y una fanbase multigeneracional más devota que nunca. Esta es la historia de lo que vibró sobre el escenario y de lo que quedó guardado en los corazones de los fans: un desglose sin filtros del magnetismo absoluto, la nostalgia y la vigencia indiscutible de Zoé.",
     "image": "/images/seleccion-oficial-2026/memorex-rexsexex-y-mas-still.jpg",
     "poster": "/images/seleccion-oficial-2026/memorex-rexsexex-y-mas-poster.jpg",
     "trailerUrl": "https://youtu.be/BxWh4K6EtVc?si=IpOJy3MKADqV66VA"
@@ -467,7 +502,7 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "Japón",
     "year": "2026",
     "duration": "110’",
-    "synopsis": "En la Okayama rural, la escultora Yoriko lidia con un duelo sin resolver hasta que su amiga Yuri, arquitecta de Tokio/Taiwán, llega para posar para su arte."
+    "synopsis": "Yoriko, una artista que vive en el entorno rural de Nagi, vive atormentada por un viejo amor que no se atreve a llorar. Cuando Yuri, una arquitecta recién separada, viaja desde Tokio para visitar a su amiga y excuñada, ambas mujeres se encuentran en una encrucijada, buscando la manera de dejar ir el pasado y definir sus propias identidades. La breve escapada de Yuri de la ciudad se convierte en una silenciosa confrontación con la pérdida y en una introspección compartida en la bucólica Nagi."
   },
   {
     "slug": "nina-roza",
@@ -562,16 +597,6 @@ export const peliculas2026: Pelicula2026[] = [
     "year": "2026",
     "duration": "95’",
     "synopsis": "Pegah Ahangarani traza su vida a través de cinco retratos de familiares y mentores. Utilizando archivos personales, videos caseros, protestas y periódicos, relata más de 40 años de historia iraní desde 1979 hasta 2026."
-  },
-  {
-    "slug": "santitos",
-    "title": "Santitos",
-    "categoryId": "marejada-nacional",
-    "directors": "Alejandro Springall",
-    "countries": "México",
-    "year": "1999",
-    "duration": "110’",
-    "synopsis": "Guiada por la revelación de un santo, una madre viuda viaja de Veracruz a Los Ángeles convencida de que su hija recién fallecida sigue viva."
   },
   {
     "slug": "sentimental",
@@ -675,7 +700,7 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "Singapur",
     "year": "2026",
     "duration": "157’",
-    "synopsis": "En el Singapur actual, las diferencias sociales y económicas marcan el destino de varias familias, cuestionando los lazos que las unen y el verdadero significado de ser familia.",
+    "synopsis": "En la bulliciosa Singapur contemporánea, Junyang, de 21 años, disfruta de la despreocupación de la juventud mientras su padre lucha por mantener a flote su modesta vida. Cuando la relación de Junyang con su novia da un giro inesperado que les cambia la vida, la joven pareja se ve obligada a afrontar las realidades de la adultez mucho antes de lo previsto. Al mismo tiempo, una mujer exuberante irrumpe en la vida y el corazón de su padre, transformando silenciosamente el frágil equilibrio entre padre e hijo. Mientras ambas generaciones se enfrentan al amor, la pérdida y la responsabilidad, deben redefinir el significado de la familia y aprender a convivir con los lazos imperfectos entre la familia en la que nacieron y la que ahora eligen amar.",
     "image": "/images/seleccion-oficial-2026/we-are-all-strangers-still.jpg",
     "poster": "/images/seleccion-oficial-2026/we-are-all-strangers-poster.jpg",
     "trailerUrl": "https://drive.google.com/file/d/1Z18PqPKYCFRWWg54nQ2p5uZ1_gvWmmMC/view?usp=drive_link",
@@ -703,7 +728,8 @@ export const peliculasSeleccion2026 = peliculas2026.filter((film) =>
 );
 
 export const peliculasPublicas2026 = peliculas2026.filter((film) =>
-  programasPublicos2026.some((programa) => programa.categoryIds.includes(film.categoryId)),
+  programasPublicos2026.some((programa) => programa.categoryIds.includes(film.categoryId)) &&
+  (!categoriasSeleccion2026.some((category) => category.id === film.categoryId) || peliculasSeleccionLiberadas2026.includes(film.slug)),
 );
 
 export function getProgramaPelicula2026(film: Pelicula2026) {

@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import Footer from "@/components/Footer";
 import Programacion2026Tabs from "@/components/Programacion2026Tabs";
 import SeleccionOficial2026 from "@/components/SeleccionOficial2026";
-import { categorias2026, peliculas2026, programasPublicos2026, PREVIEW_FILM_BASE, PUBLIC_FILM_BASE } from "@/lib/seleccion-oficial-2026-data";
+import { categorias2026, peliculas2026, peliculasPublicas2026, programasPublicos2026, PREVIEW_FILM_BASE, PUBLIC_FILM_BASE } from "@/lib/seleccion-oficial-2026-data";
 
 export default function CatalogoPrograma2026({ categoryId, title, preview = true }: { categoryId: "la-baja-inspira" | "animacion" | "next-wave"; title?: string; preview?: boolean }) {
   if (!preview && !programasPublicos2026.some((programa) => programa.id === categoryId)) {
@@ -11,7 +11,7 @@ export default function CatalogoPrograma2026({ categoryId, title, preview = true
   }
 
   const categories = categorias2026.filter((category) => category.id === categoryId);
-  const catalog = peliculas2026.filter((film) => film.categoryId === categoryId);
+  const catalog = (preview ? peliculas2026 : peliculasPublicas2026).filter((film) => film.categoryId === categoryId);
 
   return (
     <>
