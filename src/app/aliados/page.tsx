@@ -58,6 +58,8 @@ const aliados = [
   { name: "Quién", logo: "/images/aliados/2026/quien.png" },
   { name: "WIRED", logo: "/images/aliados/2026/wired.png" },
   { name: "Baja Traveler", logo: "/images/aliados/2026/baja-traveler.png" },
+  { name: "Amstar", logo: "/images/aliados/2026/amstar.png" },
+  { name: "Ferragamo", logo: "/images/aliados/2026/ferragamo.png" },
   { name: "The Hollywood Reporter", logo: "/images/aliados/2026/the-hollywood-reporter.png" },
 ];
 
