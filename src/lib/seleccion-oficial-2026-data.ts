@@ -502,6 +502,7 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "Japón",
     "year": "2026",
     "duration": "110’",
+    "image": "/images/seleccion-oficial-2026/nagi-notes-still.jpg",
     "synopsis": "Yoriko, una artista que vive en el entorno rural de Nagi, vive atormentada por un viejo amor que no se atreve a llorar. Cuando Yuri, una arquitecta recién separada, viaja desde Tokio para visitar a su amiga y excuñada, ambas mujeres se encuentran en una encrucijada, buscando la manera de dejar ir el pasado y definir sus propias identidades. La breve escapada de Yuri de la ciudad se convierte en una silenciosa confrontación con la pérdida y en una introspección compartida en la bucólica Nagi."
   },
   {
