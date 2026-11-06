@@ -13,7 +13,7 @@ export default function PeliculaDetalle2026({ film, preview = true }: { film: Pe
   const category = categorias2026.find((item) => item.id === film.categoryId);
   const programa = preview ? getProgramaPelicula2026(film) : programasPublicos2026.find((item) => item.categoryIds.includes(film.categoryId));
   const catalogUrl = programa?.href || PREVIEW_SELECTION_URL;
-  const catalogTitle = programa?.title || "Selección oficial";
+  const catalogTitle = programa?.title || "Muestra Oficial";
   const trailer = getTrailerEmbedUrl(film.trailerUrl);
   const trailerLabel = film.trailerLabel || "Tráiler";
   const films = preview ? peliculas2026 : peliculasPublicas2026;

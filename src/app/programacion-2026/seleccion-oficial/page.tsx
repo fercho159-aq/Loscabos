@@ -8,14 +8,14 @@ import { categoriasSeleccion2026, peliculasPublicas2026, PUBLIC_FILM_BASE } from
 const catalog = peliculasPublicas2026.filter((film) => categoriasSeleccion2026.some((category) => category.id === film.categoryId));
 // Solo las secciones con películas liberadas, para no mostrar filtros vacíos.
 const categories = categoriasSeleccion2026.filter((category) => catalog.some((film) => film.categoryId === category.id));
-const description = "Descubre las películas de Marejada en la selección oficial 2026 de FICC Los Cabos.";
+const description = "Descubre las películas de Marejada en la Muestra Oficial 2026 de FICC Los Cabos.";
 
 export const metadata: Metadata = {
-  title: "Selección oficial 2026 | FICC Los Cabos",
+  title: "Muestra Oficial 2026 | FICC Los Cabos",
   description,
   alternates: { canonical: "/programacion-2026/seleccion-oficial" },
   openGraph: {
-    title: "Selección oficial 2026 | FICC Los Cabos",
+    title: "Muestra Oficial 2026 | FICC Los Cabos",
     description,
     url: "/programacion-2026/seleccion-oficial",
     ...(catalog[0]?.image ? { images: [{ url: catalog[0].image }] } : {}),

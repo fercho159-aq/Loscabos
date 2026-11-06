@@ -14,10 +14,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const film = peliculas2026.find((item) => item.slug === slug);
   if (!film) return { robots: { index: false, follow: false } };
   const programa = getProgramaPelicula2026(film);
-  const description = film.synopsis?.slice(0, 160) || `${film.title}, de ${film.directors}. ${programa?.title || "Selección oficial"} 2026 de FICC Los Cabos.`;
+  const description = film.synopsis?.slice(0, 160) || `${film.title}, de ${film.directors}. ${programa?.title || "Muestra Oficial"} 2026 de FICC Los Cabos.`;
   const image = film.image || film.poster;
   return {
-    title: `${film.title} | ${programa?.title || "Selección oficial"} 2026 FICC Los Cabos`,
+    title: `${film.title} | ${programa?.title || "Muestra Oficial"} 2026 FICC Los Cabos`,
     description,
     alternates: { canonical: `${PREVIEW_FILM_BASE}/${film.slug}` },
     robots: { index: false, follow: false },

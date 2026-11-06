@@ -30,7 +30,6 @@
 .cardLink:hover h3 { text-decoration: underline; text-underline-offset: .15em; }
 .director { margin-top: .65rem; font-size: .88rem; line-height: 1.45; }
 .facts { margin-top: .4rem; font-size: .78rem; line-height: 1.5; color: #4e5960; }
-.synopsis { margin-top: .9rem; font-size: .95rem; line-height: 1.5; }
 .empty { padding: 3rem 0; }
 .empty button { margin-top: 1rem; border-bottom: 1px solid currentColor; cursor: pointer; font: inherit; }
 @media (max-width: 950px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .placeholderTitle { font-size: clamp(1.1rem, 2.5vw, 1.65rem); } }

@@ -19,7 +19,7 @@ export const PREVIEW_SELECTION_URL = "/programacion-2026-preview/seleccion-ofici
 export const PUBLIC_FILM_BASE = "/programacion-2026/peliculas";
 
 export const programasPeliculas2026 = [
-  { id: "seleccion", title: "Selección oficial", href: PREVIEW_SELECTION_URL, categoryIds: ["marejada-nacional", "marejada-internacional"] },
+  { id: "seleccion", title: "Muestra Oficial", href: PREVIEW_SELECTION_URL, categoryIds: ["marejada-nacional", "marejada-internacional"] },
   { id: "la-baja-inspira", title: "La Baja Inspira", href: "/programacion-2026-preview/la-baja-inspira", categoryIds: ["la-baja-inspira"] },
   { id: "animacion", title: "Animación", href: "/programacion-2026-preview/animacion", categoryIds: ["animacion"] },
   { id: "next-wave", title: "The Next Wave — Emerging Filmmakers Panel", href: "/programacion-2026-preview/panel-the-next-wave", categoryIds: ["next-wave"] },
@@ -44,12 +44,12 @@ export const peliculasSeleccionLiberadas2026 = [
 export const categorias2026: { id: string; label: string; color: string }[] = [
   {
     "id": "marejada-nacional",
-    "label": "Marejada: Panorama de Largometrajes Nacionales",
+    "label": "Marejada: Muestra de Largometrajes Nacionales",
     "color": "#A3CDD5"
   },
   {
     "id": "marejada-internacional",
-    "label": "Marejada: Panorama de Largometrajes Internacionales",
+    "label": "Marejada: Muestra de Largometrajes Internacionales",
     "color": "#0A1E23"
   },
   {

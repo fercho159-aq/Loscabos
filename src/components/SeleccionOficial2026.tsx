@@ -18,7 +18,7 @@ type Props = {
   headingLevel?: "h1" | "h2";
 };
 
-export default function SeleccionOficial2026({ title = "Selección oficial", categories, catalog, filmBase, headingLevel: Heading = "h1" }: Props) {
+export default function SeleccionOficial2026({ title = "Muestra Oficial", categories, catalog, filmBase, headingLevel: Heading = "h1" }: Props) {
   const [categoryId, setCategoryId] = useState("all");
   const [query, setQuery] = useState("");
   const films = useMemo(() => {
@@ -87,7 +87,6 @@ export default function SeleccionOficial2026({ title = "Selección oficial", cat
                 </Link>
                 <p className={styles.director}>Dir. {film.directors}</p>
                 <p className={styles.facts}>{[film.countries, film.year, film.duration].filter(Boolean).join(" · ")}</p>
-                <p className={styles.synopsis}>{film.synopsis || "Sinopsis por confirmar."}</p>
               </article>
             );
           })}
