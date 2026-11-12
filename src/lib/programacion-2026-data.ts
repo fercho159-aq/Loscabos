@@ -95,9 +95,9 @@ export const eventos2026: Evento[] = [
     cardTitle: "Keynote — Claudio Jiménez",
     cardCredit: true,
     venue: "Cinépolis San José del Cabo | Sala 8",
-    credit: "Claudio Jiménez · Fundador de Mighty Studios",
+    credit: "Claudio Jiménez · Fundador de Mighty Animation",
     image: "/images/programacion-2026/keynote-claudio-jimenez.jpg",
-    imageAlt: "Claudio Jiménez, fundador de Mighty Studios",
+    imageAlt: "Claudio Jiménez, fundador de Mighty Animation",
     accent: "#E9B0BD",
     body: [
       "¿Cómo están evolucionando las formas de contar historias? Claudio Jiménez, fundador de Mighty Animation, explorará cómo la animación, la inteligencia artificial y el storytelling están transformando los procesos creativos y abriendo nuevas posibilidades para desarrollar historias y experimentar con distintos formatos de contenido.",

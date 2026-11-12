@@ -7,7 +7,7 @@
 //   B) Zoé: el conversatorio es con Olmo Guerra (no Olmo Rodríguez).
 //
 // Texto del PDF con erratas corregidas (Inaugural, Conversatorio, 77´,
-// "12:30 – 12:45", Mighty Studios). En las descripciones, `**x**` es negrita,
+// "12:30 – 12:45", Mighty Animation). En las descripciones, `**x**` es negrita,
 // `*x*` itálica, "\n" salto de renglón y "\n\n" párrafo aparte.
 
 /**
@@ -329,10 +329,10 @@ export const agenda2026: AgendaDay[] = [
           title: keynote(
             "Keynote",
             "La transferencia de lenguajes y formatos en la creación de contenidos",
-            "Claudio Jiménez · Fundador de Mighty Studios",
+            "Claudio Jiménez · Fundador de Mighty Animation",
           ),
           description:
-            "¿Cómo están evolucionando las formas de contar historias? Claudio Jiménez, fundador de Mighty Studios, explorará cómo la animación, la inteligencia artificial y el storytelling están transformando los procesos creativos y abriendo nuevas posibilidades para desarrollar historias y experimentar con distintos formatos de contenido",
+            "¿Cómo están evolucionando las formas de contar historias? Claudio Jiménez, fundador de Mighty Animation, explorará cómo la animación, la inteligencia artificial y el storytelling están transformando los procesos creativos y abriendo nuevas posibilidades para desarrollar historias y experimentar con distintos formatos de contenido",
           location: SALA_8,
           href: EVENTO("keynote-claudio-jimenez"),
         },
@@ -354,7 +354,7 @@ export const agenda2026: AgendaDay[] = [
           title: titled("Proyección + Conversatorio", "Blaise"),
           subtitle: "Dir. Dimitri Planchon, Jean-Paul Guigue · Francia · 2026 · 82´",
           description:
-            "Conversatorio postproyección con Dimitri Planchon y Jean-Paul Guigue, y **Claudio Jiménez**, Fundador de Mighty Studios",
+            "Conversatorio postproyección con Dimitri Planchon y Jean-Paul Guigue, y **Claudio Jiménez**, Fundador de Mighty Animation",
           location: SALA_8,
           href: EVENTO("blaise"),
         },

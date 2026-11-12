@@ -13,12 +13,12 @@ import { withItalics } from "@/lib/italics";
 export const metadata: Metadata = {
   title: "Programación 2026 | FICC Los Cabos",
   description:
-    "Sneak Peek de la Programación 2026 de FICCLosCabos: keynotes de SXSW, COMEFILM y Mighty Studios, el homenaje a Dolores Heredia, el Work in Progress de Insectario, la proyección de Blaise y el panel The Next Wave.",
+    "Sneak Peek de la Programación 2026 de FICCLosCabos: keynotes de SXSW, COMEFILM y Mighty Animation, el homenaje a Dolores Heredia, el Work in Progress de Insectario, la proyección de Blaise y el panel The Next Wave.",
   alternates: { canonical: "/programacion-2026" },
   openGraph: {
     title: "Programación 2026 | FICC Los Cabos",
     description:
-      "Sneak Peek de la Programación 2026 de FICCLosCabos: keynotes de SXSW, COMEFILM y Mighty Studios, el homenaje a Dolores Heredia, el Work in Progress de Insectario, la proyección de Blaise y el panel The Next Wave.",
+      "Sneak Peek de la Programación 2026 de FICCLosCabos: keynotes de SXSW, COMEFILM y Mighty Animation, el homenaje a Dolores Heredia, el Work in Progress de Insectario, la proyección de Blaise y el panel The Next Wave.",
     url: "/programacion-2026",
     images: [{ url: "/images/programacion-2026/homenaje-dolores-heredia.jpg", width: 1600, height: 900 }],
   },
