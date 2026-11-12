@@ -273,7 +273,7 @@ export const agenda2026: AgendaDay[] = [
           time: "19:00–20:30 hrs",
           title: titled("Proyección + Conversatorio", "Medeski, Martin & Wood: Not not jazz"),
           href: EVENTO("not-not-jazz"),
-          subtitle: "Dir. Billy Martin · Estados Unidos · 2024 · 77´",
+          subtitle: "Dir. Jason Miller · Estados Unidos · 2024 · 77´",
           description:
             "Conversatorio postproyección con **Billy Martin**, baterista de Medeski, Martin & Wood, y **Nicolás Celis** (fundador de Pimienta Films)",
           location: ZADUN_SUITE,

@@ -329,9 +329,8 @@ export const eventos2026: Evento[] = [
     title: "Proyección + Conversatorio — *Medeski, Martin & Wood: Not not jazz*",
     cardTitle: "Proyección — Not not jazz",
     venue: "Zadún Ritz-Carlton Reserve — Suite",
-    // shortcut: el PDF dice "Dir. Billy Martin" y el doc "Dir. Jason Miller"; confirmar con Mafer.
-    credit: "Dir. Billy Martin · Estados Unidos · 2024 · 77’",
-    cardSubtitle: "Dir. Billy Martin · Estados Unidos · 2024 · 77’",
+    credit: "Dir. Jason Miller · Estados Unidos · 2024 · 77’",
+    cardSubtitle: "Dir. Jason Miller · Estados Unidos · 2024 · 77’",
     image: "/images/programacion-2026/not-not-jazz.jpg",
     imageAlt: "Medeski, Martin & Wood en el póster de Not not jazz",
     accent: "#081722",
