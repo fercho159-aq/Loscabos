@@ -186,7 +186,8 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "Estados Unidos",
     "year": "2026",
     "duration": "71’",
-    "synopsis": "El 11 de diciembre de 2025, el cantante estadounidense Cameron Winter, vocalista principal de la banda Geese, ofreció un concierto inolvidable en el Carnegie Hall de Nueva York. Un recital íntimo en el que se acompañó a sí mismo al piano de cola Steinway, el espectáculo consolidó el estatus de Winter como un baladista de cabaret y art-pop único en su clase, con su vibrato sublime resonando por todo un recinto famoso por su legendaria acústica. La película del concierto fue filmada y dirigida por Paul Thomas Anderson en formato de 35 mm y 16 mm durante una función en solitario con entradas agotadas."
+    "synopsis": "El 11 de diciembre de 2025, el cantante estadounidense Cameron Winter, vocalista principal de la banda Geese, ofreció un concierto inolvidable en el Carnegie Hall de Nueva York. Un recital íntimo en el que se acompañó a sí mismo al piano de cola Steinway, el espectáculo consolidó el estatus de Winter como un baladista de cabaret y art-pop único en su clase, con su vibrato sublime resonando por todo un recinto famoso por su legendaria acústica. La película del concierto fue filmada y dirigida por Paul Thomas Anderson en formato de 35 mm y 16 mm durante una función en solitario con entradas agotadas.",
+    "image": "/images/seleccion-oficial-2026/cameron-winter-at-carnegie-hall-still.jpg"
   },
   {
     "slug": "circo-de-loy",
