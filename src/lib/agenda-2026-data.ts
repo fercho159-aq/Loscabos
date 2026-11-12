@@ -269,7 +269,7 @@ export const agenda2026: AgendaDay[] = [
         },
         {
           id: "2026-12-10-not-not-jazz",
-          time: "19:00–22:30 hrs",
+          time: "19:00–20:30 hrs",
           title: titled("Proyección + Conversatorio", "Medeski, Martin & Wood: Not not jazz"),
           subtitle: "Dir. Billy Martin · Estados Unidos · 2024 · 77´",
           description:
@@ -278,8 +278,7 @@ export const agenda2026: AgendaDay[] = [
         },
         {
           id: "2026-12-10-coctel-ferragamo",
-          // shortcut: el PDF del 10-nov dice 9:00–11:00 (errata); confirmar hora con Mafer.
-          time: "9:00–11:00 hrs",
+          time: "21:30–22:30 hrs",
           title: plain("Cóctel — En alianza con Ferragamo"),
           description: "**Jam Billy Martin** + talento local",
           location: ZADUN_SUITE,
