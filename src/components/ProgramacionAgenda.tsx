@@ -169,12 +169,20 @@ const decorations: Record<AgendaCardDecoration, ReactNode> = {
 // En el PDF estas dos figuras se dibujan encima del texto.
 const decorationsOverText: AgendaCardDecoration[] = ["hexagons", "arc"];
 
-function SectionCard({ card }: { card: AgendaSectionCard }) {
+function SectionCard({
+  card,
+  active,
+  onSelect,
+}: {
+  card: AgendaSectionCard;
+  active: boolean;
+  onSelect: () => void;
+}) {
   const overText = decorationsOverText.includes(card.decoration);
 
   return (
     <article
-      className={styles.card}
+      className={`${styles.card} ${active ? styles.cardActive : ""}`}
       id={`agenda-seccion-${card.id}`}
       style={{ "--card-bg": card.bg, "--card-text": card.text } as CSSProperties}
     >
@@ -200,13 +208,34 @@ function SectionCard({ card }: { card: AgendaSectionCard }) {
         </p>
         <p className={`${styles.cardLine} ${styles.cardAccess}`}>{card.access}</p>
       </div>
+      {/* Toda la tarjeta es clicable: filtra la agenda a los eventos del programa. */}
+      <button
+        type="button"
+        className={styles.cardButton}
+        aria-pressed={active}
+        aria-label={`Ver eventos de ${cardName(card)}`}
+        onClick={onSelect}
+      />
     </article>
   );
 }
 
+const cardName = (card: AgendaSectionCard) =>
+  card.title.flat().map((segment) => segment.text).join(" ");
+
 export default function ProgramacionAgenda({ nav }: { nav?: ReactNode }) {
   // Todos los días cerrados al cargar, como el mockup del cliente.
   const [openDayId, setOpenDayId] = useState<string | null>(null);
+  // Programa elegido en las tarjetas: la agenda muestra solo sus bandas (mismo
+  // color que la tarjeta) con todos los días abiertos.
+  const [programId, setProgramId] = useState<string | null>(null);
+  const program = agendaSectionCards2026.find((card) => card.id === programId);
+  const daysRef = useRef<HTMLElement>(null);
+
+  // Tras filtrar, bajar a la agenda (ya con su nueva altura).
+  useEffect(() => {
+    if (programId) daysRef.current?.scrollIntoView({ behavior: "instant" });
+  }, [programId]);
   // Al abrir un día se cierra el anterior; si ese era largo, el encabezado
   // recién abierto puede quedar arriba, fuera de pantalla. Lo regresamos.
   const toggleRefs = useRef(new Map<string, HTMLElement>());
@@ -234,15 +263,45 @@ export default function ProgramacionAgenda({ nav }: { nav?: ReactNode }) {
           de pestañas queda entre ellas y los días, sobre el gris. */}
       <div className={styles.cards} aria-label="Programas del festival" role="group">
         {agendaSectionCards2026.map((card) => (
-          <SectionCard card={card} key={card.id} />
+          <SectionCard
+            card={card}
+            key={card.id}
+            active={card.id === programId}
+            onSelect={() => {
+              const next = card.id === programId ? null : card.id;
+              setProgramId(next);
+            }}
+          />
         ))}
       </div>
 
       {nav}
 
-      <section className={styles.days} id="agenda-por-dia" aria-label="Programación por día">
-        {agenda2026.map((day) => (
-          <details className={styles.day} key={day.id} open={openDayId === day.id}>
+      <section
+        className={styles.days}
+        id="agenda-por-dia"
+        aria-label="Programación por día"
+        ref={daysRef}
+      >
+        {program && (
+          <p className={styles.filterBar}>
+            <span>
+              Mostrando: <strong>{cardName(program)}</strong>
+            </span>
+            <button type="button" className={styles.filterClear} onClick={() => setProgramId(null)}>
+              Ver toda la agenda
+            </button>
+          </p>
+        )}
+        {agenda2026.map((day) => {
+          const blocks = program ? day.blocks.filter((b) => b.bg === program.bg) : day.blocks;
+          if (!blocks.length) return null;
+          return (
+          <details
+            className={styles.day}
+            key={day.id}
+            open={program ? true : openDayId === day.id}
+          >
             <summary
               className={styles.dayToggle}
               ref={(node) => {
@@ -252,6 +311,13 @@ export default function ProgramacionAgenda({ nav }: { nav?: ReactNode }) {
               onClick={(event) => {
                 event.preventDefault();
                 pendingScrollId.current = day.id;
+                // Con un programa elegido, tocar un día regresa a la agenda
+                // completa con ese día abierto.
+                if (program) {
+                  setProgramId(null);
+                  setOpenDayId(day.id);
+                  return;
+                }
                 setOpenDayId((current) => (current === day.id ? null : day.id));
               }}
             >
@@ -276,7 +342,7 @@ export default function ProgramacionAgenda({ nav }: { nav?: ReactNode }) {
               </h2>
             </summary>
             <div className={styles.dayContent}>
-              {day.blocks.map((block, index) => (
+              {blocks.map((block, index) => (
                 <div
                   className={styles.block}
                   key={`${day.id}-${index}`}
@@ -301,7 +367,8 @@ export default function ProgramacionAgenda({ nav }: { nav?: ReactNode }) {
               ))}
             </div>
           </details>
-        ))}
+          );
+        })}
       </section>
     </div>
   );
