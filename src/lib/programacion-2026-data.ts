@@ -294,6 +294,21 @@ export const eventos2026: Evento[] = [
     ],
   },
   {
+    slug: "keynote-inna-payan",
+    title: "Keynote — *Estrategias de producción y financiamiento para el cine independiente*",
+    cardTitle: "Keynote — Inna Payán",
+    cardCredit: true,
+    venue: "Cinépolis San José del Cabo | Sala 8",
+    credit: "Inna Payán · Productora independiente",
+    image: "/images/programacion-2026/keynote-inna-payan.jpg",
+    imageAlt: "Inna Payán, productora independiente",
+    accent: "#6687C3",
+    body: [
+      "¿Cómo construir una estrategia financiera que permita llevar una película de la idea a la pantalla? A partir de su experiencia como productora independiente, Inna Payán compartirá las claves para combinar inversión privada, fondos, estímulos como EFICINE e incentivos, así como estructurar coproducciones y alianzas estratégicas.",
+      "Una conversación sobre cómo hacer viables los proyectos cinematográficos sin comprometer su visión creativa.",
+    ],
+  },
+  {
     slug: "work-in-progress-insectario",
     title: "Work in Progress — *Insectario*",
     venue: "Cinépolis San José del Cabo",

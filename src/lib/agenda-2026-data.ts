@@ -439,6 +439,7 @@ export const agenda2026: AgendaDay[] = [
             "Estrategias de producción y financiamiento para el cine independiente",
             "Inna Payán · Productora independiente",
           ),
+          href: EVENTO("keynote-inna-payan"),
           description:
             "¿Cómo construir una estrategia financiera que permita llevar una película de la idea a la pantalla? A partir de su experiencia como productora independiente, Inna Payán compartirá las claves para combinar inversión privada, fondos, estímulos como EFICINE e incentivos, así como estructurar coproducciones y alianzas estratégicas. Una conversación sobre cómo hacer viables los proyectos cinematográficos sin comprometer su visión creativa",
           location: SALA_8,

@@ -45,6 +45,8 @@ EVENTOS = {
     # Sede del desayuno (apaisada 1500x1001): recorte 16:9 centrado.
     "desayuno-girls-at-films": "Brunch.png",
     "panel-the-next-wave": "Panel2.png",
+    # Retrato vertical (1067x1422): el recorte 16:9 se centra en el rostro.
+    "keynote-inna-payan": ("InnaPayan.jpg", 0.5, 0.08),
 }
 
 # Retratos. La clave es el nombre real; el archivo de salida es su slug.
