@@ -183,9 +183,10 @@ export const peliculas2026: Pelicula2026[] = [
     "title": "Cameron Winter At Carnegie Hall",
     "categoryId": "marejada-internacional",
     "directors": "Paul Thomas Anderson",
-    "countries": "",
-    "year": "",
-    "duration": ""
+    "countries": "Estados Unidos",
+    "year": "2026",
+    "duration": "71’",
+    "synopsis": "El 11 de diciembre de 2025, el cantante estadounidense Cameron Winter, vocalista principal de la banda Geese, ofreció un concierto inolvidable en el Carnegie Hall de Nueva York. Un recital íntimo en el que se acompañó a sí mismo al piano de cola Steinway, el espectáculo consolidó el estatus de Winter como un baladista de cabaret y art-pop único en su clase, con su vibrato sublime resonando por todo un recinto famoso por su legendaria acústica. La película del concierto fue filmada y dirigida por Paul Thomas Anderson en formato de 35 mm y 16 mm durante una función en solitario con entradas agotadas."
   },
   {
     "slug": "circo-de-loy",
@@ -231,9 +232,10 @@ export const peliculas2026: Pelicula2026[] = [
     "title": "Elsinore",
     "categoryId": "marejada-internacional",
     "directors": "Simon Stone",
-    "countries": "",
-    "year": "",
-    "duration": "",
+    "countries": "Reino Unido, Estados Unidos e Italia",
+    "year": "2026",
+    "duration": "111’",
+    "synopsis": "La historia real, profundamente emotiva e inspiradora de Ian Charleson, un actor de gran talento cuyo mayor reto se convierte en su mayor triunfo. Enfrentando su propia mortalidad con una inquebrantable honestidad, ingenio y gracia, Charleson ofrece una valiente actuación que se convierte en una fuente de sanación e inspiración para aquellos que lo rodean.",
     "image": "/images/seleccion-oficial-2026/elsinore-still.jpg",
     "poster": "/images/seleccion-oficial-2026/elsinore-poster.jpg"
   },
