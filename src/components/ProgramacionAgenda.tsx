@@ -43,28 +43,35 @@ function RichLines({
   ));
 }
 
-// Descripción con los saltos del PDF ("\n"): en escritorio cada renglón
-// corta exactamente ahí; en móvil el <br> se oculta y el espacio los une.
-function Description({ text }: { text: string }) {
-  const lines = text.split("\n");
+// `***negrita itálica***`, `**negrita**` y `*itálica*` como en el PDF.
+function Inline({ text }: { text: string }) {
+  return text.split(/(\*\*\*[^*]+\*\*\*|\*\*[^*]+\*\*|\*[^*]+\*)/).map((part, i) =>
+    part.startsWith("***") ? (
+      <strong key={i}>
+        <em>{part.slice(3, -3)}</em>
+      </strong>
+    ) : part.startsWith("**") ? (
+      <strong key={i}>{part.slice(2, -2)}</strong>
+    ) : part.startsWith("*") ? (
+      <em key={i}>{part.slice(1, -1)}</em>
+    ) : (
+      <Fragment key={i}>{part}</Fragment>
+    ),
+  );
+}
 
-  return (
-    <p
-      className={`${styles.description} ${lines.length > 1 ? styles.descriptionLines : ""}`}
-    >
-      {lines.map((descriptionLine, index) => (
+// "\n" es salto de renglón (listas de panelistas) y "\n\n" separa párrafos.
+function Description({ text }: { text: string }) {
+  return text.split("\n\n").map((paragraph, p) => (
+    <p className={`${styles.description} ${p > 0 ? styles.descriptionGap : ""}`} key={p}>
+      {paragraph.split("\n").map((descriptionLine, index) => (
         <Fragment key={index}>
-          {index > 0 && (
-            <>
-              {" "}
-              <br className={styles.eventBreak} />
-            </>
-          )}
-          {descriptionLine}
+          {index > 0 && <br />}
+          <Inline text={descriptionLine} />
         </Fragment>
       ))}
     </p>
-  );
+  ));
 }
 
 function AgendaItem({ event }: { event: AgendaEvent }) {
@@ -92,7 +99,11 @@ function AgendaItem({ event }: { event: AgendaEvent }) {
           title
         )}
       </h3>
-      {event.subtitle && <p className={styles.subtitle}>{event.subtitle}</p>}
+      {event.subtitle && (
+        <p className={styles.subtitle}>
+          <Inline text={event.subtitle} />
+        </p>
+      )}
       {event.description && <Description text={event.description} />}
       {event.location && <p className={styles.location}>{event.location}</p>}
       {!event.location && event.locationRemoved && (

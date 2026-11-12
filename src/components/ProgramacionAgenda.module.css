@@ -289,12 +289,9 @@
   }
 }
 
-/* Las descripciones siguen los saltos del PDF solo cuando su tamaño es el
-   proporcional del artboard (≥960 px; abajo entra el mínimo de 14 px). */
-@media (min-width: 960px) {
-  .descriptionLines {
-    white-space: nowrap;
-  }
+/* Párrafo aparte, p. ej. entre la lista de panelistas y la sinopsis. */
+.descriptionGap {
+  margin-top: 1.2em;
 }
 
 @media (max-width: 959px) {
