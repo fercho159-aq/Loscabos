@@ -26,7 +26,7 @@ export default function SeleccionOficialPage() {
   return (
     <>
       <Navbar />
-      <main style={{ paddingTop: "7rem" }}>
+      <main style={{ paddingTop: "4rem" }}>
         <Programacion2026Tabs active="seleccion" preview={false} gray />
         <SeleccionOficial2026 categories={categories} catalog={catalog} filmBase={PUBLIC_FILM_BASE} />
       </main>

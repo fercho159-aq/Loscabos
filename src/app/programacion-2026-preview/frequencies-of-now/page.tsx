@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function FrequenciesOfNowPreview() {
   return (
     <>
-      <div style={{ paddingTop: "7rem" }}><Programacion2026Tabs active="frequencies-of-now" /></div>
+      <div style={{ paddingTop: "4rem" }}><Programacion2026Tabs active="frequencies-of-now" /></div>
       <FrequenciesOfNow />
     </>
   );
