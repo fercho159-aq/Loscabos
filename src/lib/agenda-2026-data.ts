@@ -104,7 +104,8 @@ const JW_ANFITEATRO = "JW Marriott — Anfiteatro";
 const ZADUN_SUITE = "Zadún Ritz-Carlton Reserve — Suite";
 const MARINA = "La Marina Puerto Los Cabos";
 
-const EVENTO = (slug: string) => `/programacion-2026-preview/${slug}`;
+// Las fichas de eventos completas viven en la ruta pública; el preview solo tiene tres.
+const EVENTO = (slug: string) => `/programacion-2026/${slug}`;
 const PELICULA = (slug: string) => `/programacion-2026-preview/peliculas/${slug}`;
 const LBI = "/programacion-2026-preview/la-baja-inspira";
 const FFGF = "/ffgf";
