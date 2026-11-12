@@ -201,7 +201,7 @@ const groups: Group[] = [
       { name: "Mar Prieto", role: "Directora y guionista", image: "/images/comunidad/mar-prieto.jpg" },
       { name: "Ximena Lamadrid", role: "Actriz, autora y productora", image: "/images/comunidad/ximena-lamadrid.jpg" },
       { name: "David Zonana", role: "Director, escritor y productor", image: "/images/comunidad/david-zonana.jpg" },
-      { name: "Johanna Murillo", tbc: true },
+      { name: "Johanna Murillo", role: "Actriz y productora", image: "/images/comunidad/johanna-murillo.jpg" },
       { name: "Mario Escobar", tbc: true },
     ],
   },
