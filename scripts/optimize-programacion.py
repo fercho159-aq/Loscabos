@@ -47,6 +47,10 @@ EVENTOS = {
     "panel-the-next-wave": "Panel2.png",
     # Retrato vertical (1067x1422): el recorte 16:9 se centra en el rostro.
     "keynote-inna-payan": ("InnaPayan.jpg", 0.5, 0.08),
+    # Still cuadrado (1440x1440): recorte 16:9 a la altura de los rostros.
+    "un-passo-alla-volta": ("un-passo-alla-volta-3-data.jpg", 0.5, 0.35),
+    # Póster vertical (1536x2048): recorte 16:9 sobre los tres músicos.
+    "not-not-jazz": ("Medeski.jpg", 0.5, 0.6),
 }
 
 # Retratos. La clave es el nombre real; el archivo de salida es su slug.

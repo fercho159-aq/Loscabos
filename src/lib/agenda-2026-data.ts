@@ -262,6 +262,7 @@ export const agenda2026: AgendaDay[] = [
           id: "2026-12-10-un-passo-alla-volta",
           time: "18:30–19:00 hrs",
           title: titled("Proyección + Q&A", "Un Passo Alla Volta"),
+          href: EVENTO("un-passo-alla-volta"),
           subtitle: "Dir. Simone Coppo · Italia · 2026 · 14´",
           description:
             "El cortometraje de **Simone Coppo** y **Martina Ferragamo** estrenado en el Teatro La Fenice dentro de la *Mostra de Venecia*. Una reflexión sobre los nuevos comienzos y sobre el tiempo que toma convertir un legado en una elección propia\nQ&A con Martina Ferragamo y Simone Coppo. Moderado por **Rodrigo García** de Central Films",
@@ -271,9 +272,10 @@ export const agenda2026: AgendaDay[] = [
           id: "2026-12-10-not-not-jazz",
           time: "19:00–20:30 hrs",
           title: titled("Proyección + Conversatorio", "Medeski, Martin & Wood: Not not jazz"),
+          href: EVENTO("not-not-jazz"),
           subtitle: "Dir. Billy Martin · Estados Unidos · 2024 · 77´",
           description:
-            "Conversatorio postproyección con Billy Martin y **Nicolás Celis** (fundador de Pimienta Films)",
+            "Conversatorio postproyección con **Billy Martin**, baterista de Medeski, Martin & Wood, y **Nicolás Celis** (fundador de Pimienta Films)",
           location: ZADUN_SUITE,
         },
         {

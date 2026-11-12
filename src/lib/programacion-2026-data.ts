@@ -309,6 +309,37 @@ export const eventos2026: Evento[] = [
     ],
   },
   {
+    slug: "un-passo-alla-volta",
+    title: "Proyección + Q&A — *Un Passo Alla Volta*",
+    cardTitle: "Proyección — Un Passo Alla Volta",
+    venue: "Zadún Ritz-Carlton Reserve — Suite",
+    credit: "Dir. Simone Coppo · Italia · 2026 · 14’",
+    cardSubtitle: "Dir. Simone Coppo · Italia · 2026 · 14’",
+    image: "/images/programacion-2026/un-passo-alla-volta.jpg",
+    imageAlt: "Fotograma del cortometraje Un Passo Alla Volta",
+    accent: "#6687C3",
+    body: [
+      "El cortometraje de Simone Coppo y Martina Ferragamo estrenado en el Teatro La Fenice dentro de la Mostra de Venecia.",
+      "Una reflexión sobre los nuevos comienzos y sobre el tiempo que toma convertir un legado en una elección propia.",
+      "Q&A con Martina Ferragamo y Simone Coppo. Moderado por Rodrigo García de Central Films.",
+    ],
+  },
+  {
+    slug: "not-not-jazz",
+    title: "Proyección + Conversatorio — *Medeski, Martin & Wood: Not not jazz*",
+    cardTitle: "Proyección — Not not jazz",
+    venue: "Zadún Ritz-Carlton Reserve — Suite",
+    // shortcut: el PDF dice "Dir. Billy Martin" y el doc "Dir. Jason Miller"; confirmar con Mafer.
+    credit: "Dir. Billy Martin · Estados Unidos · 2024 · 77’",
+    cardSubtitle: "Dir. Billy Martin · Estados Unidos · 2024 · 77’",
+    image: "/images/programacion-2026/not-not-jazz.jpg",
+    imageAlt: "Medeski, Martin & Wood en el póster de Not not jazz",
+    accent: "#081722",
+    body: [
+      "Conversatorio postproyección con Billy Martin, baterista de Medeski, Martin & Wood, y Nicolás Celis (fundador de Pimienta Films).",
+    ],
+  },
+  {
     slug: "work-in-progress-insectario",
     title: "Work in Progress — *Insectario*",
     venue: "Cinépolis San José del Cabo",
