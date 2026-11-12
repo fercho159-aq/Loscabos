@@ -172,7 +172,7 @@ export const agenda2026: AgendaDay[] = [
           id: "2026-12-09-elsinore",
           time: "20:15–22:20 hrs",
           title: titled("Proyección Inaugural", "Elsinore"),
-          subtitle: "Dir. Simone Stone · Reino Unido, Estados Unidos e Italia · 2026 · 111´",
+          subtitle: "Dir. Simon Stone · Reino Unido, Estados Unidos e Italia · 2026 · 111´",
           description: "Conversatorio postproyección",
           location: MARINA,
           href: PELICULA("elsinore"),
