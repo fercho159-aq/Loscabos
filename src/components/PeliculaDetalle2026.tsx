@@ -53,7 +53,6 @@ export default function PeliculaDetalle2026({ film, preview = true }: { film: Pe
             <h2>Sinopsis</h2>
             <p>{film.synopsis || "Sinopsis por confirmar."}</p>
             {film.presentedBy && <PeliculaPresentadaPor name={film.presentedBy} />}
-            {!trailer && <p className={styles.unavailable}>Tráiler no disponible.</p>}
           </div>
         </div>
 

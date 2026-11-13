@@ -114,6 +114,20 @@ export const eventos2026: Evento[] = [
     accent: "#BDC957",
     body: [
       "En una familia obsesionada por agradar a los demás, un introvertido adolescente termina involucrado, por pura complacencia, en una improvisada y violenta cruzada revolucionaria.",
+      "Conversatorio postproyección con Dimitri Planchon y Jean-Paul Guigue, y Claudio Jiménez, fundador de Mighty Animation.",
+    ],
+    groups: [
+      {
+        title: "Participan",
+        layout: "bio",
+        people: [
+          {
+            name: "Claudio Jiménez",
+            image: "/images/programacion-2026/personas/claudio-jimenez.jpg",
+            meta: "Fundador de Mighty Animation",
+          },
+        ],
+      },
     ],
   },
   {
@@ -407,6 +421,81 @@ export const eventos2026: Evento[] = [
             name: "Fabrizio Onetto",
             image: "/images/programacion-2026/personas/fabrizio-onetto.jpg",
             meta: "OCESA",
+          },
+          {
+            name: "Alejandro Tavares",
+            image: "/images/programacion-2026/personas/alejandro-tavares.jpg",
+            meta: "Modera · Director de Filma Jalisco",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "sentimental",
+    title: "Proyección + Q&A — *Sentimental*",
+    cardTitle: "Proyección — Sentimental",
+    venue: "Cinépolis San José del Cabo | Sala 8",
+    credit: "Dir. Cesc Gay · España · 2020 · 82’",
+    cardSubtitle: "Dir. Cesc Gay · España · 2020 · 82’",
+    image: "/images/seleccion-oficial-2026/sentimental-still.jpg",
+    imageAlt: "Fotograma de la película Sentimental",
+    accent: "#960942",
+    body: [
+      "Julio (Javier Cámara) y Ana (Griselda Siciliani) hace más de quince años que están juntos. Forman una pareja que ya no se mira ni se toca, y que ha hecho del combate diario la esencia de su relación. Esta noche Ana ha invitado a casa a sus vecinos del piso de arriba, Salva (Alberto San Juan) y Laura (Belén Cuesta), una pareja más joven que ellos, amable y simpática, pero cuyos “ruidos” se han convertido en una molestia para Julio y Ana... ¿o quizás en un estímulo? Los vecinos les harán una inusual y sorprendente propuesta que convertirá la velada en una experiencia catártica para el matrimonio... Adaptación cinematográfica de 'Los vecinos de arriba', la obra teatral debut de Cesc Gay.",
+      "Q&A con Griselda Siciliani.",
+    ],
+    groups: [
+      {
+        title: "Participa",
+        layout: "bio",
+        people: [
+          {
+            name: "Griselda Siciliani",
+            image: "/images/programacion-2026/personas/griselda-siciliani.jpg",
+            meta: "Actriz",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "panel-frequencies-of-now",
+    title: "Panel — *Frequencies of Now: The stories behind the music*",
+    cardTitle: "Panel — Frequencies of Now",
+    venue: "JW Marriott — Anfiteatro",
+    credit: "Moderado por Alejandro Tavares · Director de Filma Jalisco",
+    image: "/images/programacion-2026/panel-frequencies-of-now.jpg",
+    imageAlt: "Consola de audio iluminada en morado",
+    accent: "#6687C3",
+    body: [
+      "Conoce los cinco proyectos seleccionados de Frequencies of Now, plataforma internacional dedicada al documental musical. Cineastas y jurados compartirán las historias detrás de cada proyecto y explorarán cómo la música refleja la identidad, la memoria y las transformaciones culturales de nuestro tiempo. La conversación abordará también los desafíos creativos y las oportunidades de proyección internacional del documental musical. El encuentro incluirá la proyección de fragmentos de los proyectos seleccionados.",
+      "Jurados participantes: Juan Patricio Riveroll, Rodrigo Guardiola, Hermann Neudert, Mario Escobar y Zunshu. Moderado por Alejandro Tavares, Director de Filma Jalisco.",
+    ],
+    groups: [
+      {
+        title: "Jurados participantes",
+        layout: "bio",
+        people: [
+          {
+            name: "Juan Patricio Riveroll",
+            image: "/images/programacion-2026/personas/juan-patricio-riveroll.jpg",
+            meta: "Director, productor y Director de Extensión Académica de ESCINE",
+          },
+          {
+            name: "Rodrigo Guardiola",
+            image: "/images/programacion-2026/personas/rodrigo-guardiola.jpg",
+            meta: "Cineasta, productor y baterista de Zoé",
+          },
+          {
+            name: "Hermann Neudert",
+            image: "/images/programacion-2026/personas/hermann-neudert.jpg",
+            meta: "Director y realizador audiovisual",
+          },
+          {
+            name: "Zunshu",
+            image: "/images/programacion-2026/personas/zunshu.jpg",
+            meta: "Creativo y miembro de la dirección de Revista 192",
           },
           {
             name: "Alejandro Tavares",

@@ -36,6 +36,7 @@ export const peliculasSeleccionLiberadas2026 = [
   "hijas-del-bosque",
   "jaripeo",
   "la-peluca",
+  "elsinore",
 ];
 
 // Selección Oficial 2026: contenido y materiales proporcionados en el documento.

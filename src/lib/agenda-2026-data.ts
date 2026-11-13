@@ -373,7 +373,7 @@ export const agenda2026: AgendaDay[] = [
           id: "2026-12-11-panel-fon",
           time: "16:00 – 17:00 hrs",
           title: titled("Panel", "Frequencies of Now: The stories behind the music"),
-          href: FON,
+          href: EVENTO("panel-frequencies-of-now"),
           description:
             "Jurados participantes:\n**Juan Patricio Riveroll** · Director, productor y Director de Extensión Académica de ESCINE\n**Rodrigo Guardiola** · Cineasta, productor y baterista de Zoé\n**Hermann Neudert** · Director y realizador audiovisual\n**Mario Escobar** · Ejecutivo de Global Talent Services (Universal Music Group) y mánager de Ed Maverick\n**Zunshu** · Creativo y miembro de la dirección de Revista 192\n\nConoce los cinco proyectos seleccionados de Frequencies of Now, plataforma internacional dedicada al documental musical. Cineastas y jurados compartirán las historias detrás de cada proyecto y explorarán cómo la música refleja la identidad, la memoria y las transformaciones culturales de nuestro tiempo. La conversación abordará también los desafíos creativos y las oportunidades de proyección internacional del documental musical. El encuentro incluirá la proyección de fragmentos de los proyectos seleccionados. Moderado por **Alejandro Tavares**, Director de Filma Jalisco",
           location: JW_ANFITEATRO,
@@ -453,7 +453,7 @@ export const agenda2026: AgendaDay[] = [
           subtitle: "Dir. Cesc Gay · España · 2020 · 82´",
           description: "Q&A con **Griselda Siciliani**",
           location: SALA_8,
-          href: PELICULA("sentimental"),
+          href: EVENTO("sentimental"),
         },
       ]),
       terracotta([
