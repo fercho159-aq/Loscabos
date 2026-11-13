@@ -106,7 +106,7 @@ const MARINA = "La Marina Puerto Los Cabos";
 
 // Las fichas de eventos completas viven en la ruta pública; el preview solo tiene tres.
 const EVENTO = (slug: string) => `/programacion-2026/${slug}`;
-const PELICULA = (slug: string) => `/programacion-2026-preview/peliculas/${slug}`;
+const PELICULA = (slug: string) => `/programacion-2026/peliculas/${slug}`;
 const LBI = "/programacion-2026-preview/la-baja-inspira";
 const FFGF = "/ffgf";
 const FON = "/programacion-2026-preview/frequencies-of-now";
