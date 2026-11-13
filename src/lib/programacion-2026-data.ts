@@ -323,6 +323,24 @@ export const eventos2026: Evento[] = [
       "Una reflexión sobre los nuevos comienzos y sobre el tiempo que toma convertir un legado en una elección propia.",
       "Q&A con Martina Ferragamo y Simone Coppo. Moderado por Rodrigo García de Central Films.",
     ],
+    groups: [
+      {
+        title: "Participan",
+        layout: "bio",
+        people: [
+          {
+            name: "Martina Ferragamo y Simone Coppo",
+            image: "/images/programacion-2026/personas/martina-ferragamo-simone-coppo.jpg",
+            meta: "Q&A",
+          },
+          {
+            name: "Rodrigo García",
+            image: "/images/programacion-2026/personas/rodrigo-garcia.jpg",
+            meta: "Modera · Central Films",
+          },
+        ],
+      },
+    ],
   },
   {
     slug: "not-not-jazz",
@@ -336,6 +354,67 @@ export const eventos2026: Evento[] = [
     accent: "#081722",
     body: [
       "Conversatorio postproyección con Billy Martin, baterista de Medeski, Martin & Wood, y Nicolás Celis (fundador de Pimienta Films).",
+    ],
+    groups: [
+      {
+        title: "Participan",
+        layout: "bio",
+        people: [
+          {
+            name: "Billy Martin",
+            image: "/images/programacion-2026/personas/billy-martin.jpg",
+            meta: "Baterista de Medeski, Martin & Wood",
+          },
+          {
+            name: "Nicolás Celis",
+            image: "/images/programacion-2026/personas/nico-celis.jpg",
+            meta: "Fundador de Pimienta Films",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "zoe-memorex-rexsexex-y-mas",
+    title: "Proyección + Conversatorio — *Zoé: Memorex + Rexsexex y Más*",
+    cardTitle: "Proyección — Zoé: Memorex + Rexsexex y Más",
+    venue: "JW Marriott — Terraza Amet",
+    credit: "Dir. Rodrigo Guardiola · México · 2026 · 182’",
+    cardSubtitle: "Dir. Rodrigo Guardiola · México · 2026 · 182’",
+    image: "/images/seleccion-oficial-2026/memorex-rexsexex-y-mas-still.jpg",
+    imageAlt: "Zoé en Memorex + Rexsexex y Más",
+    accent: "#6687C3",
+    body: [
+      "Seis Estadios GNP en la Ciudad de México. Más de 380 000 almas. Lo que ocurrió a lo largo de esas seis noches fue mucho más que un récord sin precedentes para el rock mexicano; fue un encuentro histórico e íntimo entre una banda que ha sido la banda sonora de universos enteros y una fanbase multigeneracional más devota que nunca. Esta es la historia de lo que vibró sobre el escenario y de lo que quedó guardado en los corazones de los fans: un desglose sin filtros del magnetismo absoluto, la nostalgia y la vigencia indiscutible de Zoé.",
+      "Conversatorio postproyección con Rodrigo Guardiola, Olmo Guerra y Fabrizio Onetto, de OCESA. Moderado por Alejandro Tavares.",
+    ],
+    groups: [
+      {
+        title: "Participan",
+        layout: "bio",
+        people: [
+          {
+            name: "Rodrigo Guardiola",
+            image: "/images/programacion-2026/personas/rodrigo-guardiola.jpg",
+            meta: "Director · baterista de Zoé",
+          },
+          {
+            name: "Olmo Guerra",
+            image: "/images/programacion-2026/personas/olmo-guerra.jpg",
+            meta: "Director",
+          },
+          {
+            name: "Fabrizio Onetto",
+            image: "/images/programacion-2026/personas/fabrizio-onetto.jpg",
+            meta: "OCESA",
+          },
+          {
+            name: "Alejandro Tavares",
+            image: "/images/programacion-2026/personas/alejandro-tavares.jpg",
+            meta: "Modera · Director de Filma Jalisco",
+          },
+        ],
+      },
     ],
   },
   {
