@@ -88,6 +88,19 @@ export const eventos2026: Evento[] = [
       "FICCLosCabos 2026 rinde homenaje a Dolores Heredia, una de las actrices más representativas del cine mexicano contemporáneo.",
       "Presentado por José María Yazpik, este encuentro celebrará su trayectoria artística a través de una retrospectiva audiovisual de su vida y obra, recordando algunos de los momentos más significativos de su carrera y su vínculo con Baja California Sur.",
     ],
+    groups: [
+      {
+        title: "Presenta",
+        layout: "bio",
+        people: [
+          {
+            name: "José María Yazpik",
+            image: "/images/programacion-2026/personas/jose-maria-yazpik.jpg",
+            meta: "Actor",
+          },
+        ],
+      },
+    ],
   },
   {
     slug: "keynote-claudio-jimenez",
@@ -121,6 +134,16 @@ export const eventos2026: Evento[] = [
         title: "Participan",
         layout: "bio",
         people: [
+          {
+            name: "Dimitri Planchon",
+            image: "/images/programacion-2026/personas/dimitri-planchon.jpg",
+            meta: "Director",
+          },
+          {
+            name: "Jean-Paul Guigue",
+            image: "/images/programacion-2026/personas/jean-paul-guigue.jpg",
+            meta: "Director",
+          },
           {
             name: "Claudio Jiménez",
             image: "/images/programacion-2026/personas/claudio-jimenez.jpg",
@@ -491,6 +514,11 @@ export const eventos2026: Evento[] = [
             name: "Hermann Neudert",
             image: "/images/programacion-2026/personas/hermann-neudert.jpg",
             meta: "Director y realizador audiovisual",
+          },
+          {
+            name: "Mario Escobar",
+            image: "/images/programacion-2026/personas/mario-escobar.jpg",
+            meta: "Ejecutivo de Global Talent Services (Universal Music Group) y mánager de Ed Maverick",
           },
           {
             name: "Zunshu",
