@@ -423,7 +423,7 @@ export const eventos2026: Evento[] = [
     accent: "#6687C3",
     body: [
       "Seis Estadios GNP en la Ciudad de México. Más de 380 000 almas. Lo que ocurrió a lo largo de esas seis noches fue mucho más que un récord sin precedentes para el rock mexicano; fue un encuentro histórico e íntimo entre una banda que ha sido la banda sonora de universos enteros y una fanbase multigeneracional más devota que nunca. Esta es la historia de lo que vibró sobre el escenario y de lo que quedó guardado en los corazones de los fans: un desglose sin filtros del magnetismo absoluto, la nostalgia y la vigencia indiscutible de Zoé.",
-      "Conversatorio postproyección con Rodrigo Guardiola, Olmo Guerra y Fabrizio Onetto, de OCESA. Moderado por Alejandro Tavares.",
+      "Conversatorio con Rodrigo Guardiola, cineasta, productor y baterista de Zoé; Olmo Guerra, productor, y Fabrizio Onetto, subdirector de Contenidos y Desarrollo Artístico en OCESA Seitrack. Moderado por Alejandro Tavares, director de Filma Jalisco.",
     ],
     groups: [
       {
@@ -433,17 +433,17 @@ export const eventos2026: Evento[] = [
           {
             name: "Rodrigo Guardiola",
             image: "/images/programacion-2026/personas/rodrigo-guardiola.jpg",
-            meta: "Director · baterista de Zoé",
+            meta: "Cineasta, productor y baterista de Zoé",
           },
           {
             name: "Olmo Guerra",
             image: "/images/programacion-2026/personas/olmo-guerra.jpg",
-            meta: "Director",
+            meta: "Productor",
           },
           {
             name: "Fabrizio Onetto",
             image: "/images/programacion-2026/personas/fabrizio-onetto.jpg",
-            meta: "OCESA",
+            meta: "Subdirector de Contenidos y Desarrollo Artístico en OCESA Seitrack",
           },
           {
             name: "Alejandro Tavares",
@@ -493,18 +493,13 @@ export const eventos2026: Evento[] = [
     accent: "#6687C3",
     body: [
       "Conoce los cinco proyectos seleccionados de Frequencies of Now, plataforma internacional dedicada al documental musical. Cineastas y jurados compartirán las historias detrás de cada proyecto y explorarán cómo la música refleja la identidad, la memoria y las transformaciones culturales de nuestro tiempo. La conversación abordará también los desafíos creativos y las oportunidades de proyección internacional del documental musical. El encuentro incluirá la proyección de fragmentos de los proyectos seleccionados.",
-      "Jurados participantes: Juan Patricio Riveroll, Rodrigo Guardiola, Hermann Neudert, Mario Escobar y Zunshu. Moderado por Alejandro Tavares, Director de Filma Jalisco.",
+      "Jurados participantes: Rodrigo Guardiola, Hermann Neudert, Mario Escobar y Zunshu. Moderado por Alejandro Tavares, Director de Filma Jalisco.",
     ],
     groups: [
       {
         title: "Jurados participantes",
         layout: "bio",
         people: [
-          {
-            name: "Juan Patricio Riveroll",
-            image: "/images/programacion-2026/personas/juan-patricio-riveroll.jpg",
-            meta: "Director, productor y Director de Extensión Académica de ESCINE",
-          },
           {
             name: "Rodrigo Guardiola",
             image: "/images/programacion-2026/personas/rodrigo-guardiola.jpg",
@@ -529,35 +524,6 @@ export const eventos2026: Evento[] = [
             name: "Alejandro Tavares",
             image: "/images/programacion-2026/personas/alejandro-tavares.jpg",
             meta: "Modera · Director de Filma Jalisco",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    slug: "work-in-progress-insectario",
-    title: "Work in Progress — *Insectario*",
-    venue: "Cinépolis San José del Cabo",
-    image: "/images/programacion-2026/work-in-progress-insectario.jpg",
-    imageAlt: "Fotograma de la cinta animada Insectario",
-    accent: "#006666",
-    body: [
-      "Un acercamiento al proceso creativo y de producción de Insectario a través de un caso de estudio presentado por su directora, Sofía Carrillo, y su coproductor, Matīss Kaža (Letonia). Una conversación para conocer el desarrollo de la película, sus desafíos creativos y la experiencia de colaboración internacional detrás del proyecto.",
-    ],
-    groups: [
-      {
-        title: "Participan",
-        layout: "bio",
-        people: [
-          {
-            name: "Sofía Carrillo",
-            image: "/images/programacion-2026/personas/sofia-carrillo.jpg",
-            meta: "Directora",
-          },
-          {
-            name: "Matīss Kaža",
-            image: "/images/programacion-2026/personas/matiss-kaza.jpg",
-            meta: "Coproductor · Letonia",
           },
         ],
       },

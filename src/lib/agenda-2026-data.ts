@@ -2,8 +2,7 @@
 //
 // Fuente: FICCLosCabos_Programa.pdf (programa del 10-nov-2026) más los cambios
 // de Mafer por WhatsApp (10-nov-2026):
-//   A) Work in Progress — Insectario pasa del jueves 10 al viernes 11
-//      (9:00–11:00, Cinépolis San José del Cabo).
+//   A) Work in Progress — Insectario y Space Xmas se bajaron (13-nov-2026).
 //   B) Zoé: el conversatorio es con Olmo Guerra (no Olmo Rodríguez).
 //
 // Texto del PDF con erratas corregidas (Inaugural, Conversatorio, 77´,
@@ -301,15 +300,6 @@ export const agenda2026: AgendaDay[] = [
     blocks: [
       sage([
         ...talleres("2026-12-11", 2),
-        {
-          id: "2026-12-11-insectario",
-          time: "9:00–11:00 hrs",
-          title: titled("Work in Progress", "Insectario"),
-          description:
-            "Un acercamiento al proceso creativo y de producción de Insectario a través de un caso de estudio presentado por su directora, **Sofía Carrillo**, y su coproductor, **Matīss Kaža** (Letonia). Una conversación para conocer el desarrollo de la película, sus desafíos creativos y la experiencia de colaboración internacional detrás del proyecto",
-          location: CINEPOLIS,
-          href: EVENTO("work-in-progress-insectario"),
-        },
       ]),
       peach([
         {
@@ -375,7 +365,7 @@ export const agenda2026: AgendaDay[] = [
           title: titled("Panel", "Frequencies of Now: The stories behind the music"),
           href: EVENTO("panel-frequencies-of-now"),
           description:
-            "Jurados participantes:\n**Juan Patricio Riveroll** · Director, productor y Director de Extensión Académica de ESCINE\n**Rodrigo Guardiola** · Cineasta, productor y baterista de Zoé\n**Hermann Neudert** · Director y realizador audiovisual\n**Mario Escobar** · Ejecutivo de Global Talent Services (Universal Music Group) y mánager de Ed Maverick\n**Zunshu** · Creativo y miembro de la dirección de Revista 192\n\nConoce los cinco proyectos seleccionados de Frequencies of Now, plataforma internacional dedicada al documental musical. Cineastas y jurados compartirán las historias detrás de cada proyecto y explorarán cómo la música refleja la identidad, la memoria y las transformaciones culturales de nuestro tiempo. La conversación abordará también los desafíos creativos y las oportunidades de proyección internacional del documental musical. El encuentro incluirá la proyección de fragmentos de los proyectos seleccionados. Moderado por **Alejandro Tavares**, Director de Filma Jalisco",
+            "Jurados participantes:\n**Rodrigo Guardiola** · Cineasta, productor y baterista de Zoé\n**Hermann Neudert** · Director y realizador audiovisual\n**Mario Escobar** · Ejecutivo de Global Talent Services (Universal Music Group) y mánager de Ed Maverick\n**Zunshu** · Creativo y miembro de la dirección de Revista 192\n\nConoce los cinco proyectos seleccionados de Frequencies of Now, plataforma internacional dedicada al documental musical. Cineastas y jurados compartirán las historias detrás de cada proyecto y explorarán cómo la música refleja la identidad, la memoria y las transformaciones culturales de nuestro tiempo. La conversación abordará también los desafíos creativos y las oportunidades de proyección internacional del documental musical. El encuentro incluirá la proyección de fragmentos de los proyectos seleccionados. Moderado por **Alejandro Tavares**, Director de Filma Jalisco",
           location: JW_ANFITEATRO,
         },
         {
@@ -394,7 +384,7 @@ export const agenda2026: AgendaDay[] = [
           title: titled("Proyección + Conversatorio", "Zoé: Memorex + Rexsexex y Más"),
           subtitle: "Dir. Rodrigo Guardiola · México · 2026 · 182´",
           description:
-            "Conversatorio postproyección con **Rodrigo Guardiola**, **Olmo Guerra** y **Fabrizio Onetto**, de OCESA. Moderado por **Alejandro Tavares**.",
+            "Conversatorio con **Rodrigo Guardiola** · Cineasta, productor y baterista de Zoé, **Olmo Guerra** · Productor, **Fabrizio Onetto** · Subdirector de Contenidos y Desarrollo Artístico en OCESA Seitrack. Moderado por **Alejandro Tavares** · Director de Filma Jalisco",
           location: "JW Marriott — Terraza Amet",
           href: EVENTO("zoe-memorex-rexsexex-y-mas"),
         },
@@ -485,13 +475,6 @@ export const agenda2026: AgendaDay[] = [
             "Presentado por **Salomon**\nCineastas participantes: **Natalia León, Mariana Mendívil, Diego Gaxiola, Karla Condado, Leo Aguirre, Amandine Thomas, Gabriela Ortega, Federico Luis, Eduardo Braun, Josefina Montino y Martín André**\n\nConoce a los 11 cineastas emergentes de América Latina que forman parte de The Next Wave, un programa dedicado a impulsar nuevas voces del cine latinoamericano. En su presentación oficial, descubriremos a los talentos seleccionados y sus perspectivas creativas. Moderado por **Carlos López Estrada**, cineasta y fundador de Antigravity Academy",
           location: SALA_8,
           href: EVENTO("panel-the-next-wave"),
-        },
-        {
-          id: "2026-12-12-space-xmas",
-          time: "17:30 – 18:30 hrs",
-          title: plain("Space Xmas"),
-          description: "Evento especial",
-          location: "Hotel El Ganzo — Jetty",
         },
       ]),
       blue([
