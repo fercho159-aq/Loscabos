@@ -487,14 +487,21 @@ export const eventos2026: Evento[] = [
     imageAlt: "Consola de audio iluminada en morado",
     accent: "#6687C3",
     body: [
-      "Conoce los cinco proyectos seleccionados de Frequencies of Now, plataforma internacional dedicada al documental musical. Cineastas y jurados compartirán las historias detrás de cada proyecto y explorarán cómo la música refleja la identidad, la memoria y las transformaciones culturales de nuestro tiempo. La conversación abordará también los desafíos creativos y las oportunidades de proyección internacional del documental musical. El encuentro incluirá la proyección de fragmentos de los proyectos seleccionados.",
-      "Jurados participantes: Rodrigo Guardiola, Hermann Neudert, Mario Escobar y Zunshu. Moderado por Alejandro Tavares, Director de Filma Jalisco.",
+      "La música como archivo vivo de nuestro tiempo.",
+      "Presentación de los cinco proyectos seleccionados de Frequencies of Now: A Living Archive of Music Culture, plataforma internacional dedicada al documental musical. Una conversación entre cineastas y jurados sobre la música como expresión de identidad, memoria y transformación cultural; las historias detrás de los proyectos; los criterios curatoriales y el proceso de selección; así como los desafíos creativos y las oportunidades de circulación internacional del documental musical.",
+      "Incluye: conversación con el jurado · proceso y criterios de selección · anuncio de ganadores · proyección de fragmentos seleccionados.",
+      "Jurados participantes: Juan Patricio Riveroll, Rodrigo Guardiola, Hermann Neudert, Mario Escobar y Zunshu. Moderado por Alejandro Tavares, Director de Filma Jalisco.",
     ],
     groups: [
       {
         title: "Jurados participantes",
         layout: "bio",
         people: [
+          {
+            name: "Juan Patricio Riveroll",
+            image: "/images/programacion-2026/personas/juan-patricio-riveroll.jpg",
+            meta: "Director, productor y Director de Extensión Académica de ESCINE",
+          },
           {
             name: "Rodrigo Guardiola",
             image: "/images/programacion-2026/personas/rodrigo-guardiola.jpg",
