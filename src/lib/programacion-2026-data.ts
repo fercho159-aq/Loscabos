@@ -423,7 +423,7 @@ export const eventos2026: Evento[] = [
     accent: "#6687C3",
     body: [
       "Seis Estadios GNP en la Ciudad de México. Más de 380 000 almas. Lo que ocurrió a lo largo de esas seis noches fue mucho más que un récord sin precedentes para el rock mexicano; fue un encuentro histórico e íntimo entre una banda que ha sido la banda sonora de universos enteros y una fanbase multigeneracional más devota que nunca. Esta es la historia de lo que vibró sobre el escenario y de lo que quedó guardado en los corazones de los fans: un desglose sin filtros del magnetismo absoluto, la nostalgia y la vigencia indiscutible de Zoé.",
-      "Conversatorio con Rodrigo Guardiola, cineasta, productor y baterista de Zoé; Olmo Guerra, productor, y Fabrizio Onetto, subdirector de Contenidos y Desarrollo Artístico en OCESA Seitrack. Moderado por Alejandro Tavares, director de Filma Jalisco.",
+      "Conversatorio con Rodrigo Guardiola, cineasta, productor y baterista de Zoé; Olmo Guerra, productor, y Fabrizio Onetto, subdirector de Contenidos y Desarrollo Artístico en OCESA Seitrack.",
     ],
     groups: [
       {
@@ -444,11 +444,6 @@ export const eventos2026: Evento[] = [
             name: "Fabrizio Onetto",
             image: "/images/programacion-2026/personas/fabrizio-onetto.jpg",
             meta: "Subdirector de Contenidos y Desarrollo Artístico en OCESA Seitrack",
-          },
-          {
-            name: "Alejandro Tavares",
-            image: "/images/programacion-2026/personas/alejandro-tavares.jpg",
-            meta: "Modera · Director de Filma Jalisco",
           },
         ],
       },

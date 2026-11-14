@@ -384,7 +384,7 @@ export const agenda2026: AgendaDay[] = [
           title: titled("Proyección + Conversatorio", "Zoé: Memorex + Rexsexex y Más"),
           subtitle: "Dir. Rodrigo Guardiola · México · 2026 · 182´",
           description:
-            "Conversatorio con **Rodrigo Guardiola** · Cineasta, productor y baterista de Zoé, **Olmo Guerra** · Productor, **Fabrizio Onetto** · Subdirector de Contenidos y Desarrollo Artístico en OCESA Seitrack. Moderado por **Alejandro Tavares** · Director de Filma Jalisco",
+            "Conversatorio con **Rodrigo Guardiola** · Cineasta, productor y baterista de Zoé, **Olmo Guerra** · Productor, **Fabrizio Onetto** · Subdirector de Contenidos y Desarrollo Artístico en OCESA Seitrack",
           location: "JW Marriott — Terraza Amet",
           href: EVENTO("zoe-memorex-rexsexex-y-mas"),
         },
