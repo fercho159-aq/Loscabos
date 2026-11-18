@@ -37,6 +37,12 @@ export const peliculasSeleccionLiberadas2026 = [
   "jaripeo",
   "la-peluca",
   "elsinore",
+  "love-lessons",
+  "nina-roza",
+  "we-are-all-strangers",
+  "nuisance-bear",
+  "i-deserve-a-lover-whose-every-rise-sets-fiery-dooms-raging-across-the-skies",
+  "nagi-notes",
 ];
 
 // Selección Oficial 2026: contenido y materiales proporcionados en el documento.
