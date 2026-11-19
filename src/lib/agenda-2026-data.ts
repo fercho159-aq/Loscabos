@@ -188,16 +188,15 @@ export const agenda2026: AgendaDay[] = [
         },
         {
           id: "2026-12-10-cameron-winter",
-          time: "12:20 – 14:15 hrs",
-          title: titled("Proyección + Q&A", "Cameron Winter At Carnegie Hall"),
+          time: "12:20 – 13:31 hrs",
+          title: titled("Proyección", "Cameron Winter At Carnegie Hall"),
           subtitle: "Dir. Paul Thomas Anderson · Estados Unidos · 2026 · 71´",
-          description: "Q&A",
           location: SALA_8,
           href: PELICULA("cameron-winter-at-carnegie-hall"),
         },
         {
           id: "2026-12-10-dolores-heredia",
-          time: "14:15 – 14:45 hrs",
+          time: "13:45 – 14:15 hrs",
           title: plain("Homenaje a Dolores Heredia"),
           description:
             "FICCLosCabos 2026 rinde homenaje a Dolores Heredia, una de las actrices más representativas del cine mexicano contemporáneo. Presentado por **José María Yazpik**, este encuentro celebrará su trayectoria artística a través de una retrospectiva audiovisual de su vida y obra, recordando algunos de los momentos más significativos de su carrera y su vínculo con Baja California Sur",
