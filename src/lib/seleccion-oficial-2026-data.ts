@@ -26,8 +26,9 @@ export const programasPeliculas2026 = [
 ];
 
 // Liberados el 6 de noviembre de 2026: Animación y parte de la Selección oficial.
+// La Baja Inspira, el 19 de noviembre (comentario de Mafer en el doc).
 export const programasPublicos2026 = programasPeliculas2026
-  .filter((programa) => programa.id === "animacion" || programa.id === "seleccion")
+  .filter((programa) => ["animacion", "seleccion", "la-baja-inspira"].includes(programa.id))
   .map((programa) => ({ ...programa, href: programa.href.replace("/programacion-2026-preview", "/programacion-2026") }));
 
 // De la Selección oficial solo se liberan estas películas; el resto sigue en el preview.
@@ -117,8 +118,10 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2025",
     "duration": "102’",
+    "synopsis": "Cristian es un hombre que, tras dejar el crimen organizado, busca redirigir su vida a través del fútbol, buscando devolver a su comunidad lo que alguna vez les arrebató. Para ello, crea Ángeles Soccer, un equipo donde entrena a niños, niñas y mujeres de diversas edades en un terreno baldío que antes era un foco de delincuencia en Ángeles de Puebla, una de las zonas más peligrosas de Mexicali, en la frontera noroeste de México con Estados Unidos.\n\nLa película sigue la historia de lucha de Cristian y las jugadoras, dentro y fuera de la cancha, mostrando cómo un ex criminal ofrece la posibilidad de generar espacios seguros para las mujeres, niñas y niños de la comunidad que él afectó en su pasado.",
     "image": "/images/seleccion-oficial-2026/angeles-fc-still.jpg",
-    "poster": "/images/seleccion-oficial-2026/angeles-fc-poster.jpg"
+    "poster": "/images/seleccion-oficial-2026/angeles-fc-poster.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=D6bCphRV1-A"
   },
   {
     "slug": "angels-egg-4k-restoration",
@@ -155,8 +158,10 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2025",
     "duration": "17’",
+    "synopsis": "En las aguas de Baja California Sur, una comunidad pesquera ha encontrado una manera de preservar su oficio mientras transforma la forma en que entiende y maneja lo que obtiene del mar. Azul Vivo acompaña a los pescadores de San Evaristo y explora prácticas de pesca responsable, trazabilidad y técnicas de manejo como el Ikejime, que permiten elevar la calidad del producto desde el momento de la captura hasta su llegada a la cocina. A través de una mirada cinematográfica e íntima, el documental conecta territorio, oficio y alimento para mostrar que la calidad de un producto no comienza en el plato, sino mucho antes: en la forma en que se pesca, se cuida y se respeta su origen.",
     "image": "/images/seleccion-oficial-2026/azul-vivo-still.jpg",
-    "poster": "/images/seleccion-oficial-2026/azul-vivo-poster.jpg"
+    "poster": "/images/seleccion-oficial-2026/azul-vivo-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/1-DM8wyig5bYi_XI2QGwgfoNbwSNUmmNO/view"
   },
   {
     "slug": "baja-viva",
@@ -166,7 +171,10 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2026",
     "duration": "42’",
-    "image": "/images/seleccion-oficial-2026/baja-viva-still.jpg"
+    "synopsis": "Baja California Sur alberga uno de los territorios con mayor biodiversidad del planeta y enfrenta transformaciones que marcarán su futuro. A través de voces que revelan distintas maneras de habitar la península, Baja Viva invita a descubrir su complejidad y a reflexionar sobre la posibilidad de construir un equilibrio entre el desarrollo y la conservación.",
+    "image": "/images/seleccion-oficial-2026/baja-viva-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/baja-viva-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/1cKlU2FcbDqkRDXQFGMa0Ae9Nk11zTt6O/view"
   },
   {
     "slug": "blaise",
@@ -264,7 +272,10 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2025",
     "duration": "38’",
-    "poster": "/images/seleccion-oficial-2026/fiesta-en-la-mision-poster.jpg"
+    "synopsis": "La Fiesta en La Misión se lleva a cabo en Baja California desde el año 1979. Esta celebración es el medio principal de transmisión de conocimientos sobre el pasado, tanto distante como inmediato, en donde la participación colectiva, el respeto a la nación y tradiciones vaqueras como el rodeo y los bailes calabaceados, sustentan la memoria y la identidad de la comunidad. El 6 de marzo del 2026, la Fiesta en La Misión fue declarada como Patrimonio Cultural del Estado de Baja California.",
+    "image": "/images/seleccion-oficial-2026/fiesta-en-la-mision-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/fiesta-en-la-mision-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/1xL2iMl0twhhbGOBYLtpWnqRrFlMsnFx2/view"
   },
   {
     "slug": "guardianes-del-golfo-from-sand-to-sea",
@@ -274,9 +285,10 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2026",
     "duration": "18’",
-    "poster": "/images/seleccion-oficial-2026/guardianes-del-golfo-from-sand-to-sea-poster.jpg",
+    "synopsis": "Guardianes del Golfo acompaña las voces de las comunidades pesqueras de Puerto Libertad y de las comunidades Comca'ac. El corto traza una historia de resistencia contra los megaproyectos fósiles, subrayando la importancia de la cultura, el arraigo territorial y el amor en la resistencia al desarrollo de expansión fósil.",
     "image": "/images/seleccion-oficial-2026/guardianes-del-golfo-from-sand-to-sea-still.jpg",
-    "trailerUrl": "https://vimeo.com/1222525365?share=copy&fl=sv&fe=ci"
+    "poster": "/images/seleccion-oficial-2026/guardianes-del-golfo-from-sand-to-sea-poster.jpg",
+    "trailerUrl": "https://vimeo.com/1222525365"
   },
   {
     "slug": "hasta-pronto",
@@ -339,8 +351,10 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2026",
     "duration": "10’",
+    "synopsis": "Vicente y Mari viven tranquilamente en una remota zona montañosa de Baja California Sur, rodeados de sus animales y de un jardín lleno de vida. Su casa está construida con materiales naturales: madera, piedra y barro recolectados de los alrededores. Vicente tardó varios años en construirla con sus propias manos, mientras Mari guiaba el diseño y la distribución de los espacios.\n\nSus días transcurren a un ritmo pausado, y la honesta sencillez de su vida evoca algo cada vez más raro, pero profundamente familiar. In Praise of Shadows es un ensayo visual, un retrato íntimo de una vida en estrecha relación con la naturaleza, donde la gracia, la belleza y el valor de la vida emergen sutilmente de las sombras.",
     "image": "/images/seleccion-oficial-2026/in-praise-of-shadows-still.jpg",
-    "poster": "/images/seleccion-oficial-2026/in-praise-of-shadows-poster.jpg"
+    "poster": "/images/seleccion-oficial-2026/in-praise-of-shadows-poster.jpg",
+    "trailerUrl": "https://vimeo.com/1233510155"
   },
   {
     "slug": "iron-boy",
@@ -413,17 +427,21 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2025",
     "duration": "12’",
+    "synopsis": "Antes cazadores de las profundidades, hoy guardianes del océano.\n\nLa historia de antiguos pescadores de tiburón que transformaron sus vidas y su legado. Con el imponente telón de fondo del mar, la película se sumerge en la belleza indómita de la vida marina y en el profundo viaje de los hombres que antes le quitaban al océano y hoy luchan por protegerlo.\n\nEsta es su historia. Esta es la segunda oportunidad del mar.",
     "image": "/images/seleccion-oficial-2026/la-ventana-a-la-esperanza-still.jpg",
-    "poster": "/images/seleccion-oficial-2026/la-ventana-a-la-esperanza-poster.jpg"
+    "poster": "/images/seleccion-oficial-2026/la-ventana-a-la-esperanza-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/1F_1ZFMhS-1VK8FPEj1KDM7DQF3nhxsZ-/view"
   },
   {
     "slug": "la-ventana-a-story-of-baja-california-sur-told-from-the-channel-of-isla-cerralvo",
-    "title": "La Ventana: A Story of Baja California Sur told from the channel of Isla Cerralvo",
+    "title": "La Ventana: Una Historia de Baja California Sur contada desde el canal de Isla Cerralvo",
     "categoryId": "la-baja-inspira",
     "directors": "Alonso I. Rodríguez de la Parra",
     "countries": "México",
     "year": "2026",
     "duration": "34’",
+    "synopsis": "Una expedición por los Dos Mares de Baja California Sur revela un universo marino desbordante de vida: ballenas, tiburones, rayas y depredadores legendarios conviven en uno de los ecosistemas más ricos del planeta. A través de encuentros extraordinarios y testimonios de quienes lo conocen y lo protegen, el documental celebra la belleza del océano y expone las amenazas que ponen en riesgo su futuro, recordándonos que aún estamos a tiempo de cuidarlo.",
+    "image": "/images/seleccion-oficial-2026/la-ventana-a-story-of-baja-california-sur-told-from-the-channel-of-isla-cerralvo-still.jpg",
     "poster": "/images/seleccion-oficial-2026/la-ventana-a-story-of-baja-california-sur-told-from-the-channel-of-isla-cerralvo-poster.jpg"
   },
   {
@@ -550,8 +568,10 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2025",
     "duration": "55’",
+    "synopsis": "La Dra. Diane Gendron ha dedicado su vida al estudio de las ballenas azules en el Golfo de California en México. Ha revelado las vidas secretas de estos misteriosos gigantes como nunca antes; Diane es la Jane Goodall de las ballenas, aunque su historia aún está por contarse. Esta íntima película —narrada enteramente en las propias palabras de Diane— sigue su innovador trabajo, su viaje personal y su inquebrantable compromiso con la protección de su familia de ballenas azules. Ambientada en uno de los mares más ricos del mundo y con impactantes imágenes de delfines, lobos marinos y orcas, este es un poderoso retrato de pasión, sacrificio y la lucha por salvar al animal más grande de la Tierra. Únete a Diane en el impresionante Golfo de California y deja que te cuente su extraordinaria historia.",
     "image": "/images/seleccion-oficial-2026/my-blue-whale-family-still.jpg",
-    "poster": "/images/seleccion-oficial-2026/my-blue-whale-family-poster.jpg"
+    "poster": "/images/seleccion-oficial-2026/my-blue-whale-family-poster.jpg",
+    "trailerUrl": "https://vimeo.com/1103071122"
   },
   {
     "slug": "nagi-notes",
@@ -610,8 +630,10 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2026",
     "duration": "37’",
+    "synopsis": "Héctor Estrada y Axel Sandoval son hijos de generaciones de pescadores del Pacífico Norte de Baja California. A través de sus historias entrelazadas, Oro Rojo se adentra en las comunidades pesqueras durante la apertura de la temporada de langosta, siguiendo el inicio de un ciclo que ha marcado la vida de sus habitantes por generaciones.\n\nMás allá de la captura, la película revela una cultura construida alrededor del mar, donde el conocimiento heredado, el trabajo colectivo y la organización cooperativista sostienen una forma de vida ligada al territorio. En la unión de los pescadores emerge también una manera de entender el aprovechamiento del recurso marino y la responsabilidad de preservarlo para quienes vendrán después.\n\nDesde una mirada íntima y arraigada en la comunidad, Oro Rojo explora la herencia de un oficio, la fuerza de los vínculos familiares y la relación entre identidad, autonomía y sustentabilidad. La película culmina en una reflexión personal sobre lo que significa crecer junto al mar y recibir una historia que comenzó mucho antes de uno mismo.",
     "image": "/images/seleccion-oficial-2026/oro-rojo-still.jpg",
-    "poster": "/images/seleccion-oficial-2026/oro-rojo-poster.jpg"
+    "poster": "/images/seleccion-oficial-2026/oro-rojo-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/1zb9GlZutPiyUwiQiwvNj8iDxb7dw3VJc/view"
   },
   {
     "slug": "para-los-contrincantes",
@@ -634,8 +656,10 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2025",
     "duration": "10’",
+    "synopsis": "Durante más de una década, la Rata Canguro de San Quintín (Dipodomys gravipes) fue considerada extinta: un pequeño roedor endémico de Baja California que parecía haber desaparecido bajo el avance de la agricultura intensiva en el Valle de San Quintín.\n\nContra todo pronóstico, algunas poblaciones lograron sobrevivir en los últimos fragmentos de hábitat natural que quedan en pie. Rata Canguro de San Quintín: 100 Años de Resiliencia sigue de cerca el trabajo de biólogos, guardaparques y colaboradores de Terra Peninsular, que recorren la región entre tardes de trampeo y monitoreos al amanecer para documentar, proteger y dar visibilidad a esta especie en peligro de extinción. Entre datos científicos, testimonios de campo y el paisaje árido de la península, el documental construye un retrato de resiliencia compartida: la de una especie que se resiste a desaparecer y la de quienes trabajan, muchas veces en silencio, para que eso no ocurra.",
     "image": "/images/seleccion-oficial-2026/rata-canguro-de-san-quintin-100-anos-de-resiliencia-still.jpg",
-    "poster": "/images/seleccion-oficial-2026/rata-canguro-de-san-quintin-100-anos-de-resiliencia-poster.jpg"
+    "poster": "/images/seleccion-oficial-2026/rata-canguro-de-san-quintin-100-anos-de-resiliencia-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/1Kc8xbMGMrqWkttFgprywNtN_zg5aG1Bi/view"
   },
   {
     "slug": "recuerdos-profundos",
@@ -645,8 +669,10 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2024",
     "duration": "10’",
+    "synopsis": "“Deep Memories” es un cautivador documental que se sumerge en el mundo de la fotografía submarina y en su capacidad para despertar una conciencia ambiental. A través de la mirada de un fotógrafo apasionado, la película nos lleva en un viaje que va desde una fascinación personal por el mar hasta una profunda conexión con su conservación.",
     "image": "/images/seleccion-oficial-2026/recuerdos-profundos-still.jpg",
-    "poster": "/images/seleccion-oficial-2026/recuerdos-profundos-poster.jpg"
+    "poster": "/images/seleccion-oficial-2026/recuerdos-profundos-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/1CuWkyhKOk3PCSNRkWZ9izRsYIRtcy2rZ/view"
   },
   {
     "slug": "rehearsals-for-a-revolution",
@@ -704,10 +730,11 @@ export const peliculas2026: Pelicula2026[] = [
     "directors": "Alejandro Montalvo",
     "countries": "México",
     "year": "2024",
-    "duration": "86’",
+    "duration": "77’",
+    "synopsis": "El reconocido vitivinicultor Hugo D’Acosta y el célebre chef Benito Molina emprenden un viaje a lo largo de la península de Baja California, una de las regiones más singulares de México. Desde los viñedos del Valle de Guadalupe hasta los oasis de San Ignacio, recorren un territorio donde la naturaleza imponente y la huella del ser humano conviven en un frágil equilibrio. A través de paisajes agrestes, costas indómitas y comunidades que han moldeado su identidad en torno al mar y la tierra, Surgencia revela las cicatrices de un territorio transformado por el tiempo y la intervención humana. Esta travesía es, a la vez, una exploración personal y una carta de amor a Baja California, escrita por dos figuras que han dejado una marca profunda e irreversible en su cultura gastronómica y enológica. Esta travesía es una carta de amor a Baja California, escrita por dos figuras que han dejado una marca profunda e irreversible en su cultura gastronómica y enológica.",
     "image": "/images/seleccion-oficial-2026/surgencia-still.jpg",
     "poster": "/images/seleccion-oficial-2026/surgencia-poster.jpg",
-    "synopsis": "El reconocido vitivinicultor Hugo D’Acosta y el célebre chef Benito Molina emprenden un viaje a lo largo de la península de Baja California, una de las regiones más singulares de México. Desde los viñedos del Valle de Guadalupe hasta los oasis de San Ignacio, recorren un territorio donde la naturaleza imponente y la huella del ser humano conviven en un frágil equilibrio. A través de paisajes agrestes, costas indómitas y comunidades que han moldeado su identidad en torno al mar y la tierra, Surgencia revela las cicatrices de un territorio transformado por el tiempo y la intervención humana. Esta travesía es, a la vez, una exploración personal y una carta de amor a Baja California, escrita por dos figuras que han dejado una marca profunda e irreversible en su cultura gastronómica y enológica."
+    "trailerUrl": "https://drive.google.com/file/d/1Y7_t5eCQxlg8MuDUXJXqQNRildnew2n-/view"
   },
   {
     "slug": "taje",
@@ -717,8 +744,10 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2026",
     "duration": "24’",
+    "synopsis": "Un grupo de guías de cazadores del Ejido Alfredo V. Bonfil se interna en el desierto sudcaliforniano de México para monitorear borregos cimarrones. Lo que inicia como una actividad técnica se convierte en un viaje de contemplación, búsqueda y conexión con un territorio y un animal casi místico. Al seguirlos, descubrimos un oficio poco conocido y a los protagonistas de un controvertido modelo de conservación que ha recuperado las poblaciones de esta emblemática especie.",
     "image": "/images/seleccion-oficial-2026/taje-still.jpg",
-    "poster": "/images/seleccion-oficial-2026/taje-poster.jpg"
+    "poster": "/images/seleccion-oficial-2026/taje-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/1M-1YzH5urPNjRGp-pAQpgZnHm0GU31nr/view"
   },
   {
     "slug": "the-only-living-pickpocket-in-new-york",
@@ -752,8 +781,10 @@ export const peliculas2026: Pelicula2026[] = [
     "countries": "México",
     "year": "2025",
     "duration": "13’",
+    "synopsis": "*Tierra* es un encuentro con Noel Cota, ceramista que encuentra en el barro una forma de aproximarse a la creación y a Dios. En sus manos, la materia se convierte en el espacio donde una intuición puede hacerse forma y presencia: una idea que todavía no existe plenamente se manifiesta en el mundo a través del trabajo, la atención y la materia.\n\nPara Noel, ese proceso de hacer visible aquello que nace en la consciencia es lo que convierte a una persona en artista. Crear no es solamente producir un objeto, sino participar de un acto de manifestación: llevar algo invisible hacia lo concreto y hacerlo existir en el presente. A través de su mirada sobre el barro, Tierra explora la relación entre creación, consciencia, intuición y trascendencia. Pero también es una reflexión personal. Al acompañar a Noel en su proceso creativo, el documental encuentra un espejo para la propia búsqueda del director como creador independiente: la necesidad de descubrir sentido en el acto de hacer, de confiar en una intuición y de convertir una visión interior en algo que pueda existir, ser contemplado y compartido con otros.",
     "image": "/images/seleccion-oficial-2026/tierra-still.jpg",
-    "poster": "/images/seleccion-oficial-2026/tierra-poster.jpg"
+    "poster": "/images/seleccion-oficial-2026/tierra-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/1dpmpNQ8IwClZQBzw084X0R37O4uh2k0c/view"
   },
   {
     "slug": "we-are-aliens",

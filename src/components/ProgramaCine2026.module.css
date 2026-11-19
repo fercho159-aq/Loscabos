@@ -1,0 +1,20 @@
+/* Lista por día del mockup de Mafer (19-nov-2026), sobre el gris de la agenda. */
+.programa { padding: 2rem clamp(1.25rem, 5vw, 5rem) 5rem; background: #D9D4CD; color: #081722; }
+
+.days { display: flex; flex-wrap: wrap; column-gap: clamp(1.25rem, 3.5vw, 3rem); border-bottom: 2px solid #9D9D9C; margin-bottom: 2rem; }
+.days button { min-height: 44px; padding: .5rem .25rem .6rem; border-bottom: 4px solid transparent; margin-bottom: -2px; font-size: clamp(1.05rem, 1.6vw, 1.4rem); font-weight: 800; letter-spacing: -.01em; color: inherit; cursor: pointer; }
+.days button[aria-selected="true"] { border-bottom-color: #FA6935; }
+.days button:hover { color: #b43c13; }
+.days button:focus-visible { outline: 3px solid #FA6935; outline-offset: 4px; }
+
+.list { max-width: 34rem; margin: 0; padding: 0; list-style: none; }
+.item { padding: .9rem 0; border-bottom: 1px solid #08172240; }
+.item:first-child { padding-top: 0; }
+
+.when { margin: 0; font-size: 1.05rem; font-weight: 800; }
+.title { margin: 0; font-size: 1.05rem; font-weight: 700; line-height: 1.25; }
+.title a { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: text-decoration-color .2s; }
+.title a:hover, .title a:focus-visible { text-decoration-color: currentColor; }
+.meta { margin: .1rem 0 0; font-size: .875rem; }
+
+.films { margin: .75rem 0 0; padding: 0; list-style: none; display: grid; gap: .5rem; }
