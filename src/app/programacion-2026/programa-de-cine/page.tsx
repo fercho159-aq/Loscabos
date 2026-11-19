@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Programacion2026Tabs from "@/components/Programacion2026Tabs";
 import ProgramaCine2026, { type DiaLigado } from "@/components/ProgramaCine2026";
-import { programaCine2026 } from "@/lib/programa-cine-2026-data";
+import { programaCine2026, programaCinePublico2026 } from "@/lib/programa-cine-2026-data";
 import { peliculasPublicas2026, PUBLIC_FILM_BASE } from "@/lib/seleccion-oficial-2026-data";
 import { eventosVisibles2026 } from "@/lib/programacion-2026-data";
 
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
   title: "Programa de cine 2026 | FICC Los Cabos",
   description,
   alternates: { canonical: "/programacion-2026/programa-de-cine" },
+  robots: programaCinePublico2026 ? undefined : { index: false, follow: false },
   openGraph: { title: "Programa de cine 2026 | FICC Los Cabos", description, url: "/programacion-2026/programa-de-cine" },
 };
 
@@ -22,6 +24,8 @@ export const revalidate = 60;
 const norm = (s: string) => s.replace(/ \+ Q&A$/, "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 
 export default function ProgramaDeCinePage() {
+  if (!programaCinePublico2026) redirect("/programacion-2026");
+
   // Solo se ligan fichas públicas; las demás quedan como texto hasta liberarse.
   const peliculas = new Map(peliculasPublicas2026.map((film) => [norm(film.title), `${PUBLIC_FILM_BASE}/${film.slug}`]));
   const eventos = new Set(eventosVisibles2026().map((ev) => ev.slug));

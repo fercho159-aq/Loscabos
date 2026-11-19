@@ -2,6 +2,9 @@
 // Cine 2026", Mafer, 19-nov-2026). Los títulos se ligan a su ficha en
 // ProgramaCine2026 cuando la película ya es pública.
 
+// Oculto hasta que Cinépolis confirme horarios (Mafer, 19-nov-2026). Cambiar a true para publicarlo.
+export const programaCinePublico2026 = false;
+
 export type FuncionPelicula = { title: string; meta: string };
 export type Funcion = {
   time: string;

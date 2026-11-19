@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { programasPeliculas2026, programasPublicos2026 } from "@/lib/seleccion-oficial-2026-data";
+import { programaCinePublico2026 } from "@/lib/programa-cine-2026-data";
 import styles from "./Programacion2026Tabs.module.css";
 
 type ProgramaTab = "programacion" | "programa-de-cine" | "seleccion" | "la-baja-inspira" | "animacion" | "frequencies-of-now" | "next-wave";
@@ -13,7 +14,7 @@ const tabs = [
 
 const publicTabs = [
   { id: "programacion", title: "Programación", href: "/programacion-2026" },
-  { id: "programa-de-cine", title: "Programa de cine", href: "/programacion-2026/programa-de-cine" },
+  ...(programaCinePublico2026 ? [{ id: "programa-de-cine", title: "Programa de cine", href: "/programacion-2026/programa-de-cine" }] : []),
   ...programasPublicos2026,
 ];
 
