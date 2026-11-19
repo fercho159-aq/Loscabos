@@ -5,6 +5,15 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import FFGFAnimations from "@/components/FFGFAnimationsLazy";
 import FFGFConvocatoriaCTA from "@/components/FFGFConvocatoriaCTA";
+import seleccionadosStyles from "../la-baja-inspira/seleccionados.module.css";
+
+const seleccionados2026 = [
+  { title: "Homeboys", director: "Alejandro Bernal y Alonso Garibay", genre: "Documental", slug: "homeboys" },
+  { title: "El año del gato", director: "Juliana Orea", genre: "Ficción", slug: "el-ano-del-gato" },
+  { title: "Todo lo sólido", director: "Luis Gutierrez Arias y Zaina Bseiso", genre: "Documental", slug: "todo-lo-solido" },
+  { title: "Blinker", director: "José Francisco López Arámburo", genre: "Ficción", slug: "blinker" },
+  { title: "Inés", director: "David Liles y Hugo Payén", genre: "Ficción", slug: "ines" },
+];
 
 export const metadata: Metadata = {
   title: "Fondo Fílmico Gabriel Figueroa | Financiamiento Cinematográfico",
@@ -178,6 +187,36 @@ export default function FFGF() {
         </div>
       </section>
 
+
+      {/* Proyectos seleccionados 2026 */}
+      <section id="seleccionados-2026" className={seleccionadosStyles.section} aria-labelledby="seleccionados-2026-title">
+        <div className={seleccionadosStyles.inner}>
+          <h2 id="seleccionados-2026-title" className={seleccionadosStyles.heading}>Proyectos seleccionados 2026</h2>
+          <ul className={seleccionadosStyles.list}>
+            {seleccionados2026.map((film) => (
+              <li key={film.slug} className={`${seleccionadosStyles.film} ${seleccionadosStyles.filmWithImage}`}>
+                <div className={seleccionadosStyles.photo}>
+                  <Image
+                    src={`/images/ffgf-seleccionados-2026/${film.slug}.jpg`}
+                    alt={film.title}
+                    fill
+                    sizes="(max-width: 480px) calc(100vw - 2.5rem), 160px"
+                    className={seleccionadosStyles.photoImage}
+                  />
+                </div>
+                <div className={seleccionadosStyles.filmBody}>
+                  <h3>{film.title}</h3>
+                  <p>Dir. {film.director}</p>
+                  <p style={{ fontSize: "0.85em" }}>{film.genre}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <p style={{ marginTop: "2rem" }}>
+            Agradecemos a cada cineasta que confió su proyecto al Fondo Fílmico Gabriel Figueroa este año. Gracias por dejarnos acompañar el último tramo de sus películas.
+          </p>
+        </div>
+      </section>
 
       {/* Legado FFGF — dark section pattern (matches la-baja-inspira legado) */}
       <section className="relative w-full flex flex-col overflow-hidden" style={{ background: "#0A1E23" }}>

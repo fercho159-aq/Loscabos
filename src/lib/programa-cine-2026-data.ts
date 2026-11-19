@@ -27,10 +27,11 @@ export const programaCine2026: DiaPrograma[] = [
       f("12:20", "Sala 8", "Homenaje a Dolores Heredia", "15’", { evento: "homenaje-dolores-heredia" }),
       f("16:00", "Sala 2", "Muestra de cortometrajes animados", "En alianza con Filma Jalisco y Ciudad Creativa Digital • 81’", {
         films: [
-          c("Hasta pronto", "Dir. Jennifer Skarbnik López • México • 2025 • 14’"),
-          c("Dolores", "Dir. Cecilia Andalon • México • 2025 • 10’"),
           c("Lo que queda de mí", "Dir. Melany Leyva Ruiz • México • 2026 • 5.10’"),
           c("Teatro secreto", "Dir. Diego Martínez Gutiérrez • México • 2025 • 13’"),
+          c("Azul: La última semilla", "Dir. Aline Romero • México, España • 2026 • 9’"),
+          c("Dolores", "Dir. Cecilia Andalon • México • 2025 • 10’"),
+          c("Hasta pronto", "Dir. Jennifer Skarbnik López • México • 2025 • 14’"),
         ],
       }),
       f("16:00", "Sala 5", "The Next Wave — Emerging Filmmakers", "Programa 1 + Q&A • 83’", {
@@ -139,12 +140,12 @@ export const programaCine2026: DiaPrograma[] = [
       // En el doc venían después de Nuisance Bear (18:30); van por hora.
       f("17:00", "Sala 8", "Wishful Thinking", "Dir. Graham Parkes • Estados Unidos • 2026 • 90’"),
       f("17:15", "Sala 2", "El Partido", "Dir. Juan Cabral, Santiago Franco • Argentina • 2026 • 91’"),
-      f("17:15", "Sala 2", "Santitos", "Dir. Alejandro Springall • México • 1999 • 110’"),
-      f("17:15", "Sala 8", "The Only Living Pickpocket in New York", "Dir. Noah Segan • Estados Unidos • 2026 • 88’"),
       f("17:30", "Sala 4", "Nagi Notes", "Dir. Kōji Fukada • Japón • 2026 • 110’"),
-      f("17:45", "Sala 4", "Nina Roza", "Dir. Geneviève Dulude-De Cells • Bélgica, Bulgaria, Canadá, Italia • 2026 • 103’"),
       f("18:15", "Sala 5", "We are aliens", "Dir. Kohei Kadowaki • Japón • 2026 • 117’"),
       f("18:30", "Sala 3", "Nuisance Bear", "Dir. Jack Weisman, Gabriela Osio Vanden • Canadá, EEUU, Reino Unido • 2026 • 89’"),
+      f("19:15", "Sala 2", "Santitos", "Dir. Alejandro Springall • México • 1999 • 110’"),
+      f("19:15", "Sala 8", "The Only Living Pickpocket in New York", "Dir. Noah Segan • Estados Unidos • 2026 • 88’"),
+      f("19:45", "Sala 4", "Nina Roza", "Dir. Geneviève Dulude-De Cells • Bélgica, Bulgaria, Canadá, Italia • 2026 • 103’"),
     ],
   },
 ];
