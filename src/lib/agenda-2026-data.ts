@@ -187,12 +187,13 @@ export const agenda2026: AgendaDay[] = [
           href: EVENTO("keynote-diana-segoviano"),
         },
         {
-          id: "2026-12-10-tender-loving-care",
+          id: "2026-12-10-cameron-winter",
           time: "12:20 – 14:15 hrs",
-          title: titled("Proyección + Q&A", "Tender Loving Care"),
-          subtitle: "Dir. Mike Leigh · Reino Unido · 2026 · 108´",
+          title: titled("Proyección + Q&A", "Cameron Winter At Carnegie Hall"),
+          subtitle: "Dir. Paul Thomas Anderson · Estados Unidos · 2026 · 71´",
           description: "Q&A",
           location: SALA_8,
+          href: PELICULA("cameron-winter-at-carnegie-hall"),
         },
         {
           id: "2026-12-10-dolores-heredia",
