@@ -29,7 +29,12 @@ export const programasPeliculas2026 = [
 // La Baja Inspira y The Next Wave, el 19 de noviembre (comentarios de Mafer en el doc).
 export const programasPublicos2026 = programasPeliculas2026
   .filter((programa) => ["animacion", "seleccion", "la-baja-inspira", "next-wave"].includes(programa.id))
-  .map((programa) => ({ ...programa, href: programa.href.replace("/programacion-2026-preview", "/programacion-2026") }));
+  .map((programa) =>
+    // The Next Wave: la pestaña lleva a las proyecciones, no al micrositio del panel (audio de Mafer, 19-nov).
+    programa.id === "next-wave"
+      ? { ...programa, title: "The Next Wave", href: "/programacion-2026/the-next-wave" }
+      : { ...programa, href: programa.href.replace("/programacion-2026-preview", "/programacion-2026") },
+  );
 
 // De la Selección oficial solo se liberan estas películas; el resto sigue en el preview.
 export const peliculasSeleccionLiberadas2026 = [
