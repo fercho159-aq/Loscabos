@@ -43,6 +43,15 @@ export const peliculasSeleccionLiberadas2026 = [
   "nuisance-bear",
   "i-deserve-a-lover-whose-every-rise-sets-fiery-dooms-raging-across-the-skies",
   "nagi-notes",
+  "el-partido",
+  "heil-jupiter",
+  "los-mariachis-perdidos",
+  "los-nuevos",
+  "santitos",
+  "memorex-rexsexex-y-mas",
+  "odisea-nacional",
+  "cameron-winter-at-carnegie-hall",
+  "sentimental",
 ];
 
 // Selección Oficial 2026: contenido y materiales proporcionados en el documento.
@@ -87,19 +96,6 @@ export const categorias2026: { id: string; label: string; color: string }[] = [
 ];
 
 export const peliculas2026: Pelicula2026[] = [
-  {
-    "slug": "6-meses-en-el-edificio-rosa-con-azul",
-    "title": "6 meses en el edificio rosa con azul",
-    "categoryId": "marejada-nacional",
-    "directors": "Bruno Santamaría Razo",
-    "countries": "México, Brasil, Dinamarca",
-    "year": "2026",
-    "duration": "104’",
-    "synopsis": "Cuando Bruno cumple 11 años, se enamora de su mejor amigo Vladimir. Esa noche, al padre de Bruno le diagnostican VIH. Tras la noticia, la dinámica familiar empieza a cambiar de forma inesperada, tierna y liberadora.",
-    "image": "/images/seleccion-oficial-2026/6-meses-en-el-edificio-rosa-con-azul-still.jpg",
-    "poster": "/images/seleccion-oficial-2026/6-meses-en-el-edificio-rosa-con-azul-poster.jpg",
-    "trailerUrl": "https://drive.google.com/file/d/11Q8HlH76B4NOLT52-QpjC-KiTvFsXsFI/view?usp=drive_link"
-  },
   {
     "slug": "albatross",
     "title": "Albatross",
@@ -236,6 +232,19 @@ export const peliculas2026: Pelicula2026[] = [
     "trailerUrl": "https://drive.google.com/file/d/15Vmz_e8Ro0yyjgnZy4oq0ii-EJdC1OKz/view?usp=drive_link"
   },
   {
+    "slug": "el-partido",
+    "title": "El Partido",
+    "categoryId": "marejada-internacional",
+    "directors": "Juan Cabral, Santiago Franco",
+    "countries": "Argentina",
+    "year": "2026",
+    "duration": "91’",
+    "synopsis": "El partido rememora el mítico encuentro que tuvo lugar entre Inglaterra y Argentina en el Estadio Azteca de la Ciudad de México durante el Mundial de 1986, utilizando imágenes de archivo excepcionales, que incluyen el gol de la “Mano de Dios” de Maradona, para tejer una potente reconstrucción del evento. Esta película va más allá del terreno de juego y recorre más de dos siglos de conflicto entre ambas naciones, desde los primeros enfrentamientos hasta la Guerra de las Malvinas. Replantea el partido como un hito deportivo que es eco de una rivalidad histórica más profunda, un encuentro entre la belleza del fútbol y la sinrazón de la guerra.",
+    "image": "/images/seleccion-oficial-2026/el-partido-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/el-partido-poster.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=Y5q_fAffnv4"
+  },
+  {
     "slug": "elsinore",
     "title": "Elsinore",
     "categoryId": "marejada-internacional",
@@ -282,6 +291,19 @@ export const peliculas2026: Pelicula2026[] = [
     "image": "/images/seleccion-oficial-2026/hasta-pronto-still.jpg",
     "poster": "/images/seleccion-oficial-2026/hasta-pronto-poster.jpg",
     "trailerUrl": "https://vimeo.com/1077366960?share=copy"
+  },
+  {
+    "slug": "heil-jupiter",
+    "title": "Heil Jupiter!",
+    "categoryId": "marejada-nacional",
+    "directors": "Carlos Reygadas",
+    "countries": "México, Polonia, Portugal, Noruega, Suecia",
+    "year": "2026",
+    "duration": "156’",
+    "synopsis": "En medio de olas rompientes y rocas monumentales en una costa lejana, dos parejas jóvenes abren un reino de realidades cambiantes. Sin que ellas lo sepan, una misteriosa entidad observa desde las alturas con un juicio divino. Entre estos espacios existe un mundo en equilibrio al borde de lo moderno y lo primitivo, lo tecnológico y lo rural, lo corpóreo y lo mítico.\n\nEste asombro onírico de Carlos Reygadas es una obra de expresión cinematográfica indómita, espléndida en sus placeres elementales, los cuales coexisten en un profundo y desafiante contraste con su retrato de la brutalidad autoritaria.",
+    "image": "/images/seleccion-oficial-2026/heil-jupiter-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/heil-jupiter-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/18c-CK4SiHWh6_f3Kz6hWi-2tPZoh4geM/view"
   },
   {
     "slug": "hijas-del-bosque",
@@ -418,6 +440,18 @@ export const peliculas2026: Pelicula2026[] = [
     "poster": "/images/seleccion-oficial-2026/lo-que-queda-de-mi-poster.jpg"
   },
   {
+    "slug": "los-mariachis-perdidos",
+    "title": "Los Mariachis Perdidos",
+    "categoryId": "marejada-nacional",
+    "directors": "Francisco Ohem",
+    "countries": "México",
+    "year": "2026",
+    "duration": "80’",
+    "synopsis": "Un viaje por los Balcanes en busca de los \"cantantes mexicanos\" de Yugoslavia. Combinando elementos de road movie, material de archivo y ensayo, un viaje en busca de los últimos cantantes de Yu-Méx que oscila entre el humor y la melancolía. A través de una película perdida de Emilio \"el Indio\" Fernández, el documental relata cómo las imágenes y los sonidos migran y se re-imaginan en contextos lejanos.",
+    "image": "/images/seleccion-oficial-2026/los-mariachis-perdidos-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/los-mariachis-perdidos-poster.jpg"
+  },
+  {
     "slug": "los-mentirosos",
     "title": "Los mentirosos",
     "categoryId": "next-wave",
@@ -429,6 +463,19 @@ export const peliculas2026: Pelicula2026[] = [
     "image": "/images/seleccion-oficial-2026/los-mentirosos-still.jpg",
     "poster": "/images/seleccion-oficial-2026/los-mentirosos-poster.jpg",
     "trailerUrl": "https://drive.google.com/file/d/1CAuFW2vanFuo6iyMH8iEy_Acs4OT-0cu/view?usp=drive_link"
+  },
+  {
+    "slug": "los-nuevos",
+    "title": "Los Nuevos",
+    "categoryId": "marejada-nacional",
+    "directors": "Rodrigo Plá",
+    "countries": "México, España",
+    "year": "2026",
+    "duration": "80’",
+    "synopsis": "La contaminación del río obliga a los habitantes del “Carrizo” a dejar sus hogares. Entre los desplazados que llegan a “Miraflores” buscando refugio, se encuentran Tiana y su familia. No todos los lugareños aceptan con agrado a los recién llegados, la desconfianza ante lo diferente y lo desconocido, será como un fantasma que recorra el pueblo. El ambiente está enrarecido incluso entre los niños. Sin embargo, las cosas serán diferentes para Mateo y Tomás. El arribo de la perrita de Tiana al pueblo, abrirá un vínculo inesperado entre la niña y los hermanos, dándoles la oportunidad a los tres de conocerse más allá de los prejuicios.\n\nDurante una fiesta en el pueblo, Tiana reconoce entre los invitados a Guillén, un empresario asociado a los desastres ocurrido en su propio pueblo. A pesar de los intentos por alertar a los vecinos sobre los malos manejos de las autoridades y el empresario, los pobladores, encandilados con las posibilidades de progreso, se niegan a escuchar.\n\nCuando, poco después, el río que recorre el pueblo de Miraflores también amanezca contaminado, para Tiana ya no habrá dudas de que la historia se está repitiendo. Acompañada por Mateo, Tomás y la perrita Nube, emprende el camino río arriba, hacia los terrenos que compró el empresario Guillén. Decididos a detener a los responsables, los cuatro correrán aventuras y peligros en busca de aquello que envenena los ríos.",
+    "image": "/images/seleccion-oficial-2026/los-nuevos-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/los-nuevos-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/1Q_RBpUrbNkk60FS0nTTIU-hRfEsmZ6-o/view"
   },
   {
     "slug": "love-lessons",
@@ -612,6 +659,32 @@ export const peliculas2026: Pelicula2026[] = [
     "synopsis": "Pegah Ahangarani traza su vida a través de cinco retratos de familiares y mentores. Utilizando archivos personales, videos caseros, protestas y periódicos, relata más de 40 años de historia iraní desde 1979 hasta 2026."
   },
   {
+    "slug": "santitos",
+    "title": "Santitos",
+    "categoryId": "marejada-nacional",
+    "directors": "Alejandro Springall",
+    "countries": "México",
+    "year": "1999",
+    "duration": "110’",
+    "synopsis": "Esperanza es una joven viuda en Tlacotalpan, Veracruz, que pierde a su única hija de forma repentina. Cuando San Judas Tadeo se le aparece en la estufa de su cocina, ella interpreta el mensaje como una señal de que su hija sigue viva, embarcándose en una odisea que la lleva desde Veracruz hasta los burdeles de Tijuana y Los Ángeles en su búsqueda.",
+    "image": "/images/seleccion-oficial-2026/santitos-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/santitos-poster.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=d8amXTttUtA"
+  },
+  {
+    "slug": "6-meses-en-el-edificio-rosa-con-azul",
+    "title": "Seis meses en el edificio rosa con azul",
+    "categoryId": "marejada-nacional",
+    "directors": "Bruno Santamaría Razo",
+    "countries": "México, Brasil, Dinamarca",
+    "year": "2026",
+    "duration": "104’",
+    "synopsis": "Cuando Bruno cumple 11 años, se enamora de su mejor amigo Vladimir. Esa noche, al padre de Bruno le diagnostican VIH. Tras la noticia, la dinámica familiar empieza a cambiar de forma inesperada, tierna y liberadora.",
+    "image": "/images/seleccion-oficial-2026/6-meses-en-el-edificio-rosa-con-azul-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/6-meses-en-el-edificio-rosa-con-azul-poster.jpg",
+    "trailerUrl": "https://drive.google.com/file/d/11Q8HlH76B4NOLT52-QpjC-KiTvFsXsFI/view?usp=drive_link"
+  },
+  {
     "slug": "sentimental",
     "title": "Sentimental",
     "categoryId": "marejada-internacional",
@@ -646,16 +719,6 @@ export const peliculas2026: Pelicula2026[] = [
     "duration": "24’",
     "image": "/images/seleccion-oficial-2026/taje-still.jpg",
     "poster": "/images/seleccion-oficial-2026/taje-poster.jpg"
-  },
-  {
-    "slug": "the-match",
-    "title": "The Match",
-    "categoryId": "marejada-internacional",
-    "directors": "Juan Cabral, Santiago Franco",
-    "countries": "Argentina",
-    "year": "2026",
-    "duration": "91’",
-    "synopsis": "El partido rememora el mítico encuentro que tuvo lugar entre Inglaterra y Argentina en el Estadio Azteca de la Ciudad de México durante el Mundial de 1986, utilizando imágenes de archivo excepcionales, que incluyen el gol de la “Mano de Dios” de Maradona, para tejer una potente reconstrucción del evento. Esta película va más allá del terreno de juego y recorre más de dos siglos de conflicto entre ambas naciones, desde los primeros enfrentamientos hasta la Guerra de las Malvinas. Replantea el partido como un hito deportivo que es eco de una rivalidad histórica más profunda, un encuentro entre la belleza del fútbol y la sinrazón de la guerra."
   },
   {
     "slug": "the-only-living-pickpocket-in-new-york",

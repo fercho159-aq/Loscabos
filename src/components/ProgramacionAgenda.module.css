@@ -109,6 +109,15 @@
     clamp(1.5rem, 2.4cqw, 2.9rem) max(16px, var(--block-pad-left, 5.9cqw));
 }
 
+/* Nombre del programa al inicio de cada banda (pedido de Mafer, 18-nov-2026). */
+.blockName {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.6cqw, 3.125rem);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
 .event {
   min-width: 0;
   scroll-margin-top: 7rem;

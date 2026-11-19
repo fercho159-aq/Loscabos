@@ -12,6 +12,7 @@ import Link from "next/link";
 import {
   agenda2026,
   agendaSectionCards2026,
+  type AgendaBlock,
   type AgendaCardDecoration,
   type AgendaEvent,
   type AgendaLine,
@@ -223,6 +224,12 @@ function SectionCard({
 const cardName = (card: AgendaSectionCard) =>
   card.title.flat().map((segment) => segment.text).join(" ");
 
+/** Las bandas se ligan a su programa por color, igual que el filtro. */
+const blockName = (block: AgendaBlock) => {
+  const card = agendaSectionCards2026.find((c) => c.bg === block.bg);
+  return card && cardName(card);
+};
+
 export default function ProgramacionAgenda({ nav }: { nav?: ReactNode }) {
   // Todos los días cerrados al cargar, como el mockup del cliente.
   const [openDayId, setOpenDayId] = useState<string | null>(null);
@@ -359,6 +366,7 @@ export default function ProgramacionAgenda({ nav }: { nav?: ReactNode }) {
                   }
                 >
                   <div className={styles.blockInner}>
+                    {blockName(block) && <h3 className={styles.blockName}>{blockName(block)}</h3>}
                     {block.events.map((event) => (
                       <AgendaItem event={event} key={event.id} />
                     ))}

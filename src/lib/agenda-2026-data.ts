@@ -96,9 +96,7 @@ const TERRACOTTA = "#D97A5B";
 
 const SALA_8 = "Cinépolis San José del Cabo | Sala 8";
 const CINEPOLIS = "Cinépolis San José del Cabo";
-const GANZO_GALERIA = "Hotel El Ganzo — Galería";
 const GANZO_ROOFTOP = "Hotel El Ganzo — Rooftop";
-const JW = "JW Marriott";
 const JW_ANFITEATRO = "JW Marriott — Anfiteatro";
 const ZADUN_SUITE = "Zadún Ritz-Carlton Reserve — Suite";
 const MARINA = "La Marina Puerto Los Cabos";
@@ -108,7 +106,6 @@ const EVENTO = (slug: string) => `/programacion-2026/${slug}`;
 const PELICULA = (slug: string) => `/programacion-2026/peliculas/${slug}`;
 const LBI = "/programacion-2026-preview/la-baja-inspira";
 const FFGF = "/ffgf";
-const FON = "/programacion-2026-preview/frequencies-of-now";
 
 const sage = (events: AgendaEvent[]): AgendaBlock => ({ bg: SAGE, text: CREAM, rule: CREAM, events });
 const peach = (events: AgendaEvent[]): AgendaBlock => ({ bg: PEACH, text: CREAM, rule: CREAM, events });
@@ -125,33 +122,6 @@ const titled = (prefix: string, name: string): AgendaLine[] => [line(t(`${prefix
 /** "Keynote — *Tema* | Persona · Cargo" en un solo párrafo que fluye. */
 const keynote = (prefix: string, topic: string, who: string): AgendaLine[] => [
   line(t(`${prefix} — `), i(topic), t(` | ${who}`)),
-];
-
-/** Los tres talleres de 9:00–11:00 que se repiten jueves, viernes y sábado. */
-const talleres = (day: string, session: number): AgendaEvent[] => [
-  {
-    id: `${day}-taller-lbi`,
-    time: "9:00–11:00 hrs",
-    title: titled("Taller", "La Baja Inspira"),
-    href: LBI,
-    description: `Sesión ${session} · Jurados y proyectos seleccionados`,
-  },
-  {
-    id: `${day}-taller-ffgf`,
-    time: "9:00–11:00 hrs",
-    title: titled("Taller", "Fondo Fílmico Gabriel Figueroa"),
-    href: FFGF,
-    description: `Sesión ${session} · Jurados y proyectos seleccionados`,
-    location: GANZO_GALERIA,
-  },
-  {
-    id: `${day}-taller-fon`,
-    time: "9:00–11:00 hrs",
-    title: titled("Taller", "Frequencies of Now"),
-    href: FON,
-    description: `Sesión ${session} · Jurados y proyectos seleccionados`,
-    location: JW,
-  },
 ];
 
 export const agenda2026: AgendaDay[] = [
@@ -189,7 +159,6 @@ export const agenda2026: AgendaDay[] = [
     id: "2026-12-10",
     label: "Jueves 10 de diciembre",
     blocks: [
-      sage(talleres("2026-12-10", 1)),
       peach([
         {
           id: "2026-12-10-rosenbaum",
@@ -298,9 +267,6 @@ export const agenda2026: AgendaDay[] = [
     id: "2026-12-11",
     label: "Viernes 11 de diciembre",
     blocks: [
-      sage([
-        ...talleres("2026-12-11", 2),
-      ]),
       peach([
         {
           id: "2026-12-11-jalisco",
@@ -403,7 +369,6 @@ export const agenda2026: AgendaDay[] = [
     label: "Sábado 12 de diciembre",
     blocks: [
       sage([
-        ...talleres("2026-12-12", 3),
         {
           id: "2026-12-12-desayuno",
           time: "9:00–11:00 hrs",
