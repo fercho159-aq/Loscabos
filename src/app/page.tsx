@@ -80,11 +80,11 @@ export default function Home() {
           muted
           playsInline
           preload="metadata"
-          poster="/videos/ficc-home-poster.jpg"
+          poster="/videos/ficc-spot-2026-poster.jpg"
           aria-hidden="true"
         >
-          <source src="/videos/ficc-home.webm" type="video/webm" />
-          <source src="/videos/ficc-home.mp4" type="video/mp4" />
+          <source src="/videos/ficc-spot-2026.webm" type="video/webm" />
+          <source src="/videos/ficc-spot-2026.mp4" type="video/mp4" />
         </video>
         {/* Dark overlay for legibility */}
         <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundColor: "rgba(10, 30, 35, 0.45)" }} />

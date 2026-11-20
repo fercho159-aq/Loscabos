@@ -54,6 +54,7 @@ export default function Footer() {
             <li><a href="/campus">Campus</a></li>
             <li><a href="/comunidad">Comunidad</a></li>
             <li><a href="/edicion-2025">Ediciones anteriores</a></li>
+            <li><a href="/beneficios-ficc">Beneficios FICC</a></li>
             <li><a href="/prensa">Prensa</a></li>
           </ul>
         </div>
