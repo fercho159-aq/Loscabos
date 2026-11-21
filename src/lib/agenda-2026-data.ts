@@ -131,15 +131,8 @@ export const agenda2026: AgendaDay[] = [
     blocks: [
       blue([
         {
-          id: "2026-12-09-inauguracion",
-          time: "20:00–20:15 hrs",
-          title: plain("Inauguración oficial"),
-          description: "Ceremonia inaugural",
-          location: GANZO_ROOFTOP,
-        },
-        {
           id: "2026-12-09-elsinore",
-          time: "20:15–22:20 hrs",
+          time: "20:00–22:20 hrs",
           title: titled("Proyección Inaugural", "Elsinore"),
           subtitle: "Dir. Simon Stone · Reino Unido, Estados Unidos e Italia · 2026 · 111´",
           description: "Conversatorio postproyección",
