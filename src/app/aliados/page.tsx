@@ -2,66 +2,8 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
+import { aliados } from "@/lib/aliados";
 
-/* Pleca de aliados 2026. El orden sigue el documento de diseño;
-   la numeración de los archivos es histórica. */
-const aliados = [
-  { name: "Los Cabos", logo: "/images/aliados/2026/01-fiturca-los-cabos.png" },
-  { name: "Grupo Questro", logo: "/images/aliados/2026/02-grupo-questro.png" },
-  { name: "Puerto Los Cabos", logo: "/images/aliados/2026/03-puerto-los-cabos.png" },
-  { name: "Marina Puerto Los Cabos", logo: "/images/aliados/2026/04-marina-puerto-los-cabos.png" },
-  { name: "Secretaría de Economía", logo: "/images/aliados/2026/secretaria-economia.png", wide: true },
-  { name: "Secretaría de Turismo y Economía", logo: "/images/aliados/2026/secretaria-turismo-economia.png" },
-  { name: "Comisión Mexicana de Filmaciones", logo: "/images/aliados/2026/comision-mexicana-filmaciones-negro.png" },
-  { name: "Asociación de Hoteles de Los Cabos", logo: "/images/aliados/2026/04b-asociacion-hoteles-los-cabos.png" },
-  { name: "Hotel El Ganzo", logo: "/images/aliados/2026/05-hotel-el-ganzo.png" },
-  { name: "IMCINE", logo: "/images/aliados/2026/06-imcine.png" },
-  { name: "Ciudad Creativa Digital", logo: "/images/aliados/2026/08-ciudad-creativa-digital.png", wide: true },
-  { name: "Filma Jalisco", logo: "/images/aliados/2026/07-filma-jalisco.png" },
-  { name: "ESCINE", logo: "/images/aliados/2026/09-escine.png" },
-  { name: "JW Marriott Los Cabos", logo: "/images/aliados/2026/11-jw-marriott.png" },
-  { name: "Zadún, A Ritz-Carlton Reserve", logo: "/images/aliados/2026/12-zadun.png" },
-  { name: "Secrets Puerto Los Cabos Golf & Spa Resort", logo: "/images/aliados/2026/13-secrets.png" },
-  { name: "YAYA Rentals", logo: "/images/aliados/2026/15-yaya-rentals.png" },
-  { name: "Bar Ligaya", logo: "/images/aliados/2026/16-bar-ligaya.png" },
-  { name: "Suelo Sur", logo: "/images/aliados/2026/18-suelo-sur.png" },
-  { name: "Sage", logo: "/images/aliados/2026/19-sage.png" },
-  { name: "Casa Ballena", logo: "/images/aliados/2026/20-casa-ballena.png" },
-  { name: "Trilogy", logo: "/images/aliados/2026/21-trilogy.png" },
-  { name: "Grupo Aeroportuario del Pacífico", logo: "/images/aliados/2026/22-grupo-aeroportuario-pacifico.png" },
-  { name: "Aeromexico", logo: "/images/aliados/2026/23-aeromexico.png" },
-  { name: "National Car Rental", logo: "/images/aliados/2026/24-national-car-rental.png" },
-  { name: "Salomon", logo: "/images/aliados/2026/25-salomon.png" },
-  { name: "Cinépolis", logo: "/images/aliados/2026/26-cinepolis.png" },
-  { name: "Pimienta Films", logo: "/images/aliados/2026/30-pimienta-films.png" },
-  { name: "Cine Club Documental Los Cabos", logo: "/images/aliados/2026/30b-cine-club-documental.png" },
-  { name: "Mighty", logo: "/images/aliados/2026/30c-mighty.png" },
-  { name: "Art Kingdom", logo: "/images/aliados/2026/31-art-kingdom.png" },
-  { name: "CTT Exp & Rentals", logo: "/images/aliados/2026/32-ctt-exp-rentals.png" },
-  { name: "Shalala", logo: "/images/aliados/2026/33-shalala.png" },
-  { name: "Artegios", logo: "/images/aliados/2026/34-artegios.png" },
-  { name: "Chemistry", logo: "/images/aliados/2026/35-chemistry.png" },
-  { name: "CineNet", logo: "/images/aliados/2026/36-cinenet.png" },
-  { name: "Pólvora", logo: "/images/aliados/2026/37-polvora.png" },
-  { name: "Cine de Verano", logo: "/images/aliados/2026/38-cine-de-verano.png" },
-  { name: "Instituto de la Cultura y las Artes de Los Cabos", logo: "/images/aliados/2026/39-instituto-cultura-artes-los-cabos.png" },
-  { name: "Centro Cultural Tijuana", logo: "/images/aliados/2026/40-centro-cultural-tijuana.png" },
-  { name: "Mares de México", logo: "/images/aliados/2026/41-mares-de-mexico.png" },
-  { name: "Pelagic Life", logo: "/images/aliados/2026/pelagic-life.png" },
-  { name: "Baja Republic", logo: "/images/aliados/2026/42-baja-republic.png" },
-  { name: "Sudcaliforniano", logo: "/images/aliados/2026/43-sudcaliforniano.png" },
-  { name: "Cabo Mil", logo: "/images/aliados/2026/44-cabo-mil.png" },
-  { name: "Exa", logo: "/images/aliados/2026/45-exa.png" },
-  { name: "Girls at Films", logo: "/images/aliados/2026/46-girls-at-films.png" },
-  { name: "Palmilla Dunes", logo: "/images/aliados/2026/47-palmilla-dunes.png" },
-  { name: "ELLE", logo: "/images/aliados/2026/elle.png" },
-  { name: "Quién", logo: "/images/aliados/2026/quien.png" },
-  { name: "WIRED", logo: "/images/aliados/2026/wired.png" },
-  { name: "Baja Traveler", logo: "/images/aliados/2026/baja-traveler.png" },
-  { name: "Amstar", logo: "/images/aliados/2026/amstar.png" },
-  { name: "Ferragamo", logo: "/images/aliados/2026/ferragamo.png" },
-  { name: "The Hollywood Reporter", logo: "/images/aliados/2026/the-hollywood-reporter.png" },
-];
 
 // Duplicate for seamless infinite loop
 const track = [...aliados, ...aliados];
