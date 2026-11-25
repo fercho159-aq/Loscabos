@@ -114,7 +114,7 @@ export default function Home() {
               className="cta-button"
               data-anim="cta-btn"
             >
-              Adquiere tus accesos
+              Compra tus boletos
             </a>
           </div>
         </div>

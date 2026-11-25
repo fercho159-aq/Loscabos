@@ -1,12 +1,7 @@
 // Agenda del preview /programacion-2026-preview.
 //
-// Fuente: FICCLosCabos_Programa.pdf (programa del 10-nov-2026) más los cambios
-// de Mafer por WhatsApp (10-nov-2026):
-//   A) Work in Progress — Insectario y Space Xmas se bajaron (13-nov-2026).
-//   B) Zoé: el conversatorio es con Olmo Guerra (no Olmo Rodríguez).
-//
-// Texto del PDF con erratas corregidas (Inaugural, Conversatorio, 77´,
-// "12:30 – 12:45", Mighty Animation). En las descripciones, `**x**` es negrita,
+// Fuente: programa final del doc "SitioWeb_FICC2026" (comentarios de Mafer del
+// 25-nov-2026), que sustituye al FICCLosCabos_Programa.pdf del 10-nov. En las descripciones, `**x**` es negrita,
 // `*x*` itálica, "\n" salto de renglón y "\n\n" párrafo aparte.
 
 /**
@@ -95,17 +90,18 @@ const PEACH = "#EFA26F";
 const TERRACOTTA = "#D97A5B";
 
 const SALA_8 = "Cinépolis San José del Cabo | Sala 8";
-const CINEPOLIS = "Cinépolis San José del Cabo";
 const GANZO_ROOFTOP = "Hotel El Ganzo — Rooftop";
 const JW_ANFITEATRO = "JW Marriott — Anfiteatro";
-const ZADUN_SUITE = "Zadún Ritz-Carlton Reserve — Suite";
+const ZADUN_SUITE = "Zadún Ritz-Carlton Reserve — Suite Presidencial";
+const JW_TERRAZA = "JW Marriott — Terraza Amet";
+const TROPICANA = "Hotel Tropicana";
+const PATROCINIO_LUNCH = "Patrocinado por Tequila Código 1530 y Mezcal The Producer";
 const MARINA = "La Marina Puerto Los Cabos";
 
 // Las fichas de eventos completas viven en la ruta pública; el preview solo tiene tres.
 const EVENTO = (slug: string) => `/programacion-2026/${slug}`;
 const PELICULA = (slug: string) => `/programacion-2026/peliculas/${slug}`;
 const LBI = "/programacion-2026/la-baja-inspira";
-const FFGF = "/ffgf";
 
 const sage = (events: AgendaEvent[]): AgendaBlock => ({ bg: SAGE, text: CREAM, rule: CREAM, events });
 const peach = (events: AgendaEvent[]): AgendaBlock => ({ bg: PEACH, text: CREAM, rule: CREAM, events });
@@ -131,18 +127,37 @@ export const agenda2026: AgendaDay[] = [
     blocks: [
       blue([
         {
+          id: "2026-12-09-coctel-recepcion",
+          time: "19:30 – 20:00 hrs",
+          title: plain("Cóctel de recepción por Tequila Código 1530"),
+          location: MARINA,
+        },
+        {
+          id: "2026-12-09-palabras",
+          time: "20:00 – 20:15 hrs",
+          title: plain("Palabras Inaugurales"),
+          location: MARINA,
+        },
+        {
+          id: "2026-12-09-spot",
+          time: "20:20 – 20:35 hrs",
+          title: plain("Presentación de spot institucional FICCLosCabos 2026"),
+          description: "Presenta Claudio Jiménez, fundador de Mighty Studio",
+          location: MARINA,
+        },
+        {
           id: "2026-12-09-elsinore",
-          time: "20:00–22:20 hrs",
+          time: "20:35 – 22:30 hrs",
           title: titled("Proyección Inaugural", "Elsinore"),
           subtitle: "Dir. Simon Stone · Reino Unido, Estados Unidos e Italia · 2026 · 111´",
-          description: "Conversatorio postproyección",
           location: MARINA,
           href: PELICULA("elsinore"),
         },
         {
           id: "2026-12-09-fiesta",
-          time: "22:20–00:00 hrs",
-          title: plain("Cóctel + Fiesta inaugural"),
+          time: "22:30 – 01:00 hrs",
+          title: plain("Cóctel inaugural presentado por Tequila Código 1530 en alianza con Veleros Beach Club"),
+          description: "Pato Watson DJ Set + Zombie VJ Set",
           location: MARINA,
         },
       ]),
@@ -154,8 +169,14 @@ export const agenda2026: AgendaDay[] = [
     blocks: [
       peach([
         {
+          id: "2026-12-10-bienvenida",
+          time: "11:15 – 11:30 hrs",
+          title: plain("Bienvenida"),
+          location: SALA_8,
+        },
+        {
           id: "2026-12-10-rosenbaum",
-          time: "11:30 – 11:55 hrs",
+          time: "11:30 – 12:00 hrs",
           title: keynote(
             "Keynote",
             "Shaping the Next Wave of Creative Convergence",
@@ -168,7 +189,7 @@ export const agenda2026: AgendaDay[] = [
         },
         {
           id: "2026-12-10-segoviano",
-          time: "11:55 – 12:20 hrs",
+          time: "12:00 – 12:30 hrs",
           title: keynote(
             "Keynote",
             "Filmar en México: el territorio como infraestructura de producción",
@@ -181,16 +202,17 @@ export const agenda2026: AgendaDay[] = [
         },
         {
           id: "2026-12-10-cameron-winter",
-          time: "12:20 – 13:31 hrs",
-          title: titled("Proyección", "Cameron Winter At Carnegie Hall"),
+          time: "12:30 – 13:45 hrs",
+          title: titled("Proyección + Q&A", "Cameron Winter At Carnegie Hall"),
           subtitle: "Dir. Paul Thomas Anderson · Estados Unidos · 2026 · 71´",
+          description: "Q&A",
           location: SALA_8,
           href: PELICULA("cameron-winter-at-carnegie-hall"),
         },
         {
           id: "2026-12-10-dolores-heredia",
-          time: "13:45 – 14:15 hrs",
-          title: plain("Homenaje a Dolores Heredia"),
+          time: "13:45 – 14:10 hrs",
+          title: plain("Homenaje — Dolores Heredia"),
           description:
             "FICCLosCabos 2026 rinde homenaje a Dolores Heredia, una de las actrices más representativas del cine mexicano contemporáneo. Presentado por **José María Yazpik**, este encuentro celebrará su trayectoria artística a través de una retrospectiva audiovisual de su vida y obra, recordando algunos de los momentos más significativos de su carrera y su vínculo con Baja California Sur",
           location: SALA_8,
@@ -201,56 +223,70 @@ export const agenda2026: AgendaDay[] = [
         {
           id: "2026-12-10-lunch",
           time: "15:00 – 16:00 hrs",
-          title: plain("Lunch"),
-          description: "Lunch de Industria",
+          title: plain("Lunch de Industria"),
+          description: PATROCINIO_LUNCH,
+          location: TROPICANA,
         },
         {
           id: "2026-12-10-panel-lbi",
-          time: "16:00 – 16:45 hrs",
-          title: titled("Panel", "La Baja Inspira"),
+          time: "16:00 – 16:35 hrs",
+          title: titled(
+            "Panel",
+            "La Baja Inspira: Biodiversidad, memoria histórica y desarrollo sostenible de Baja California Sur",
+          ),
           href: LBI,
           description:
             "Presentación del proceso de selección y anuncio de los proyectos ganadores de cada categoría, seguida de la proyección de los documentales seleccionados. Moderado por **Iván Carrillo**",
+          location: TROPICANA,
         },
         {
           id: "2026-12-10-dj-set",
-          time: "17:00 – 18:00 hrs",
+          time: "16:35 – 17:35 hrs",
           title: plain("DJ Set"),
+          location: TROPICANA,
         },
       ]),
       blue([
         {
+          id: "2026-12-10-coctel-recepcion",
+          time: "18:00 – 19:00 hrs",
+          title: plain("Cóctel de recepción"),
+          description: PATROCINIO_LUNCH,
+          location: ZADUN_SUITE,
+        },
+        {
           id: "2026-12-10-un-passo-alla-volta",
-          time: "18:30–19:00 hrs",
+          time: "19:10 – 19:40 hrs",
           title: titled("Proyección + Q&A", "Un Passo Alla Volta"),
           href: EVENTO("un-passo-alla-volta"),
           subtitle: "Dir. Simone Coppo · Italia · 2026 · 14´",
           description:
-            "El cortometraje de **Simone Coppo** y **Martina Ferragamo** estrenado en el Teatro La Fenice dentro de la *Mostra de Venecia*. Una reflexión sobre los nuevos comienzos y sobre el tiempo que toma convertir un legado en una elección propia\nQ&A con Martina Ferragamo y Simone Coppo. Moderado por **Rodrigo García** de Central Films",
+            "El cortometraje de **Simone Coppo** y **Martina Ferragamo** estrenado en el Teatro La Fenice dentro de la *Mostra de Venecia*. Una reflexión sobre los nuevos comienzos y sobre el tiempo que toma convertir un legado en una elección propia\n**Q&A con Martina Ferragamo y Simone Coppo**. Moderado por **Rodrigo García** de Central Films",
           location: ZADUN_SUITE,
         },
         {
           id: "2026-12-10-not-not-jazz",
-          time: "19:00–20:30 hrs",
-          title: titled("Proyección + Conversatorio", "Medeski, Martin & Wood: Not not jazz"),
+          time: "19:40 – 21:15 hrs",
+          title: titled("Proyección + Q&A", "Medeski, Martin & Wood: Not not jazz"),
           href: EVENTO("not-not-jazz"),
           subtitle: "Dir. Jason Miller · Estados Unidos · 2024 · 77´",
           description:
-            "Conversatorio postproyección con **Billy Martin**, baterista de Medeski, Martin & Wood, y **Nicolás Celis** (fundador de Pimienta Films)",
+            "**Q&A con Billy Martin**, baterista de Medeski, Martin & Wood, y **Nicolás Celis** (fundador de Pimienta Films)",
           location: ZADUN_SUITE,
         },
         {
-          id: "2026-12-10-coctel-ferragamo",
-          time: "21:30–22:30 hrs",
-          title: plain("Cóctel — En alianza con Ferragamo"),
+          id: "2026-12-10-jam-ferragamo",
+          time: "21:15 – 22:15 hrs",
+          title: plain(
+            "Ferragamo presenta: Jam musical con Billy Martin con músicos locales de San José del Cabo",
+          ),
           description: "**Jam Billy Martin** + talento local",
           location: ZADUN_SUITE,
         },
         {
           id: "2026-12-10-dj-mo",
-          time: "22:30–00:00 hrs",
-          title: plain("DJ MO"),
-          description: "DJ set",
+          time: "22:10 – 00:00 hrs",
+          title: plain("MO DJ Set"),
           location: ZADUN_SUITE,
         },
       ]),
@@ -262,11 +298,17 @@ export const agenda2026: AgendaDay[] = [
     blocks: [
       peach([
         {
+          id: "2026-12-11-bienvenida",
+          time: "11:15 – 11:30 hrs",
+          title: plain("Bienvenida"),
+          location: SALA_8,
+        },
+        {
           id: "2026-12-11-jalisco",
-          time: "11:30 – 12:05 hrs",
+          time: "11:30 – 12:00 hrs",
           title: keynote(
             "Conversatorio",
-            "De la idea a la industria",
+            "De la idea a la industria, oportunidades para crear y producir desde Jalisco",
             "Alfredo Aceves · Presidente del Fideicomiso Ciudad Creativa Digital y Alejandro Tavares · Director de FILMA Jalisco",
           ),
           description:
@@ -276,7 +318,7 @@ export const agenda2026: AgendaDay[] = [
         },
         {
           id: "2026-12-11-claudio-jimenez",
-          time: "12:05 – 12:25 hrs",
+          time: "12:00 – 12:20 hrs",
           title: keynote(
             "Keynote",
             "La transferencia de lenguajes y formatos en la creación de contenidos",
@@ -289,7 +331,7 @@ export const agenda2026: AgendaDay[] = [
         },
         {
           id: "2026-12-11-panel-festivales",
-          time: "12:25 – 12:55 hrs",
+          time: "12:20 – 12:50 hrs",
           title: titled(
             "Panel",
             "Del circuito de festivales al reconocimiento internacional: nuevos caminos para el cine independiente",
@@ -301,11 +343,11 @@ export const agenda2026: AgendaDay[] = [
         },
         {
           id: "2026-12-11-blaise",
-          time: "12:55 – 14:40 hrs",
-          title: titled("Proyección + Conversatorio", "Blaise"),
+          time: "12:50 – 14:35 hrs",
+          title: titled("Proyección + Q&A", "Blaise"),
           subtitle: "Dir. Dimitri Planchon, Jean-Paul Guigue · Francia · 2026 · 82´",
           description:
-            "Conversatorio postproyección con Dimitri Planchon y Jean-Paul Guigue, y **Claudio Jiménez**, Fundador de Mighty Animation",
+            "**Q&A con Dimitri Planchon y Jean-Paul Guigue**, y **Claudio Jiménez**, Fundador de Mighty Animation",
           location: SALA_8,
           href: EVENTO("blaise"),
         },
@@ -313,46 +355,52 @@ export const agenda2026: AgendaDay[] = [
       terracotta([
         {
           id: "2026-12-11-lunch",
-          time: "14:30 – 16:00 hrs",
-          title: plain("Lunch"),
-          description: "Lunch de Industria",
+          time: "15:00 – 16:00 hrs",
+          title: plain("Lunch de Industria"),
+          description: PATROCINIO_LUNCH,
           location: JW_ANFITEATRO,
         },
         {
-          id: "2026-12-11-panel-fon",
-          time: "16:00 – 17:00 hrs",
-          title: titled("Panel", "Frequencies of Now: The stories behind the music"),
-          href: EVENTO("panel-frequencies-of-now"),
-          description:
-            "Jurados participantes:\n**Juan Patricio Riveroll** · Director, productor y Director de Extensión Académica de ESCINE\n**Rodrigo Guardiola** · Cineasta, productor y baterista de Zoé\n**Hermann Neudert** · Director y realizador audiovisual\n**Mario Escobar** · Ejecutivo de Global Talent Services (Universal Music Group) y mánager de Ed Maverick\n**Zunshu** · Creativo y miembro de la dirección de Revista 192\n\n*La música como archivo vivo de nuestro tiempo*\n\nPresentación de los cinco proyectos seleccionados de ***Frequencies of Now: A Living Archive of Music Culture***, plataforma internacional dedicada al documental musical. Una conversación entre cineastas y jurados sobre la música como expresión de identidad, memoria y transformación cultural; las historias detrás de los proyectos; los criterios curatoriales y el proceso de selección; así como los desafíos creativos y las oportunidades de circulación internacional del documental musical.\n\n**Incluye:** Conversación con el jurado · Proceso y criterios de selección · Anuncio de ganadores · Proyección de fragmentos seleccionados. Moderado por **Alejandro Tavares**, Director de Filma Jalisco",
+          id: "2026-12-11-panel-media-pimienta",
+          time: "16:00 – 16:30 hrs",
+          title: plain("Panel Media Coalition + Pimienta Films"),
           location: JW_ANFITEATRO,
         },
         {
-          id: "2026-12-11-soulcasters",
-          time: "17:00 – 18:20 hrs",
-          title: titled("Showcase musical + Conversatorio", "The Soulcasters"),
-          description:
-            "Showcase musical y conversatorio con The Soulcasters y Anamaría Sayre (Tiny Desk)",
+          id: "2026-12-11-shamans",
+          time: "16:30 – 17:30 hrs",
+          title: titled("Showcase musical", "Shamans"),
           location: JW_ANFITEATRO,
         },
       ]),
       blue([
         {
+          id: "2026-12-11-bienvenida-noche",
+          time: "18:30 – 18:45 hrs",
+          title: plain("Palabras de bienvenida"),
+          location: JW_TERRAZA,
+        },
+        {
           id: "2026-12-11-zoe",
-          time: "19:30–22:30 hrs",
-          title: titled("Proyección + Conversatorio", "Zoé: Memorex + Rexsexex y Más"),
+          time: "18:45 – 22:20 hrs",
+          title: [
+            line(
+              t("Proyección — "),
+              i("Zoé: Memorex + Rexsexex y Más"),
+              t(" + Conversatorio: La música en el cine, de la promoción al patrimonio cultural"),
+            ),
+          ],
           subtitle: "Dir. Rodrigo Guardiola · México · 2026 · 182´",
           description:
-            "Conversatorio con **Rodrigo Guardiola** · Cineasta, productor y baterista de Zoé, **Olmo Guerra** · Productor, **Fabrizio Onetto** · Subdirector de Contenidos y Desarrollo Artístico en OCESA Seitrack",
-          location: "JW Marriott — Terraza Amet",
+            "**Conversatorio con Rodrigo Guardiola** · Cineasta, productor y baterista de Zoé, **Olmo Guerra** · Productor, **Fabrizio Onetto** · Subdirector de Contenidos y Desarrollo Artístico en OCESA Seitrack. Moderado por **Alejandro Tavares** · Director de Filma Jalisco",
+          location: JW_TERRAZA,
           href: EVENTO("zoe-memorex-rexsexex-y-mas"),
         },
         {
-          id: "2026-12-11-fiesta-cierre",
-          time: "22:30–00:00 hrs",
-          title: plain("Fiesta de cierre"),
-          description: "**DJ Set x Martín Fábregas**",
-          location: ZADUN_SUITE,
+          id: "2026-12-11-puma-kutz",
+          time: "22:20 – 00:00 hrs",
+          title: plain("Puma + Kutz DJ Set"),
+          location: JW_TERRAZA,
         },
       ]),
     ],
@@ -364,26 +412,36 @@ export const agenda2026: AgendaDay[] = [
       sage([
         {
           id: "2026-12-12-desayuno",
-          time: "9:00–11:00 hrs",
+          time: "9:00 – 11:00 hrs",
           title: titled("Desayuno", "Mujeres en la Industria"),
           description:
-            "**Participan:**\n**Claudia Cándano** · Editora en Jefe de ELLE México\n**Andrea Rendon** · Fundadora de Girls at Films\n**Griselda Siciliani** · Actriz\n\nMujeres del ecosistema fílmico mexicano e internacional, en colaboración con Girls at Films, Elle México, Hollywood Reporter y Quién",
+            "**Participan:**\n**Griselda Siciliani** · Actriz\n**Johana Murillo** · Actriz\n**Ximena Lamadrid** · Actriz\n**Elena Fortes** · Productora\n\nModerado por:\n**Claudia Cándano** · Editora en Jefe de ELLE México\n**Andrea Rendon** · Fundadora de Girls at Films\n\nMujeres del ecosistema fílmico mexicano e internacional, en colaboración con Girls at Films, Elle México, Hollywood Reporter y Quién",
           location: "Sage",
           href: EVENTO("desayuno-girls-at-films"),
         },
       ]),
       peach([
         {
-          id: "2026-12-12-panel-ffgf",
-          time: "11:30 – 12:30 hrs",
-          title: titled("Panel", "Fondo Fílmico Gabriel Figueroa"),
-          href: FFGF,
-          description: "Presentación del proceso de selección y anuncio de los proyectos ganadores",
+          id: "2026-12-12-bienvenida",
+          time: "11:15 – 11:30 hrs",
+          title: plain("Bienvenida"),
           location: SALA_8,
         },
         {
+          id: "2026-12-12-panel-next-worlds",
+          time: "11:30 – 12:05 hrs",
+          title: titled(
+            "Panel",
+            "Next World’s: El storytelling como herramienta para la construcción de cultura y nuevos mundos",
+          ),
+          description:
+            "Participan:\n**Gary Alazraki** · Cineasta, guionista y showrunner\n**Jorge Suárez** · Fundador de Amber Studio\n**Stacy Perskie** · Fundador de REDRUM y productor del videojuego Mexican Ninja\n**Alfredo Aceves** · Presidente del Fideicomiso de Ciudad Creativa Digital\n\nEste panel explora cómo el storytelling trasciende las pantallas para construir nuevos mundos, conectar audiencias y generar propiedad intelectual, así como las oportunidades para que México transforme su talento creativo en proyectos con impacto cultural, económico y proyección internacional. Moderado por **Isabel Gil** · Directora de Relaciones Culturales y Jefa de Artes para el British Council en México",
+          location: SALA_8,
+          href: EVENTO("panel-next-worlds"),
+        },
+        {
           id: "2026-12-12-inna-payan",
-          time: "12:30 – 12:45 hrs",
+          time: "12:05 – 12:25 hrs",
           title: keynote(
             "Keynote",
             "Estrategias de producción y financiamiento para el cine independiente",
@@ -396,25 +454,33 @@ export const agenda2026: AgendaDay[] = [
         },
         {
           id: "2026-12-12-sentimental",
-          time: "13:05 – 14:45 hrs",
+          time: "12:30 – 14:20 hrs",
           title: titled("Proyección + Q&A", "Sentimental"),
           subtitle: "Dir. Cesc Gay · España · 2020 · 82´",
-          description: "Q&A con **Griselda Siciliani**",
+          description: "**Q&A con Griselda Siciliani**",
           location: SALA_8,
           href: EVENTO("sentimental"),
+        },
+        {
+          // El doc dice "14:20 – 12:40"; se toma como errata de 14:40.
+          id: "2026-12-12-life-achievement",
+          time: "14:20 – 14:40 hrs",
+          title: plain("Life Achievement Award — Manuel Arango"),
+          description: "Entregado por Marina Stavenhagen · Directora General de la Cineteca Nacional",
+          location: SALA_8,
         },
       ]),
       terracotta([
         {
           id: "2026-12-12-lunch",
           time: "15:00 – 16:00 hrs",
-          title: plain("Lunch de cierre"),
-          description: "Lunch de Industria",
+          title: plain("Lunch de Industria"),
+          description: PATROCINIO_LUNCH,
           location: GANZO_ROOFTOP,
         },
         {
           id: "2026-12-12-kolmar",
-          time: "16:00 – 16:20 hrs",
+          time: "16:00 – 16:30 hrs",
           title: keynote(
             "Keynote",
             "How to pitch your movie to a festival",
@@ -426,22 +492,44 @@ export const agenda2026: AgendaDay[] = [
           href: EVENTO("keynote-jim-kolmar"),
         },
         {
+          id: "2026-12-12-efica",
+          time: "16:30 – 16:45 hrs",
+          title: keynote(
+            "Presentación",
+            "EFICA: Nuevas oportunidades para la producción cinematográfica y audiovisual en México",
+            "Erwin Siegfried · Coordinador técnico IMCINE",
+          ),
+          location: GANZO_ROOFTOP,
+        },
+        {
           id: "2026-12-12-next-wave",
-          time: "16:20 – 17:30 hrs",
+          time: "16:45 – 17:30 hrs",
           title: titled("Panel", "The Next Wave: Emerging Filmmakers"),
           description:
             "Presentado por **Salomon**\nCineastas participantes: **Natalia León, Mariana Mendívil, Diego Gaxiola, Karla Condado, Leo Aguirre, Amandine Thomas, Gabriela Ortega, Federico Luis, Eduardo Braun, Josefina Montino y Martín André**\n\nConoce a los 11 cineastas emergentes de América Latina que forman parte de The Next Wave, un programa dedicado a impulsar nuevas voces del cine latinoamericano. En su presentación oficial, descubriremos a los talentos seleccionados y sus perspectivas creativas. Moderado por **Carlos López Estrada**, cineasta y fundador de Antigravity Academy",
-          location: SALA_8,
+          location: GANZO_ROOFTOP,
           href: EVENTO("panel-the-next-wave"),
+        },
+        {
+          id: "2026-12-12-dj-set",
+          time: "17:30 – 18:30 hrs",
+          title: plain("DJ Set"),
+          location: GANZO_ROOFTOP,
         },
       ]),
       blue([
         {
           id: "2026-12-12-gala",
-          time: "20:00–23:00 hrs",
-          title: plain("Gala de Clausura + Cóctel de cierre"),
-          description:
-            "Presentación de ***La Baja Inspira***, ***Fondo Fílmico Gabriel Figueroa*** y ***Frequencies of Now***",
+          time: "20:00 – 22:30 hrs",
+          title: plain("Gala de Clausura + Cóctel"),
+          description: `${PATROCINIO_LUNCH}\nPalabras de bienvenida. Cena por **Chef Guillermo J. Gómez**. Presentación de proyectos de ***La Baja Inspira***, ***Fondo Fílmico Gabriel Figueroa*** y ***Frequencies of Now***`,
+          location: "Suelo Sur",
+        },
+        {
+          id: "2026-12-12-fiesta-cierre",
+          time: "22:30 – 01:00 hrs",
+          title: plain("Fiesta de Cierre"),
+          description: "Rulo DJ Set",
           location: "Suelo Sur",
         },
       ]),
@@ -454,10 +542,10 @@ export const agenda2026: AgendaDay[] = [
       blue([
         {
           id: "2026-12-13-aire-libre",
-          time: "18:30–20:00 hrs",
-          title: titled("Proyección al aire libre", "Por anunciarse"),
+          time: "18:30 – 20:00 hrs",
+          title: titled("Proyección al aire libre", "La Baja Inspira"),
           description:
-            "Proyección *La Baja Inspira* en alianza con **Cine Club Documental Los Cabos**",
+            "Proyección *La Baja Inspira* en alianza con **Cine Club Documental Los Cabos**\n\n**Surgencia**\nDir. Alejandro Montalvo · México · 2024 · 77´\n\n**My Blue Whale Family**\nDir. Hugh Pearson · México · 2025 · 55´",
           location: "Plaza Mijares, San José del Cabo",
           href: LBI,
         },
@@ -484,7 +572,7 @@ export const agendaSectionCards2026: AgendaSectionCard[] = [
   {
     id: "cine-e-industria",
     title: plain("Programa de Cine e Industria"),
-    time: "11:00–14:30 hrs",
+    time: "11:15–14:40 hrs",
     location: "Cinépolis San José del Cabo",
     description: [
       line(
@@ -501,8 +589,8 @@ export const agendaSectionCards2026: AgendaSectionCard[] = [
   {
     id: "lunch-and-learn",
     title: plain("Lunch & Learn"),
-    time: "15:00–17:00 hrs",
-    location: "JW Marriott | Hotel El Ganzo",
+    time: "15:00–18:30 hrs",
+    location: "Hotel Tropicana | JW Marriott | Hotel El Ganzo",
     description: plain("Lunch · Networking · Paneles · Showcases musicales"),
     access: "Abierto al público",
     bg: TERRACOTTA,
@@ -512,8 +600,8 @@ export const agendaSectionCards2026: AgendaSectionCard[] = [
   {
     id: "beyond-the-screen",
     title: plain("Programa #BeyondTheScreen"),
-    time: "18:30–01:00 hrs",
-    location: "Zadún Ritz-Carlton | JW Marriott",
+    time: "18:00–01:00 hrs",
+    location: "La Marina | Zadún Ritz-Carlton | JW Marriott | Suelo Sur",
     description: [
       line(
         t("Proyecciones al aire libre · Conversatorios · Fiestas · "),

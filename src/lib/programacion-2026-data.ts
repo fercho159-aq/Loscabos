@@ -118,7 +118,7 @@ export const eventos2026: Evento[] = [
   },
   {
     slug: "blaise",
-    title: "Proyección — *Blaise* + Conversatorio con directores",
+    title: "Proyección + Q&A — *Blaise*",
     cardTitle: "Proyección — Blaise",
     credit: "Dir. Dimitri Planchon, Jean-Paul Guigue · Francia · 2026 · 82’",
     cardSubtitle: "Dir. Dimitri Planchon, Jean-Paul Guigue · Francia · 2026 · 82’",
@@ -127,7 +127,7 @@ export const eventos2026: Evento[] = [
     accent: "#BDC957",
     body: [
       "En una familia obsesionada por agradar a los demás, un introvertido adolescente termina involucrado, por pura complacencia, en una improvisada y violenta cruzada revolucionaria.",
-      "Conversatorio postproyección con Dimitri Planchon y Jean-Paul Guigue, y Claudio Jiménez, fundador de Mighty Animation.",
+      "Q&A con Dimitri Planchon y Jean-Paul Guigue, y Claudio Jiménez, fundador de Mighty Animation.",
     ],
     groups: [
       {
@@ -197,6 +197,32 @@ export const eventos2026: Evento[] = [
         layout: "bio",
         people: [
           {
+            name: "Griselda Siciliani",
+            image: "/images/programacion-2026/personas/griselda-siciliani.jpg",
+            meta: "Actriz",
+          },
+          {
+            name: "Johana Murillo",
+            image: "/images/programacion-2026/personas/johana-murillo.jpg",
+            meta: "Actriz",
+          },
+          {
+            name: "Ximena Lamadrid",
+            image: "/images/programacion-2026/personas/ximena-lamadrid.jpg",
+            meta: "Actriz",
+          },
+          {
+            name: "Elena Fortes",
+            image: "/images/programacion-2026/personas/elena-fortes.jpg",
+            meta: "Productora",
+          },
+        ],
+      },
+      {
+        title: "Moderado por",
+        layout: "bio",
+        people: [
+          {
             name: "Claudia Cándano",
             image: "/images/programacion-2026/personas/claudia-candano.jpg",
             meta: "Editora en Jefe de ELLE México",
@@ -205,11 +231,6 @@ export const eventos2026: Evento[] = [
             name: "Andrea Rendón",
             image: "/images/programacion-2026/personas/andrea-rendon.jpg",
             meta: "Fundadora de Girls at Films",
-          },
-          {
-            name: "Griselda Siciliani",
-            image: "/images/programacion-2026/personas/griselda-siciliani.jpg",
-            meta: "Actriz",
           },
         ],
       },
@@ -349,7 +370,7 @@ export const eventos2026: Evento[] = [
     slug: "un-passo-alla-volta",
     title: "Proyección + Q&A — *Un Passo Alla Volta*",
     cardTitle: "Proyección — Un Passo Alla Volta",
-    venue: "Zadún Ritz-Carlton Reserve — Suite",
+    venue: "Zadún Ritz-Carlton Reserve — Suite Presidencial",
     credit: "Dir. Simone Coppo · Italia · 2026 · 14’",
     cardSubtitle: "Dir. Simone Coppo · Italia · 2026 · 14’",
     image: "/images/programacion-2026/un-passo-alla-volta.jpg",
@@ -381,16 +402,16 @@ export const eventos2026: Evento[] = [
   },
   {
     slug: "not-not-jazz",
-    title: "Proyección + Conversatorio — *Medeski, Martin & Wood: Not not jazz*",
+    title: "Proyección + Q&A — *Medeski, Martin & Wood: Not not jazz*",
     cardTitle: "Proyección — Not not jazz",
-    venue: "Zadún Ritz-Carlton Reserve — Suite",
+    venue: "Zadún Ritz-Carlton Reserve — Suite Presidencial",
     credit: "Dir. Jason Miller · Estados Unidos · 2024 · 77’",
     cardSubtitle: "Dir. Jason Miller · Estados Unidos · 2024 · 77’",
     image: "/images/programacion-2026/not-not-jazz.jpg",
     imageAlt: "Medeski, Martin & Wood en el póster de Not not jazz",
     accent: "#081722",
     body: [
-      "Conversatorio postproyección con Billy Martin, baterista de Medeski, Martin & Wood, y Nicolás Celis (fundador de Pimienta Films).",
+      "Q&A con Billy Martin, baterista de Medeski, Martin & Wood, y Nicolás Celis (fundador de Pimienta Films).",
     ],
     groups: [
       {
@@ -413,7 +434,8 @@ export const eventos2026: Evento[] = [
   },
   {
     slug: "zoe-memorex-rexsexex-y-mas",
-    title: "Proyección + Conversatorio — *Zoé: Memorex + Rexsexex y Más*",
+    title:
+      "Proyección — *Zoé: Memorex + Rexsexex y Más* + Conversatorio: La música en el cine, de la promoción al patrimonio cultural",
     cardTitle: "Proyección — Zoé: Memorex + Rexsexex y Más",
     venue: "JW Marriott — Terraza Amet",
     credit: "Dir. Rodrigo Guardiola · México · 2026 · 182’",
@@ -423,7 +445,7 @@ export const eventos2026: Evento[] = [
     accent: "#6687C3",
     body: [
       "Seis Estadios GNP en la Ciudad de México. Más de 380 000 almas. Lo que ocurrió a lo largo de esas seis noches fue mucho más que un récord sin precedentes para el rock mexicano; fue un encuentro histórico e íntimo entre una banda que ha sido la banda sonora de universos enteros y una fanbase multigeneracional más devota que nunca. Esta es la historia de lo que vibró sobre el escenario y de lo que quedó guardado en los corazones de los fans: un desglose sin filtros del magnetismo absoluto, la nostalgia y la vigencia indiscutible de Zoé.",
-      "Conversatorio con Rodrigo Guardiola, cineasta, productor y baterista de Zoé; Olmo Guerra, productor, y Fabrizio Onetto, subdirector de Contenidos y Desarrollo Artístico en OCESA Seitrack.",
+      "Conversatorio con Rodrigo Guardiola, cineasta, productor y baterista de Zoé; Olmo Guerra, productor, y Fabrizio Onetto, subdirector de Contenidos y Desarrollo Artístico en OCESA Seitrack. Moderado por Alejandro Tavares, director de Filma Jalisco.",
     ],
     groups: [
       {
@@ -444,6 +466,11 @@ export const eventos2026: Evento[] = [
             name: "Fabrizio Onetto",
             image: "/images/programacion-2026/personas/fabrizio-onetto.jpg",
             meta: "Subdirector de Contenidos y Desarrollo Artístico en OCESA Seitrack",
+          },
+          {
+            name: "Alejandro Tavares",
+            image: "/images/programacion-2026/personas/alejandro-tavares.jpg",
+            meta: "Moderador · Director de Filma Jalisco",
           },
         ],
       },
@@ -534,7 +561,7 @@ export const eventos2026: Evento[] = [
   {
     slug: "conversatorio-ciudad-creativa-digital-filma-jalisco",
     title:
-      "Conversatorio — *De la idea a la industria*",
+      "Conversatorio — *De la idea a la industria, oportunidades para crear y producir desde Jalisco*",
     cardTitle: "Conversatorio — Ciudad Creativa Digital y Filma Jalisco",
     venue: "Cinépolis San José del Cabo | Sala 8",
     credit:
@@ -628,6 +655,54 @@ export const eventos2026: Evento[] = [
             name: "Elena Fortes",
             image: "/images/programacion-2026/personas/elena-fortes.jpg",
             meta: "Moderadora · Productora de “Para los contrincantes”",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "panel-next-worlds",
+    title:
+      "Panel — *Next World’s: El storytelling como herramienta para la construcción de cultura y nuevos mundos*",
+    cardTitle: "Panel — Next World’s",
+    venue: "Cinépolis San José del Cabo | Sala 8",
+    credit:
+      "Moderado por Isabel Gil · Directora de Relaciones Culturales y Jefa de Artes para el British Council en México",
+    image: "/images/programacion-2026/panel-next-worlds.jpg",
+    imageAlt: "Ilustración de un guerrero con sombrero frente a un templo",
+    accent: "#006666",
+    body: [
+      "Este panel explora cómo el storytelling trasciende las pantallas para construir nuevos mundos, conectar audiencias y generar propiedad intelectual, así como las oportunidades para que México transforme su talento creativo en proyectos con impacto cultural, económico y proyección internacional.",
+    ],
+    groups: [
+      {
+        title: "Participan",
+        layout: "bio",
+        people: [
+          {
+            name: "Gary Alazraki",
+            image: "/images/programacion-2026/personas/gary-alazraki.jpg",
+            meta: "Cineasta, guionista y showrunner",
+          },
+          {
+            name: "Jorge Suárez",
+            image: "/images/programacion-2026/personas/jorge-suarez.jpg",
+            meta: "Fundador de Amber Studio",
+          },
+          {
+            name: "Stacy Perskie",
+            image: "/images/programacion-2026/personas/stacy-perskie.jpg",
+            meta: "Fundador de REDRUM y productor del videojuego Mexican Ninja",
+          },
+          {
+            name: "Alfredo Aceves",
+            image: "/images/programacion-2026/personas/alfredo-aceves.jpg",
+            meta: "Presidente del Fideicomiso de Ciudad Creativa Digital",
+          },
+          {
+            name: "Isabel Gil",
+            image: "/images/programacion-2026/personas/isabel-gil.jpg",
+            meta: "Moderadora · Directora de Relaciones Culturales y Jefa de Artes para el British Council en México",
           },
         ],
       },

@@ -19,6 +19,7 @@ export const aliados: { name: string; logo: string; wide?: boolean }[] = [
   { name: "Park Hyatt Cabo del Sol", logo: "/images/aliados/pleca-2026/16-park-hyatt-cabo-del-sol.png", wide: true },
   { name: "Flamboyan Hotel & Residences", logo: "/images/aliados/pleca-2026/17-flamboyan.png" },
   { name: "Tropicana", logo: "/images/aliados/pleca-2026/17B-tropicana.png" },
+  { name: "Krystal Grand Los Cabos", logo: "/images/aliados/pleca-2026/17C-krystal-grand.png" },
   { name: "YAYA Rentals", logo: "/images/aliados/pleca-2026/18-yaya-rentals.png" },
   { name: "Bar Ligaya", logo: "/images/aliados/pleca-2026/19-bar-ligaya.png" },
   { name: "Suelo Sur", logo: "/images/aliados/pleca-2026/20-suelo-sur.png" },
