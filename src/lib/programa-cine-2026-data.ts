@@ -2,7 +2,7 @@
 // Cine 2026", Mafer, 19-nov-2026). Los títulos se ligan a su ficha en
 // ProgramaCine2026 cuando la película ya es pública.
 
-// Oculto hasta que Cinépolis confirme horarios (Mafer, 19-nov-2026). Cambiar a true para publicarlo.
+// Oculto hasta que Mafer apruebe el preview (/programacion-2026-preview/programa-de-cine). Cambiar a true para publicarlo.
 export const programaCinePublico2026 = false;
 
 export type FuncionPelicula = { title: string; meta: string };
@@ -13,6 +13,8 @@ export type Funcion = {
   meta: string;
   /** Slug de un evento especial (/programacion-2026/<slug>) en vez de película. */
   evento?: string;
+  /** Slug de la ficha cuando el título del programa no coincide con el de la película. */
+  pelicula?: string;
   /** Programas de cortos: cada corto con su línea de créditos. */
   films?: FuncionPelicula[];
 };
@@ -26,8 +28,8 @@ export const programaCine2026: DiaPrograma[] = [
     id: "jueves",
     label: "Jueves 10 de diciembre",
     funciones: [
-      f("12:20", "Sala 8", "Cameron Winter At Carnegie Hall", "Dir. Paul Thomas Anderson • Estados Unidos • 2026 • 71’"),
-      f("12:20", "Sala 8", "Homenaje a Dolores Heredia", "15’", { evento: "homenaje-dolores-heredia" }),
+      f("12:30", "Sala 8", "Cameron Winter At Carnegie Hall", "Dir. Paul Thomas Anderson • Estados Unidos • 2026 • 71’"),
+      f("13:40", "Sala 8", "Homenaje a Dolores Heredia", "15’", { evento: "homenaje-dolores-heredia" }),
       f("16:00", "Sala 2", "Muestra de cortometrajes animados", "En alianza con Filma Jalisco y Ciudad Creativa Digital • 81’", {
         films: [
           c("Lo que queda de mí", "Dir. Melany Leyva Ruiz • México • 2026 • 5.10’"),
@@ -48,7 +50,7 @@ export const programaCine2026: DiaPrograma[] = [
       }),
       f("17:15", "Sala 3", "Seis meses en el edificio rosa con azul + Q&A", "Dir. Bruno Santamaría Razo • México, Brasil, Dinamarca • 2026 • 104’"),
       f("18:00", "Sala 2", "La peluca + Q&A", "Dir. Emiliano Rocha Minter • México • 2026 • 65’"),
-      f("18:00", "Sala 4", "The Next Wave — Emerging Filmmakers", "Programa 2 + Q&A • 70’", {
+      f("18:00", "Sala 5", "The Next Wave — Emerging Filmmakers", "Programa 2 + Q&A • 70’", {
         films: [
           c("Memoria de un cuerpo desplazado", "Dir. Mariana Mendivil • México • 2024 • 10’"),
           c("Para los contrincantes", "Dir. Federico Luis • México, Chile, Francia, Reino Unido • 2026 • 15’"),
@@ -59,9 +61,9 @@ export const programaCine2026: DiaPrograma[] = [
       }),
       f("18:00", "Sala 8", "Iron Boy", "Dir. Louis Clichy • Francia, Bélgica • 2026 • 90’"),
       f("19:30", "Sala 4", "We Are All Strangers", "Dir. Anthony Chen • Singapur • 2026 • 157’"),
-      f("19:30", "Sala 5", "The Only Living Pickpocket in New York", "Dir. Noah Segan • Estados Unidos • 2026 • 88’"),
       f("19:45", "Sala 2", "El Partido", "Dir. Juan Cabral, Santiago Franco • Argentina • 2026 • 91’"),
       f("19:45", "Sala 3", "Nuisance Bear", "Dir. Jack Weisman, Gabriela Osio Vanden • Canadá, EEUU, Reino Unido • 2026 • 89’"),
+      f("19:45", "Sala 5", "The Only Living Pickpocket in New York", "Dir. Noah Segan • Estados Unidos • 2026 • 88’"),
       f("20:00", "Sala 8", "Angel's Egg (4K Restoration)", "Dir. Mamoru Oshii • Japón • 1985 • 71’"),
     ],
   },
@@ -69,8 +71,14 @@ export const programaCine2026: DiaPrograma[] = [
     id: "viernes",
     label: "Viernes 11 de diciembre",
     funciones: [
-      f("13:05", "Sala 8", "Blaise + Q&A", "Dir. Dimitri Planchon, Jean-Paul Guigue • Francia • 2026 • 82’"),
+      f("12:55", "Sala 8", "Blaise + Q&A", "Dir. Dimitri Planchon, Jean-Paul Guigue • Francia • 2026 • 82’"),
       f("16:30", "Sala 2", "Jaripeo + Q&A", "Dir. Efraín Mojica, Rebecca Zweig • México, Estados Unidos • 2026 • 71’"),
+      f("16:30", "Sala 4", "Frequencies of Now", "Programa 1 + Q&A • 99’", {
+        films: [
+          c("Quijada de árbol", "Dir. Diana Valencia • México • 2024 • 10’"),
+          c("Afilo mi Gillete", "Dir. Ignacio Jaunsolo, Juan Meza • Uruguay • 2026 • 89’"),
+        ],
+      }),
       f("16:45", "Sala 3", "Hijas del bosque + Q&A", "Dir. Otilia Portillo Padua • México • 2026 • 95’"),
       f("17:30", "Sala 5", "Nagi Notes", "Dir. Kōji Fukada • Japón • 2026 • 110’"),
       f("18:00", "Sala 8", "We are aliens", "Dir. Kohei Kadowaki • Japón • 2026 • 117’"),
@@ -85,9 +93,25 @@ export const programaCine2026: DiaPrograma[] = [
     id: "sabado",
     label: "Sábado 12 de diciembre",
     funciones: [
-      f("13:10", "Sala 8", "Sentimental + Q&A", "Dir. Cesc Gay • España • 2020 • 82’"),
+      f("12:45", "Sala 8", "Sentimental + Q&A", "Dir. Cesc Gay • España • 2020 • 82’"),
+      f("14:50", "Sala 8", "Life Achievement Award — Manuel Arango", "30’"),
+      f("16:30", "Sala 8", "Frequencies of Now", "Programa 2 + Q&A • 100’", {
+        films: [c("Pánico", "Dir. Jorge Catoni, Renata Valencia • Chile • 2024 • 100’")],
+      }),
       f("17:00", "Sala 2", "Los Mariachis Perdidos + Q&A", "Dir. Francisco Ohem • México • 2026 • 80’"),
       f("17:00", "Sala 3", "Los Nuevos + Q&A", "Dir. Rodrigo Plá • México, España • 2026 • 80’"),
+      // En el doc dice "Programa 2" otra vez; es el tercero (pendiente de confirmar con Mafer).
+      f("17:30", "Sala 5", "Frequencies of Now", "Programa 3 + Q&A • 108’", {
+        films: [
+          c("Nara", "Dir. Mikhail Borisov • Federación Rusa • 2026 • 7’"),
+          c("Weird and Wired", "Dir. Eliza Swanson Cooney • Reino Unido • 2026 • 12’"),
+          c("La Mamuncia", "Dir. Juan Fernando Uribe • Colombia • 2022 • 12’"),
+          c("Recibamos con un aplauso a los robots", "Dir. Cinthya Chavez • México • 2026 • 18’"),
+          c("Mbalax", "Dir. Javier López, Javier Montijano • España, Senegal • 2025 • 28’"),
+          c("La Cifra", "Dir. Juan Gordon • Colombia • 2019 • 6’"),
+          c("Ingrito", "Dir. Alejandro Tavares • México • 2024 • 25’"),
+        ],
+      }),
       f("17:45", "Sala 4", "Rehearsals for a Revolution", "Dir. Pegāh Āhangarāni • Irán • 2026 • 95’"),
       f("19:00", "Sala 8", "Blaise", "Dir. Dimitri Planchon, Jean-Paul Guigue • Francia • 2026 • 82’"),
       f("19:15", "Sala 2", "Medeski, Martin & Wood: Not not jazz", "Dir. Jason Miller • Estados Unidos • 2024 • 77’", { evento: "not-not-jazz" }),
@@ -136,7 +160,7 @@ export const programaCine2026: DiaPrograma[] = [
       }),
       f("14:15", "Sala 2", "Heil Jupiter!", "Dir. Carlos Reygadas • México, Polonia, Portugal, Noruega, Suecia • 2026 • 156’"),
       f("14:30", "Sala 5", "Iron Boy", "Dir. Louis Clichy • Francia, Bélgica • 2026 • 90’"),
-      f("15:00", "Sala 3", "Memorex + Rexsexex y mas", "Dir. Rodrigo Guardiola • México • 2026 • 182’"),
+      f("15:00", "Sala 3", "Zoé: Memorex + Rexsexex y más", "Dir. Rodrigo Guardiola • México • 2026 • 182’", { pelicula: "memorex-rexsexex-y-mas" }),
       f("15:00", "Sala 4", "Love Lessons", "Dir. Martin Provost • Francia, Bélgica • 2026 • 114’"),
       f("15:00", "Sala 8", "Rehearsals for a Revolution", "Dir. Pegāh Āhangarāni • Irán • 2026 • 95’"),
       f("16:30", "Sala 5", "I Deserve a Lover Whose Every Rise Sets Fiery Dooms Raging Across the Skies", "Dir. Mani Haghighi • Irán • 2026 • 76’"),

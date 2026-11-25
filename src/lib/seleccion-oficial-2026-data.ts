@@ -98,6 +98,11 @@ export const categorias2026: { id: string; label: string; color: string }[] = [
     "id": "homenaje",
     "label": "Homenaje a Dolores Heredia",
     "color": "#886D5E"
+  },
+  {
+    "id": "frequencies-of-now",
+    "label": "Frequencies of Now",
+    "color": "#FF4F5E"
   }
 ];
 
@@ -827,6 +832,132 @@ export const peliculas2026: Pelicula2026[] = [
     "year": "2026",
     "duration": "90’",
     "synopsis": "Una pareja descubre que sus emociones afectan físicamente su entorno, haciéndoles plantearse si su relación les beneficia o les perjudica."
+  },
+  {
+    "slug": "afilo-mi-gillete",
+    "title": "Afilo mi Gillete",
+    "categoryId": "frequencies-of-now",
+    "directors": "Ignacio Jaunsolo, Juan Meza",
+    "countries": "Uruguay",
+    "year": "2026",
+    "duration": "89’",
+    "synopsis": "“Los Tontos son un momento destinado a permanecer.”\n– Rosana Malaneschii\nEn noviembre de 2022, en la Sala Zitarrosa, El Gavilán impulsa un concierto homenaje a Los Tontos, la banda más irreverente del rock uruguayo de los años 80. Lo que comienza como un tributo se transforma en una empresa improbable: retomar un vínculo musical detenido durante más de tres décadas. Desde distintos países, Trevor Podargo (batería) y Calvin Rodríguez (guitarra) reconstruyen esa conexión, atravesada por la distancia y marcada por la ausencia de Renzo Teflón (bajo y voz), fallecido en 2018. Lejos de la nostalgia, Afilo mi Gillette sigue el pulso de un vínculo que sobrevive al tiempo y explora el fenómeno Los Tontos: un grupo que, en los años posteriores a la dictadura, eligió la ironía, el humor y el absurdo como formas de denuncia y resistencia. Construido a partir de entrevistas, material de archivo inédito y un trabajo de búsqueda, restauración y puesta en valor, el documental no solo revisita el legado de esta banda mítica, sino que lo acerca a nuevas generaciones.\nProyectado sobre el escenario, Renzo Teflón reaparece con sus clásicos lentes oscuros y su sonrisa intacta, como si mirara desde otro tiempo. Trevor y Calvin reconstruyen el espíritu de la banda a través del recuerdo. Una despedida, una redención, y la certeza de que lo que alguna vez incomodó... nunca dejó de resonar.",
+    "image": "/images/seleccion-oficial-2026/afilo-mi-gillete-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/afilo-mi-gillete-poster.jpg",
+    "trailerUrl": "https://youtu.be/QM4KtxEI0jU?si=ZlqCooPHL3GhnvhD"
+  },
+  {
+    "slug": "ingrito",
+    "title": "Ingrito",
+    "categoryId": "frequencies-of-now",
+    "directors": "Alejandro Tavares",
+    "countries": "México",
+    "year": "2024",
+    "duration": "25’",
+    "synopsis": "Un documental en el que a través de fragmentos de un concierto en vivo y testimonios de gente muy cercana a la banda conocemos un poco más de sus integrantes, experiencias compartidas, su acontecer diario, cómo son cada uno de ellos, etc.",
+    "image": "/images/seleccion-oficial-2026/ingrito-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/ingrito-poster.jpg",
+    "trailerUrl": "https://youtu.be/NdQdsj5CxFg?si=KlFCDQPqsch13wQQ"
+  },
+  {
+    "slug": "la-cifra",
+    "title": "La Cifra",
+    "categoryId": "frequencies-of-now",
+    "directors": "Juan Gordon",
+    "countries": "Colombia",
+    "year": "2019",
+    "duration": "6’",
+    "synopsis": "El cruce entre el spoken Word y las matemáticas supremas en medio de la tumultuosa Bogotá. Así se desarrolla este “Circulo” que muestra en paralelo la belleza de la poesía callejera y el misticismo del Rap, TSH hace una oda al cero como la base de la creación, como un lugar más allá de un número donde todas las cosas pueden suceder y todos los ciclos inician otra vez.",
+    "image": "/images/seleccion-oficial-2026/la-cifra-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/la-cifra-poster.jpg"
+  },
+  {
+    "slug": "la-mamuncia",
+    "title": "La Mamuncia",
+    "categoryId": "frequencies-of-now",
+    "directors": "Juan Fernando Uribe",
+    "countries": "Colombia",
+    "year": "2022",
+    "duration": "12’",
+    "synopsis": "Desde Cali, la voz de Nidia Góngora, una apacible timbiquireña, desata un arrullo musical que cautiva al mundo. Fusionando la vitalidad de la ciudad con la riqueza de Timbiquí, Nidia, embajadora de tradiciones, llena el planeta con su esencia cultural, creando un eco vibrante desde el corazón de la metrópoli.",
+    "image": "/images/seleccion-oficial-2026/la-mamuncia-still.jpg",
+    "trailerUrl": "https://youtu.be/48ehzYIBwJY?si=UduXpeBHeimk3d85"
+  },
+  {
+    "slug": "mbalax",
+    "title": "Mbalax",
+    "categoryId": "frequencies-of-now",
+    "directors": "Javier López, Javier Montijano",
+    "countries": "España, Senegal",
+    "year": "2025",
+    "duration": "28’",
+    "synopsis": "Al ver que el mundo está cambiando, el cantautor español Javier Montijano se pregunta si el mbalax, la música tradicional de Senegal, sigue existiendo o si, por el contrario, las máquinas se han apoderado de la escena musical de África Occidental. Aquello que creemos que siempre estará ahí puede cambiar.\nUn viaje musical a Senegal para experimentar el presente, sumergirse en el pasado y dejarse llevar por lo que depare el futuro.",
+    "image": "/images/seleccion-oficial-2026/mbalax-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/mbalax-poster.jpg",
+    "trailerUrl": "https://youtu.be/w2Qrfu647_4?si=Wf_dbue3gfQ8-VVa"
+  },
+  {
+    "slug": "nara",
+    "title": "Nara",
+    "categoryId": "frequencies-of-now",
+    "directors": "Mikhail Borisov",
+    "countries": "Federación Rusa",
+    "year": "2026",
+    "duration": "7’",
+    "synopsis": "Una sesión de improvisación musical grabada sobre las ruinas de una base militar soviética. ¿Habrá sido realmente en vano todo el arduo trabajo de los científicos? Ahora, todos los sistemas de ingeniería y las estaciones de radar no sirven más que para escuchar ecos.",
+    "image": "/images/seleccion-oficial-2026/nara-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/nara-poster.jpg",
+    "trailerUrl": "https://youtu.be/zkzAmPlaeuk"
+  },
+  {
+    "slug": "panico",
+    "title": "Pánico",
+    "categoryId": "frequencies-of-now",
+    "directors": "Jorge Catoni, Renata Valencia",
+    "countries": "Chile",
+    "year": "2024",
+    "duration": "100’",
+    "synopsis": "Pánico, una banda franco-chilena, fue una fuerza clave en la escena musical independiente de Chile durante la década de los noventa. Formada por Eduardo Henríquez —quien partió al exilio (Toronto, Tokio y París) junto con su familia huyendo de la dictadura— y Caroline Chaspoul, ambos se conocieron en Francia durante su adolescencia y comenzaron a hacer música juntos. Más tarde se mudaron a Chile tras el fin de la dictadura, en un periodo de intensa efervescencia artística. Destacándose por su enfoque vanguardista, creatividad, espíritu innovador y ética DIY (hazlo tú mismo), Pánico trazó un camino único que los llevó de regreso a Francia. En el trayecto, establecieron vínculos singulares con la banda escocesa Franz Ferdinand. Su trayectoria estuvo marcada por la disidencia, la libertad de expresión, el autosabotaje y los malentendidos.",
+    "image": "/images/seleccion-oficial-2026/panico-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/panico-poster.jpg",
+    "trailerUrl": "https://vimeo.com/1212729765/940246014c?fl=pl&fe=vl"
+  },
+  {
+    "slug": "quijada-de-arbol",
+    "title": "Quijada de árbol",
+    "categoryId": "frequencies-of-now",
+    "directors": "Diana Valencia",
+    "countries": "México",
+    "year": "2024",
+    "duration": "10’",
+    "synopsis": "Quijada de Árbol: Instrumento de percusión fabricado en madera que asemeja el sonido de la quijada de burro, mula o caballo. Un retrato que explora la mente curiosa de Germán, un laudero originario de Cosoleacaque, Veracruz, México. Su pasión por la madera lo lleva a desentrañar los misterios de la creación de instrumentos musicales, los cuales no solo transforman la música, sino que también revelan la riqueza cultural y la tradición artesanal de su tierra. Este documental despliega el fascinante proceso de creación de este innovador instrumento de percusión, la Quijada de Árbol, y su introducción en el vibrante mundo del son jarocho-",
+    "image": "/images/seleccion-oficial-2026/quijada-de-arbol-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/quijada-de-arbol-poster.jpg"
+  },
+  {
+    "slug": "recibamos-con-un-aplauso-a-los-robots",
+    "title": "Recibamos con un aplauso a los robots",
+    "categoryId": "frequencies-of-now",
+    "directors": "Cinthya Chavez",
+    "countries": "México",
+    "year": "2026",
+    "duration": "18’",
+    "synopsis": "Tras lanzar su canción \"Let's Give It Up for the Robots\" (Recibamos con un aplauso a los robots), el músico Alan Molina es vetado de todas las plataformas de streaming debido a una falla de coincidencia del algoritmo, lo que desata una inesperada batalla por la creatividad humana en la era de la inteligencia artificial.",
+    "image": "/images/seleccion-oficial-2026/recibamos-con-un-aplauso-a-los-robots-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/recibamos-con-un-aplauso-a-los-robots-poster.jpg",
+    "trailerUrl": "https://youtu.be/S90DasaWhvM?si=Z7Tvg2RsGYdsr4wP"
+  },
+  {
+    "slug": "weird-and-wired",
+    "title": "Weird and Wired",
+    "categoryId": "frequencies-of-now",
+    "directors": "Eliza Swanson Cooney",
+    "countries": "Reino Unido",
+    "year": "2026",
+    "duration": "12’",
+    "synopsis": "Una película musical experimental que documenta el concierto punk autogestivo (DIY) \"Weird and Wired\", con sede en Glasgow. Grabada a lo largo de una sola noche, la cinta captura la atmósfera y la energía de Weird and Wired, e incluye entrevistas, presentaciones en vivo y material de archivo de organizadores y músicos.",
+    "image": "/images/seleccion-oficial-2026/weird-and-wired-still.jpg",
+    "poster": "/images/seleccion-oficial-2026/weird-and-wired-poster.jpg"
   }
 ];
 
@@ -839,8 +970,9 @@ export const peliculasSeleccion2026 = peliculas2026.filter((film) =>
   categoriasSeleccion2026.some((category) => category.id === film.categoryId),
 );
 
+// Frequencies of Now no tiene pestaña pública; sus fichas se ligan desde el programa de cine (Mafer, 25-nov).
 export const peliculasPublicas2026 = peliculas2026.filter((film) =>
-  programasPublicos2026.some((programa) => programa.categoryIds.includes(film.categoryId)) &&
+  (film.categoryId === "frequencies-of-now" || programasPublicos2026.some((programa) => programa.categoryIds.includes(film.categoryId))) &&
   (!categoriasSeleccion2026.some((category) => category.id === film.categoryId) || peliculasSeleccionLiberadas2026.includes(film.slug)),
 );
 

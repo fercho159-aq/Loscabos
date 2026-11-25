@@ -505,60 +505,6 @@ export const eventos2026: Evento[] = [
     ],
   },
   {
-    slug: "panel-frequencies-of-now",
-    title: "Panel — *Frequencies of Now: The stories behind the music*",
-    cardTitle: "Panel — Frequencies of Now",
-    venue: "JW Marriott — Anfiteatro",
-    credit: "Moderado por Alejandro Tavares · Director de Filma Jalisco",
-    image: "/images/programacion-2026/panel-frequencies-of-now.jpg",
-    imageAlt: "Consola de audio iluminada en morado",
-    accent: "#6687C3",
-    body: [
-      "La música como archivo vivo de nuestro tiempo.",
-      "Presentación de los cinco proyectos seleccionados de Frequencies of Now: A Living Archive of Music Culture, plataforma internacional dedicada al documental musical. Una conversación entre cineastas y jurados sobre la música como expresión de identidad, memoria y transformación cultural; las historias detrás de los proyectos; los criterios curatoriales y el proceso de selección; así como los desafíos creativos y las oportunidades de circulación internacional del documental musical.",
-      "Incluye: conversación con el jurado · proceso y criterios de selección · anuncio de ganadores · proyección de fragmentos seleccionados.",
-      "Jurados participantes: Juan Patricio Riveroll, Rodrigo Guardiola, Hermann Neudert, Mario Escobar y Zunshu. Moderado por Alejandro Tavares, Director de Filma Jalisco.",
-    ],
-    groups: [
-      {
-        title: "Jurados participantes",
-        layout: "bio",
-        people: [
-          {
-            name: "Juan Patricio Riveroll",
-            image: "/images/programacion-2026/personas/juan-patricio-riveroll.jpg",
-            meta: "Director, productor y Director de Extensión Académica de ESCINE",
-          },
-          {
-            name: "Rodrigo Guardiola",
-            image: "/images/programacion-2026/personas/rodrigo-guardiola.jpg",
-            meta: "Cineasta, productor y baterista de Zoé",
-          },
-          {
-            name: "Hermann Neudert",
-            image: "/images/programacion-2026/personas/hermann-neudert.jpg",
-            meta: "Director y realizador audiovisual",
-          },
-          {
-            name: "Mario Escobar",
-            image: "/images/programacion-2026/personas/mario-escobar.jpg",
-            meta: "Ejecutivo de Global Talent Services (Universal Music Group) y mánager de Ed Maverick",
-          },
-          {
-            name: "Zunshu",
-            image: "/images/programacion-2026/personas/zunshu.jpg",
-            meta: "Creativo y miembro de la dirección de Revista 192",
-          },
-          {
-            name: "Alejandro Tavares",
-            image: "/images/programacion-2026/personas/alejandro-tavares.jpg",
-            meta: "Modera · Director de Filma Jalisco",
-          },
-        ],
-      },
-    ],
-  },
-  {
     slug: "conversatorio-ciudad-creativa-digital-filma-jalisco",
     title:
       "Conversatorio — *De la idea a la industria, oportunidades para crear y producir desde Jalisco*",

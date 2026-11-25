@@ -285,7 +285,7 @@ export const agenda2026: AgendaDay[] = [
         },
         {
           id: "2026-12-10-dj-mo",
-          time: "22:10 – 00:00 hrs",
+          time: "22:15 – 00:00 hrs",
           title: plain("MO DJ Set"),
           location: ZADUN_SUITE,
         },
