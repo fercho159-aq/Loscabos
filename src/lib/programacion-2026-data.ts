@@ -339,11 +339,11 @@ export const eventos2026: Evento[] = [
   },
   {
     slug: "keynote-jim-kolmar",
-    title: "Keynote — *How to pitch your movie to a festival*",
-    cardTitle: "Keynote — Jim Kolmar",
+    title: "Conversatorio — *How to pitch your movie to a festival*",
+    cardTitle: "Conversatorio — Jim Kolmar y David Zonana",
     cardCredit: true,
     venue: "Hotel El Ganzo — Rooftop",
-    credit: "Jim Kolmar · Curador y programador cinematográfico internacional - SXSW Film & TV",
+    credit: "Jim Kolmar · Curador y programador cinematográfico internacional · SXSW Film & TV y David Zonana · Cineasta",
     image: "/images/programacion-2026/keynote-jim-kolmar.jpg",
     imageAlt: "Jim Kolmar, curador y programador de SXSW Film & TV",
     accent: "#081722",
@@ -618,7 +618,7 @@ export const eventos2026: Evento[] = [
     imageAlt: "Ilustración de un guerrero con sombrero frente a un templo",
     accent: "#006666",
     body: [
-      "Este panel explora cómo el storytelling trasciende las pantallas para construir nuevos mundos, conectar audiencias y generar propiedad intelectual, así como las oportunidades para que México transforme su talento creativo en proyectos con impacto cultural, económico y proyección internacional.",
+      "Una conversación sobre cómo las historias dan forma a la cultura y a los imaginarios colectivos. El panel explora cómo una historia se amplía y se transforma al pasar de una película a un videojuego, un cortometraje o un video en redes sociales. A partir de ese cruce de formatos, la charla aborda las oportunidades para que el talento creativo en México desarrolle universos propios, genere propiedad intelectual y llegue a audiencias internacionales.",
     ],
     groups: [
       {

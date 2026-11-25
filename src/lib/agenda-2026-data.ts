@@ -435,7 +435,7 @@ export const agenda2026: AgendaDay[] = [
             "Next World’s: El storytelling como herramienta para la construcción de cultura y nuevos mundos",
           ),
           description:
-            "Participan:\n**Gary Alazraki** · Cineasta, guionista y showrunner\n**Jorge Suárez** · Fundador de Amber Studio\n**Stacy Perskie** · Fundador de REDRUM y productor del videojuego Mexican Ninja\n**Alfredo Aceves** · Presidente del Fideicomiso de Ciudad Creativa Digital\n\nEste panel explora cómo el storytelling trasciende las pantallas para construir nuevos mundos, conectar audiencias y generar propiedad intelectual, así como las oportunidades para que México transforme su talento creativo en proyectos con impacto cultural, económico y proyección internacional. Moderado por **Isabel Gil** · Directora de Relaciones Culturales y Jefa de Artes para el British Council en México",
+            "Participan:\n**Gary Alazraki** · Cineasta, guionista y showrunner\n**Jorge Suárez** · Fundador de Amber Studio\n**Stacy Perskie** · Fundador de REDRUM y productor del videojuego Mexican Ninja\n**Alfredo Aceves** · Presidente del Fideicomiso de Ciudad Creativa Digital\n\nUna conversación sobre cómo las historias dan forma a la cultura y a los imaginarios colectivos. El panel explora cómo una historia se amplía y se transforma al pasar de una película a un videojuego, un cortometraje o un video en redes sociales. A partir de ese cruce de formatos, la charla aborda las oportunidades para que el talento creativo en México desarrolle universos propios, genere propiedad intelectual y llegue a audiencias internacionales. Moderado por **Isabel Gil** · Directora de Relaciones Culturales y Jefa de Artes para el British Council en México",
           location: SALA_8,
           href: EVENTO("panel-next-worlds"),
         },
@@ -482,9 +482,9 @@ export const agenda2026: AgendaDay[] = [
           id: "2026-12-12-kolmar",
           time: "16:00 – 16:30 hrs",
           title: keynote(
-            "Keynote",
+            "Conversatorio",
             "How to pitch your movie to a festival",
-            "Jim Kolmar · Curador y programador cinematográfico internacional · SXSW Film & TV",
+            "Jim Kolmar · Curador y programador cinematográfico internacional · SXSW Film & TV y David Zonana · Cineasta",
           ),
           description:
             "Desde su experiencia en el circuito internacional de festivales, Jim Kolmar compartirá las claves para presentar una película ante los equipos de programación, entender los criterios de selección y desarrollar estrategias que aumenten sus oportunidades de formar parte de festivales y llegar a nuevas audiencias",
@@ -497,7 +497,7 @@ export const agenda2026: AgendaDay[] = [
           title: keynote(
             "Presentación",
             "EFICA: Nuevas oportunidades para la producción cinematográfica y audiovisual en México",
-            "Erwin Siegfried · Coordinador técnico IMCINE",
+            "Erwin Siegfried Frederick Neumaier de Hoyos · Coordinador técnico IMCINE",
           ),
           location: GANZO_ROOFTOP,
         },
@@ -522,7 +522,7 @@ export const agenda2026: AgendaDay[] = [
           id: "2026-12-12-gala",
           time: "20:00 – 22:30 hrs",
           title: plain("Gala de Clausura + Cóctel"),
-          description: `${PATROCINIO_LUNCH}\nPalabras de bienvenida. Cena por **Chef Guillermo J. Gómez**. Presentación de proyectos de ***La Baja Inspira***, ***Fondo Fílmico Gabriel Figueroa*** y ***Frequencies of Now***`,
+          description: PATROCINIO_LUNCH,
           location: "Suelo Sur",
         },
         {
