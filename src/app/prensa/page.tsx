@@ -4,7 +4,6 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
-import SubscribeCTA from "@/components/SubscribeCTA";
 
 const quotes = [
   { medio: "El Universal", logo: "/images/prensa/Logos Medios/ElUniversal.png", quote: "El Festival de Cine de Los Cabos vuelve en 2025 para recordarle al mundo que el cine mexicano sigue vivo, evoluciona y tiene mucho que contar.", url: "https://www.eluniversal.com.mx/espectaculos/el-festival-de-cine-de-los-cabos-vuelve-en-2025-el-cine-mexicano-sigue-vivo-y-evoluciona/" },
@@ -59,13 +58,14 @@ export default function Prensa() {
       <Navbar />
 
       <PageHero lines={["Prensa"]}>
-        <SubscribeCTA
-          source="prensa"
-          label="Registro de prensa"
-          title="Registro de prensa · FICC 2026"
-          description="Completa tus datos para recibir información oficial del festival."
+        <a
+          href="https://forms.gle/XavbUWxaUP2SJ1E67"
+          target="_blank"
+          rel="noopener noreferrer"
           className="cta-button"
-        />
+        >
+          Acreditación de prensa 2026
+        </a>
       </PageHero>
 
       <section className="prensa-quotes-section">

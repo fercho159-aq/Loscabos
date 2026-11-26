@@ -20,6 +20,7 @@ export const aliados: { name: string; logo: string; wide?: boolean }[] = [
   { name: "Flamboyan Hotel & Residences", logo: "/images/aliados/pleca-2026/17-flamboyan.png" },
   { name: "Tropicana", logo: "/images/aliados/pleca-2026/17B-tropicana.png" },
   { name: "Krystal Grand Los Cabos", logo: "/images/aliados/pleca-2026/17C-krystal-grand.png" },
+  { name: "Veleros Beach Club", logo: "/images/aliados/pleca-2026/17D-veleros.png" },
   { name: "YAYA Rentals", logo: "/images/aliados/pleca-2026/18-yaya-rentals.png" },
   { name: "Bar Ligaya", logo: "/images/aliados/pleca-2026/19-bar-ligaya.png" },
   { name: "Suelo Sur", logo: "/images/aliados/pleca-2026/20-suelo-sur.png" },
