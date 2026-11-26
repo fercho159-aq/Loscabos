@@ -343,7 +343,7 @@ export const eventos2026: Evento[] = [
     cardTitle: "Conversatorio — Jim Kolmar y David Zonana",
     cardCredit: true,
     venue: "Hotel El Ganzo — Rooftop",
-    credit: "Jim Kolmar · Curador y programador cinematográfico internacional · SXSW Film & TV y David Zonana · Cineasta",
+    credit: "Jim Kolmar · Curador y programador cinematográfico internacional, SXSW Film & TV y David Zonana · Cineasta",
     image: "/images/programacion-2026/keynote-jim-kolmar.jpg",
     imageAlt: "Jim Kolmar, curador y programador de SXSW Film & TV",
     accent: "#081722",

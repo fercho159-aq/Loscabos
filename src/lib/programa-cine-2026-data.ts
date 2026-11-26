@@ -100,7 +100,6 @@ export const programaCine2026: DiaPrograma[] = [
       }),
       f("17:00", "Sala 2", "Los Mariachis Perdidos + Q&A", "Dir. Francisco Ohem • México • 2026 • 80’"),
       f("17:00", "Sala 3", "Los Nuevos + Q&A", "Dir. Rodrigo Plá • México, España • 2026 • 80’"),
-      // En el doc dice "Programa 2" otra vez; es el tercero (pendiente de confirmar con Mafer).
       f("17:30", "Sala 5", "Frequencies of Now", "Programa 3 + Q&A • 108’", {
         films: [
           c("Nara", "Dir. Mikhail Borisov • Federación Rusa • 2026 • 7’"),

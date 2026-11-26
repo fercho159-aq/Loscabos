@@ -462,7 +462,6 @@ export const agenda2026: AgendaDay[] = [
           href: EVENTO("sentimental"),
         },
         {
-          // El doc dice "14:20 – 12:40"; se toma como errata de 14:40.
           id: "2026-12-12-life-achievement",
           time: "14:20 – 14:40 hrs",
           title: plain("Life Achievement Award — Manuel Arango"),
@@ -484,7 +483,7 @@ export const agenda2026: AgendaDay[] = [
           title: keynote(
             "Conversatorio",
             "How to pitch your movie to a festival",
-            "Jim Kolmar · Curador y programador cinematográfico internacional · SXSW Film & TV y David Zonana · Cineasta",
+            "Jim Kolmar · Curador y programador cinematográfico internacional, SXSW Film & TV y David Zonana · Cineasta",
           ),
           description:
             "Desde su experiencia en el circuito internacional de festivales, Jim Kolmar compartirá las claves para presentar una película ante los equipos de programación, entender los criterios de selección y desarrollar estrategias que aumenten sus oportunidades de formar parte de festivales y llegar a nuevas audiencias",
