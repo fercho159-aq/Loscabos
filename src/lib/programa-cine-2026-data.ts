@@ -2,8 +2,8 @@
 // Cine 2026", Mafer, 19-nov-2026). Los títulos se ligan a su ficha en
 // ProgramaCine2026 cuando la película ya es pública.
 
-// Oculto hasta que Mafer apruebe el preview (/programacion-2026-preview/programa-de-cine). Cambiar a true para publicarlo.
-export const programaCinePublico2026 = false;
+// Liberado el 26-nov-2026 a las 17:00 (Mafer, WhatsApp).
+export const programaCinePublico2026 = true;
 
 export type FuncionPelicula = { title: string; meta: string };
 export type Funcion = {
