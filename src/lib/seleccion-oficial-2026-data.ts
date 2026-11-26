@@ -21,14 +21,17 @@ export const PUBLIC_FILM_BASE = "/programacion-2026/peliculas";
 export const programasPeliculas2026 = [
   { id: "seleccion", title: "Muestra Oficial", href: PREVIEW_SELECTION_URL, categoryIds: ["marejada-nacional", "marejada-internacional"] },
   { id: "la-baja-inspira", title: "La Baja Inspira", href: "/programacion-2026-preview/la-baja-inspira", categoryIds: ["la-baja-inspira"] },
+  // Preview: micrositio de FoN; en público, el catálogo de sus películas.
+  { id: "frequencies-of-now", title: "Frequencies of Now", href: "/programacion-2026-preview/frequencies-of-now", categoryIds: ["frequencies-of-now"] },
   { id: "animacion", title: "Animación", href: "/programacion-2026-preview/animacion", categoryIds: ["animacion"] },
   { id: "next-wave", title: "The Next Wave — Emerging Filmmakers Panel", href: "/programacion-2026-preview/panel-the-next-wave", categoryIds: ["next-wave"] },
 ];
 
 // Liberados el 6 de noviembre de 2026: Animación y parte de la Selección oficial.
 // La Baja Inspira y The Next Wave, el 19 de noviembre (comentarios de Mafer en el doc).
+// Frequencies of Now, pestaña después de La Baja Inspira (Mafer, 26-nov).
 export const programasPublicos2026 = programasPeliculas2026
-  .filter((programa) => ["animacion", "seleccion", "la-baja-inspira", "next-wave"].includes(programa.id))
+  .filter((programa) => ["animacion", "seleccion", "la-baja-inspira", "frequencies-of-now", "next-wave"].includes(programa.id))
   .map((programa) =>
     // The Next Wave: la pestaña lleva a las proyecciones, no al micrositio del panel (audio de Mafer, 19-nov).
     programa.id === "next-wave"
@@ -970,9 +973,8 @@ export const peliculasSeleccion2026 = peliculas2026.filter((film) =>
   categoriasSeleccion2026.some((category) => category.id === film.categoryId),
 );
 
-// Frequencies of Now no tiene pestaña pública; sus fichas se ligan desde el programa de cine (Mafer, 25-nov).
 export const peliculasPublicas2026 = peliculas2026.filter((film) =>
-  (film.categoryId === "frequencies-of-now" || programasPublicos2026.some((programa) => programa.categoryIds.includes(film.categoryId))) &&
+  programasPublicos2026.some((programa) => programa.categoryIds.includes(film.categoryId)) &&
   (!categoriasSeleccion2026.some((category) => category.id === film.categoryId) || peliculasSeleccionLiberadas2026.includes(film.slug)),
 );
 

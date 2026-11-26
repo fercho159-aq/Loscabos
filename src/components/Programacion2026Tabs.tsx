@@ -7,9 +7,7 @@ type ProgramaTab = "programacion" | "programa-de-cine" | "seleccion" | "la-baja-
 
 const tabs = [
   { id: "programacion", title: "Programación", href: "/programacion-2026-preview" },
-  ...programasPeliculas2026.filter((programa) => programa.id !== "next-wave"),
-  { id: "frequencies-of-now", title: "Frequencies of Now", href: "/programacion-2026-preview/frequencies-of-now" },
-  ...programasPeliculas2026.filter((programa) => programa.id === "next-wave"),
+  ...programasPeliculas2026,
 ];
 
 const publicTabs = [

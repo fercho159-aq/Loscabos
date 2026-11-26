@@ -5,7 +5,7 @@ import Programacion2026Tabs from "@/components/Programacion2026Tabs";
 import SeleccionOficial2026 from "@/components/SeleccionOficial2026";
 import { categorias2026, peliculas2026, peliculasPublicas2026, programasPublicos2026, PREVIEW_FILM_BASE, PUBLIC_FILM_BASE } from "@/lib/seleccion-oficial-2026-data";
 
-export default function CatalogoPrograma2026({ categoryId, title, preview = true }: { categoryId: "la-baja-inspira" | "animacion" | "next-wave"; title?: string; preview?: boolean }) {
+export default function CatalogoPrograma2026({ categoryId, title, preview = true }: { categoryId: "la-baja-inspira" | "animacion" | "frequencies-of-now" | "next-wave"; title?: string; preview?: boolean }) {
   if (!preview && !programasPublicos2026.some((programa) => programa.id === categoryId)) {
     redirect("/programacion-2026");
   }
