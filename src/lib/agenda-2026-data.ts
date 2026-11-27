@@ -90,10 +90,10 @@ const PEACH = "#EFA26F";
 const TERRACOTTA = "#D97A5B";
 
 const SALA_8 = "Cinépolis San José del Cabo | Sala 8";
-const GANZO_ROOFTOP = "Hotel El Ganzo — Rooftop";
-const JW_ANFITEATRO = "JW Marriott — Anfiteatro";
-const ZADUN_SUITE = "Zadún Ritz-Carlton Reserve — Suite Presidencial";
-const JW_TERRAZA = "JW Marriott — Terraza Amet";
+const GANZO_ROOFTOP = "Hotel El Ganzo (Rooftop) ubicado en Puerto Los Cabos";
+const JW_ANFITEATRO = "JW Marriott Los Cabos, ubicado en Puerto Los Cabos · Anfiteatro";
+const ZADUN_SUITE = "Zadún, Ritz-Carlton Reserve, Los Cabos, ubicado en Puerto Los Cabos · En la Suite Reserve";
+const JW_TERRAZA = "JW Marriott Los Cabos, ubicado en Puerto Los Cabos · Terraza Amet";
 const TROPICANA = "Hotel Tropicana";
 const PATROCINIO_LUNCH = "Patrocinado por Tequila Código 1530 y Mezcal The Producer";
 const MARINA = "La Marina Puerto Los Cabos";
@@ -559,7 +559,7 @@ export const agendaSectionCards2026: AgendaSectionCard[] = [
     id: "formacion-e-industria",
     title: plain("Programa de Formación e Industria"),
     time: "9:00–11:00 hrs",
-    location: "Hotel El Ganzo | Cinépolis San José del Cabo",
+    location: "Hotel El Ganzo (Rooftop) ubicado en Puerto Los Cabos | Cinépolis San José del Cabo",
     description: [
       line(t("Talleres · Work in Progress · Evaluación de carpetas "), softBreak, t("· Pitches")),
     ],
@@ -589,7 +589,7 @@ export const agendaSectionCards2026: AgendaSectionCard[] = [
     id: "lunch-and-learn",
     title: plain("Lunch & Learn"),
     time: "15:00–18:30 hrs",
-    location: "Hotel Tropicana | JW Marriott | Hotel El Ganzo",
+    location: "Hotel Tropicana | JW Marriott Los Cabos, ubicado en Puerto Los Cabos | Hotel El Ganzo (Rooftop) ubicado en Puerto Los Cabos",
     description: plain("Lunch · Networking · Paneles · Showcases musicales"),
     access: "Abierto al público",
     bg: TERRACOTTA,
@@ -600,7 +600,7 @@ export const agendaSectionCards2026: AgendaSectionCard[] = [
     id: "beyond-the-screen",
     title: plain("Programa #BeyondTheScreen"),
     time: "18:00–01:00 hrs",
-    location: "La Marina | Zadún Ritz-Carlton | JW Marriott | Suelo Sur",
+    location: "La Marina | Zadún, Ritz-Carlton Reserve, Los Cabos, ubicado en Puerto Los Cabos | JW Marriott Los Cabos, ubicado en Puerto Los Cabos | Suelo Sur",
     description: [
       line(
         t("Proyecciones al aire libre · Conversatorios · Fiestas · "),

@@ -81,7 +81,7 @@ export const eventos2026: Evento[] = [
     slug: "panel-the-next-wave",
     title: "The Next Wave — Emerging Filmmakers Panel",
     date: "Sábado 12 de diciembre",
-    venue: "Hotel El Ganzo — Rooftop",
+    venue: "Hotel El Ganzo (Rooftop) ubicado en Puerto Los Cabos",
     credit: "Moderado por Carlos López Estrada",
     image: "/images/programacion-2026/panel-the-next-wave.jpg",
     imageAlt: "Panel The Next Wave — Emerging Filmmakers",
