@@ -47,6 +47,7 @@ export default function Home() {
             style={{ fontSize: "clamp(1.4rem, 2.4vw, 2.1rem)", letterSpacing: ".04em", fontWeight: 400 }}
           >
             14ª Edición del 9 al 13 de diciembre 2026
+            <span className="block mt-2 opacity-80" style={{ fontSize: ".7em" }}>Los Cabos, Baja California Sur, México</span>
           </p>
 
           {/* #BeyondTheScreen strip — centered, matching logo width */}

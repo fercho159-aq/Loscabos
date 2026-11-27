@@ -17,4 +17,5 @@
 .title a:hover, .title a:focus-visible { text-decoration-color: currentColor; }
 .meta { margin: .1rem 0 0; font-size: .875rem; }
 
-.films { margin: .75rem 0 0; padding: 0; list-style: none; display: grid; gap: .5rem; }
+/* Sangría + línea naranja: que se note que las películas son parte del programa (Mafer, 27-nov-2026). */
+.films { margin: .75rem 0 0 .25rem; padding: 0 0 0 1.75rem; border-left: 3px solid #FA6935; list-style: none; display: grid; gap: .5rem; }
