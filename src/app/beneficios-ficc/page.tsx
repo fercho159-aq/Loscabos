@@ -19,11 +19,11 @@ export const metadata: Metadata = {
 // National Car Rental pendiente: el doc aún trae placeholders ([BENEFICIO], [LINK DE RESERVA], [CONDICIONES]).
 const aliados: { name: string; tagline?: string; body: ReactNode }[] = [
   {
-    name: "JW Marriott Los Cabos",
+    name: "JW Marriott Los Cabos, ubicado en Puerto Los Cabos",
     body: (
       <>
         <p>
-          JW Marriott forma parte de la red de aliados que hacen posible la 14° edición de FICCLosCabos
+          JW Marriott Los Cabos forma parte de la red de aliados que hacen posible la 14° edición de FICCLosCabos
           recibiendo a invitados, creadores, profesionales de la industria y encuentros vinculados con la
           experiencia de FICCLosCabos.
         </p>
