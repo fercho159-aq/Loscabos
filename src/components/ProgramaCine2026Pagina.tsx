@@ -2,11 +2,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Programacion2026Tabs from "@/components/Programacion2026Tabs";
 import ProgramaCine2026, { type DiaLigado } from "@/components/ProgramaCine2026";
-import { programaCine2026 } from "@/lib/programa-cine-2026-data";
+import { programaCine2026, normTitulo as norm } from "@/lib/programa-cine-2026-data";
 import { peliculasPublicas2026, PUBLIC_FILM_BASE } from "@/lib/seleccion-oficial-2026-data";
 import { eventosVisibles2026 } from "@/lib/programacion-2026-data";
-
-const norm = (s: string) => s.replace(/ \+ Q&A$/, "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 
 // Compartida por la página pública y su preview (que Mafer revisa antes de publicar).
 export default function ProgramaCine2026Pagina() {

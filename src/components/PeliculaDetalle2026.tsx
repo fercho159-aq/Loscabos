@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { categorias2026, peliculas2026, peliculasPublicas2026, programasPublicos2026, getProgramaPelicula2026, PREVIEW_FILM_BASE, PREVIEW_SELECTION_URL, PUBLIC_FILM_BASE, type Pelicula2026 } from "@/lib/seleccion-oficial-2026-data";
 import PeliculaPresentadaPor from "@/components/PeliculaPresentadaPor";
+import { proyeccionesPelicula2026 } from "@/lib/programa-cine-2026-data";
 import { getTrailerEmbedUrl } from "@/lib/trailer-embed";
 import styles from "./PeliculaDetalle2026.module.css";
 
@@ -16,6 +17,7 @@ export default function PeliculaDetalle2026({ film, preview = true }: { film: Pe
     : programasPublicos2026.find((item) => item.categoryIds.includes(film.categoryId));
   const catalogUrl = programa?.href || PREVIEW_SELECTION_URL;
   const catalogTitle = programa?.title || "Muestra Oficial";
+  const proyecciones = proyeccionesPelicula2026(film);
   const trailer = getTrailerEmbedUrl(film.trailerUrl);
   const trailerLabel = film.trailerLabel || "Tráiler";
   const films = preview ? peliculas2026 : peliculasPublicas2026;
@@ -49,6 +51,19 @@ export default function PeliculaDetalle2026({ film, preview = true }: { film: Pe
               {([["Dirección", film.directors], ["País", film.countries], ["Año", film.year], ["Duración", film.duration]] as const)
                 .filter(([, value]) => value)
                 .map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
+              {proyecciones.length > 0 && (
+                <div className={styles.proyecciones}>
+                  <dt>{proyecciones.length > 1 ? "Proyecciones" : "Proyección"}</dt>
+                  {proyecciones.map((p) => (
+                    <dd key={`${p.dia}-${p.time}`}>
+                      <strong>{p.dia}</strong>
+                      <br />
+                      {p.time} hrs · {p.sala}
+                      {p.programa && <><br /><span>{p.programa}</span></>}
+                    </dd>
+                  ))}
+                </div>
+              )}
             </dl>
           </aside>
           <div className={styles.synopsis}>

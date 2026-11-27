@@ -175,3 +175,20 @@ export const programaCine2026: DiaPrograma[] = [
     ],
   },
 ];
+
+export const normTitulo = (s: string) => s.replace(/ \+ Q&A$/, "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+
+export type Proyeccion = { dia: string; time: string; sala: string; programa?: string };
+
+/** Funciones de una película (sola, por `pelicula`, o dentro de un programa de cortos) para su ficha. */
+export function proyeccionesPelicula2026(film: { slug: string; title: string }): Proyeccion[] {
+  const titulo = normTitulo(film.title);
+  return programaCine2026.flatMap((dia) =>
+    dia.funciones.flatMap((fn): Proyeccion[] => {
+      const base = { dia: dia.label, time: fn.time, sala: fn.sala };
+      if (fn.films) return fn.films.some((c) => normTitulo(c.title) === titulo) ? [{ ...base, programa: fn.meta.startsWith("Programa") ? `${fn.title} · ${fn.meta.split(" • ")[0]}` : fn.title }] : [];
+      if (fn.evento) return [];
+      return (fn.pelicula ? fn.pelicula === film.slug : normTitulo(fn.title) === titulo) ? [base] : [];
+    }),
+  );
+}
