@@ -296,6 +296,11 @@
   .cardLine {
     white-space: nowrap;
   }
+
+  /* Las sedes con "ubicado en Puerto Los Cabos" ya no caben en un renglón (Mafer, 27-nov-2026). */
+  .cardLocation {
+    white-space: normal;
+  }
 }
 
 /* Párrafo aparte, p. ej. entre la lista de panelistas y la sinopsis. */
